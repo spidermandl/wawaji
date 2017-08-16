@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="w744s2qd" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="ngpb0" name="Enter.xml" path="/"/>
+    <component id="lf031" name="arrow_button.xml" path="/"/>
+    <image id="lf035" name="b_frame_main.png" path="/images/" scale="9grid" scale9grid="127,20,254,40"/>
+    <image id="lf036" name="i_arrow_left.png" path="/images/"/>
+    <image id="lf037" name="i_arrow_right.png" path="/images/"/>
+    <component id="lf038" name="Login_dialog.xml" path="/"/>
+    <image id="lf03a" name="b_wechat.png" path="/images/"/>
+    <image id="lf03b" name="b_login_close.png" path="/images/" scale="9grid" scale9grid="21,46,42,55"/>
+    <image id="lf03c" name="i_divider_solid.png" path="/images/"/>
+    <image id="lf03e" name="i_divider_dash.png" path="/images/"/>
+    <image id="lf03f" name="bg_login.png" path="/images/"/>
+    <image id="lf03g" name="b_guest.png" path="/images/"/>
+    <image id="lf03h" name="b_login.png" path="/images/"/>
+  </resources>
+  <publish name="Enter" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources" genCode="true"/>
+</packageDescription>

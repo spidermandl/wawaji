@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="696,858">
+  <displayList>
+    <image id="n3_lf03" name="n3" src="lf03f" xy="0,0" size="694,677">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n4_lf03" name="n4" src="lf03b" xy="328,677" size="83,181">
+      <relation target="n3_lf03" sidePair="topext-bottom"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+    </image>
+    <component id="n5_lf03" name="n5" src="lf031" xy="99,298"/>
+  </displayList>
+</component>

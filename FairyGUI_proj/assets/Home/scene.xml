@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="361,648">
+  <displayList>
+    <loader id="n0_ddj4" name="n0" xy="0,0" size="361,648" url="ui://wvjnne46ddj4y" fill="scale">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <relation target="" sidePair="width-width,height-height"/>
+</component>

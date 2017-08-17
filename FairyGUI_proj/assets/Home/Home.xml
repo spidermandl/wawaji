@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,1206">
+  <displayList>
+    <loader id="n1_ddj4" name="n1" xy="0,0" size="750,1206" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n3_ddj4" name="n3" src="ddj43" xy="0,0" size="750,150">
+      <relation target="n1_ddj4" sidePair="leftext-left,rightext-right"/>
+      <relation target="n1_ddj4" sidePair="top-top"/>
+    </component>
+    <component id="n4_ddj4" name="n4" src="ddj4h" xy="147,173" size="127,122">
+      <relation target="n1_ddj4" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n5_ddj4" name="n5" src="ddj4p" xy="311,173" size="127,122">
+      <relation target="n1_ddj4" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n6_ddj4" name="n6" src="ddj4q" xy="481,173" size="127,122">
+      <relation target="n1_ddj4" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n8_ddj4" name="n8" src="ddj410" xy="619,508" size="102,185">
+      <relation target="n1_ddj4" sidePair="right-right,width-width"/>
+    </component>
+    <component id="n9_ddj4" name="n9" src="ddj4z" xy="31,498" size="102,185">
+      <relation target="n1_ddj4" sidePair="left-left,width-width"/>
+    </component>
+    <component id="n10_ddj4" name="n10" src="ddj413" xy="508,1100"/>
+    <component id="n11_ddj4" name="n11" src="ddj412" xy="77,1001" size="267,85">
+      <relation target="n1_ddj4" sidePair="width-width,bottom-bottom"/>
+      <relation target="n1_ddj4" sidePair="left-left"/>
+    </component>
+    <component id="n12_ddj4" name="n12" src="ddj414" xy="401,998" size="267,85">
+      <relation target="n1_ddj4" sidePair="width-width,bottom-bottom"/>
+      <relation target="n1_ddj4" sidePair="right-right"/>
+    </component>
+    <component id="n13_ddj4" name="n13" src="ddj411" xy="623,1099"/>
+    <image id="n14_ddj4" name="n14" src="ddj415" xy="-1,1104" size="433,69">
+      <relation target="n1_ddj4" sidePair="left-left,bottom-bottom"/>
+      <relation target="n1_ddj4" sidePair="rightext-right"/>
+    </image>
+    <image id="n15_ddj4" name="n15" src="ddj4r" xy="41,1125" size="36,24">
+      <relation target="n14_ddj4" sidePair="leftext-left,rightext-right"/>
+      <relation target="n14_ddj4" sidePair="middle-middle"/>
+    </image>
+    <text id="n16_ddj4" name="n16" xy="96,1127" size="335,28" fontSize="18" color="#938cf5" leading="7" autoSize="height" singleLine="true" text="恭喜玩家叽哩哇啦135********获得1币场iPhone">
+      <relation target="n14_ddj4" sidePair="leftext-left,rightext-right"/>
+      <relation target="n14_ddj4" sidePair="middle-middle"/>
+    </text>
+    <list id="n17_ddj4" name="n17" xy="193,304" size="361,648" layout="row" overflow="scroll" scroll="horizontal" colGap="20" defaultItem="ui://wvjnne46ddj416">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

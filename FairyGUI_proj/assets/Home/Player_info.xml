@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,150">
+  <displayList>
+    <image id="n0_ddj4" name="n0" src="ddj42" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_ddj4" name="n2" src="ddj4e" xy="309,-1" size="120,120">
+      <relation target="n0_ddj4" sidePair="center-center,height-height"/>
+      <relation target="n0_ddj4" sidePair="width-width"/>
+    </image>
+    <image id="n4_ddj4" name="n4" src="ddj4a" xy="61,24" size="223,60">
+      <relation target="n0_ddj4" sidePair="left-left,width-width"/>
+      <relation target="n0_ddj4" sidePair="height-height"/>
+    </image>
+    <image id="n6_ddj4" name="n6" src="ddj46" xy="134,32" size="41,46">
+      <relation target="n4_ddj4" sidePair="left-left,height-height"/>
+    </image>
+    <component id="n10_ddj4" name="n10" src="ddj4b" xy="31,23" size="95,63">
+      <relation target="n0_ddj4" sidePair="left-left,height-height"/>
+    </component>
+    <component id="n11_ddj4" name="n11" src="ddj4d" xy="596,24" size="125,62">
+      <relation target="n0_ddj4" sidePair="right-right,height-height"/>
+    </component>
+    <component id="n12_ddj4" name="n12" src="ddj4c" xy="451,26" size="129,60">
+      <relation target="n0_ddj4" sidePair="right-right,height-height"/>
+    </component>
+    <text id="n13_ddj4" name="n13" xy="180,35" size="76,38" fontSize="30" color="#ffff00" autoSize="height" bold="true" singleLine="true" text="264">
+      <relation target="n4_ddj4" sidePair="leftext-left,rightext-right"/>
+      <relation target="n4_ddj4" sidePair="topext-top,bottomext-bottom"/>
+    </text>
+  </displayList>
+  <relation target="" sidePair="width-width,width-width"/>
+</component>

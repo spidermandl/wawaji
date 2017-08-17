@@ -63,4 +63,8 @@ public class MediatorPlug : MonoBehaviour, IMediatorPlug {
 	public UnityEngine.Object GetView(){
 		return gameObject;
 	}
+
+	public void setClassRef(string class_ref){
+		this.mediatorClassRef = class_ref;
+	}
 }

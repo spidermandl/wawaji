@@ -4,10 +4,48 @@
     <image id="n3_lf03" name="n3" src="lf03f" xy="0,0" size="694,677">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n4_lf03" name="n4" src="lf03b" xy="328,677" size="83,181">
-      <relation target="n3_lf03" sidePair="topext-bottom"/>
-      <relation target="" sidePair="bottomext-bottom"/>
+    <component id="n5_lf03" name="n5" src="lf031" xy="99,298" size="508,80">
+      <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
+    </component>
+    <image id="n6_ddj4" name="n6" src="lf03h" xy="299,315">
+      <relation target="n3_lf03" sidePair="center-center"/>
     </image>
-    <component id="n5_lf03" name="n5" src="lf031" xy="99,298"/>
+    <component id="n7_ddj4" name="n7" src="ddj4k" xy="329,677" size="83,181">
+      <relation target="n3_lf03" sidePair="topext-bottom"/>
+    </component>
+    <text id="n8_ddj4" name="n8" xy="289,417" size="125,28" fontSize="20" color="#ffffff" text="其他登录方式">
+      <relation target="n3_lf03" sidePair="center-center"/>
+    </text>
+    <image id="n10_ddj4" name="n10" src="ddj4m" xy="99,428" size="166,1">
+      <relation target="n3_lf03" sidePair="leftext-left"/>
+      <relation target="n8_ddj4" sidePair="rightext-left"/>
+    </image>
+    <image id="n11_ddj4" name="n11" src="ddj4m" xy="441,428" size="166,1">
+      <relation target="n3_lf03" sidePair="rightext-right"/>
+      <relation target="n8_ddj4" sidePair="leftext-right"/>
+    </image>
+    <component id="n12_ddj4" name="n12" src="ddj4t" xy="98,500" size="238,74">
+      <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
+      <relation target="n3_lf03" sidePair="bottom-bottom"/>
+    </component>
+    <component id="n13_ddj4" name="n13" src="ddj4s" xy="376,500" size="238,74">
+      <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
+      <relation target="n3_lf03" sidePair="bottom-bottom"/>
+    </component>
+    <image id="n14_ddj4" name="n14" src="ddj4l" xy="99,240" size="499,1">
+      <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
+    </image>
+    <image id="n15_ddj4" name="n15" src="ddj4l" xy="99,161" size="499,1">
+      <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
+    </image>
+    <richtext id="n16_ddj4" name="n16" xy="100,115" size="454,38" fontSize="30" color="#8f7cf2" autoSize="height" singleLine="true" text="请输入您的手机号码">
+      <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
+    </richtext>
+    <richtext id="n17_ddj4" name="n17" xy="99,195" size="335,38" fontSize="30" color="#897ff5" autoSize="none" singleLine="true" text="请输入手机验证码">
+      <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
+    </richtext>
+    <component id="n18_ddj4" name="n18" src="ddj4u" xy="436,180">
+      <relation target="n3_lf03" sidePair="right-right"/>
+    </component>
   </displayList>
 </component>

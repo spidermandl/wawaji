@@ -99,6 +99,7 @@
      <Compile Include="Assets\Scripts\MediatorPlug.cs" />
      <Compile Include="Assets\Scripts\Model\Count2Proxy.cs" />
      <Compile Include="Assets\Scripts\Model\CountProxy.cs" />
+     <Compile Include="Assets\Scripts\Model\EnterProxy.cs" />
      <Compile Include="Assets\Scripts\Model\Network\ByteBuffer.cs" />
      <Compile Include="Assets\Scripts\Model\Network\Converter.cs" />
      <Compile Include="Assets\Scripts\Model\Network\HttpClient.cs" />
@@ -107,7 +108,13 @@
      <Compile Include="Assets\Scripts\Model\Network\SocketClient.cs" />
      <Compile Include="Assets\Scripts\UI\CreateCountBox.cs" />
      <Compile Include="Assets\Scripts\UI\Enter\EnterBinder.cs" />
+     <Compile Include="Assets\Scripts\UI\Enter\UIEnterMain.cs" />
+     <Compile Include="Assets\Scripts\UI\Enter\UILoginWin.cs" />
+     <Compile Include="Assets\Scripts\UI\Enter\UI_Enter.cs" />
+     <Compile Include="Assets\Scripts\UI\Enter\UI_Login_dialog.cs" />
+     <Compile Include="Assets\Scripts\UI\Enter\UI_arrow_button.cs" />
      <Compile Include="Assets\Scripts\UI\MyBox.cs" />
+     <Compile Include="Assets\Scripts\UI\UIMain.cs" />
      <Compile Include="Assets\Scripts\UnityFacade.cs" />
      <Compile Include="Assets\Scripts\View\Count1Mediator.cs" />
      <Compile Include="Assets\Scripts\View\Count2Mediator.cs" />

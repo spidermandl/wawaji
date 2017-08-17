@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="w744s2qd" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="ngpb0" name="Enter.xml" path="/"/>
+    <component id="ngpb0" name="Enter.xml" path="/" exported="true"/>
     <component id="lf031" name="arrow_button.xml" path="/"/>
     <image id="lf035" name="b_frame_main.png" path="/images/" scale="9grid" scale9grid="127,20,254,40"/>
     <image id="lf036" name="i_arrow_left.png" path="/images/"/>
     <image id="lf037" name="i_arrow_right.png" path="/images/"/>
-    <component id="lf038" name="Login_dialog.xml" path="/"/>
-    <image id="lf03a" name="b_wechat.png" path="/images/"/>
+    <component id="lf038" name="Login_dialog.xml" path="/" exported="true"/>
+    <image id="lf03a" name="b_wechat.png" path="/images/" scale="" scale9grid="30,4,178,66"/>
     <image id="lf03b" name="b_login_close.png" path="/images/" scale="9grid" scale9grid="21,46,42,55"/>
-    <image id="lf03c" name="i_divider_solid.png" path="/images/"/>
     <image id="lf03e" name="i_divider_dash.png" path="/images/"/>
     <image id="lf03f" name="bg_login.png" path="/images/"/>
-    <image id="lf03g" name="b_guest.png" path="/images/"/>
+    <image id="lf03g" name="b_guest.png" path="/images/" scale="" scale9grid="28,10,182,54"/>
     <image id="lf03h" name="b_login.png" path="/images/"/>
+    <image id="ddj4i" name="image129.9.png" path="/images/"/>
+    <image id="ddj4j" name="image123.9.png" path="/images/"/>
+    <component id="ddj4k" name="login_close.xml" path="/"/>
+    <image id="ddj4l" name="i_line_solid.png" path="/images/"/>
+    <image id="ddj4m" name="i_line_dash.png" path="/images/"/>
+    <image id="ddj4p" name="b_phone_verify.png" path="/images/"/>
+    <component id="ddj4s" name="guest_login.xml" path="/"/>
+    <component id="ddj4t" name="wechat_login.xml" path="/"/>
+    <component id="ddj4u" name="phone_verify.xml" path="/"/>
   </resources>
-  <publish name="Enter" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources" genCode="true"/>
+  <publish name="Enter" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

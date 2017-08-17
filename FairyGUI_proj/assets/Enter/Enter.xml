@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="752,1208"/>
+<component size="752,1208">
+  <displayList>
+    <loader id="n4_ddj4" name="n4" xy="0,0" size="752,1208"/>
+    <component id="n0_ddj4" name="n0" src="lf031" xy="122,588" size="508,80">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n2_ddj4" name="n2" src="ddj4j" xy="47,31" size="80,80"/>
+    <image id="n3_ddj4" name="n3" src="ddj4i" xy="168,32" size="80,80"/>
+  </displayList>
+</component>

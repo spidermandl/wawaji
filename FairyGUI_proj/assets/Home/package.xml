@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="wvjnne46" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="ddj40" name="Home.xml" path="/" exported="true"/>
+    <image id="ddj41" name="bg_home.png" path="/images/"/>
+    <image id="ddj42" name="i_profile_frame.png" path="/images/" scale="9grid" scale9grid="188,0,376,60"/>
+    <component id="ddj43" name="Player_info.xml" path="/"/>
+    <image id="ddj45" name="i_exchange.png" path="/images/"/>
+    <image id="ddj46" name="i_gold_coin.png" path="/images/"/>
+    <image id="ddj47" name="i_top_up.png" path="/images/"/>
+    <image id="ddj48" name="i_prize.png" path="/images/"/>
+    <image id="ddj4a" name="bg_coin_info.png" path="/images/" scale="9grid" scale9grid="57,15,114,30"/>
+    <component id="ddj4b" name="top_up.xml" path="/button/"/>
+    <component id="ddj4c" name="exchange.xml" path="/"/>
+    <component id="ddj4d" name="prize.xml" path="/button/"/>
+    <image id="ddj4e" name="i_head_frame.png" path="/images/"/>
+    <image id="ddj4f" name="i_bid_frame_selected.png" path="/images/"/>
+    <image id="ddj4g" name="i_bid_frame.png" path="/images/"/>
+    <component id="ddj4h" name="bid_1_coin.xml" path="/"/>
+    <component id="ddj4i" name="bid_button.xml" path="/button/"/>
+    <image id="ddj4j" name="c_1_coin.png" path="/images/"/>
+    <image id="ddj4k" name="c_5_coin.png" path="/images/"/>
+    <image id="ddj4l" name="c_10_coin.png" path="/images/"/>
+    <image id="ddj4m" name="i_1_coin.png" path="/images/"/>
+    <image id="ddj4n" name="i_5_coin.png" path="/images/"/>
+    <image id="ddj4o" name="i_10_coin.png" path="/images/"/>
+    <component id="ddj4p" name="bid_5_coin.xml" path="/"/>
+    <component id="ddj4q" name="bid_10_coin.xml" path="/"/>
+    <image id="ddj4r" name="i_speaker.png" path="/images/"/>
+    <image id="ddj4s" name="i_custom_service.png" path="/images/"/>
+    <image id="ddj4t" name="i_left.png" path="/images/"/>
+    <image id="ddj4u" name="i_right.png" path="/images/"/>
+    <image id="ddj4v" name="i_setting.png" path="/images/"/>
+    <image id="ddj4w" name="i_start_game.png" path="/images/"/>
+    <image id="ddj4x" name="i_check_prize.png" path="/images/"/>
+    <image id="ddj4y" name="i_machine.png" path="/images/"/>
+    <component id="ddj4z" name="left.xml" path="/button/"/>
+    <component id="ddj410" name="right.xml" path="/button/"/>
+    <component id="ddj411" name="setting.xml" path="/button/"/>
+    <component id="ddj412" name="start_game.xml" path="/button/"/>
+    <component id="ddj413" name="custom_service.xml" path="/button/"/>
+    <component id="ddj414" name="check_prize.xml" path="/button/"/>
+    <image id="ddj415" name="bg_notice_frame.png" path="/images/"/>
+    <component id="ddj416" name="scene.xml" path="/"/>
+  </resources>
+  <publish name="Home" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
+</packageDescription>

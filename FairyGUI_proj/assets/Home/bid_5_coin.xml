@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="127,122">
+  <displayList>
+    <component id="n0_ddj4" name="n0" src="ddj4i" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n5_ddj4" name="n5" src="ddj4n" xy="18,9" size="92,59">
+      <relation target="n0_ddj4" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n6_ddj4" name="n6" src="ddj4k" xy="22,75" size="86,40">
+      <relation target="n0_ddj4" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+</component>

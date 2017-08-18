@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="603,94">
+  <displayList>
+    <image id="n1_n1c3" name="n1" src="n1c317" xy="34,0" size="94,94">
+      <relation target="" sidePair="height-height,left-left"/>
+    </image>
+    <image id="n2_n1c3" name="n2" src="n1c313" xy="38,94">
+      <relation target="" sidePair="bottom-bottom,width-width"/>
+    </image>
+    <text id="n3_n1c3" name="n3" xy="159,30" size="244,38" fontSize="30" color="#c6bff2" autoSize="none" singleLine="true" text="获得Iphone 7">
+      <relation target="" sidePair="rightext-right,rightext-left"/>
+      <relation target="" sidePair="middle-middle"/>
+    </text>
+    <text id="n5_n1c3" name="n5" xy="404,30" size="199,38" fontSize="30" color="#c6bff2" autoSize="none" singleLine="true" text="135****8888">
+      <relation target="" sidePair="rightext-right,rightext-left"/>
+      <relation target="" sidePair="middle-middle"/>
+    </text>
+  </displayList>
+  <relation target="" sidePair="width-width,height-height"/>
+</component>

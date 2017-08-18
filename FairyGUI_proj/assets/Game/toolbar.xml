@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="591,83">
+  <displayList>
+    <image id="n0_l4t6" name="n0" src="l4t6p" xy="170,1">
+      <relation target="" sidePair="leftext-left,rightext-right"/>
+      <relation target="" sidePair="height-height,middle-middle"/>
+    </image>
+    <image id="n1_l4t6" name="n1" src="l4t6r" xy="259,10">
+      <relation target="" sidePair="left-left,height-height"/>
+    </image>
+    <component id="n2_l4t6" name="n2" src="l4t6t" xy="151,0">
+      <relation target="" sidePair="left-left,height-height"/>
+    </component>
+    <component id="n3_l4t6" name="n3" src="l4t6s" xy="0,1">
+      <relation target="" sidePair="left-left,height-height"/>
+    </component>
+    <component id="n4_l4t6" name="n4" src="l4t6u" xy="463,0">
+      <relation target="" sidePair="right-right,height-height"/>
+    </component>
+    <text id="n5_l4t6" name="n5" xy="327,21" size="126,38" fontSize="30" color="#ffff33" autoSize="none" singleLine="true" text="264">
+      <relation target="" sidePair="leftext-left,rightext-right"/>
+    </text>
+  </displayList>
+  <relation target="" sidePair="width-width,height-height"/>
+</component>

@@ -113,12 +113,17 @@
      <Compile Include="Assets\Scripts\UI\Enter\UI_Enter.cs" />
      <Compile Include="Assets\Scripts\UI\Enter\UI_Login_dialog.cs" />
      <Compile Include="Assets\Scripts\UI\Enter\UI_arrow_button.cs" />
+     <Compile Include="Assets\Scripts\UI\Game\UIGameMain.cs" />
+     <Compile Include="Assets\Scripts\UI\Home\UIHomeMain.cs" />
      <Compile Include="Assets\Scripts\UI\MyBox.cs" />
      <Compile Include="Assets\Scripts\UI\UIMain.cs" />
      <Compile Include="Assets\Scripts\UnityFacade.cs" />
+     <Compile Include="Assets\Scripts\View\BaseMediator.cs" />
      <Compile Include="Assets\Scripts\View\Count1Mediator.cs" />
      <Compile Include="Assets\Scripts\View\Count2Mediator.cs" />
      <Compile Include="Assets\Scripts\View\EnterMediator.cs" />
+     <Compile Include="Assets\Scripts\View\GameMediator.cs" />
+     <Compile Include="Assets\Scripts\View\HomeMediator.cs" />
      <None Include="Assets\FairyGUI\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
      <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
      <None Include="Assets\FairyGUI\Examples\Resources\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />

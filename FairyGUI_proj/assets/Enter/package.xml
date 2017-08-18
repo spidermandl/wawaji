@@ -7,21 +7,31 @@
     <image id="lf036" name="i_arrow_left.png" path="/images/"/>
     <image id="lf037" name="i_arrow_right.png" path="/images/"/>
     <component id="lf038" name="Login_dialog.xml" path="/" exported="true"/>
-    <image id="lf03a" name="b_wechat.png" path="/images/" scale="" scale9grid="30,4,178,66"/>
+    <image id="lf03a" name="b_wechat.png" path="/images/" scale9grid="30,4,178,66"/>
     <image id="lf03b" name="b_login_close.png" path="/images/" scale="9grid" scale9grid="21,46,42,55"/>
     <image id="lf03e" name="i_divider_dash.png" path="/images/"/>
     <image id="lf03f" name="bg_login.png" path="/images/"/>
-    <image id="lf03g" name="b_guest.png" path="/images/" scale="" scale9grid="28,10,182,54"/>
+    <image id="lf03g" name="b_guest.png" path="/images/" scale9grid="28,10,182,54"/>
     <image id="lf03h" name="b_login.png" path="/images/"/>
-    <image id="ddj4i" name="image129.9.png" path="/images/"/>
-    <image id="ddj4j" name="image123.9.png" path="/images/"/>
-    <component id="ddj4k" name="login_close.xml" path="/"/>
+    <component id="ddj4k" name="login_close.xml" path="/button/"/>
     <image id="ddj4l" name="i_line_solid.png" path="/images/"/>
     <image id="ddj4m" name="i_line_dash.png" path="/images/"/>
     <image id="ddj4p" name="b_phone_verify.png" path="/images/"/>
-    <component id="ddj4s" name="guest_login.xml" path="/"/>
-    <component id="ddj4t" name="wechat_login.xml" path="/"/>
-    <component id="ddj4u" name="phone_verify.xml" path="/"/>
+    <component id="ddj4s" name="guest_login.xml" path="/button/"/>
+    <component id="ddj4t" name="wechat_login.xml" path="/button/"/>
+    <component id="ddj4u" name="phone_verify.xml" path="/button/"/>
+    <image id="n1c3w" name="i_help.png" path="/images/"/>
+    <image id="n1c3x" name="i_theme.png" path="/images/"/>
+    <image id="n1c3z" name="i_trophy.png" path="/images/"/>
+    <image id="n1c310" name="i_tongs.png" path="/images/"/>
+    <image id="n1c311" name="i_start_game.png" path="/images/"/>
+    <image id="n1c312" name="i_notice_frame.png" path="/images/" scale="9grid" scale9grid="151,71,302,142"/>
+    <image id="n1c313" name="i_line_dash_long.png" path="/images/"/>
+    <component id="n1c314" name="trophy.xml" path="/button/"/>
+    <component id="n1c316" name="help.xml" path="/button/"/>
+    <image id="n1c317" name="i_head_frame.png" path="/images/"/>
+    <component id="n1c318" name="nontice_item.xml" path="/"/>
+    <image id="n1c319" name="i_light.png" path="/images/"/>
   </resources>
   <publish name="Enter" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

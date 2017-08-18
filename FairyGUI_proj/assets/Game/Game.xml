@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,1206">
+  <displayList>
+    <loader id="n1_l4t6" name="n1" xy="0,0" size="750,1206">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n2_l4t6" name="n2" src="l4t61" xy="0,806" size="750,400">
+      <relation target="n1_l4t6" sidePair="width-width"/>
+      <relation target="n1_l4t6" sidePair="bottom-bottom,center-center"/>
+    </image>
+    <image id="n3_l4t6" name="n3" src="l4t62" xy="18,749" size="713,251">
+      <relation target="n1_l4t6" sidePair="width-width,bottom-bottom"/>
+      <relation target="n1_l4t6" sidePair="center-center"/>
+    </image>
+    <image id="n5_l4t6" name="n5" src="l4t63" xy="71,759" size="231,168">
+      <relation target="n1_l4t6" sidePair="left-left,bottom-bottom"/>
+    </image>
+    <component id="n6_l4t6" name="n6" src="l4t6e" xy="157,762">
+      <relation target="n5_l4t6" sidePair="top-top,left-left"/>
+    </component>
+    <component id="n7_l4t6" name="n7" src="l4t6a" xy="76,807">
+      <relation target="n5_l4t6" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n8_l4t6" name="n8" src="l4t6c" xy="206,807">
+      <relation target="n5_l4t6" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n9_l4t6" name="n9" src="l4t6d" xy="156,850">
+      <relation target="n5_l4t6" sidePair="bottom-bottom,left-left"/>
+    </component>
+    <component id="n10_l4t6" name="n10" src="l4t6f" xy="426,785">
+      <relation target="n3_l4t6" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <list id="n14_l4t6" name="n14" xy="-1,1008" size="750,198" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://dulhkyd0l4t6g">
+      <relation target="n2_l4t6" sidePair="center-center,bottom-bottom"/>
+      <relation target="n2_l4t6" sidePair="width-width"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n19_l4t6" name="n19" src="l4t6m" xy="20,20"/>
+  </displayList>
+</component>

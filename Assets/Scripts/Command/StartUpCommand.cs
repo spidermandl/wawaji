@@ -8,7 +8,10 @@ public class StartUpCommand : PureMVC.Patterns.SimpleCommand {
 	{
 		Debug.Log("Execute StartUpCommand");
 		//Register default proxies and commands
-		Facade.RegisterProxy( new CountProxy( CountProxy.NAME ) );
-		Facade.RegisterProxy( new Count2Proxy( Count2Proxy.NAME ) );
+//		Facade.RegisterProxy( new CountProxy( CountProxy.NAME ) );
+//		Facade.RegisterProxy( new Count2Proxy( Count2Proxy.NAME ) );
+
+		GameObject enter = new GameObject ();
+		UIEnterMain plug = enter.AddComponent (typeof(UIEnterMain)) as UIEnterMain;
 	}
 }

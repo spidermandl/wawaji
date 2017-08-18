@@ -6,24 +6,11 @@ using UnityEngine;
 public class UIEnterMain : UIMain
 {
 	
-	GComponent _mainView;
-	UILoginWin _loginWin;
-
-	ClickDelegateFunc _clickFunc;
-	public delegate void ClickDelegateFunc(ClickType type);
+	UILoginWin _loginWin;//登录对话框
 
 	void Awake()
 	{
-		GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT);
-
-		UIPackage.AddPackage ("Enter");
-		_mainView = UIPackage.CreateObject ("Enter", "Enter").asCom;
-		GRoot.inst.AddChild (_mainView);
-
-		this.gameObject.SetActive (false);
-		MediatorPlug plug = this.gameObject.AddComponent (typeof(MediatorPlug)) as MediatorPlug;
-		plug.setClassRef ("EnterMediator");
-		this.gameObject.SetActive (true);
+		base.init ("Enter");
 
 	}
 
@@ -35,27 +22,25 @@ public class UIEnterMain : UIMain
 			this._clickFunc(ClickType.StartGame);
 			_loginWin.Show(); 
 
+			//关闭登录对话框
 			_loginWin.Close.onClick.Add (() => { 
 				this._clickFunc(ClickType.CloseLoginPanel);
 				_loginWin.Hide(); 
-				//Debug.Log("bbbbbbbbbbbb");
 			});
 
+			//进入主界面
 			_loginWin.Login.onClick.Add(() => { 
-				Debug.Log("aaaaaaaaaaaaaaaaaaaaaa");
+				this._clickFunc(ClickType.LoginGame);
+				this.changeUIpage(typeof(UIHomeMain));
 			});
 		});
-
-
+			
 		
 	}
 
 	void Update(){
 	}
 
-	public void setClickFunc(ClickDelegateFunc func){
-		this._clickFunc = func;
-	}
 
 }
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="dulhkyd0" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="l4t60" name="Game.xml" path="/" exported="true"/>
+    <image id="l4t61" name="bg_table.png" path="/images/"/>
+    <image id="l4t62" name="bg_pad.png" path="/images/"/>
+    <image id="l4t63" name="bg_direction.png" path="/images/" scale="" scale9grid="58,42,116,84"/>
+    <image id="l4t64" name="b_down.png" path="/images/"/>
+    <image id="l4t65" name="b_left.png" path="/images/"/>
+    <image id="l4t66" name="b_right.png" path="/images/"/>
+    <image id="l4t67" name="b_up.png" path="/images/"/>
+    <image id="l4t68" name="b_go.png" path="/images/"/>
+    <image id="l4t69" name="i_prize_frame.png" path="/images/"/>
+    <component id="l4t6a" name="right.xml" path="/button/"/>
+    <component id="l4t6c" name="left.xml" path="/button/"/>
+    <component id="l4t6d" name="up.xml" path="/button/"/>
+    <component id="l4t6e" name="down.xml" path="/button/"/>
+    <component id="l4t6f" name="go.xml" path="/button/"/>
+    <component id="l4t6g" name="prize.xml" path="/"/>
+    <image id="l4t6i" name="c_iphone7.png" path="/images/"/>
+    <image id="l4t6k" name="i_ball.png" path="/images/"/>
+    <image id="l4t6l" name="i_phone7.png" path="/images/"/>
+    <component id="l4t6m" name="toolbar.xml" path="/"/>
+    <image id="l4t6n" name="b_back.png" path="/images/"/>
+    <image id="l4t6o" name="b_exchange.png" path="/images/"/>
+    <image id="l4t6p" name="bg_toolbar.png" path="/images/" scale="9grid" scale9grid="87,20,174,40"/>
+    <image id="l4t6q" name="b_add_coin.png" path="/images/"/>
+    <image id="l4t6r" name="i_coin.png" path="/images/"/>
+    <component id="l4t6s" name="back.xml" path="/button/"/>
+    <component id="l4t6t" name="add_coin.xml" path="/button/"/>
+    <component id="l4t6u" name="exchange.xml" path="/button/"/>
+  </resources>
+  <publish name="Game" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
+</packageDescription>

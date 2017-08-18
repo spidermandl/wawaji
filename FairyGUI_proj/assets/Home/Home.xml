@@ -33,19 +33,19 @@
       <relation target="n1_ddj4" sidePair="right-right"/>
     </component>
     <component id="n13_ddj4" name="n13" src="ddj411" xy="623,1099"/>
-    <image id="n14_ddj4" name="n14" src="ddj415" xy="-1,1104" size="433,69">
+    <image id="n14_ddj4" name="n14" src="ddj415" xy="-1,1096" size="433,69">
       <relation target="n1_ddj4" sidePair="left-left,bottom-bottom"/>
       <relation target="n1_ddj4" sidePair="rightext-right"/>
     </image>
-    <image id="n15_ddj4" name="n15" src="ddj4r" xy="41,1125" size="36,24">
-      <relation target="n14_ddj4" sidePair="leftext-left,rightext-right"/>
+    <image id="n15_ddj4" name="n15" src="ddj4r" xy="41,1117" size="36,24">
+      <relation target="n14_ddj4" sidePair="leftext-left"/>
       <relation target="n14_ddj4" sidePair="middle-middle"/>
     </image>
-    <text id="n16_ddj4" name="n16" xy="96,1127" size="335,28" fontSize="18" color="#938cf5" leading="7" autoSize="height" singleLine="true" text="恭喜玩家叽哩哇啦135********获得1币场iPhone">
+    <text id="n16_ddj4" name="n16" xy="96,1116" size="328,28" fontSize="18" color="#938cf5" leading="7" autoSize="none" singleLine="true" text="恭喜玩家叽哩哇啦135********获得1币场iPhone aaaaaaaaaaa">
       <relation target="n14_ddj4" sidePair="leftext-left,rightext-right"/>
       <relation target="n14_ddj4" sidePair="middle-middle"/>
     </text>
-    <list id="n17_ddj4" name="n17" xy="193,304" size="361,648" layout="row" overflow="scroll" scroll="horizontal" colGap="20" defaultItem="ui://wvjnne46ddj416">
+    <list id="n17_ddj4" name="n17" xy="193,304" size="361,648" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://wvjnne46ddj416">
       <item/>
       <item/>
       <item/>

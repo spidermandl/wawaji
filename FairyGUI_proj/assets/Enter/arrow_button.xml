@@ -6,9 +6,11 @@
     </image>
     <image id="n2_lf03" name="n2" src="lf036" xy="37,17" size="95,45">
       <relation target="n1_lf03" sidePair="left-left,middle-middle"/>
+      <relation target="n1_lf03" sidePair="height-height"/>
     </image>
     <image id="n3_lf03" name="n3" src="lf037" xy="377,17" size="96,45">
       <relation target="n1_lf03" sidePair="right-right,middle-middle"/>
+      <relation target="n1_lf03" sidePair="height-height"/>
     </image>
   </displayList>
 </component>

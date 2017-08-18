@@ -4,7 +4,7 @@
     <component id="l4t60" name="Game.xml" path="/" exported="true"/>
     <image id="l4t61" name="bg_table.png" path="/images/"/>
     <image id="l4t62" name="bg_pad.png" path="/images/"/>
-    <image id="l4t63" name="bg_direction.png" path="/images/" scale="" scale9grid="58,42,116,84"/>
+    <image id="l4t63" name="bg_direction.png" path="/images/" scale9grid="58,42,116,84"/>
     <image id="l4t64" name="b_down.png" path="/images/"/>
     <image id="l4t65" name="b_left.png" path="/images/"/>
     <image id="l4t66" name="b_right.png" path="/images/"/>

@@ -92,6 +92,7 @@
      <Compile Include="Assets\FairyGUI\Examples\TurnCard\TurnCardMain.cs" />
      <Compile Include="Assets\FairyGUI\Examples\TypingEffect\TypingEffectMain.cs" />
      <Compile Include="Assets\FairyGUI\Examples\VirtualList\VirtualListMain.cs" />
+     <Compile Include="Assets\Scripts\CollisionColor.cs" />
      <Compile Include="Assets\Scripts\Command\HttpCommand.cs" />
      <Compile Include="Assets\Scripts\Command\SocketCommand.cs" />
      <Compile Include="Assets\Scripts\Command\StartUpCommand.cs" />
@@ -106,6 +107,31 @@
      <Compile Include="Assets\Scripts\Model\Network\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Model\Network\Protocal.cs" />
      <Compile Include="Assets\Scripts\Model\Network\SocketClient.cs" />
+     <Compile Include="Assets\Scripts\MouseInstantiate.cs" />
+     <Compile Include="Assets\Scripts\PhysicsMove.cs" />
+     <Compile Include="Assets\Scripts\Sample\ApplicationFacade.cs" />
+     <Compile Include="Assets\Scripts\Sample\DeleteUserCommand.cs" />
+     <Compile Include="Assets\Scripts\Sample\EventsEnum.cs" />
+     <Compile Include="Assets\Scripts\Sample\MainUI.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\CreationExample.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\DeleteAndCreateInSameFrame.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\InstanceHandlerDelegateExample.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\OnCreatedDelegateExample.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\OnSpawnedExample.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ParticleWaitTest.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ReallySimpleAudioSpawner.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ReallySimpleParticleSpawner.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\SimpleSpawner.cs" />
+     <Compile Include="Assets\Scripts\Sample\StartupCommand.cs" />
+     <Compile Include="Assets\Scripts\Sample\UGUI_MyToggle.cs" />
+     <Compile Include="Assets\Scripts\Sample\UGUI_MyToggleGroup.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserForm.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserFormMediator.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserList.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserListMediator.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserList_Item.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserProxy.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserVO.cs" />
      <Compile Include="Assets\Scripts\UI\CreateCountBox.cs" />
      <Compile Include="Assets\Scripts\UI\Enter\EnterBinder.cs" />
      <Compile Include="Assets\Scripts\UI\Enter\UIEnterMain.cs" />
@@ -113,6 +139,7 @@
      <Compile Include="Assets\Scripts\UI\Enter\UI_Enter.cs" />
      <Compile Include="Assets\Scripts\UI\Enter\UI_Login_dialog.cs" />
      <Compile Include="Assets\Scripts\UI\Enter\UI_arrow_button.cs" />
+     <Compile Include="Assets\Scripts\UI\Game\GameManager.cs" />
      <Compile Include="Assets\Scripts\UI\Game\UIGameMain.cs" />
      <Compile Include="Assets\Scripts\UI\Home\UIHomeMain.cs" />
      <Compile Include="Assets\Scripts\UI\MyBox.cs" />
@@ -133,6 +160,7 @@
      <None Include="Assets\FairyGUI\Examples\Resources\RenderTexture\FullScreen.shader" />
      <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-BMFont.shader" />
      <None Include="Assets\读我.txt" />
+     <None Include="Assets\Plugins\PathologicalGames\readme.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
@@ -148,6 +176,10 @@
  <Reference Include="PureMVC.DotNET.35">
  <HintPath>/Users/Desmond/Desktop/WaWaJi/Assets/Plugins/PureMVC.DotNET.35.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{091E2802-CB3C-205C-8423-E1393AACCCE0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

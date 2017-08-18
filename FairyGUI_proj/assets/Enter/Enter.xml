@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="752,1208">
   <displayList>
-    <loader id="n4_ddj4" name="n4" xy="0,0" size="752,1208" fill="scaleFree"/>
+    <loader id="n4_ddj4" name="n4" xy="0,0" size="752,1208" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="center-center"/>
+    </loader>
     <component id="n0_ddj4" name="n0" src="lf031" xy="122,765" size="508,80">
       <relation target="n4_ddj4" sidePair="leftext-left,rightext-right"/>
     </component>
@@ -39,4 +42,5 @@
       <item/>
     </list>
   </displayList>
+  <relation target="" sidePair="width-width,height-height"/>
 </component>

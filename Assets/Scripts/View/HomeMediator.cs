@@ -43,12 +43,6 @@ public class HomeMediator: BaseMediator {
 		case UIMain.ClickType.PlayGame:
 			playGame ();
 			break;
-		case UIMain.ClickType.CloseLoginPanel:
-			closeLoginPanel ();
-			break;
-		case UIMain.ClickType.LoginGame:
-			loginGame ();
-			break;
 		default:
 			break;
 		}
@@ -58,18 +52,6 @@ public class HomeMediator: BaseMediator {
 	 * */
 	void playGame(){
 		Debug.Log("playGame:" + MediatorName );
-	}
-	/**
-	 * 关闭登录界面
-	 * */
-	void closeLoginPanel(){
-		Debug.Log("closeLoginPanel:" + MediatorName );
-	}
-	/**
-	 * 登录游戏
-	 * */
-	void loginGame(){
-		Debug.Log("loginGame:" + MediatorName );
 	}
 
 }

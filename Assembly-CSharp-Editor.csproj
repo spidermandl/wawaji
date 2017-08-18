@@ -45,6 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\PathologicalGames\Common\PGEditorUtils.cs" />
+     <Compile Include="Assets\Editor\PathologicalGames\PoolManager\PreRuntimePoolItemInspector.cs" />
+     <Compile Include="Assets\Editor\PathologicalGames\PoolManager\SpawnPoolInspector.cs" />
      <Compile Include="Assets\FairyGUI\Examples\Editor\BuildAssetBundles.cs" />
      <None Include="Assets\FairyGUI\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
      <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
@@ -55,6 +58,7 @@
      <None Include="Assets\FairyGUI\Examples\Resources\RenderTexture\FullScreen.shader" />
      <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-BMFont.shader" />
      <None Include="Assets\读我.txt" />
+     <None Include="Assets\Plugins\PathologicalGames\readme.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
@@ -99,6 +103,8 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{091E2802-CB3C-205C-8423-E1393AACCCE0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{0FA39F2E-86D6-F142-25B5-9419E1969CEC}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>

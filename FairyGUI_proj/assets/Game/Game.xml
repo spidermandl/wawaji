@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="750,1206">
   <displayList>
-    <loader id="n1_l4t6" name="n1" xy="0,0" size="750,1206">
+    <loader id="n1_l4t6" name="n1" xy="0,0" size="750,1206" frame="5">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <image id="n2_l4t6" name="n2" src="l4t61" xy="0,806" size="750,400">

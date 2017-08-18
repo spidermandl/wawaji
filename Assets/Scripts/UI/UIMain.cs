@@ -48,7 +48,7 @@ public abstract class UIMain : MonoBehaviour
 	/**
 	 * 销毁界面回调
 	 * */
-	protected void destroyUI (){
+	protected virtual void destroyUI (){
 		GRoot.inst.RemoveChildren ();
 		Destroy (this.gameObject);//销毁自身脚本
 	}

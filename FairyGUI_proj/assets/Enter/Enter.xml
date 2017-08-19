@@ -8,10 +8,6 @@
     <component id="n0_ddj4" name="n0" src="lf031" xy="122,765" size="508,80">
       <relation target="n4_ddj4" sidePair="leftext-left,rightext-right"/>
     </component>
-    <image id="n6_n1c3" name="n6" src="n1c311" xy="276,778" size="205,52">
-      <relation target="n0_ddj4" sidePair="center-center,middle-middle"/>
-      <relation target="n0_ddj4" sidePair="height-height"/>
-    </image>
     <component id="n7_n1c3" name="n7" src="n1c314" xy="46,12">
       <relation target="n4_ddj4" sidePair="left-left,top-top"/>
     </component>
@@ -41,6 +37,9 @@
       <item/>
       <item/>
     </list>
+    <component id="n21_fvaa" name="n21" src="fvaa1a" xy="276,776" size="205,52">
+      <relation target="n0_ddj4" sidePair="center-center,middle-middle"/>
+      <relation target="n0_ddj4" sidePair="height-height"/>
+    </component>
   </displayList>
-  <relation target="" sidePair="width-width,height-height"/>
 </component>

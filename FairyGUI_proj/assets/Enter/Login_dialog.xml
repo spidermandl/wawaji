@@ -7,9 +7,6 @@
     <component id="n5_lf03" name="n5" src="lf031" xy="99,298" size="508,80">
       <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
     </component>
-    <image id="n6_ddj4" name="n6" src="lf03h" xy="299,315">
-      <relation target="n3_lf03" sidePair="center-center"/>
-    </image>
     <component id="n7_ddj4" name="n7" src="ddj4k" xy="329,677" size="83,181">
       <relation target="n3_lf03" sidePair="topext-bottom"/>
     </component>
@@ -46,6 +43,10 @@
     </richtext>
     <component id="n18_ddj4" name="n18" src="ddj4u" xy="436,180">
       <relation target="n3_lf03" sidePair="right-right"/>
+    </component>
+    <component id="n19_fvaa" name="n19" src="fvaa1b" xy="301,314" size="95,47">
+      <relation target="n5_lf03" sidePair="center-center,middle-middle"/>
+      <relation target="n5_lf03" sidePair="height-height"/>
     </component>
   </displayList>
 </component>

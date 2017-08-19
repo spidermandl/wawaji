@@ -11,7 +11,7 @@ public class UILoginWin : Window
 		get{ return this.contentPane.GetChild ("n7"); }
 	}
 	public GObject Login{
-		get{ return this.contentPane.GetChild ("n5"); }
+		get{ return this.contentPane.GetChild ("n19"); }
 	}
 
 	public UILoginWin ()

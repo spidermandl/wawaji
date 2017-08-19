@@ -18,7 +18,7 @@ public class UIEnterMain : UIMain
 		//_mainView = this.GetComponent<UIPanel>().ui;
 
 		_loginWin = new UILoginWin();
-		_mainView.GetChild("n0").onClick.Add(() => { 
+		_mainView.GetChild("n21").onClick.Add(() => { 
 			this._clickFunc(ClickType.StartGame);
 			_loginWin.Show(); 
 

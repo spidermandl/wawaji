@@ -32,6 +32,8 @@
     <image id="n1c317" name="i_head_frame.png" path="/images/"/>
     <component id="n1c318" name="nontice_item.xml" path="/"/>
     <image id="n1c319" name="i_light.png" path="/images/"/>
+    <component id="fvaa1a" name="start_game.xml" path="/button/"/>
+    <component id="fvaa1b" name="login.xml" path="/button/"/>
   </resources>
   <publish name="Enter" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

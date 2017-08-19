@@ -12,10 +12,19 @@ public class HitTestMain : MonoBehaviour
 		cube = GameObject.Find("Cube").transform;
 
 		Stage.inst.onTouchBegin.Add(OnTouchBegin);
+
+		GComponent _mainView = this.GetComponent<UIPanel>().ui;
+		_mainView.GetChild ("n32").onTouchBegin.Add (ButtonOnTouchBegin);
+		_mainView.GetChild("n31").onTouchBegin.Add(ButtonOnTouchBegin);
+		_mainView.GetChild ("n30").onTouchBegin.Add (ButtonOnTouchBegin);
 	}
 
+	void ButtonOnTouchBegin(){
+		Debug.Log ("void ButtonOnTouchBeginOnTouchBegin()");
+	}
 	void OnTouchBegin()
 	{
+		Debug.Log ("void OnTouchBegin()");
 		if (!Stage.isTouchOnUI)
 		{
 			RaycastHit hit;

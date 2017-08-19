@@ -15,61 +15,48 @@ public class UIGameMain : UIMain
 	{
 		base.init ("Game");
 		this.pool = PoolManager.Pools["WaWaJi"];
-		this.gameManager = new GameManager (
-			this.pool.Spawn ((GameObject)Resources.Load ("Prefabs/3dGame")).gameObject);
 
 	}
 
 	void Start(){
+		this.gameManager = new GameManager (
+			this.pool.Spawn ((GameObject)Resources.Load ("Prefabs/3dGame")).gameObject);
+		
 		GComponent toolbar = _mainView.GetChild ("n19").asCom;
 		toolbar.GetChild("n3").onClick.Add(() => { 
 			this.changeUIpage(typeof(UIHomeMain));
 
 		});
-		_mainView.GetChild("n3").onClick.Add(() => { 
-			Debug.Log("forward click");
-
-		});
-		_mainView.GetChild("n3").onTouchBegin.Add(() => { 
-			Debug.Log("forward onTouchBegin");
-
-		});
-		_mainView.GetChild("n3").onTouchEnd.Add(() => { 
-			Debug.Log("forward onTouchEnd");
-
-		});
-
-		_mainView.GetChild("n6").onClick.Add(() => { 
-			//this.changeUIpage(typeof(UIHomeMain));
-			//forward
-			Debug.Log("forward click");
-
-		});
-		_mainView.GetChild("n6").onTouchBegin.Add(() => { 
-			//this.changeUIpage(typeof(UIHomeMain));
-			//forward
-			this.gameManager.setMoveDirection(new Vector3(0,0,1));
-			Debug.Log("forward onTouchBegin");
-
+		//move forward
+		_mainView.GetChild("n6").onTouchBegin.Add(() => {
+			gameManager.setMoveDirection(new Vector3(0,0,-1));
 		});
 		_mainView.GetChild("n6").onTouchEnd.Add(() => { 
-			//this.changeUIpage(typeof(UIHomeMain));
-			//forward
+			gameManager.stopMoving();
+		});
+		//move back
+		_mainView.GetChild("n9").onTouchBegin.Add(() => {
+			this.gameManager.setMoveDirection(new Vector3(0,0,1));
+		});
+		_mainView.GetChild("n9").onTouchEnd.Add(() => {
 			this.gameManager.stopMoving();
-			Debug.Log("forward onTouchEnd");
 
 		});
-		_mainView.GetChild("n9").onClick.Add(() => { 
-			//this.changeUIpage(typeof(UIHomeMain));
-			//back
+		//move right
+		_mainView.GetChild("n7").onTouchBegin.Add(() => {
+			this.gameManager.setMoveDirection(new Vector3(1,0,0));
 		});
-		_mainView.GetChild("n7").onClick.Add(() => { 
-			//this.changeUIpage(typeof(UIHomeMain));
-			//right
+		_mainView.GetChild("n7").onTouchEnd.Add(() => {
+			this.gameManager.stopMoving();
+
 		});
-		_mainView.GetChild("n3").onClick.Add(() => { 
-			//this.changeUIpage(typeof(UIHomeMain));
-			//left
+		//move left
+		_mainView.GetChild("n8").onTouchBegin.Add(() => {
+			this.gameManager.setMoveDirection(new Vector3(-1,0,0));
+		});
+		_mainView.GetChild("n8").onTouchEnd.Add(() => {
+			this.gameManager.stopMoving();
+
 		});
 
 		_mainView.GetChild("n10").onClick.Add(() => { 
@@ -79,6 +66,11 @@ public class UIGameMain : UIMain
 	}
 
 	void Update(){
+	}
+
+	void FixedUpdate(){
+		if(gameObject != null)
+			gameManager.UpdateFrame ();
 	}
 
 	/**

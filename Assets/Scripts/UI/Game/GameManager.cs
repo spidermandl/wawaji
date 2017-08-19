@@ -8,18 +8,24 @@ using PathologicalGames;
 public class GameManager
 {
 	GameObject root;
-	GameObject picker;
-	ArrayList balls;
 	SpawnPool pool;
+	///// 球相关属性 ///////////////////////////////////////////
+	ArrayList balls;
+	int m_ball_num = 120;//生成球数量
+	///// ////////////////////////////////////////////////////////
+
+	///// 夹球器相关属性 ///////////////////////////////////////////
+	Picker picker;
 	Vector3 moveDiretion = Vector3.zero;
 	float speed = 10;
 	bool isMoving = false;
+	///// ////////////////////////////////////////////////////////
 
 	public GameManager (GameObject root)
 	{
 		this.pool = PoolManager.Pools["WaWaJi"];
 		this.root = root;
-		this.picker = this.root.transform.Find ("structure/Player").gameObject;
+		this.picker = new Picker(this.root.transform.Find ("structure/Player"));
 		this.balls = new ArrayList();
 		initBalls ();
 	}
@@ -28,7 +34,7 @@ public class GameManager
 
 	}
 	void initBalls(){
-		int num = 80;
+		int num = this.m_ball_num;
 		GameObject ball1 = (GameObject)Resources.Load ("Prefabs/ball/ball_1");
 		GameObject ball2 =(GameObject)Resources.Load ("Prefabs/ball/ball_2");
 		GameObject ball3 =(GameObject)Resources.Load ("Prefabs/ball/ball_3");
@@ -62,7 +68,7 @@ public class GameManager
 				float x = (float)Math.Round(seed.NextDouble()*4 - 2,2);
 				float z = (float)Math.Round(seed.NextDouble()*3 - 2,2);
 				ball.position = new Vector3 (x, -2.5f, z);
-				Debug.Log (ball.transform.position);
+				//Debug.Log (ball.transform.position);
 				this.balls.Add (ball);
 			}
 		}
@@ -77,12 +83,12 @@ public class GameManager
 		this.isMoving = false;
 	}
 
-	void FixedUpdate(){
+	public void UpdateFrame(){
 		if(isMoving)
-			this.picker.transform.Translate (
+			this.picker.move (new Vector3(
 				this.moveDiretion.x * Time.fixedDeltaTime,
 				this.moveDiretion.y * Time.fixedDeltaTime,
-				this.moveDiretion.z * Time.fixedDeltaTime);
+				this.moveDiretion.z * Time.fixedDeltaTime));
 
 	}
 

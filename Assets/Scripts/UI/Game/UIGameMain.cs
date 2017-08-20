@@ -19,8 +19,14 @@ public class UIGameMain : UIMain
 	}
 
 	void Start(){
-		this.gameManager = new GameManager (
-			this.pool.Spawn ((GameObject)Resources.Load ("Prefabs/3dGame")).gameObject);
+//		this.gameManager = new GameManager (
+//			this.pool.Spawn ((GameObject)Resources.Load ("Prefabs/3dGame")).gameObject);
+
+		GameObject root = this.pool.Spawn ((GameObject)Resources.Load ("Prefabs/3dGame")).gameObject;
+		if (root.GetComponent (typeof(GameManager)) != null) {
+			Destroy (root.GetComponent (typeof(GameManager)));
+		}
+		this.gameManager = root.AddComponent (typeof(GameManager)) as GameManager;
 		
 		GComponent toolbar = _mainView.GetChild ("n19").asCom;
 		toolbar.GetChild("n3").onClick.Add(() => { 
@@ -60,18 +66,13 @@ public class UIGameMain : UIMain
 		});
 
 		_mainView.GetChild("n10").onClick.Add(() => { 
-			//this.changeUIpage(typeof(UIHomeMain));
-			//go
+			this.gameManager.startPick();
 		});
 	}
 
 	void Update(){
 	}
 
-	void FixedUpdate(){
-		if(gameObject != null)
-			gameManager.UpdateFrame ();
-	}
 
 	/**
 	 * 销毁界面回调

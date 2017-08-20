@@ -1,25 +1,23 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/Game/Picker.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Sample/stateMachine/ClassWithBasicStates.cs">
     <Files>
-      <File FileName="Assets/Scripts/UI/Game/UIGameMain.cs" Line="34" Column="25" />
+      <File FileName="Assets/Scripts/UnityFacade.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PhysicsMove.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/Game/UIGameMain.cs" Line="29" Column="1" />
       <File FileName="Assets/Scripts/Main.cs" Line="1" Column="1" />
       <File FileName="Assets/FairyGUI/Examples/Bag/BagMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Command/SocketCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Command/HttpCommand.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Command/StartUpCommand.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Command/StartUpCommand.cs" Line="15" Column="3" />
       <File FileName="Assets/Scripts/View/Count2Mediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Count2Proxy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/GameMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/EnterMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/UI/Enter/UIEnterMain.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UnityFacade.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/HomeMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/UI/UIMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/Count1Mediator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PhysicsMove.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CollisionColor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MouseInstantiate.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/ApplicationFacade.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/EventsEnum.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/MainUI.cs" Line="1" Column="1" />
@@ -34,8 +32,24 @@
       <File FileName="Assets/Scripts/Sample/UGUI_MyToggle.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/UGUI_MyToggleGroup.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/MediatorPlug.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/Game/GameManager.cs" Line="12" Column="41" />
-      <File FileName="Assets/Scripts/UI/Game/Picker.cs" Line="36" Column="51" />
+      <File FileName="Assets/Scripts/UI/Game/GameManager.cs" Line="35" Column="2" />
+      <File FileName="Assets/Scripts/UI/Game/Picker.cs" Line="57" Column="3" />
+      <File FileName="Assets/Scripts/UI/Enter/EnterBinder.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/Enter/UI_arrow_button.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/Enter/UI_Enter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/Enter/UILoginWin.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/PathologicalGames/PoolManager/PoolManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Sample/stateMachine/Main.cs" Line="73" Column="29" />
+      <File FileName="Assets/Scripts/Sample/stateMachine/ColorChanger.cs" Line="20" Column="18" />
+      <File FileName="Assets/Plugins/StateMachine/StateMachine.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/PathologicalGames/PoolManager/SpawnPool.cs" Line="647" Column="1" />
+      <File FileName="Assets/Scripts/Sample/stateMachine/ClassChangeDuringLongEnter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Sample/stateMachine/ClassChangeDuringUpdate.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Sample/stateMachine/ClassDerivedFromSuperClass.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Sample/stateMachine/ClassDeactivateDuringChange.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Sample/stateMachine/ClassOverwriteLongEnter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Sample/stateMachine/ClassWithHiddenMethods.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Sample/stateMachine/ClassWithBasicStates.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

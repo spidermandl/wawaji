@@ -5,9 +5,8 @@ using FairyGUI;
 using UnityEngine;
 using PathologicalGames;
 
-public class GameManager
+public class GameManager : MonoBehaviour
 {
-	GameObject root;
 	SpawnPool pool;
 	///// 球相关属性 ///////////////////////////////////////////
 	ArrayList balls;
@@ -16,18 +15,23 @@ public class GameManager
 
 	///// 夹球器相关属性 ///////////////////////////////////////////
 	Picker picker;
-	Vector3 moveDiretion = Vector3.zero;
-	float speed = 10;
-	bool isMoving = false;
 	///// ////////////////////////////////////////////////////////
+	///// //////////////////////////////////////////////////////// 
 
-	public GameManager (GameObject root)
-	{
+	void Awake(){
 		this.pool = PoolManager.Pools["WaWaJi"];
-		this.root = root;
-		this.picker = new Picker(this.root.transform.Find ("structure/Player"));
+		GameObject root = this.gameObject.transform.Find ("structure/Player").gameObject;
+		if (root.GetComponent (typeof(Picker)) != null) {
+			Destroy (root.GetComponent (typeof(Picker)));
+		}
+		this.picker = root.AddComponent (typeof(Picker)) as Picker;
+
 		this.balls = new ArrayList();
 		initBalls ();
+	}
+
+	public void FixedUpdate(){
+
 	}
 
 	void removeColliderRender(){
@@ -76,22 +80,14 @@ public class GameManager
 	}
 
 	public void setMoveDirection(Vector3 direction){
-		this.moveDiretion = direction;
-		this.isMoving = true;
+		this.picker.startSeeking (direction);
 	}
 	public void stopMoving(){
-		this.isMoving = false;
+		this.picker.stopSeeking ();
 	}
-
-	public void UpdateFrame(){
-		if(isMoving)
-			this.picker.move (new Vector3(
-				this.moveDiretion.x * Time.fixedDeltaTime,
-				this.moveDiretion.y * Time.fixedDeltaTime,
-				this.moveDiretion.z * Time.fixedDeltaTime));
-
+	public void startPick(){
+		this.picker.startTargeting ();
 	}
-
 
 	public void destroyObjects(){
 		while (this.pool.Count > 0)

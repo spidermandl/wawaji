@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="s6wf2fzs" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="fvaa0" name="Rewards.xml" path="/" exported="true"/>
+    <image id="fvaa1" name="264.png" path="/images/"/>
+    <image id="fvaa2" name="bg_writing.png" path="/images/" scale="9grid" scale9grid="95,17,190,34"/>
+    <image id="fvaa3" name="bg.png" path="/images/"/>
+    <image id="fvaa4" name="b_back.png" path="/images/" scale="9grid" scale9grid="36,20,72,40"/>
+    <image id="fvaa5" name="i_coin.png" path="/images/"/>
+    <image id="fvaa6" name="b_sheet.png" path="/images/" scale="9grid" scale9grid="155,184,310,368"/>
+    <image id="fvaa7" name="bg_info.png" path="/images/" scale="9grid" scale9grid="87,20,174,40"/>
+    <image id="fvaa8" name="b_submit.png" path="/images/" scale="9grid" scale9grid="79,25,158,50"/>
+    <component id="fvaa9" name="toolbar.xml" path="/"/>
+    <component id="fvaab" name="back.xml" path="/button/"/>
+    <component id="fvaac" name="submit.xml" path="/button/"/>
+  </resources>
+  <publish name="Rewards" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
+</packageDescription>

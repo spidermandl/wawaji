@@ -24,15 +24,22 @@ public abstract class UIMain : MonoBehaviour
 	 * 初始化主界面
 	 * */
 	protected void init(string module){
-		GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT);
+		GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT,FairyGUI.UIContentScaler.ScreenMatchMode.MatchHeight);
+		GRoot.inst.MakeFullScreen();
+		//GRoot.inst.SetContentScaleFactor ((int)GRoot.inst.width,(int)GRoot.inst.height);
+		Debug.Log (GRoot.inst.width);
+		Debug.Log (GRoot.inst.height);
+
 
 		UIPackage.AddPackage (module);
 		_mainView = UIPackage.CreateObject (module, module).asCom;
+		//_mainView.SetSize (GRoot.inst.width, GRoot.inst.height);
 		GRoot.inst.AddChild (_mainView);
 
 		this.gameObject.SetActive (false);
 		MediatorPlug plug = this.gameObject.AddComponent (typeof(MediatorPlug)) as MediatorPlug;
 		plug.setClassRef (module+"Mediator");
+		plug.setMediatorName (module + "Mediator");
 		this.gameObject.SetActive (true);
 	}
 

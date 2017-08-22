@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="dulhkyd0" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="l4t60" name="Game.xml" path="/" exported="true"/>
     <image id="l4t61" name="bg_table.png" path="/images/"/>
     <image id="l4t62" name="bg_pad.png" path="/images/"/>
     <image id="l4t63" name="bg_direction.png" path="/images/" scale9grid="58,42,116,84"/>
@@ -29,6 +28,14 @@
     <component id="l4t6s" name="back.xml" path="/button/"/>
     <component id="l4t6t" name="add_coin.xml" path="/button/"/>
     <component id="l4t6u" name="exchange.xml" path="/button/"/>
+    <component id="fvaav" name="Confirm_dialog.xml" path="/" exported="true"/>
+    <image id="fvaaw" name="bg_confirm.png" path="/images/" scale="9grid" scale9grid="126,70,252,140"/>
+    <image id="fvaax" name="b_cancel.png" path="/images/" scale="9grid" scale9grid="47,18,94,36"/>
+    <image id="fvaay" name="b_confirm.png" path="/images/" scale="9grid" scale9grid="47,18,94,36"/>
+    <component id="fvaaz" name="confirm.xml" path="/button/"/>
+    <component id="fvaa10" name="cancel.xml" path="/button/"/>
+    <component id="fvaa11" name="Controller.xml" path="/"/>
+    <component id="fvaa12" name="Game.xml" path="/" exported="true"/>
   </resources>
   <publish name="Game" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

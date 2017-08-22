@@ -10,7 +10,15 @@ public class GameManager : MonoBehaviour
 	SpawnPool pool;
 	///// 球相关属性 ///////////////////////////////////////////
 	ArrayList balls;
-	int m_ball_num = 120;//生成球数量
+
+	const int BALL_TOTAL = 120;//生成球数量
+	const float BALL_RADIUS = 0.25f;//球半径
+	const int CREATION_X=-2;
+	const int CREATION_Y=-2;
+	const int CREATION_Z = 2;
+	const int LENGTH_X=4;
+	const int LENGTH_Y=3;
+	const int LENGTH_Z = 5;
 	///// ////////////////////////////////////////////////////////
 
 	///// 夹球器相关属性 ///////////////////////////////////////////
@@ -21,11 +29,13 @@ public class GameManager : MonoBehaviour
 	void Awake(){
 		this.pool = PoolManager.Pools["WaWaJi"];
 		GameObject root = this.gameObject.transform.Find ("structure/Player").gameObject;
-		if (root.GetComponent (typeof(Picker)) != null) {
-			Destroy (root.GetComponent (typeof(Picker)));
-		}
-		this.picker = root.AddComponent (typeof(Picker)) as Picker;
-
+		Picker p = root.GetComponent (typeof(Picker)) as Picker;
+		if ( p!= null) {
+			p.initConfig ();
+			//Destroy (root.GetComponent (typeof(Picker)));
+		}else
+			p = root.AddComponent (typeof(Picker)) as Picker;
+		this.picker=p;
 		this.balls = new ArrayList();
 		initBalls ();
 	}
@@ -37,17 +47,22 @@ public class GameManager : MonoBehaviour
 	void removeColliderRender(){
 
 	}
+
 	void initBalls(){
-		int num = this.m_ball_num;
 		GameObject ball1 = (GameObject)Resources.Load ("Prefabs/ball/ball_1");
 		GameObject ball2 =(GameObject)Resources.Load ("Prefabs/ball/ball_2");
 		GameObject ball3 =(GameObject)Resources.Load ("Prefabs/ball/ball_3");
 
-		//    -2
-		//-2       2
-		//     1
+		//        2   2
+		//-2              2
+		//   -3   -1
+		//3*4*5
+		ArrayList indexs = new ArrayList();
+		for (int i = 0; i < 6 * 8 * 10; i++) {
+			indexs.Add (i);
+		}
 
-		for (int i = 0; i < num; i++) {
+		for (int i = 0; i < BALL_TOTAL; i++) {
 			System.Random seed =  new System.Random ();
 			int rand = seed.Next (1, 4);
 			Transform ball = null;	
@@ -69,14 +84,25 @@ public class GameManager : MonoBehaviour
 			}
 			if(ball!=null){
 				seed =  new System.Random ();
-				float x = (float)Math.Round(seed.NextDouble()*4 - 2,2);
-				float z = (float)Math.Round(seed.NextDouble()*3 - 2,2);
-				ball.position = new Vector3 (x, -2.5f, z);
-				//Debug.Log (ball.transform.position);
+//				float x = (float)Math.Round(seed.NextDouble()*4 - 2,2);
+//				float z = (float)Math.Round(seed.NextDouble()*3 - 2,2);
+//				ball.position = new Vector3 (x, -2.5f, z);
+
+				rand = seed.Next (0, indexs.Count);
+				Int32 index = (Int32)indexs [rand];
+				indexs.Remove (index);
+				int n_y = index / (6 * 8);
+				int n_z = (index - 6 * 8 * n_y) / 8;
+				int n_x = index - 6 * 8 * n_y - 8 * n_z;
+				//Debug.Log (new Vector3 (n_x, n_y, n_z));
+				ball.position = new Vector3 (
+					CREATION_X+2*BALL_RADIUS*n_x+BALL_RADIUS,
+					CREATION_Y+2*BALL_RADIUS*n_y+BALL_RADIUS,
+					CREATION_Z-2*BALL_RADIUS*n_z+BALL_RADIUS);
+
 				this.balls.Add (ball);
 			}
 		}
-		
 	}
 
 	public void setMoveDirection(Vector3 direction){

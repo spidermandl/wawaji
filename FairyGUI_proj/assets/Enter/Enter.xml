@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="752,1208">
   <displayList>
-    <loader id="n4_ddj4" name="n4" xy="0,0" size="752,1208" fill="scaleFree">
-      <relation target="" sidePair="width-width,height-height"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <loader id="n4_ddj4" name="n4" xy="0,0" size="752,1208" fill="scaleFree" frame="4">
+      <relation target="" sidePair="topext-top,bottomext-bottom"/>
     </loader>
     <component id="n0_ddj4" name="n0" src="lf031" xy="122,765" size="508,80">
       <relation target="n4_ddj4" sidePair="leftext-left,rightext-right"/>
+      <relation target="n4_ddj4" sidePair="middle-middle"/>
     </component>
-    <component id="n7_n1c3" name="n7" src="n1c314" xy="46,11">
+    <component id="n7_n1c3" name="n7" src="n1c314" xy="46,12">
       <relation target="n4_ddj4" sidePair="left-left,top-top"/>
     </component>
-    <component id="n9_n1c3" name="n9" src="n1c316" xy="160,13">
+    <component id="n9_n1c3" name="n9" src="n1c316" xy="160,14">
       <relation target="n4_ddj4" sidePair="left-left,top-top"/>
     </component>
-    <image id="n10_n1c3" name="n10" src="n1c3x" xy="20,133" size="711,533">
-      <relation target="n4_ddj4" sidePair="leftext-left,rightext-right"/>
-      <relation target="n4_ddj4" sidePair="height-height,topext-top"/>
+    <image id="n10_n1c3" name="n10" src="n1c3x" xy="20,134" size="711,533">
+      <relation target="n4_ddj4" sidePair="center-center,middle-middle"/>
+      <relation target="n4_ddj4" sidePair="top-top"/>
     </image>
     <image id="n11_n1c3" name="n11" src="n1c310" xy="548,0" size="148,235">
       <relation target="n4_ddj4" sidePair="top-top,right-right"/>
       <relation target="n4_ddj4" sidePair="width-width"/>
     </image>
-    <image id="n12_n1c3" name="n12" src="n1c312" xy="65,924" size="603,282">
+    <image id="n12_n1c3" name="n12" src="n1c312" xy="65,926" size="603,282">
       <relation target="n4_ddj4" sidePair="width-width,center-center"/>
       <relation target="n4_ddj4" sidePair="topext-top,bottom-bottom"/>
     </image>
     <image id="n15_n1c3" name="n15" src="n1c319" xy="387,0" size="364,434">
-      <relation target="n10_n1c3" sidePair="top-top,right-right"/>
-      <relation target="n10_n1c3" sidePair="width-width,height-height"/>
+      <relation target="n4_ddj4" sidePair="left-left,top-top"/>
     </image>
-    <list id="n20_n1c3" name="n20" xy="70,924" size="603,282" overflow="scroll" defaultItem="ui://w744s2qdn1c318">
+    <list id="n20_n1c3" name="n20" xy="70,926" size="603,282" overflow="scroll" defaultItem="ui://w744s2qdn1c318">
       <relation target="n4_ddj4" sidePair="width-width,center-center"/>
-      <relation target="n4_ddj4" sidePair="topext-top,bottom-bottom"/>
+      <relation target="n4_ddj4" sidePair="bottom-bottom"/>
       <item/>
       <item/>
       <item/>
@@ -42,5 +41,4 @@
       <relation target="n0_ddj4" sidePair="height-height"/>
     </component>
   </displayList>
-  <relation target="" sidePair="width-width,height-height"/>
 </component>

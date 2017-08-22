@@ -11,17 +11,25 @@ public class UILoginWin : Window
 		get{ return this.contentPane.GetChild ("n7"); }
 	}
 	public GObject Login{
-		get{ return this.contentPane.GetChild ("n19"); }
+		get{ return this.contentPane.GetChild ("n5"); }
+	}
+	public GObject Username {
+		get{ return this.contentPane.GetChild ("n16"); }
+	}
+	public GObject Password{
+		get{ return this.contentPane.GetChild ("n17"); }
 	}
 
 	public UILoginWin ()
 	{
+		UIConfig.modalLayerColor = new Color (0f, 0f, 0f, 0.4f);
 	}
 
 	protected override void OnInit()
 	{
 		this.contentPane = UIPackage.CreateObject("Enter", "Login_dialog").asCom;
 		this.Center();
+		this.modal = true;
 
 	}
 

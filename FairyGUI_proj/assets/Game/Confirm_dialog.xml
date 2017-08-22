@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="504,278">
+  <displayList>
+    <image id="n0_fvaa" name="n0" src="fvaaw" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_fvaa" name="n1" src="fvaa10" xy="275,168">
+      <relation target="n0_fvaa" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n2_fvaa" name="n2" src="fvaaz" xy="56,169">
+      <relation target="n0_fvaa" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <text id="n3_fvaa" name="n3" xy="222,26" size="55,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="标题">
+      <relation target="n0_fvaa" sidePair="center-center,top-top"/>
+    </text>
+    <text id="n4_fvaa" name="n4" xy="155,72" size="185,28" fontSize="20" color="#ffffff" autoSize="height" singleLine="true" text="叭啦叭叭啦来吧来吧">
+      <relation target="n0_fvaa" sidePair="top-top,center-center"/>
+    </text>
+    <text id="n5_fvaa" name="n5" xy="124,115" size="265,28" fontSize="20" color="#ffffff" autoSize="height" singleLine="true" text="大沙发四甲方；按键打发时间">
+      <relation target="n0_fvaa" sidePair="top-top,center-center"/>
+    </text>
+  </displayList>
+</component>

@@ -24,6 +24,9 @@ public class UIHomeMain : UIMain
 		_list.scrollPane.onScroll.Add(DoSpecialEffect);
 		DoSpecialEffect();
 
+		GLoader bg = _mainView.GetChild ("n1")as GLoader;
+		bg.url = "bg/bg_home";
+
 		_mainView.GetChild("n11").onClick.Add(() => { 
 			this._clickFunc(ClickType.PlayGame);
 			this.changeUIpage(typeof(UIGameMain));

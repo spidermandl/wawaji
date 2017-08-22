@@ -5,7 +5,7 @@ using Enter;
 using PureMVC.Interfaces;
 
 public class HomeMediator: BaseMediator {
-
+	public new const string NAME = "HomeMediator";
 	private UIHomeMain m_home_ui{
 		get{ return ((GameObject)ViewComponent).GetComponent<UIHomeMain>(); }
 	}

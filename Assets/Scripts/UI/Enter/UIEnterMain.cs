@@ -18,7 +18,9 @@ public class UIEnterMain : UIMain
 		//_mainView = this.GetComponent<UIPanel>().ui;
 
 		_loginWin = new UILoginWin();
-		_mainView.GetChild("n21").onClick.Add(() => { 
+		GLoader bg = _mainView.GetChild ("n4")as GLoader;
+		bg.url = "bg/bg_enter";
+		_mainView.GetChild("n0").onClick.Add(() => { 
 			this._clickFunc(ClickType.StartGame);
 			_loginWin.Show(); 
 
@@ -33,14 +35,30 @@ public class UIEnterMain : UIMain
 				this._clickFunc(ClickType.LoginGame);
 				this.changeUIpage(typeof(UIHomeMain));
 			});
+
+			_loginWin.Username.onTouchBegin.Add (()=>{
+				_loginWin.Username.asTextField.text="";
+			});
+			_loginWin.Password.onTouchBegin.Add (()=>{
+				_loginWin.Password.asTextField.text="";
+			});
+
 		});
-			
+
+
+		//Stage.inst.onClick.Add ();
+		//GTextInput.draggingObject;
+		Stage.inst.onKeyDown.Add(OnKeyDown);
+
 		
 	}
 
 	void Update(){
 	}
-
+	void OnKeyDown(EventContext context)
+	{
+		Debug.Log(context.inputEvent.keyCode);
+	}
 
 }
 

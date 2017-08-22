@@ -5,6 +5,7 @@ using Enter;
 using PureMVC.Interfaces;
 
 public class GameMediator: BaseMediator {
+	public new const string NAME = "GameMediator";
 
 	private UIGameMain m_game_ui{
 		get{ return ((GameObject)ViewComponent).GetComponent<UIGameMain>(); }
@@ -45,6 +46,9 @@ public class GameMediator: BaseMediator {
 		}
 	}
 
+	public void gameOver(){
+		m_game_ui.gameOver ();
+	}
 
 }
 

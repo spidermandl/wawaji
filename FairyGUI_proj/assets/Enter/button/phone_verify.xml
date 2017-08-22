@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="160,52" extention="Button">
-  <Button/>
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver"/>
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n1" src="ddj4p" name="n1" xy="0,0">
+    <image id="n1" name="n1" src="ddj4p" xy="0,0">
       <gearDisplay controller="button" pages="0"/>
-      <relation target="" sidePair="width,height"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n2" src="ddj4p" name="n2" xy="0,0">
+    <image id="n2" name="n2" src="ddj4p" xy="0,0">
       <gearDisplay controller="button" pages="1"/>
-      <relation target="" sidePair="width,height"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n3" src="ddj4p" name="n3" xy="0,0">
+    <image id="n3" name="n3" src="ddj4p" xy="0,0">
       <gearDisplay controller="button" pages="2"/>
-      <relation target="" sidePair="width,height"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n4" src="ddj4p" name="n4" xy="0,0">
+    <image id="n4" name="n4" src="ddj4p" xy="0,0">
       <gearDisplay controller="button" pages="3"/>
-      <relation target="" sidePair="width,height"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </image>
   </displayList>
+  <Button downEffect="dark" downEffectValue="0.80"/>
 </component>

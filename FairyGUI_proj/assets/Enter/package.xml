@@ -34,6 +34,7 @@
     <image id="n1c319" name="i_light.png" path="/images/"/>
     <component id="fvaa1a" name="start_game.xml" path="/button/"/>
     <component id="fvaa1b" name="login.xml" path="/button/"/>
+    <image id="fvaa1c" name="bg.png" path="/images/" scale="9grid" scale9grid="188,302,376,604"/>
   </resources>
   <publish name="Enter" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

@@ -5,6 +5,7 @@ using Enter;
 using PureMVC.Interfaces;
 
 public class EnterMediator: BaseMediator {
+	public new const string NAME = "EnterMediator";
 
 	private UIEnterMain m_login_ui{
 		get{ return ((GameObject)ViewComponent).GetComponent<UIEnterMain>(); }

@@ -42,6 +42,7 @@
     <component id="ddj414" name="check_prize.xml" path="/button/"/>
     <image id="ddj415" name="bg_notice_frame.png" path="/images/"/>
     <component id="ddj416" name="scene.xml" path="/"/>
+    <image id="fvaa17" name="bg.png" path="/images/"/>
   </resources>
   <publish name="Home" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

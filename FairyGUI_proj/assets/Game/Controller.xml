@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,460">
+  <displayList>
+    <image id="n0_fvaa" name="n0" src="l4t61" xy="0,60" size="750,400">
+      <relation target="" sidePair="bottom-bottom,width-width"/>
+    </image>
+    <image id="n1_fvaa" name="n1" src="l4t62" xy="18,0" size="713,251">
+      <relation target="" sidePair="center-center,top-top"/>
+    </image>
+    <component id="n2_fvaa" name="n2" src="l4t6e" xy="176,16">
+      <relation target="n1_fvaa" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n3_fvaa" name="n3" src="l4t6a" xy="95,61">
+      <relation target="n1_fvaa" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n4_fvaa" name="n4" src="l4t6c" xy="225,61">
+      <relation target="n1_fvaa" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n5_fvaa" name="n5" src="l4t6d" xy="175,104">
+      <relation target="n1_fvaa" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n6_fvaa" name="n6" src="l4t6f" xy="426,36">
+      <relation target="n1_fvaa" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <list id="n7_fvaa" name="n7" xy="-1,262" size="750,198" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://dulhkyd0l4t6g">
+      <relation target="n0_fvaa" sidePair="center-center,bottom-bottom"/>
+      <relation target="n0_fvaa" sidePair="width-width"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <relation target="" sidePair="width-width,height-height"/>
+</component>

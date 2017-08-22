@@ -67,4 +67,8 @@ public class MediatorPlug : MonoBehaviour, IMediatorPlug {
 	public void setClassRef(string class_ref){
 		this.mediatorClassRef = class_ref;
 	}
+
+	public void setMediatorName(string name){
+		this.mediatorName = name;
+	}
 }

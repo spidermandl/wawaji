@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="696,858">
+  <displayList>
+    <image id="n0_mc6i" name="n0" src="mc6i1" xy="0,0" size="696,677">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_mc6i" name="n1" src="mc6i2" xy="312,677" size="83,181">
+      <relation target="n0_mc6i" sidePair="top-bottom,center-center"/>
+    </component>
+    <image id="n2_mc6i" name="n2" src="mc6ii" xy="242,58">
+      <relation target="n0_mc6i" sidePair="center-center,top-top"/>
+    </image>
+    <image id="n5_mc6i" name="n5" src="mc6i9" xy="97,241" size="499,1">
+      <relation target="n0_mc6i" sidePair="center-center,width-width"/>
+      <relation target="n0_mc6i" sidePair="top-top"/>
+    </image>
+    <component id="n7_mc6i" name="n7" src="mc6ia" xy="94,532" size="508,80">
+      <relation target="n0_mc6i" sidePair="bottom-bottom,center-center"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </component>
+    <text id="n11_mc6i" name="n11" xy="90,136" size="131,38" fontSize="30" color="#ffffff" autoSize="height" singleLine="true" text="充值金额">
+      <relation target="n0_mc6i" sidePair="top-top,left-left"/>
+    </text>
+    <text id="n13_mc6i" name="n13" xy="90,267" size="185,38" fontSize="30" color="#ffffff" autoSize="height" singleLine="true" text="常见金额充值">
+      <relation target="n0_mc6i" sidePair="left-left,top-top"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </text>
+    <richtext id="n17_mc6i" name="n17" xy="97,194" size="497,32" fontSize="25" color="#b8a9f5" autoSize="none" singleLine="true" text="请输入充值金额">
+      <relation target="n17_mc6i" sidePair="leftext-left,rightext-right"/>
+      <relation target="" sidePair="top-top"/>
+    </richtext>
+    <richtext id="n18_mc6i" name="n18" xy="274,270" size="282,32" fontSize="25" color="#b8a9f5" autoSize="none" singleLine="true" text="（需安装支付宝客户端）">
+      <relation target="n13_mc6i" sidePair="left-left,top-top"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </richtext>
+    <component id="n19_mc6i" name="n19" src="mc6ij" xy="95,334" size="110,52">
+      <relation target="n0_mc6i" sidePair="left-left,top-top"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </component>
+    <component id="n20_mc6i" name="n20" src="mc6im" xy="229,334" size="110,52">
+      <relation target="n19_mc6i" sidePair="top-top,left-left"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </component>
+    <component id="n21_mc6i" name="n21" src="mc6in" xy="360,334" size="110,52">
+      <relation target="n20_mc6i" sidePair="left-left,top-top"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </component>
+    <component id="n22_mc6i" name="n22" src="mc6io" xy="492,333" size="110,52">
+      <relation target="n21_mc6i" sidePair="left-left,top-top"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </component>
+    <component id="n23_mc6i" name="n23" src="mc6ip" xy="95,417" size="110,52">
+      <relation target="n19_mc6i" sidePair="left-left,top-top"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </component>
+    <component id="n24_mc6i" name="n24" src="mc6iq" xy="230,418" size="110,52">
+      <relation target="n23_mc6i" sidePair="left-left,top-top"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </component>
+    <image id="n25_mc6i" name="n25" src="mc6ir" xy="256,547" size="186,48">
+      <relation target="n7_mc6i" sidePair="center-center,middle-middle"/>
+      <relation target="n7_mc6i" sidePair="width-width"/>
+    </image>
+  </displayList>
+</component>

@@ -36,9 +36,11 @@ public class UIEnterMain : UIMain
 				this.changeUIpage(typeof(UIHomeMain));
 			});
 
+			//
 			_loginWin.Username.onTouchBegin.Add (()=>{
 				_loginWin.Username.asTextField.text="";
 			});
+			//
 			_loginWin.Password.onTouchBegin.Add (()=>{
 				_loginWin.Password.asTextField.text="";
 			});

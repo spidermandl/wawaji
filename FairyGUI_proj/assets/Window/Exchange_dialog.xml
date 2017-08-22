@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="696,858">
+  <displayList>
+    <image id="n0_mc6i" name="n0" src="mc6i1" xy="0,0" size="696,677">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_mc6i" name="n1" src="mc6i2" xy="312,677" size="83,181">
+      <relation target="n0_mc6i" sidePair="top-bottom,center-center"/>
+    </component>
+    <image id="n2_mc6i" name="n2" src="mc6i4" xy="255,61">
+      <relation target="n0_mc6i" sidePair="center-center,top-top"/>
+    </image>
+    <component id="n3_mc6i" name="n3" src="mc6i5" xy="441,197">
+      <relation target="n0_mc6i" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n4_mc6i" name="n4" src="mc6i7" xy="440,289">
+      <relation target="n0_mc6i" sidePair="right-right,top-top"/>
+    </component>
+    <image id="n5_mc6i" name="n5" src="mc6i9" xy="96,261" size="499,1">
+      <relation target="n0_mc6i" sidePair="center-center,width-width"/>
+      <relation target="n0_mc6i" sidePair="top-top"/>
+    </image>
+    <image id="n6_mc6i" name="n6" src="mc6i9" xy="100,350" size="499,1">
+      <relation target="n0_mc6i" sidePair="top-top,center-center"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </image>
+    <component id="n7_mc6i" name="n7" src="mc6ia" xy="95,385" size="508,80">
+      <relation target="n0_mc6i" sidePair="center-center,bottom-bottom"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </component>
+    <image id="n8_mc6i" name="n8" src="mc6ie" xy="261,400">
+      <relation target="n7_mc6i" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n9_mc6i" name="n9" src="mc6if" xy="102,209">
+      <relation target="n0_mc6i" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n10_mc6i" name="n10" src="mc6ig" xy="106,309">
+      <relation target="n0_mc6i" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n11_mc6i" name="n11" xy="100,145" size="131,31" fontSize="24" color="#ffffff" autoSize="height" singleLine="true" text="当前代币数:">
+      <relation target="n0_mc6i" sidePair="top-top,left-left"/>
+    </text>
+    <text id="n12_mc6i" name="n12" xy="254,143" size="58,31" fontSize="24" color="#ffffff" autoSize="height" singleLine="true" text="1000">
+      <relation target="n11_mc6i" sidePair="left-left"/>
+    </text>
+    <text id="n13_mc6i" name="n13" xy="74,503" size="573,31" fontSize="24" color="#ffffff" singleLine="true" text="兑换3-5分钟到账，提现低于100元，收取3元手续费。">
+      <relation target="n0_mc6i" sidePair="center-center,bottom-bottom"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </text>
+    <text id="n14_mc6i" name="n14" xy="204,563" size="319,31" fontSize="24" color="#ffffff" text="高于100元，收取2%手续费。">
+      <relation target="n0_mc6i" sidePair="center-center,bottom-bottom"/>
+      <relation target="n0_mc6i" sidePair="width-width"/>
+    </text>
+    <text id="n15_mc6i" name="n15" xy="100,206" size="322,31" fontSize="24" color="#ffffff" autoSize="height" singleLine="true" text="">
+      <relation target="n0_mc6i" sidePair="left-left,top-top"/>
+      <relation target="n3_mc6i" sidePair="rightext-right"/>
+    </text>
+    <text id="n16_mc6i" name="n16" xy="105,305" size="323,31" fontSize="24" color="#ffffff" autoSize="none" text="">
+      <relation target="n0_mc6i" sidePair="left-left,top-top"/>
+      <relation target="n4_mc6i" sidePair="rightext-right"/>
+    </text>
+  </displayList>
+</component>

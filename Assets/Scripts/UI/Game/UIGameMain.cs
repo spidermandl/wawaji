@@ -8,23 +8,22 @@ public class UIGameMain : UIMain
 {
 	GList _list;
 	UIConfirm _confirmWin;//登录对话框
+	UIExchange _exchangeWin;//
+	UITopup _topupWin;//
 
-	int item_index;//列表item索引值
 	GameManager gameManager;
 	SpawnPool pool;
 
 	void Awake()
 	{
 		base.init ("Game");
+		UIPackage.AddPackage ("Window");
 		this.pool = PoolManager.Pools["WaWaJi"];
 
 	}
 
 	void Start(){
-//		this.gameManager = new GameManager (
-//			this.pool.Spawn ((GameObject)Resources.Load ("Prefabs/3dGame")).gameObject);
-
-		//GameObject root = this.pool.Spawn ((GameObject)Resources.Load ("Prefabs/3dGame")).gameObject;
+		////获取游戏3d场景对象，以及游戏管理对象///////////////////////////////////////////////
 		GameObject root = GameObject.Find("3dGame");
 		if (root == null) {
 			root = GameObject.Instantiate ((GameObject)Resources.Load ("Prefabs/3dGame")as GameObject);
@@ -35,11 +34,27 @@ public class UIGameMain : UIMain
 			Destroy (root.GetComponent (typeof(GameManager)));
 		}
 		this.gameManager = root.AddComponent (typeof(GameManager)) as GameManager;
-		
+		/////////////////////////////////////////////////////////////////////////////////
+		//toolbar
 		GComponent toolbar = _mainView.GetChild ("n19").asCom;
-		toolbar.GetChild("n3").onClick.Add(() => { 
+		toolbar.GetChild("n3").onClick.Add(() => {
 			this.changeUIpage(typeof(UIHomeMain));
 		});
+		//提现界面
+		toolbar.GetChild("n4").onClick.Add(() => {
+			//提现界面
+			if(_exchangeWin == null)
+				_exchangeWin = new UIExchange ();
+			_exchangeWin.Show();
+		});
+		//充值界面
+		toolbar.GetChild ("n2").onClick.Add (() => {
+			//充值界面
+			if(_topupWin == null)
+				_topupWin = new UITopup ();
+			_topupWin.Show();
+		});
+		/////////////////////////////////////////////////////////////////////////////////
 		GComponent controller = _mainView.GetChild ("n22").asCom;
 		//move forward
 		controller.GetChild("n5").onTouchBegin.Add(() => {
@@ -77,7 +92,6 @@ public class UIGameMain : UIMain
 			this.gameManager.startPick();
 		});
 
-		_confirmWin = new UIConfirm ();
 	}
 
 	void Update(){
@@ -93,6 +107,8 @@ public class UIGameMain : UIMain
 	}
 
 	public void gameOver(){
+		if(_confirmWin == null)
+			_confirmWin = new UIConfirm ();
 		_confirmWin.Show ();
 
 		//关闭登录对话框

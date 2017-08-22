@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="jorujmv2" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="mc6i0" name="Exchange_dialog.xml" path="/" exported="true"/>
+    <image id="mc6i1" name="bg_exchange.png" path="/images/" scale="9grid" scale9grid="174,170,348,340"/>
+    <component id="mc6i2" name="login_close.xml" path="/button/"/>
+    <image id="mc6i3" name="b_exchange_close.png" path="/images/" scale="9grid" scale9grid="21,46,42,55"/>
+    <image id="mc6i4" name="c_exchange_title.png" path="/images/"/>
+    <component id="mc6i5" name="max.xml" path="/button/"/>
+    <image id="mc6i6" name="b_max.png" path="/images/" scale="9grid" scale9grid="40,13,80,26"/>
+    <component id="mc6i7" name="alypay.xml" path="/button/"/>
+    <image id="mc6i8" name="b_alypay.png" path="/images/"/>
+    <image id="mc6i9" name="line.png" path="/images/"/>
+    <component id="mc6ia" name="arrow_button.xml" path="/"/>
+    <image id="mc6ib" name="b_frame_main.png" path="/images/" scale="9grid" scale9grid="127,20,254,40"/>
+    <image id="mc6ic" name="i_arrow_left.png" path="/images/"/>
+    <image id="mc6id" name="i_arrow_right.png" path="/images/"/>
+    <image id="mc6ie" name="c_confirm_exchane.png" path="/images/"/>
+    <image id="mc6if" name="c_claim.png" path="/images/"/>
+    <image id="mc6ig" name="c_alipay_addr.png" path="/images/"/>
+    <component id="mc6ih" name="Topup_dialog.xml" path="/" exported="true"/>
+    <image id="mc6ii" name="c_topup_title.png" path="/images/topup/"/>
+    <component id="mc6ij" name="b_20.xml" path="/button/"/>
+    <image id="mc6ik" name="b_price.png" path="/images/topup/" scale="9grid" scale9grid="28,13,56,26"/>
+    <image id="mc6il" name="b_price_select.png" path="/images/topup/" scale="9grid" scale9grid="28,13,56,26"/>
+    <component id="mc6im" name="b_50.xml" path="/button/"/>
+    <component id="mc6in" name="b_100.xml" path="/button/"/>
+    <component id="mc6io" name="b_200.xml" path="/button/"/>
+    <component id="mc6ip" name="b_500.xml" path="/button/"/>
+    <component id="mc6iq" name="b_1000.xml" path="/button/"/>
+    <image id="mc6ir" name="i_pay.png" path="/images/topup/"/>
+  </resources>
+  <publish name="Window" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
+</packageDescription>

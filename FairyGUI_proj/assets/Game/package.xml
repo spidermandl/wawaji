@@ -36,6 +36,8 @@
     <component id="fvaa10" name="cancel.xml" path="/button/"/>
     <component id="fvaa11" name="Controller.xml" path="/"/>
     <component id="fvaa12" name="Game.xml" path="/" exported="true"/>
+    <image id="mc6i14" name="b_frame_main.png" path="/images/" scale="9grid" scale9grid="127,20,254,40"/>
+    <image id="mc6i18" name="bg_exchange.png" path="/images/" scale="9grid" scale9grid="174,170,348,340"/>
   </resources>
   <publish name="Game" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

@@ -8,9 +8,13 @@ public class UIHomeMain : UIMain
 	GList _list;
 	int item_index;//列表item索引值
 
+	UIExchange _exchangeWin;//
+	UITopup _topupWin;//
+
 	void Awake()
 	{
 		base.init ("Home");
+		UIPackage.AddPackage ("Window");
 	}
 
 	void Start(){
@@ -26,6 +30,22 @@ public class UIHomeMain : UIMain
 
 		GLoader bg = _mainView.GetChild ("n1")as GLoader;
 		bg.url = "bg/bg_home";
+
+		GComponent toolbar = _mainView.GetChild ("n3").asCom;
+		//提现界面
+		toolbar.GetChild("n12").onClick.Add(() => {
+			//提现界面
+			if(_exchangeWin == null)
+				_exchangeWin = new UIExchange ();
+			_exchangeWin.Show();
+		});
+		//充值界面
+		toolbar.GetChild ("n10").onClick.Add (() => {
+			//充值界面
+			if(_topupWin == null)
+				_topupWin = new UITopup ();
+			_topupWin.Show();
+		});
 
 		_mainView.GetChild("n11").onClick.Add(() => { 
 			this._clickFunc(ClickType.PlayGame);

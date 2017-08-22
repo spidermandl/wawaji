@@ -4,7 +4,7 @@ using FairyGUI;
 using UnityEngine;
 using DG.Tweening;
 
-public class UIExchange : BaseWindow
+public class UISetting : BaseWindow
 {
 
 	GObject Coin_exchange {
@@ -27,40 +27,19 @@ public class UIExchange : BaseWindow
 		get{ return this.contentPane.GetChild ("n1"); }
 	}
 
-	public UIExchange ()
+	public UISetting ()
 	{
 		UIConfig.modalLayerColor = new Color (0f, 0f, 0f, 0.4f);
 	}
 
 	protected override void OnInit()
 	{
-		this.contentPane = UIPackage.CreateObject("Window", "Exchange_dialog").asCom;
+		this.contentPane = UIPackage.CreateObject("Window", "Setting_dialog").asCom;
 		this.Center();
 		this.modal = true;
 
 
-		Max.onClick.Add(()=>{
-			
-		});
-		Confirm_exchange.onClick.Add(()=>{
-			
-		});
-		Coin_exchange.onClick.Add(()=>{
-			
-		});
-		Bind_alipay.onClick.Add(()=>{
-			
-		});
-		Alipay_account.onClick.Add(()=>{
-			
-		});
-		Close.onClick.Add(() => {
-			this.Hide();
-		});
-
-
 	}
-
 
 
 

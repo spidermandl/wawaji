@@ -166,7 +166,9 @@
      <Compile Include="Assets\Scripts\UI\sample\CreateCountBox.cs" />
      <Compile Include="Assets\Scripts\UI\sample\MeshDemo.cs" />
      <Compile Include="Assets\Scripts\UI\sample\MyBox.cs" />
+     <Compile Include="Assets\Scripts\UI\window\BaseWindow.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIExchange.cs" />
+     <Compile Include="Assets\Scripts\UI\window\UISetting.cs" />
      <Compile Include="Assets\Scripts\UI\window\UITopup.cs" />
      <Compile Include="Assets\Scripts\UnityFacade.cs" />
      <Compile Include="Assets\Scripts\View\BaseMediator.cs" />

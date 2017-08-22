@@ -10,6 +10,7 @@ public class UIHomeMain : UIMain
 
 	UIExchange _exchangeWin;//
 	UITopup _topupWin;//
+	UISetting _settingWin;//
 
 	void Awake()
 	{
@@ -59,6 +60,12 @@ public class UIHomeMain : UIMain
 		});
 		_mainView.GetChild("n9").onClick.Add(() => { 
 			this.ScrollToNext(-1);
+
+		});
+		_mainView.GetChild("n13").onClick.Add(() => { 
+			if(_settingWin==null)
+				_settingWin = new UISetting();
+			_settingWin.Show();
 
 		});
 	}

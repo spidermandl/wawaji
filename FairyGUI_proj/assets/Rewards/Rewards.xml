@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="750,1206">
   <displayList>
-    <loader id="n0_fvaa" name="n0" xy="0,0" size="750,1206" url="ui://s6wf2fzsfvaa3">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <loader id="n12_mc6i" name="n12" xy="0,0" size="750,1206">
+      <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <image id="n1_fvaa" name="n1" src="fvaa6" xy="67,238"/>
-    <component id="n2_fvaa" name="n2" src="fvaa9" xy="10,15"/>
-    <component id="n3_fvaa" name="n3" src="fvaac" xy="231,826">
+    <image id="n1_fvaa" name="n1" src="fvaa6" xy="71,255"/>
+    <component id="n2_fvaa" name="n2" src="fvaa9" xy="37,41"/>
+    <component id="n3_fvaa" name="n3" src="fvaac" xy="235,843">
       <relation target="n1_fvaa" sidePair="center-center,bottom-bottom"/>
     </component>
-    <image id="n4_fvaa" name="n4" src="fvaa2" xy="251,451" size="377,68">
-      <relation target="n1_fvaa" sidePair="right-right,width-width"/>
+    <image id="n4_fvaa" name="n4" src="fvaa2" xy="256,458" size="377,68">
+      <relation target="n8_fvaa" sidePair="left-left,top-top"/>
+      <relation target="n1_fvaa" sidePair="width-width"/>
     </image>
-    <image id="n5_fvaa" name="n5" src="fvaa2" xy="253,580" size="377,68">
-      <relation target="n1_fvaa" sidePair="right-right,width-width"/>
+    <image id="n5_fvaa" name="n5" src="fvaa2" xy="257,587" size="377,68">
+      <relation target="n9_fvaa" sidePair="left-left,top-top"/>
+      <relation target="n1_fvaa" sidePair="width-width"/>
     </image>
-    <image id="n6_fvaa" name="n6" src="fvaa2" xy="255,706" size="377,68">
-      <relation target="n1_fvaa" sidePair="right-right,width-width"/>
-    </image>
-    <text id="n7_fvaa" name="n7" xy="327,365" size="105,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="巴拉巴拉">
+    <text id="n7_fvaa" name="n7" xy="331,382" size="105,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="巴拉巴拉">
       <relation target="n1_fvaa" sidePair="center-center,top-top"/>
     </text>
-    <text id="n8_fvaa" name="n8" xy="139,467" size="80,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="收件人">
-      <relation target="n1_fvaa" sidePair="left-left,height-height"/>
+    <text id="n8_fvaa" name="n8" xy="143,474" size="80,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="收件人">
+      <relation target="n1_fvaa" sidePair="left-left,top-top"/>
     </text>
-    <text id="n9_fvaa" name="n9" xy="127,597" size="105,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="邮寄地址">
-      <relation target="n1_fvaa" sidePair="left-left,height-height"/>
+    <text id="n9_fvaa" name="n9" xy="131,604" size="105,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="邮寄地址">
+      <relation target="n8_fvaa" sidePair="left-left,top-top"/>
     </text>
-    <text id="n10_fvaa" name="n10" xy="137,724" size="80,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="手机号">
-      <relation target="n1_fvaa" sidePair="left-left,height-height"/>
+    <text id="n10_fvaa" name="n10" xy="141,731" size="80,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="手机号">
+      <relation target="n9_fvaa" sidePair="left-left,top-top"/>
     </text>
+    <image id="n11_mc6i" name="n11" src="fvaa2" xy="257,717" size="377,68">
+      <relation target="n10_fvaa" sidePair="left-left,top-top"/>
+      <relation target="n1_fvaa" sidePair="width-width"/>
+    </image>
   </displayList>
+  <relation target="" sidePair="width-width,height-height"/>
 </component>

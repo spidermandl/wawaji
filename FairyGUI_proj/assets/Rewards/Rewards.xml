@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="750,1206">
   <displayList>
-    <loader id="n12_mc6i" name="n12" xy="0,0" size="750,1206">
+    <loader id="n12_mc6i" name="n12" xy="0,0" size="750,1206" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <image id="n1_fvaa" name="n1" src="fvaa6" xy="71,255"/>
@@ -34,5 +34,4 @@
       <relation target="n1_fvaa" sidePair="width-width"/>
     </image>
   </displayList>
-  <relation target="" sidePair="width-width,height-height"/>
 </component>

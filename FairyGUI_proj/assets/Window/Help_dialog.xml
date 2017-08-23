@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="504,278">
+  <displayList>
+    <image id="n0_upgt" name="n0" src="upgt17" xy="0,0"/>
+    <image id="n2_upgt" name="n2" src="upgt16" xy="45,81">
+      <relation target="n0_upgt" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n3_upgt" name="n3" src="upgt19" xy="45,169">
+      <relation target="n2_upgt" sidePair="left-left,top-bottom"/>
+    </image>
+    <component id="n4_upgt" name="n4" src="upgt1d" xy="308,171">
+      <relation target="n3_upgt" sidePair="top-top"/>
+      <relation target="n0_upgt" sidePair="right-right"/>
+    </component>
+    <component id="n5_upgt" name="n5" src="upgt1c" xy="309,84">
+      <relation target="n0_upgt" sidePair="right-right"/>
+      <relation target="n2_upgt" sidePair="top-top"/>
+    </component>
+    <text id="n6_upgt" name="n6" xy="199,32" size="125,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="联系我们">
+      <relation target="n0_upgt" sidePair="center-center,top-top"/>
+    </text>
+    <text id="n7_upgt" name="n7" xy="118,94" size="172,32" fontSize="25" color="#ffffff" autoSize="none" singleLine="true" text="400-808-5599">
+      <relation target="n2_upgt" sidePair="top-top,leftext-right"/>
+      <relation target="n5_upgt" sidePair="rightext-left"/>
+    </text>
+    <text id="n8_upgt" name="n8" xy="116,182" size="158,32" fontSize="25" color="#ffffff" autoSize="none" singleLine="true" text="135678977">
+      <relation target="n3_upgt" sidePair="leftext-right,top-top"/>
+      <relation target="n4_upgt" sidePair="rightext-left"/>
+    </text>
+  </displayList>
+</component>

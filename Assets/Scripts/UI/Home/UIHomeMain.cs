@@ -11,6 +11,7 @@ public class UIHomeMain : UIMain
 	UIExchange _exchangeWin;//
 	UITopup _topupWin;//
 	UISetting _settingWin;//
+	UIHelp _helpWin;
 
 	void Awake()
 	{
@@ -41,6 +42,11 @@ public class UIHomeMain : UIMain
 			_exchangeWin.Show();
 		});
 		//充值界面
+		toolbar.GetChild ("n11").onClick.Add (() => {
+			//充值界面
+			this.changeUIpage(typeof(UIPrizeMain));
+		});
+		//充值界面
 		toolbar.GetChild ("n10").onClick.Add (() => {
 			//充值界面
 			if(_topupWin == null)
@@ -66,6 +72,12 @@ public class UIHomeMain : UIMain
 			if(_settingWin==null)
 				_settingWin = new UISetting();
 			_settingWin.Show();
+
+		});
+		_mainView.GetChild ("n10").onClick.Add(() => { 
+			if(_helpWin==null)
+				_helpWin = new UIHelp();
+			_helpWin.Show();
 
 		});
 	}

@@ -37,11 +37,16 @@ public class UISetting : BaseWindow
 		this.contentPane = UIPackage.CreateObject("Window", "Setting_dialog").asCom;
 		this.Center();
 		this.modal = true;
-
+		//this.SetPosition (this.position.x, 0, this.position.z);
+		GRoot.inst.modalLayer.onClick.Add (()=>{
+			this.Hide();
+		});
 
 	}
-
-
-
+//
+//	void OnClickModal(){
+//		this.Hide();
+//		//GRoot.inst.modalLayer.onClick.Remove (OnClickModal);
+//	}
 }
 

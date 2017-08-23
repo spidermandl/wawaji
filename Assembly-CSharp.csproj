@@ -160,6 +160,7 @@
      <Compile Include="Assets\Scripts\UI\Game\UIConfirm.cs" />
      <Compile Include="Assets\Scripts\UI\Game\UIGameMain.cs" />
      <Compile Include="Assets\Scripts\UI\Home\UIHomeMain.cs" />
+     <Compile Include="Assets\Scripts\UI\Prize\UIPrizeMain.cs" />
      <Compile Include="Assets\Scripts\UI\Rewards\UIRewardsMain.cs" />
      <Compile Include="Assets\Scripts\UI\UIMain.cs" />
      <Compile Include="Assets\Scripts\UI\sample\BallMesh.cs" />
@@ -168,6 +169,7 @@
      <Compile Include="Assets\Scripts\UI\sample\MyBox.cs" />
      <Compile Include="Assets\Scripts\UI\window\BaseWindow.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIExchange.cs" />
+     <Compile Include="Assets\Scripts\UI\window\UIHelp.cs" />
      <Compile Include="Assets\Scripts\UI\window\UISetting.cs" />
      <Compile Include="Assets\Scripts\UI\window\UITopup.cs" />
      <Compile Include="Assets\Scripts\UnityFacade.cs" />

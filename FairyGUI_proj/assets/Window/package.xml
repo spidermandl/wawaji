@@ -29,7 +29,6 @@
     <component id="mc6ip" name="b_500.xml" path="/button/"/>
     <component id="mc6iq" name="b_1000.xml" path="/button/"/>
     <image id="mc6ir" name="i_pay.png" path="/images/"/>
-    <component id="upgts" name="on_off.xml" path="/button/"/>
     <image id="upgtv" name="i_disable.png" path="/images/"/>
     <image id="upgtw" name="i_active.png" path="/images/"/>
     <image id="upgtx" name="i_shadow.png" path="/images/" scale="9grid" scale9grid="146,29,292,58"/>
@@ -38,6 +37,16 @@
     <image id="upgt10" name="c_sound.png" path="/images/"/>
     <image id="upgt11" name="c_music.png" path="/images/"/>
     <component id="upgt12" name="Setting_dialog.xml" path="/" exported="true"/>
+    <component id="upgt13" name="on_off.xml" path="/button/"/>
+    <component id="upgt14" name="setting_close.xml" path="/button/"/>
+    <component id="upgt15" name="Help_dialog.xml" path="/" exported="true"/>
+    <image id="upgt16" name="i_phone.png" path="/images/"/>
+    <image id="upgt17" name="bg_help.png" path="/images/" scale="9grid" scale9grid="126,70,252,140"/>
+    <image id="upgt19" name="i_qq.png" path="/images/"/>
+    <image id="upgt1a" name="b_online.png" path="/images/"/>
+    <image id="upgt1b" name="b_dial.png" path="/images/"/>
+    <component id="upgt1c" name="dial.xml" path="/button/"/>
+    <component id="upgt1d" name="online.xml" path="/button/"/>
   </resources>
   <publish name="Window" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

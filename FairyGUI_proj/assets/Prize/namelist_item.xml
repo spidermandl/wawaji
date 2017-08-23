@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,97">
+  <displayList>
+    <image id="n1_upgt" name="n1" src="upgts" xy="40,13" size="77,75">
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n3_upgt" name="n3" src="upgt14" xy="24,98">
+      <relation target="" sidePair="middle-middle,bottom-bottom"/>
+    </image>
+    <text id="n4_upgt" name="n4" xy="157,30" size="339,38" fontSize="12" autoSize="none" text="">
+      <relation target="n1_upgt" sidePair="left-right,top-top"/>
+      <relation target="n5_upgt" sidePair="rightext-left"/>
+    </text>
+    <text id="n5_upgt" name="n5" xy="540,30" size="179,40" fontSize="12" autoSize="none" text="">
+      <relation target="" sidePair="right-right,top-top"/>
+    </text>
+  </displayList>
+  <relation target="" sidePair="width-width,height-height"/>
+</component>

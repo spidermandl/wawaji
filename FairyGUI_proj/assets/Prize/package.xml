@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="eap8hbzx" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="upgt0" name="Prize.xml" path="/" exported="true"/>
+    <component id="upgt2" name="namelist_item.xml" path="/"/>
+    <component id="upgt3" name="prize_item.xml" path="/"/>
+    <image id="upgt4" name="c_1_coin.png" path="/images/"/>
+    <image id="upgt5" name="i_light.png" path="/images/"/>
+    <image id="upgt6" name="c_5_coin.png" path="/images/"/>
+    <image id="upgt7" name="c_10_coin.png" path="/images/"/>
+    <image id="upgt8" name="i_golden_shadow.png" path="/images/"/>
+    <image id="upgt9" name="i_golden.png" path="/images/"/>
+    <image id="upgta" name="c_264.png" path="/images/"/>
+    <image id="upgtc" name="i_equal.png" path="/images/"/>
+    <image id="upgtd" name="b_back.png" path="/images/"/>
+    <image id="upgte" name="c_golden_game.png" path="/images/"/>
+    <image id="upgtf" name="bg_iphone7_shadow.png" path="/images/"/>
+    <image id="upgtg" name="c_iPhone_7.png" path="/images/"/>
+    <image id="upgth" name="i_iPhone7.png" path="/images/"/>
+    <image id="upgti" name="b_add.png" path="/images/"/>
+    <image id="upgtj" name="c_prize_center.png" path="/images/"/>
+    <image id="upgtl" name="c_golden_prize.png" path="/images/"/>
+    <image id="upgtm" name="bg_title.png" path="/images/"/>
+    <image id="upgtn" name="kaugn3.png" path="/images/" scale="9grid" scale9grid="180,47,360,94"/>
+    <image id="upgto" name="bg_prize_item_info.png" path="/images/"/>
+    <image id="upgtp" name="bg_prize_item.png" path="/images/"/>
+    <image id="upgtq" name="bg_toolbar.png" path="/images/"/>
+    <image id="upgtr" name="bg_prize_game.png" path="/images/"/>
+    <image id="upgts" name="bg_head_item.png" path="/images/"/>
+    <image id="upgtt" name="kuang1.png" path="/images/"/>
+    <image id="upgtu" name="kuang4.png" path="/images/"/>
+    <image id="upgtv" name="meng_leng_xiao_gou.png" path="/images/"/>
+    <image id="upgtw" name="bg_mi_shadow.png" path="/images/"/>
+    <image id="upgtx" name="i_mi.png" path="/images/"/>
+    <image id="upgty" name="c_mi_prize.png" path="/images/"/>
+    <image id="upgtz" name="b_mi_shadow.png" path="/images/"/>
+    <image id="upgt10" name="i_ball_star.png" path="/images/"/>
+    <image id="upgt11" name="i_ball_stripe.png" path="/images/"/>
+    <image id="upgt12" name="i_ball_dot.png" path="/images/"/>
+    <image id="upgt13" name="c_phone_game.png" path="/images/"/>
+    <image id="upgt14" name="i_dash_devide.png" path="/images/"/>
+    <image id="upgt15" name="c_name_title.png" path="/images/"/>
+    <component id="upgt16" name="back.xml" path="/button/"/>
+    <component id="upgt17" name="add.xml" path="/button/"/>
+    <component id="upgt18" name="toolbar.xml" path="/"/>
+    <image id="upgt19" name="bg_info.png" path="/images/" scale="9grid" scale9grid="87,20,174,40"/>
+    <image id="upgt1a" name="i_coin.png" path="/images/"/>
+  </resources>
+  <publish name="Prize" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
+</packageDescription>

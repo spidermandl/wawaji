@@ -47,9 +47,6 @@ public class UIEnterMain : UIMain
 
 		});
 
-
-		//Stage.inst.onClick.Add ();
-		//GTextInput.draggingObject;
 		Stage.inst.onKeyDown.Add(OnKeyDown);
 
 		

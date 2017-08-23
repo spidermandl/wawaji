@@ -16,10 +16,10 @@
     <image id="n5_upgt" name="n5" src="upgt11" xy="103,337">
       <relation target="n3_upgt" sidePair="left-left,top-top"/>
     </image>
-    <component id="n6_upgt" name="n6" src="upgts" xy="182,313">
+    <component id="n6_upgt" name="n6" src="upgt13" xy="182,313">
       <relation target="n5_upgt" sidePair="left-left,top-top"/>
     </component>
-    <component id="n7_upgt" name="n7" src="upgts" xy="455,314">
+    <component id="n7_upgt" name="n7" src="upgt13" xy="455,314">
       <relation target="n3_upgt" sidePair="top-top,right-right"/>
     </component>
     <text id="n8_upgt" name="n8" xy="152,442" size="378,28" fontSize="20" color="#ffffff" singleLine="true" text="如果遇到任何问题。可以联系Xxx客服电话">
@@ -28,6 +28,7 @@
     <text id="n9_upgt" name="n9" xy="196,491" size="298,28" fontSize="20" color="#ffffff" singleLine="true" text="或关注Xxx微信号，在线客服留言">
       <relation target="n1_upgt" sidePair="bottom-bottom,center-center"/>
     </text>
+    <component id="n11_upgt" name="n11" src="upgt14" xy="309,646" size="75,62"/>
   </displayList>
   <relation target="" sidePair="width-width,height-height"/>
 </component>

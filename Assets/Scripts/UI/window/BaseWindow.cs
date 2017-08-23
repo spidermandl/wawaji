@@ -22,5 +22,6 @@ public abstract class BaseWindow : Window
 	{
 		this.TweenScale(new Vector2(0.1f, 0.1f), 0.3f).SetEase(Ease.OutQuad).OnComplete(this.HideImmediately);
 	}
+
 }
 

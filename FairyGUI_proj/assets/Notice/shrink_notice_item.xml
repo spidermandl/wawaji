@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="694,101">
+  <displayList>
+    <image id="n1_c8r1" name="n1" src="c8r14" xy="0,0">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n2_c8r1" name="n2" src="l40rc" xy="546,19">
+      <relation target="n1_c8r1" sidePair="top-top,right-right"/>
+    </component>
+    <text id="n3_c8r1" name="n3" xy="31,33" size="448,38" fontSize="30" color="#ffffff" autoSize="height" singleLine="true" text="【更新信息】修复了xxxxxxxxbug">
+      <relation target="n1_c8r1" sidePair="left-left,top-top"/>
+      <relation target="n2_c8r1" sidePair="rightext-left"/>
+    </text>
+  </displayList>
+</component>

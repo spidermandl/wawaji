@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="y6kn79oj" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="c8r10" name="Notice.xml" path="/" exported="true"/>
+    <image id="c8r12" name="b_back.png" path="/images/"/>
+    <image id="c8r14" name="bg_item.png" path="/images/" scale="9grid" scale9grid="174,26,348,52"/>
+    <image id="c8r15" name="b_shrink.png" path="/images/"/>
+    <image id="c8r16" name="c_notice_title.png" path="/images/"/>
+    <image id="c8r17" name="b_expand.png" path="/images/"/>
+    <component id="c8r18" name="back.xml" path="/button/"/>
+    <component id="c8r19" name="shrink_notice_item.xml" path="/" exported="true"/>
+    <component id="l40rc" name="expand.xml" path="/button/"/>
+    <component id="l40rd" name="shrink.xml" path="/button/"/>
+    <component id="l40re" name="expand_notice_item.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="Notice" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
+</packageDescription>

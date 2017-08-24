@@ -13,7 +13,6 @@ public class UISetting : BaseWindow
 	GObject Alipay_account{
 		get{ return this.contentPane.GetChild ("n16"); }
 	}
-
 	GObject Bind_alipay{
 		get{ return this.contentPane.GetChild ("n4"); }
 	}

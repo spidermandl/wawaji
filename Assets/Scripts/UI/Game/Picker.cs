@@ -8,7 +8,6 @@ using MonsterLove.StateMachine;
 
 public class Picker : MonoBehaviour
 {
-
 	SpawnPool pool;
 	static Vector3 initPos = new Vector3 (1.26f, 3, 0);//
 	static float ground_Y = 1.55f;
@@ -111,7 +110,6 @@ public class Picker : MonoBehaviour
 			AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
 			// 判断动画是否播放完成
 			if (info.normalizedTime >= 1.0f){
-
 				this.pickerStateMachine.ChangeState (States.Up);
 			}
 			return;

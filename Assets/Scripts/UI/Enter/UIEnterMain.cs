@@ -46,8 +46,10 @@ public class UIEnterMain : UIMain
 			});
 
 		});
-
-		Stage.inst.onKeyDown.Add(OnKeyDown);
+		_mainView.GetChild ("n7").onClick.Add (() => {
+			this.changeUIpage(typeof(UINoticeMain));
+		});
+		//Stage.inst.onKeyDown.Add(OnKeyDown);
 
 		
 	}

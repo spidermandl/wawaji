@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="694,414">
+  <displayList>
+    <image id="n1_c8r1" name="n1" src="c8r14" xy="0,0" size="682,411">
+      <relation target="n5_c8r1" sidePair="bottomext-bottom"/>
+    </image>
+    <text id="n7_l40r" name="n7" xy="506,37" size="155,38" fontSize="30" color="#ffffff" align="right" singleLine="true" text="2017.06.17">
+      <relation target="n1_c8r1" sidePair="right-right,top-top"/>
+    </text>
+    <text id="n3_c8r1" name="n3" xy="32,34" size="445,38" fontSize="30" color="#ffffff" singleLine="true" text="【更新信息】修复了xxxxxxxxbug">
+      <relation target="n1_c8r1" sidePair="left-left,top-top"/>
+    </text>
+    <richtext id="n4_c8r1" name="n4" xy="44,99" size="608,218" fontSize="30" color="#957fdb" autoSize="height" text="    阿斯蒂芬静安寺的；放假啊大沙发交大所附；爱神的箭发；上搭建开发；卡了大家；fjaasdfasdf上搭建发链接打发斯蒂芬kfjadfjafa卡机打发时间地方大；附件；客发；是的啊的房间安师大；福利卡手动阀大沙发撒旦法师打发">
+      <relation target="n1_c8r1" sidePair="center-center,width-width"/>
+      <relation target="n3_c8r1" sidePair="top-top"/>
+    </richtext>
+    <component id="n5_c8r1" name="n5" src="l40rd" xy="316,367">
+      <relation target="n4_c8r1" sidePair="top-bottom,center-center"/>
+    </component>
+  </displayList>
+  <relation target="n1_c8r1" sidePair="bottomext-bottom"/>
+</component>

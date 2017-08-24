@@ -167,6 +167,7 @@
      <Compile Include="Assets\Scripts\UI\window\BaseWindow.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIExchange.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIHelp.cs" />
+     <Compile Include="Assets\Scripts\UI\window\UIProfile.cs" />
      <Compile Include="Assets\Scripts\UI\window\UISetting.cs" />
      <Compile Include="Assets\Scripts\UI\window\UITopup.cs" />
      <Compile Include="Assets\Scripts\UnityFacade.cs" />

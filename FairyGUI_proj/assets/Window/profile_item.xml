@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="694,101">
+  <displayList>
+    <image id="n0_sfdg" name="n0" src="sfdg1g" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_sfdg" name="n1" src="sfdg1z" xy="542,19">
+      <relation target="n0_sfdg" sidePair="right-right,middle-middle"/>
+    </component>
+    <text id="n2_sfdg" name="n2" xy="25,36" size="497,32" fontSize="25" color="#ffffff" autoSize="none" text="【中奖信息】获得IPhone手机一部">
+      <relation target="" sidePair="left-left"/>
+      <relation target="n1_sfdg" sidePair="rightext-left,middle-middle"/>
+    </text>
+  </displayList>
+</component>

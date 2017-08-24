@@ -16,10 +16,8 @@ public class UINoticeMain : UIMain
 
 	void Start(){
 		//_mainView = this.GetComponent<UIPanel>().ui;
-
 		GLoader bg = _mainView.GetChild ("n5")as GLoader;
 		bg.url = "bg/bg_notice";
-
 
 		_mainView.GetChild("n2").onClick.Add(() => {
 			this.changeUIpage(typeof(UIEnterMain));

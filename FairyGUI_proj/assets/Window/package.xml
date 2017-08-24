@@ -47,6 +47,25 @@
     <image id="upgt1b" name="b_dial.png" path="/images/"/>
     <component id="upgt1c" name="dial.xml" path="/button/"/>
     <component id="upgt1d" name="online.xml" path="/button/"/>
+    <component id="sfdg1e" name="Profile_dialog.xml" path="/" exported="true"/>
+    <image id="sfdg1f" name="bg_profile.png" path="/images/"/>
+    <image id="sfdg1g" name="bg_profile_item.png" path="/images/"/>
+    <image id="sfdg1h" name="b_scroll_down.png" path="/images/"/>
+    <image id="sfdg1i" name="chong_zhi.png" path="/images/"/>
+    <image id="sfdg1j" name="b_exchange.png" path="/images/"/>
+    <image id="sfdg1k" name="b_claim.png" path="/images/"/>
+    <image id="sfdg1l" name="bg_head.png" path="/images/"/>
+    <image id="sfdg1m" name="bg_user_name.png" path="/images/"/>
+    <image id="sfdg1o" name="bg_profile_headitem.png" path="/images/" scale="9grid" scale9grid="174,35,348,70"/>
+    <image id="sfdg1p" name="b_exit.png" path="/images/"/>
+    <component id="sfdg1q" name="exit.xml" path="/button/"/>
+    <component id="sfdg1r" name="topup.xml" path="/button/"/>
+    <component id="sfdg1t" name="exchange.xml" path="/button/"/>
+    <image id="sfdg1u" name="i_coin.png" path="/images/"/>
+    <image id="sfdg1v" name="c_264.png" path="/images/"/>
+    <component id="sfdg1x" name="arrow_down.xml" path="/button/"/>
+    <component id="sfdg1y" name="profile_item.xml" path="/"/>
+    <component id="sfdg1z" name="claim.xml" path="/button/"/>
   </resources>
   <publish name="Window" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

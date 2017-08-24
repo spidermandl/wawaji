@@ -12,6 +12,7 @@ public class UIHomeMain : UIMain
 	UITopup _topupWin;//
 	UISetting _settingWin;//
 	UIHelp _helpWin;
+	UIProfile _profileWin;//
 
 	void Awake()
 	{
@@ -41,9 +42,9 @@ public class UIHomeMain : UIMain
 				_exchangeWin = new UIExchange ();
 			_exchangeWin.Show();
 		});
-		//充值界面
+		//奖励界面
 		toolbar.GetChild ("n11").onClick.Add (() => {
-			//充值界面
+			//奖励界面
 			this.changeUIpage(typeof(UIPrizeMain));
 		});
 		//充值界面
@@ -53,7 +54,29 @@ public class UIHomeMain : UIMain
 				_topupWin = new UITopup ();
 			_topupWin.Show();
 		});
-
+		toolbar.GetChild ("n14").onClick.Add (() => {
+			//个人界面
+			if(_profileWin == null)
+				_profileWin = new UIProfile ();
+			_profileWin.Show();
+			_profileWin.Logout.onClick.Add(()=>{
+				_profileWin.Hide();
+				this.changeUIpage(typeof(UIEnterMain));
+				
+			});
+			_profileWin.Exchange.onClick.Add(()=>{
+				_profileWin.Hide();
+				if(_exchangeWin == null)
+					_exchangeWin = new UIExchange ();
+				_exchangeWin.Show();
+			});
+			_profileWin.Topup.onClick.Add(()=>{
+				_profileWin.Hide();
+				if(_topupWin == null)
+					_topupWin = new UITopup ();
+				_topupWin.Show();
+			});
+		});
 		_mainView.GetChild("n11").onClick.Add(() => { 
 			this._clickFunc(ClickType.PlayGame);
 			this.changeUIpage(typeof(UIGameMain));

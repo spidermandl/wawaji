@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,993">
+  <displayList>
+    <loader id="n1_sfdg" name="n1" xy="0,0" size="750,993" url="ui://jorujmv2sfdg1f" fill="scaleFree"/>
+    <component id="n3_sfdg" name="n3" src="sfdg1q" xy="551,61">
+      <relation target="n1_sfdg" sidePair="right-right,top-top"/>
+    </component>
+    <image id="n4_sfdg" name="n4" src="sfdg1m" xy="131,51" size="296,79">
+      <relation target="n5_sfdg" sidePair="left-left,middle-middle"/>
+      <relation target="n3_sfdg" sidePair="rightext-left"/>
+    </image>
+    <loader id="n6_sfdg" name="n6" xy="64,40" size="115,112">
+      <relation target="n5_sfdg" sidePair="left-left,top-top"/>
+    </loader>
+    <image id="n5_sfdg" name="n5" src="sfdg1l" xy="50,24">
+      <relation target="n1_sfdg" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n7_sfdg" name="n7" src="sfdg1o" xy="33,171" size="695,138">
+      <relation target="n1_sfdg" sidePair="top-top,center-center"/>
+      <relation target="n1_sfdg" sidePair="width-width"/>
+    </image>
+    <component id="n8_sfdg" name="n8" src="sfdg1r" xy="437,211">
+      <relation target="n10_sfdg" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n10_sfdg" name="n10" src="sfdg1t" xy="577,210">
+      <relation target="n7_sfdg" sidePair="right-right"/>
+      <relation target="n13_sfdg" sidePair="left-left,top-top"/>
+    </component>
+    <image id="n11_sfdg" name="n11" src="sfdg1u" xy="176,211">
+      <relation target="n13_sfdg" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n12_sfdg" name="n12" src="sfdg1v" xy="243,222" size="66,36">
+      <relation target="n11_sfdg" sidePair="left-left,top-top"/>
+      <relation target="n8_sfdg" sidePair="rightext-left"/>
+    </image>
+    <text id="n13_sfdg" name="n13" xy="57,227" size="105,28" fontSize="20" color="#ffffff" text="当前代币数">
+      <relation target="n7_sfdg" sidePair="left-left,middle-middle"/>
+    </text>
+    <component id="n14_sfdg" name="n14" src="sfdg1x" xy="347,775">
+      <relation target="n1_sfdg" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <list id="n15_sfdg" name="n15" xy="41,358" size="675,377" overflow="scroll" lineGap="30" defaultItem="ui://jorujmv2sfdg1y">
+      <relation target="n14_sfdg" sidePair="bottom-bottom"/>
+      <relation target="n1_sfdg" sidePair="center-center,width-width"/>
+    </list>
+  </displayList>
+  <relation target="" sidePair="width-width,height-height"/>
+</component>

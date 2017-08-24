@@ -26,9 +26,9 @@ public class UIProfile : BaseWindow
 		get{ return this.contentPane.GetChild ("n15").asList; }
 	}
 
-	public UIProfile ()
+	public UIProfile ():base()
 	{
-		UIConfig.modalLayerColor = new Color (0f, 0f, 0f, 0.4f);
+		
 	}
 
 	protected override void OnInit()

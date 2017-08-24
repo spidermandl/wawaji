@@ -15,9 +15,9 @@ public class UIHelp : BaseWindow
 	}
 
 
-	public UIHelp ()
+	public UIHelp ():base()
 	{
-		UIConfig.modalLayerColor = new Color (0f, 0f, 0f, 0.4f);
+		
 	}
 
 	protected override void OnInit()

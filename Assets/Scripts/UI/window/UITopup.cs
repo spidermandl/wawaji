@@ -18,9 +18,9 @@ public class UITopup : BaseWindow
 		get{ return this.contentPane.GetChild ("n1"); }
 	}
 
-	public UITopup ()
+	public UITopup ():base()
 	{
-		UIConfig.modalLayerColor = new Color (0f, 0f, 0f, 0.4f);
+		
 	}
 
 	GButton m_20,m_50,m_100,m_200,m_500,m_1000;

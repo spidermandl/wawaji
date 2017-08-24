@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="696,790">
+  <displayList>
+    <image id="n0_mc6i" name="n0" src="mc6i1" xy="0,0" size="696,609">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_mc6i" name="n1" src="mc6i2" xy="312,609" size="83,181">
+      <relation target="n0_mc6i" sidePair="top-bottom,center-center"/>
+    </component>
+    <image id="n18_lcrn" name="n18" src="lcrn26" xy="-1028,-385"/>
+    <image id="n19_lcrn" name="n19" src="lcrn26" xy="186,56"/>
+    <list id="n20_lcrn" name="n20" xy="89,151" size="529,406" layout="pagination" overflow="scroll" scroll="horizontal" lineGap="20" colGap="30" lineItemCount="3" lineItemCount2="2" defaultItem="ui://jorujmv2lcrn29">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

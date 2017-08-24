@@ -13,6 +13,7 @@ public class UIHomeMain : UIMain
 	UISetting _settingWin;//
 	UIHelp _helpWin;
 	UIProfile _profileWin;//
+	UIPrize _prizeWin;//
 
 	void Awake()
 	{
@@ -76,6 +77,13 @@ public class UIHomeMain : UIMain
 					_topupWin = new UITopup ();
 				_topupWin.Show();
 			});
+		});
+		//查看奖品
+		_mainView.GetChild ("n12").onClick.Add (() => {
+			//查看奖品
+			if(_prizeWin == null)
+				_prizeWin = new UIPrize ();
+			_prizeWin.Show();
 		});
 		_mainView.GetChild("n11").onClick.Add(() => { 
 			this._clickFunc(ClickType.PlayGame);

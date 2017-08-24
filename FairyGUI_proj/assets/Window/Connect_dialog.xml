@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="504,278">
+  <displayList>
+    <image id="n0_upgt" name="n0" src="upgt17" xy="0,0"/>
+    <text id="n6_upgt" name="n6" xy="21,83" size="459,32" fontSize="25" color="#ffffff" align="center" autoSize="none" singleLine="true" text="网络连接失败">
+      <relation target="n0_upgt" sidePair="width-width,top-top"/>
+    </text>
+    <text id="n10_lcrn" name="n10" xy="23,34" size="459,38" fontSize="30" color="#ffffff" align="center" autoSize="none" bold="true" text="重新连接">
+      <relation target="n0_upgt" sidePair="top-top,width-width"/>
+    </text>
+    <text id="n11_lcrn" name="n11" xy="28,125" size="459,32" fontSize="25" color="#ffffff" align="center" autoSize="none" singleLine="true" text="是否重新连接？">
+      <relation target="n0_upgt" sidePair="width-width,top-top"/>
+    </text>
+    <component id="n12_lcrn" name="n12" src="lcrn22" xy="161,179">
+      <relation target="n0_upgt" sidePair="bottom-bottom,center-center"/>
+    </component>
+  </displayList>
+</component>

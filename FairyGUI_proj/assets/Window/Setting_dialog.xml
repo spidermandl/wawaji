@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="694,719">
+<component size="694,619">
   <displayList>
-    <image id="n1_upgt" name="n1" src="upgtz" xy="0,0">
+    <image id="n1_upgt" name="n1" src="mc6i1" xy="0,0" size="694,438">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n2_upgt" name="n2" src="upgty" xy="289,198">
+    <image id="n2_upgt" name="n2" src="upgty" xy="291,48">
       <relation target="n1_upgt" sidePair="center-center,top-top"/>
     </image>
-    <image id="n3_upgt" name="n3" src="upgtx" xy="55,295" size="585,114">
+    <image id="n3_upgt" name="n3" src="upgtx" xy="55,135" size="585,114">
       <relation target="n1_upgt" sidePair="top-top,center-center"/>
     </image>
-    <image id="n4_upgt" name="n4" src="upgt10" xy="377,339">
+    <image id="n4_upgt" name="n4" src="upgt10" xy="377,179">
       <relation target="n7_upgt" sidePair="left-left,top-top"/>
     </image>
-    <image id="n5_upgt" name="n5" src="upgt11" xy="103,337">
+    <image id="n5_upgt" name="n5" src="upgt11" xy="103,177">
       <relation target="n3_upgt" sidePair="left-left,top-top"/>
     </image>
-    <component id="n6_upgt" name="n6" src="upgt13" xy="182,313">
+    <component id="n6_upgt" name="n6" src="upgt13" xy="182,153">
       <relation target="n5_upgt" sidePair="left-left,top-top"/>
     </component>
-    <component id="n7_upgt" name="n7" src="upgt13" xy="455,314">
+    <component id="n7_upgt" name="n7" src="upgt13" xy="455,154">
       <relation target="n3_upgt" sidePair="top-top,right-right"/>
     </component>
-    <text id="n8_upgt" name="n8" xy="152,442" size="378,28" fontSize="20" color="#ffffff" singleLine="true" text="如果遇到任何问题。可以联系Xxx客服电话">
+    <text id="n8_upgt" name="n8" xy="154,303" size="378,28" fontSize="20" color="#ffffff" singleLine="true" text="如果遇到任何问题。可以联系Xxx客服电话">
       <relation target="n1_upgt" sidePair="center-center,bottom-bottom"/>
     </text>
-    <text id="n9_upgt" name="n9" xy="196,491" size="298,28" fontSize="20" color="#ffffff" singleLine="true" text="或关注Xxx微信号，在线客服留言">
+    <text id="n9_upgt" name="n9" xy="197,359" size="298,28" fontSize="20" color="#ffffff" singleLine="true" text="或关注Xxx微信号，在线客服留言">
       <relation target="n1_upgt" sidePair="bottom-bottom,center-center"/>
     </text>
-    <component id="n11_upgt" name="n11" src="upgt14" xy="309,646" size="75,62"/>
+    <component id="n13_lcrn" name="n13" src="mc6i2" xy="314,435" size="83,181">
+      <relation target="n1_upgt" sidePair="top-bottom,center-center"/>
+    </component>
   </displayList>
-  <relation target="" sidePair="width-width,height-height"/>
 </component>

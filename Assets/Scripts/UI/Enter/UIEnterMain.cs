@@ -7,6 +7,7 @@ public class UIEnterMain : UIMain
 {
 	
 	UILoginWin _loginWin;//登录对话框
+	UIDocWin _docWin;//
 
 	void Awake()
 	{
@@ -17,11 +18,12 @@ public class UIEnterMain : UIMain
 	void Start(){
 		//_mainView = this.GetComponent<UIPanel>().ui;
 
-		_loginWin = new UILoginWin();
 		GLoader bg = _mainView.GetChild ("n4")as GLoader;
 		bg.url = "bg/bg_enter";
 		_mainView.GetChild("n0").onClick.Add(() => { 
 			this._clickFunc(ClickType.StartGame);
+			if(_loginWin == null)
+				_loginWin = new UILoginWin();		
 			_loginWin.Show(); 
 
 			//关闭登录对话框
@@ -48,6 +50,11 @@ public class UIEnterMain : UIMain
 		});
 		_mainView.GetChild ("n7").onClick.Add (() => {
 			this.changeUIpage(typeof(UINoticeMain));
+		});
+		_mainView.GetChild ("n9").onClick.Add (() => {
+			if(_docWin == null)
+				_docWin = new UIDocWin();
+			_docWin.Show();
 		});
 		//Stage.inst.onKeyDown.Add(OnKeyDown);
 

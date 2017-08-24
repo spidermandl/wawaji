@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,180">
+  <displayList>
+    <image id="n0_lcrn" name="n0" src="lcrn27" xy="25,134">
+      <relation target="" sidePair="bottom-bottom,center-center"/>
+    </image>
+    <image id="n1_lcrn" name="n1" src="lcrn28" xy="45,1">
+      <relation target="" sidePair="top-top,center-center"/>
+    </image>
+  </displayList>
+</component>

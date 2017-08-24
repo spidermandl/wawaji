@@ -27,9 +27,9 @@ public class UIExchange : BaseWindow
 		get{ return this.contentPane.GetChild ("n1"); }
 	}
 
-	public UIExchange ()
+	public UIExchange ():base()
 	{
-		UIConfig.modalLayerColor = new Color (0f, 0f, 0f, 0.4f);
+		
 	}
 
 	protected override void OnInit()

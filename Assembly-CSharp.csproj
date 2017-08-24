@@ -149,6 +149,7 @@
      <Compile Include="Assets\Scripts\Sample\stateMachine\ColorChanger.cs" />
      <Compile Include="Assets\Scripts\Sample\stateMachine\Helper\TimeoutHelper.cs" />
      <Compile Include="Assets\Scripts\Sample\stateMachine\Main.cs" />
+     <Compile Include="Assets\Scripts\UI\Enter\UIDocWin.cs" />
      <Compile Include="Assets\Scripts\UI\Enter\UIEnterMain.cs" />
      <Compile Include="Assets\Scripts\UI\Enter\UILoginWin.cs" />
      <Compile Include="Assets\Scripts\UI\Game\GameManager.cs" />
@@ -165,8 +166,10 @@
      <Compile Include="Assets\Scripts\UI\sample\MeshDemo.cs" />
      <Compile Include="Assets\Scripts\UI\sample\MyBox.cs" />
      <Compile Include="Assets\Scripts\UI\window\BaseWindow.cs" />
+     <Compile Include="Assets\Scripts\UI\window\UIConnection.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIExchange.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIHelp.cs" />
+     <Compile Include="Assets\Scripts\UI\window\UIPrize.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIProfile.cs" />
      <Compile Include="Assets\Scripts\UI\window\UISetting.cs" />
      <Compile Include="Assets\Scripts\UI\window\UITopup.cs" />

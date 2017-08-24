@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="jorujmv2" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="mc6i0" name="Exchange_dialog.xml" path="/" exported="true"/>
+    <component id="mc6i0" name="Prize_dialog.xml" path="/" exported="true"/>
     <image id="mc6i1" name="bg_exchange.png" path="/images/" scale="9grid" scale9grid="174,170,348,340"/>
     <component id="mc6i2" name="login_close.xml" path="/button/"/>
     <image id="mc6i3" name="b_exchange_close.png" path="/images/" scale="9grid" scale9grid="21,46,42,55"/>
@@ -33,7 +33,6 @@
     <image id="upgtw" name="i_active.png" path="/images/"/>
     <image id="upgtx" name="i_shadow.png" path="/images/" scale="9grid" scale9grid="146,29,292,58"/>
     <image id="upgty" name="c_setting_title.png" path="/images/"/>
-    <image id="upgtz" name="bg_setting.png" path="/images/"/>
     <image id="upgt10" name="c_sound.png" path="/images/"/>
     <image id="upgt11" name="c_music.png" path="/images/"/>
     <component id="upgt12" name="Setting_dialog.xml" path="/" exported="true"/>
@@ -51,7 +50,7 @@
     <image id="sfdg1f" name="bg_profile.png" path="/images/"/>
     <image id="sfdg1g" name="bg_profile_item.png" path="/images/"/>
     <image id="sfdg1h" name="b_scroll_down.png" path="/images/"/>
-    <image id="sfdg1i" name="chong_zhi.png" path="/images/"/>
+    <image id="sfdg1i" name="b_topup.png" path="/images/"/>
     <image id="sfdg1j" name="b_exchange.png" path="/images/"/>
     <image id="sfdg1k" name="b_claim.png" path="/images/"/>
     <image id="sfdg1l" name="bg_head.png" path="/images/"/>
@@ -66,6 +65,14 @@
     <component id="sfdg1x" name="arrow_down.xml" path="/button/"/>
     <component id="sfdg1y" name="profile_item.xml" path="/"/>
     <component id="sfdg1z" name="claim.xml" path="/button/"/>
+    <component id="lcrn20" name="Connect_dialog.xml" path="/" exported="true"/>
+    <image id="lcrn21" name="b_reconnect.png" path="/images/"/>
+    <component id="lcrn22" name="reconnect.xml" path="/button/"/>
+    <component id="lcrn24" name="Exchange_dialog.xml" path="/" exported="true"/>
+    <image id="lcrn26" name="c_prize_avaliable.png" path="/images/"/>
+    <image id="lcrn27" name="c_iPhone7.png" path="/images/"/>
+    <image id="lcrn28" name="i_iPhone7.png" path="/images/"/>
+    <component id="lcrn29" name="prize_item.xml" path="/"/>
   </resources>
   <publish name="Window" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

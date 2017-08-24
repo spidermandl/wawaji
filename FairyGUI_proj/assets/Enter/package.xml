@@ -35,6 +35,11 @@
     <component id="fvaa1a" name="start_game.xml" path="/button/"/>
     <component id="fvaa1b" name="login.xml" path="/button/"/>
     <image id="fvaa1c" name="bg.png" path="/images/" scale="9grid" scale9grid="188,302,376,604"/>
+    <component id="sfdg1d" name="Doc_dialog.xml" path="/" exported="true"/>
+    <image id="sfdg1e" name="c_game_notice.png" path="/images/"/>
+    <image id="sfdg1f" name="i_line_bold_dash.png" path="/images/"/>
+    <image id="sfdg1g" name="c_awareness.png" path="/images/"/>
+    <image id="lcrn1h" name="bg_doc.png" path="/images/" scale="9grid" scale9grid="174,213,348,426"/>
   </resources>
   <publish name="Enter" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

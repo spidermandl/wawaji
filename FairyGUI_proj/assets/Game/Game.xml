@@ -5,8 +5,7 @@
       <relation target="" sidePair="top-top,width-width"/>
     </component>
     <component id="n22_fvaa" name="n22" src="fvaa11" xy="0,746" size="750,460">
-      <relation target="" sidePair="middle-middle,width-width"/>
-      <relation target="" sidePair="bottom-bottom"/>
+      <relation target="" sidePair="width-width,bottom-bottom"/>
     </component>
   </displayList>
 </component>

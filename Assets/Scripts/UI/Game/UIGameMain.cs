@@ -38,7 +38,8 @@ public class UIGameMain : UIMain
 		//toolbar
 		GComponent toolbar = _mainView.GetChild ("n19").asCom;
 		toolbar.GetChild("n3").onClick.Add(() => {
-			this.changeUIpage(typeof(UIHomeMain));
+			if(gameManager.isPickerRunning()==true)
+				this.changeUIpage(typeof(UIHomeMain));
 		});
 		//提现界面
 		toolbar.GetChild("n4").onClick.Add(() => {
@@ -56,6 +57,8 @@ public class UIGameMain : UIMain
 		});
 		/////////////////////////////////////////////////////////////////////////////////
 		GComponent controller = _mainView.GetChild ("n22").asCom;
+		Vector3 pos = controller.position;
+		controller.SetPosition (pos.x,pos.y*GRoot.inst.height/UI_HEIGHT,pos.z);
 		//move forward
 		controller.GetChild("n5").onTouchBegin.Add(() => {
 			gameManager.setMoveDirection(new Vector3(0,0,-1));

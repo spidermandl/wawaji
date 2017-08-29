@@ -115,6 +115,9 @@ public class GameManager : MonoBehaviour
 		this.picker.startTargeting ();
 	}
 
+	public bool isPickerRunning(){
+		return this.picker.isPickerRunning ();
+	}
 	public void destroyObjects(){
 		while (this.pool.Count > 0)
 		{

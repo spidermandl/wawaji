@@ -41,6 +41,8 @@ public class Picker : MonoBehaviour
 	}
 	/////seek state //////////////////////////////////////////////////////// 
 	Vector3 moveDiretion = Vector3.zero;
+	const float EDGE_RADIUS = 0.8f;
+	int edge = 0xF;
 	///// //////////////////////////////////////////////////////// 
 	/// /////pick state //////////////////////////////////////////////////////// 
 	const float FOOT_INIT_ANGLE = 20f;//20f;
@@ -70,14 +72,16 @@ public class Picker : MonoBehaviour
 			return 1;
 		}
 	}
-	///// //////////////////////////////////////////////////////// 
+	/// ////////////////////////////////////////////////////////////////////////////////////////////////
+	/// 状态机相关回调方法
+	////////////////////////////////////////////////////////////////////////////////////////////////
 	void Awake(){
 		this.pool = PoolManager.Pools["WaWaJi"];
 		this.claw = this.gameObject.transform.FindChild ("claw");
 		this.rootFoot = this.gameObject.transform.Find ("foot");
 		this.fill = this.gameObject.transform.parent.Find ("fill").gameObject;
 		this.cover = this.gameObject.transform.parent.Find ("cover").gameObject;
-		this.pickRange = this.gameObject.transform.Find ("range").gameObject;
+		this.pickRange = this.gameObject.transform.Find ("picking_range").gameObject;
 		this.ball_objs = this.gameObject.transform.Find ("balls");
 
 		////////////////////////////////////////////////////////
@@ -130,6 +134,9 @@ public class Picker : MonoBehaviour
 	void OnDestroy(){
 		//Destroy (GetComponent (typeof(StateMachineRunner)));
 	}
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	/// 状态机相关回调方法
+	////////////////////////////////////////////////////////////////////////////////////////////////
 	public void Still_Enter(){
 		Animator anim = this.claw.GetComponent<Animator>();
 		anim.Play ("idle");
@@ -139,6 +146,28 @@ public class Picker : MonoBehaviour
 	}
 	public void Seek_FixedUpdate()
 	{
+		//Debug.Log (this.moveDiretion);
+		if (this.moveDiretion.x == 1) {//右
+			Ray ray = new Ray(transform.position, Vector3.right);  
+			RaycastHit hit;  
+			if(Physics.Raycast(ray, out hit, EDGE_RADIUS, 1<<LayerMask.NameToLayer("Wall")))  
+				return;
+		} else if (this.moveDiretion.x == -1) {//左
+			Ray ray = new Ray(transform.position, Vector3.left);  
+			RaycastHit hit;  
+			if(Physics.Raycast(ray, out hit, EDGE_RADIUS, 1<<LayerMask.NameToLayer("Wall")))  
+				return;
+		} else if (this.moveDiretion.z == 1) {//后
+			Ray ray = new Ray(transform.position, Vector3.forward);  
+			RaycastHit hit;  
+			if (Physics.Raycast (ray, out hit, EDGE_RADIUS, 1<<LayerMask.NameToLayer("Wall")))  
+				return;
+		} else if (this.moveDiretion.z == -1) {//前
+			Ray ray = new Ray(transform.position, Vector3.back);  
+			RaycastHit hit;  
+			if(Physics.Raycast(ray, out hit, EDGE_RADIUS, 1<<LayerMask.NameToLayer("Wall")))  
+				return;
+		}
 		//移动速度1
 		this.gameObject.transform.Translate (new Vector3(
 				this.moveDiretion.x * Time.fixedDeltaTime,
@@ -240,6 +269,9 @@ public class Picker : MonoBehaviour
 		GameMediator mediator = UnityFacade.GetInstance ().RetrieveMediator (GameMediator.NAME) as GameMediator;
 		mediator.gameOver ();
 	}
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// ************************************************************************************************
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//初始化所有object
 	public void initConfig(){
 		this.gameObject.transform.localPosition = Picker.initPos;
@@ -260,7 +292,6 @@ public class Picker : MonoBehaviour
 		pickerStateMachine = StateMachine<States>.Initialize(this, States.Still);
 
 	}
-
 
 	//爪脚绕点选择
 //	void rotateAround(float delta){
@@ -310,6 +341,9 @@ public class Picker : MonoBehaviour
 			r.enabled = false;
 		}
 	}
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// 掉落相关方法
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// <summary>
 	/// 按与抓取范围中心点的距离排序
 	/// </summary>
@@ -372,7 +406,9 @@ public class Picker : MonoBehaviour
 		}
 	}
 
-
+	/// <summary>
+	/// 掉落目前离中心距离最远的球，加上物理
+	/// </summary>
 	void restorePhysics(){
 		BallBundle ball = this.picked_balls [0];
 		ball.Ball.transform.parent = this.gameObject.transform.parent.FindChild ("balls");

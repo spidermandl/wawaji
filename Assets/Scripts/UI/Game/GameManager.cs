@@ -55,10 +55,6 @@ public class GameManager : MonoBehaviour
 
 	}
 
-	void removeColliderRender(){
-
-	}
-
 	void initBalls(){
 		Transform balls = this.gameObject.transform.Find ("structure/balls");
 		GameObject ball1 = (GameObject)Resources.Load ("Prefabs/ball/ball_1");

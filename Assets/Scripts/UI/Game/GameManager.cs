@@ -37,9 +37,20 @@ public class GameManager : MonoBehaviour
 			p = root.AddComponent (typeof(Picker)) as Picker;
 		this.picker=p;
 		this.balls = new ArrayList();
-		initBalls ();
+		//StartCoroutine (initBalls());
+		initBalls();
+
+		GameObject pass = this.gameObject.transform.Find ("structure/pass").gameObject;
+		PassChecker pChecker = pass.GetComponent (typeof(PassChecker)) as PassChecker;
+		if (pChecker == null) {
+			pass.AddComponent (typeof(PassChecker));
+		}
+
 	}
 
+	void Start(){
+
+	}
 	public void FixedUpdate(){
 
 	}
@@ -49,6 +60,7 @@ public class GameManager : MonoBehaviour
 	}
 
 	void initBalls(){
+		Transform balls = this.gameObject.transform.Find ("structure/balls");
 		GameObject ball1 = (GameObject)Resources.Load ("Prefabs/ball/ball_1");
 		GameObject ball2 =(GameObject)Resources.Load ("Prefabs/ball/ball_2");
 		GameObject ball3 =(GameObject)Resources.Load ("Prefabs/ball/ball_3");
@@ -57,8 +69,8 @@ public class GameManager : MonoBehaviour
 		//-2              2
 		//   -3   -1
 		//3*4*5
-		ArrayList indexs = new ArrayList();
-		for (int i = 0; i < 6 * 8 * 10; i++) {
+		ArrayList indexs = new ArrayList();	
+		for (int i = 0; i < 2 * LENGTH_Y * 2 * LENGTH_X * 2 * LENGTH_Z; i++) {
 			indexs.Add (i);
 		}
 
@@ -68,16 +80,16 @@ public class GameManager : MonoBehaviour
 			Transform ball = null;	
 			switch(rand){
 			case 1: 
-				ball = this.pool.Spawn(ball1, Vector3.zero, Quaternion.identity);
+				ball = this.pool.Spawn(ball1, Vector3.zero, Quaternion.identity,balls);
 				//ball = GameObject.Instantiate (ball1);
 				break;
 			case 2: 
 				//ball = GameObject.Instantiate (ball2);
-				ball = this.pool.Spawn(ball2, Vector3.zero, Quaternion.identity);
+				ball = this.pool.Spawn(ball2, Vector3.zero, Quaternion.identity,balls);
 				break;
 			case 3: 
 				//ball = GameObject.Instantiate (ball3);
-				ball = this.pool.Spawn(ball3, Vector3.zero, Quaternion.identity);
+				ball = this.pool.Spawn(ball3, Vector3.zero, Quaternion.identity,balls);
 				break;
 			default:
 				break;
@@ -100,8 +112,11 @@ public class GameManager : MonoBehaviour
 					CREATION_Y+2*BALL_RADIUS*n_y+BALL_RADIUS,
 					CREATION_Z-2*BALL_RADIUS*n_z+BALL_RADIUS);
 
+				ball.gameObject.layer = LayerMask.NameToLayer ("Ball"); 
 				this.balls.Add (ball);
+				//yield return new WaitForSeconds(0.1f);  
 			}
+			//yield return null;
 		}
 	}
 
@@ -118,6 +133,7 @@ public class GameManager : MonoBehaviour
 	public bool isPickerRunning(){
 		return this.picker.isPickerRunning ();
 	}
+
 	public void destroyObjects(){
 		while (this.pool.Count > 0)
 		{

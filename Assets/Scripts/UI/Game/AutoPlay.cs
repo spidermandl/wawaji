@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class AutoPlay : StateMachineBehaviour
 {
+	public const string PICK_ANIM = "pick_step";
+
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
+		int r = animator.GetInteger (PICK_ANIM);
+		animator.SetInteger (PICK_ANIM, r + 1);
+		//Debug.Log (stateInfo);
 		if (stateInfo.IsName ("pick_3")) {
-			int r = animator.GetInteger ("repeat_once");
-			animator.SetInteger ("repeat_once", r + 1);
-		}else if (stateInfo.IsName ("pick_4")) {
-			animator.SetInteger ("repeat_once", 0);
+			if (animator.GetInteger (PICK_ANIM) == 6) {
+				animator.SetInteger (PICK_ANIM, 0);
+			}
 		}
 	}
 

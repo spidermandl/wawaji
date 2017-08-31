@@ -14,7 +14,8 @@ public class Picker : MonoBehaviour
 	static Vector3 dropPos = new Vector3 (0,3,-1.72f);//
 
 	Transform claw =null;//
-	Transform rootFoot;
+	Transform rootFoot;//
+	GameObject pickRange;//
 	///// 夹球腿相关属性 ///////////////////////////////////////////
 	Transform[] foots;
 	public int legs = 3;//抓脚个数
@@ -44,11 +45,82 @@ public class Picker : MonoBehaviour
 	/// /////pick state //////////////////////////////////////////////////////// 
 	const float FOOT_INIT_ANGLE = 20f;//20f;
 	const float FOOT_FINAL_ANGLE = 30f;//70f;
-	float acclumlated_angle = 0f;
-	const float angular_speed=30f;
-	Vector3 releaseDirection = Vector3.zero;
+	Vector3 releaseDirection = Vector3.zero;//释放移动路径方向
+	///// //////////////////////////////////////////////////////// 
+	Transform ball_objs = null;
+	List<BallBundle> picked_balls = new List<BallBundle>();
+	class BallBundle{
+		float dis;
+		GameObject ball;
+		public float Distance{
+			get{ return dis;}
+			set{ dis = value;}
+		}
+		public GameObject Ball{
+			get{ return ball;}
+			set{ ball = value;}
+		}
+	}
+	class BallCompare: IComparer<BallBundle>
+	{
+		public int Compare(BallBundle x, BallBundle y)
+		{
+			if(x.Distance>y.Distance)
+				return -1;
+			return 1;
+		}
+	}
 	///// //////////////////////////////////////////////////////// 
 	void Awake(){
+		this.pool = PoolManager.Pools["WaWaJi"];
+		this.claw = this.gameObject.transform.FindChild ("claw");
+		this.rootFoot = this.gameObject.transform.Find ("foot");
+		this.fill = this.gameObject.transform.parent.Find ("fill").gameObject;
+		this.cover = this.gameObject.transform.parent.Find ("cover").gameObject;
+		this.pickRange = this.gameObject.transform.Find ("range").gameObject;
+		this.ball_objs = this.gameObject.transform.Find ("balls");
+
+		////////////////////////////////////////////////////////
+		//生成每个抓脚的根节点,初始化所有抓脚
+		GameObject prefab = (GameObject)Resources.Load ("Prefabs/foot");
+		foots = new Transform[this.legs];
+		for (int i = 0; i < this.legs; i++) {
+			foots[i]= this.pool.Spawn(prefab, Vector3.zero, Quaternion.identity,this.rootFoot);
+			foots [i].localPosition = Vector3.zero;
+			foots [i].gameObject.SetActive (false);
+			Footer footer = foots [i].gameObject.AddComponent<Footer> ();
+			footer.initRotate = new Vector3(270,i*360/this.legs,0);
+			footer.footFactor = (float)i/(float)this.legs;
+			foots [i].gameObject.SetActive (true);
+
+			footer.rotateAroundAxis (Picker.FOOT_INIT_ANGLE);
+			removeMeshRender (this.foots [i].gameObject);
+
+			//绑入模型中
+			if (this.legs == 3) {
+				switch (i) {
+				case 0:
+					this.foots [0].parent = this.claw.transform.FindChild ("polySurface42");
+					break;
+				case 1:
+					this.foots [1].parent = this.claw.transform.FindChild ("polySurface58");
+					break;
+				case 2:
+					this.foots [2].parent = this.claw.transform.FindChild ("polySurface56");
+					break;
+				default:
+					break;
+				}
+			}
+		}
+		////////////////////////////////////////////////////////
+		/// range
+		RangeSphere range = this.pickRange.GetComponent (typeof(RangeSphere)) as RangeSphere;
+		if (range == null) {
+			RangeSphere sphere = this.pickRange.AddComponent (typeof(RangeSphere)) as RangeSphere;
+			sphere.setSelectingFunc (this.selectedBall);
+		}
+		////////////////////////////////////////////////////////
 		this.initConfig ();
 	}
 
@@ -58,9 +130,12 @@ public class Picker : MonoBehaviour
 	void OnDestroy(){
 		//Destroy (GetComponent (typeof(StateMachineRunner)));
 	}
+	public void Still_Enter(){
+		Animator anim = this.claw.GetComponent<Animator>();
+		anim.Play ("idle");
+	}
 	public void Seek_Enter(){
-//		Animator anim = this.gameObject.transform.FindChild ("claw").GetComponent<Animator>();
-//		anim.Play ("pick");
+		
 	}
 	public void Seek_FixedUpdate()
 	{
@@ -86,30 +161,34 @@ public class Picker : MonoBehaviour
 	}
 
 	public IEnumerator Pick_Enter(){
-		this.acclumlated_angle = 0f;
 		yield return new WaitForSeconds(1);
 		Animator anim = this.claw.GetComponent<Animator>();
-		anim.Play ("pick_1");
+		anim.Play ("pick_4");
 	}
 
 
 	public void Pick_FixedUpdate(){
-		
-		if (this.acclumlated_angle >= Picker.FOOT_FINAL_ANGLE) {
+		Animator anim = this.claw.GetComponent<Animator>();
+		AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
+		//Debug.Log (anim.GetInteger(AutoPlay.PICK_ANIM));
+		// 判断动画是否播放完成
+		if (anim.GetInteger(AutoPlay.PICK_ANIM)==0&&info.IsName("pick_3")&&info.normalizedTime > 1.0f){
 			this.validFence ();
-			Animator anim = this.claw.GetComponent<Animator>();
-			AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
-			// 判断动画是否播放完成
-			if (anim.GetInteger("repeat_once")>1&&info.IsName("pick_3")&&info.normalizedTime >= 1.0f){
-				this.pickerStateMachine.ChangeState (States.Up);
-			}
-			return;
+			this.pickerStateMachine.ChangeState (States.Up);
 		}
-		float delta = Picker.angular_speed * Time.fixedDeltaTime;
-		//this.rotateAround(-delta);
-		this.acclumlated_angle += delta;
 	}
 
+	public IEnumerator Pick_Exit(){
+		yield return new WaitForSeconds(0.4f);
+		this.pickRange.SetActive (true);
+		yield return new WaitForSeconds(0.1f);
+		this.pickRange.SetActive (false);
+	}
+
+	public void Up_Enter(){
+		sortBallsByDistance ();
+		StartCoroutine (dropExcessBall ());
+	}
 	public void Up_FixedUpdate(){
 		//移动速度1
 		this.gameObject.transform.Translate (new Vector3 (0,Time.fixedDeltaTime,0));
@@ -121,6 +200,7 @@ public class Picker : MonoBehaviour
 		Vector3 dir = Picker.dropPos - this.gameObject.transform.localPosition;
 		float dis = (float)Math.Sqrt (dir.x * dir.x + dir.y * dir.y + dir.z * dir.z);
 		this.releaseDirection = new Vector3 (dir.x/dis,dir.y/dis,dir.z/dis);
+		StartCoroutine (dropBallByOdds ());
 	}
 	public void Ship_FixedUpdate(){
 		this.gameObject.transform.Translate (
@@ -137,6 +217,10 @@ public class Picker : MonoBehaviour
 		this.cover.SetActive (false);
 		for (int i = 0; i < this.legs; i++) {
 			this.foots [i].gameObject.SetActive (false);
+		}
+
+		while (this.picked_balls.Count > 0) {
+			restorePhysics ();
 		}
 		//this.rotateAround (this.acclumlated_angle - Picker.FOOT_INIT_ANGLE);
 		Animator anim = this.claw.GetComponent<Animator>();
@@ -158,59 +242,38 @@ public class Picker : MonoBehaviour
 	}
 	//初始化所有object
 	public void initConfig(){
-		this.pool = PoolManager.Pools["WaWaJi"];
 		this.gameObject.transform.localPosition = Picker.initPos;
-		this.claw = this.gameObject.transform.FindChild ("claw");
-		this.rootFoot = this.gameObject.transform.Find ("foot");
-		this.fill = this.gameObject.transform.parent.Find ("fill").gameObject;
-		this.cover = this.gameObject.transform.parent.Find ("cover").gameObject;
 		this.fill.SetActive (true);
 		this.cover.SetActive (true);
 
+
 		//初始化底部fence
 		initFence ();
-		//生成每个抓脚的根节点,初始化所有抓脚
-		foots = new Transform[this.legs];
-		for (int i = 0; i < this.legs; i++) {
-			GameObject prefab = (GameObject)Resources.Load ("Prefabs/foot");
-			foots[i]= this.pool.Spawn(prefab, Vector3.zero, Quaternion.identity,this.rootFoot);
-			foots [i].localPosition = Vector3.zero;
-			foots [i].gameObject.SetActive (false);
-			Footer footer = foots [i].gameObject.AddComponent<Footer> ();
-			footer.initRotate = new Vector3(270,i*360/this.legs,0);
-			foots [i].gameObject.SetActive (true);
 
-			removeMeshRender (this.foots [i].gameObject);
-		}
-
-		this.rotateAround (Picker.FOOT_INIT_ANGLE);
-		this.bindToModelFoot ();
+		//this.rotateAround (Picker.FOOT_INIT_ANGLE);
 		for (int i = 0; i < this.legs; i++) {
 			foots [i].gameObject.SetActive (false);
 		}
+		//
+		this.pickRange.SetActive (false);
 		//Initialize State Machine Engine		
 		pickerStateMachine = StateMachine<States>.Initialize(this, States.Still);
 
 	}
 
-	public void bindToModelFoot(){
-		if (this.legs == 3) {
-			this.foots [0].parent = this.claw.transform.FindChild ("polySurface42");
-			this.foots [1].parent = this.claw.transform.FindChild ("polySurface58");
-			this.foots [2].parent = this.claw.transform.FindChild ("polySurface56");
-		}
-	}
+
 	//爪脚绕点选择
-	void rotateAround(float delta){
-		for(int i=0;i<this.legs;i++){
-			double angle = Math.PI / 180 * (270 - 360 / this.legs * i + 90);
-			Vector3 center = this.foots [i].position;//+new Vector3(0,radius,0);
-			this.foots [i].RotateAround (
-				center, 
-				new Vector3 ((float)Math.Cos (angle), 0, (float)Math.Sin (angle)),
-				delta);
-		}
-	}
+//	void rotateAround(float delta){
+//		for(int i=0;i<this.legs;i++){
+//			double angle = Math.PI / 180 * (270 - 360 / this.legs * i + 90);
+//			Vector3 center = this.foots [i].position;//+new Vector3(0,radius,0);
+//			this.foots [i].RotateAround (
+//				center, 
+//				new Vector3 ((float)Math.Cos (angle), 0, (float)Math.Sin (angle)),
+//				delta);
+//		}
+//	}
+
 	/// <summary>
 	/// Inits the fence.
 	/// </summary>
@@ -247,6 +310,78 @@ public class Picker : MonoBehaviour
 			r.enabled = false;
 		}
 	}
+	/// <summary>
+	/// 按与抓取范围中心点的距离排序
+	/// </summary>
+	void sortBallsByDistance(){
+		picked_balls.Sort (new BallCompare());
+	}
+	/// <summary>
+	/// 上升过程球掉落，大于3个的必掉
+	/// </summary>
+	/// <returns>The excess ball.</returns>
+	IEnumerator dropExcessBall(){
+		yield return new WaitForSeconds (1f);
+		while (true) {
+			if (this.picked_balls.Count <= 3) {
+				break;
+			}
+			yield return new WaitForSeconds (0.2f);
+			restorePhysics ();
+		}
+	}
+	/// <summary>
+	/// 移动过程按概率掉落
+	/// </summary>
+	/// <returns>The ball by odds.</returns>
+	IEnumerator dropBallByOdds(){
+		while (true) {
+			bool noDrop = true;
+			switch(this.picked_balls.Count){
+			case 1:
+				System.Random rand = new System.Random ();
+				float odd = (float)rand.NextDouble ();
+				if (odd > 0.9f) {
+					restorePhysics ();
+					noDrop = false;
+				}
+				break;
+			case 2:
+				rand = new System.Random ();
+				odd = (float)rand.NextDouble ();
+				if (odd > 0.7f) {
+					restorePhysics ();
+					noDrop = false;
+				}
+				break;
+			case 3:
+				rand = new System.Random ();
+				odd = (float)rand.NextDouble ();
+				if (odd > 0.5f) {
+					restorePhysics ();
+					noDrop = false;
+				}
+				break;
+			default:
+				noDrop = false;
+				break;
+			}
+			if (noDrop)
+				break;
+			yield return new WaitForSeconds (0.2f);
+		}
+	}
+
+
+	void restorePhysics(){
+		BallBundle ball = this.picked_balls [0];
+		ball.Ball.transform.parent = this.gameObject.transform.parent.FindChild ("balls");
+		Rigidbody rb = ball.Ball.GetComponent<Rigidbody> ();
+		rb.useGravity = true;
+		rb.constraints = RigidbodyConstraints.None;
+
+		this.picked_balls.RemoveAt (0);
+	}
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
 	/// ////////////////////////////////////////////////////////////////////////////
@@ -274,6 +409,26 @@ public class Picker : MonoBehaviour
 			return true;
 		}
 		return false;
+	}
+	/// <summary>
+	/// 回调方法 抓取范围内的球
+	/// </summary>
+	/// <param name="ball">Ball.</param>
+	public void selectedBall(GameObject ball){
+		float radius = this.pickRange.GetComponent<SphereCollider> ().radius;
+		float dis = Vector3.Distance (ball.transform.position, this.pickRange.transform.position);
+		if (dis < radius) {
+			ball.transform.parent = this.ball_objs;
+			Rigidbody rb = ball.GetComponent<Rigidbody> ();
+			rb.useGravity = false;
+			rb.constraints = RigidbodyConstraints.FreezeAll;
+			
+			BallBundle bundle = new BallBundle();
+			bundle.Ball= ball;
+			bundle.Distance = dis;
+
+			picked_balls.Add (bundle);
+		}
 	}
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// ////////////////////////////////////////////////////////////////////////////

@@ -109,7 +109,9 @@
      <Compile Include="Assets\Scripts\UI\Game\AutoPlay.cs" />
      <Compile Include="Assets\Scripts\UI\Game\Footer.cs" />
      <Compile Include="Assets\Scripts\UI\Game\GameManager.cs" />
+     <Compile Include="Assets\Scripts\UI\Game\PassChecker.cs" />
      <Compile Include="Assets\Scripts\UI\Game\Picker.cs" />
+     <Compile Include="Assets\Scripts\UI\Game\RangeSphere.cs" />
      <Compile Include="Assets\Scripts\UI\Game\RingFence.cs" />
      <Compile Include="Assets\Scripts\UI\Game\UIConfirm.cs" />
      <Compile Include="Assets\Scripts\UI\Game\UIGameMain.cs" />

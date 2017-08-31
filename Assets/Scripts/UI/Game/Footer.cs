@@ -7,31 +7,32 @@ using PathologicalGames;
 
 public class Footer:MonoBehaviour
 {
-	SpawnPool pool;
-
 	public float radius = 0.5f;//曲面距离内心半径
 	public float angle = 135;//曲面拉弧角度
 	public int divide = 15;//曲面个数
 	public Vector3 initRotate = Vector3.zero;
+	public float footFactor = 0;
 
 	static Vector3 initFootPos = new Vector3 (0, -0.8f, 0);//中心点初始偏移位置
 
 	Transform[] quads;
 
 	void Awake(){
-		this.pool = PoolManager.Pools["WaWaJi"];
 		quads = new Transform[divide+1];
 
 		float ang_unit = angle / divide;
+		GameObject prefab = (GameObject)Resources.Load ("Prefabs/foot_piece");
 		for (int i = 0; i <= divide; i++) {
-			GameObject prefab = (GameObject)Resources.Load ("Prefabs/foot_piece");
-			Transform quad = this.pool.Spawn(prefab, Vector3.zero, Quaternion.identity,this.gameObject.transform);
+			Transform quad = //this.pool.Spawn(prefab, Vector3.zero, Quaternion.identity,this.gameObject.transform);
+				GameObject.Instantiate (prefab).transform;
+			quad.localRotation = Quaternion.identity;
 			quad.parent = this.gameObject.transform;
 			quad.localPosition = Vector3.zero;
 			//quad.transform.localRotation = Quaternion.Euler (270,0,0);
 			//设置面片大小
+			quad.localScale = new Vector3 (radius*((i-divide/2)<0?i:divide-i)/divide, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 1);
 			//quad.localScale = new Vector3 (radius*i/divide, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 1);
-			quad.localScale = new Vector3 (radius, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 1);
+			//quad.localScale = new Vector3 (radius, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 1);
 			//先移动
 			quad.Translate (0,radius * Mathf.Sin (2*Mathf.PI/360 *ang_unit * i),radius * Mathf.Cos (2*Mathf.PI/360 *ang_unit * i),Space.Self);
 			//后旋转
@@ -55,5 +56,15 @@ public class Footer:MonoBehaviour
 	void FixedUpdate(){
 
 	}
+
+	public void rotateAroundAxis(float delta){
+		double angle = Math.PI / 180 * (270 - 360 * this.footFactor + 90);
+		Vector3 center = this.gameObject.transform.position;//+new Vector3(0,radius,0);
+		this.gameObject.transform.RotateAround (
+			center, 
+			new Vector3 ((float)Math.Cos (angle), 0, (float)Math.Sin (angle)),
+			delta);
+	}
+
 }
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
 using PathologicalGames;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,10 +25,16 @@ public class GameManager : MonoBehaviour
 	///// 夹球器相关属性 ///////////////////////////////////////////
 	Picker picker;
 	///// ////////////////////////////////////////////////////////
+	Transform _3dCamera;
+	public Transform SpaceCamera{
+		get{ return _3dCamera;}
+	}
 	///// //////////////////////////////////////////////////////// 
 
 	void Awake(){
 		this.pool = PoolManager.Pools["WaWaJi"];
+		this._3dCamera = this.gameObject.transform.Find ("3d_Camera");
+
 		GameObject root = this.gameObject.transform.Find ("structure/Player").gameObject;
 		Picker p = root.GetComponent (typeof(Picker)) as Picker;
 		if ( p!= null) {

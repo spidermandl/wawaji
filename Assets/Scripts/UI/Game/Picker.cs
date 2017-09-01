@@ -5,6 +5,7 @@ using FairyGUI;
 using UnityEngine;
 using PathologicalGames;
 using MonsterLove.StateMachine;
+using DG.Tweening;
 
 public class Picker : MonoBehaviour
 {
@@ -42,7 +43,6 @@ public class Picker : MonoBehaviour
 	/////seek state //////////////////////////////////////////////////////// 
 	Vector3 moveDiretion = Vector3.zero;
 	const float EDGE_RADIUS = 0.8f;
-	int edge = 0xF;
 	///// //////////////////////////////////////////////////////// 
 	/// /////pick state //////////////////////////////////////////////////////// 
 	const float FOOT_INIT_ANGLE = 20f;//20f;
@@ -129,7 +129,6 @@ public class Picker : MonoBehaviour
 	}
 
 	void FixedUpdate(){
-		
 	}
 	void OnDestroy(){
 		//Destroy (GetComponent (typeof(StateMachineRunner)));
@@ -355,7 +354,7 @@ public class Picker : MonoBehaviour
 	/// </summary>
 	/// <returns>The excess ball.</returns>
 	IEnumerator dropExcessBall(){
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (0.5f);
 		while (true) {
 			if (this.picked_balls.Count <= 3) {
 				break;
@@ -453,7 +452,7 @@ public class Picker : MonoBehaviour
 	public void selectedBall(GameObject ball){
 		float radius = this.pickRange.GetComponent<SphereCollider> ().radius;
 		float dis = Vector3.Distance (ball.transform.position, this.pickRange.transform.position);
-		if (dis < radius) {
+//		if (dis < radius) {
 			ball.transform.parent = this.ball_objs;
 			Rigidbody rb = ball.GetComponent<Rigidbody> ();
 			rb.useGravity = false;
@@ -464,7 +463,7 @@ public class Picker : MonoBehaviour
 			bundle.Distance = dis;
 
 			picked_balls.Add (bundle);
-		}
+		//}
 	}
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// ////////////////////////////////////////////////////////////////////////////

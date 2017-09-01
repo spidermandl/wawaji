@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="617,734">
+  <displayList>
+    <image id="n4_xsrf" name="n4" src="fvaa6" xy="0,0" size="617,734">
+      <relation target="" sidePair="top-top,center-center"/>
+    </image>
+    <image id="n14_xsrf" name="n14" src="xsrf12" xy="240,12">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </image>
+    <image id="n13_xsrf" name="n13" src="xsrf11" xy="284,21">
+      <relation target="n14_xsrf" sidePair="top-top,center-center"/>
+    </image>
+    <image id="n15_xsrf" name="n15" src="xsrf10" xy="250,178">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </image>
+    <image id="n18_xsrf" name="n18" src="xsrf13" xy="201,368">
+      <relation target="n19_xsrf" sidePair="top-top,left-right"/>
+    </image>
+    <image id="n19_xsrf" name="n19" src="xsrf14" xy="76,355">
+      <relation target="n4_xsrf" sidePair="top-top,left-left"/>
+    </image>
+    <text id="n21_xsrf" name="n21" xy="282,312" size="65,28" fontSize="20" color="#ffffff" text="可兑换">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </text>
+    <component id="n22_xsrf" name="n22" src="xsrf15" xy="171,547">
+      <relation target="n4_xsrf" sidePair="center-center,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

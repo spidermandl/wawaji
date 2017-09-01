@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="617,734">
+  <displayList>
+    <image id="n4_xsrf" name="n4" src="fvaa6" xy="0,0" size="617,734">
+      <relation target="" sidePair="top-top,center-center"/>
+    </image>
+    <image id="n14_xsrf" name="n14" src="xsrf12" xy="240,12">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </image>
+    <image id="n13_xsrf" name="n13" src="xsrf11" xy="284,21">
+      <relation target="n14_xsrf" sidePair="top-top,center-center"/>
+    </image>
+    <text id="n21_xsrf" name="n21" xy="286,213" size="65,28" fontSize="20" color="#ffffff" text="可回购">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+      <relation target="n25_pvoj" sidePair="bottom-top,center-center"/>
+    </text>
+    <component id="n23_isq0" name="n23" src="isq019" xy="176,624"/>
+    <image id="n25_pvoj" name="n25" src="pvoj1a" xy="198,241">
+      <relation target="n4_xsrf" sidePair="center-center"/>
+    </image>
+    <image id="n26_pvoj" name="n26" src="fvaa2" xy="203,306" size="367,68">
+      <relation target="n28_pvoj" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n27_pvoj" name="n27" src="fvaa2" xy="203,387" size="367,68">
+      <relation target="n29_pvoj" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n28_pvoj" name="n28" xy="54,321" size="61,32" fontSize="25" color="#ffffff" singleLine="true" text="姓名:"/>
+    <text id="n29_pvoj" name="n29" xy="53,404" size="111,32" fontSize="25" color="#ffffff" singleLine="true" text="邮寄地址:">
+      <relation target="n28_pvoj" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n30_pvoj" name="n30" xy="56,557" size="86,32" fontSize="25" color="#ffffff" singleLine="true" text="手机号:">
+      <relation target="n29_pvoj" sidePair="left-left,top-top"/>
+    </text>
+    <image id="n31_pvoj" name="n31" src="fvaa2" xy="201,543" size="370,68">
+      <relation target="n30_pvoj" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n32_pvoj" name="n32" xy="211,314" size="353,51" input="true" fontSize="30" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="n26_pvoj" sidePair="leftext-left,rightext-right"/>
+      <relation target="n26_pvoj" sidePair="middle-middle"/>
+    </text>
+    <text id="n33_pvoj" name="n33" xy="209,396" size="353,51" input="true" fontSize="30" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="n27_pvoj" sidePair="leftext-left,rightext-right"/>
+      <relation target="n27_pvoj" sidePair="middle-middle"/>
+    </text>
+    <text id="n34_pvoj" name="n34" xy="209,552" size="353,51" input="true" fontSize="30" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="n31_pvoj" sidePair="leftext-left,rightext-right"/>
+      <relation target="n31_pvoj" sidePair="middle-middle"/>
+    </text>
+    <text id="n35_pvoj" name="n35" xy="271,172" size="96,32" fontSize="25" color="#ffffff" text="iPhone7">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </text>
+    <component id="n43_ls0x" name="n43" src="ls0x1n" xy="195,466">
+      <relation target="n39_ls0x" sidePair="top-top,left-left"/>
+      <ComboBox visibleItemCount="10">
+        <item title="中国银行"/>
+        <item title="交通银行"/>
+        <item title="招商银行"/>
+        <item title="工商银行"/>
+      </ComboBox>
+    </component>
+    <component id="n39_ls0x" name="n39" src="ls0x1k" xy="41,465">
+      <relation target="n29_pvoj" sidePair="top-top,left-left"/>
+      <ComboBox visibleItemCount="5">
+        <item title="支付宝"/>
+        <item title="银行卡"/>
+      </ComboBox>
+    </component>
+    <image id="n45_ls0x" name="n45" src="fvaa2" xy="204,465" size="367,68">
+      <relation target="n39_ls0x" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n46_ls0x" name="n46" xy="210,474" size="353,51" input="true" fontSize="30" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="n45_ls0x" sidePair="leftext-left,rightext-right"/>
+      <relation target="n45_ls0x" sidePair="middle-middle"/>
+    </text>
+  </displayList>
+</component>

@@ -7,5 +7,9 @@
     <component id="n22_fvaa" name="n22" src="fvaa11" xy="0,746" size="750,460">
       <relation target="" sidePair="width-width,bottom-bottom"/>
     </component>
+    <graph id="n23_cq4o" name="holder" xy="0,118" size="750,631" type="rect" lineSize="0" fillColor="#00000000">
+      <relation target="" sidePair="width-width,center-center"/>
+      <relation target="" sidePair="topext-top,bottomext-bottom"/>
+    </graph>
   </displayList>
 </component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="377,68" extention="ComboBox">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n5_ls0x" name="n5" src="fvaa2" xy="0,0"/>
+    <text id="n4" name="title" xy="30,14" size="278,38" fontSize="30" color="#666666" vAlign="middle" autoSize="none" singleLine="true" text="sdfasdf">
+      <relation target="n5_ls0x" sidePair="left-left,middle-middle"/>
+      <relation target="n6_ls0x" sidePair="rightext-left"/>
+    </text>
+    <image id="n6_ls0x" name="n6" src="pvoj1c" xy="332,25">
+      <relation target="" sidePair="top-top,right-right"/>
+    </image>
+  </displayList>
+  <ComboBox dropdown="ui://s6wf2fzsls0x1m"/>
+</component>

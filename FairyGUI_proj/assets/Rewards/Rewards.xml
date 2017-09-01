@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="750,1206">
+  <controller name="tab" pages="0,,1,,2," selected="0"/>
   <displayList>
     <loader id="n12_mc6i" name="n12" xy="0,0" size="750,1206" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <image id="n1_fvaa" name="n1" src="fvaa6" xy="71,255"/>
     <component id="n2_fvaa" name="n2" src="fvaa9" xy="37,41"/>
-    <component id="n3_fvaa" name="n3" src="fvaac" xy="235,843">
-      <relation target="n1_fvaa" sidePair="center-center,bottom-bottom"/>
+    <component id="n14_cq4o" name="n14" src="cq4od" xy="72,333">
+      <gearDisplay controller="tab" pages="0"/>
     </component>
-    <image id="n4_fvaa" name="n4" src="fvaa2" xy="256,458" size="377,68">
-      <relation target="n8_fvaa" sidePair="left-left,top-top"/>
-      <relation target="n1_fvaa" sidePair="width-width"/>
+    <image id="n21_xsrf" name="n21" src="cq4om" xy="1,183">
+      <relation target="n12_mc6i" sidePair="top-top,width-width"/>
     </image>
-    <image id="n5_fvaa" name="n5" src="fvaa2" xy="257,587" size="377,68">
-      <relation target="n9_fvaa" sidePair="left-left,top-top"/>
-      <relation target="n1_fvaa" sidePair="width-width"/>
-    </image>
-    <text id="n7_fvaa" name="n7" xy="331,382" size="105,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="巴拉巴拉">
-      <relation target="n1_fvaa" sidePair="center-center,top-top"/>
-    </text>
-    <text id="n8_fvaa" name="n8" xy="143,474" size="80,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="收件人">
-      <relation target="n1_fvaa" sidePair="left-left,top-top"/>
-    </text>
-    <text id="n9_fvaa" name="n9" xy="131,604" size="105,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="邮寄地址">
-      <relation target="n8_fvaa" sidePair="left-left,top-top"/>
-    </text>
-    <text id="n10_fvaa" name="n10" xy="141,731" size="80,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="手机号">
-      <relation target="n9_fvaa" sidePair="left-left,top-top"/>
-    </text>
-    <image id="n11_mc6i" name="n11" src="fvaa2" xy="257,717" size="377,68">
-      <relation target="n10_fvaa" sidePair="left-left,top-top"/>
-      <relation target="n1_fvaa" sidePair="width-width"/>
-    </image>
+    <component id="n22_xsrf" name="n22" src="cq4on" xy="326,200">
+      <relation target="n21_xsrf" sidePair="center-center,middle-middle"/>
+      <Button selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="1"/>
+    </component>
+    <component id="n23_xsrf" name="n23" src="cq4op" xy="579,200">
+      <relation target="n21_xsrf" sidePair="right-right,middle-middle"/>
+      <Button selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="2"/>
+    </component>
+    <component id="n24_xsrf" name="n24" src="cq4or" xy="72,200">
+      <relation target="n21_xsrf" sidePair="left-left,middle-middle"/>
+      <Button checked="true" selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="0"/>
+    </component>
+    <component id="n25_xsrf" name="n25" src="xsrfy" xy="72,333">
+      <gearDisplay controller="tab" pages="1"/>
+    </component>
+    <component id="n26_pvoj" name="n26" src="isq017" xy="73,333">
+      <gearDisplay controller="tab" pages="2"/>
+    </component>
   </displayList>
+  <transition name="t0"/>
 </component>

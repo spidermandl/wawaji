@@ -12,6 +12,39 @@
     <component id="fvaa9" name="toolbar.xml" path="/"/>
     <component id="fvaab" name="back.xml" path="/button/"/>
     <component id="fvaac" name="submit.xml" path="/button/"/>
+    <component id="cq4od" name="claim.xml" path="/"/>
+    <image id="cq4og" name="c_exchange_select.png" path="/images/"/>
+    <image id="cq4oh" name="bg_tab_select.png" path="/images/" scale="9grid" scale9grid="64,28,128,56"/>
+    <image id="cq4oi" name="bg_exchange.png" path="/images/" scale="9grid" scale9grid="79,25,158,50"/>
+    <image id="cq4oj" name="c_buyback.png" path="/images/"/>
+    <image id="cq4ok" name="c_claim.png" path="/images/"/>
+    <image id="cq4ol" name="c_exchange.png" path="/images/"/>
+    <image id="cq4om" name="bg_tab.png" path="/images/"/>
+    <component id="cq4on" name="b_exchange.xml" path="/button/"/>
+    <image id="cq4oo" name="c_buyback_select.png" path="/images/"/>
+    <component id="cq4op" name="b_buyback.xml" path="/button/"/>
+    <image id="cq4oq" name="c_claim_select.png" path="/images/"/>
+    <component id="cq4or" name="b_claim.xml" path="/button/"/>
+    <component id="xsrfy" name="exchange.xml" path="/"/>
+    <image id="xsrf10" name="c_iPhone_7.png" path="/images/"/>
+    <image id="xsrf11" name="i_iPhone_7TU.png" path="/images/"/>
+    <image id="xsrf12" name="bg_exchange_icon.png" path="/images/"/>
+    <image id="xsrf13" name="39999.png" path="/images/"/>
+    <image id="xsrf14" name="i_big_coin.png" path="/images/"/>
+    <component id="xsrf15" name="exchange_confirm.xml" path="/button/"/>
+    <component id="isq017" name="buyback.xml" path="/"/>
+    <image id="isq018" name="bg_buyback.png" path="/images/"/>
+    <component id="isq019" name="buyback_confirm.xml" path="/button/"/>
+    <image id="pvoj1a" name="2999.png" path="/images/"/>
+    <image id="pvoj1b" name="bg_pay_channel.png" path="/images/"/>
+    <image id="pvoj1c" name="i_blue_down_arrow.png" path="/images/"/>
+    <image id="pvoj1d" name="i_white_down_arrow.png" path="/images/"/>
+    <component id="ls0x1i" name="pan_channel_item.xml" path="/"/>
+    <component id="ls0x1j" name="pan_channel_popup.xml" path="/"/>
+    <component id="ls0x1k" name="pan_channel.xml" path="/"/>
+    <component id="ls0x1l" name="bank_item.xml" path="/"/>
+    <component id="ls0x1m" name="bank_popup.xml" path="/"/>
+    <component id="ls0x1n" name="bank.xml" path="/"/>
   </resources>
   <publish name="Rewards" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

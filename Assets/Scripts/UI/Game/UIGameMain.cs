@@ -43,9 +43,10 @@ public class UIGameMain : UIMain
 		//提现界面
 		toolbar.GetChild("n4").onClick.Add(() => {
 			//提现界面
-			if(_exchangeWin == null)
-				_exchangeWin = new UIExchange ();
-			_exchangeWin.Show();
+//			if(_exchangeWin == null)
+//				_exchangeWin = new UIExchange ();
+//			_exchangeWin.Show();
+			this.changeUIpage(typeof(UIExchangeMain));
 		});
 		//充值界面
 		toolbar.GetChild ("n2").onClick.Add (() => {
@@ -123,7 +124,7 @@ public class UIGameMain : UIMain
 	 * */
 	protected override void destroyUI (){
 		base.destroyUI ();
-		gameManager.destroyObjects ();
+		gameManager.inactive ();
 	}
 
 	public void gameOver(){

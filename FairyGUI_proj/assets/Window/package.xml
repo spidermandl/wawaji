@@ -68,11 +68,18 @@
     <component id="lcrn20" name="Connect_dialog.xml" path="/" exported="true"/>
     <image id="lcrn21" name="b_reconnect.png" path="/images/"/>
     <component id="lcrn22" name="reconnect.xml" path="/button/"/>
-    <component id="lcrn24" name="Exchange_dialog.xml" path="/" exported="true"/>
+    <component id="lcrn24" name="Exchange_dialog.xml" path="/"/>
     <image id="lcrn26" name="c_prize_avaliable.png" path="/images/"/>
     <image id="lcrn27" name="c_iPhone7.png" path="/images/"/>
     <image id="lcrn28" name="i_iPhone7.png" path="/images/"/>
     <component id="lcrn29" name="prize_item.xml" path="/"/>
+    <component id="pplt2a" name="Exchange_confirm_dialog.xml" path="/" exported="true"/>
+    <image id="pplt2b" name="b_confirm.png" path="/images/"/>
+    <component id="pplt2c" name="confirm.xml" path="/button/"/>
+    <image id="pplt2d" name="i_small_coin.png" path="/images/"/>
+    <image id="pplt2e" name="39999.png" path="/images/"/>
+    <image id="pplt2g" name="i_iPhone_7.png" path="/images/"/>
+    <image id="pplt2h" name="c_exchange_title_2.png" path="/images/"/>
   </resources>
   <publish name="Window" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

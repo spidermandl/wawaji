@@ -39,9 +39,10 @@ public class UIHomeMain : UIMain
 		//提现界面
 		toolbar.GetChild("n12").onClick.Add(() => {
 			//提现界面
-			if(_exchangeWin == null)
-				_exchangeWin = new UIExchange ();
-			_exchangeWin.Show();
+//			if(_exchangeWin == null)
+//				_exchangeWin = new UIExchange ();
+//			_exchangeWin.Show();
+			this.changeUIpage(typeof(UIExchangeMain));
 		});
 		//奖励界面
 		toolbar.GetChild ("n11").onClick.Add (() => {

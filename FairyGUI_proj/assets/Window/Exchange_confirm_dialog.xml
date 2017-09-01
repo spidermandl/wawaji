@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="694,619">
+  <displayList>
+    <image id="n1_upgt" name="n1" src="mc6i1" xy="0,0" size="694,438">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_upgt" name="n3" src="upgtx" xy="55,135" size="585,114">
+      <relation target="n1_upgt" sidePair="top-top,center-center"/>
+    </image>
+    <component id="n13_lcrn" name="n13" src="mc6i2" xy="314,435" size="83,181">
+      <relation target="n1_upgt" sidePair="top-bottom,center-center"/>
+    </component>
+    <component id="n16_pplt" name="n16" src="pplt2c" xy="241,311">
+      <relation target="n1_upgt" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <image id="n17_pplt" name="n17" src="pplt2d" xy="217,161" size="65,68">
+      <relation target="n18_pplt" sidePair="top-top,right-left"/>
+    </image>
+    <image id="n18_pplt" name="n18" src="pplt2e" xy="284,173" size="134,41">
+      <relation target="n3_upgt" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n19_pplt" name="n19" xy="125,178" size="55,32" fontSize="25" color="#ffffff" singleLine="true" text="花费">
+      <relation target="n17_pplt" sidePair="top-top,right-left"/>
+    </text>
+    <text id="n20_pplt" name="n20" xy="440,176" size="55,32" fontSize="25" color="#ffffff" singleLine="true" text="兑换">
+      <relation target="n18_pplt" sidePair="top-top,left-right"/>
+    </text>
+    <text id="n21_pplt" name="n21" xy="522,217" size="76,28" fontSize="20" color="#ffffff" singleLine="true" text="iphone7">
+      <relation target="n22_pplt" sidePair="top-bottom,left-left"/>
+    </text>
+    <loader id="n22_pplt" name="n22" xy="537,142" size="37,73" url="ui://jorujmv2pplt2g" autoSize="true">
+      <relation target="n20_pplt" sidePair="top-top,left-right"/>
+    </loader>
+    <image id="n24_pplt" name="n24" src="pplt2h" xy="222,46">
+      <relation target="n1_upgt" sidePair="top-top,center-center"/>
+    </image>
+  </displayList>
+</component>

@@ -39,13 +39,13 @@ public class UIEnterMain : UIMain
 			});
 
 			//
-			_loginWin.Username.onTouchBegin.Add (()=>{
-				_loginWin.Username.asTextField.text="";
-			});
-			//
-			_loginWin.Password.onTouchBegin.Add (()=>{
-				_loginWin.Password.asTextField.text="";
-			});
+//			_loginWin.Username.onTouchBegin.Add (()=>{
+//				//_loginWin.Username.asTextField.text="";
+//			});
+//			//
+//			_loginWin.Password.onTouchBegin.Add (()=>{
+//				//_loginWin.Password.asTextField.text="";
+//			});
 
 		});
 		_mainView.GetChild ("n7").onClick.Add (() => {

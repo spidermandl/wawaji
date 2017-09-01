@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="539,80">
+  <displayList>
+    <component id="n0_fvaa" name="n0" src="lrqt2" xy="1,1">
+      <relation target="" sidePair="left-left,height-height"/>
+    </component>
+    <image id="n1_fvaa" name="n1" src="lrqt4" xy="191,3">
+      <relation target="" sidePair="right-right,height-height"/>
+    </image>
+    <image id="n2_fvaa" name="n2" src="lrqt5" xy="278,12">
+      <relation target="n1_fvaa" sidePair="middle-middle,left-left"/>
+    </image>
+    <image id="n3_fvaa" name="n3" src="lrqt6" xy="349,25">
+      <relation target="n1_fvaa" sidePair="middle-middle,right-right"/>
+    </image>
+    <component id="n4_upgt" name="n4" src="lrqt7" xy="182,1">
+      <relation target="n0_fvaa" sidePair="left-left,top-top"/>
+    </component>
+  </displayList>
+</component>

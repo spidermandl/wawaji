@@ -14,10 +14,10 @@ public class UILoginWin : BaseWindow
 		get{ return this.contentPane.GetChild ("n5"); }
 	}
 	public GObject Username {
-		get{ return this.contentPane.GetChild ("n16"); }
+		get{ return this.contentPane.GetChild ("n20"); }
 	}
 	public GObject Password{
-		get{ return this.contentPane.GetChild ("n17"); }
+		get{ return this.contentPane.GetChild ("n21"); }
 	}
 
 	public UILoginWin ():base()

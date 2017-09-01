@@ -11,7 +11,7 @@ public class StartUpCommand : PureMVC.Patterns.SimpleCommand {
 //		Facade.RegisterProxy( new CountProxy( CountProxy.NAME ) );
 //		Facade.RegisterProxy( new Count2Proxy( Count2Proxy.NAME ) );
 
-		GameObject enter = new GameObject ();
+		GameObject enter = new GameObject (typeof(UIEnterMain).ToString());
 		UIEnterMain plug = enter.AddComponent (typeof(UIEnterMain)) as UIEnterMain;
 	}
 }

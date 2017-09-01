@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
 	void Awake(){
 		this.pool = PoolManager.Pools["WaWaJi"];
 		this._3dCamera = this.gameObject.transform.Find ("3d_Camera");
+		this._3dCamera.gameObject.SetActive (true);
 
 		GameObject root = this.gameObject.transform.Find ("structure/Player").gameObject;
 		Picker p = root.GetComponent (typeof(Picker)) as Picker;
@@ -67,7 +68,6 @@ public class GameManager : MonoBehaviour
 		GameObject ball1 = (GameObject)Resources.Load ("Prefabs/ball/ball_1");
 		GameObject ball2 =(GameObject)Resources.Load ("Prefabs/ball/ball_2");
 		GameObject ball3 =(GameObject)Resources.Load ("Prefabs/ball/ball_3");
-
 		//        2   2
 		//-2              2
 		//   -3   -1
@@ -137,7 +137,8 @@ public class GameManager : MonoBehaviour
 		return this.picker.isPickerRunning ();
 	}
 
-	public void destroyObjects(){
+	public void inactive(){
+		this._3dCamera.gameObject.SetActive (false);
 		while (this.pool.Count > 0)
 		{
 			// Despawn the last instance (like dequeue in a queue because 

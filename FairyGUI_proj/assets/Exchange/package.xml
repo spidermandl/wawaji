@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="pfm7u6g7" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="lrqt0" name="Exchange.xml" path="/" exported="true"/>
+    <component id="lrqt1" name="toolbar.xml" path="/"/>
+    <component id="lrqt2" name="back.xml" path="/button/"/>
+    <image id="lrqt3" name="b_back.png" path="/images/"/>
+    <image id="lrqt4" name="bg_info.png" path="/images/" scale="9grid" scale9grid="87,20,174,40"/>
+    <image id="lrqt5" name="i_coin.png" path="/images/"/>
+    <image id="lrqt6" name="c_264.png" path="/images/"/>
+    <component id="lrqt7" name="add.xml" path="/button/"/>
+    <image id="lrqt8" name="b_add.png" path="/images/"/>
+    <image id="lrqt9" name="bg_banner.png" path="/images/" scale="9grid" scale9grid="188,18,376,36"/>
+    <image id="lrqta" name="c_banner.png" path="/images/"/>
+    <image id="lrqtb" name="bg_item.png" path="/images/" scale="9grid" scale9grid="58,99,116,198"/>
+    <image id="lrqtc" name="bg_window.png" path="/images/" scale="9grid" scale9grid="49,110,104,24"/>
+    <image id="lrqtd" name="i_phone.png" path="/images/"/>
+    <image id="lrqte" name="i_shadow.png" path="/images/"/>
+    <component id="lrqtg" name="exchange_item.xml" path="/"/>
+    <image id="lrqti" name="i_small_coin.png" path="/images/"/>
+    <image id="lrqtj" name="39999.png" path="/images/"/>
+    <image id="lrqtk" name="c_name.png" path="/images/"/>
+  </resources>
+  <publish name="Exchange" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
+</packageDescription>

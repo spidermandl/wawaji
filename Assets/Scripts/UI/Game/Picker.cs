@@ -421,7 +421,7 @@ public class Picker : MonoBehaviour
 	/// 外部调用
 	/// ////////////////////////////////////////////////////////////////////////////
 	public void startSeeking(Vector3 direction){
-		Debug.Log (this.pickerStateMachine.State);
+		//Debug.Log (this.pickerStateMachine.State);
 		if (this.pickerStateMachine.State == States.Still) {//只有静止的时候才会移动
 			this.moveDiretion = direction;
 			this.pickerStateMachine.ChangeState (States.Seek);

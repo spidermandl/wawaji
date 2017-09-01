@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="229,393">
+  <displayList>
+    <image id="n0_lrqt" name="n0" src="lrqtb" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_lrqt" name="n1" src="lrqtc" xy="17,93">
+      <relation target="n0_lrqt" sidePair="middle-middle,center-center"/>
+    </image>
+    <image id="n4_lrqt" name="n4" src="lrqte" xy="64,241">
+      <relation target="n3_lrqt" sidePair="top-bottom,center-center"/>
+    </image>
+    <loader id="n3_lrqt" name="n3" xy="79,154" size="77,101" url="ui://pfm7u6g7lrqtd" fill="scaleFree">
+      <relation target="n1_lrqt" sidePair="middle-middle,center-center"/>
+    </loader>
+    <image id="n7_lrqt" name="n7" src="lrqti" xy="34,324">
+      <relation target="n0_lrqt" sidePair="bottom-bottom,left-left"/>
+    </image>
+    <image id="n9_lrqt" name="n9" src="lrqtj" xy="86,333" size="100,25">
+      <relation target="n7_lrqt" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n10_lrqt" name="n10" src="lrqtk" xy="56,9">
+      <relation target="n0_lrqt" sidePair="center-center,top-top"/>
+    </image>
+    <text id="n11_lrqt" name="n11" xy="51,55" size="140,28" fontSize="20" color="#ffffff" singleLine="true" text="荣耀8 金色 64g">
+      <relation target="n10_lrqt" sidePair="top-top,center-center"/>
+    </text>
+  </displayList>
+</component>

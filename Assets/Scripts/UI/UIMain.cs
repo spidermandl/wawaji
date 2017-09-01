@@ -7,6 +7,7 @@ public abstract class UIMain : MonoBehaviour
 {
 	protected const int UI_WIDTH = 750;
 	protected const int UI_HEIGHT = 1206;
+	string ui_module;
 
 	protected GComponent _mainView;
 	protected ClickDelegateFunc _clickFunc;
@@ -31,8 +32,9 @@ public abstract class UIMain : MonoBehaviour
 		Debug.Log (GRoot.inst.width);
 		Debug.Log (GRoot.inst.height);
 
-
-		UIPackage.AddPackage (module);
+		this.ui_module = module;
+		UIPackageManager.getInstance ().addPackage (module);
+		//UIPackage.AddPackage (module);
 		_mainView = UIPackage.CreateObject (module, module).asCom;
 		//_mainView.SetSize (GRoot.inst.width, GRoot.inst.height);
 		GRoot.inst.AddChild (_mainView);
@@ -59,6 +61,10 @@ public abstract class UIMain : MonoBehaviour
 	protected virtual void destroyUI (){
 		GRoot.inst.RemoveChildren ();
 		Destroy (this.gameObject);//销毁自身脚本
+		//UIPackage.RemovePackage(this.ui_module);
+//		UIPackage.RemoveAllPackages();
+//		Resources.UnloadUnusedAssets();
+//		System.GC.Collect();
 	}
 
 	/**

@@ -7,6 +7,8 @@ public class UIExchangeMain : UIMain
 {
 	UITopup _uiTopup;
 
+	UIExchangeConfirm confirm;
+
 	void Awake()
 	{
 		base.init ("Exchange");
@@ -31,6 +33,12 @@ public class UIExchangeMain : UIMain
 			_uiTopup.Show();
 		});
 
+		GList list = _mainView.GetChild ("n6").asList;
+		list.onClickItem.Add (() => {
+			if(confirm ==null)
+				confirm = new UIExchangeConfirm();
+			confirm.Show();
+		});
 	}
 
 	void Update(){

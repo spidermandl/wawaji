@@ -129,6 +129,7 @@
      <Compile Include="Assets\Scripts\UI\window\BaseWindow.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIConnection.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIExchange.cs" />
+     <Compile Include="Assets\Scripts\UI\window\UIExchangeConfirm.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIHelp.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIPrize.cs" />
      <Compile Include="Assets\Scripts\UI\window\UIProfile.cs" />

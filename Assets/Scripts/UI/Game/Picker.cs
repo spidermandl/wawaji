@@ -30,7 +30,7 @@ public class Picker : MonoBehaviour
 	GameObject cover;//槽口挡板
 	///// //////////////////////////////////////////////////////// 
 	private StateMachine<States> pickerStateMachine;//
-	public enum States
+	enum States
 	{
 		Still,// 静止
 		Seek,// 寻找落点
@@ -438,8 +438,8 @@ public class Picker : MonoBehaviour
 			this.pickerStateMachine.ChangeState (States.Down);
 		}
 	}
-
-	public bool isPickerRunning(){
+	//pick 是否为静止状态
+	public bool isIdle(){
 		if (this.pickerStateMachine.State == States.Still) {
 			return true;
 		}

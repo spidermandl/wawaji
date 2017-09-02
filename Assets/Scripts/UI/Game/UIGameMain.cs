@@ -12,6 +12,7 @@ public class UIGameMain : UIMain
 	UIExchange _exchangeWin;//
 	UITopup _topupWin;//
 
+	GameObject root = null;
 	GameManager gameManager;
 
 	void Awake()
@@ -23,12 +24,12 @@ public class UIGameMain : UIMain
 
 	void Start(){
 		////获取游戏3d场景对象，以及游戏管理对象///////////////////////////////////////////////
-		GameObject root = GameObject.Find("3dGame");
+		root = GameObject.Find("3dGame");
 		if (root == null) {
 			root = GameObject.Instantiate ((GameObject)Resources.Load ("Prefabs/3dGame")as GameObject);
 			root.name = "3dGame";
 		}
-
+		root.SetActive (true);
 		if (root.GetComponent (typeof(GameManager)) != null) {
 			Destroy (root.GetComponent (typeof(GameManager)));
 		}
@@ -37,7 +38,7 @@ public class UIGameMain : UIMain
 		//toolbar
 		GComponent toolbar = _mainView.GetChild ("n19").asCom;
 		toolbar.GetChild("n3").onClick.Add(() => {
-			if(gameManager.isPickerRunning()==true)
+			if(gameManager.isIdle())
 				this.changeUIpage(typeof(UIHomeMain));
 		});
 		//提现界面
@@ -46,10 +47,13 @@ public class UIGameMain : UIMain
 //			if(_exchangeWin == null)
 //				_exchangeWin = new UIExchange ();
 //			_exchangeWin.Show();
-			this.changeUIpage(typeof(UIExchangeMain));
+			if(gameManager.isIdle())
+				this.changeUIpage(typeof(UIExchangeMain));
 		});
 		//充值界面
 		toolbar.GetChild ("n2").onClick.Add (() => {
+			if(!gameManager.isIdle())
+				return;
 			//充值界面
 			if(_topupWin == null)
 				_topupWin = new UITopup ();
@@ -61,14 +65,14 @@ public class UIGameMain : UIMain
 		controller.SetPosition (pos.x,pos.y*GRoot.inst.height/UI_HEIGHT,pos.z);
 		//move forward
 		controller.GetChild("n5").onTouchBegin.Add(() => {
-			gameManager.setMoveDirection(new Vector3(0,0,-1));
+			gameManager.setMoveDirection(GameManager.DIRECTION.Forward);
 		});
 		controller.GetChild("n5").onTouchEnd.Add(() => { 
 			gameManager.stopMoving();
 		});
 		//move back
 		controller.GetChild("n2").onTouchBegin.Add(() => {
-			this.gameManager.setMoveDirection(new Vector3(0,0,1));
+			this.gameManager.setMoveDirection(GameManager.DIRECTION.Back);
 		});
 		controller.GetChild("n2").onTouchEnd.Add(() => {
 			this.gameManager.stopMoving();
@@ -76,7 +80,7 @@ public class UIGameMain : UIMain
 		});
 		//move right
 		controller.GetChild("n4").onTouchBegin.Add(() => {
-			this.gameManager.setMoveDirection(new Vector3(1,0,0));
+			this.gameManager.setMoveDirection(GameManager.DIRECTION.Right);
 		});
 		controller.GetChild("n4").onTouchEnd.Add(() => {
 			this.gameManager.stopMoving();
@@ -84,7 +88,7 @@ public class UIGameMain : UIMain
 		});
 		//move left
 		controller.GetChild("n3").onTouchBegin.Add(() => {
-			this.gameManager.setMoveDirection(new Vector3(-1,0,0));
+			this.gameManager.setMoveDirection(GameManager.DIRECTION.Left);
 		});
 		controller.GetChild("n3").onTouchEnd.Add(() => {
 			this.gameManager.stopMoving();
@@ -97,9 +101,10 @@ public class UIGameMain : UIMain
 
 		GObject holder = _mainView.GetChild("holder");
 
-//		SwipeGesture gesture1 = new SwipeGesture(holder);
-//		gesture1.onMove.Add(OnSwipeMove);
-//		gesture1.onEnd.Add(OnSwipeEnd);
+		SwipeGesture gesture = new SwipeGesture(holder);
+		gesture.onMove.Add(OnSwipeMove);
+		gesture.onEnd.Add(OnSwipeEnd);
+
 //
 //		RotationGesture gesture4 = new RotationGesture(holder);
 //		gesture4.onAction.Add(OnRotate);
@@ -125,6 +130,7 @@ public class UIGameMain : UIMain
 	protected override void destroyUI (){
 		base.destroyUI ();
 		gameManager.inactive ();
+		root.SetActive (false);
 	}
 
 	public void gameOver(){
@@ -146,45 +152,20 @@ public class UIGameMain : UIMain
 
 	void OnSwipeMove(EventContext context)
 	{
+		//Debug.Log ("OnSwipeMove");
 		SwipeGesture gesture = (SwipeGesture)context.sender;
-		Vector3 v = new Vector3();
-		if (Mathf.Abs(gesture.delta.x) > Mathf.Abs(gesture.delta.y))
-		{
-			v.y = -Mathf.Round(gesture.delta.x);
-			if (Mathf.Abs(v.y) < 2) //消除手抖的影响
-				return;
-			gameManager.SpaceCamera.RotateAround (Vector3.zero, Vector3.up,v.y);
-		}
-		else
-		{
-			v.x = -Mathf.Round(gesture.delta.y);
-			if (Mathf.Abs(v.x) < 2)
-				return;
-			gameManager.SpaceCamera.RotateAround (Vector3.zero, Vector3.right,v.x);
-		}
 
-		//gameManager.SpaceCamera.Rotate(v, Space.World);
+		float delta_x = Mathf.Round(gesture.delta.x);
+		if (Mathf.Abs(delta_x) < 2) //消除手抖的影响
+			return;
+		gameManager.rotateCamera (delta_x);
 	}
 
 	void OnSwipeEnd(EventContext context)
 	{
-		SwipeGesture gesture = (SwipeGesture)context.sender;
-		Vector3 v = new Vector3();
-		if (Mathf.Abs(gesture.velocity.x) > Mathf.Abs(gesture.velocity.y))
-		{
-			v.y = -Mathf.Round(Mathf.Sign(gesture.velocity.x) * Mathf.Sqrt(Mathf.Abs(gesture.velocity.x)));
-			if (Mathf.Abs(v.y) < 2)
-				return;
-			gameManager.SpaceCamera.RotateAround (Vector3.zero, Vector3.up,v.y);
-		}
-		else
-		{
-			v.x = -Mathf.Round(Mathf.Sign(gesture.velocity.y) * Mathf.Sqrt(Mathf.Abs(gesture.velocity.y)));
-			if (Mathf.Abs(v.x) < 2)
-				return;
-			gameManager.SpaceCamera.RotateAround (Vector3.zero, Vector3.right,v.x);
-		}
-		//gameManager.SpaceCamera.DORotate(v, 0.3f, RotateMode.WorldAxisAdd);
+		//Debug.Log ("OnSwipeEnd");
+		gameManager.returnCamera ();
+
 	}
 
 //	void OnHold(EventContext context)

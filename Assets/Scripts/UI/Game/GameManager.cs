@@ -5,6 +5,7 @@ using FairyGUI;
 using UnityEngine;
 using PathologicalGames;
 using DG.Tweening;
+using MonsterLove.StateMachine;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,23 +25,64 @@ public class GameManager : MonoBehaviour
 
 	///// 夹球器相关属性 ///////////////////////////////////////////
 	Picker picker;
-	///// ////////////////////////////////////////////////////////
+	///// 摄像头相关////////////////////////////////////////////////////////
 	Transform _3dCamera;
 	public Transform SpaceCamera{
 		get{ return _3dCamera;}
+	}
+	const float CAMERA_ROTATE_SPEED = 0.1f;
+	const float RETURN_FULL_TIME = 1.5f;
+	private StateMachine<States> cameraStateMachine;//
+	enum States
+	{
+		Still,// 静止
+		Rotate,// 旋转
+		Return,// 还原
+	}
+	///// //////////////////////////////////////////////////////// 
+	public enum DIRECTION{
+		Left,
+		Right,
+		Forward,
+		Back,
+	}
+
+	class LEFT_SIDE{
+		public static Vector3 LEFT = new Vector3 (0, 0, 1);
+		public static Vector3 RIGHT = new Vector3 (0, 0, -1);
+		public static Vector3 FORWORD = new Vector3 (-1, 0, 0);
+		public static Vector3 BACK = new Vector3 (1, 0, 0);
+	}
+	class FORWARD_SIDE{
+		public static Vector3 LEFT = new Vector3 (-1, 0, 0);
+		public static Vector3 RIGHT = new Vector3 (1, 0, 0);
+		public static Vector3 FORWORD = new Vector3 (0, 0, -1);
+		public static Vector3 BACK = new Vector3 (0, 0, 1);
+	}
+	class RIGHT_SIDE{
+		public static Vector3 LEFT = new Vector3 (0, 0, -1);
+		public static Vector3 RIGHT = new Vector3 (0, 0, 1);
+		public static Vector3 FORWORD = new Vector3 (1, 0, 0);
+		public static Vector3 BACK = new Vector3 (-1, 0, 0);
 	}
 	///// //////////////////////////////////////////////////////// 
 
 	void Awake(){
 		this.pool = PoolManager.Pools["WaWaJi"];
 		this._3dCamera = this.gameObject.transform.Find ("3d_Camera");
-		this._3dCamera.gameObject.SetActive (true);
+		//初始摄像机角度
+		if (Math.Abs (this._3dCamera.position.x) < 0.01f)
+			this._3dCamera = this._3dCamera;
+		else if (this._3dCamera.position.x < 0)
+			this._3dCamera.transform.RotateAround(Vector3.zero,Vector3.up,90);
+		else if (this._3dCamera.position.x > 0)
+			this._3dCamera.transform.RotateAround(Vector3.zero,Vector3.up,-90);
+
 
 		GameObject root = this.gameObject.transform.Find ("structure/Player").gameObject;
 		Picker p = root.GetComponent (typeof(Picker)) as Picker;
 		if ( p!= null) {
 			p.initConfig ();
-			//Destroy (root.GetComponent (typeof(Picker)));
 		}else
 			p = root.AddComponent (typeof(Picker)) as Picker;
 		this.picker=p;
@@ -54,15 +96,23 @@ public class GameManager : MonoBehaviour
 			pass.AddComponent (typeof(PassChecker));
 		}
 
+		cameraStateMachine = StateMachine<States>.Initialize(this, States.Still);
 	}
 
 	void Start(){
 
 	}
-	public void FixedUpdate(){
-
+	void FixedUpdate(){
 	}
-
+	void OnDestroy() {
+		GameObject.Destroy (GetComponent<StateMachineRunner>());
+	}
+	/// ////////////////////////////////////////////////////////////////////////////
+	/// 内部方法
+	/// ////////////////////////////////////////////////////////////////////////////
+	/// <summary>
+	/// 
+	/// </summary>
 	void initBalls(){
 		Transform balls = this.gameObject.transform.Find ("structure/balls");
 		GameObject ball1 = (GameObject)Resources.Load ("Prefabs/ball/ball_1");
@@ -122,23 +172,149 @@ public class GameManager : MonoBehaviour
 			//yield return null;
 		}
 	}
+	/// ////////////////////////////////////////////////////////////////////////////
+	/// 状态机相关
+	/// ////////////////////////////////////////////////////////////////////////////
+	public void Return_Enter(){
+		float degree = _3dCamera.position.x/Math.Abs(_3dCamera.position.x)*
+			Vector3.Angle (new Vector3(_3dCamera.position.x,0,_3dCamera.position.z),Vector3.back);
+		//Debug.Log (degree);
+		if (Math.Abs(degree)<=45) {
+		} else if (degree > 45) {
+			degree = degree-90;
+		} else if (degree < -45) {
+			degree = degree+90;
+		}
+		GameObject temp = new GameObject ();
+		temp.transform.position = Vector3.zero;
+		temp.transform.parent = this._3dCamera.parent;
+		this._3dCamera.parent = temp.transform;
+		Tweener t = temp.transform.DORotate (new Vector3(0,degree,0),Math.Abs(degree)/45 * RETURN_FULL_TIME,RotateMode.Fast);
+		t.OnComplete (() => {
+			cameraStateMachine.ChangeState(States.Still);
+		});
+	}
 
-	public void setMoveDirection(Vector3 direction){
-		this.picker.startSeeking (direction);
+	public void Return_Exit(){
+		Transform temp = this._3dCamera.parent;
+		this._3dCamera.parent = temp.parent;
+		GameObject.Destroy (temp.gameObject);
+	}
+	/// ////////////////////////////////////////////////////////////////////////////
+	/// 外部调用
+	/// ////////////////////////////////////////////////////////////////////////////
+	public void setMoveDirection(DIRECTION direction){
+		if (cameraStateMachine.State != States.Still)
+			return;
+		Vector3 dir = Vector3.zero;
+		switch(direction){
+		case DIRECTION.Left:
+			if (Math.Abs (this._3dCamera.position.x) < 0.01f)
+				dir = FORWARD_SIDE.LEFT;
+			else if (this._3dCamera.position.x < 0)
+				dir = LEFT_SIDE.LEFT;
+			else if (this._3dCamera.position.x > 0)
+				dir = RIGHT_SIDE.LEFT;
+			break;
+		case DIRECTION.Right:
+			if (Math.Abs (this._3dCamera.position.x) < 0.01f)
+				dir = FORWARD_SIDE.RIGHT;
+			else if (this._3dCamera.position.x < 0)
+				dir = LEFT_SIDE.RIGHT;
+			else if (this._3dCamera.position.x > 0)
+				dir = RIGHT_SIDE.RIGHT;
+			break;
+		case DIRECTION.Forward:
+			if (Math.Abs (this._3dCamera.position.x) < 0.01f)
+				dir = FORWARD_SIDE.FORWORD;
+			else if (this._3dCamera.position.x < 0)
+				dir = LEFT_SIDE.FORWORD;
+			else if (this._3dCamera.position.x > 0)
+				dir = RIGHT_SIDE.FORWORD;
+			break;
+		case DIRECTION.Back:
+			if (Math.Abs (this._3dCamera.position.x) < 0.01f)
+				dir = FORWARD_SIDE.BACK;
+			else if (this._3dCamera.position.x < 0)
+				dir = LEFT_SIDE.BACK;
+			else if (this._3dCamera.position.x > 0)
+				dir = RIGHT_SIDE.BACK;
+			break;
+		default:
+			break;
+		}
+		this.picker.startSeeking (dir);
 	}
 	public void stopMoving(){
 		this.picker.stopSeeking ();
 	}
-	public void startPick(){
-		this.picker.startTargeting ();
+	public void startPick(){		
+		if (cameraStateMachine.State != States.Still)
+			return;
+		float degree = 0;
+		//初始摄像机角度
+		if (Math.Abs (this._3dCamera.position.x) < 0.01f)
+			degree = 0;
+		else if (this._3dCamera.position.x < 0)
+			degree = -90;
+		else if (this._3dCamera.position.x > 0)
+			degree = 90;
+
+		if (degree == 0) {
+			this.picker.startTargeting ();
+			return;
+		}
+		GameObject temp = new GameObject ();
+		temp.transform.position = Vector3.zero;
+		temp.transform.parent = this._3dCamera.parent;
+		this._3dCamera.parent = temp.transform;
+		Tweener t = temp.transform.DORotate (new Vector3(0,degree,0),RETURN_FULL_TIME,RotateMode.Fast);
+		t.OnComplete (() => {
+			Transform temp1 = this._3dCamera.parent;
+			this._3dCamera.parent = temp1.parent;
+			GameObject.Destroy (temp1.gameObject);
+			this.picker.startTargeting ();
+		});
+
+
 	}
 
-	public bool isPickerRunning(){
-		return this.picker.isPickerRunning ();
+	public bool isIdle(){
+		return this.picker.isIdle ()&&cameraStateMachine.State == States.Still;
+	}
+	/// <summary>
+	/// Rotates the camera.
+	/// </summary>
+	/// <param name="delta">Delta.</param>
+	public void rotateCamera(float delta){
+		//爪子是否静止
+		if (!this.picker.isIdle ())
+			return;
+
+		if (cameraStateMachine.State == States.Still) {
+			cameraStateMachine.ChangeState (States.Rotate);
+		}
+		if (cameraStateMachine.State != States.Return) {
+			float degree = _3dCamera.position.x/Math.Abs(_3dCamera.position.x)*
+				Vector3.Angle (new Vector3(_3dCamera.position.x,0,_3dCamera.position.z),Vector3.back);
+			//转角越界判断
+			if (degree - delta * CAMERA_ROTATE_SPEED > 90)
+				degree = 90 - degree;
+			else if (degree - delta * CAMERA_ROTATE_SPEED < -90)
+				degree = -90 - degree;
+			else
+				degree = delta * CAMERA_ROTATE_SPEED;
+			
+			if(degree!=0)
+				this._3dCamera.RotateAround (Vector3.zero, Vector3.up, degree);
+		}
+		
+	}
+	public void returnCamera(){
+		cameraStateMachine.ChangeState (States.Return);
 	}
 
 	public void inactive(){
-		this._3dCamera.gameObject.SetActive (false);
 		while (this.pool.Count > 0)
 		{
 			// Despawn the last instance (like dequeue in a queue because 

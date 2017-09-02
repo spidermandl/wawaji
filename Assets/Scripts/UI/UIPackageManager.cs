@@ -41,7 +41,7 @@ public class UIPackageManager
 		bool hasRemove = false;
 		foreach (string key in new List<string>(packageMap.Keys))
 		{
-			if (packageMap[key]>=2) {
+			if (packageMap[key]>=2) {//保留两个ui的资源在内存
 				packageMap.Remove (key);
 				hasRemove = true;
 				UIPackage.RemovePackage (key);

@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class StartUpCommand : PureMVC.Patterns.SimpleCommand {
 
+	public static string STARTUP = "UnityFacade.StartUp";
+
 	public override void Execute(PureMVC.Interfaces.INotification notification)
 	{
 		Debug.Log("Execute StartUpCommand");
@@ -12,6 +14,10 @@ public class StartUpCommand : PureMVC.Patterns.SimpleCommand {
 //		Facade.RegisterProxy( new Count2Proxy( Count2Proxy.NAME ) );
 
 		GameObject enter = new GameObject (typeof(UIEnterMain).ToString());
-		UIEnterMain plug = enter.AddComponent (typeof(UIEnterMain)) as UIEnterMain;
+		enter.AddComponent (typeof(UIEnterMain));
+
+		//
+		UnityFacade.GetInstance().RegisterCommand (HttpReqCommand.HTTP,typeof(HttpReqCommand));
+		UnityFacade.GetInstance().RegisterCommand (HttpResCommand.HTTP,typeof(HttpResCommand));
 	}
 }

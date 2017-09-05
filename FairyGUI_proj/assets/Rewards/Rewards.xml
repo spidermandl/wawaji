@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="750,1206">
+<component size="750,1334">
   <controller name="tab" pages="0,,1,,2," selected="0"/>
   <displayList>
-    <loader id="n12_mc6i" name="n12" xy="0,0" size="750,1206" fill="scaleFree">
+    <loader id="n12_mc6i" name="n12" xy="0,0" size="750,1335" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <component id="n2_fvaa" name="n2" src="fvaa9" xy="37,41"/>

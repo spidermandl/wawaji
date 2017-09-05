@@ -19,6 +19,12 @@ public class UILoginWin : BaseWindow
 	public GObject Password{
 		get{ return this.contentPane.GetChild ("n21"); }
 	}
+	public GObject Register {
+		get{ return this.contentPane.GetChild ("n25"); }
+	}
+	public GObject Forget{
+		get{ return this.contentPane.GetChild ("n24"); }
+	}
 
 	public UILoginWin ():base()
 	{

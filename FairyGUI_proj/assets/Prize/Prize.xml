@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="750,1206">
+<component size="750,1334">
   <displayList>
-    <loader id="n0_upgt" name="n0" xy="0,0" size="750,1206" fill="scaleFree"/>
+    <loader id="n0_upgt" name="n0" xy="0,0" size="750,1334" fill="scaleFree"/>
     <component id="n1_upgt" name="n1" src="upgt18" xy="20,26">
       <relation target="n0_upgt" sidePair="left-left,top-top"/>
     </component>
     <image id="n3_upgt" name="n3" src="upgtm" xy="-1,136" size="750,71">
       <relation target="n0_upgt" sidePair="top-top,width-width"/>
     </image>
-    <image id="n4_upgt" name="n4" src="upgtm" xy="-2,839" size="750,71">
-      <relation target="n0_upgt" sidePair="bottom-bottom,width-width"/>
+    <image id="n4_upgt" name="n4" src="upgtm" xy="-1,863" size="750,71">
+      <relation target="n0_upgt" sidePair="top-top,width-width"/>
     </image>
     <image id="n5_upgt" name="n5" src="upgtj" xy="272,146">
       <relation target="n3_upgt" sidePair="middle-middle,center-center"/>
     </image>
-    <image id="n6_upgt" name="n6" src="upgt15" xy="283,851">
+    <image id="n6_upgt" name="n6" src="upgt15" xy="284,875">
       <relation target="n4_upgt" sidePair="center-center,middle-middle"/>
     </image>
     <component id="n8_upgt" name="n8" src="upgt3" xy="14,219" size="718,189">
@@ -26,8 +26,9 @@
     <component id="n10_upgt" name="n10" src="upgt3" xy="16,625" size="718,189">
       <relation target="n9_upgt" sidePair="top-top,width-width"/>
     </component>
-    <list id="n12_upgt" name="n12" xy="1,908" size="747,300" overflow="scroll" defaultItem="ui://eap8hbzxupgt2">
-      <relation target="n0_upgt" sidePair="width-width,bottom-bottom"/>
+    <list id="n12_upgt" name="n12" xy="2,935" size="747,396" overflow="scroll" defaultItem="ui://eap8hbzxupgt2">
+      <relation target="n4_upgt" sidePair="top-top"/>
+      <relation target="n0_upgt" sidePair="bottomext-bottom,width-width"/>
       <item/>
       <item/>
       <item/>

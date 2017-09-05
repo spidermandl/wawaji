@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="750,1206">
+<component size="750,1334">
   <displayList>
-    <loader id="n5_c8r1" name="n5" xy="0,0" size="750,1206" fill="scaleFree"/>
+    <loader id="n5_c8r1" name="n5" xy="0,0" size="750,1334" fill="scaleFree"/>
     <component id="n2_c8r1" name="n2" src="c8r18" xy="21,32">
       <relation target="n5_c8r1" sidePair="top-top,left-left"/>
     </component>
     <image id="n3_c8r1" name="n3" src="c8r16" xy="277,39">
       <relation target="n2_c8r1" sidePair="top-top"/>
     </image>
-    <list id="n4_c8r1" name="n4" xy="36,150" size="681,1057" overflow="scroll" lineGap="20" defaultItem="ui://y6kn79ojc8r19">
+    <list id="n4_c8r1" name="n4" xy="36,150" size="681,1182" overflow="scroll" lineGap="20" defaultItem="ui://y6kn79ojc8r19">
       <relation target="n5_c8r1" sidePair="top-top,center-center"/>
+      <relation target="n5_c8r1" sidePair="bottomext-bottom"/>
       <item/>
       <item/>
     </list>
   </displayList>
-  <relation target="" sidePair="width-width,height-height"/>
 </component>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="694,858">
+  <displayList>
+    <image id="n3_lf03" name="n3" src="lf03f" xy="0,0" size="694,677">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n5_lf03" name="n5" src="lf031" xy="97,535" size="508,80">
+      <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
+      <relation target="n3_lf03" sidePair="bottom-bottom"/>
+    </component>
+    <component id="n7_ddj4" name="n7" src="ddj4k" xy="329,677" size="83,181">
+      <relation target="n3_lf03" sidePair="topext-bottom"/>
+    </component>
+    <image id="n14_ddj4" name="n14" src="ddj4l" xy="99,291" size="499,1">
+      <relation target="n29_ysyo" sidePair="leftext-left,top-top"/>
+      <relation target="n31_w12a" sidePair="right-right"/>
+    </image>
+    <image id="n15_ddj4" name="n15" src="ddj4l" xy="99,196" size="499,1">
+      <relation target="n20_rb6o" sidePair="leftext-left,rightext-right"/>
+      <relation target="n20_rb6o" sidePair="top-top"/>
+    </image>
+    <component id="n18_ddj4" name="n18" src="ddj4u" xy="440,319">
+      <relation target="n14_ddj4" sidePair="right-right,top-top"/>
+    </component>
+    <image id="n19_fvaa" name="n19" src="w12a1v" xy="271,551" size="164,47">
+      <relation target="n5_lf03" sidePair="center-center,middle-middle"/>
+      <relation target="n5_lf03" sidePair="height-height"/>
+    </image>
+    <text id="n20_rb6o" name="n20" xy="101,142" size="491,40" input="true" prompt="[color=#7666F2]请输入您的手机号码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
+      <relation target="n3_lf03" sidePair="left-left,rightext-right"/>
+    </text>
+    <text id="n21_rb6o" name="n21" xy="98,327" size="332,40" input="true" prompt="[color=#7666F2]请输入手机验证码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
+      <relation target="n14_ddj4" sidePair="leftext-left"/>
+      <relation target="n18_ddj4" sidePair="rightext-left,top-top"/>
+    </text>
+    <image id="n22_ysyo" name="n22" src="w12a1u" xy="242,55">
+      <relation target="n3_lf03" sidePair="center-center,top-top"/>
+    </image>
+    <image id="n27_ysyo" name="n27" src="ddj4l" xy="99,387" size="499,1">
+      <relation target="n21_rb6o" sidePair="leftext-left,top-top"/>
+      <relation target="n18_ddj4" sidePair="rightext-right"/>
+    </image>
+    <image id="n28_ysyo" name="n28" src="ddj4l" xy="99,478" size="499,1">
+      <relation target="n30_ysyo" sidePair="leftext-left,rightext-right"/>
+      <relation target="n30_ysyo" sidePair="top-top"/>
+    </image>
+    <text id="n29_ysyo" name="n29" xy="100,235" size="328,40" input="true" prompt="[color=#7666F2]请输入验证码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
+      <relation target="n20_rb6o" sidePair="left-left,top-top"/>
+      <relation target="n31_w12a" sidePair="rightext-left"/>
+    </text>
+    <text id="n30_ysyo" name="n30" xy="102,425" size="491,40" input="true" prompt="[color=#7666F2]请输入新密码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
+      <relation target="n27_ysyo" sidePair="leftext-left,rightext-right"/>
+      <relation target="n27_ysyo" sidePair="top-top"/>
+    </text>
+    <loader id="n31_w12a" name="n31" xy="448,229" size="147,50" fill="scaleFree">
+      <relation target="n15_ddj4" sidePair="right-right,top-top"/>
+    </loader>
+  </displayList>
+</component>

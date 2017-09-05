@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="750,1206">
+<component size="750,1334">
   <displayList>
-    <loader id="n1_lrqt" name="n0" xy="0,0" size="750,1206" fill="scaleFree">
+    <loader id="n1_lrqt" name="n0" xy="0,0" size="750,1336" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <component id="n2_lrqt" name="n1" src="lrqt1" xy="23,20">
@@ -13,8 +13,9 @@
     <image id="n4_lrqt" name="n4" src="lrqta" xy="283,152">
       <relation target="n3_lrqt" sidePair="middle-middle,center-center"/>
     </image>
-    <list id="n6_lrqt" name="n6" xy="15,245" size="718,961" layout="pagination" overflow="scroll" lineGap="20" colGap="15" lineItemCount="3" lineItemCount2="3" defaultItem="ui://pfm7u6g7lrqtg">
-      <relation target="n1_lrqt" sidePair="bottom-bottom,width-width"/>
+    <list id="n6_lrqt" name="n6" xy="14,258" size="718,1076" layout="pagination" overflow="scroll" lineGap="20" colGap="15" lineItemCount="3" lineItemCount2="3" defaultItem="ui://pfm7u6g7lrqtg">
+      <relation target="n1_lrqt" sidePair="bottomext-bottom,width-width"/>
+      <relation target="n4_lrqt" sidePair="top-top"/>
       <item/>
       <item/>
       <item/>

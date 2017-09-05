@@ -18,11 +18,18 @@ public class EnterMediator: BaseMediator {
 	public override IList<string> ListNotificationInterests()
 	{
 		IList<string> list = new List<string>();
+		list.Add (Req_RegisterVcode.COMMAND);
 		return list;
 	}
 
 	public override void HandleNotification(INotification notification){        
-		
+		switch( notification.Name ){
+		case  Req_RegisterVcode.COMMAND:
+			string code = ((Req_RegisterVcode)notification.Body).getVcode ();
+			break;
+		default:
+			break;
+		}
 	}
 
 	public override void OnRegister()

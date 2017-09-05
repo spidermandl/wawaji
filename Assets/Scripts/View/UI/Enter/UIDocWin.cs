@@ -6,7 +6,9 @@ using DG.Tweening;
 
 public class UIDocWin : BaseWindow
 {
-
+	public GObject Close {
+		get{ return this.contentPane.GetChild ("n25"); }
+	}
 
 	public UIDocWin ():base()
 	{

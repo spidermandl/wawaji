@@ -7,7 +7,6 @@ public abstract class UIMain : MonoBehaviour
 {
 	protected const int UI_WIDTH = 750;
 	protected const int UI_HEIGHT = 1206;
-	string ui_module;
 
 	protected GComponent _mainView;
 	protected ClickDelegateFunc _clickFunc;
@@ -32,7 +31,6 @@ public abstract class UIMain : MonoBehaviour
 		Debug.Log (GRoot.inst.width);
 		Debug.Log (GRoot.inst.height);
 
-		this.ui_module = module;
 		UIPackageManager.getInstance ().addPackage (module);
 		//UIPackage.AddPackage (module);
 		_mainView = UIPackage.CreateObject (module, module).asCom;

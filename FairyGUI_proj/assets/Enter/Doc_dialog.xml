@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="694,858">
   <displayList>
-    <image id="n3_lf03" name="n3" src="lcrn1h" xy="0,0" size="694,858">
+    <image id="n3_lf03" name="n3" src="kjus1w" xy="0,0" size="694,675">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <image id="n20_lcrn" name="n20" src="sfdg1g" xy="378,55">
@@ -14,10 +14,13 @@
       <relation target="n3_lf03" sidePair="top-top"/>
       <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
     </image>
-    <richtext id="n24_lcrn" name="n24" xy="91,178" size="504,482" fontSize="25" color="#cccccc" leading="10" autoSize="none" text="1.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;2.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;3.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;4.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊">
+    <richtext id="n24_lcrn" name="n24" xy="91,178" size="504,461" fontSize="25" color="#cccccc" leading="10" autoSize="none" text="1.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;2.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;3.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;4.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊">
       <relation target="n3_lf03" sidePair="center-center,top-top"/>
       <relation target="n3_lf03" sidePair="bottomext-bottom,width-width"/>
     </richtext>
+    <component id="n25_kjus" name="n25" src="ddj4k" xy="305,675">
+      <relation target="n3_lf03" sidePair="top-bottom"/>
+      <relation target="" sidePair="center-center,bottomext-bottom"/>
+    </component>
   </displayList>
-  <relation target="" sidePair="width-width,height-height"/>
 </component>

@@ -7,23 +7,8 @@ using DG.Tweening;
 public class UISetting : BaseWindow
 {
 
-	GObject Coin_exchange {
-		get{ return this.contentPane.GetChild ("n15"); }
-	}
-	GObject Alipay_account{
-		get{ return this.contentPane.GetChild ("n16"); }
-	}
-	GObject Bind_alipay{
-		get{ return this.contentPane.GetChild ("n4"); }
-	}
-	GObject Max{
-		get{ return this.contentPane.GetChild ("n3"); }
-	}
-	GObject Confirm_exchange{
-		get{ return this.contentPane.GetChild ("n7"); }
-	}
 	GObject Close {
-		get{ return this.contentPane.GetChild ("n1"); }
+		get{ return this.contentPane.GetChild ("n13"); }
 	}
 
 	public UISetting ():base()
@@ -38,6 +23,10 @@ public class UISetting : BaseWindow
 		this.modal = true;
 		//this.SetPosition (this.position.x, 0, this.position.z);
 		GRoot.inst.modalLayer.onClick.Add (()=>{
+			this.Hide();
+		});
+
+		Close.onClick.Add (() => {
 			this.Hide();
 		});
 

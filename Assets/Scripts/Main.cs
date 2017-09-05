@@ -7,6 +7,8 @@ public class Main : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		UnityFacade.GetInstance().StartUp();
+		NetworkManager network = this.gameObject.AddComponent<NetworkManager> ();
+		UnityFacade.GetInstance ().Network = network;
 	}
 	
 	// Update is called once per frame

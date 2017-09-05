@@ -60,8 +60,12 @@ public class UIGameMain : UIMain
 			_topupWin.Show();
 		});
 		/////////////////////////////////////////////////////////////////////////////////
+		/// 3d场景操作按键相关
+		/////////////////////////////////////////////////////////////////////////////////
 		GComponent controller = _mainView.GetChild ("n22").asCom;
 		Vector3 pos = controller.position;
+		Debug.Log (GRoot.inst.height);
+		Debug.Log (UI_HEIGHT);
 		controller.SetPosition (pos.x,pos.y*GRoot.inst.height/UI_HEIGHT,pos.z);
 		//move forward
 		controller.GetChild("n5").onTouchBegin.Add(() => {
@@ -98,7 +102,9 @@ public class UIGameMain : UIMain
 		controller.GetChild("n6").onClick.Add(() => { 
 			this.gameManager.startPick();
 		});
-
+		/////////////////////////////////////////////////////////////////////////////////
+		/// 手势操作相关
+		/////////////////////////////////////////////////////////////////////////////////
 		GObject holder = _mainView.GetChild("holder");
 
 		SwipeGesture gesture = new SwipeGesture(holder);
@@ -182,12 +188,12 @@ public class UIGameMain : UIMain
 //		_ball.localScale = new Vector3(newValue, newValue, newValue);
 //	}
 
-	void OnRotate(EventContext context)
-	{
-		DOTween.Kill(gameManager.SpaceCamera);
-
-		RotationGesture gesture = (RotationGesture)context.sender;
-		gameManager.SpaceCamera.Rotate(Vector3.forward, -gesture.delta, Space.World);
-	}
+//	void OnRotate(EventContext context)
+//	{
+//		DOTween.Kill(gameManager.SpaceCamera);
+//
+//		RotationGesture gesture = (RotationGesture)context.sender;
+//		gameManager.SpaceCamera.Rotate(Vector3.forward, -gesture.delta, Space.World);
+//	}
 }
 

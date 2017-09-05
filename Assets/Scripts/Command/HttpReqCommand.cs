@@ -7,14 +7,14 @@ using System.Collections.Generic;
  * Desmond
  * http command response
  * */
-public class HttpCommand : PureMVC.Patterns.SimpleCommand {
+public class HttpReqCommand : PureMVC.Patterns.SimpleCommand {
+
+	public static string HTTP = "UnityFacade.HTTP.Request";
 
 	public override void Execute(PureMVC.Interfaces.INotification notification) {
 		object body = notification.Body;
-		if (body == null) return;
+		UnityFacade.GetInstance ().Network.SendPost ((Request)body);
 		
-		String msg = (String)body;
-		//Util.CallMethod("Network", "OnResponse", msg);
 
 	}
 }

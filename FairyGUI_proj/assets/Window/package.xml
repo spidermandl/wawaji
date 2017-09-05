@@ -80,6 +80,7 @@
     <image id="pplt2e" name="39999.png" path="/images/"/>
     <image id="pplt2g" name="i_iPhone_7.png" path="/images/"/>
     <image id="pplt2h" name="c_exchange_title_2.png" path="/images/"/>
+    <image id="qzv12i" name="bg_profile_basic_info.png" path="/images/"/>
   </resources>
   <publish name="Window" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

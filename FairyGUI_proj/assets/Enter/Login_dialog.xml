@@ -10,44 +10,54 @@
     <component id="n7_ddj4" name="n7" src="ddj4k" xy="329,677" size="83,181">
       <relation target="n3_lf03" sidePair="topext-bottom"/>
     </component>
-    <text id="n8_ddj4" name="n8" xy="289,417" size="125,28" fontSize="20" color="#ffffff" text="其他登录方式">
+    <text id="n8_ddj4" name="n8" xy="299,445" size="125,28" fontSize="20" color="#ffffff" text="其他登录方式">
       <relation target="n3_lf03" sidePair="center-center"/>
     </text>
-    <image id="n10_ddj4" name="n10" src="ddj4m" xy="99,428" size="166,1">
+    <image id="n10_ddj4" name="n10" src="ddj4m" xy="99,456" size="176,1">
       <relation target="n3_lf03" sidePair="leftext-left"/>
-      <relation target="n8_ddj4" sidePair="rightext-left"/>
+      <relation target="n8_ddj4" sidePair="rightext-left,top-top"/>
     </image>
-    <image id="n11_ddj4" name="n11" src="ddj4m" xy="441,428" size="166,1">
+    <image id="n11_ddj4" name="n11" src="ddj4m" xy="451,456" size="156,1">
       <relation target="n3_lf03" sidePair="rightext-right"/>
-      <relation target="n8_ddj4" sidePair="leftext-right"/>
+      <relation target="n8_ddj4" sidePair="leftext-right,top-top"/>
     </image>
-    <component id="n12_ddj4" name="n12" src="ddj4t" xy="98,500" size="238,74">
+    <component id="n12_ddj4" name="n12" src="ddj4t" xy="95,499" size="238,74">
       <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
       <relation target="n3_lf03" sidePair="bottom-bottom"/>
     </component>
-    <component id="n13_ddj4" name="n13" src="ddj4s" xy="376,500" size="238,74">
+    <component id="n13_ddj4" name="n13" src="ddj4s" xy="379,500" size="238,74">
       <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
       <relation target="n3_lf03" sidePair="bottom-bottom"/>
     </component>
-    <image id="n14_ddj4" name="n14" src="ddj4l" xy="99,240" size="499,1">
+    <image id="n14_ddj4" name="n14" src="ddj4l" xy="99,266" size="499,1">
       <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
     </image>
-    <image id="n15_ddj4" name="n15" src="ddj4l" xy="99,161" size="499,1">
+    <image id="n15_ddj4" name="n15" src="ddj4l" xy="99,192" size="499,1">
       <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
     </image>
-    <component id="n18_ddj4" name="n18" src="ddj4u" xy="436,180">
+    <component id="n18_ddj4" name="n18" src="ddj4u" xy="436,206">
       <relation target="n3_lf03" sidePair="right-right"/>
     </component>
     <component id="n19_fvaa" name="n19" src="fvaa1b" xy="301,314" size="95,47">
       <relation target="n5_lf03" sidePair="center-center,middle-middle"/>
       <relation target="n5_lf03" sidePair="height-height"/>
     </component>
-    <text id="n20_rb6o" name="n20" xy="101,112" size="491,40" input="true" prompt="[color=#7666F2]请输入您的手机号码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
+    <text id="n20_rb6o" name="n20" xy="101,142" size="491,40" input="true" prompt="[color=#7666F2]请输入您的手机号码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
       <relation target="n3_lf03" sidePair="left-left,rightext-right"/>
     </text>
-    <text id="n21_rb6o" name="n21" xy="103,190" size="328,40" input="true" prompt="[color=#7666F2]请输入手机验证码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
+    <text id="n21_rb6o" name="n21" xy="103,213" size="328,40" input="true" prompt="[color=#7666F2]请输入手机验证码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
       <relation target="n3_lf03" sidePair="left-left"/>
       <relation target="n18_ddj4" sidePair="rightext-left"/>
     </text>
+    <image id="n22_ysyo" name="n22" src="ysyo1i" xy="296,50">
+      <relation target="n3_lf03" sidePair="center-center,top-top"/>
+    </image>
+    <component id="n24_ysyo" name="n24" src="ysyo1l" xy="111,402">
+      <relation target="n5_lf03" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n25_ysyo" name="n25" src="ysyo1m" xy="488,402">
+      <relation target="n24_ysyo" sidePair="top-top"/>
+      <relation target="n5_lf03" sidePair="right-right"/>
+    </component>
   </displayList>
 </component>

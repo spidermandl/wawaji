@@ -6,7 +6,12 @@ using System;
 
 public class UnityFacade : PureMVC.Patterns.Facade {
 
-	public const string STARTUP = "UnityFacade.StartUp";
+	private NetworkManager network;
+
+	public NetworkManager Network{
+		get{ return this.network; }
+		set{ network = value;}
+	}
 
 	static UnityFacade()
 	{
@@ -20,12 +25,12 @@ public class UnityFacade : PureMVC.Patterns.Facade {
 
 	protected override void InitializeController() {
 		base.InitializeController();
-		RegisterCommand( STARTUP, typeof(StartUpCommand)  );
+		RegisterCommand( StartUpCommand.STARTUP, typeof(StartUpCommand)  );
 	}
 		
 	public void StartUp()
 	{
-		SendNotification( STARTUP );
+		SendNotification( StartUpCommand.STARTUP );
 	}
 	//Handle IMediatorPlug connection
 	public void ConnectMediator( IMediatorPlug item )

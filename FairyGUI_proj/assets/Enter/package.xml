@@ -39,7 +39,18 @@
     <image id="sfdg1e" name="c_game_notice.png" path="/images/"/>
     <image id="sfdg1f" name="i_line_bold_dash.png" path="/images/"/>
     <image id="sfdg1g" name="c_awareness.png" path="/images/"/>
-    <image id="lcrn1h" name="bg_doc.png" path="/images/" scale="9grid" scale9grid="174,213,348,426"/>
+    <image id="ysyo1i" name="c_login_title.png" path="/images/"/>
+    <image id="ysyo1j" name="b_register.png" path="/images/"/>
+    <image id="ysyo1k" name="b_forget_passwd.png" path="/images/"/>
+    <component id="ysyo1l" name="forget_passwd.xml" path="/button/"/>
+    <component id="ysyo1m" name="register.xml" path="/button/"/>
+    <component id="ysyo1p" name="Register_dialog.xml" path="/" exported="true"/>
+    <image id="ysyo1q" name="c_register.png" path="/images/"/>
+    <image id="ysyo1r" name="i_register.png" path="/images/"/>
+    <component id="w12a1t" name="Forget_dialog.xml" path="/" exported="true"/>
+    <image id="w12a1u" name="c_reset_title.png" path="/images/"/>
+    <image id="w12a1v" name="c_reset.png" path="/images/"/>
+    <image id="kjus1w" name="bg_doc.png" path="/images/" scale="9grid" scale9grid="0,190,694,335"/>
   </resources>
   <publish name="Enter" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 	public Transform SpaceCamera{
 		get{ return _3dCamera;}
 	}
-	const float CAMERA_ROTATE_SPEED = 0.1f;
+	const float CAMERA_ROTATE_SPEED = 0.15f;
 	const float RETURN_FULL_TIME = 1.5f;
 	private StateMachine<States> cameraStateMachine;//
 	enum States
@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
 	/// 内部方法
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// <summary>
-	/// 
+	/// 初始化 抓球
 	/// </summary>
 	void initBalls(){
 		Transform balls = this.gameObject.transform.Find ("structure/balls");
@@ -275,8 +275,6 @@ public class GameManager : MonoBehaviour
 			GameObject.Destroy (temp1.gameObject);
 			this.picker.startTargeting ();
 		});
-
-
 	}
 
 	public bool isIdle(){
@@ -297,7 +295,7 @@ public class GameManager : MonoBehaviour
 		if (cameraStateMachine.State != States.Return) {
 			float degree = _3dCamera.position.x/Math.Abs(_3dCamera.position.x)*
 				Vector3.Angle (new Vector3(_3dCamera.position.x,0,_3dCamera.position.z),Vector3.back);
-			//转角越界判断
+			//摄像机转角越界判断
 			if (degree - delta * CAMERA_ROTATE_SPEED > 90)
 				degree = 90 - degree;
 			else if (degree - delta * CAMERA_ROTATE_SPEED < -90)

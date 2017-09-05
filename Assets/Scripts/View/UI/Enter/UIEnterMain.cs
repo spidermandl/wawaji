@@ -7,6 +7,8 @@ public class UIEnterMain : UIMain
 {
 	
 	UILoginWin _loginWin;//登录对话框
+	UIRegisterWin _registerWin;//
+	UIForgetWin _forgetWin;//
 	UIDocWin _docWin;//
 
 	void Awake()
@@ -38,15 +40,34 @@ public class UIEnterMain : UIMain
 				this.changeUIpage(typeof(UIHomeMain));
 			});
 
-			//
-//			_loginWin.Username.onTouchBegin.Add (()=>{
-//				//_loginWin.Username.asTextField.text="";
-//			});
-//			//
-//			_loginWin.Password.onTouchBegin.Add (()=>{
-//				//_loginWin.Password.asTextField.text="";
-//			});
+			_loginWin.Register.onClick.Add (() => {
+				if(_registerWin == null)
+					_registerWin = new UIRegisterWin();
+				_loginWin.Hide(); 
+				_registerWin.Show();
 
+				Req_RegisterVcode req = new Req_RegisterVcode();
+				UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,req);
+
+				_registerWin.Close.onClick.Add (() => {
+					_registerWin.Hide(); 
+				});
+				_registerWin.Pic_code.onClick.Add(()=>{
+					UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,new Req_RegisterVcode());
+				});
+
+			});
+			_loginWin.Forget.onClick.Add (() => {
+				if(_forgetWin == null)
+					_forgetWin = new UIForgetWin();
+				_loginWin.Hide(); 
+				_forgetWin.Show();
+
+				_forgetWin.Close.onClick.Add (() => { 
+					_forgetWin.Hide(); 
+				});
+			});
+			
 		});
 		_mainView.GetChild ("n7").onClick.Add (() => {
 			this.changeUIpage(typeof(UINoticeMain));
@@ -55,18 +76,26 @@ public class UIEnterMain : UIMain
 			if(_docWin == null)
 				_docWin = new UIDocWin();
 			_docWin.Show();
+
+			_docWin.Close.onClick.Add(()=>{
+				_docWin.Hide();
+			});
 		});
 		//Stage.inst.onKeyDown.Add(OnKeyDown);
-
-		
 	}
 
 	void Update(){
 	}
+
 	void OnKeyDown(EventContext context)
 	{
 		Debug.Log(context.inputEvent.keyCode);
 	}
 
+	public void setVcodeTexture(string code){
+		if (_registerWin != null) {
+			//_registerWin.Pic_code.texture = 
+		}
+	}
 }
 

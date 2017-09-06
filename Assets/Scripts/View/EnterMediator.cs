@@ -19,6 +19,9 @@ public class EnterMediator: BaseMediator {
 	{
 		IList<string> list = new List<string>();
 		list.Add (Req_RegisterVcode.COMMAND);
+		list.Add (Req_UserRegister.COMMAND);
+		list.Add (Req_UserRegisterSendMsg.COMMAND);
+		list.Add (Req_UserLogin.COMMAND);
 		return list;
 	}
 
@@ -26,6 +29,16 @@ public class EnterMediator: BaseMediator {
 		switch( notification.Name ){
 		case  Req_RegisterVcode.COMMAND:
 			string code = ((Req_RegisterVcode)notification.Body).getVcode ();
+			m_login_ui.RespondVcode (code);
+			break;
+		case Req_UserRegister.COMMAND:
+			m_login_ui.RespondRegister ();
+			break;
+		case Req_UserRegisterSendMsg.COMMAND:
+			m_login_ui.RespondRegisterSendMsg (null);
+			break;
+		case Req_UserLogin.COMMAND:
+			m_login_ui.RespondLogin ();
 			break;
 		default:
 			break;

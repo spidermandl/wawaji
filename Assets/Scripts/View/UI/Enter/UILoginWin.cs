@@ -26,6 +26,13 @@ public class UILoginWin : BaseWindow
 		get{ return this.contentPane.GetChild ("n24"); }
 	}
 
+
+	bool isLogining;
+	public bool ValidLogin {
+		get{ return !isLogining; }
+		set{ isLogining = !value; }
+	}
+
 	public UILoginWin ():base()
 	{
 		

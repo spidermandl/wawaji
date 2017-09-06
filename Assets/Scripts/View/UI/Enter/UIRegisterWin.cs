@@ -29,8 +29,16 @@ public class UIRegisterWin : BaseWindow
 		get{ return this.contentPane.GetChild ("n30"); }
 	}
 
-	public GLoader Pic_code{
-		get{ return this.contentPane.GetChild ("n31").asLoader; }
+	bool isRegistering;
+	public bool ValidRegister{
+		get{ return !isRegistering; }
+		set{ isRegistering = !value; }
+	}
+//	public GLoader Pic_code{
+//		get{ return this.contentPane.GetChild ("n31").asLoader; }
+//	}
+	public GObject Pic_code{
+		get{ return this.contentPane.GetChild ("n32"); }
 	}
 
 	public UIRegisterWin ():base()
@@ -43,6 +51,8 @@ public class UIRegisterWin : BaseWindow
 		this.contentPane = UIPackage.CreateObject("Enter", "Register_dialog").asCom;
 		this.Center();
 		this.modal = true;
+
+		this.isRegistering = false;
 
 	}
 

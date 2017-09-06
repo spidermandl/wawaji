@@ -19,7 +19,7 @@ public class UIForgetWin : BaseWindow
 	public GObject Username {
 		get{ return this.contentPane.GetChild ("n20"); }
 	}
-	public GObject Pic_code {
+	public GObject Pic_code_input {
 		get{ return this.contentPane.GetChild ("n29"); }
 	}
 	public GObject Phone_code {
@@ -27,6 +27,10 @@ public class UIForgetWin : BaseWindow
 	}
 	public GObject Password{
 		get{ return this.contentPane.GetChild ("n30"); }
+	}
+
+	public GObject Pic_code{
+		get{ return this.contentPane.GetChild ("n32"); }
 	}
 
 	public UIForgetWin ():base()

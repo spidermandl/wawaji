@@ -85,12 +85,16 @@ public class HttpClient
 		} 
 		if (www.text != null)
 		{
+//			byte[] encodedBytes = Encoding.Unicode.GetBytes(www.text);
+//			byte[] unicodeBytes = Encoding.Convert(Encoding.Unicode,Encoding.UTF8, encodedBytes);
+//			Encoding.Unicode.GetString (encodedBytes);
+			//Debug.Log("request result :" + Encoding.UTF8.GetString(www.bytes));
 			Debug.Log("request result :" + www.text);
 			req.parseResponse(www.text);
 			NetworkManager.AddEvent(req);
 		}
 	}
-
+		
 	/// <summary>
 	/// 发送get消息
 	/// </summary>

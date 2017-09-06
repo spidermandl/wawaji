@@ -55,5 +55,8 @@
     <loader id="n31_w12a" name="n31" xy="448,229" size="147,50" fill="scaleFree">
       <relation target="n15_ddj4" sidePair="right-right,top-top"/>
     </loader>
+    <richtext id="n32_o260" name="n32" xy="453,229" size="137,49" fontSize="30" color="#33ff33" align="center" vAlign="middle" letterSpacing="10" autoSize="none" bold="true" italic="true" singleLine="true" text="fdgs5">
+      <relation target="n15_ddj4" sidePair="top-top,right-right"/>
+    </richtext>
   </displayList>
 </component>

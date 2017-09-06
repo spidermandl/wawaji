@@ -13,7 +13,7 @@ public abstract class UIMain : MonoBehaviour
 	public delegate void ClickDelegateFunc(ClickType type);
 
 	public enum ClickType
-	{ 
+	{
 		StartGame = 1,//开始游戏按钮
 		CloseLoginPanel = 2,//关闭登录框
 		LoginGame = 3, //登录游戏

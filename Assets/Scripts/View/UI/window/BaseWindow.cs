@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public abstract class BaseWindow : Window
 {
+	
 	public BaseWindow ()
 	{
 		UIConfig.modalLayerColor = new Color (0f, 0f, 0f, 0.4f);

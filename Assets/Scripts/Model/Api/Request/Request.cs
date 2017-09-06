@@ -1,6 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/** $token = 'Your Token Here …';
+	$allParams['token'] = $token;
+	$tmpArr = $allParams;
+	sort($tmpArr, SORT_STRING);
+	$tmpStr = implode( $tmpArr );
+	$tmpStr = sha1( $tmpStr );
+**/
+/// </summary>
 public abstract class Request {
 	public const string COMMAND = null;
 

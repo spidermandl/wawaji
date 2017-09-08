@@ -25,7 +25,8 @@ public abstract class UIMain : MonoBehaviour
 	 * */
 	protected void init(string module){
 		//GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT,FairyGUI.UIContentScaler.ScreenMatchMode.MatchHeight);
-		GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT);
+		GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT,FairyGUI.UIContentScaler.ScreenMatchMode.MatchWidth);
+		//GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT);
 		GRoot.inst.MakeFullScreen();
 		//GRoot.inst.SetContentScaleFactor ((int)GRoot.inst.width,(int)GRoot.inst.height);
 		Debug.Log (GRoot.inst.width);

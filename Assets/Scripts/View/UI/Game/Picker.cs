@@ -292,18 +292,6 @@ public class Picker : MonoBehaviour
 
 	}
 
-	//爪脚绕点选择
-//	void rotateAround(float delta){
-//		for(int i=0;i<this.legs;i++){
-//			double angle = Math.PI / 180 * (270 - 360 / this.legs * i + 90);
-//			Vector3 center = this.foots [i].position;//+new Vector3(0,radius,0);
-//			this.foots [i].RotateAround (
-//				center, 
-//				new Vector3 ((float)Math.Cos (angle), 0, (float)Math.Sin (angle)),
-//				delta);
-//		}
-//	}
-
 	/// <summary>
 	/// Inits the fence.
 	/// </summary>

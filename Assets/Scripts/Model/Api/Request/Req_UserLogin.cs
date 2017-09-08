@@ -54,7 +54,7 @@ public class Req_UserLogin :Request {
 		[Serializable]
 		public class Data
 		{
-			//			public int code;
+			//			public int code;//操作码，0表示成功,1表示账号或密码错误
 			//			public string msg;
 			//			public List list;
 		}

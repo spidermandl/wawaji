@@ -6,6 +6,11 @@ using DG.Tweening;
 
 public class UIPrize : BaseWindow
 {
+
+	GObject Close {
+		get{ return this.contentPane.GetChild ("n1"); }
+	}
+
 	public UIPrize ():base()
 	{
 
@@ -24,6 +29,9 @@ public class UIPrize : BaseWindow
 		//			context.StopPropagation ();
 		//		});
 
+		Close.onClick.Add (()=>{
+			this.Hide();
+		});
 	}
 
 }

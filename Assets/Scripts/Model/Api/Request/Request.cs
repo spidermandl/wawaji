@@ -29,6 +29,22 @@ public abstract class Request {
 	}
 
 
+	protected string userId;//用户ID
+	protected string token;//用户登录标识
+	protected int mId;//娃娃机ID
+
+	public string UserId{
+		get{return this.userId;}
+		set{ userId = value;_form.AddField ("userId", value);}
+	}
+	public string Token{
+		get{ return this.token; }
+		set{ token = value;_form.AddField ("token", value);}
+	}
+	public string MId{
+		get{ return this.mId; }
+		set{ mId = value;_form.AddField ("mId", value);}
+	}
 	public Request()
 	{
 		

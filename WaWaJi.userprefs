@@ -1,7 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/UI/Enter/UIEnterMain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Model/Api/Request/Request.cs">
     <Files>
+      <File FileName="Assets/Plugins/StateMachine/StateMachine.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/StateMachine/StateMachineRunner.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PhysicsMove.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/stateMachine/ClassDerivedFromSuperClass.cs" Line="1" Column="1" />
@@ -11,7 +12,7 @@
       <File FileName="Assets/Scripts/Command/StartUpCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/Count2Mediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Count2Proxy.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/GameMediator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/GameMediator.cs" Line="15" Column="3" />
       <File FileName="Assets/Scripts/View/EnterMediator.cs" Line="38" Column="43" />
       <File FileName="Assets/Scripts/View/HomeMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/Count1Mediator.cs" Line="1" Column="1" />
@@ -32,7 +33,6 @@
       <File FileName="Assets/Plugins/PathologicalGames/PoolManager/PoolManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/stateMachine/Main.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/stateMachine/ColorChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/StateMachine/StateMachine.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/PathologicalGames/PoolManager/SpawnPool.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/stateMachine/ClassChangeDuringLongEnter.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/stateMachine/ClassChangeDuringUpdate.cs" Line="1" Column="1" />
@@ -44,14 +44,27 @@
       <File FileName="Assets/Scripts/Model/EnterProxy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/CountProxy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Enter/UIEnterMain.cs" Line="22" Column="3" />
-      <File FileName="Assets/Scripts/View/UI/UIMain.cs" Line="16" Column="3" />
+      <File FileName="Assets/Scripts/View/UI/UIMain.cs" Line="17" Column="25" />
       <File FileName="Assets/Scripts/View/UI/UIPackageManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Enter/UIForgetWin.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/Api/Request/Req_UserRegisterSendMsg.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/Api/Request/Req_RegisterVcode.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/Api/Request/Req_UserRegister.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/Api/Request/Req_UserLogin.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_UserRegisterSendMsg.cs" Line="20" Column="3" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_RegisterVcode.cs" Line="16" Column="3" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_UserRegister.cs" Line="48" Column="47" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_UserLogin.cs" Line="56" Column="4" />
       <File FileName="Assets/Scripts/View/UI/Enter/UILoginWin.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Util/VerificationCode.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_UserForgetPsdSendMsg.cs" Line="55" Column="65" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_UserResetPsd.cs" Line="48" Column="47" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_GetUserForgetPsdVcode.cs" Line="52" Column="27" />
+      <File FileName="Assets/Scripts/View/BaseMediator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/RewardsMediator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/window/UIPrize.cs" Line="33" Column="16" />
+      <File FileName="Assets/Scripts/View/UI/window/UIHelp.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/window/BaseWindow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/window/UIConnection.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/window/UIExchange.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/window/UIProfile.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Request.cs" Line="33" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -32,8 +32,6 @@ public class Req_UserForgetPsdSendMsg :Request {
 	[Serializable]
 	new public class Response : Request.Response{
 		//{"ret":200,"data":{"code":0,"msg":"","list":[],"info":"d7mxh"},"msg":""}
-		public int ret;
-		public string msg;
 		public Data data;
 
 		[Serializable]
@@ -49,6 +47,10 @@ public class Req_UserForgetPsdSendMsg :Request {
 
 		}
 
+	}
+	public override string command ()
+	{
+		return COMMAND;
 	}
 
 	public override Request.Response parseResponse(string json){

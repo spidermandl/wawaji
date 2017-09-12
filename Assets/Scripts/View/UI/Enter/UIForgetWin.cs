@@ -33,6 +33,24 @@ public class UIForgetWin : BaseWindow
 		get{ return this.contentPane.GetChild ("n32"); }
 	}
 
+	public GObject Code_countdown{
+		get{ return this.contentPane.GetChild ("n33"); }
+	}
+	public GObject Warn{
+		get{ return this.contentPane.GetChild ("n34"); }
+	}
+
+	bool isRegistering;
+	bool isVerifying;
+	public bool ValidRegister{
+		get{ return !isRegistering; }
+		set{ isRegistering = !value; }
+	}
+	public bool ValidVerifying{
+		get{ return !isVerifying; }
+		set{ isVerifying = !value; }
+	}
+
 	public UIForgetWin ():base()
 	{
 
@@ -44,6 +62,13 @@ public class UIForgetWin : BaseWindow
 		this.Center();
 		this.modal = true;
 
+		this.isRegistering = false;
+		this.isVerifying = false;
+		Code_countdown.visible = false;
+		Warn.visible = false;
+		Warn.onClick.Add (()=>{
+			Warn.visible = false;
+		});
 	}
 
 

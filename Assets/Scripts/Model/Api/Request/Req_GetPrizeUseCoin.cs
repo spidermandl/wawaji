@@ -12,7 +12,7 @@ public class Req_GetPrizeUseCoin :Request {
 	new protected string _api = Req_GetPrizeUseCoin.COMMAND;
 
 	int prizeId;
-	public string PrizeId{
+	public int PrizeId{
 		get{ return this.prizeId; }
 		set{ prizeId = value;_form.AddField ("prizeId", value);}
 	}
@@ -26,8 +26,6 @@ public class Req_GetPrizeUseCoin :Request {
 	[Serializable]
 	new public class Response : Request.Response{
 		//{"ret":200,"data":{"code":0,"msg":"","list":[],"info":"d7mxh"},"msg":""}
-		public int ret;
-		public string msg;
 		public Data data;
 
 		[Serializable]
@@ -45,5 +43,8 @@ public class Req_GetPrizeUseCoin :Request {
 		base._response = JsonUtility.FromJson<Req_GetPrizeUseCoin.Response>(json);
 		return base._response;
 	}
-
+	public override string command ()
+	{
+		return COMMAND;
+	}
 }

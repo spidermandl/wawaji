@@ -12,7 +12,7 @@ public class Req_GetPrizeUserList : Request {
 	new protected string _api = Req_GetPrizeUserList.COMMAND;
 
 	int mtId;//娃娃机类型ID
-	public string MtId{
+	public int MtId{
 		get{ return this.mtId; }
 		set{ mtId = value;_form.AddField ("mtId", value);}
 	}
@@ -26,8 +26,6 @@ public class Req_GetPrizeUserList : Request {
 	[Serializable]
 	new public class Response : Request.Response{
 		//{"ret":200,"data":{"code":0,"msg":"","list":[],"info":"d7mxh"},"msg":""}
-		public int ret;
-		public string msg;
 		public Data data;
 
 		[Serializable]
@@ -44,5 +42,8 @@ public class Req_GetPrizeUserList : Request {
 		base._response = JsonUtility.FromJson<Req_GetPrizeUserList.Response>(json);
 		return base._response;
 	}
-
+	public override string command ()
+	{
+		return COMMAND;
+	}
 }

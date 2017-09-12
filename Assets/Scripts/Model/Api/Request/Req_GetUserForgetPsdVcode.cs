@@ -21,8 +21,6 @@ public class Req_GetUserForgetPsdVcode :Request {
 	[Serializable]
 	new public class Response : Request.Response{
 		//{"ret":200,"data":{"code":0,"msg":"","list":[],"info":"d7mxh"},"msg":""}
-		public int ret;
-		public string msg;
 		public Data data;
 
 		[Serializable]
@@ -44,6 +42,10 @@ public class Req_GetUserForgetPsdVcode :Request {
 	public override Request.Response parseResponse(string json){
 		base._response = JsonUtility.FromJson<Req_GetUserForgetPsdVcode.Response>(json);
 		return base._response;
+	}
+	public override string command ()
+	{
+		return COMMAND;
 	}
 	/// <summary>
 	/// Gets the vcode.

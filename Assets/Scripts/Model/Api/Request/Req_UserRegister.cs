@@ -35,7 +35,7 @@ public class Req_UserRegister :Request {
 	}
 	public string Uuid{
 		get{ return this.uuid; }
-		set{ psd = value;_form.AddField ("uuid", value);}
+		set{ uuid = value;_form.AddField ("uuid", value);}
 	}
 
 	public Req_UserRegister()
@@ -47,21 +47,13 @@ public class Req_UserRegister :Request {
 	[Serializable]
 	new public class Response : Request.Response{
 		//{"ret":200,"data":{"code":0,"msg":"","list":[],"info":"d7mxh"},"msg":""}
-		public int ret;
-		public string msg;
 		public Data data;
 
 		[Serializable]
 		public class Data
 		{
-//			public int code;
-//			public string msg;
-//			public List list;
-		}
-
-		[Serializable]
-		public class List{
-
+			public int code;//操作码，0表示成功,1表示手机号码格式不正确,2表示图片验证码错误,3表示手机号码已存在,4表示用户未获取短信验证码,5表示短信验证码错误,6表示短信验证码过期
+			public string msg;
 		}
 
 	}
@@ -70,5 +62,11 @@ public class Req_UserRegister :Request {
 		base._response = JsonUtility.FromJson<Req_UserRegister.Response>(json);
 		return base._response;
 	}
-
+	public override string command ()
+	{
+		return COMMAND;
+	}
+	public override string getMsg(){
+		return ((Response)_response).data.msg;
+	}
 }

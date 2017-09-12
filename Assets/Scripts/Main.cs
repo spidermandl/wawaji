@@ -9,6 +9,11 @@ public class Main : MonoBehaviour {
 		UnityFacade.GetInstance().StartUp();
 		NetworkManager network = this.gameObject.AddComponent<NetworkManager> ();
 		UnityFacade.GetInstance ().Network = network;
+
+		//版本资源更新检查
+		Req_GetUpdatePics resquest = new Req_GetUpdatePics ();
+		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,resquest);
+
 	}
 	
 	// Update is called once per frame

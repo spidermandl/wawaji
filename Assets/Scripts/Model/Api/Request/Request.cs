@@ -41,7 +41,7 @@ public abstract class Request {
 		get{ return this.token; }
 		set{ token = value;_form.AddField ("token", value);}
 	}
-	public string MId{
+	public int MId{
 		get{ return this.mId; }
 		set{ mId = value;_form.AddField ("mId", value);}
 	}
@@ -51,8 +51,15 @@ public abstract class Request {
 	}
 
 	public abstract class Response{
-
+		public int ret;
+		public string msg;
 	}
 
 	abstract public Response parseResponse(string json);
+	abstract public string command ();
+
+	public virtual string getMsg(){
+		return _response.msg;
+	}
+
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 
 /// <summary>
-/// 注册验证码信息
+/// 用户注册发送短信
 /// </summary>
 public class Req_UserRegisterSendMsg :Request {
 
@@ -32,28 +32,23 @@ public class Req_UserRegisterSendMsg :Request {
 	[Serializable]
 	new public class Response : Request.Response{
 		//{"ret":200,"data":{"code":0,"msg":"","list":[],"info":"d7mxh"},"msg":""}
-		public int ret;
-		public string msg;
 		public Data data;
 
 		[Serializable]
 		public class Data
 		{
-			//			public int code;
-			//			public string msg;
-			//			public List list;
-		}
-
-		[Serializable]
-		public class List{
-
+			public int code;//操作码，0表示成功,1表示手机号码格式不正确,2表示图片验证码错误
+			public string msg;
 		}
 
 	}
 
 	public override Request.Response parseResponse(string json){
-		base._response = JsonUtility.FromJson<Req_UserRegister.Response>(json);
+		base._response = JsonUtility.FromJson<Req_UserRegisterSendMsg.Response>(json);
 		return base._response;
 	}
-
+	public override string command ()
+	{
+		return COMMAND;
+	}
 }

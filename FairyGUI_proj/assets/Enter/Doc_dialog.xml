@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="694,858">
+  <controller name="tab" pages="0,,1," selected="1"/>
   <displayList>
     <image id="n3_lf03" name="n3" src="kjus1w" xy="0,0" size="694,675">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n20_lcrn" name="n20" src="sfdg1g" xy="378,55">
+    <component id="n20_lcrn" name="n20" src="r5ih1y" xy="378,55">
       <relation target="n3_lf03" sidePair="right-right,top-top"/>
-    </image>
-    <image id="n21_lcrn" name="n21" src="sfdg1e" xy="124,51">
+      <Button controller="tab" page="1"/>
+    </component>
+    <component id="n21_lcrn" name="n21" src="r5ih1x" xy="121,49">
       <relation target="n3_lf03" sidePair="top-top,left-left"/>
-    </image>
+      <Button controller="tab" page="0"/>
+    </component>
     <image id="n22_lcrn" name="n22" src="sfdg1f" xy="126,131" size="451,2">
       <relation target="n3_lf03" sidePair="top-top"/>
       <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
     </image>
     <richtext id="n24_lcrn" name="n24" xy="91,178" size="504,461" fontSize="25" color="#cccccc" leading="10" autoSize="none" text="1.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;2.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;3.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;4.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊">
+      <gearDisplay controller="tab" pages="0"/>
       <relation target="n3_lf03" sidePair="center-center,top-top"/>
       <relation target="n3_lf03" sidePair="bottomext-bottom,width-width"/>
     </richtext>
@@ -22,5 +26,10 @@
       <relation target="n3_lf03" sidePair="top-bottom"/>
       <relation target="" sidePair="center-center,bottomext-bottom"/>
     </component>
+    <richtext id="n27_r5ih" name="n27" xy="91,178" size="504,461" fontSize="25" color="#cccccc" leading="10" autoSize="none" text="1.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;2.啊啊啊啊啊啊啊啊啊啊啊啊&#xA;3.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xA;4.啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊">
+      <gearDisplay controller="tab" pages="1"/>
+      <relation target="n3_lf03" sidePair="center-center,top-top"/>
+      <relation target="n3_lf03" sidePair="bottomext-bottom,width-width"/>
+    </richtext>
   </displayList>
 </component>

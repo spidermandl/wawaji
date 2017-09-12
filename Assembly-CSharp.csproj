@@ -3,8 +3,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+    <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{0FA39F2E-86D6-F142-25B5-9419E1969CEC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -33,169 +34,173 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.XML" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEngine.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>..\..\..\..\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Command\HttpReqCommand.cs" />
-    <Compile Include="Assets\Scripts\Command\HttpResCommand.cs" />
-    <Compile Include="Assets\Scripts\Command\SocketCommand.cs" />
-    <Compile Include="Assets\Scripts\Command\StartUpCommand.cs" />
-    <Compile Include="Assets\Scripts\Config\AppConst.cs" />
-    <Compile Include="Assets\Scripts\Main.cs" />
-    <Compile Include="Assets\Scripts\MediatorPlug.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetUserForgetPsdVcode.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_RegisterVcode.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserForgetPsdSendMsg.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserLogin.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegister.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegisterSendMsg.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserResetPsd.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Request.cs" />
-    <Compile Include="Assets\Scripts\Model\Count2Proxy.cs" />
-    <Compile Include="Assets\Scripts\Model\CountProxy.cs" />
-    <Compile Include="Assets\Scripts\Model\EnterProxy.cs" />
-    <Compile Include="Assets\Scripts\Model\Network\ByteBuffer.cs" />
-    <Compile Include="Assets\Scripts\Model\Network\Converter.cs" />
-    <Compile Include="Assets\Scripts\Model\Network\HttpClient.cs" />
-    <Compile Include="Assets\Scripts\Model\Network\NetworkManager.cs" />
-    <Compile Include="Assets\Scripts\Model\Network\Protocal.cs" />
-    <Compile Include="Assets\Scripts\Model\Network\SocketClient.cs" />
-    <Compile Include="Assets\Scripts\PhysicsMove.cs" />
-    <Compile Include="Assets\Scripts\Sample\AnimTest.cs" />
-    <Compile Include="Assets\Scripts\Sample\ApplicationFacade.cs" />
-    <Compile Include="Assets\Scripts\Sample\DeleteUserCommand.cs" />
-    <Compile Include="Assets\Scripts\Sample\EventsEnum.cs" />
-    <Compile Include="Assets\Scripts\Sample\MainUI.cs" />
-    <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\CreationExample.cs" />
-    <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\DeleteAndCreateInSameFrame.cs" />
-    <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\InstanceHandlerDelegateExample.cs" />
-    <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\OnCreatedDelegateExample.cs" />
-    <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\OnSpawnedExample.cs" />
-    <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ParticleWaitTest.cs" />
-    <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ReallySimpleAudioSpawner.cs" />
-    <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ReallySimpleParticleSpawner.cs" />
-    <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\SimpleSpawner.cs" />
-    <Compile Include="Assets\Scripts\Sample\StartupCommand.cs" />
-    <Compile Include="Assets\Scripts\Sample\UGUI_MyToggle.cs" />
-    <Compile Include="Assets\Scripts\Sample\UGUI_MyToggleGroup.cs" />
-    <Compile Include="Assets\Scripts\Sample\UserForm.cs" />
-    <Compile Include="Assets\Scripts\Sample\UserFormMediator.cs" />
-    <Compile Include="Assets\Scripts\Sample\UserList.cs" />
-    <Compile Include="Assets\Scripts\Sample\UserListMediator.cs" />
-    <Compile Include="Assets\Scripts\Sample\UserList_Item.cs" />
-    <Compile Include="Assets\Scripts\Sample\UserProxy.cs" />
-    <Compile Include="Assets\Scripts\Sample\UserVO.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringLongEnter.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringLongExit.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringMonoUpdate.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringUpdate.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeFromLongExit.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDeactivateDuringChange.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDerivedFromSuperClass.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDetectOnCollisionEnter.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDisabled.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteLongEnter.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteLongExitToLongEnter.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteLongExitToShortEnter.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteShortExitToLongEnter.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteShortExitToShortEnter.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassWithBasicStates.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ClassWithHiddenMethods.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\ColorChanger.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\Helper\TimeoutHelper.cs" />
-    <Compile Include="Assets\Scripts\Sample\stateMachine\Main.cs" />
-    <Compile Include="Assets\Scripts\UnityFacade.cs" />
-    <Compile Include="Assets\Scripts\Util\VerificationCode.cs" />
-    <Compile Include="Assets\Scripts\View\BaseMediator.cs" />
-    <Compile Include="Assets\Scripts\View\Count1Mediator.cs" />
-    <Compile Include="Assets\Scripts\View\Count2Mediator.cs" />
-    <Compile Include="Assets\Scripts\View\EnterMediator.cs" />
-    <Compile Include="Assets\Scripts\View\GameMediator.cs" />
-    <Compile Include="Assets\Scripts\View\HomeMediator.cs" />
-    <Compile Include="Assets\Scripts\View\RewardsMediator.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Enter\UIDocWin.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Enter\UIEnterMain.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Enter\UIForgetWin.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Enter\UILoginWin.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Enter\UIRegisterWin.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Exchange\UIExchangeMain.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Game\AutoPlay.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Game\Footer.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Game\GameManager.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Game\PassChecker.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Game\Picker.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Game\RangeSphere.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Game\RingFence.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Game\UIConfirm.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Game\UIGameMain.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Home\UIHomeMain.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Notice\UINoticeMain.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Prize\UIPrizeMain.cs" />
-    <Compile Include="Assets\Scripts\View\UI\Rewards\UIRewardsMain.cs" />
-    <Compile Include="Assets\Scripts\View\UI\UIMain.cs" />
-    <Compile Include="Assets\Scripts\View\UI\UIPackageManager.cs" />
-    <Compile Include="Assets\Scripts\View\UI\sample\BallMesh.cs" />
-    <Compile Include="Assets\Scripts\View\UI\sample\CreateCountBox.cs" />
-    <Compile Include="Assets\Scripts\View\UI\sample\MeshDemo.cs" />
-    <Compile Include="Assets\Scripts\View\UI\sample\MyBox.cs" />
-    <Compile Include="Assets\Scripts\View\UI\window\BaseWindow.cs" />
-    <Compile Include="Assets\Scripts\View\UI\window\UIConnection.cs" />
-    <Compile Include="Assets\Scripts\View\UI\window\UIExchange.cs" />
-    <Compile Include="Assets\Scripts\View\UI\window\UIExchangeConfirm.cs" />
-    <Compile Include="Assets\Scripts\View\UI\window\UIHelp.cs" />
-    <Compile Include="Assets\Scripts\View\UI\window\UIPrize.cs" />
-    <Compile Include="Assets\Scripts\View\UI\window\UIProfile.cs" />
-    <Compile Include="Assets\Scripts\View\UI\window\UISetting.cs" />
-    <Compile Include="Assets\Scripts\View\UI\window\UITopup.cs" />
-    <None Include="Assets\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
-    <None Include="Assets\Resources\Shaders\FairyGUI-Text.shader" />
-    <None Include="Assets\Resources\Shaders\FairyGUI-Image.shader" />
-    <None Include="Assets\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
-    <None Include="Assets\Resources\Shaders\FairyGUI-BMFont.shader" />
-    <None Include="Assets\读我.txt" />
-    <None Include="Assets\Plugins\PathologicalGames\readme.txt" />
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>..\..\..\..\Applications\Unity\Unity.app\Contents\UnityExtensions\Unity\Networking\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\..\Applications\Unity\Unity.app\Contents\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets\Plugins\DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="FairyGUI">
-      <HintPath>Assets\Plugins\FairyGUI.dll</HintPath>
-    </Reference>
-    <Reference Include="PureMVC.DotNET.35">
-      <HintPath>Assets\Plugins\PureMVC.DotNET.35.dll</HintPath>
-    </Reference>
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetBaseInfo.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeInfo.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_MachineStartGrab.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetMachinePrizeBallData.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetMachineInfo.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetMachinePrizeInfo.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserPrize.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetAllPrize.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeUseCoin.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeUserHorn.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeUserLists.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetExplainAttention.cs" />
-    <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetNewsLists.cs" />
+     <Compile Include="Assets\Scripts\Command\HttpReqCommand.cs" />
+     <Compile Include="Assets\Scripts\Command\HttpResCommand.cs" />
+     <Compile Include="Assets\Scripts\Command\SocketCommand.cs" />
+     <Compile Include="Assets\Scripts\Command\StartUpCommand.cs" />
+     <Compile Include="Assets\Scripts\Config\AppConst.cs" />
+     <Compile Include="Assets\Scripts\Config\LocalKey.cs" />
+     <Compile Include="Assets\Scripts\Main.cs" />
+     <Compile Include="Assets\Scripts\MediatorPlug.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetAllPrize.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetBaseInfo.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetExplainAttention.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetMachineInfo.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetMachinePrizeBallData.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetMachinePrizeInfo.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetNewsLists.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeInfo.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeUseCoin.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeUserHorn.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeUserLists.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetUpdatePics.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetUserForgetPsdVcode.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_MachineStartGrab.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_RegisterVcode.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserForgetPsdSendMsg.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserLogin.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserPrize.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegister.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegisterSendMsg.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserResetPsd.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Request.cs" />
+     <Compile Include="Assets\Scripts\Model\Count2Proxy.cs" />
+     <Compile Include="Assets\Scripts\Model\CountProxy.cs" />
+     <Compile Include="Assets\Scripts\Model\EnterProxy.cs" />
+     <Compile Include="Assets\Scripts\Model\Network\ByteBuffer.cs" />
+     <Compile Include="Assets\Scripts\Model\Network\Converter.cs" />
+     <Compile Include="Assets\Scripts\Model\Network\HttpClient.cs" />
+     <Compile Include="Assets\Scripts\Model\Network\NetworkManager.cs" />
+     <Compile Include="Assets\Scripts\Model\Network\Protocal.cs" />
+     <Compile Include="Assets\Scripts\Model\Network\SocketClient.cs" />
+     <Compile Include="Assets\Scripts\Model\UpdatesProxy.cs" />
+     <Compile Include="Assets\Scripts\PhysicsMove.cs" />
+     <Compile Include="Assets\Scripts\Sample\AnimTest.cs" />
+     <Compile Include="Assets\Scripts\Sample\ApplicationFacade.cs" />
+     <Compile Include="Assets\Scripts\Sample\DeleteUserCommand.cs" />
+     <Compile Include="Assets\Scripts\Sample\EventsEnum.cs" />
+     <Compile Include="Assets\Scripts\Sample\MainUI.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\CreationExample.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\DeleteAndCreateInSameFrame.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\InstanceHandlerDelegateExample.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\OnCreatedDelegateExample.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\OnSpawnedExample.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ParticleWaitTest.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ReallySimpleAudioSpawner.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ReallySimpleParticleSpawner.cs" />
+     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\SimpleSpawner.cs" />
+     <Compile Include="Assets\Scripts\Sample\StartupCommand.cs" />
+     <Compile Include="Assets\Scripts\Sample\UGUI_MyToggle.cs" />
+     <Compile Include="Assets\Scripts\Sample\UGUI_MyToggleGroup.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserForm.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserFormMediator.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserList.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserListMediator.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserList_Item.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserProxy.cs" />
+     <Compile Include="Assets\Scripts\Sample\UserVO.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringLongEnter.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringLongExit.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringMonoUpdate.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringUpdate.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeFromLongExit.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDeactivateDuringChange.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDerivedFromSuperClass.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDetectOnCollisionEnter.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDisabled.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteLongEnter.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteLongExitToLongEnter.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteLongExitToShortEnter.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteShortExitToLongEnter.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteShortExitToShortEnter.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassWithBasicStates.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassWithHiddenMethods.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\ColorChanger.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\Helper\TimeoutHelper.cs" />
+     <Compile Include="Assets\Scripts\Sample\stateMachine\Main.cs" />
+     <Compile Include="Assets\Scripts\UnityFacade.cs" />
+     <Compile Include="Assets\Scripts\Util\TXTReader.cs" />
+     <Compile Include="Assets\Scripts\Util\Util.cs" />
+     <Compile Include="Assets\Scripts\Util\VerificationCode.cs" />
+     <Compile Include="Assets\Scripts\View\BaseMediator.cs" />
+     <Compile Include="Assets\Scripts\View\Count1Mediator.cs" />
+     <Compile Include="Assets\Scripts\View\Count2Mediator.cs" />
+     <Compile Include="Assets\Scripts\View\EnterMediator.cs" />
+     <Compile Include="Assets\Scripts\View\GameMediator.cs" />
+     <Compile Include="Assets\Scripts\View\HomeMediator.cs" />
+     <Compile Include="Assets\Scripts\View\NoticeMediator.cs" />
+     <Compile Include="Assets\Scripts\View\RewardsMediator.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Enter\UIDocWin.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Enter\UIEnterMain.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Enter\UIForgetWin.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Enter\UILoginWin.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Enter\UIRegisterWin.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Exchange\UIExchangeMain.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\AutoPlay.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\Footer.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\GameManager.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\PassChecker.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\Picker.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\RangeSphere.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\RingFence.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\UIConfirm.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\UIGameMain.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Home\UIHomeMain.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Notice\UINoticeMain.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Prize\UIPrizeMain.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Rewards\UIRewardsMain.cs" />
+     <Compile Include="Assets\Scripts\View\UI\UIMain.cs" />
+     <Compile Include="Assets\Scripts\View\UI\UIPackageManager.cs" />
+     <Compile Include="Assets\Scripts\View\UI\sample\BallMesh.cs" />
+     <Compile Include="Assets\Scripts\View\UI\sample\CreateCountBox.cs" />
+     <Compile Include="Assets\Scripts\View\UI\sample\MeshDemo.cs" />
+     <Compile Include="Assets\Scripts\View\UI\sample\MyBox.cs" />
+     <Compile Include="Assets\Scripts\View\UI\window\BaseWindow.cs" />
+     <Compile Include="Assets\Scripts\View\UI\window\UIConnection.cs" />
+     <Compile Include="Assets\Scripts\View\UI\window\UIExchange.cs" />
+     <Compile Include="Assets\Scripts\View\UI\window\UIExchangeConfirm.cs" />
+     <Compile Include="Assets\Scripts\View\UI\window\UIHelp.cs" />
+     <Compile Include="Assets\Scripts\View\UI\window\UIPrize.cs" />
+     <Compile Include="Assets\Scripts\View\UI\window\UIProfile.cs" />
+     <Compile Include="Assets\Scripts\View\UI\window\UISetting.cs" />
+     <Compile Include="Assets\Scripts\View\UI\window\UITopup.cs" />
+     <None Include="Assets\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
+     <None Include="Assets\Resources\Shaders\FairyGUI-Text.shader" />
+     <None Include="Assets\Resources\Shaders\FairyGUI-Image.shader" />
+     <None Include="Assets\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
+     <None Include="Assets\Resources\Shaders\FairyGUI-BMFont.shader" />
+     <None Include="Assets\读我.txt" />
+     <None Include="Assets\Plugins\PathologicalGames\readme.txt" />
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/Desmond/Desktop/WaWaJi/Assets/Plugins/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="FairyGUI">
+ <HintPath>/Users/Desmond/Desktop/WaWaJi/Assets/Plugins/FairyGUI.dll</HintPath>
+ </Reference>
+ <Reference Include="PureMVC.DotNET.35">
+ <HintPath>/Users/Desmond/Desktop/WaWaJi/Assets/Plugins/PureMVC.DotNET.35.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{091E2802-CB3C-205C-8423-E1393AACCCE0}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
+      <Project>{091E2802-CB3C-205C-8423-E1393AACCCE0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -205,4 +210,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>

@@ -10,4 +10,9 @@ public class AppConst
 
 	public static string ANDROID_APPID = "wx3385ddbd34a7aacb";
 	public static string ANDROID_APPSECRET = "389311c011d9531cf6b16f5255bc7d72";
+
+	public const bool DebugMode =false;
+	public const string AssetBundleName = "AssetBundles";
+	public const string AppName = "WaWaJi";           //应用程序名称
+
 }

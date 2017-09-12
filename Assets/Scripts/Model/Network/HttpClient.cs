@@ -73,6 +73,7 @@ public class HttpClient
 	/// 发送post消息
 	/// </summary>
 	public IEnumerator post(Request req){
+		Debug.Log (AppConst.SocketAddress + "?service=" + req.Api);
 		WWW www = req.Form==null?
 			new WWW(AppConst.SocketAddress+"?service="+req.Api):
 			new WWW(AppConst.SocketAddress+"?service="+req.Api, req.Form);

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
+using System.Collections;
+using PureMVC.Interfaces;
 
 public class UIEnterMain : UIMain
 {
@@ -22,7 +24,7 @@ public class UIEnterMain : UIMain
 
 		GLoader bg = _mainView.GetChild ("n4")as GLoader;
 		bg.url = "bg/bg_enter";
-		_mainView.GetChild("n0").onClick.Add(() => { 
+		_mainView.GetChild("n0").onClick.Add(() => {
 			this._clickFunc(ClickType.StartGame);
 			if(_loginWin == null)
 				_loginWin = new UILoginWin();		
@@ -86,6 +88,17 @@ public class UIEnterMain : UIMain
 						}
 					}
 				});
+
+				_registerWin.Verify.onClick.Add(()=>{
+					if(_registerWin.ValidVerifying){
+						Req_UserRegisterSendMsg request = new Req_UserRegisterSendMsg();
+						request.Phone = _registerWin.Username.asTextField.text;
+						request.VerCode = _registerWin.Pic_code.asTextField.text;
+						if(request.Phone!=null &&
+							request.VerCode != null)
+							UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+					}
+				});
 			});
 			_loginWin.Forget.onClick.Add (() => {
 				if(_forgetWin == null)
@@ -118,6 +131,8 @@ public class UIEnterMain : UIMain
 			});
 		});
 		//Stage.inst.onKeyDown.Add(OnKeyDown);
+
+
 	}
 
 	void Update(){
@@ -134,28 +149,64 @@ public class UIEnterMain : UIMain
 	/// Sets the vcode texture.
 	/// </summary>
 	/// <param name="code">Code.</param>
-	public void RespondVcode(string code){
+	public void RespondVcode(INotification notification){
 		if (_registerWin != null) {
+			string code = ((Req_RegisterVcode)notification.Body).getVcode ();
 			((GRichTextField)_registerWin.Pic_code).text = code;
 		}
 	}
 	/// <summary>
 	/// Responds the register.
 	/// </summary>
-	public void RespondRegister(){
+	public void RespondRegister(INotification notification){
 		if (_registerWin != null) {
 			_registerWin.ValidRegister = true;
+			_registerWin.Warn.visible = true;
+			_registerWin.Warn.asTextField.text = ((Request)notification.Body).getMsg();
 		}
 	}
-	public void RespondRegisterSendMsg(string code){
+	/// <summary>
+	/// Responds the register send message.
+	/// </summary>
+	/// <param name="code">Code.</param>
+	public void RespondRegisterSendMsg(INotification notification){
+		if (_registerWin != null) {
+			_registerWin.ValidVerifying = true;
+			_registerWin.Verify.visible = false;
+			_registerWin.Code_countdown.visible = true;
+			StartCoroutine (countDown());
+			_registerWin.Warn.visible = true;
+			_registerWin.Warn.asTextField.text = ((Request)notification.Body).getMsg();
+		}
 	}
 	/// <summary>
 	/// Responds the login.
 	/// </summary>
-	public void RespondLogin(){
+	public void RespondLogin(INotification notification){
 		if (_loginWin != null) {
 			_loginWin.ValidLogin = true;
 		}
+	}
+
+	/// <summary>
+	/// Responds the document.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondDoc(INotification notification){
+		if (_docWin != null) {
+			Req_GetExplainAttention response = (Req_GetExplainAttention)notification.Body;
+			_docWin.Instruction.asTextField.text = response.getInstruction();
+			_docWin.Awareness.asTextField.text = response.getAwareness ();
+		}
+	}
+
+	IEnumerator countDown(){
+		for (int i = 0; i < 60; i++) {
+			_registerWin.Code_countdown.asTextField.text = (60-i)+"秒后重发";
+			yield return new WaitForSeconds (1f);  
+		}
+		_registerWin.Verify.visible = true;
+		_registerWin.Code_countdown.visible = false;
 	}
 }
 

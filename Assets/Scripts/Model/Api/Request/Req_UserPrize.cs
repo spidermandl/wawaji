@@ -12,17 +12,17 @@ public class Req_UserPrize :Request {
 	new protected string _api = Req_UserPrize.COMMAND;
 
 	int prizeId;//必须
-	public string MId{
+	public int MId{
 		get{ return this.prizeId; }
 		set{ prizeId = value;_form.AddField ("prizeId", value);}
 	}
 	int userPrizeId;//必须
-	public string UserPrizeId{
+	public int UserPrizeId{
 		get{ return this.userPrizeId; }
 		set{ userPrizeId = value;_form.AddField ("userPrizeId", value);}
 	}
 	int userPrizeType;//必须
-	public string UserPrizeType{
+	public int UserPrizeType{
 		get{ return this.userPrizeType; }
 		set{ userPrizeType = value;_form.AddField ("userPrizeType", value);}
 	}
@@ -42,14 +42,14 @@ public class Req_UserPrize :Request {
 		set{ userPhone = value;_form.AddField ("userPhone", value);}
 	}
 	int buyBackType;
-	public string BuyBackType{
-		get{ return this.mId; }
-		set{ mId = value;_form.AddField ("mId", value);}
+	public int BuyBackType{
+		get{ return this.buyBackType; }
+		set{ buyBackType = value;_form.AddField ("buyBackType", value);}
 	}
 	string buyBackName;
 	public string BuyBackName{
-		get{ return this.mId; }
-		set{ mId = value;_form.AddField ("mId", value);}
+		get{ return this.buyBackName; }
+		set{ buyBackName = value;_form.AddField ("buyBackName", value);}
 	}
 	string buyBackPhone;
 	public string BuyBackPhone{
@@ -58,13 +58,13 @@ public class Req_UserPrize :Request {
 	}
 	string buyBackAli;
 	public string BuyBackAli{
-		get{ return this.mId; }
-		set{ mId = value;_form.AddField ("mId", value);}
+		get{ return this.buyBackAli; }
+		set{ buyBackAli = value;_form.AddField ("buyBackAli", value);}
 	}
 	string buyBackBank;
 	public string BuyBackBank{
-		get{ return this.buyBackAli; }
-		set{ buyBackAli = value;_form.AddField ("buyBackAli", value);}
+		get{ return this.buyBackBank; }
+		set{ buyBackBank = value;_form.AddField ("buyBackBank", value);}
 	}
 	string buyBackCard;
 	public string BuyBackCard{
@@ -83,8 +83,6 @@ public class Req_UserPrize :Request {
 	[Serializable]
 	new public class Response : Request.Response{
 		//{"ret":200,"data":{"code":0,"msg":"","list":[],"info":"d7mxh"},"msg":""}
-		public int ret;
-		public string msg;
 		public Data data;
 
 		[Serializable]
@@ -101,5 +99,8 @@ public class Req_UserPrize :Request {
 		base._response = JsonUtility.FromJson<Req_UserPrize.Response>(json);
 		return base._response;
 	}
-
+	public override string command ()
+	{
+		return COMMAND;
+	}
 }

@@ -28,18 +28,31 @@ public class UIRegisterWin : BaseWindow
 	public GObject Password{
 		get{ return this.contentPane.GetChild ("n30"); }
 	}
+	public GObject Code_countdown{
+		get{ return this.contentPane.GetChild ("n33"); }
+	}
+	public GObject Warn{
+		get{ return this.contentPane.GetChild ("n34"); }
+	}
+	public GObject Pic_code{
+		get{ return this.contentPane.GetChild ("n32"); }
+	}
+
 
 	bool isRegistering;
+	bool isVerifying;
 	public bool ValidRegister{
 		get{ return !isRegistering; }
 		set{ isRegistering = !value; }
 	}
+	public bool ValidVerifying{
+		get{ return !isVerifying; }
+		set{ isVerifying = !value; }
+	}
+
 //	public GLoader Pic_code{
 //		get{ return this.contentPane.GetChild ("n31").asLoader; }
 //	}
-	public GObject Pic_code{
-		get{ return this.contentPane.GetChild ("n32"); }
-	}
 
 	public UIRegisterWin ():base()
 	{
@@ -53,6 +66,12 @@ public class UIRegisterWin : BaseWindow
 		this.modal = true;
 
 		this.isRegistering = false;
+		this.isVerifying = false;
+		Code_countdown.visible = false;
+		Warn.visible = false;
+		Warn.onClick.Add (()=>{
+			Warn.visible = false;
+		});
 
 	}
 

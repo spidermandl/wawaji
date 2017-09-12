@@ -51,6 +51,8 @@
     <image id="w12a1u" name="c_reset_title.png" path="/images/"/>
     <image id="w12a1v" name="c_reset.png" path="/images/"/>
     <image id="kjus1w" name="bg_doc.png" path="/images/" scale="9grid" scale9grid="0,190,694,335"/>
+    <component id="r5ih1x" name="instruction.xml" path="/button/"/>
+    <component id="r5ih1y" name="awareness.xml" path="/button/"/>
   </resources>
   <publish name="Enter" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

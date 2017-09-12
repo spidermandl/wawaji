@@ -28,6 +28,9 @@ public class UINoticeMain : UIMain
 		list.itemProvider = GetListItemResource;
 		list.itemRenderer = RenderListItem;
 		list.numItems = 100;
+
+		Req_GetNewsLists request = new Req_GetNewsLists ();
+		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
 
 	void Update(){

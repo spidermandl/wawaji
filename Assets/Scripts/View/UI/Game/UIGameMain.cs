@@ -122,8 +122,6 @@ public class UIGameMain : UIMain
 //		PinchGesture gesture3 = new PinchGesture(holder);
 //		gesture3.onAction.Add(OnPinch);
 
-
-
 	}
 
 	void Update(){

@@ -58,5 +58,11 @@
     <richtext id="n32_o260" name="n32" xy="453,231" size="137,49" fontSize="30" color="#33ff33" align="center" vAlign="middle" letterSpacing="10" autoSize="none" bold="true" italic="true" singleLine="true" text="fdgs5">
       <relation target="n15_ddj4" sidePair="top-top,right-right"/>
     </richtext>
+    <text id="n33_r5ih" name="n33" xy="438,322" size="164,45" fontSize="30" color="#cccccc" align="center" vAlign="middle" autoSize="none" text="60秒后重发">
+      <relation target="n18_ddj4" sidePair="top-top,left-left"/>
+    </text>
+    <text id="n34_r5ih" name="n34" xy="98,495" size="495,30" fontSize="20" color="#ff0000" align="center" vAlign="middle" autoSize="height" singleLine="true" text="aaaaa&#xA;">
+      <relation target="n3_lf03" sidePair="center-center,top-top"/>
+    </text>
   </displayList>
 </component>

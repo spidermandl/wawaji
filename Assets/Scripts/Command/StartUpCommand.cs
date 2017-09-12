@@ -17,7 +17,8 @@ public class StartUpCommand : PureMVC.Patterns.SimpleCommand {
 		enter.AddComponent (typeof(UIEnterMain));
 
 		//
-		UnityFacade.GetInstance().RegisterCommand (HttpReqCommand.HTTP,typeof(HttpReqCommand));
-		UnityFacade.GetInstance().RegisterCommand (HttpResCommand.HTTP,typeof(HttpResCommand));
+		Facade.RegisterCommand (HttpReqCommand.HTTP,typeof(HttpReqCommand));
+		Facade.RegisterCommand (HttpResCommand.HTTP,typeof(HttpResCommand));
+
 	}
 }

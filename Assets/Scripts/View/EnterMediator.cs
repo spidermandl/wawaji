@@ -22,24 +22,30 @@ public class EnterMediator: BaseMediator {
 		list.Add (Req_UserRegister.COMMAND);
 		list.Add (Req_UserRegisterSendMsg.COMMAND);
 		list.Add (Req_UserLogin.COMMAND);
+		list.Add (Req_GetExplainAttention.COMMAND);
 		return list;
 	}
 
 	public override void HandleNotification(INotification notification){        
 		switch( notification.Name ){
 		case  Req_RegisterVcode.COMMAND:
-			string code = ((Req_RegisterVcode)notification.Body).getVcode ();
-			m_login_ui.RespondVcode (code);
+			m_login_ui.RespondVcode (notification);
 			break;
 		case Req_UserRegister.COMMAND:
-			m_login_ui.RespondRegister ();
+			m_login_ui.RespondRegister (notification);
 			break;
 		case Req_UserRegisterSendMsg.COMMAND:
-			m_login_ui.RespondRegisterSendMsg (null);
+			m_login_ui.RespondRegisterSendMsg (notification);
 			break;
 		case Req_UserLogin.COMMAND:
-			m_login_ui.RespondLogin ();
+			m_login_ui.RespondLogin (notification);
 			break;
+		case Req_GetExplainAttention.COMMAND:
+			m_login_ui.RespondDoc (notification);
+			break;
+//		case Req_UserRegisterSendMsg.COMMAND:
+//			
+//			break;
 		default:
 			break;
 		}

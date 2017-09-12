@@ -5,19 +5,19 @@ using System;
 /// <summary>
 /// 获取小喇叭中奖列表	用于获取小喇叭中奖列表
 /// </summary>
-public class Req_GetPrizeUseCoin :Request {
+public class Req_GetPrizeUserHorn :Request {
 
-	new public const string COMMAND = "Prize.GetPrizeUseCoin";
+	new public const string COMMAND = "Prize.GetPrizeUserHorn";
 
-	new protected string _api = Req_GetPrizeUseCoin.COMMAND;
+	new protected string _api = Req_GetPrizeUserHorn.COMMAND;
 
 	int mtId;//娃娃机类型ID
-	public string MtId{
+	public int MtId{
 		get{ return this.mtId; }
 		set{ mtId = value;_form.AddField ("mtId", value);}
 	}
 
-	public Req_GetPrizeUseCoin()
+	public Req_GetPrizeUserHorn()
 	{
 		base.Api = this._api;
 		base.Form = this._form = new WWWForm();
@@ -26,8 +26,6 @@ public class Req_GetPrizeUseCoin :Request {
 	[Serializable]
 	new public class Response : Request.Response{
 		//{"ret":200,"data":{"code":0,"msg":"","list":[],"info":"d7mxh"},"msg":""}
-		public int ret;
-		public string msg;
 		public Data data;
 
 		[Serializable]
@@ -42,8 +40,11 @@ public class Req_GetPrizeUseCoin :Request {
 	}
 
 	public override Request.Response parseResponse(string json){
-		base._response = JsonUtility.FromJson<Req_GetPrizeUseCoin.Response>(json);
+		base._response = JsonUtility.FromJson<Req_GetPrizeUserHorn.Response>(json);
 		return base._response;
 	}
-
+	public override string command ()
+	{
+		return COMMAND;
+	}
 }

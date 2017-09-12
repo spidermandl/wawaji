@@ -14,24 +14,27 @@ public class Req_GetExplainAttention :Request {
 	public Req_GetExplainAttention()
 	{
 		base.Api = this._api;
-		base.Form = this._form = new WWWForm();
+		//base.Form = this._form = new WWWForm();
 	}
 
 	[Serializable]
 	new public class Response : Request.Response{
 		//{"ret":200,"data":{"code":0,"msg":"","list":[],"info":"d7mxh"},"msg":""}
-		public int ret;
-		public string msg;
 		public Data data;
 
 		[Serializable]
 		public class Data
 		{
 			public int code;//操作码，0表示成功， 1表示用户不存在, 99表示用户登录异常
-			public string info;
+			public Info info;
 			//public string msg;
 		}
-
+		[Serializable]
+		public class Info
+		{
+			public string explain;
+			public string attention;
+		}
 
 	}
 
@@ -39,5 +42,16 @@ public class Req_GetExplainAttention :Request {
 		base._response = JsonUtility.FromJson<Req_GetExplainAttention.Response>(json);
 		return base._response;
 	}
+	public override string command ()
+	{
+		return COMMAND;
+	}
 
+	public string getAwareness(){
+		return ((Response)_response).data.info.attention;
+	}
+
+	public string getInstruction(){
+		return ((Response)_response).data.info.explain;
+	}
 }

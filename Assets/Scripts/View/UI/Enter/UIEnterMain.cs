@@ -20,6 +20,9 @@ public class UIEnterMain : UIMain
 	}
 
 	void Start(){
+		//自动登录
+		autoLogin();
+
 		//_mainView = this.GetComponent<UIPanel>().ui;
 
 		GLoader bg = _mainView.GetChild ("n4")as GLoader;
@@ -141,6 +144,20 @@ public class UIEnterMain : UIMain
 	{
 		Debug.Log(context.inputEvent.keyCode);
 	}
+
+	/// <summary>
+	/// Auto login.
+	/// </summary>
+	void autoLogin(){
+		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
+		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
+		if (userid != 0 && token != null) {
+			Req_GetBaseInfo request = new Req_GetBaseInfo ();
+			request.UserId = userid;
+			request.Token = token;
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		}
+	}
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -199,6 +216,21 @@ public class UIEnterMain : UIMain
 
 			this._clickFunc(ClickType.LoginGame);
 			this.changeUIpage(typeof(UIHomeMain));
+		}
+	}
+
+	/// <summary>
+	/// Responds the base info.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondBaseInfo(INotification notification){
+
+		Request resp = (Request)notification.Body;
+		if (resp.getResponseType () == typeof(Base_Req_UserInfo.Response)) {
+			if (((Base_Req_UserInfo.Response)resp.Resp).data.code == Req_GetBaseInfo.SUCCESS) {
+				this._clickFunc (ClickType.LoginGame);
+				this.changeUIpage (typeof(UIHomeMain));
+			}
 		}
 	}
 

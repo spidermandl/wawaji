@@ -18,6 +18,7 @@ public class HomeMediator: BaseMediator {
 	{
 		IList<string> list = new List<string>();
 		list.Add (Req_GetPrizeInfo.COMMAND);
+		list.Add (Req_UserLogout.COMMAND);
 		return list;
 	}
 
@@ -25,6 +26,9 @@ public class HomeMediator: BaseMediator {
 		switch( notification.Name ){
 		case  Req_GetPrizeInfo.COMMAND:
 			m_home_ui.RespondPrizeInfo (notification);
+			break;
+		case  Req_UserLogout.COMMAND:
+			m_home_ui.RespondLogout (notification);
 			break;
 		default:
 			break;

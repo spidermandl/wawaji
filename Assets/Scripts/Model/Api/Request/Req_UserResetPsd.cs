@@ -35,7 +35,7 @@ public class Req_UserResetPsd :Request {
 	}
 	public string Uuid{
 		get{ return this.uuid; }
-		set{ psd = value;_form.AddField ("uuid", value);}
+		set{ uuid = value;_form.AddField ("uuid", value);}
 	}
 
 	public Req_UserResetPsd()

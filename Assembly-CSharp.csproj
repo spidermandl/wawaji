@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UsePrize.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserForgetPsdSendMsg.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserLogin.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserLogout.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegister.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegisterSendMsg.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserResetPsd.cs" />

@@ -12,7 +12,7 @@ public class Req_UsePrize :Request {
 	new protected string _api = Req_UsePrize.COMMAND;
 
 	int prizeId;//必须
-	public int MId{
+	public int PrizeId{
 		get{ return this.prizeId; }
 		set{ prizeId = value;_form.AddField ("prizeId", value);}
 	}

@@ -25,7 +25,7 @@ public class AccountProxy : PureMVC.Patterns.Proxy {
 
 	public int Id{
 		get{return this.id;}
-		set{ id = value;}
+		set{ id = value;PlayerPrefs.SetInt (LocalKey.USERID, id);}
 	}
 	public int Type{
 		get{return this.type;}

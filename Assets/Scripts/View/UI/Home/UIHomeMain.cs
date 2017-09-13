@@ -63,9 +63,12 @@ public class UIHomeMain : UIMain
 				_profileWin = new UIProfile ();
 			_profileWin.Show();
 			_profileWin.Logout.onClick.Add(()=>{
-				_profileWin.Hide();
-				this.changeUIpage(typeof(UIEnterMain));
 				
+				Req_UserLogout request = new Req_UserLogout ();
+				request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
+				request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
+				UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+
 			});
 			_profileWin.Exchange.onClick.Add(()=>{
 				_profileWin.Hide();
@@ -154,11 +157,19 @@ public class UIHomeMain : UIMain
 			item_index = index;
 		}
 	}
-	////
-	/// 
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// 外部调用
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void RespondPrizeInfo(INotification notification){
 
+	}
+
+	public void RespondLogout(INotification notification){
+		PlayerPrefs.SetInt (LocalKey.USERID, 0);
+		PlayerPrefs.SetString (LocalKey.TOKEN, null);
+		_profileWin.Hide();
+		this.changeUIpage(typeof(UIEnterMain));
 	}
 }
 

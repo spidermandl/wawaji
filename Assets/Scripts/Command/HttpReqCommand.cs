@@ -20,7 +20,7 @@ public class HttpReqCommand : PureMVC.Patterns.SimpleCommand {
 			UpdatesProxy proxy = Facade.RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
 			proxy.readLocalVersion ();
 			((Req_GetUpdatePics)body).Version = proxy.getLocalVersion ();
-		} else if (request.command () == Req_UserLogin.COMMAND) {
+		} else if (request.command () == Req_UserLogin.COMMAND || request.command () == Req_GetBaseInfo.COMMAND) {
 			Facade.RegisterProxy (new AccountProxy (AccountProxy.NAME));
 		} else if (request.command () == Req_GetPrizeInfo.COMMAND) {
 			Facade.RegisterProxy (new AccountProxy (AccountProxy.NAME));

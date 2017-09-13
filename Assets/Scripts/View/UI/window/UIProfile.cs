@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
 using DG.Tweening;
-using UnityEngine;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 
 public class UIProfile : BaseWindow
 {

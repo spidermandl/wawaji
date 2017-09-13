@@ -11,6 +11,10 @@ public class Req_GetBaseInfo :Base_Req_UserInfo {
 
 	new protected string _api = Req_GetBaseInfo.COMMAND;
 
+	public const int SUCCESS = 0;//0表示成功， 
+	public const int NO_USER = 1;//1表示用户不存在, 
+	public const int ERROR = 99;//99表示用户登录异常
+
 	public Req_GetBaseInfo()
 	{
 		base.Api = this._api;

@@ -5,19 +5,27 @@ using System;
 using System.IO;
 using System.Text;
 
-
+/// <summary>
+/// 资源更新model类
+/// </summary>
 public class UpdatesProxy : PureMVC.Patterns.Proxy {
 
 	public const string NAME = "UpdatesProxy";
 	const string FILE_NAME = "version.txt";
 
-	ResVersion localVersion = null;
-	MemoryVersion memVersion = null;
-	Req_GetUpdatePics serverVersion = null;
+	ResVersion localVersion = null;//本地版本
+	MemoryVersion memVersion = null;//内存版本
+	Req_GetUpdatePics serverVersion = null;//服务器版本
 
 	public UpdatesProxy (string proxyName)
 		: base(proxyName, null){
 
+
+	}
+	/// <summary>
+	/// Reads the local version.
+	/// </summary>
+	public void readLocalVersion(){
 		if (!Directory.Exists(Util.DataPath))
 		{
 			Directory.CreateDirectory(Util.DataPath);
@@ -25,11 +33,12 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		}
 		string txt = Util.GetFileText (Util.DataPath+FILE_NAME);
 		if (txt != null) {
-			localVersion = JsonUtility.FromJson<ResVersion> (txt);
+			//"{\"ret\":200,\"data\":{\"code\":0,\"msg\":\"\",\"info\":{\"prize\":[{\"id\":\"3\",\"pic\":null},{\"id\":\"7\",\"pic\":null}],\"…"
+			localVersion = //JsonUtility.FromJson<ResVersion> (txt);
+				JsonHelper.DeserializeJsonToObject<ResVersion> (txt);
 		} 
 		fillMemory ();
 	}
-
 	/// <summary>
 	/// local version 写入内存version.
 	/// </summary>
@@ -40,7 +49,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		if (localVersion.data.ball != null) {
 			foreach (ResVersion.Entry d in localVersion.data.ball) {
 				MemoryVersion.Entry v = new MemoryVersion.Entry ();
-				v.is_new = false;
+				v.is_new = d.is_new;
 				v.pic = d.pic;
 				memVersion.ball.Add (d.id, v);
 			}
@@ -48,7 +57,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		if (localVersion.data.prize != null) {
 			foreach (ResVersion.Entry d in localVersion.data.prize) {
 				MemoryVersion.Entry v = new MemoryVersion.Entry ();
-				v.is_new = false;
+				v.is_new = d.is_new;
 				v.pic = d.pic;
 				memVersion.prize.Add (d.id, v);
 			}
@@ -56,21 +65,32 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 	}
 
 	/// <summary>
-	/// 填充服务器 version.
+	/// 填充服务器 version 更新内存版本.
 	/// </summary>
 	/// <param name="online">Online.</param>
 	public void fillServerVersion(Req_GetUpdatePics online){
+		if (online.getResponseCode () == Req_GetUpdatePics.NO_UPDATE)//没有更新
+			return;
+		
 		serverVersion = online;
-		if (!online.Version.Equals(online.getResponse().data.info.version)) {
-			foreach (Req_GetUpdatePics.Response.Entry e in online.getResponse().data.info.ball) {
-				if (memVersion.ball.ContainsKey (e.id)) {
-					memVersion.ball [e.id].is_new = true;
+		if (!online.Version.Equals(online.getOnlineVersion())) {
+			foreach (Req_GetUpdatePics.Response.Entry e in online.getBall()) {
+				if (!memVersion.ball.ContainsKey (e.id)) {
+					memVersion.ball.Add (e.id, new MemoryVersion.Entry ());
+					memVersion.ball [e.id].is_new = 0;
+				}
+				if (memVersion.ball [e.id].pic == null || !memVersion.ball [e.id].pic.Equals (e.pic)) {
+					memVersion.ball [e.id].is_new = 1;
 					memVersion.ball [e.id].pic = e.pic;
 				}
 			}
-			foreach (Req_GetUpdatePics.Response.Entry e in online.getResponse().data.info.prize) {
-				if (memVersion.prize.ContainsKey (e.id)) {
-					memVersion.prize [e.id].is_new = true;
+			foreach (Req_GetUpdatePics.Response.Entry e in online.getPrize()) {
+				if (!memVersion.prize.ContainsKey (e.id)) {
+					memVersion.prize.Add (e.id, new MemoryVersion.Entry ());
+					memVersion.prize [e.id].is_new = 0;
+				}
+				if (memVersion.prize [e.id].pic == null || !memVersion.prize [e.id].pic.Equals (e.pic)) {
+					memVersion.prize [e.id].is_new = 1;
 					memVersion.prize [e.id].pic = e.pic;
 				}
 			}
@@ -84,8 +104,8 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 	/// </summary>
 	/// <param name="online">Online.</param>
 	public void saveToLocalVersion(){
-		localVersion.version = serverVersion.getResponse ().data.info.version;
-		localVersion.data.ball = new ResVersion.Entry[serverVersion.getResponse ().data.info.ball.Length];
+		localVersion.version = serverVersion.getOnlineVersion();
+		localVersion.data.ball = new ResVersion.Entry[serverVersion.getBall ().Length];
 		int index = 0;
 		foreach(string key in memVersion.ball.Keys){
 			ResVersion.Entry e = new ResVersion.Entry ();
@@ -96,7 +116,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 			index++;
 		}
 		index = 0;
-		localVersion.data.prize = new ResVersion.Entry[serverVersion.getResponse ().data.info.prize.Length];
+		localVersion.data.prize = new ResVersion.Entry[serverVersion.getPrize ().Length];
 		foreach(string key in memVersion.prize.Keys){
 			ResVersion.Entry e = new ResVersion.Entry ();
 			e.id = key;
@@ -105,7 +125,9 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 			localVersion.data.prize [index] = e;
 			index++;
 		}
-		Util.WriteJsonText (Util.DataPath, JsonUtility.ToJson (memVersion));
+		Util.WriteJsonText (Util.DataPath+FILE_NAME, JsonHelper.SerializeObject (localVersion));
+		//Util.WriteJsonText (Util.DataPath+FILE_NAME, JsonUtility.ToJson (localVersion));
+		//{"version":"2","data":{"prize":[{"id":"3","pic":"","is_new":1},{"id":"7","pic":"","is_new":1}],"ball":[{"id":"2","pic":"","is_new":1}]}}
 	}
 
 	/// <summary>
@@ -139,7 +161,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		{
 			public string id;
 			public string pic;
-			public bool is_new;
+			public int is_new;
 		}
 
 
@@ -158,7 +180,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		[Serializable]
 		public class Entry{
 			public string pic;
-			public bool is_new;
+			public int is_new;
 		}
 	}
 }

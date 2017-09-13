@@ -1,0 +1,1 @@
+{"version":"2","data":{"prize":[{"id":"3","pic":null,"is_new":1},{"id":"7","pic":null,"is_new":1}],"ball":[{"id":"2","pic":null,"is_new":1}]}}

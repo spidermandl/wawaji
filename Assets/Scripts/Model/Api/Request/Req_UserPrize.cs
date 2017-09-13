@@ -90,7 +90,7 @@ public class Req_UserPrize :Request {
 		{
 			public int code;//操作码，0表示成功， 1表示无效娃娃机
 			public string info;
-			//public string msg;
+			public string msg;
 		}
 
 	}

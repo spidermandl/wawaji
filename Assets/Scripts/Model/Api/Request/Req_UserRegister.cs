@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 用于用户注册
@@ -59,14 +60,21 @@ public class Req_UserRegister :Request {
 	}
 
 	public override Request.Response parseResponse(string json){
-		base._response = JsonUtility.FromJson<Req_UserRegister.Response>(json);
+		//base._response = JsonUtility.FromJson<Req_UserRegister.Response>(json);
+		try{
+			base._response = JsonHelper.DeserializeJsonToObject<Req_UserRegister.Response> (json);
+			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
+		}catch(JsonSerializationException e){
+			base._response = JsonHelper.DeserializeJsonToObject<Request.Error> (json);
+		}
 		return base._response;
 	}
 	public override string command ()
 	{
 		return COMMAND;
 	}
-	public override string getMsg(){
+
+	protected override string getChildMsg(){
 		return ((Response)_response).data.msg;
 	}
 }

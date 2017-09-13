@@ -27,7 +27,7 @@ public class Req_GetNewsLists :Request {
 		{
 			public int code;//操作码，0表示成功， 1表示用户不存在, 99表示用户登录异常
 			public string info;
-			//public string msg;
+			public string msg;
 		}
 
 

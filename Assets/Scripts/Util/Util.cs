@@ -356,7 +356,7 @@ public class Util
 	/// </summary>
 	public static void WriteJsonText(string path,string value) {
 		File.WriteAllText (path, value);
-//		FileStream fs = new FileStream(path,FileMode.Create,FileAccess.ReadWrite);
+//		FileStream fs = new FileStream(path,FileMode.Open,FileAccess.ReadWrite);
 //		StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
 //		sw.Write(value);
 //		sw.Close();

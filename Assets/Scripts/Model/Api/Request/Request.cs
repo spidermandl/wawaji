@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 /// <summary>
 /** $token = 'Your Token Here …';
@@ -55,11 +56,34 @@ public abstract class Request {
 		public string msg;
 	}
 
+	[Serializable]
+	public class Error : Request.Response{
+		public Data data;
+
+		[Serializable]
+		public class Data
+		{
+			public int code;//操作码，0表示成功, 1表示无更新
+			public ArrayList info;
+			public string msg;
+		}
+	}
+
 	abstract public Response parseResponse(string json);
 	abstract public string command ();
 
-	public virtual string getMsg(){
-		return _response.msg;
+	protected virtual string getChildMsg(){
+		return null;
+	}
+
+	public virtual int getResponseCode(){
+		return 0;
+	}
+
+	public string getMsg(){
+		if(getChildMsg()==null)
+			return _response.msg;
+		return getChildMsg ();
 	}
 
 }

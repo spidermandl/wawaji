@@ -130,6 +130,7 @@
      <Compile Include="Assets\Scripts\Sample\stateMachine\Helper\TimeoutHelper.cs" />
      <Compile Include="Assets\Scripts\Sample\stateMachine\Main.cs" />
      <Compile Include="Assets\Scripts\UnityFacade.cs" />
+     <Compile Include="Assets\Scripts\Util\JsonHelper.cs" />
      <Compile Include="Assets\Scripts\Util\TXTReader.cs" />
      <Compile Include="Assets\Scripts\Util\Util.cs" />
      <Compile Include="Assets\Scripts\Util\VerificationCode.cs" />
@@ -175,7 +176,9 @@
      <Compile Include="Assets\Scripts\View\UI\window\UIProfile.cs" />
      <Compile Include="Assets\Scripts\View\UI\window\UISetting.cs" />
      <Compile Include="Assets\Scripts\View\UI\window\UITopup.cs" />
+     <None Include="Assets\json\version.txt" />
      <None Include="Assets\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
+     <None Include="Assets\Plugins\Json\Newtonsoft.Json.xml" />
      <None Include="Assets\Resources\Shaders\FairyGUI-Text.shader" />
      <None Include="Assets\Resources\Shaders\FairyGUI-Image.shader" />
      <None Include="Assets\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
@@ -196,6 +199,9 @@
  </Reference>
  <Reference Include="PureMVC.DotNET.35">
  <HintPath>/Users/Desmond/Desktop/WaWaJi/Assets/Plugins/PureMVC.DotNET.35.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/Users/Desmond/Desktop/WaWaJi/Assets/Plugins/Json/Newtonsoft.Json.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

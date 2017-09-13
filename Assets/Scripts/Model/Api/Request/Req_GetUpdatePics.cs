@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 开始游戏	用于判断用户金币是否满足游戏,开始游戏
@@ -8,6 +9,8 @@ using System;
 public class Req_GetUpdatePics :Request {
 
 	new public const string COMMAND = "Sys.GetUpdatePics";
+	public const int NO_UPDATE = 1;
+	public const int UPDATE = 0;
 
 	new protected string _api = Req_GetUpdatePics.COMMAND;
 
@@ -35,9 +38,9 @@ public class Req_GetUpdatePics :Request {
 		[Serializable]
 		public class Data
 		{
-			public int code;//操作码，0表示成功， 1表示无效娃娃机
+			public int code;//操作码，0表示成功, 1表示无更新
 			public Info info;
-			//public string msg;
+			public string msg;
 		}
 
 		[Serializable]
@@ -57,15 +60,52 @@ public class Req_GetUpdatePics :Request {
 	}
 
 	public override Request.Response parseResponse(string json){
-		base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
+		try{
+			base._response = JsonHelper.DeserializeJsonToObject<Req_GetUpdatePics.Response> (json);
+			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
+		}catch(JsonSerializationException e){
+			base._response = JsonHelper.DeserializeJsonToObject<Request.Error> (json);
+		}
 		return base._response;
 	}
+
 	public override string command ()
 	{
 		return COMMAND;
 	}
 
-	public Req_GetUpdatePics.Response getResponse(){
-		return (Req_GetUpdatePics.Response)base._response;
+	/// <summary>
+	/// 获取当前版本
+	/// </summary>
+	/// <returns>The online version.</returns>
+	public string getOnlineVersion(){
+		if (base._response.GetType() == typeof(Req_GetUpdatePics.Response)) {
+			return ((Req_GetUpdatePics.Response)base._response).data.info.version;
+		} 
+		return this.version;
+
+	}
+
+	public Response.Entry[] getBall(){
+		if (base._response.GetType() == typeof(Req_GetUpdatePics.Response)) {
+			return ((Req_GetUpdatePics.Response)base._response).data.info.ball;
+		} 
+		return new Response.Entry[0];
+	}
+
+	public Response.Entry[] getPrize(){
+		if (base._response.GetType() == typeof(Req_GetUpdatePics.Response)) {
+			return ((Req_GetUpdatePics.Response)base._response).data.info.prize;
+		} 
+		return new Response.Entry[0];
+	}
+
+
+	public override int getResponseCode(){
+		if (base._response.GetType() == typeof(Req_GetUpdatePics.Response)) {
+			return ((Req_GetUpdatePics.Response)base._response).data.code;
+		} 
+
+		return ((Req_GetUpdatePics.Error)base._response).data.code;
 	}
 }

@@ -42,7 +42,7 @@ public class UIEnterMain : UIMain
 				if(_loginWin.ValidLogin){
 					Req_UserLogin request = new Req_UserLogin();
 					request.Phone = _loginWin.Username.asTextField.text;
-					request.Psd = _loginWin.Password.asTextField.text;
+					request.Psd = "wolfke";//_loginWin.Password.asTextField.text;
 					request.Uuid = AppConst.UUID;
 					request.Type = 1;
 					if(request.Phone!=null &&
@@ -136,6 +136,7 @@ public class UIEnterMain : UIMain
 	}
 
 	void Update(){
+		
 	}
 
 	void OnKeyDown(EventContext context)
@@ -171,12 +172,16 @@ public class UIEnterMain : UIMain
 	/// <param name="code">Code.</param>
 	public void RespondRegisterSendMsg(INotification notification){
 		if (_registerWin != null) {
+			if (((Request)notification.Body).getResponseCode () != Req_UserRegisterSendMsg.SUCCESS) {//有错误
+				_registerWin.Warn.visible = true;
+				_registerWin.Warn.asTextField.text = ((Request)notification.Body).getMsg ();
+				return;
+			}
+
 			_registerWin.ValidVerifying = true;
 			_registerWin.Verify.visible = false;
 			_registerWin.Code_countdown.visible = true;
 			StartCoroutine (countDown());
-			_registerWin.Warn.visible = true;
-			_registerWin.Warn.asTextField.text = ((Request)notification.Body).getMsg();
 		}
 	}
 	/// <summary>

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 注册验证码信息
@@ -52,20 +53,25 @@ public class Req_UserLogin :Request {
 		[Serializable]
 		public class Data
 		{
-			//			public int code;//操作码，0表示成功,1表示账号或密码错误
-			//			public string msg;
-			//			public List list;
+			public int code;//操作码，0表示成功,1表示账号或密码错误
+			public string msg;
+			public Info info;
 		}
 
 		[Serializable]
-		public class List{
+		public class Info{
 
 		}
 
 	}
 
 	public override Request.Response parseResponse(string json){
-		base._response = JsonUtility.FromJson<Req_UserRegister.Response>(json);
+		try{
+			base._response = JsonHelper.DeserializeJsonToObject<Req_UserRegister.Response> (json);
+			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
+		}catch(JsonSerializationException e){
+			base._response = JsonHelper.DeserializeJsonToObject<Request.Error> (json);
+		}
 		return base._response;
 	}
 	public override string command ()

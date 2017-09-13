@@ -38,8 +38,8 @@ public class Req_UserForgetPsdSendMsg :Request {
 		public class Data
 		{
 			public int code;//操作码，0表示成功,1表示手机号码格式不正确,2表示图片验证码错误
-			//			public string msg;
-			//			public List list;
+			public string msg;
+			public List list;
 		}
 
 		[Serializable]

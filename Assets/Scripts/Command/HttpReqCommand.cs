@@ -13,15 +13,17 @@ public class HttpReqCommand : PureMVC.Patterns.SimpleCommand {
 
 	public override void Execute(PureMVC.Interfaces.INotification notification) {
 		object body = notification.Body;
+		Request request = (Request)body;
 
-		if (((Req_GetUpdatePics)body).command () == Req_GetUpdatePics.COMMAND) {
+		if (request.command () == Req_GetUpdatePics.COMMAND) {
 			Facade.RegisterProxy (new UpdatesProxy (UpdatesProxy.NAME));
 			UpdatesProxy proxy = Facade.RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
+			proxy.readLocalVersion ();
 			((Req_GetUpdatePics)body).Version = proxy.getLocalVersion ();
 		}
 
-		UnityFacade.GetInstance ().Network.SendPost ((Request)body);
-		
+		UnityFacade.GetInstance ().Network.SendPost (request);
+
 
 	}
 }

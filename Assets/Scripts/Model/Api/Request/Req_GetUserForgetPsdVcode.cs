@@ -28,14 +28,9 @@ public class Req_GetUserForgetPsdVcode :Request {
 		{
 			public int code;//操作码，0表示成功
 			public string msg;
-			public List list;
 			public string info;
 		}
 
-		[Serializable]
-		public class List{
-
-		}
 
 	}
 

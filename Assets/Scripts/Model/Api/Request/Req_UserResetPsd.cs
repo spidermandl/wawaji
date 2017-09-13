@@ -52,13 +52,13 @@ public class Req_UserResetPsd :Request {
 		[Serializable]
 		public class Data
 		{
-			//			public int code;//操作码，0表示成功,1表示手机号码格式不正确,2表示图片验证码错误,3表示手机号码已存在,4表示短信验证码错误,5表示短信验证码过期
-			//			public string msg;
-			//			public List list;
+			public int code;//操作码，0表示成功,1表示手机号码格式不正确,2表示图片验证码错误,3表示手机号码已存在,4表示短信验证码错误,5表示短信验证码过期
+			public string msg;
+			public Info info;
 		}
 
 		[Serializable]
-		public class List{
+		public class Info{
 
 		}
 

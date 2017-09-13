@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 用户注册发送短信
@@ -8,8 +9,11 @@ using System;
 public class Req_UserRegisterSendMsg :Request {
 
 	new public const string COMMAND = "User.UserRegisterSendMsg";
-
 	new protected string _api = Req_UserRegisterSendMsg.COMMAND;
+
+	public const int SUCCESS = 0;
+	public const int WRONG_FORMAT = 1;
+	public const int WRONG_CODE = 2;
 
 	string phone;
 	string verCode;
@@ -41,6 +45,7 @@ public class Req_UserRegisterSendMsg :Request {
 			public string msg;
 		}
 
+
 	}
 
 	public override Request.Response parseResponse(string json){
@@ -51,4 +56,13 @@ public class Req_UserRegisterSendMsg :Request {
 	{
 		return COMMAND;
 	}
+
+	protected override string getChildMsg(){
+		return ((Response)_response).data.msg;
+	}
+
+	public override int getResponseCode(){
+		return ((Response)base._response).data.code;
+	}
+
 }

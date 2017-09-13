@@ -6,11 +6,11 @@ using System.IO;
 using System.Text;
 
 /// <summary>
-/// 资源更新model类
+/// 
 /// </summary>
-public class PrizeInfoProxy : PureMVC.Patterns.Proxy {
+public class UserPrizeInfoProxy : PureMVC.Patterns.Proxy {
 
-	public const string NAME = "PrizeInfoProxy";
+	public const string NAME = "UserPrizeInfoProxy";
 
 	List<PrizeItem> items;
 	public List<PrizeItem> Items{
@@ -19,18 +19,18 @@ public class PrizeInfoProxy : PureMVC.Patterns.Proxy {
 	}
 
 	public class PrizeItem{
-		public string id;
+		public int id;
 		public int prize_id;
 		public string name;
 		public string price;
-		public string coin;
+		public int coin;
 		public string pic;
 		public string desc;
 		public int status;//奖品状态(1:待领取,2:已领取,3:已兑换,4:已回购)
 	}
 
 
-	public PrizeInfoProxy (string proxyName)
+	public UserPrizeInfoProxy (string proxyName)
 		: base(proxyName, null){
 	
 	}

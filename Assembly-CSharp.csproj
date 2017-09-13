@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserForgetPsdSendMsg.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserLogin.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserLogout.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRecharge.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegister.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegisterSendMsg.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserResetPsd.cs" />
@@ -85,8 +86,9 @@
      <Compile Include="Assets\Scripts\Model\Network\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Model\Network\Protocal.cs" />
      <Compile Include="Assets\Scripts\Model\Network\SocketClient.cs" />
-     <Compile Include="Assets\Scripts\Model\PrizeInfoProxy.cs" />
+     <Compile Include="Assets\Scripts\Model\PrizeSetProxy.cs" />
      <Compile Include="Assets\Scripts\Model\UpdatesProxy.cs" />
+     <Compile Include="Assets\Scripts\Model\UserPrizeInfoProxy.cs" />
      <Compile Include="Assets\Scripts\PhysicsMove.cs" />
      <Compile Include="Assets\Scripts\Sample\AnimTest.cs" />
      <Compile Include="Assets\Scripts\Sample\ApplicationFacade.cs" />
@@ -138,6 +140,7 @@
      <Compile Include="Assets\Scripts\Util\VerificationCode.cs" />
      <Compile Include="Assets\Scripts\View\BaseMediator.cs" />
      <Compile Include="Assets\Scripts\View\EnterMediator.cs" />
+     <Compile Include="Assets\Scripts\View\ExchangeMediator.cs" />
      <Compile Include="Assets\Scripts\View\GameMediator.cs" />
      <Compile Include="Assets\Scripts\View\HomeMediator.cs" />
      <Compile Include="Assets\Scripts\View\NoticeMediator.cs" />

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 	获取用户基本信息	用于获取单个用户基本信息
@@ -51,8 +52,11 @@ public class Req_GetBaseInfo :Base_Req_UserInfo {
 //	}
 
 	public override Request.Response parseLogicResponse(string json){
-		base._response = JsonUtility.FromJson<Req_GetBaseInfo.Response>(json);
-		return base._response;
+		try{
+			return JsonHelper.DeserializeJsonToObject<Req_GetBaseInfo.Response> (json);
+		}catch(JsonSerializationException e){
+			throw e;
+		}
 	}
 	public override string command ()
 	{

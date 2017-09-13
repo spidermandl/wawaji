@@ -2,16 +2,23 @@
 using System.Collections;
 using System;
 using Newtonsoft.Json;
+
 /// <summary>
-/// 获取用户实物中奖信息	用于获取单个用户实物中奖信息
+/// 用户退出	用于用户退出登录
 /// </summary>
-public class Req_UserLogout :Request {
+public class Req_UserRecharge :Request {
 
-	new public const string COMMAND = "User.UserLogout";
+	new public const string COMMAND = "User.UserRecharge";
 
-	new protected string _api = Req_UserLogout.COMMAND;
+	new protected string _api = Req_UserRecharge.COMMAND;
 
-	public Req_UserLogout()
+	int amount;
+	public int Amount{
+		get{return this.amount;}
+		set{ amount = value;_form.AddField ("amount", value);}
+	}
+
+	public Req_UserRecharge()
 	{
 		base.Api = this._api;
 		base.Form = this._form = new WWWForm();
@@ -29,13 +36,11 @@ public class Req_UserLogout :Request {
 			public string msg;
 		}
 
-
 	}
 
 	public override Request.Response parseLogicResponse(string json){
 		try{
-			return JsonHelper.DeserializeJsonToObject<Req_UserLogout.Response> (json);
-			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
+			return JsonHelper.DeserializeJsonToObject<Req_UserRecharge.Response> (json);
 		}catch(JsonSerializationException e){
 			throw e;
 		}

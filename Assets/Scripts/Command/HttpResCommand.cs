@@ -26,8 +26,13 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 			}
 		}else if (request.command () == Req_GetPrizeInfo.COMMAND) {
 			if (request.getResponseType () == typeof(Req_GetPrizeInfo.Response)) {
-				PrizeInfoProxy proxy = Facade.RetrieveProxy (PrizeInfoProxy.NAME) as PrizeInfoProxy;
+				UserPrizeInfoProxy proxy = Facade.RetrieveProxy (UserPrizeInfoProxy.NAME) as UserPrizeInfoProxy;
 				proxy.setPrizeInfoData ((Req_GetPrizeInfo.Response)request.Resp);
+			}
+		}else if (request.command () == Req_GetAllPrize.COMMAND) {
+			if (request.getResponseType () == typeof(Req_GetAllPrize.Response)) {
+				PrizeSetProxy proxy = Facade.RetrieveProxy (PrizeSetProxy.NAME) as PrizeSetProxy;
+				proxy.setPrizeInfoData ((Req_GetAllPrize.Response)request.Resp);
 			}
 		}
 

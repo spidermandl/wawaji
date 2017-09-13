@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 获取用户实物中奖信息	用于获取单个用户实物中奖信息
@@ -26,16 +27,29 @@ public class Req_GetAllPrize :Request {
 		public class Data
 		{
 			public int code;//操作码，0表示成功， 1表示用户不存在, 99表示用户登录异常
-			public string info;
-			//public string msg;
+			public Info[] info;
+			public string msg;
 		}
 
-
+		[Serializable]
+		public class Info
+		{
+			public int id;
+			public string name;
+			public int price;
+			public int coin;
+			public string pic;
+			public string desc;
+		}
 	}
 
 	public override Request.Response parseLogicResponse(string json){
-		base._response = JsonUtility.FromJson<Req_GetAllPrize.Response>(json);
-		return base._response;
+		try{
+			return JsonHelper.DeserializeJsonToObject<Req_GetAllPrize.Response> (json);
+			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
+		}catch(JsonSerializationException e){
+			throw e;
+		}
 	}
 
 	public override string command ()

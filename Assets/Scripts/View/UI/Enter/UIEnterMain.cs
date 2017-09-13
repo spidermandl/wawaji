@@ -133,7 +133,6 @@ public class UIEnterMain : UIMain
 		});
 		//Stage.inst.onKeyDown.Add(OnKeyDown);
 
-
 	}
 
 	void Update(){
@@ -212,7 +211,6 @@ public class UIEnterMain : UIMain
 	public void RespondLogin(INotification notification){
 		if (_loginWin != null) {
 			_loginWin.ValidLogin = true;
-
 
 			this._clickFunc(ClickType.LoginGame);
 			this.changeUIpage(typeof(UIHomeMain));

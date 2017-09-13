@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
+using PureMVC.Interfaces;
 
 public class UIExchangeMain : UIMain
 {
@@ -15,6 +16,8 @@ public class UIExchangeMain : UIMain
 	}
 
 	void Start(){
+		getAllPrize ();
+
 		//_mainView = this.GetComponent<UIPanel>().ui;
 
 		GLoader bg = _mainView.GetChild ("n0")as GLoader;
@@ -44,5 +47,26 @@ public class UIExchangeMain : UIMain
 	void Update(){
 	}
 
+
+	void getAllPrize(){
+		if (UnityFacade.GetInstance ().RetrieveProxy (PrizeSetProxy.NAME) != null)
+			return;
+		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
+		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
+		if (userid != 0 && token != null) {
+			Req_GetAllPrize request = new Req_GetAllPrize ();
+			request.UserId = userid;
+			request.Token = token;
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		}
+	}
+
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// 外部调用
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	public void RespondAllPrize(INotification notification){
+
+	}
 }
 

@@ -24,6 +24,8 @@ public class HttpReqCommand : PureMVC.Patterns.SimpleCommand {
 			Facade.RegisterProxy (new AccountProxy (AccountProxy.NAME));
 		} else if (request.command () == Req_GetPrizeInfo.COMMAND) {
 			Facade.RegisterProxy (new AccountProxy (AccountProxy.NAME));
+		} else if (request.command () == Req_GetAllPrize.COMMAND) {
+			Facade.RegisterProxy (new PrizeSetProxy (PrizeSetProxy.NAME));
 		}
 
 		UnityFacade.GetInstance ().Network.SendPost (request);

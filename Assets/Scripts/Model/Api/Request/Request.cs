@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /** $token = 'Your Token Here …';
@@ -28,13 +29,17 @@ public abstract class Request {
 		get{ return this._form; }
 		set{ _form = value;}
 	}
+	public Response Resp{
+		get{ return this._response; }
+		set{ _response = value;}
+	}
 
 
-	protected string userId;//用户ID
+	protected int userId;//用户ID
 	protected string token;//用户登录标识
 	protected int mId;//娃娃机ID
 
-	public string UserId{
+	public int UserId{
 		get{return this.userId;}
 		set{ userId = value;_form.AddField ("userId", value);}
 	}
@@ -57,19 +62,21 @@ public abstract class Request {
 	}
 
 	[Serializable]
-	public class Error : Request.Response{
+	public class Error : Request.Exception{
 		public Data data;
 
 		[Serializable]
 		public class Data
 		{
 			public int code;//操作码，0表示成功, 1表示无更新
-			public ArrayList info;
 			public string msg;
 		}
 	}
+	[Serializable]
+	public class Exception : Request.Response{
+	}
 
-	abstract public Response parseResponse(string json);
+	abstract public Response parseLogicResponse(string json);
 	abstract public string command ();
 
 	protected virtual string getChildMsg(){
@@ -79,11 +86,43 @@ public abstract class Request {
 	public virtual int getResponseCode(){
 		return 0;
 	}
-
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// 外部调用
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// <summary>
+	/// Gets the message.
+	/// </summary>
+	/// <returns>The message.</returns>
 	public string getMsg(){
 		if(getChildMsg()==null)
 			return _response.msg;
 		return getChildMsg ();
+	}
+	/// <summary>
+	/// Parses the response.
+	/// </summary>
+	/// <returns>The response.</returns>
+	/// <param name="json">Json.</param>
+	public Response parseResponse(string json){
+		try{
+			_response = parseLogicResponse(json);
+			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
+		}catch(JsonSerializationException e){
+			try{
+				_response = JsonHelper.DeserializeJsonToObject<Request.Error> (json);
+			}catch(JsonSerializationException e1){
+				_response = JsonHelper.DeserializeJsonToObject<Request.Exception> (json);
+			}
+		}
+
+		return _response;
+	}
+	/// <summary>
+	/// Gets the type of the response.
+	/// </summary>
+	/// <returns>The response type.</returns>
+	public Type getResponseType(){
+		return _response.GetType ();
 	}
 
 }

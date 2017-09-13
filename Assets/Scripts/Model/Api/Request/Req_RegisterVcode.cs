@@ -39,7 +39,7 @@ public class Req_RegisterVcode :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_RegisterVcode.Response>(json);
 		return base._response;
 	}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="750,993">
   <displayList>
-    <loader id="n1_sfdg" name="n1" xy="0,0" size="750,993" url="ui://jorujmv2sfdg1f" fill="scaleFree"/>
+    <loader id="n1_sfdg" name="n1" xy="0,0" size="750,875" url="ui://jorujmv2jpnz2k" fill="scaleFree"/>
     <component id="n3_sfdg" name="n3" src="sfdg1q" xy="551,61">
       <relation target="n1_sfdg" sidePair="right-right,top-top"/>
     </component>
@@ -27,15 +27,19 @@
     <text id="n13_sfdg" name="n13" xy="57,227" size="105,28" fontSize="20" color="#ffffff" text="当前代币数">
       <relation target="n7_sfdg" sidePair="left-left,middle-middle"/>
     </text>
-    <component id="n14_sfdg" name="n14" src="sfdg1x" xy="338,763" size="55,47">
+    <component id="n14_sfdg" name="n14" src="sfdg1x" xy="338,737" size="54,45">
       <relation target="n1_sfdg" sidePair="center-center,bottom-bottom"/>
     </component>
-    <list id="n15_sfdg" name="n15" xy="41,357" size="675,377" overflow="scroll" lineGap="30" defaultItem="ui://jorujmv2sfdg1y">
+    <list id="n15_sfdg" name="n15" xy="41,329" size="675,377" overflow="scroll" lineGap="30" defaultItem="ui://jorujmv2sfdg1y">
       <relation target="n14_sfdg" sidePair="bottom-bottom"/>
       <relation target="n1_sfdg" sidePair="center-center,width-width"/>
     </list>
     <image id="n16_qzv1" name="n16" src="qzv12i" xy="6,11">
       <relation target="n1_sfdg" sidePair="top-top,left-left"/>
     </image>
+    <component id="n17_jpnz" name="n17" src="mc6i2" xy="325,811" size="83,181">
+      <relation target="n1_sfdg" sidePair="topext-bottom"/>
+      <relation target="" sidePair="bottomext-bottom,center-center"/>
+    </component>
   </displayList>
 </component>

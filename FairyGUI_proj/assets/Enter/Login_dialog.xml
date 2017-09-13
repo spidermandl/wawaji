@@ -35,9 +35,6 @@
     <image id="n15_ddj4" name="n15" src="ddj4l" xy="99,192" size="499,1">
       <relation target="n3_lf03" sidePair="leftext-left,rightext-right"/>
     </image>
-    <component id="n18_ddj4" name="n18" src="ddj4u" xy="436,206">
-      <relation target="n3_lf03" sidePair="right-right"/>
-    </component>
     <component id="n19_fvaa" name="n19" src="fvaa1b" xy="301,314" size="95,47">
       <relation target="n5_lf03" sidePair="center-center,middle-middle"/>
       <relation target="n5_lf03" sidePair="height-height"/>
@@ -45,9 +42,8 @@
     <text id="n20_rb6o" name="n20" xy="101,142" size="491,40" input="true" prompt="[color=#7666F2]请输入您的手机号码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
       <relation target="n3_lf03" sidePair="left-left,rightext-right"/>
     </text>
-    <text id="n21_rb6o" name="n21" xy="103,213" size="328,40" input="true" prompt="[color=#7666F2]请输入手机验证码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
-      <relation target="n3_lf03" sidePair="left-left"/>
-      <relation target="n18_ddj4" sidePair="rightext-left"/>
+    <text id="n21_rb6o" name="n21" xy="103,213" size="487,40" input="true" prompt="[color=#7666F2]请输入密码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
+      <relation target="n3_lf03" sidePair="left-left,rightext-right"/>
     </text>
     <image id="n22_ysyo" name="n22" src="ysyo1i" xy="296,50">
       <relation target="n3_lf03" sidePair="center-center,top-top"/>

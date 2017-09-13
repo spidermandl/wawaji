@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
+using PureMVC.Interfaces;
 
 public class UIHomeMain : UIMain
 {
@@ -153,6 +154,11 @@ public class UIHomeMain : UIMain
 			item_index = index;
 		}
 	}
+	////
+	/// 
 
+	public void RespondPrizeInfo(INotification notification){
+
+	}
 }
 

@@ -34,7 +34,7 @@ public class Req_GetUserForgetPsdVcode :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_GetUserForgetPsdVcode.Response>(json);
 		return base._response;
 	}

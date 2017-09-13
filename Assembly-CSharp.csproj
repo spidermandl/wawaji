@@ -53,6 +53,8 @@
      <Compile Include="Assets\Scripts\Config\LocalKey.cs" />
      <Compile Include="Assets\Scripts\Main.cs" />
      <Compile Include="Assets\Scripts\MediatorPlug.cs" />
+     <Compile Include="Assets\Scripts\Model\AccountProxy.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Base_Req_UserInfo.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetAllPrize.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetBaseInfo.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetExplainAttention.cs" />
@@ -68,15 +70,13 @@
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetUserForgetPsdVcode.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_MachineStartGrab.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_RegisterVcode.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_UsePrize.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserForgetPsdSendMsg.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserLogin.cs" />
-     <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserPrize.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegister.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegisterSendMsg.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserResetPsd.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Request.cs" />
-     <Compile Include="Assets\Scripts\Model\Count2Proxy.cs" />
-     <Compile Include="Assets\Scripts\Model\CountProxy.cs" />
      <Compile Include="Assets\Scripts\Model\EnterProxy.cs" />
      <Compile Include="Assets\Scripts\Model\Network\ByteBuffer.cs" />
      <Compile Include="Assets\Scripts\Model\Network\Converter.cs" />
@@ -84,6 +84,7 @@
      <Compile Include="Assets\Scripts\Model\Network\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Model\Network\Protocal.cs" />
      <Compile Include="Assets\Scripts\Model\Network\SocketClient.cs" />
+     <Compile Include="Assets\Scripts\Model\PrizeInfoProxy.cs" />
      <Compile Include="Assets\Scripts\Model\UpdatesProxy.cs" />
      <Compile Include="Assets\Scripts\PhysicsMove.cs" />
      <Compile Include="Assets\Scripts\Sample\AnimTest.cs" />
@@ -135,8 +136,6 @@
      <Compile Include="Assets\Scripts\Util\Util.cs" />
      <Compile Include="Assets\Scripts\Util\VerificationCode.cs" />
      <Compile Include="Assets\Scripts\View\BaseMediator.cs" />
-     <Compile Include="Assets\Scripts\View\Count1Mediator.cs" />
-     <Compile Include="Assets\Scripts\View\Count2Mediator.cs" />
      <Compile Include="Assets\Scripts\View\EnterMediator.cs" />
      <Compile Include="Assets\Scripts\View\GameMediator.cs" />
      <Compile Include="Assets\Scripts\View\HomeMediator.cs" />

@@ -12,6 +12,14 @@ public class Req_UserRegister :Request {
 
 	new protected string _api = Req_UserRegister.COMMAND;
 
+	public const int SUCCESS=0;//0表示成功
+	public const int WRONG_PHONE=1;//,1表示手机号码格式不正确
+	public const int WRONG_CODE=2;//,2表示图片验证码错误,
+	public const int EXIST_PHONE=3;//3表示手机号码已存在
+	public const int NO_TEXT=4;//,4表示用户未获取短信验证码,
+	public const int WRONG_TEXT=5;//5表示短信验证码错误
+	public const int EXPIRED_TEXT=6;//,6表示短信验证码过期
+
 	string phone;
 	string verCode;
 	string msgCode;
@@ -59,13 +67,13 @@ public class Req_UserRegister :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		//base._response = JsonUtility.FromJson<Req_UserRegister.Response>(json);
 		try{
-			base._response = JsonHelper.DeserializeJsonToObject<Req_UserRegister.Response> (json);
+			return JsonHelper.DeserializeJsonToObject<Req_UserRegister.Response> (json);
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
 		}catch(JsonSerializationException e){
-			base._response = JsonHelper.DeserializeJsonToObject<Request.Error> (json);
+			throw e;
 		}
 		return base._response;
 	}

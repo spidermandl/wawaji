@@ -33,7 +33,7 @@ public class Req_GetAllPrize :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_GetAllPrize.Response>(json);
 		return base._response;
 	}

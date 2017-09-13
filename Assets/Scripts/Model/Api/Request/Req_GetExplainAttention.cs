@@ -38,7 +38,7 @@ public class Req_GetExplainAttention :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_GetExplainAttention.Response>(json);
 		return base._response;
 	}

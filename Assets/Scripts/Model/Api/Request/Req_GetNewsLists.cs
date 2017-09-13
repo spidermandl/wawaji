@@ -33,7 +33,7 @@ public class Req_GetNewsLists :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_GetNewsLists.Response>(json);
 		return base._response;
 	}

@@ -38,7 +38,7 @@ public class Req_GetPrizeUserList : Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_GetPrizeUserList.Response>(json);
 		return base._response;
 	}

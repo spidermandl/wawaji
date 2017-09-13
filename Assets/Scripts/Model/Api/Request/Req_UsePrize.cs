@@ -5,11 +5,11 @@ using System;
 /// <summary>
 /// 使用奖品	使用奖品,领取/兑换/回购
 /// </summary>
-public class Req_UserPrize :Request {
+public class Req_UsePrize :Request {
 
-	new public const string COMMAND = "User.UserPrize";
+	new public const string COMMAND = "Prize.UsePrize";
 
-	new protected string _api = Req_UserPrize.COMMAND;
+	new protected string _api = Req_UsePrize.COMMAND;
 
 	int prizeId;//必须
 	public int MId{
@@ -73,7 +73,7 @@ public class Req_UserPrize :Request {
 	}
 
 
-	public Req_UserPrize()
+	public Req_UsePrize()
 	{
 		base.Api = this._api;
 		base.Form = this._form = new WWWForm();
@@ -95,8 +95,8 @@ public class Req_UserPrize :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
-		base._response = JsonUtility.FromJson<Req_UserPrize.Response>(json);
+	public override Request.Response parseLogicResponse(string json){
+		base._response = JsonUtility.FromJson<Req_UsePrize.Response>(json);
 		return base._response;
 	}
 	public override string command ()

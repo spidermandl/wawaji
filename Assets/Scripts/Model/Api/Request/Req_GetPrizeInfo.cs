@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 获取用户实物中奖信息	用于获取单个用户实物中奖信息
 /// </summary>
 public class Req_GetPrizeInfo :Request {
 
-	new public const string COMMAND = "Prize.GetPrizeInfo";
+	new public const string COMMAND = "User.GetPrizeInfo";
 
 	new protected string _api = Req_GetPrizeInfo.COMMAND;
+
 
 	public Req_GetPrizeInfo()
 	{
@@ -46,9 +48,12 @@ public class Req_GetPrizeInfo :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
-		base._response = JsonUtility.FromJson<Req_GetPrizeInfo.Response>(json);
-		return base._response;
+	public override Request.Response parseLogicResponse(string json){
+		try{
+			return JsonHelper.DeserializeJsonToObject<Req_GetPrizeInfo.Response> (json);
+		}catch(JsonSerializationException e){
+			throw e;
+		}
 	}
 	public override string command ()
 	{

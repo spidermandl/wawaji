@@ -19,7 +19,19 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 			UpdatesProxy proxy = Facade.RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
 			proxy.fillServerVersion ((Req_GetUpdatePics)request);
 			return;
+		}else if (request.command () == Req_UserLogin.COMMAND) {
+			if (request.getResponseType () == typeof(Req_UserLogin.Response)) {
+				AccountProxy proxy = Facade.RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+				proxy.setUserData ((Req_UserLogin.Response)request.Resp);
+			}
+		}else if (request.command () == Req_GetPrizeInfo.COMMAND) {
+			if (request.getResponseType () == typeof(Req_GetPrizeInfo.Response)) {
+				PrizeInfoProxy proxy = Facade.RetrieveProxy (PrizeInfoProxy.NAME) as PrizeInfoProxy;
+				proxy.setPrizeInfoData ((Req_GetPrizeInfo.Response)request.Resp);
+			}
 		}
+
+
 		SendNotification (request.Api,request);
 	}
 }

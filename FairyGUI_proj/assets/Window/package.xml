@@ -47,7 +47,6 @@
     <component id="upgt1c" name="dial.xml" path="/button/"/>
     <component id="upgt1d" name="online.xml" path="/button/"/>
     <component id="sfdg1e" name="Profile_dialog.xml" path="/" exported="true"/>
-    <image id="sfdg1f" name="bg_profile.png" path="/images/"/>
     <image id="sfdg1g" name="bg_profile_item.png" path="/images/"/>
     <image id="sfdg1h" name="b_scroll_down.png" path="/images/"/>
     <image id="sfdg1i" name="b_topup.png" path="/images/"/>
@@ -81,6 +80,8 @@
     <image id="pplt2g" name="i_iPhone_7.png" path="/images/"/>
     <image id="pplt2h" name="c_exchange_title_2.png" path="/images/"/>
     <image id="qzv12i" name="bg_profile_basic_info.png" path="/images/"/>
+    <image id="jpnz2j" name="b.png" path="/images/"/>
+    <image id="jpnz2k" name="bg_profile.png" path="/images/" scale="9grid" scale9grid="188,227,376,454"/>
   </resources>
   <publish name="Window" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

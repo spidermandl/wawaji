@@ -41,7 +41,7 @@ public class Req_GetMachinePrizeBallData :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_GetMachinePrizeBallData.Response>(json);
 		return base._response;
 	}

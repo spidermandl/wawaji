@@ -33,9 +33,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		}
 		string txt = Util.GetFileText (Util.DataPath+FILE_NAME);
 		if (txt != null) {
-			//"{\"ret\":200,\"data\":{\"code\":0,\"msg\":\"\",\"info\":{\"prize\":[{\"id\":\"3\",\"pic\":null},{\"id\":\"7\",\"pic\":null}],\"…"
-			localVersion = //JsonUtility.FromJson<ResVersion> (txt);
-				JsonHelper.DeserializeJsonToObject<ResVersion> (txt);
+			localVersion = JsonHelper.DeserializeJsonToObject<ResVersion> (txt);
 		} 
 		fillMemory ();
 	}
@@ -127,7 +125,6 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		}
 		Util.WriteJsonText (Util.DataPath+FILE_NAME, JsonHelper.SerializeObject (localVersion));
 		//Util.WriteJsonText (Util.DataPath+FILE_NAME, JsonUtility.ToJson (localVersion));
-		//{"version":"2","data":{"prize":[{"id":"3","pic":"","is_new":1},{"id":"7","pic":"","is_new":1}],"ball":[{"id":"2","pic":"","is_new":1}]}}
 	}
 
 	/// <summary>
@@ -180,7 +177,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		[Serializable]
 		public class Entry{
 			public string pic;
-			public int is_new;
+			public int is_new;//0 已经存在的，1 需要更新的
 		}
 	}
 }

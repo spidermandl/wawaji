@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class UIProfile : BaseWindow
 {
@@ -24,6 +28,10 @@ public class UIProfile : BaseWindow
 
 	GList List {
 		get{ return this.contentPane.GetChild ("n15").asList; }
+	}
+
+	GObject Close {
+		get{ return this.contentPane.GetChild ("n17"); }
 	}
 
 	public UIProfile ():base()
@@ -52,6 +60,16 @@ public class UIProfile : BaseWindow
 			m_list.scrollPane.ScrollDown();
 			//m_list.AddSelection(4, true);
 		});
+
+		Close.onClick.Add (()=>{
+			this.Hide();
+		});
+
+		AccountProxy proxy = UnityFacade.GetInstance().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		Req_GetPrizeInfo request = new Req_GetPrizeInfo();
+		request.UserId = proxy.Id;
+		request.Token = proxy.Token;
+		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
 
 	void RenderListItem(int index, GObject obj)

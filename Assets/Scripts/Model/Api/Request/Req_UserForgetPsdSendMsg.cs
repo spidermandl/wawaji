@@ -53,7 +53,7 @@ public class Req_UserForgetPsdSendMsg :Request {
 		return COMMAND;
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_UserForgetPsdSendMsg.Response>(json);
 		return base._response;
 	}

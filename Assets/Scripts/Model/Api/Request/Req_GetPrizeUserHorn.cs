@@ -39,7 +39,7 @@ public class Req_GetPrizeUserHorn :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_GetPrizeUserHorn.Response>(json);
 		return base._response;
 	}

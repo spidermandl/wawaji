@@ -59,14 +59,13 @@ public class Req_GetUpdatePics :Request {
 		}
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		try{
-			base._response = JsonHelper.DeserializeJsonToObject<Req_GetUpdatePics.Response> (json);
+			return JsonHelper.DeserializeJsonToObject<Req_GetUpdatePics.Response> (json);
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
 		}catch(JsonSerializationException e){
-			base._response = JsonHelper.DeserializeJsonToObject<Request.Error> (json);
+			throw e;
 		}
-		return base._response;
 	}
 
 	public override string command ()

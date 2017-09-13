@@ -41,7 +41,7 @@ public class Req_GetMachinePrizeInfo :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_GetMachinePrizeInfo.Response>(json);
 		return base._response;
 	}

@@ -42,7 +42,7 @@ public class UIEnterMain : UIMain
 				if(_loginWin.ValidLogin){
 					Req_UserLogin request = new Req_UserLogin();
 					request.Phone = _loginWin.Username.asTextField.text;
-					request.Psd = "wolfke";//_loginWin.Password.asTextField.text;
+					request.Psd = _loginWin.Password.asTextField.text;
 					request.Uuid = AppConst.UUID;
 					request.Type = 1;
 					if(request.Phone!=null &&
@@ -52,8 +52,6 @@ public class UIEnterMain : UIMain
 					}
 
 				}
-				this._clickFunc(ClickType.LoginGame);
-				this.changeUIpage(typeof(UIHomeMain));
 			});
 
 			_loginWin.Register.onClick.Add (() => {
@@ -161,9 +159,16 @@ public class UIEnterMain : UIMain
 	/// </summary>
 	public void RespondRegister(INotification notification){
 		if (_registerWin != null) {
+			if (((Request)notification.Body).getResponseCode () == Req_UserRegister.SUCCESS) {//成功注册
+				_registerWin.Hide();
+				_loginWin.Show ();
+				return;
+			}
+
 			_registerWin.ValidRegister = true;
 			_registerWin.Warn.visible = true;
 			_registerWin.Warn.asTextField.text = ((Request)notification.Body).getMsg();
+
 		}
 	}
 	/// <summary>
@@ -190,6 +195,10 @@ public class UIEnterMain : UIMain
 	public void RespondLogin(INotification notification){
 		if (_loginWin != null) {
 			_loginWin.ValidLogin = true;
+
+
+			this._clickFunc(ClickType.LoginGame);
+			this.changeUIpage(typeof(UIHomeMain));
 		}
 	}
 

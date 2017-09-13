@@ -48,7 +48,7 @@ public class Req_UserRegisterSendMsg :Request {
 
 	}
 
-	public override Request.Response parseResponse(string json){
+	public override Request.Response parseLogicResponse(string json){
 		base._response = JsonUtility.FromJson<Req_UserRegisterSendMsg.Response>(json);
 		return base._response;
 	}

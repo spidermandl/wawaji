@@ -17,11 +17,18 @@ public class HomeMediator: BaseMediator {
 	public override IList<string> ListNotificationInterests()
 	{
 		IList<string> list = new List<string>();
+		list.Add (Req_GetPrizeInfo.COMMAND);
 		return list;
 	}
 
 	public override void HandleNotification(INotification notification){        
-
+		switch( notification.Name ){
+		case  Req_GetPrizeInfo.COMMAND:
+			m_home_ui.RespondPrizeInfo (notification);
+			break;
+		default:
+			break;
+		}
 	}
 
 	public override void OnRegister()

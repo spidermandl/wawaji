@@ -8,7 +8,7 @@ public class UITopup : BaseWindow
 {
 
 	GObject Input_figure {
-		get{ return this.contentPane.GetChild ("n17"); }
+		get{ return this.contentPane.GetChild ("n27"); }
 	}
 	GObject Pay{
 		get{ return this.contentPane.GetChild ("n7"); }
@@ -24,7 +24,6 @@ public class UITopup : BaseWindow
 	}
 
 	GButton m_20,m_50,m_100,m_200,m_500,m_1000;
-	GButton checked_m = null;
 
 	protected override void OnInit()
 	{
@@ -39,12 +38,12 @@ public class UITopup : BaseWindow
 		m_500 = this.contentPane.GetChild ("n23").asButton;
 		m_1000 = this.contentPane.GetChild ("n24").asButton;
 
-		m_20.onClick.Add (OnCheck);
-		m_50.onClick.Add (OnCheck);
-		m_100.onClick.Add (OnCheck);
-		m_200.onClick.Add (OnCheck);
-		m_500.onClick.Add (OnCheck);
-		m_1000.onClick.Add (OnCheck);
+//		m_20.onClick.Add (OnCheck);
+//		m_50.onClick.Add (OnCheck);
+//		m_100.onClick.Add (OnCheck);
+//		m_200.onClick.Add (OnCheck);
+//		m_500.onClick.Add (OnCheck);
+//		m_1000.onClick.Add (OnCheck);
 
 		Close.onClick.Add(() => {
 			this.Hide();
@@ -53,16 +52,7 @@ public class UITopup : BaseWindow
 			//
 			this.Hide();
 		});
-		Input_figure.onClick.Add(()=>{
 
-		});
-
-	}
-
-	void OnCheck(EventContext context){
-		if(checked_m != null)
-			checked_m.selected = false;
-		checked_m = ((GButton)context.sender);
 	}
 
 }

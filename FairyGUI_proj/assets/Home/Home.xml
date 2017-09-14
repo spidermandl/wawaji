@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="750,1334">
+  <controller name="bid" pages="0,,1,,2," selected="0"/>
   <displayList>
     <loader id="n1_ddj4" name="n1" xy="0,0" size="750,1336" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
@@ -8,14 +9,17 @@
       <relation target="n1_ddj4" sidePair="leftext-left,rightext-right"/>
       <relation target="n1_ddj4" sidePair="top-top"/>
     </component>
-    <component id="n4_ddj4" name="n4" src="ddj4h" xy="147,173" size="127,122">
+    <component id="n4_ddj4" name="n4" src="e8id18" xy="147,173" size="127,122">
       <relation target="n5_ddj4" sidePair="left-left,top-top"/>
+      <Button controller="bid" page="0"/>
     </component>
-    <component id="n5_ddj4" name="n5" src="ddj4p" xy="311,173" size="127,122">
+    <component id="n5_ddj4" name="n5" src="e8id19" xy="311,173" size="127,122">
       <relation target="n1_ddj4" sidePair="top-top,center-center"/>
+      <Button controller="bid" page="1"/>
     </component>
-    <component id="n6_ddj4" name="n6" src="ddj4q" xy="481,173" size="127,122">
+    <component id="n6_ddj4" name="n6" src="e8id1a" xy="481,173" size="127,122">
       <relation target="n5_ddj4" sidePair="left-left,top-top"/>
+      <Button controller="bid" page="2"/>
     </component>
     <component id="n8_ddj4" name="n8" src="ddj410" xy="619,508" size="102,185">
       <relation target="n1_ddj4" sidePair="right-right,width-width"/>

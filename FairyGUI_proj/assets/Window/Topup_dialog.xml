@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="696,858">
+  <controller name="level" pages="0,,1,,2,,3,,4,,5,,6," selected="0"/>
   <displayList>
     <image id="n0_mc6i" name="n0" src="mc6i1" xy="0,0" size="696,677">
       <relation target="" sidePair="width-width,height-height"/>
@@ -25,10 +26,6 @@
       <relation target="n0_mc6i" sidePair="left-left,top-top"/>
       <relation target="n0_mc6i" sidePair="width-width"/>
     </text>
-    <richtext id="n17_mc6i" name="n17" xy="97,194" size="497,32" fontSize="25" color="#b8a9f5" autoSize="none" singleLine="true" text="请输入充值金额">
-      <relation target="n17_mc6i" sidePair="leftext-left,rightext-right"/>
-      <relation target="" sidePair="top-top"/>
-    </richtext>
     <richtext id="n18_mc6i" name="n18" xy="274,270" size="282,32" fontSize="25" color="#b8a9f5" autoSize="none" singleLine="true" text="（需安装支付宝客户端）">
       <relation target="n13_mc6i" sidePair="left-left,top-top"/>
       <relation target="n0_mc6i" sidePair="width-width"/>
@@ -36,30 +33,40 @@
     <component id="n19_mc6i" name="n19" src="mc6ij" xy="95,334" size="110,52">
       <relation target="n0_mc6i" sidePair="left-left,top-top"/>
       <relation target="n0_mc6i" sidePair="width-width"/>
+      <Button checked="true" controller="level" page="1"/>
     </component>
     <component id="n20_mc6i" name="n20" src="mc6im" xy="229,334" size="110,52">
       <relation target="n19_mc6i" sidePair="top-top,left-left"/>
       <relation target="n0_mc6i" sidePair="width-width"/>
+      <Button controller="level" page="2"/>
     </component>
     <component id="n21_mc6i" name="n21" src="mc6in" xy="360,334" size="110,52">
       <relation target="n20_mc6i" sidePair="left-left,top-top"/>
       <relation target="n0_mc6i" sidePair="width-width"/>
+      <Button controller="level" page="3"/>
     </component>
     <component id="n22_mc6i" name="n22" src="mc6io" xy="492,333" size="110,52">
       <relation target="n21_mc6i" sidePair="left-left,top-top"/>
       <relation target="n0_mc6i" sidePair="width-width"/>
+      <Button controller="level" page="4"/>
     </component>
     <component id="n23_mc6i" name="n23" src="mc6ip" xy="95,417" size="110,52">
       <relation target="n19_mc6i" sidePair="left-left,top-top"/>
       <relation target="n0_mc6i" sidePair="width-width"/>
+      <Button controller="level" page="5"/>
     </component>
     <component id="n24_mc6i" name="n24" src="mc6iq" xy="230,418" size="110,52">
       <relation target="n23_mc6i" sidePair="left-left,top-top"/>
       <relation target="n0_mc6i" sidePair="width-width"/>
+      <Button controller="level" page="6"/>
     </component>
     <image id="n25_mc6i" name="n25" src="mc6ir" xy="256,547" size="186,48">
       <relation target="n7_mc6i" sidePair="center-center,middle-middle"/>
       <relation target="n7_mc6i" sidePair="width-width"/>
     </image>
+    <text id="n27_e8id" name="n27" xy="98,192" size="493,38" input="true" prompt="[color=#7666F2]请输入充值金额[/color]" keyboardType="4" fontSize="25" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="n0_mc6i" sidePair="top-top"/>
+      <relation target="n0_mc6i" sidePair="leftext-left,rightext-right"/>
+    </text>
   </displayList>
 </component>

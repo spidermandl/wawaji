@@ -48,7 +48,7 @@
       <relation target="n20_rb6o" sidePair="left-left,top-top"/>
       <relation target="n31_w12a" sidePair="rightext-left"/>
     </text>
-    <text id="n30_ysyo" name="n30" xy="102,425" size="491,40" input="true" prompt="[color=#7666F2]请输入新密码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
+    <text id="n30_ysyo" name="n30" xy="102,425" size="491,40" input="true" prompt="[color=#7666F2]请输入新密码[/color]" password="true" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
       <relation target="n27_ysyo" sidePair="leftext-left,rightext-right"/>
       <relation target="n27_ysyo" sidePair="top-top"/>
     </text>

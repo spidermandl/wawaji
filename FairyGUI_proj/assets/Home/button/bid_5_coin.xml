@@ -10,6 +10,12 @@
       <gearDisplay controller="button" pages="1,2,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
+    <image id="n5_e8id" name="n5" src="ddj4n" xy="17,8" size="92,59">
+      <relation target="n1" sidePair="top-top,center-center"/>
+    </image>
+    <image id="n6_e8id" name="n6" src="ddj4k" xy="21,74" size="86,40">
+      <relation target="n1" sidePair="bottom-bottom,center-center"/>
+    </image>
   </displayList>
   <Button mode="Check"/>
 </component>

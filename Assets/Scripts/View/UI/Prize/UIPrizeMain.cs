@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
+using PureMVC.Interfaces;
 
+/// <summary>
+/// 奖品中心
+/// </summary>
 public class UIPrizeMain : UIMain
 {
 	UITopup _uiTopup;
@@ -13,6 +17,8 @@ public class UIPrizeMain : UIMain
 	}
 
 	void Start(){
+		getMachinePrize ();
+
 		//_mainView = this.GetComponent<UIPanel>().ui;
 
 		GLoader bg = _mainView.GetChild ("n0")as GLoader;
@@ -36,5 +42,25 @@ public class UIPrizeMain : UIMain
 	void Update(){
 	}
 
+	void getMachinePrize(){
+		if (UnityFacade.GetInstance ().RetrieveProxy (MachinePrizeProxy.NAME) != null)
+			return;
+		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
+		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
+		if (userid != 0 && token != null) {
+			Req_GetMachinePrizeInfo request = new Req_GetMachinePrizeInfo ();
+			request.UserId = userid;
+			request.Token = token;
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		}
+	}
+
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// 外部调用
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	public void RespondMachinePrize(INotification notification){
+
+	}
 }
 

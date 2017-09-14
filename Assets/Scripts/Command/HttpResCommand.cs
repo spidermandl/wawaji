@@ -34,6 +34,11 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 				PrizeSetProxy proxy = Facade.RetrieveProxy (PrizeSetProxy.NAME) as PrizeSetProxy;
 				proxy.setPrizeInfoData ((Req_GetAllPrize.Response)request.Resp);
 			}
+		}else if (request.command () == Req_GetMachinePrizeInfo.COMMAND) {
+			if (request.getResponseType () == typeof(Req_GetMachinePrizeInfo.Response)) {
+				MachinePrizeProxy proxy = Facade.RetrieveProxy (MachinePrizeProxy.NAME) as MachinePrizeProxy;
+				proxy.setMachinePrizeData ((Req_GetMachinePrizeInfo.Response)request.Resp);
+			}
 		}
 
 

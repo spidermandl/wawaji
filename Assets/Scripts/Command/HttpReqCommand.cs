@@ -28,10 +28,11 @@ public class HttpReqCommand : PureMVC.Patterns.SimpleCommand {
 			Facade.RegisterProxy (new PrizeSetProxy (PrizeSetProxy.NAME));
 		} else if (request.command () == Req_GetMachinePrizeInfo.COMMAND) {
 			Facade.RegisterProxy (new MachinePrizeProxy (MachinePrizeProxy.NAME));
+		} else if (request.command () == Req_GetMachineInfo.COMMAND) {
+			Facade.RegisterProxy (new MachineInfoProxy (MachineInfoProxy.NAME));
 		}
 
 		UnityFacade.GetInstance ().Network.SendPost (request);
-
 
 	}
 }

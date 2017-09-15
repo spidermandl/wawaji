@@ -24,6 +24,7 @@ public class EnterMediator: BaseMediator {
 		list.Add (Req_UserLogin.COMMAND);
 		list.Add (Req_GetExplainAttention.COMMAND);
 		list.Add (Req_GetBaseInfo.COMMAND);
+		list.Add (Req_GetPrizeUserLists.COMMAND);
 		return list;
 	}
 
@@ -46,6 +47,9 @@ public class EnterMediator: BaseMediator {
 			break;
 		case Req_GetBaseInfo.COMMAND:
 			m_login_ui.RespondBaseInfo (notification);
+			break;
+		case Req_GetPrizeUserLists.COMMAND:
+			m_login_ui.RespondUserPrizeList (notification);
 			break;
 		default:
 			break;

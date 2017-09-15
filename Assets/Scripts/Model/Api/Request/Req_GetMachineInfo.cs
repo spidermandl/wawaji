@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 ///获取娃娃机列表信息	用于获取娃娃机列表信息
@@ -26,28 +27,32 @@ public class Req_GetMachineInfo :Request {
 		public class Data
 		{
 			public int code;
-			public Info info;
+			public Info[] info;
 			public string msg;
 		}
 
 		[Serializable]
 		public class Info
 		{
-			public int id;
-			public string type;//	用户类型（1:手机号登录，2：微信登录，3：游客登录）
 			public string name;
-			public string phone;
-			public string pic;
-			public string wxid;
-			public string coin;
+			public int machine_type_id;
+			public Machine[] machine;
 		}
 
-
+		[Serializable]
+		public class Machine
+		{
+			public int coin;
+			public int machine_id;
+		} 
 	}
 
 	public override Request.Response parseLogicResponse(string json){
-		base._response = JsonUtility.FromJson<Req_GetMachineInfo.Response>(json);
-		return base._response;
+		try{
+			return JsonHelper.DeserializeJsonToObject<Req_GetMachineInfo.Response> (json);
+		}catch(JsonSerializationException e){
+			throw e;
+		}
 	}
 	public override string command ()
 	{

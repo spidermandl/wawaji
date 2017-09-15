@@ -23,6 +23,7 @@ public class UIHomeMain : UIMain
 	}
 
 	void Start(){
+		getMachineInfo ();
 
 		_list = _mainView.GetChild("n17").asList;
 //		_list.SetVirtualAndLoop();
@@ -120,7 +121,19 @@ public class UIHomeMain : UIMain
 
 	void Update(){
 	}
-
+	/// <summary>
+	/// Gets the machine info.
+	/// </summary>
+	void getMachineInfo(){
+		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
+		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
+		if (userid != 0 && token != null) {
+			Req_GetMachineInfo request = new Req_GetMachineInfo ();
+			request.UserId = userid;
+			request.Token = token;
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		}
+	}
 
 	void DoSpecialEffect()
 	{
@@ -170,6 +183,14 @@ public class UIHomeMain : UIMain
 		PlayerPrefs.SetString (LocalKey.TOKEN, null);
 		_profileWin.Hide();
 		this.changeUIpage(typeof(UIEnterMain));
+	}
+
+	/// <summary>
+	/// Responds the machine info.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondMachineInfo(INotification notification){
+
 	}
 }
 

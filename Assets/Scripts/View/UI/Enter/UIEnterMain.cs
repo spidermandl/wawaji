@@ -154,8 +154,16 @@ public class UIEnterMain : UIMain
 			Req_GetBaseInfo request = new Req_GetBaseInfo ();
 			request.UserId = userid;
 			request.Token = token;
-			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+			UnityFacade.GetInstance ().SendNotification (HttpReqCommand.HTTP, request);
+		} else {
+			getUserPrizeList ();
 		}
+	}
+
+	void getUserPrizeList(){
+		Req_GetPrizeUserLists request = new Req_GetPrizeUserLists ();
+		request.Form = null;
+		UnityFacade.GetInstance ().SendNotification (HttpReqCommand.HTTP, request);
 	}
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
@@ -242,6 +250,14 @@ public class UIEnterMain : UIMain
 			_docWin.Instruction.asTextField.text = response.getInstruction();
 			_docWin.Awareness.asTextField.text = response.getAwareness ();
 		}
+	}
+
+	/// <summary>
+	/// Responds the user prize list.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondUserPrizeList(INotification notification){
+
 	}
 
 	IEnumerator countDown(){

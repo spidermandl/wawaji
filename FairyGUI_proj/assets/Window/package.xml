@@ -93,6 +93,7 @@
     <image id="e8id2u" name="c_500_p.png" path="/images/"/>
     <image id="e8id2v" name="c_1000_g.png" path="/images/"/>
     <image id="e8id2w" name="c_1000_p.png" path="/images/"/>
+    <component id="e8id2x" name="clear.xml" path="/"/>
   </resources>
   <publish name="Window" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

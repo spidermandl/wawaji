@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserResetPsd.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Request.cs" />
      <Compile Include="Assets\Scripts\Model\EnterProxy.cs" />
+     <Compile Include="Assets\Scripts\Model\MachineInfoProxy.cs" />
      <Compile Include="Assets\Scripts\Model\MachinePrizeProxy.cs" />
      <Compile Include="Assets\Scripts\Model\Network\ByteBuffer.cs" />
      <Compile Include="Assets\Scripts\Model\Network\Converter.cs" />

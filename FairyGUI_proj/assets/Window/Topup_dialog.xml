@@ -33,7 +33,7 @@
     <component id="n19_mc6i" name="n19" src="mc6ij" xy="95,334" size="110,52">
       <relation target="n0_mc6i" sidePair="left-left,top-top"/>
       <relation target="n0_mc6i" sidePair="width-width"/>
-      <Button checked="true" controller="level" page="1"/>
+      <Button controller="level" page="1"/>
     </component>
     <component id="n20_mc6i" name="n20" src="mc6im" xy="229,334" size="110,52">
       <relation target="n19_mc6i" sidePair="top-top,left-left"/>
@@ -68,6 +68,5 @@
       <relation target="n0_mc6i" sidePair="top-top"/>
       <relation target="n0_mc6i" sidePair="leftext-left,rightext-right"/>
     </text>
-    <component id="n28_e8id" name="n28" src="e8id2x" xy="347,154"/>
   </displayList>
 </component>

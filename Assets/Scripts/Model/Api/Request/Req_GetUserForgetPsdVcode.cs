@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 注册验证码信息
 /// </summary>
 public class Req_GetUserForgetPsdVcode :Request {
 
-	new public const string COMMAND = "User.Req_GetUserForgetPsdVcode";
+	new public const string COMMAND = "User.GetUserForgetPsdVcode";
 
-	new protected string _api=Req_RegisterVcode.COMMAND;
+	new protected string _api=Req_GetUserForgetPsdVcode.COMMAND;
 
 
 	public Req_GetUserForgetPsdVcode()
@@ -35,8 +36,11 @@ public class Req_GetUserForgetPsdVcode :Request {
 	}
 
 	public override Request.Response parseLogicResponse(string json){
-		base._response = JsonUtility.FromJson<Req_GetUserForgetPsdVcode.Response>(json);
-		return base._response;
+		try{
+			return JsonHelper.DeserializeJsonToObject<Req_GetUserForgetPsdVcode.Response> (json);
+		}catch(JsonSerializationException e){
+			throw e;
+		}
 	}
 	public override string command ()
 	{

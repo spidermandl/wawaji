@@ -39,7 +39,7 @@
       <relation target="n5_lf03" sidePair="center-center,middle-middle"/>
       <relation target="n5_lf03" sidePair="height-height"/>
     </component>
-    <text id="n20_rb6o" name="n20" xy="101,142" size="491,40" input="true" prompt="[color=#7666F2]请输入您的手机号码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
+    <text id="n20_rb6o" name="n20" xy="101,141" size="491,40" input="true" prompt="[color=#7666F2]请输入您的手机号码[/color]" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">
       <relation target="n3_lf03" sidePair="left-left,rightext-right"/>
     </text>
     <text id="n21_rb6o" name="n21" xy="103,213" size="487,40" input="true" prompt="[color=#7666F2]请输入密码[/color]" password="true" fontSize="30" color="#ffffff" autoSize="none" singleLine="true" text="">

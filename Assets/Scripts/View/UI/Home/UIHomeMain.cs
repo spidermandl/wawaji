@@ -16,6 +16,8 @@ public class UIHomeMain : UIMain
 	UIProfile _profileWin;//
 	UIPrize _prizeWin;//
 
+	GButton b_coin_1,b_coin_5,b_coin_10;
+
 	void Awake()
 	{
 		base.init ("Home");
@@ -24,9 +26,10 @@ public class UIHomeMain : UIMain
 
 	void Start(){
 		getMachineInfo ();
+		getHornList ();
 
 		_list = _mainView.GetChild("n17").asList;
-//		_list.SetVirtualAndLoop();
+		//		_list.SetVirtualAndLoop();
 
 		_list.itemRenderer = RenderListItem;
 		//_list.numItems = 5;
@@ -37,13 +40,20 @@ public class UIHomeMain : UIMain
 		GLoader bg = _mainView.GetChild ("n1")as GLoader;
 		bg.url = "bg/bg_home";
 
+		b_coin_1 = _mainView.GetChild ("n4") as GButton;
+		b_coin_5 = _mainView.GetChild ("n5") as GButton;
+		b_coin_10 = _mainView.GetChild ("n6") as GButton;
+		b_coin_1.onChanged.Add(bidChange);
+		b_coin_5.onChanged.Add(bidChange);
+		b_coin_10.onChanged.Add(bidChange);
+
 		GComponent toolbar = _mainView.GetChild ("n3").asCom;
 		//提现界面
 		toolbar.GetChild("n12").onClick.Add(() => {
 			//提现界面
-//			if(_exchangeWin == null)
-//				_exchangeWin = new UIExchange ();
-//			_exchangeWin.Show();
+			//			if(_exchangeWin == null)
+			//				_exchangeWin = new UIExchange ();
+			//			_exchangeWin.Show();
 			this.changeUIpage(typeof(UIExchangeMain));
 		});
 		//奖励界面
@@ -64,7 +74,7 @@ public class UIHomeMain : UIMain
 				_profileWin = new UIProfile ();
 			_profileWin.Show();
 			_profileWin.Logout.onClick.Add(()=>{
-				
+
 				Req_UserLogout request = new Req_UserLogout ();
 				request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
 				request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
@@ -91,6 +101,7 @@ public class UIHomeMain : UIMain
 				_prizeWin = new UIPrize ();
 			_prizeWin.Show();
 		});
+		//开始游戏
 		_mainView.GetChild("n11").onClick.Add(() => { 
 			this._clickFunc(ClickType.PlayGame);
 			this.changeUIpage(typeof(UIGameMain));
@@ -121,6 +132,7 @@ public class UIHomeMain : UIMain
 
 	void Update(){
 	}
+
 	/// <summary>
 	/// Gets the machine info.
 	/// </summary>
@@ -134,24 +146,57 @@ public class UIHomeMain : UIMain
 			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 		}
 	}
+	/// <summary>
+	/// Gets the horn list.
+	/// </summary>
+	void getHornList(){
+		if (UnityFacade.GetInstance ().RetrieveProxy (UserPrizeStringProxy.NAME) != null)
+			return;
+		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
+		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
+		int mtid = PlayerPrefs.GetInt (LocalKey.SELECT_MACHINE_TYPE, -1);
+		if (mtid !=-1 && userid != 0 && token != null) {
+			Req_GetPrizeUserHorn request = new Req_GetPrizeUserHorn ();
+			request.UserId = userid;
+			request.Token = token;
+			request.MtId = mtid;
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		}
+	}
 
+	/// <summary>
+	/// Bids the change.
+	/// </summary>
+	void bidChange(){
+		int coin = 1;
+		if (b_coin_1.selected)
+			coin = 1;
+		else if (b_coin_5.selected)
+			coin = 5;
+		else if (b_coin_10.selected)
+			coin = 10;
+		if (UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) == null)
+			return;
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		PlayerPrefs.SetInt(LocalKey.SELECT_MACHINE_ID ,proxy.getMachineId (PlayerPrefs.GetInt (LocalKey.SELECT_MACHINE_TYPE), coin));
+	}
 	void DoSpecialEffect()
 	{
 		//change the scale according to the distance to middle
-//		float midX = _list.scrollPane.posX + _list.viewWidth / 2;
-//		int cnt = _list.numChildren;
-//		for (int i = 0; i < cnt; i++)
-//		{
-//			GObject obj = _list.GetChildAt(i);
-//			float dist = Mathf.Abs(midX - obj.x - obj.width / 2);
-//			if (dist > obj.width) //no intersection
-//				obj.SetScale(1, 1);
-//			else
-//			{
-//				float ss = 1 + (1 - dist / obj.width) * 0.24f;
-//				obj.SetScale(ss, ss);
-//			}
-//		}
+		//		float midX = _list.scrollPane.posX + _list.viewWidth / 2;
+		//		int cnt = _list.numChildren;
+		//		for (int i = 0; i < cnt; i++)
+		//		{
+		//			GObject obj = _list.GetChildAt(i);
+		//			float dist = Mathf.Abs(midX - obj.x - obj.width / 2);
+		//			if (dist > obj.width) //no intersection
+		//				obj.SetScale(1, 1);
+		//			else
+		//			{
+		//				float ss = 1 + (1 - dist / obj.width) * 0.24f;
+		//				obj.SetScale(ss, ss);
+		//			}
+		//		}
 
 		//_mainView.GetChild("n3").text = "" + ((_list.GetFirstChildInView() + 1) % _list.numItems);
 	}
@@ -190,7 +235,16 @@ public class UIHomeMain : UIMain
 	/// </summary>
 	/// <param name="notification">Notification.</param>
 	public void RespondMachineInfo(INotification notification){
+		bidChange ();
+	}
+
+	/// <summary>
+	/// Responds the user prize strings.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondUserPrizeStrings(INotification notification){
 
 	}
+
 }
 

@@ -10,7 +10,6 @@ using System.Reflection;
 
 public class Util
 {
-	private static List<string> luaPaths = new List<string>();
 
 	public static int Int(object o) {
 		return Convert.ToInt32(o);
@@ -35,6 +34,12 @@ public class Util
 	public static string Uid(string uid) {
 		int position = uid.LastIndexOf('_');
 		return uid.Remove(0, position + 1);
+	}
+
+	public static string Filter(string str) {
+		if (str!=null && str.Equals (""))
+			return null;
+		return str;
 	}
 
 	public static long GetTime() {

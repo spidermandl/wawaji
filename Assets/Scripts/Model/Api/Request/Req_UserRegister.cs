@@ -75,7 +75,6 @@ public class Req_UserRegister :Request {
 		}catch(JsonSerializationException e){
 			throw e;
 		}
-		return base._response;
 	}
 	public override string command ()
 	{
@@ -84,5 +83,9 @@ public class Req_UserRegister :Request {
 
 	protected override string getChildMsg(){
 		return ((Response)_response).data.msg;
+	}
+
+	public override int getResponseCode(){
+		return ((Response)base._response).data.code;
 	}
 }

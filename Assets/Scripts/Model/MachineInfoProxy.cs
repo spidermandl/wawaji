@@ -55,8 +55,32 @@ public class MachineInfoProxy : PureMVC.Patterns.Proxy {
 			}
 			items.Add (i);
 		}
-
 		this.Items = items;
+
+		if(PlayerPrefs.GetInt (LocalKey.SELECT_MACHINE_TYPE,-1)==-1)
+			PlayerPrefs.SetInt (LocalKey.SELECT_MACHINE_TYPE, items [0].machine_type_id);
+	}
+
+	/// <summary>
+	/// Gets the machine identifier.
+	/// </summary>
+	/// <returns>The machine identifier.</returns>
+	/// <param name="mtid">Mtid.</param>
+	/// <param name="coin">Coin.</param>
+	public int getMachineId(int mtid,int coin){
+		MachineType temp = null;
+		foreach (MachineType t in items) {
+			if (t.machine_type_id == mtid) {
+				temp = t;
+				break;
+			}
+		}
+		foreach(MachineItem i in temp.machine){
+			if (i.coin == coin)
+				return i.machine_id;
+		}
+
+		return 0;
 	}
 
 }

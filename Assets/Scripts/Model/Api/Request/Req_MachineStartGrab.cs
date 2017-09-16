@@ -11,6 +11,9 @@ public class Req_MachineStartGrab :Request {
 
 	new protected string _api = Req_MachineStartGrab.COMMAND;
 
+	public const int SUCCESS =0;//0表示成功
+	public const int POOR =1;// 1表示金币不足
+
 	public Req_MachineStartGrab()
 	{
 		base.Api = this._api;
@@ -26,17 +29,8 @@ public class Req_MachineStartGrab :Request {
 		[Serializable]
 		public class Data
 		{
-			public int code;//操作码，0表示成功， 1表示无效娃娃机
-			public Info info;
+			public int code;//操作码，0表示成功， 1表示金币不足
 			public string msg;
-		}
-
-		[Serializable]
-		public class Info
-		{
-			public int id;
-			public string name;
-			public string num;
 		}
 
 

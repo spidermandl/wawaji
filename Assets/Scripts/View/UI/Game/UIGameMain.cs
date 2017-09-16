@@ -4,6 +4,7 @@ using FairyGUI;
 using UnityEngine;
 using PathologicalGames;
 using DG.Tweening;
+using PureMVC.Interfaces;
 
 public class UIGameMain : UIMain
 {
@@ -23,6 +24,8 @@ public class UIGameMain : UIMain
 	}
 
 	void Start(){
+		getBallsInfoFromServer ();
+
 		////获取游戏3d场景对象，以及游戏管理对象///////////////////////////////////////////////
 		root = GameObject.Find("3dGame");
 		if (root == null) {
@@ -127,31 +130,24 @@ public class UIGameMain : UIMain
 	void Update(){
 	}
 
+	/// <summary>
+	/// Gets the balls info from server.
+	/// </summary>
+	void getBallsInfoFromServer(){
+		Req_GetMachinePrizeBallData request = new Req_GetMachinePrizeBallData ();
+		request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
+		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
+		request.MId = PlayerPrefs.GetInt(LocalKey.SELECT_MACHINE_ID);
+		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+	}
 
-	/**
-	 * 销毁界面回调
-	 * */
+    /// <summary>
+	/// 销毁界面回调
+    /// </summary>
 	protected override void destroyUI (){
 		base.destroyUI ();
 		gameManager.inactive ();
 		root.SetActive (false);
-	}
-
-	public void gameOver(){
-		if(_confirmWin == null)
-			_confirmWin = new UIConfirm ();
-		_confirmWin.Show ();
-
-		//关闭登录对话框
-		_confirmWin.Confirm.onClick.Add (() => { 
-			_confirmWin.Hide(); 
-		});
-
-		//进入主界面
-		_confirmWin.Cancel.onClick.Add(() => { 
-			this.changeUIpage(typeof(UIRewardsMain));
-			_confirmWin.Hide(); 
-		});
 	}
 
 	void OnSwipeMove(EventContext context)
@@ -193,5 +189,30 @@ public class UIGameMain : UIMain
 //		RotationGesture gesture = (RotationGesture)context.sender;
 //		gameManager.SpaceCamera.Rotate(Vector3.forward, -gesture.delta, Space.World);
 //	}
+
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// 外部调用
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public void gameOver(){
+		if(_confirmWin == null)
+			_confirmWin = new UIConfirm ();
+		_confirmWin.Show ();
+
+		//关闭登录对话框
+		_confirmWin.Confirm.onClick.Add (() => { 
+			_confirmWin.Hide(); 
+		});
+
+		//进入主界面
+		_confirmWin.Cancel.onClick.Add(() => { 
+			this.changeUIpage(typeof(UIRewardsMain));
+			_confirmWin.Hide(); 
+		});
+	}
+
+	public void RespondBallInfo(INotification notification){
+
+	}
+
 }
 

@@ -44,6 +44,22 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 				MachineInfoProxy proxy = Facade.RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
 				proxy.setMachineInfoData ((Req_GetMachineInfo.Response)request.Resp);
 			}
+		}else if (request.command () == Req_GetPrizeUserHorn.COMMAND) {
+			if (request.getResponseType () == typeof(Req_GetPrizeUserHorn.Response)) {
+				UserPrizeStringProxy proxy = Facade.RetrieveProxy (UserPrizeStringProxy.NAME) as UserPrizeStringProxy;
+				proxy.setPrizeStringsData ((Req_GetPrizeUserHorn.Response)request.Resp);
+			}
+		}else if (request.command () == Req_GetPrizeUserLists.COMMAND) {
+			if (request.getResponseType () == typeof(Req_GetPrizeUserLists.Response)) {
+				UserPrizeListsProxy proxy = Facade.RetrieveProxy (UserPrizeListsProxy.NAME) as UserPrizeListsProxy;
+				proxy.setUserPrizeLists ((Req_GetPrizeUserLists.Response)request.Resp);
+			}
+		}else if (request.command () == Req_GetMachinePrizeBallData.COMMAND) {
+			
+			if (request.getResponseType () == typeof(Req_GetMachinePrizeBallData.Response)) {
+				GameBallProxy proxy = Facade.RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
+				proxy.setBallLists ((Req_GetMachinePrizeBallData.Response)request.Resp);
+			}
 		}
 
 

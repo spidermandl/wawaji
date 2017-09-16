@@ -55,5 +55,23 @@ public class UITopup : BaseWindow
 
 	}
 
+	public int getPayAmount(){
+		if (m_20.selected) {
+			return 20;
+		}else if(m_50.selected){
+			return 50;
+		}else if(m_100.selected){
+			return 100;
+		}else if(m_200.selected){
+			return 200;
+		}else if(m_500.selected){
+			return 500;
+		}else if(m_1000.selected){
+			return 1000;
+		}else {
+			return int.Parse(Input_figure.asTextInput.text);
+		}
+	}
+
 }
 

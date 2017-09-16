@@ -48,8 +48,8 @@ public class UIEnterMain : UIMain
 					request.Psd = _loginWin.Password.asTextField.text;
 					request.Uuid = AppConst.UUID;
 					request.Type = 1;
-					if(request.Phone!=null &&
-						request.Psd != null){
+					if(Util.Filter(request.Phone)!=null &&
+						Util.Filter(request.Psd) != null){
 						UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 						_loginWin.ValidLogin = false;
 					}
@@ -72,7 +72,7 @@ public class UIEnterMain : UIMain
 				_registerWin.Pic_code.onClick.Add(()=>{
 					UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,new Req_RegisterVcode());
 				});
-				_registerWin.Register.onClick.Add(()=>{
+				_registerWin.Send.onClick.Add(()=>{
 					if(_registerWin.ValidRegister){
 						Req_UserRegister request = new Req_UserRegister();
 						request.Phone = _registerWin.Username.asTextField.text;
@@ -80,10 +80,10 @@ public class UIEnterMain : UIMain
 						request.Psd = _registerWin.Password.asTextField.text;
 						request.VerCode = _registerWin.Pic_code.asTextField.text;
 						request.Uuid = AppConst.UUID;
-						if(request.Phone!=null &&
-							request.MsgCode != null &&
-							request.Psd != null &&
-							request.VerCode != null){
+						if(Util.Filter(request.Phone)!=null &&
+							Util.Filter(request.MsgCode) != null &&
+							Util.Filter(request.Psd) != null &&
+							Util.Filter(request.VerCode) != null){
 							UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 							_registerWin.ValidRegister = false;
 						}
@@ -95,8 +95,8 @@ public class UIEnterMain : UIMain
 						Req_UserRegisterSendMsg request = new Req_UserRegisterSendMsg();
 						request.Phone = _registerWin.Username.asTextField.text;
 						request.VerCode = _registerWin.Pic_code.asTextField.text;
-						if(request.Phone!=null &&
-							request.VerCode != null)
+						if(Util.Filter(request.Phone)!=null &&
+							Util.Filter(request.VerCode) != null)
 							UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 					}
 				});
@@ -107,17 +107,45 @@ public class UIEnterMain : UIMain
 				_loginWin.Hide(); 
 				_forgetWin.Show();
 
-//				Req_RegisterVcode req = new Req_RegisterVcode();
-//				UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,req);
+				Req_GetUserForgetPsdVcode req = new Req_GetUserForgetPsdVcode();
+				UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,req);
+
 				_forgetWin.Close.onClick.Add (() => {
 					_forgetWin.Hide(); 
 				});
 
 				_forgetWin.Pic_code.onClick.Add(()=>{
-					//UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,new Req_RegisterVcode());
+					UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,new Req_GetUserForgetPsdVcode());
+				});
+
+				_forgetWin.Verify.onClick.Add(()=>{
+					if(_forgetWin.ValidVerifying){
+						Req_UserForgetPsdSendMsg request = new Req_UserForgetPsdSendMsg();
+						request.Phone = _forgetWin.Username.asTextField.text;
+						request.VerCode = _forgetWin.Pic_code.asTextField.text;
+						if(Util.Filter(request.Phone)!=null &&
+							Util.Filter(request.VerCode) != null)
+							UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+					}
+				});
+
+				_forgetWin.Send.onClick.Add(()=>{
+					if(_forgetWin.ValidRegister){
+						Req_UserResetPsd request = new Req_UserResetPsd();
+						request.Phone = _forgetWin.Username.asTextField.text;
+						request.MsgCode = _forgetWin.Phone_code_input.asTextField.text;
+						request.Psd = _forgetWin.Password.asTextField.text;
+						request.VerCode = _forgetWin.Pic_code.asTextField.text;
+						if(Util.Filter(request.Phone)!=null &&
+							Util.Filter(request.MsgCode) != null &&
+							Util.Filter(request.Psd) != null &&
+							Util.Filter(request.VerCode) != null){
+							UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+							_forgetWin.ValidRegister = false;
+						}
+					}
 				});
 			});
-			
 		});
 		_mainView.GetChild ("n7").onClick.Add (() => {
 			this.changeUIpage(typeof(UINoticeMain));
@@ -141,7 +169,8 @@ public class UIEnterMain : UIMain
 
 	void OnKeyDown(EventContext context)
 	{
-		Debug.Log(context.inputEvent.keyCode);
+		if(AppConst.DebugMode)
+			Debug.Log(context.inputEvent.keyCode);
 	}
 
 	/// <summary>
@@ -159,7 +188,9 @@ public class UIEnterMain : UIMain
 			getUserPrizeList ();
 		}
 	}
-
+	/// <summary>
+	/// Gets the user prize list.
+	/// </summary>
 	void getUserPrizeList(){
 		Req_GetPrizeUserLists request = new Req_GetPrizeUserLists ();
 		request.Form = null;
@@ -172,16 +203,27 @@ public class UIEnterMain : UIMain
 	/// Sets the vcode texture.
 	/// </summary>
 	/// <param name="code">Code.</param>
-	public void RespondVcode(INotification notification){
+	public void RespondRegisterVcode(INotification notification){
 		if (_registerWin != null) {
 			string code = ((Req_RegisterVcode)notification.Body).getVcode ();
 			((GRichTextField)_registerWin.Pic_code).text = code;
 		}
 	}
 	/// <summary>
+	/// Responds the forget vcode.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondForgetVcode(INotification notification){
+		if (_forgetWin != null) {
+			string code = ((Req_GetUserForgetPsdVcode)notification.Body).getVcode ();
+			((GRichTextField)_forgetWin.Pic_code).text = code;
+		}
+	}
+	/// <summary>
 	/// Responds the register.
 	/// </summary>
 	public void RespondRegister(INotification notification){
+		_registerWin.ValidRegister = true;
 		if (_registerWin != null) {
 			if (((Request)notification.Body).getResponseCode () == Req_UserRegister.SUCCESS) {//成功注册
 				_registerWin.Hide();
@@ -189,9 +231,26 @@ public class UIEnterMain : UIMain
 				return;
 			}
 
-			_registerWin.ValidRegister = true;
 			_registerWin.Warn.visible = true;
 			_registerWin.Warn.asTextField.text = ((Request)notification.Body).getMsg();
+
+		}
+	}
+	/// <summary>
+	/// Responds the reset psd.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondResetPsd(INotification notification){
+		_forgetWin.ValidRegister = true;
+		if (_forgetWin != null) {
+			if (((Request)notification.Body).getResponseCode () == Req_UserResetPsd.SUCCESS) {//成功注册
+				_forgetWin.Hide();
+				_loginWin.Show ();
+				return;
+			}
+
+			_forgetWin.Warn.visible = true;
+			_forgetWin.Warn.asTextField.text = ((Request)notification.Body).getMsg();
 
 		}
 	}
@@ -210,9 +269,29 @@ public class UIEnterMain : UIMain
 			_registerWin.ValidVerifying = true;
 			_registerWin.Verify.visible = false;
 			_registerWin.Code_countdown.visible = true;
-			StartCoroutine (countDown());
+			StartCoroutine (countDown(_registerWin));
 		}
 	}
+
+	/// <summary>
+	/// Responds the register send message.
+	/// </summary>
+	/// <param name="code">Code.</param>
+	public void RespondForgetSendMsg(INotification notification){
+		if (_forgetWin != null) {
+			if (((Request)notification.Body).getResponseCode () != Req_UserRegisterSendMsg.SUCCESS) {//有错误
+				_forgetWin.Warn.visible = true;
+				_forgetWin.Warn.asTextField.text = ((Request)notification.Body).getMsg ();
+				return;
+			}
+
+			_forgetWin.ValidVerifying = true;
+			_forgetWin.Verify.visible = false;
+			_forgetWin.Code_countdown.visible = true;
+			StartCoroutine (countDown(_forgetWin));
+		}
+	}
+
 	/// <summary>
 	/// Responds the login.
 	/// </summary>
@@ -260,13 +339,14 @@ public class UIEnterMain : UIMain
 
 	}
 
-	IEnumerator countDown(){
+	IEnumerator countDown(UIBaseVerifyWin _win){
 		for (int i = 0; i < 60; i++) {
-			_registerWin.Code_countdown.asTextField.text = (60-i)+"秒后重发";
+			_win.Code_countdown.asTextField.text = (60-i)+"秒后重发";
 			yield return new WaitForSeconds (1f);  
 		}
-		_registerWin.Verify.visible = true;
-		_registerWin.Code_countdown.visible = false;
+		_win.Verify.visible = true;
+		_win.Code_countdown.visible = false;
 	}
+
 }
 

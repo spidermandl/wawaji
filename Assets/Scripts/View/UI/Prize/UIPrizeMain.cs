@@ -18,7 +18,7 @@ public class UIPrizeMain : UIMain
 
 	void Start(){
 		getMachinePrize ();
-
+		getUserPrizeList ();
 		//_mainView = this.GetComponent<UIPanel>().ui;
 
 		GLoader bg = _mainView.GetChild ("n0")as GLoader;
@@ -55,11 +55,26 @@ public class UIPrizeMain : UIMain
 		}
 	}
 
+	/// <summary>
+	/// Gets the user prize list.
+	/// </summary>
+	void getUserPrizeList(){
+		if (UnityFacade.GetInstance ().RetrieveProxy (UserPrizeListsProxy.NAME) != null)
+			return;
+		Req_GetPrizeUserLists request = new Req_GetPrizeUserLists ();
+		request.Form = null;
+		UnityFacade.GetInstance ().SendNotification (HttpReqCommand.HTTP, request);
+	}
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void RespondMachinePrize(INotification notification){
+
+	}
+
+	public void RespondUserPrizeList(INotification notification){
 
 	}
 }

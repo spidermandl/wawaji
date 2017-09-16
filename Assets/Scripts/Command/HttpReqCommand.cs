@@ -21,15 +21,36 @@ public class HttpReqCommand : PureMVC.Patterns.SimpleCommand {
 			proxy.readLocalVersion ();
 			((Req_GetUpdatePics)body).Version = proxy.getLocalVersion ();
 		} else if (request.command () == Req_UserLogin.COMMAND || request.command () == Req_GetBaseInfo.COMMAND) {
-			Facade.RegisterProxy (new AccountProxy (AccountProxy.NAME));
+			if(Facade.RetrieveProxy (AccountProxy.NAME) ==null)
+				Facade.RegisterProxy (new AccountProxy (AccountProxy.NAME));
+			
 		} else if (request.command () == Req_GetPrizeInfo.COMMAND) {
-			Facade.RegisterProxy (new AccountProxy (AccountProxy.NAME));
+			if(Facade.RetrieveProxy (AccountProxy.NAME) ==null)
+				Facade.RegisterProxy (new AccountProxy (AccountProxy.NAME));
+			
 		} else if (request.command () == Req_GetAllPrize.COMMAND) {
-			Facade.RegisterProxy (new PrizeSetProxy (PrizeSetProxy.NAME));
+			if(Facade.RetrieveProxy (PrizeSetProxy.NAME) ==null)
+				Facade.RegisterProxy (new PrizeSetProxy (PrizeSetProxy.NAME));
+			
 		} else if (request.command () == Req_GetMachinePrizeInfo.COMMAND) {
-			Facade.RegisterProxy (new MachinePrizeProxy (MachinePrizeProxy.NAME));
+			if(Facade.RetrieveProxy (MachinePrizeProxy.NAME) ==null)
+				Facade.RegisterProxy (new MachinePrizeProxy (MachinePrizeProxy.NAME));
+			
 		} else if (request.command () == Req_GetMachineInfo.COMMAND) {
-			Facade.RegisterProxy (new MachineInfoProxy (MachineInfoProxy.NAME));
+			if(Facade.RetrieveProxy (MachineInfoProxy.NAME) ==null)
+				Facade.RegisterProxy (new MachineInfoProxy (MachineInfoProxy.NAME));
+			
+		} else if (request.command () == Req_GetPrizeUserHorn.COMMAND) {
+			if(Facade.RetrieveProxy (UserPrizeStringProxy.NAME) ==null)
+				Facade.RegisterProxy (new UserPrizeStringProxy (UserPrizeStringProxy.NAME));
+			
+		} else if (request.command () == Req_GetPrizeUserLists.COMMAND) {
+			if(Facade.RetrieveProxy (UserPrizeListsProxy.NAME) ==null)
+				Facade.RegisterProxy (new UserPrizeListsProxy (UserPrizeListsProxy.NAME));
+			
+		} else if (request.command () == Req_GetMachinePrizeBallData.COMMAND) {
+			if(Facade.RetrieveProxy (GameBallProxy.NAME) ==null)
+				Facade.RegisterProxy (new GameBallProxy (GameBallProxy.NAME));
 		}
 
 		UnityFacade.GetInstance ().Network.SendPost (request);

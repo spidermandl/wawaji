@@ -25,13 +25,16 @@ public class EnterMediator: BaseMediator {
 		list.Add (Req_GetExplainAttention.COMMAND);
 		list.Add (Req_GetBaseInfo.COMMAND);
 		list.Add (Req_GetPrizeUserLists.COMMAND);
+		list.Add (Req_GetUserForgetPsdVcode.COMMAND);
+		list.Add (Req_UserForgetPsdSendMsg.COMMAND);
+		list.Add (Req_UserResetPsd.COMMAND);
 		return list;
 	}
 
 	public override void HandleNotification(INotification notification){        
 		switch( notification.Name ){
 		case  Req_RegisterVcode.COMMAND:
-			m_login_ui.RespondVcode (notification);
+			m_login_ui.RespondRegisterVcode (notification);
 			break;
 		case Req_UserRegister.COMMAND:
 			m_login_ui.RespondRegister (notification);
@@ -51,6 +54,16 @@ public class EnterMediator: BaseMediator {
 		case Req_GetPrizeUserLists.COMMAND:
 			m_login_ui.RespondUserPrizeList (notification);
 			break;
+		case Req_GetUserForgetPsdVcode.COMMAND:
+			m_login_ui.RespondForgetVcode (notification);
+			break;
+		case Req_UserForgetPsdSendMsg.COMMAND:
+			m_login_ui.RespondForgetSendMsg (notification);
+			break;
+		case Req_UserResetPsd.COMMAND:
+			m_login_ui.RespondResetPsd (notification);
+			break;
+
 		default:
 			break;
 		}

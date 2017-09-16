@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 获取小喇叭中奖列表	用于获取小喇叭中奖列表
@@ -32,7 +33,7 @@ public class Req_GetPrizeUserHorn :Request {
 		public class Data
 		{
 			public int code;//操作码，0表示成功， 1表示用户不存在, 99表示用户登录异常
-			public string info;
+			public string[] info;
 			public string msg;
 		}
 
@@ -40,9 +41,13 @@ public class Req_GetPrizeUserHorn :Request {
 	}
 
 	public override Request.Response parseLogicResponse(string json){
-		base._response = JsonUtility.FromJson<Req_GetPrizeUserHorn.Response>(json);
-		return base._response;
+		try{
+			return JsonHelper.DeserializeJsonToObject<Req_GetPrizeUserHorn.Response> (json);
+		}catch(JsonSerializationException e){
+			throw e;
+		}
 	}
+
 	public override string command ()
 	{
 		return COMMAND;

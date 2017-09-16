@@ -18,11 +18,22 @@ public class GameMediator: BaseMediator {
 	public override IList<string> ListNotificationInterests()
 	{
 		IList<string> list = new List<string>();
+		list.Add (Req_GetMachinePrizeBallData.COMMAND);
+		list.Add (Req_MachineStartGrab.COMMAND);
 		return list;
 	}
 
 	public override void HandleNotification(INotification notification){        
-
+		switch( notification.Name ){
+		case  Req_GetMachinePrizeBallData.COMMAND:
+			m_game_ui.RespondBallInfo (notification);
+			break;
+		case Req_MachineStartGrab.COMMAND:
+			//m_game_ui.RespondGameStart (notification);
+			break;
+		default:
+			break;
+		}
 	}
 
 	public override void OnRegister()

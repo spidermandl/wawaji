@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 注册验证码信息
@@ -28,20 +29,18 @@ public class Req_RegisterVcode :Request {
 		{
 			public int code;
 			public string msg;
-			public List list;
 			public string info;
-		}
-
-		[Serializable]
-		public class List{
-
 		}
 
 	}
 
 	public override Request.Response parseLogicResponse(string json){
-		base._response = JsonUtility.FromJson<Req_RegisterVcode.Response>(json);
-		return base._response;
+		try{
+			return JsonHelper.DeserializeJsonToObject<Req_RegisterVcode.Response> (json);
+			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
+		}catch(JsonSerializationException e){
+			throw e;
+		}
 	}
 	public override string command ()
 	{

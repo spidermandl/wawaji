@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserResetPsd.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Request.cs" />
      <Compile Include="Assets\Scripts\Model\EnterProxy.cs" />
+     <Compile Include="Assets\Scripts\Model\GameBallProxy.cs" />
      <Compile Include="Assets\Scripts\Model\MachineInfoProxy.cs" />
      <Compile Include="Assets\Scripts\Model\MachinePrizeProxy.cs" />
      <Compile Include="Assets\Scripts\Model\Network\ByteBuffer.cs" />
@@ -91,6 +92,8 @@
      <Compile Include="Assets\Scripts\Model\PrizeSetProxy.cs" />
      <Compile Include="Assets\Scripts\Model\UpdatesProxy.cs" />
      <Compile Include="Assets\Scripts\Model\UserPrizeInfoProxy.cs" />
+     <Compile Include="Assets\Scripts\Model\UserPrizeListsProxy.cs" />
+     <Compile Include="Assets\Scripts\Model\UserPrizeStringsProxy.cs" />
      <Compile Include="Assets\Scripts\PhysicsMove.cs" />
      <Compile Include="Assets\Scripts\Sample\AnimTest.cs" />
      <Compile Include="Assets\Scripts\Sample\ApplicationFacade.cs" />
@@ -148,6 +151,7 @@
      <Compile Include="Assets\Scripts\View\NoticeMediator.cs" />
      <Compile Include="Assets\Scripts\View\PrizeMediator.cs" />
      <Compile Include="Assets\Scripts\View\RewardsMediator.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Enter\UIBaseVerifyWin.cs" />
      <Compile Include="Assets\Scripts\View\UI\Enter\UIDocWin.cs" />
      <Compile Include="Assets\Scripts\View\UI\Enter\UIEnterMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\Enter\UIForgetWin.cs" />

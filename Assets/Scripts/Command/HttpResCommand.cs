@@ -70,6 +70,12 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 				GameBallProxy proxy = Facade.RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
 				proxy.setGameInfo ((Req_MachineStartGrab.Response)request.Resp);
 			}
+		}else if (request.command () == Req_GetNewsLists.COMMAND) {
+
+			if (request.getResponseType () == typeof(Req_GetNewsLists.Response)) {
+				NewsProxy proxy = Facade.RetrieveProxy (NewsProxy.NAME) as NewsProxy;
+				proxy.setNewsData ((Req_GetNewsLists.Response)request.Resp);
+			}
 		}
 
 

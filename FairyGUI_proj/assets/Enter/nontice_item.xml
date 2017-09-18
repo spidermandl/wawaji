@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="603,94">
   <displayList>
-    <image id="n1_n1c3" name="n1" src="n1c317" xy="34,0" size="94,94">
+    <image id="n1_n1c3" name="n1" src="n1c317" xy="34,0" size="94,94" color="#fafafa">
       <relation target="" sidePair="height-height,left-left"/>
     </image>
     <image id="n2_n1c3" name="n2" src="n1c313" xy="38,94">
@@ -16,5 +16,4 @@
       <relation target="" sidePair="middle-middle"/>
     </text>
   </displayList>
-  <relation target="" sidePair="width-width,height-height"/>
 </component>

@@ -27,7 +27,6 @@ public class UIHomeMain : UIMain
 	}
 
 	void Start(){
-		getMachineInfo ();
 
 		_list = _mainView.GetChild("n17").asList;
 		//		_list.SetVirtualAndLoop();
@@ -49,6 +48,7 @@ public class UIHomeMain : UIMain
 		b_coin_1.onChanged.Add(bindData);
 		b_coin_5.onChanged.Add(bindData);
 		b_coin_10.onChanged.Add(bindData);
+		bindData ();
 
 		GComponent toolbar = _mainView.GetChild ("n3").asCom;
 		//提现界面
@@ -131,6 +131,9 @@ public class UIHomeMain : UIMain
 			_helpWin.Show();
 
 		});
+
+		//非ui逻辑
+		getMachineInfo ();
 	}
 
 	void Update(){
@@ -140,8 +143,9 @@ public class UIHomeMain : UIMain
 	///http 请求 machine info
 	/// </summary>
 	void getMachineInfo(){
-		if (UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) != null)
+		if (UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) != null) {//数据已经存在
 			return;
+		}
 		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
 		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
 		if (userid != 0 && token != null) {
@@ -201,10 +205,10 @@ public class UIHomeMain : UIMain
 			coin = 10;
 		if (UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) == null)
 			return;
-		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
 		selected_coin = coin;
 		PlayerPrefs.SetInt (LocalKey.SELECT_COIN_GAME,coin);
 
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
 		machine_data = proxy.getListByCoin (coin);
 		if (machine_data.Length > 0) {
 			_list.numItems = machine_data.Length;

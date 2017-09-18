@@ -25,8 +25,8 @@ public class HttpReqCommand : PureMVC.Patterns.SimpleCommand {
 				Facade.RegisterProxy (new AccountProxy (AccountProxy.NAME));
 			
 		} else if (request.command () == Req_GetPrizeInfo.COMMAND) {
-			if(Facade.RetrieveProxy (AccountProxy.NAME) ==null)
-				Facade.RegisterProxy (new AccountProxy (AccountProxy.NAME));
+			if(Facade.RetrieveProxy (UserPrizeInfoProxy.NAME) ==null)
+				Facade.RegisterProxy (new UserPrizeInfoProxy (UserPrizeInfoProxy.NAME));
 			
 		} else if (request.command () == Req_GetAllPrize.COMMAND) {
 			if(Facade.RetrieveProxy (PrizeSetProxy.NAME) ==null)
@@ -52,6 +52,9 @@ public class HttpReqCommand : PureMVC.Patterns.SimpleCommand {
 			request.command () == Req_MachineStartGrab.COMMAND) {
 			if(Facade.RetrieveProxy (GameBallProxy.NAME) ==null)
 				Facade.RegisterProxy (new GameBallProxy (GameBallProxy.NAME));
+		} else if (request.command () == Req_GetNewsLists.COMMAND) {
+			if(Facade.RetrieveProxy (NewsProxy.NAME) ==null)
+				Facade.RegisterProxy (new NewsProxy (NewsProxy.NAME));
 		}
 
 		UnityFacade.GetInstance ().Network.SendPost (request);

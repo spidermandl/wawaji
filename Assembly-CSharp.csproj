@@ -80,7 +80,6 @@
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegisterSendMsg.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserResetPsd.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Request.cs" />
-     <Compile Include="Assets\Scripts\Model\EnterProxy.cs" />
      <Compile Include="Assets\Scripts\Model\GameBallProxy.cs" />
      <Compile Include="Assets\Scripts\Model\MachineInfoProxy.cs" />
      <Compile Include="Assets\Scripts\Model\MachinePrizeProxy.cs" />
@@ -90,6 +89,7 @@
      <Compile Include="Assets\Scripts\Model\Network\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Model\Network\Protocal.cs" />
      <Compile Include="Assets\Scripts\Model\Network\SocketClient.cs" />
+     <Compile Include="Assets\Scripts\Model\NewsProxy.cs" />
      <Compile Include="Assets\Scripts\Model\PrizeSetProxy.cs" />
      <Compile Include="Assets\Scripts\Model\UpdatesProxy.cs" />
      <Compile Include="Assets\Scripts\Model\UserPrizeInfoProxy.cs" />

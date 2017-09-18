@@ -6,6 +6,10 @@ using PureMVC.Interfaces;
 public class NoticeMediator: BaseMediator {
 	public new const string NAME = "NoticeMediator";
 
+	private UINoticeMain m_notice_ui{
+		get{ return ((GameObject)ViewComponent).GetComponent<UINoticeMain>(); }
+	}
+
 	//IMediatorPlug needs
 	public NoticeMediator(string mediatorName, object viewComponent ):base(mediatorName, viewComponent ) {
 
@@ -21,6 +25,7 @@ public class NoticeMediator: BaseMediator {
 	public override void HandleNotification(INotification notification){        
 		switch( notification.Name ){
 		case  Req_GetNewsLists.COMMAND:
+			m_notice_ui.RespondNoticeList (notification);
 			break;
 		default:
 			break;

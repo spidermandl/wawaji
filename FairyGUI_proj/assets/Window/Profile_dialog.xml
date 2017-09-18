@@ -30,7 +30,7 @@
     <component id="n14_sfdg" name="n14" src="sfdg1x" xy="338,737" size="54,45">
       <relation target="n1_sfdg" sidePair="center-center,bottom-bottom"/>
     </component>
-    <list id="n15_sfdg" name="n15" xy="41,329" size="675,377" overflow="scroll" lineGap="30" defaultItem="ui://jorujmv2sfdg1y">
+    <list id="n15_sfdg" name="n15" xy="41,329" size="675,377" overflow="scroll" scrollBarFlags="2" lineGap="30" defaultItem="ui://jorujmv2sfdg1y">
       <relation target="n14_sfdg" sidePair="bottom-bottom"/>
       <relation target="n1_sfdg" sidePair="center-center,width-width"/>
     </list>

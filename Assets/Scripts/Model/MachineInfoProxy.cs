@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 
 /// <summary>
-/// 
+/// 主界面，娃娃机相关信息
 /// </summary>
 public class MachineInfoProxy : PureMVC.Patterns.Proxy {
 

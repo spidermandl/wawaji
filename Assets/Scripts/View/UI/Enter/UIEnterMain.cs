@@ -13,6 +13,9 @@ public class UIEnterMain : UIMain
 	UIForgetWin _forgetWin;//
 	UIDocWin _docWin;//
 
+	GList _list;
+	List<UserPrizeListsProxy.RecordsItem> records;//中奖名单
+
 	void Awake()
 	{
 		base.init ("Enter");
@@ -159,6 +162,12 @@ public class UIEnterMain : UIMain
 				_docWin.Hide();
 			});
 		});
+
+		_list = _mainView.GetChild ("n20").asList;
+		_list.SetVirtual ();
+		_list.itemRenderer = RenderListItem;
+		_list.numItems = 1;
+
 		//Stage.inst.onKeyDown.Add(OnKeyDown);
 
 	}
@@ -196,6 +205,32 @@ public class UIEnterMain : UIMain
 		request.Form = null;
 		UnityFacade.GetInstance ().SendNotification (HttpReqCommand.HTTP, request);
 	}
+	/// <summary>
+	/// 发送短信倒计时
+	/// </summary>
+	/// <returns>The down.</returns>
+	/// <param name="_win">Window.</param>
+	IEnumerator countDown(UIBaseVerifyWin _win){
+		for (int i = 0; i < 60; i++) {
+			_win.Code_countdown.asTextField.text = (60-i)+"秒后重发";
+			yield return new WaitForSeconds (1f);  
+		}
+		_win.Verify.visible = true;
+		_win.Code_countdown.visible = false;
+	}
+
+	/// <summary>
+	/// Renders the list item.
+	/// </summary>
+	/// <param name="index">Index.</param>
+	/// <param name="obj">Object.</param>
+	void RenderListItem(int index, GObject obj)
+	{
+		if (this.records != null) {
+			//this.records[index].
+		}
+	}
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -336,16 +371,12 @@ public class UIEnterMain : UIMain
 	/// </summary>
 	/// <param name="notification">Notification.</param>
 	public void RespondUserPrizeList(INotification notification){
-
-	}
-
-	IEnumerator countDown(UIBaseVerifyWin _win){
-		for (int i = 0; i < 60; i++) {
-			_win.Code_countdown.asTextField.text = (60-i)+"秒后重发";
-			yield return new WaitForSeconds (1f);  
+		UserPrizeListsProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UserPrizeListsProxy.NAME) as UserPrizeListsProxy;
+		if (proxy != null) {
+			this.records = proxy.Items;
+			_list.numItems = proxy.Items.Count;
+			_list.RefreshVirtualList ();
 		}
-		_win.Verify.visible = true;
-		_win.Code_countdown.visible = false;
 	}
 
 }

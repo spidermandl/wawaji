@@ -11,7 +11,7 @@
     </component>
     <component id="n4_ddj4" name="n4" src="e8id18" xy="147,173" size="127,122">
       <relation target="n5_ddj4" sidePair="left-left,top-top"/>
-      <Button controller="bid" page="0"/>
+      <Button checked="true" controller="bid" page="0"/>
     </component>
     <component id="n5_ddj4" name="n5" src="e8id19" xy="311,173" size="127,122">
       <relation target="n1_ddj4" sidePair="top-top,center-center"/>
@@ -55,7 +55,7 @@
       <relation target="n14_ddj4" sidePair="leftext-left,rightext-right"/>
       <relation target="n14_ddj4" sidePair="middle-middle"/>
     </text>
-    <list id="n17_ddj4" name="n17" xy="193,304" size="361,648" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://wvjnne46ddj416">
+    <list id="n17_ddj4" name="n17" xy="193,304" size="361,648" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="2" defaultItem="ui://wvjnne46ddj416">
       <relation target="n1_ddj4" sidePair="center-center,top-top"/>
       <item/>
       <item/>

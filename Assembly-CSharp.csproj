@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeUserLists.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetUpdatePics.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetUserForgetPsdVcode.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_MachineEndGrab.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_MachineStartGrab.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_RegisterVcode.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UsePrize.cs" />
@@ -173,10 +174,6 @@
      <Compile Include="Assets\Scripts\View\UI\Rewards\UIRewardsMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\UIMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\UIPackageManager.cs" />
-     <Compile Include="Assets\Scripts\View\UI\sample\BallMesh.cs" />
-     <Compile Include="Assets\Scripts\View\UI\sample\CreateCountBox.cs" />
-     <Compile Include="Assets\Scripts\View\UI\sample\MeshDemo.cs" />
-     <Compile Include="Assets\Scripts\View\UI\sample\MyBox.cs" />
      <Compile Include="Assets\Scripts\View\UI\window\BaseWindow.cs" />
      <Compile Include="Assets\Scripts\View\UI\window\UIConnection.cs" />
      <Compile Include="Assets\Scripts\View\UI\window\UIExchange.cs" />

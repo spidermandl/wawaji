@@ -49,6 +49,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 				MemoryVersion.Entry v = new MemoryVersion.Entry ();
 				v.is_new = d.is_new;
 				v.pic = d.pic;
+				v.pic_path = d.pic_path;
 				memVersion.ball.Add (d.id, v);
 			}
 		}
@@ -57,6 +58,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 				MemoryVersion.Entry v = new MemoryVersion.Entry ();
 				v.is_new = d.is_new;
 				v.pic = d.pic;
+				v.pic_path = d.pic_path;
 				memVersion.prize.Add (d.id, v);
 			}
 		}
@@ -80,6 +82,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 				if (memVersion.ball [e.id].pic == null || !memVersion.ball [e.id].pic.Equals (e.pic)) {
 					memVersion.ball [e.id].is_new = 1;
 					memVersion.ball [e.id].pic = e.pic;
+					memVersion.ball [e.id].pic_path = e.pic_path;
 				}
 			}
 			foreach (Req_GetUpdatePics.Response.Entry e in online.getPrize()) {
@@ -90,6 +93,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 				if (memVersion.prize [e.id].pic == null || !memVersion.prize [e.id].pic.Equals (e.pic)) {
 					memVersion.prize [e.id].is_new = 1;
 					memVersion.prize [e.id].pic = e.pic;
+					memVersion.prize [e.id].pic_path = e.pic_path;
 				}
 			}
 		}
@@ -110,6 +114,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 			e.id = key;
 			e.is_new = memVersion.ball [key].is_new;
 			e.pic = memVersion.ball [key].pic;
+			e.pic_path = memVersion.ball [key].pic_path;
 			localVersion.data.ball [index] = e;
 			index++;
 		}
@@ -120,6 +125,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 			e.id = key;
 			e.is_new = memVersion.prize [key].is_new;
 			e.pic = memVersion.prize [key].pic;
+			e.pic_path = memVersion.prize [key].pic_path;
 			localVersion.data.prize [index] = e;
 			index++;
 		}
@@ -158,6 +164,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		{
 			public string id;
 			public string pic;
+			public string pic_path;
 			public int is_new;
 		}
 
@@ -177,6 +184,7 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		[Serializable]
 		public class Entry{
 			public string pic;
+			public string pic_path;
 			public int is_new;//0 已经存在的，1 需要更新的
 		}
 	}

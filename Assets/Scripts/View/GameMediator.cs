@@ -20,6 +20,7 @@ public class GameMediator: BaseMediator {
 		IList<string> list = new List<string>();
 		list.Add (Req_GetMachinePrizeBallData.COMMAND);
 		list.Add (Req_MachineStartGrab.COMMAND);
+		list.Add (Req_MachineEndGrab.COMMAND);
 		return list;
 	}
 
@@ -29,7 +30,10 @@ public class GameMediator: BaseMediator {
 			m_game_ui.RespondBallInfo (notification);
 			break;
 		case Req_MachineStartGrab.COMMAND:
-			//m_game_ui.RespondGameStart (notification);
+			m_game_ui.RespondGameStart (notification);
+			break;
+		case Req_MachineEndGrab.COMMAND:
+			m_game_ui.RespondGameEnd (notification);
 			break;
 		default:
 			break;

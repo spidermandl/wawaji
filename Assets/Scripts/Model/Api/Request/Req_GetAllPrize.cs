@@ -34,12 +34,12 @@ public class Req_GetAllPrize :Request {
 		[Serializable]
 		public class Info
 		{
-			public int id;
-			public string name;
-			public int price;
-			public int coin;
-			public string pic;
-			public string desc;
+			public int id;//奖品ID
+			public string name;//奖品名称
+			public int price;//奖品价格
+			public int coin;//奖品金币价格
+			public string pic;//奖品图片
+			public string desc;//奖品描述
 		}
 	}
 

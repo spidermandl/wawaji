@@ -48,7 +48,8 @@ public class Req_GetMachinePrizeBallData :Request {
 			public int coin;//奖品金币价格
 			public string p_pic;//奖品图片
 			public string b_pic;//海洋球图片
-			public float proportion;//占奖池内海洋球比例
+			public int is_matter;//0金币 1实物奖品
+			public int ball_num;//占奖池内海洋球数量
 		}
 
 	}

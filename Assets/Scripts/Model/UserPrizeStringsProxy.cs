@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 
 /// <summary>
-/// 
+/// 中奖字串
 /// </summary>
 public class UserPrizeStringProxy : PureMVC.Patterns.Proxy {
 

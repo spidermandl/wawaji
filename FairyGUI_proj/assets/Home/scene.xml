@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="361,648">
   <displayList>
-    <loader id="n0_ddj4" name="n0" xy="0,0" size="361,648" url="ui://wvjnne46ddj4y" fill="scaleFree">
+    <loader id="n3_ha3o" name="n3" xy="0,0" size="361,648" url="ui://wvjnne46ha3o1b">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
+    <richtext id="n2_ha3o" name="n2" xy="128,39" size="122,38" fontSize="30" color="#ffcc00" align="center" vAlign="middle" letterSpacing="2" autoSize="none" bold="true" strokeColor="#875ae0" text="爱爱场">
+      <relation target="n3_ha3o" sidePair="top-top,center-center"/>
+    </richtext>
   </displayList>
 </component>

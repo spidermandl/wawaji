@@ -29,6 +29,16 @@ public class MachineInfoProxy : PureMVC.Patterns.Proxy {
 		public MachineItem[] machine;
 	}
 
+	/// <summary>
+	/// Type and item.
+	/// </summary>
+	public class TypeAndItem
+	{
+		public string name;
+		public int machine_type_id;
+		public int coin;
+		public int machine_id;
+	}
 
 	public MachineInfoProxy (string proxyName)
 		: base(proxyName, null){
@@ -57,8 +67,8 @@ public class MachineInfoProxy : PureMVC.Patterns.Proxy {
 		}
 		this.Items = items;
 
-		if(PlayerPrefs.GetInt (LocalKey.SELECT_MACHINE_TYPE,-1)==-1)
-			PlayerPrefs.SetInt (LocalKey.SELECT_MACHINE_TYPE, items [0].machine_type_id);
+//		if(PlayerPrefs.GetInt (LocalKey.SELECT_MACHINE_TYPE,-1)==-1)
+//			PlayerPrefs.SetInt (LocalKey.SELECT_MACHINE_TYPE, items [0].machine_type_id);
 	}
 
 	/// <summary>
@@ -67,20 +77,42 @@ public class MachineInfoProxy : PureMVC.Patterns.Proxy {
 	/// <returns>The machine identifier.</returns>
 	/// <param name="mtid">Mtid.</param>
 	/// <param name="coin">Coin.</param>
-	public int getMachineId(int mtid,int coin){
+	public int getMachineId(TypeAndItem item){
 		MachineType temp = null;
 		foreach (MachineType t in items) {
-			if (t.machine_type_id == mtid) {
+			if (t.machine_type_id == item.machine_type_id) {
 				temp = t;
 				break;
 			}
 		}
 		foreach(MachineItem i in temp.machine){
-			if (i.coin == coin)
+			if (i.coin == item.coin)
 				return i.machine_id;
 		}
 
 		return 0;
+	}
+
+	/// <summary>
+	/// Gets the list by coin.
+	/// </summary>
+	/// <returns>The list by coin.</returns>
+	/// <param name="coin">Coin.</param>
+	public TypeAndItem[] getListByCoin(int coin){
+		List<TypeAndItem> list = new List<TypeAndItem> ();
+		foreach (MachineType t in items) {
+			foreach(MachineItem i in t.machine){
+				if (i.coin == coin) {
+					TypeAndItem item = new TypeAndItem ();
+					item.coin = coin;
+					item.machine_id = i.machine_id;
+					item.machine_type_id = t.machine_type_id;
+					item.name = t.name;
+					list.Add (item);
+				}
+			}
+		}
+		return list.ToArray ();
 	}
 
 }

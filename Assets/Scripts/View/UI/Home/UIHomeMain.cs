@@ -17,6 +17,8 @@ public class UIHomeMain : UIMain
 	UIPrize _prizeWin;//
 
 	GButton b_coin_1,b_coin_5,b_coin_10;
+	MachineInfoProxy.TypeAndItem[] machine_data;
+	int selected_coin = 1;
 
 	void Awake()
 	{
@@ -26,13 +28,13 @@ public class UIHomeMain : UIMain
 
 	void Start(){
 		getMachineInfo ();
-		getHornList ();
 
 		_list = _mainView.GetChild("n17").asList;
 		//		_list.SetVirtualAndLoop();
 
 		_list.itemRenderer = RenderListItem;
-		//_list.numItems = 5;
+		_list.SetVirtual ();
+		_list.numItems = 3;
 		item_index = 0;
 		_list.scrollPane.onScroll.Add(DoSpecialEffect);
 		DoSpecialEffect();
@@ -43,9 +45,10 @@ public class UIHomeMain : UIMain
 		b_coin_1 = _mainView.GetChild ("n4") as GButton;
 		b_coin_5 = _mainView.GetChild ("n5") as GButton;
 		b_coin_10 = _mainView.GetChild ("n6") as GButton;
-		b_coin_1.onChanged.Add(bidChange);
-		b_coin_5.onChanged.Add(bidChange);
-		b_coin_10.onChanged.Add(bidChange);
+		initCoin ();
+		b_coin_1.onChanged.Add(bindData);
+		b_coin_5.onChanged.Add(bindData);
+		b_coin_10.onChanged.Add(bindData);
 
 		GComponent toolbar = _mainView.GetChild ("n3").asCom;
 		//提现界面
@@ -104,7 +107,7 @@ public class UIHomeMain : UIMain
 		//开始游戏
 		_mainView.GetChild("n11").onClick.Add(() => { 
 			this._clickFunc(ClickType.PlayGame);
-			this.changeUIpage(typeof(UIGameMain));
+			enterGame();
 
 		});
 
@@ -134,9 +137,11 @@ public class UIHomeMain : UIMain
 	}
 
 	/// <summary>
-	/// Gets the machine info.
+	///http 请求 machine info
 	/// </summary>
 	void getMachineInfo(){
+		if (UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) != null)
+			return;
 		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
 		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
 		if (userid != 0 && token != null) {
@@ -147,27 +152,46 @@ public class UIHomeMain : UIMain
 		}
 	}
 	/// <summary>
-	/// Gets the horn list.
+	/// http请求hron list
 	/// </summary>
 	void getHornList(){
 		if (UnityFacade.GetInstance ().RetrieveProxy (UserPrizeStringProxy.NAME) != null)
 			return;
 		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
 		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
-		int mtid = PlayerPrefs.GetInt (LocalKey.SELECT_MACHINE_TYPE, -1);
-		if (mtid !=-1 && userid != 0 && token != null) {
-			Req_GetPrizeUserHorn request = new Req_GetPrizeUserHorn ();
-			request.UserId = userid;
-			request.Token = token;
-			request.MtId = mtid;
-			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		if (proxy != null) {
+			int mtid = machine_data [item_index].machine_type_id;
+			if (userid != 0 && token != null) {
+				Req_GetPrizeUserHorn request = new Req_GetPrizeUserHorn ();
+				request.UserId = userid;
+				request.Token = token;
+				request.MtId = mtid;
+				UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+			}
 		}
+
 	}
 
 	/// <summary>
-	/// Bids the change.
+	/// Inits the coin.
 	/// </summary>
-	void bidChange(){
+	void initCoin(){
+		int coin = PlayerPrefs.GetInt (LocalKey.SELECT_COIN_GAME);
+		if (coin == 1)
+			b_coin_1.selected = true;
+		else if (coin == 5)
+			b_coin_5.selected = true;
+		else if (coin == 10)
+			b_coin_10.selected = true;
+		else
+			b_coin_1.selected = true;
+	}
+
+	/// <summary>
+	/// 绑定数据
+	/// </summary>
+	void bindData(){
 		int coin = 1;
 		if (b_coin_1.selected)
 			coin = 1;
@@ -178,8 +202,28 @@ public class UIHomeMain : UIMain
 		if (UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) == null)
 			return;
 		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
-		PlayerPrefs.SetInt(LocalKey.SELECT_MACHINE_ID ,proxy.getMachineId (PlayerPrefs.GetInt (LocalKey.SELECT_MACHINE_TYPE), coin));
+		selected_coin = coin;
+		PlayerPrefs.SetInt (LocalKey.SELECT_COIN_GAME,coin);
+
+		machine_data = proxy.getListByCoin (coin);
+		if (machine_data.Length > 0) {
+			_list.numItems = machine_data.Length;
+			_list.RefreshVirtualList ();
+		}
 	}
+	/// <summary>
+	/// 进入游戏
+	/// </summary>
+	void enterGame(){
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		if (proxy != null) {
+			PlayerPrefs.SetInt (LocalKey.SELECT_MACHINE_ID,
+				proxy.getMachineId (machine_data[item_index]));
+		}
+
+		this.changeUIpage(typeof(UIGameMain));
+	}
+
 	void DoSpecialEffect()
 	{
 		//change the scale according to the distance to middle
@@ -203,9 +247,12 @@ public class UIHomeMain : UIMain
 
 	void RenderListItem(int index, GObject obj)
 	{
-		GButton item = (GButton)obj;
-		item.SetPivot(0.5f, 0.5f);
-		//item.icon = UIPackage.GetItemURL("LoopList", "n" + (index + 1));
+		if(machine_data !=null && machine_data.Length>0){
+			(obj.asCom.GetChild ("n2") as GRichTextField).text = machine_data[index].name;
+		}
+		obj.onClick.Add (() => {
+			enterGame();
+		});
 	}
 
 	void ScrollToNext(int step){
@@ -215,6 +262,8 @@ public class UIHomeMain : UIMain
 			item_index = index;
 		}
 	}
+
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -235,7 +284,8 @@ public class UIHomeMain : UIMain
 	/// </summary>
 	/// <param name="notification">Notification.</param>
 	public void RespondMachineInfo(INotification notification){
-		bidChange ();
+		bindData ();
+		getHornList ();
 	}
 
 	/// <summary>

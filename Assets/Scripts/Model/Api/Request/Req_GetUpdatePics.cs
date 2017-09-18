@@ -56,6 +56,7 @@ public class Req_GetUpdatePics :Request {
 		{
 			public string id;
 			public string pic;
+			public string pic_path;
 		}
 	}
 

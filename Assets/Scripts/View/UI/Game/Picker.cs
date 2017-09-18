@@ -228,6 +228,7 @@ public class Picker : MonoBehaviour
 		Vector3 dir = Picker.dropPos - this.gameObject.transform.localPosition;
 		float dis = (float)Math.Sqrt (dir.x * dir.x + dir.y * dir.y + dir.z * dir.z);
 		this.releaseDirection = new Vector3 (dir.x/dis,dir.y/dis,dir.z/dis);
+		sendGameEndMsg ();
 		StartCoroutine (dropBallByOdds ());
 	}
 	public void Ship_FixedUpdate(){
@@ -350,6 +351,18 @@ public class Picker : MonoBehaviour
 			yield return new WaitForSeconds (0.2f);
 			restorePhysics ();
 		}
+	}
+	/// <summary>
+	/// Sends the game end message.
+	/// </summary>
+	void sendGameEndMsg(){
+		Req_MachineEndGrab request = new Req_MachineEndGrab ();
+		request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
+		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
+		request.MId = PlayerPrefs.GetInt(LocalKey.SELECT_MACHINE_ID);
+		request.LogId = (UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy).GameId;
+		request.BallIdStr = "1,2,3";
+		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
 	/// <summary>
 	/// 移动过程按概率掉落

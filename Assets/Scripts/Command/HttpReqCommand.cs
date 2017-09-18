@@ -48,7 +48,8 @@ public class HttpReqCommand : PureMVC.Patterns.SimpleCommand {
 			if(Facade.RetrieveProxy (UserPrizeListsProxy.NAME) ==null)
 				Facade.RegisterProxy (new UserPrizeListsProxy (UserPrizeListsProxy.NAME));
 			
-		} else if (request.command () == Req_GetMachinePrizeBallData.COMMAND) {
+		} else if (request.command () == Req_GetMachinePrizeBallData.COMMAND||
+			request.command () == Req_MachineStartGrab.COMMAND) {
 			if(Facade.RetrieveProxy (GameBallProxy.NAME) ==null)
 				Facade.RegisterProxy (new GameBallProxy (GameBallProxy.NAME));
 		}

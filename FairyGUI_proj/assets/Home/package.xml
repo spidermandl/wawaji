@@ -2,7 +2,6 @@
 <packageDescription id="wvjnne46" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="ddj40" name="Home.xml" path="/" exported="true"/>
-    <image id="ddj41" name="bg_home.png" path="/images/"/>
     <image id="ddj42" name="i_profile_frame.png" path="/images/" scale="9grid" scale9grid="188,0,376,60"/>
     <component id="ddj43" name="Player_info.xml" path="/"/>
     <image id="ddj45" name="i_exchange.png" path="/images/"/>
@@ -30,7 +29,6 @@
     <image id="ddj4v" name="i_setting.png" path="/images/"/>
     <image id="ddj4w" name="i_start_game.png" path="/images/"/>
     <image id="ddj4x" name="i_check_prize.png" path="/images/"/>
-    <image id="ddj4y" name="i_machine.png" path="/images/"/>
     <component id="ddj4z" name="left.xml" path="/button/"/>
     <component id="ddj410" name="right.xml" path="/button/"/>
     <component id="ddj411" name="setting.xml" path="/button/"/>
@@ -39,10 +37,10 @@
     <component id="ddj414" name="check_prize.xml" path="/button/"/>
     <image id="ddj415" name="bg_notice_frame.png" path="/images/"/>
     <component id="ddj416" name="scene.xml" path="/"/>
-    <image id="fvaa17" name="bg.png" path="/images/"/>
     <component id="e8id18" name="bid_1_coin.xml" path="/button/"/>
     <component id="e8id19" name="bid_5_coin.xml" path="/button/"/>
     <component id="e8id1a" name="bid_10_coin.xml" path="/button/"/>
+    <image id="ha3o1b" name="i_machine.png" path="/images/"/>
   </resources>
   <publish name="Home" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

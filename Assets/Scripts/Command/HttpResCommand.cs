@@ -35,21 +35,25 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 				proxy.setPrizeInfoData ((Req_GetAllPrize.Response)request.Resp);
 			}
 		}else if (request.command () == Req_GetMachinePrizeInfo.COMMAND) {
+			
 			if (request.getResponseType () == typeof(Req_GetMachinePrizeInfo.Response)) {
 				MachinePrizeProxy proxy = Facade.RetrieveProxy (MachinePrizeProxy.NAME) as MachinePrizeProxy;
 				proxy.setMachinePrizeData ((Req_GetMachinePrizeInfo.Response)request.Resp);
 			}
 		}else if (request.command () == Req_GetMachineInfo.COMMAND) {
+			
 			if (request.getResponseType () == typeof(Req_GetMachineInfo.Response)) {
 				MachineInfoProxy proxy = Facade.RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
 				proxy.setMachineInfoData ((Req_GetMachineInfo.Response)request.Resp);
 			}
 		}else if (request.command () == Req_GetPrizeUserHorn.COMMAND) {
+			
 			if (request.getResponseType () == typeof(Req_GetPrizeUserHorn.Response)) {
 				UserPrizeStringProxy proxy = Facade.RetrieveProxy (UserPrizeStringProxy.NAME) as UserPrizeStringProxy;
 				proxy.setPrizeStringsData ((Req_GetPrizeUserHorn.Response)request.Resp);
 			}
 		}else if (request.command () == Req_GetPrizeUserLists.COMMAND) {
+			
 			if (request.getResponseType () == typeof(Req_GetPrizeUserLists.Response)) {
 				UserPrizeListsProxy proxy = Facade.RetrieveProxy (UserPrizeListsProxy.NAME) as UserPrizeListsProxy;
 				proxy.setUserPrizeLists ((Req_GetPrizeUserLists.Response)request.Resp);
@@ -59,6 +63,12 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 			if (request.getResponseType () == typeof(Req_GetMachinePrizeBallData.Response)) {
 				GameBallProxy proxy = Facade.RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
 				proxy.setBallLists ((Req_GetMachinePrizeBallData.Response)request.Resp);
+			}
+		}else if (request.command () == Req_MachineStartGrab.COMMAND) {
+
+			if (request.getResponseType () == typeof(Req_MachineStartGrab.Response)) {
+				GameBallProxy proxy = Facade.RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
+				proxy.setGameInfo ((Req_MachineStartGrab.Response)request.Resp);
 			}
 		}
 

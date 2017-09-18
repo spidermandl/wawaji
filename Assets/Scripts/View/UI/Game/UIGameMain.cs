@@ -101,9 +101,10 @@ public class UIGameMain : UIMain
 			this.gameManager.stopMoving();
 
 		});
-
+		//go
 		controller.GetChild("n6").onClick.Add(() => { 
 			this.gameManager.startPick();
+			getBallPickingOdd();
 		});
 		/////////////////////////////////////////////////////////////////////////////////
 		/// 手势操作相关
@@ -114,7 +115,6 @@ public class UIGameMain : UIMain
 		gesture.onMove.Add(OnSwipeMove);
 		gesture.onEnd.Add(OnSwipeEnd);
 
-//
 //		RotationGesture gesture4 = new RotationGesture(holder);
 //		gesture4.onAction.Add(OnRotate);
 
@@ -140,7 +140,16 @@ public class UIGameMain : UIMain
 		request.MId = PlayerPrefs.GetInt(LocalKey.SELECT_MACHINE_ID);
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
-
+	/// <summary>
+	/// Gets the ball picking odd.
+	/// </summary>
+	void getBallPickingOdd(){
+		Req_MachineStartGrab request = new Req_MachineStartGrab ();
+		request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
+		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
+		request.MId = PlayerPrefs.GetInt(LocalKey.SELECT_MACHINE_ID);
+		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+	}
     /// <summary>
 	/// 销毁界面回调
     /// </summary>
@@ -211,8 +220,15 @@ public class UIGameMain : UIMain
 	}
 
 	public void RespondBallInfo(INotification notification){
+		
+	}
+
+	public void RespondGameStart(INotification notification){
 
 	}
 
+	public void RespondGameEnd(INotification notification){
+
+	}
 }
 

@@ -21,7 +21,6 @@ public class HomeMediator: BaseMediator {
 		list.Add (Req_UserLogout.COMMAND);
 		list.Add (Req_GetMachineInfo.COMMAND);
 		list.Add (Req_GetPrizeUserHorn.COMMAND);
-		list.Add (Req_MachineStartGrab.COMMAND);
 		return list;
 	}
 

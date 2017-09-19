@@ -3,4 +3,5 @@ Library/*
 obj/*
 *.apk
 ios_proj/*
-android_proj/*
+android_proj/WaWaJi/*
+android/wwj/*/build/*

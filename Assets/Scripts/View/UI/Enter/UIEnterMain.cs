@@ -228,7 +228,7 @@ public class UIEnterMain : UIMain
 	/// Wechat login.
 	/// </summary>
 	void wechatLogin(){
-		using (AndroidJavaClass jc = new AndroidJavaClass("com.wawaji.wechat.WechatMainActivity"))  
+		using (AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
 		{  
 			//Debug.Log("get AndroidJavaClass");  
 			using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity"))  
@@ -418,6 +418,10 @@ public class UIEnterMain : UIMain
 		}
 	}
 
+	/// <summary>
+	/// Responds the wechat login.
+	/// </summary>
+	/// <param name="wxid">Wxid.</param>
 	public void RespondWechatLogin(string wxid){
 		Req_UserLogin request = new Req_UserLogin();
 		request.Uuid = getDeviceUuid();

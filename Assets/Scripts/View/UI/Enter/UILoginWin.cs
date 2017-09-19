@@ -26,7 +26,12 @@ public class UILoginWin : BaseWindow
 		get{ return this.contentPane.GetChild ("n24"); }
 	}
 
-
+	public GObject Wechat{
+		get{ return this.contentPane.GetChild ("n12"); }
+	}
+	public GObject Guest{
+		get{ return this.contentPane.GetChild ("n13"); }
+	}
 	bool isLogining;
 	public bool ValidLogin {
 		get{ return !isLogining; }

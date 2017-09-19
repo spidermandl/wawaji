@@ -3,3 +3,4 @@ Library/*
 obj/*
 *.apk
 ios_proj/*
+android_proj/*

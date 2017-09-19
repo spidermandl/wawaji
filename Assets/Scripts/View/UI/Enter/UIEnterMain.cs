@@ -49,7 +49,7 @@ public class UIEnterMain : UIMain
 					Req_UserLogin request = new Req_UserLogin();
 					request.Phone = _loginWin.Username.asTextField.text;
 					request.Psd = _loginWin.Password.asTextField.text;
-					request.Uuid = AppConst.UUID;
+					request.Uuid = getDeviceUuid();
 					request.Type = 1;
 					if(Util.Filter(request.Phone)!=null &&
 						Util.Filter(request.Psd) != null){
@@ -82,7 +82,7 @@ public class UIEnterMain : UIMain
 						request.MsgCode = _registerWin.Phone_code_input.asTextField.text;
 						request.Psd = _registerWin.Password.asTextField.text;
 						request.VerCode = _registerWin.Pic_code.asTextField.text;
-						request.Uuid = AppConst.UUID;
+						request.Uuid = getDeviceUuid();
 						if(Util.Filter(request.Phone)!=null &&
 							Util.Filter(request.MsgCode) != null &&
 							Util.Filter(request.Psd) != null &&
@@ -149,7 +149,25 @@ public class UIEnterMain : UIMain
 					}
 				});
 			});
+
+			//wechat login
+			_loginWin.Wechat.onClick.Add (() => {
+				this.wechatLogin();
+			});
+			//guest login
+			_loginWin.Guest.onClick.Add (() => {
+				Req_UserLogin request = new Req_UserLogin();
+				request.Uuid = getDeviceUuid();
+				request.Type = 3;
+				if(Util.Filter(request.Phone)!=null &&
+					Util.Filter(request.Psd) != null){
+					UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+					_loginWin.ValidLogin = false;
+				}
+			});
+
 		});
+
 		_mainView.GetChild ("n7").onClick.Add (() => {
 			this.changeUIpage(typeof(UINoticeMain));
 		});
@@ -204,6 +222,27 @@ public class UIEnterMain : UIMain
 		Req_GetPrizeUserLists request = new Req_GetPrizeUserLists ();
 		request.Form = null;
 		UnityFacade.GetInstance ().SendNotification (HttpReqCommand.HTTP, request);
+	}
+
+	/// <summary>
+	/// Wechat login.
+	/// </summary>
+	void wechatLogin(){
+		using (AndroidJavaClass jc = new AndroidJavaClass("com.wawaji.wechat.WechatMainActivity"))  
+		{  
+			//Debug.Log("get AndroidJavaClass");  
+			using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity"))  
+			{  
+				Debug.Log("get AndroidJavaObject Begin");  
+				jo.Call("requestLogin");
+				Debug.Log("get AndroidJavaObject End");  
+			}  
+		} 
+	}
+
+	string getDeviceUuid(){
+		DeviceInfoProxy proxy = UnityFacade.GetInstance ().RemoveProxy (DeviceInfoProxy.NAME) as DeviceInfoProxy;
+		return proxy.Uuid;
 	}
 	/// <summary>
 	/// 发送短信倒计时
@@ -376,6 +415,18 @@ public class UIEnterMain : UIMain
 			this.records = proxy.Items;
 			_list.numItems = proxy.Items.Count;
 			_list.RefreshVirtualList ();
+		}
+	}
+
+	public void RespondWechatLogin(string wxid){
+		Req_UserLogin request = new Req_UserLogin();
+		request.Uuid = getDeviceUuid();
+		request.Wxid = wxid;
+		request.Type = 2;
+		if(Util.Filter(request.Phone)!=null &&
+			Util.Filter(request.Psd) != null){
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+			_loginWin.ValidLogin = false;
 		}
 	}
 

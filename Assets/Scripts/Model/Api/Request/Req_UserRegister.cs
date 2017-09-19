@@ -47,6 +47,7 @@ public class Req_UserRegister :Request {
 		set{ uuid = value;_form.AddField ("uuid", value);}
 	}
 
+
 	public Req_UserRegister()
 	{
 		base.Api = this._api;

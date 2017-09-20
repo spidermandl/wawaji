@@ -31,7 +31,7 @@
       <relation target="n14_ddj4" sidePair="top-top"/>
       <relation target="n1_ddj4" sidePair="right-right"/>
     </component>
-    <component id="n11_ddj4" name="n11" src="ddj412" xy="90,991" size="267,85">
+    <component id="n11_ddj4" name="n11" src="ddj412" xy="90,992" size="267,85">
       <relation target="n1_ddj4" sidePair="width-width,top-top"/>
       <relation target="n1_ddj4" sidePair="left-left"/>
     </component>

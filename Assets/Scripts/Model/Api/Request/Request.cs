@@ -99,6 +99,16 @@ public abstract class Request {
 		return getChildMsg ();
 	}
 	/// <summary>
+	/// Parses the error.
+	/// </summary>
+	/// <returns>The error.</returns>
+	/// <param name="msg">Message.</param>
+	public Response parseError(string msg){
+		Exception e = new Exception ();
+		e.msg = msg;
+		return e;
+	}
+	/// <summary>
 	/// Parses the response.
 	/// </summary>
 	/// <returns>The response.</returns>

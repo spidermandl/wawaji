@@ -228,18 +228,21 @@ public class UIEnterMain : UIMain
 	/// Wechat login.
 	/// </summary>
 	void wechatLogin(){
-		using (AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+		using (AndroidJavaClass jc = new AndroidJavaClass(AppConst.ANDROID_INTERFACE_CLASS))
 		{  
 			//Debug.Log("get AndroidJavaClass");  
 			using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity"))  
-			{  
+			{
 				Debug.Log("get AndroidJavaObject Begin");  
 				jo.Call("requestLogin");
 				Debug.Log("get AndroidJavaObject End");  
 			}  
 		} 
 	}
-
+	/// <summary>
+	/// Gets the device UUID.
+	/// </summary>
+	/// <returns>The device UUID.</returns>
 	string getDeviceUuid(){
 		DeviceInfoProxy proxy = UnityFacade.GetInstance ().RemoveProxy (DeviceInfoProxy.NAME) as DeviceInfoProxy;
 		return proxy.Uuid;
@@ -266,6 +269,9 @@ public class UIEnterMain : UIMain
 	void RenderListItem(int index, GObject obj)
 	{
 		if (this.records != null) {
+			obj.asCom.GetChild ("n3").asTextField.text = this.records [index].name;
+			obj.asCom.GetChild ("n5").asTextField.text = this.records [index].phone;
+			obj.asCom.GetChild ("n6").asLoader.url = this.records [index].pic;
 			//this.records[index].
 		}
 	}

@@ -20,10 +20,6 @@
     <image id="n11_sfdg" name="n11" src="sfdg1u" xy="176,211">
       <relation target="n13_sfdg" sidePair="left-left,top-top"/>
     </image>
-    <image id="n12_sfdg" name="n12" src="sfdg1v" xy="243,222" size="69,36">
-      <relation target="n11_sfdg" sidePair="left-left,top-top"/>
-      <relation target="n8_sfdg" sidePair="rightext-left"/>
-    </image>
     <text id="n13_sfdg" name="n13" xy="57,227" size="105,28" fontSize="20" color="#ffffff" text="当前代币数">
       <relation target="n7_sfdg" sidePair="left-left,middle-middle"/>
     </text>
@@ -34,6 +30,9 @@
       <relation target="n14_sfdg" sidePair="bottom-bottom"/>
       <relation target="n1_sfdg" sidePair="center-center,width-width"/>
     </list>
+    <loader id="n18_dc7j" name="n18" xy="63,25" size="130,120">
+      <relation target="n16_qzv1" sidePair="left-left,top-top"/>
+    </loader>
     <image id="n16_qzv1" name="n16" src="qzv12i" xy="6,11">
       <relation target="n1_sfdg" sidePair="top-top,left-left"/>
     </image>
@@ -41,5 +40,12 @@
       <relation target="n1_sfdg" sidePair="topext-bottom"/>
       <relation target="" sidePair="bottomext-bottom,center-center"/>
     </component>
+    <text id="n19_dc7j" name="n19" xy="212,65" size="185,38" fontSize="25" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text="到付件1">
+      <relation target="n16_qzv1" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n20_dc7j" name="n20" xy="238,212" size="180,60" font="Seravek Medium" fontSize="45" color="#ffff00" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="264">
+      <relation target="n11_sfdg" sidePair="top-top,left-left"/>
+      <relation target="n8_sfdg" sidePair="rightext-left"/>
+    </text>
   </displayList>
 </component>

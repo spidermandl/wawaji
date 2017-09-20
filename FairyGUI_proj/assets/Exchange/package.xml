@@ -18,8 +18,7 @@
     <image id="lrqte" name="i_shadow.png" path="/images/"/>
     <component id="lrqtg" name="exchange_item.xml" path="/"/>
     <image id="lrqti" name="i_small_coin.png" path="/images/"/>
-    <image id="lrqtj" name="39999.png" path="/images/"/>
-    <image id="lrqtk" name="c_name.png" path="/images/"/>
+    <image id="dc7jl" name="c_rate.png" path="/images/"/>
   </resources>
   <publish name="Exchange" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

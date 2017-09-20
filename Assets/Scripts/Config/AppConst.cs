@@ -10,6 +10,7 @@ public class AppConst
 
 	public static string ANDROID_APPID = "wx3385ddbd34a7aacb";
 	public static string ANDROID_APPSECRET = "389311c011d9531cf6b16f5255bc7d72";
+	public static string ANDROID_INTERFACE_CLASS = "com.unity3d.player.UnityPlayer";
 
 	public const bool DebugMode =false;
 	public const string AssetBundleName = "AssetBundles";

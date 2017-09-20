@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.security.MessageDigest;
 
-import com.wawaji.Util;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;

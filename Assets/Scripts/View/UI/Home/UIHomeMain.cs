@@ -18,7 +18,6 @@ public class UIHomeMain : UIMain
 
 	GButton b_coin_1,b_coin_5,b_coin_10;
 	MachineInfoProxy.TypeAndItem[] machine_data;
-	int selected_coin = 1;
 
 	void Awake()
 	{
@@ -134,6 +133,11 @@ public class UIHomeMain : UIMain
 
 		//非ui逻辑
 		getMachineInfo ();
+		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		if (proxy != null) {
+			toolbar.GetChild ("n13").asTextField.text = "" + proxy.Coin;
+			toolbar.GetChild ("n14").asLoader.url = proxy.Pic;
+		}
 	}
 
 	void Update(){
@@ -205,7 +209,7 @@ public class UIHomeMain : UIMain
 			coin = 10;
 		if (UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) == null)
 			return;
-		selected_coin = coin;
+		
 		PlayerPrefs.SetInt (LocalKey.SELECT_COIN_GAME,coin);
 
 		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
@@ -273,7 +277,9 @@ public class UIHomeMain : UIMain
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void RespondPrizeInfo(INotification notification){
-
+		if (_profileWin != null) {
+			_profileWin.refreshList ();
+		}
 	}
 
 	public void RespondLogout(INotification notification){

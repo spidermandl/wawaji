@@ -31,6 +31,8 @@ public class UIProfile : BaseWindow
 		get{ return this.contentPane.GetChild ("n17"); }
 	}
 
+	List<UserPrizeInfoProxy.PrizeItem> items = null;
+
 	public UIProfile ():base()
 	{
 		
@@ -61,25 +63,43 @@ public class UIProfile : BaseWindow
 		Close.onClick.Add (()=>{
 			this.Hide();
 		});
-
+		//非UI逻辑
 		AccountProxy proxy = UnityFacade.GetInstance().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		if (proxy == null) {
+			return;
+		}
+		this.contentPane.GetChild ("n18").asLoader.url = proxy.Pic;
+		this.contentPane.GetChild ("n19").asTextField.text = proxy.Name;
+		this.contentPane.GetChild ("n20").asTextField.text = ""+proxy.Coin;
+
 		Req_GetPrizeInfo request = new Req_GetPrizeInfo();
-		request.UserId = proxy.Id;
-		request.Token = proxy.Token;
+		request.UserId = PlayerPrefs.GetInt (LocalKey.USERID, 0);
+		request.Token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
 
 	void RenderListItem(int index, GObject obj)
 	{
-		Debug.Log (index);
 		obj.asCom.GetChild ("n1").onClick.Add (()=>{
-			//m_list.RemoveChildToPoolAt(index);
-			//Debug.Log(m_list.numItems);
-			GList m_list = List;
-			m_list.numItems -= 1;
+//			GList m_list = List;
+//			m_list.numItems -= 1;
 			//m_list.RefreshVirtualList();
+			//this.changeUIpage(typeof(UIEnterMain));
 		});
+		if (this.items != null && this.items.Count>0) {
+			obj.asCom.GetChild ("n2").asTextField.text = "【中奖信息】"+this.items [index].desc;
+		}
 
+	}
+
+	public void refreshList(){
+		UserPrizeInfoProxy proxy =UnityFacade.GetInstance().RetrieveProxy (UserPrizeInfoProxy.NAME) as UserPrizeInfoProxy;
+		if (proxy == null) {
+			return;
+		}
+		this.items = proxy.Items;
+		this.List.numItems = this.items.Count;
+		this.List.RefreshVirtualList ();
 	}
 
 }

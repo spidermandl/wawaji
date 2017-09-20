@@ -81,9 +81,11 @@ public class WXEntryActivity extends UnityPlayerActivity implements IWXAPIEventH
         switch (baseResp.errCode) {
             // 发送成功
             case BaseResp.ErrCode.ERR_OK:
-                // 获取code
-                String code = ((SendAuth.Resp) baseResp).code;
-                //mWeChatCode.getResponse(code);
+                if(baseResp instanceof SendAuth.Resp){
+                    // 获取code
+                    String code = ((SendAuth.Resp)baseResp).code;
+                    sendToUnityWithLoginCode(code);
+                }
                 break;
         }
     }
@@ -112,8 +114,8 @@ public class WXEntryActivity extends UnityPlayerActivity implements IWXAPIEventH
         return Util.uuid(this);
     }
 
-    public void OnUnityCall(String name)
+    public void sendToUnityWithLoginCode(String code)
     {
-        UnityPlayer.UnitySendMessage("JavaMsgRecver", "OnJavaMsg","hello,I got your msg:"+name);
+        UnityPlayer.UnitySendMessage("UIEnterMain", "RespondWechatLogin",code);
     }
 }

@@ -3,6 +3,7 @@ package com.wawaji.wxapi;
 import com.tencent.mm.opensdk.constants.ConstantsAPI;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
+import com.tencent.mm.opensdk.modelmsg.SendAuth;
 import com.tencent.mm.opensdk.modelmsg.ShowMessageFromWX;
 import com.tencent.mm.opensdk.modelmsg.WXAppExtendObject;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
@@ -39,6 +40,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 
 		// 通过WXAPIFactory工厂，获取IWXAPI的实例
 		api = WXAPIFactory.createWXAPI(this, Constants.APP_ID, false);
+		boolean is = api.registerApp(Constants.APP_ID);
 
 		regBtn = (Button) findViewById(R.id.reg_btn);
 		regBtn.setOnClickListener(new View.OnClickListener() {
@@ -134,6 +136,10 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler{
 
 		switch (resp.errCode) {
 			case BaseResp.ErrCode.ERR_OK:
+				//SendAuth.Resp
+				if(resp instanceof SendAuth.Resp){
+					Toast.makeText(this, "code = " + ((SendAuth.Resp)resp).code, Toast.LENGTH_SHORT).show();
+				}
 				result = R.string.errcode_success;
 				break;
 			case BaseResp.ErrCode.ERR_USER_CANCEL:

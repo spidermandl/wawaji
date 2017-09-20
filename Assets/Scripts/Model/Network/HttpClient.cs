@@ -81,7 +81,7 @@ public class HttpClient
 		if (www.error != null) 
 		{
 			Debug.Log("error is :"+ www.error);
-			req.parseResponse(www.error);
+			req.parseError(www.error);
 			NetworkManager.AddEvent(req);
 		} 
 		if (www.text != null)

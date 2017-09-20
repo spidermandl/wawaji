@@ -35,13 +35,13 @@ public class Req_GetPrizeInfo :Request {
 		[Serializable]
 		public class Info
 		{
-			public int id;
-			public int prize_id;
-			public string name;
-			public string price;
-			public int coin;
-			public string pic;
-			public string desc;
+			public int id;//中奖纪录ID
+			public int prize_id;//奖品ID
+			public string name;//奖品名字
+			public string price;//奖品价格
+			public int coin;//奖品金币价格
+			public string pic;//奖品图片
+			public string desc;//奖品描述
 			public int status;//奖品状态(1:待领取,2:已领取,3:已兑换,4:已回购)
 		}
 

@@ -37,6 +37,12 @@ public class UIPrizeMain : UIMain
 			_uiTopup.Show();
 		});
 
+		//非UI逻辑
+		AccountProxy proxy = UnityFacade.GetInstance().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		if (proxy == null) {
+			return;
+		}
+		toolbar.GetChild ("n5").asTextField.text = ""+proxy.Coin;
 	}
 
 	void Update(){

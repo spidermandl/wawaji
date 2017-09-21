@@ -9,7 +9,7 @@ public class UIHomeMain : UIMain
 	GList _list;
 	int item_index;//列表item索引值
 
-	UIExchange _exchangeWin;//
+	//UIExchange _exchangeWin;
 	UITopup _topupWin;//
 	UISetting _settingWin;//
 	UIHelp _helpWin;
@@ -86,9 +86,7 @@ public class UIHomeMain : UIMain
 			});
 			_profileWin.Exchange.onClick.Add(()=>{
 				_profileWin.Hide();
-				if(_exchangeWin == null)
-					_exchangeWin = new UIExchange ();
-				_exchangeWin.Show();
+				this.changeUIpage(typeof(UIExchangeMain));
 			});
 			_profileWin.Topup.onClick.Add(()=>{
 				_profileWin.Hide();

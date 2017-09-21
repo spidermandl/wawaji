@@ -50,7 +50,7 @@
      <Compile Include="Assets\Plugins\PathologicalGames\PoolManager\SpawnPool.cs" />
      <Compile Include="Assets\Plugins\StateMachine\StateMachine.cs" />
      <Compile Include="Assets\Plugins\StateMachine\StateMachineRunner.cs" />
-     <None Include="Assets\json\version.txt" />
+     <None Include="Assets\external\version.txt" />
      <None Include="Assets\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
      <None Include="Assets\Plugins\Json\Newtonsoft.Json.xml" />
      <None Include="Assets\Resources\Shaders\FairyGUI-Text.shader" />

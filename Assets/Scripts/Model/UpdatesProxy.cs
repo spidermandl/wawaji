@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 using System.Text;
+using FairyGUI;
 
 /// <summary>
 /// 资源更新model类
@@ -126,6 +127,7 @@ public class UpdatesProxy : BaseProxy {
 			e.is_new = memVersion.prize [key].is_new;
 			e.pic = memVersion.prize [key].pic;
 			e.pic_path = memVersion.prize [key].pic_path;
+			e.local_path = memVersion.prize [key].local_path;
 			localVersion.data.prize [index] = e;
 			index++;
 		}
@@ -145,6 +147,42 @@ public class UpdatesProxy : BaseProxy {
 	{
 	}
 
+	/// <summary>
+	/// Loads the ball icon.
+	/// </summary>
+	/// <param name="loader">Loader.</param>
+	/// <param name="id">Identifier.</param>
+	public void loadBallIcon(GLoader loader,string id){
+		MemoryVersion.Entry entry = memVersion.ball [id];
+		string path = (entry.is_new == 0) ? entry.local_path : entry.pic_path;
+		if (entry != null) {
+			loadIcon (loader, entry);
+		}
+	}
+	/// <summary>
+	/// Loads the prize icon.
+	/// </summary>
+	/// <param name="loader">Loader.</param>
+	/// <param name="id">Identifier.</param>
+	public void loadPrizeIcon(GLoader loader,string id){
+		MemoryVersion.Entry entry = memVersion.prize [id];
+		if (entry != null) {
+			loadIcon (loader, entry);
+		}
+	}
+	/// <summary>
+	/// Loads the icon.
+	/// </summary>
+	/// <param name="loader">Loader.</param>
+	/// <param name="entry">Entry.</param>
+	public void loadIcon(GLoader loader,MemoryVersion.Entry entry){
+		IconManager.inst.LoadIcon (entry, 
+				(NTexture texture)=>{
+					loader.texture = texture;
+				}, 
+				(string error) => {
+				});
+	}
 	[Serializable]
 	public class ResVersion{
 
@@ -169,6 +207,7 @@ public class UpdatesProxy : BaseProxy {
 			public string id;
 			public string pic;
 			public string pic_path;
+			public string local_path;
 			public int is_new;
 		}
 
@@ -189,6 +228,7 @@ public class UpdatesProxy : BaseProxy {
 		public class Entry{
 			public string pic;
 			public string pic_path;
+			public string local_path;
 			public int is_new;//0 已经存在的，1 需要更新的
 		}
 	}

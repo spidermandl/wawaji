@@ -98,7 +98,9 @@ public class UIExchangeMain : UIMain
 			obj.asCom.GetChild ("n12").asTextField.text = this.items [index].name;
 			obj.asCom.GetChild ("n11").asTextField.text = this.items [index].desc;
 			obj.asCom.GetChild ("n13").asTextField.text = ""+this.items [index].coin;
-			obj.asCom.GetChild ("n3").asLoader.url = this.items [index].pic;
+			//obj.asCom.GetChild ("n3").asLoader.url = this.items [index].pic;
+			UpdatesProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
+			proxy.loadPrizeIcon (obj.asCom.GetChild ("n3").asLoader, ""+this.items [index].id);
 		}
 	}
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -308,7 +308,7 @@ public class Util
 				}
 			}
 			return //Application.dataPath + "/StreamingAssets/lua/";
-				Application.dataPath + "/json/"; //pc runtime env
+				Application.dataPath + "/external/"; //pc runtime env
 			//"/Users/osondesmond/Documents/macRunner/";//mac export package
 		}
 	}

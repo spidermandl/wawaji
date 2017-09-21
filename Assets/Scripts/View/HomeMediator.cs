@@ -21,6 +21,7 @@ public class HomeMediator: BaseMediator {
 		list.Add (Req_UserLogout.COMMAND);
 		list.Add (Req_GetMachineInfo.COMMAND);
 		list.Add (Req_GetPrizeUserHorn.COMMAND);
+		list.Add (Req_UserRecharge.COMMAND);
 		return list;
 	}
 
@@ -37,6 +38,9 @@ public class HomeMediator: BaseMediator {
 			break;
 		case Req_GetPrizeUserHorn.COMMAND:
 			m_home_ui.RespondUserPrizeStrings (notification);
+			break;
+		case Req_UserRecharge.COMMAND:
+			m_home_ui.RespondUserRecharge (notification);
 			break;
 		default:
 			break;

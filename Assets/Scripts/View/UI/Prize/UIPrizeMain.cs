@@ -10,6 +10,8 @@ using PureMVC.Interfaces;
 public class UIPrizeMain : UIMain
 {
 	UITopup _uiTopup;
+
+	GComponent toolbar;
 	GList _list;
 	List<MachinePrizeProxy.PrizeItem> items;
 	MachineInfoProxy machine_proxy;
@@ -27,7 +29,7 @@ public class UIPrizeMain : UIMain
 		bg.url = "bg/bg_prize";
 
 		//toolbar
-		GComponent toolbar = _mainView.GetChild ("n1").asCom;
+		toolbar = _mainView.GetChild ("n1").asCom;
 		toolbar.GetChild("n0").onClick.Add(() => {
 			this.changeUIpage(typeof(UIHomeMain));
 		});
@@ -42,15 +44,9 @@ public class UIPrizeMain : UIMain
 		_list = _mainView.GetChild ("n32").asList;		
 		_list.SetVirtual ();
 		_list.itemRenderer = RenderListItem;
-		_list.onClickItem.Add (()=>{
-		});
 
 		//非UI逻辑
-		AccountProxy proxy = UnityFacade.GetInstance().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
-		if (proxy == null) {
-			return;
-		}
-		toolbar.GetChild ("n5").asTextField.text = ""+proxy.Coin;
+		validateProfile();
 
 		machine_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
 		if (UnityFacade.GetInstance ().RetrieveProxy (MachinePrizeProxy.NAME) != null) {
@@ -77,6 +73,13 @@ public class UIPrizeMain : UIMain
 			request.MtId = mtId;
 			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 		}
+	}
+	void validateProfile(){
+		AccountProxy proxy = UnityFacade.GetInstance().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		if (proxy == null) {
+			return;
+		}
+		toolbar.GetChild ("n5").asTextField.text = ""+proxy.Coin;
 	}
 	/// <summary>
 	/// Renders the list item.
@@ -121,5 +124,15 @@ public class UIPrizeMain : UIMain
 		}
 	}
 
+	/// <summary>
+	/// Responds the user recharge.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondUserRecharge(INotification notification){
+		if (_uiTopup != null) {
+			validateProfile ();
+			_uiTopup.Hide ();
+		}
+	}
 }
 

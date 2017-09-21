@@ -18,6 +18,7 @@ public class ExchangeMediator: BaseMediator {
 	{
 		IList<string> list = new List<string>();
 		list.Add (Req_GetAllPrize.COMMAND);
+		list.Add (Req_UserRecharge.COMMAND);
 		return list;
 	}
 
@@ -25,6 +26,9 @@ public class ExchangeMediator: BaseMediator {
 		switch( notification.Name ){
 		case  Req_GetAllPrize.COMMAND:
 			m_exchange_ui.RespondAllPrize (notification);
+			break;
+		case Req_UserRecharge.COMMAND:
+			m_exchange_ui.RespondUserRecharge (notification);
 			break;
 		default:
 			break;

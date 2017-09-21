@@ -8,13 +8,17 @@ using PureMVC.Interfaces;
 
 public class UIGameMain : UIMain
 {
-	GList _list;
+
 	UIConfirm _confirmWin;//登录对话框
 	UIExchange _exchangeWin;//
 	UITopup _topupWin;//
 
 	GameObject root = null;
 	GameManager gameManager;
+
+	GComponent toolbar;
+	GList _list;
+	List<GameBallProxy.BallsItem> items;
 
 	void Awake()
 	{
@@ -38,7 +42,7 @@ public class UIGameMain : UIMain
 		this.gameManager = root.AddComponent (typeof(GameManager)) as GameManager;
 		/////////////////////////////////////////////////////////////////////////////////
 		//toolbar
-		GComponent toolbar = _mainView.GetChild ("n19").asCom;
+		toolbar = _mainView.GetChild ("n19").asCom;
 		toolbar.GetChild("n3").onClick.Add(() => {
 			if(gameManager.isIdle())
 				this.changeUIpage(typeof(UIHomeMain));
@@ -105,6 +109,11 @@ public class UIGameMain : UIMain
 			this.gameManager.startPick();
 			getBallPickingOdd();
 		});
+
+		_list = controller.GetChild ("n7").asList;
+		_list.SetVirtual ();
+		_list.itemRenderer = RenderListItem;
+
 		/////////////////////////////////////////////////////////////////////////////////
 		/// 手势操作相关
 		/////////////////////////////////////////////////////////////////////////////////
@@ -126,6 +135,7 @@ public class UIGameMain : UIMain
 
 		//非显示相关
 		getBallsInfoFromServer ();
+		validateProfile ();
 	}
 
 	void Update(){
@@ -166,6 +176,12 @@ public class UIGameMain : UIMain
 		root.SetActive (false);
 	}
 
+	void validateProfile(){
+		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		if (proxy != null) {
+			toolbar.GetChild("n5").asTextField.text = "" + proxy.Coin;
+		}
+	}
 	void OnSwipeMove(EventContext context)
 	{
 		//Debug.Log ("OnSwipeMove");
@@ -206,6 +222,21 @@ public class UIGameMain : UIMain
 //		gameManager.SpaceCamera.Rotate(Vector3.forward, -gesture.delta, Space.World);
 //	}
 
+	/// <summary>
+	/// Renders the list item.
+	/// </summary>
+	/// <param name="index">Index.</param>
+	/// <param name="obj">Object.</param>
+	void RenderListItem(int index, GObject obj)
+	{
+		if(this.items!=null){
+			obj.asCom.GetChild ("n3").asLoader.url = this.items [index].b_pic;
+			obj.asCom.GetChild ("n4").asLoader.url = this.items [index].p_pic;
+			obj.asCom.GetChild ("n5").asTextField.text = this.items [index].name;
+
+		}
+	}
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -232,6 +263,12 @@ public class UIGameMain : UIMain
 	/// <param name="notification">Notification.</param>
 	public void RespondBallInfo(INotification notification){
 		gameManager.initBalls ();
+		GameBallProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
+		if (proxy != null) {
+			this.items = proxy.Items;
+			_list.numItems = this.items.Count;
+			_list.RefreshVirtualList ();
+		}
 	}
 
 	public void RespondGameStart(INotification notification){
@@ -240,6 +277,17 @@ public class UIGameMain : UIMain
 
 	public void RespondGameEnd(INotification notification){
 
+	}
+
+	/// <summary>
+	/// Responds the user recharge.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondUserRecharge(INotification notification){
+		if (_topupWin != null) {
+			validateProfile ();
+			_topupWin.Hide ();
+		}
 	}
 }
 

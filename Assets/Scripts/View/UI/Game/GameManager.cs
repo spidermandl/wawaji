@@ -88,6 +88,7 @@ public class GameManager : MonoBehaviour
 			p = root.AddComponent (typeof(Picker)) as Picker;
 		this.picker=p;
 		this.picker.setCheckDropBall (checkDropBall);
+		this.picker.setCheckResultBall (checkBallResult);
 		this.balls = new Dictionary<Transform, GameBallProxy.BallsItem>();
 		//initBalls();
 
@@ -382,6 +383,20 @@ public class GameManager : MonoBehaviour
 		}
 
 		return false;
+	}
+
+	public void checkBallResult(List<GameObject> balls){
+		MachineInfoProxy m_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		GameBallProxy g_proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
+		if (m_proxy == null || g_proxy == null)
+			return;
+		Req_MachineEndGrab request = new Req_MachineEndGrab ();
+		request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
+		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
+		request.MId = m_proxy.Selection.machine_id;
+		request.LogId = g_proxy.GameId;
+		request.BallIdStr = g_proxy.formBallIDstring ();
+		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
 }
 

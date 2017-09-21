@@ -13,6 +13,7 @@ public class UIExchangeMain : UIMain
 
 	UIExchangeConfirm confirm;
 
+	GComponent toolbar;
 	GList _list;
 	List<PrizeSetProxy.PrizeItem> items;
 
@@ -29,7 +30,7 @@ public class UIExchangeMain : UIMain
 		bg.url = "bg/bg_prize";
 
 		//toolbar
-		GComponent toolbar = _mainView.GetChild ("n1").asCom;
+		toolbar = _mainView.GetChild ("n1").asCom;
 		toolbar.GetChild("n0").onClick.Add(() => {
 			this.changeUIpage(typeof(UIHomeMain));
 		});
@@ -50,9 +51,8 @@ public class UIExchangeMain : UIMain
 			confirm.Show();
 		});
 
-		//非UI相关
-		getAllPrize ();
 		//非UI逻辑
+		getAllPrize ();
 		AccountProxy proxy = UnityFacade.GetInstance().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
 		if (proxy == null) {
 			return;
@@ -81,7 +81,12 @@ public class UIExchangeMain : UIMain
 			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 		}
 	}
-
+	void validateProfile(){
+		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		if (proxy != null) {
+			toolbar.GetChild ("n5").asTextField.text = ""+proxy.Coin;
+		}
+	}
 	/// <summary>
 	/// Renders the list item.
 	/// </summary>
@@ -105,6 +110,17 @@ public class UIExchangeMain : UIMain
 		if (proxy != null) {
 			this.items = proxy.Items;
 			_list.numItems = this.items.Count;
+		}
+	}
+
+	/// <summary>
+	/// Responds the user recharge.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondUserRecharge(INotification notification){
+		if (_uiTopup != null) {
+			validateProfile ();
+			_uiTopup.Hide ();
 		}
 	}
 }

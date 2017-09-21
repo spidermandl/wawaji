@@ -19,7 +19,7 @@
     <text id="n11_lrqt" name="n11" xy="26,55" size="185,28" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="荣耀8 金色 64g">
       <relation target="n12_dc7j" sidePair="top-top,center-center"/>
     </text>
-    <text id="n12_dc7j" name="n12" xy="20,13" size="187,38" fontSize="30" color="#f5dff0" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" singleLine="true" text="iPhone7">
+    <text id="n12_dc7j" name="n12" xy="20,13" size="187,38" fontSize="30" color="#ffccff" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" singleLine="true" text="iPhone7">
       <relation target="n0_lrqt" sidePair="top-top,center-center"/>
     </text>
     <text id="n13_dc7j" name="n13" xy="87,324" size="123,44" fontSize="35" color="#ffff00" vAlign="middle" letterSpacing="1" autoSize="none" bold="true" singleLine="true" text="39999">

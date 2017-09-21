@@ -51,7 +51,9 @@ public class Picker : MonoBehaviour
 	Vector3 releaseDirection = Vector3.zero;//释放移动路径方向
 	///// //////////////////////////////////////////////////////// 
 	public delegate bool CheckDropBall(GameObject ball);
-	private CheckDropBall _chechDropBall;
+	private CheckDropBall _checkDropBall;//掉球回调函数
+	public delegate void CheckResultBall(List<GameObject> balls);
+	private CheckResultBall _checkResultBall;//结果毁掉函数
 	Transform ball_objs = null;//被抓住的球的根结点
 	List<BallBundle> picked_balls = new List<BallBundle>();
 	class BallBundle{
@@ -381,13 +383,17 @@ public class Picker : MonoBehaviour
 		if (proxy != null) {
 			for (int i = this.picked_balls.Count - 1; i >= 0; i--) {
 				BallBundle ball = this.picked_balls [i];
-				if (this._chechDropBall (ball.Ball) == true) {
+				if (this._checkDropBall (ball.Ball) == true) {
 					restorePhysics (ball);
 					this.picked_balls.Remove (ball);
 					yield return new WaitForSeconds (0.2f);
 				}
 			}
-
+			List<GameObject> bs = new List<GameObject> ();
+			for (int i = this.picked_balls.Count - 1; i >= 0; i--) {
+				bs.Add (this.picked_balls [i].Ball);
+			}
+			this._checkResultBall (bs);
 		} else {//无网络情况逻辑
 			while (true) {
 				bool noDrop = true;
@@ -491,11 +497,18 @@ public class Picker : MonoBehaviour
 		//}
 	}
 	/// <summary>
-	/// 设置回调函数
+	/// 设置掉球回调函数
 	/// </summary>
 	/// <param name="_func">Func.</param>
 	public void setCheckDropBall(CheckDropBall _func){
-		this._chechDropBall = _func;
+		this._checkDropBall = _func;
+	}
+	/// <summary>
+	/// 设置结果回调函数
+	/// </summary>
+	/// <param name="_func">Func.</param>
+	public void setCheckResultBall(CheckResultBall _func){
+		this._checkResultBall = _func;
 	}
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// ////////////////////////////////////////////////////////////////////////////

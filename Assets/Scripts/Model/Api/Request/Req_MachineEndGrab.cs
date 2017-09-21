@@ -49,7 +49,7 @@ public class Req_MachineEndGrab :Request {
 		[Serializable]
 		public class Info
 		{
-			public int game_id;
+			public int coin;
 			public int[] ball_arr;
 		}
 

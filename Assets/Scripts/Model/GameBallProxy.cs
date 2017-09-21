@@ -101,5 +101,15 @@ public class GameBallProxy : BaseProxy {
 		this.ball_arr = copy;
 	}
 
+	public string formBallIDstring(){
+		StringBuilder builder = new StringBuilder ();
+		for(int i=0; i < this.ball_arr.Length;i++){
+			builder.Append (ball_arr [i]);
+			if(i<this.ball_arr.Length-1)
+				builder.Append(",");
+		}
+
+		return builder.ToString ();
+	}
 }
 

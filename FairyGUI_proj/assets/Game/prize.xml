@@ -5,15 +5,14 @@
       <relation target="" sidePair="width-width,height-height"/>
       <relation target="" sidePair="top-top"/>
     </image>
-    <loader id="n1_l4t6" name="n1" xy="87,146" size="108,33" url="ui://dulhkyd0l4t6i" fill="scale">
-      <relation target="" sidePair="bottom-bottom,width-width"/>
-    </loader>
-    <loader id="n3_l4t6" name="n3" xy="77,64" size="46,28" url="ui://dulhkyd0l4t6k" fill="scale">
+    <loader id="n3_l4t6" name="n3" xy="76,64" size="32,28" url="ui://dulhkyd0l4t6k" fill="scale">
       <relation target="n0_l4t6" sidePair="width-width,height-height"/>
     </loader>
-    <loader id="n4_l4t6" name="n4" xy="128,34" size="71,64" url="ui://dulhkyd0l4t6l" fill="scale">
+    <loader id="n4_l4t6" name="n4" xy="128,34" size="59,64" url="ui://dulhkyd0l4t6l" fill="scale">
       <relation target="n0_l4t6" sidePair="width-width,height-height"/>
     </loader>
+    <text id="n5_dc7j" name="n5" xy="35,141" size="187,38" fontSize="30" color="#ffccff" align="center" vAlign="middle" autoSize="height" bold="true" strokeColor="#000000" singleLine="true" text="iPhone7">
+      <relation target="" sidePair="bottom-bottom,left-left"/>
+    </text>
   </displayList>
-  <relation target="" sidePair="width-width,height-height"/>
 </component>

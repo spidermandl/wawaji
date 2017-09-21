@@ -16,6 +16,7 @@ public class UIHomeMain : UIMain
 	UIProfile _profileWin;//
 	UIPrize _prizeWin;//
 
+	GComponent toolbar;
 	GButton b_coin_1,b_coin_5,b_coin_10;
 	MachineInfoProxy.TypeAndItem[] machine_data;
 
@@ -49,7 +50,7 @@ public class UIHomeMain : UIMain
 		b_coin_10.onChanged.Add(bindData);
 		bindData ();
 
-		GComponent toolbar = _mainView.GetChild ("n3").asCom;
+		toolbar = _mainView.GetChild ("n3").asCom;
 		//提现界面
 		toolbar.GetChild("n12").onClick.Add(() => {
 			//提现界面
@@ -133,11 +134,7 @@ public class UIHomeMain : UIMain
 
 		//非ui逻辑
 		getMachineInfo ();
-		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
-		if (proxy != null) {
-			toolbar.GetChild ("n13").asTextField.text = "" + proxy.Coin;
-			toolbar.GetChild ("n14").asLoader.url = proxy.Pic;
-		}
+		validateProfile ();
 	}
 
 	void Update(){
@@ -157,6 +154,14 @@ public class UIHomeMain : UIMain
 			request.UserId = userid;
 			request.Token = token;
 			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		}
+	}
+
+	void validateProfile(){
+		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		if (proxy != null) {
+			toolbar.GetChild ("n13").asTextField.text = "" + proxy.Coin;
+			toolbar.GetChild ("n14").asLoader.url = proxy.Pic;
 		}
 	}
 	/// <summary>
@@ -267,7 +272,7 @@ public class UIHomeMain : UIMain
 	/**
 	 * 切换界面
 	 * */
-	protected void changeUIpage(Type cls){
+	protected new void changeUIpage(Type cls){
 		//缓存选中的machine信息
 		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
 		if (proxy != null&& machine_data!=null) {
@@ -308,6 +313,16 @@ public class UIHomeMain : UIMain
 	/// <param name="notification">Notification.</param>
 	public void RespondUserPrizeStrings(INotification notification){
 
+	}
+	/// <summary>
+	/// Responds the user recharge.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondUserRecharge(INotification notification){
+		if (_topupWin != null) {
+			validateProfile ();
+			_topupWin.Hide ();
+		}
 	}
 
 }

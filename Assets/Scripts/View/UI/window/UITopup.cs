@@ -50,7 +50,25 @@ public class UITopup : BaseWindow
 		});
 		Pay.onClick.Add(() => {
 			//
-			this.Hide();
+			int money = getPayAmount();
+			if(money>0){
+				AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+				if (proxy == null)
+					return;
+				Req_UserRecharge request = new Req_UserRecharge ();
+				request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
+				request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
+				request.Amount = money;
+				UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+			}
+		});
+		Input_figure.onClick.Add(()=>{
+			m_20.selected = false;
+			m_50.selected = false;
+			m_100.selected = false;
+			m_200.selected = false;
+			m_500.selected = false;
+			m_1000.selected = false;
 		});
 
 	}
@@ -69,7 +87,12 @@ public class UITopup : BaseWindow
 		}else if(m_1000.selected){
 			return 1000;
 		}else {
-			return int.Parse(Input_figure.asTextInput.text);
+			try{
+				return int.Parse(Input_figure.asTextInput.text);
+			}catch(FormatException e){
+				return 0;
+			}
+
 		}
 	}
 

@@ -21,6 +21,7 @@ public class GameMediator: BaseMediator {
 		list.Add (Req_GetMachinePrizeBallData.COMMAND);
 		list.Add (Req_MachineStartGrab.COMMAND);
 		list.Add (Req_MachineEndGrab.COMMAND);
+		list.Add (Req_UserRecharge.COMMAND);
 		return list;
 	}
 
@@ -34,6 +35,9 @@ public class GameMediator: BaseMediator {
 			break;
 		case Req_MachineEndGrab.COMMAND:
 			m_game_ui.RespondGameEnd (notification);
+			break;
+		case Req_UserRecharge.COMMAND:
+			m_game_ui.RespondUserRecharge (notification);
 			break;
 		default:
 			break;

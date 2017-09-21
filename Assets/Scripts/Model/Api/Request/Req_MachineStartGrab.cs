@@ -39,7 +39,7 @@ public class Req_MachineStartGrab :Request {
 		public class Info
 		{
 			public int game_id;
-			public int[] ball_arr;
+			public int[] ball_arr;//不可抓中的海洋球ID数组
 		}
 
 	}

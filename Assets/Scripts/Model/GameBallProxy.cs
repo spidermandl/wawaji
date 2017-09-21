@@ -35,10 +35,8 @@ public class GameBallProxy : BaseProxy {
 
 	//不可抓中的海洋球类型ID数组
 	int[] ball_arr;
-	public int[] BallArr{
-		get{return this.BallArr;}
-		set{ 
-			BallArr = value;}
+	public int[] getBallArr(){
+		return this.ball_arr;
 	}
 
 	public class BallsItem{

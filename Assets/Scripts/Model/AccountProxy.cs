@@ -75,6 +75,8 @@ public class AccountProxy : BaseProxy {
 	{
 		if (meta.GetType () == typeof(Base_Req_UserInfo.Response)) {
 			bindingData ((Base_Req_UserInfo.Response)meta);
+		}else if(meta.GetType () == typeof(Req_UserRecharge.Response)){
+			bindingData ((Req_UserRecharge.Response)meta);
 		}
 	}
 	/// <summary>
@@ -92,6 +94,16 @@ public class AccountProxy : BaseProxy {
 		this.Coin = meta.data.info.coin;
 		this.Uuid = meta.data.info.uuid;
 		this.Token = meta.data.info.token;
+	}
+
+	/// <summary>
+	/// Bindings the data.
+	/// </summary>
+	/// <param name="meta">Meta.</param>
+	public void bindingData(Req_UserRecharge.Response meta){
+		if(meta.data.code == 0){
+			this.coin += ((Req_UserRecharge)meta.Req).Amount;
+		}
 	}
 
 }

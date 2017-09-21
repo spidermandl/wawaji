@@ -50,7 +50,9 @@ public class Picker : MonoBehaviour
 	const float FOOT_FINAL_ANGLE = 30f;//70f;
 	Vector3 releaseDirection = Vector3.zero;//释放移动路径方向
 	///// //////////////////////////////////////////////////////// 
-	Transform ball_objs = null;
+	public delegate bool CheckDropBall(GameObject ball);
+	private CheckDropBall _chechDropBall;
+	Transform ball_objs = null;//被抓住的球的根结点
 	List<BallBundle> picked_balls = new List<BallBundle>();
 	class BallBundle{
 		float dis;
@@ -375,40 +377,53 @@ public class Picker : MonoBehaviour
 	/// </summary>
 	/// <returns>The ball by odds.</returns>
 	IEnumerator dropBallByOdds(){
-		while (true) {
-			bool noDrop = true;
-			switch(this.picked_balls.Count){
-			case 1:
-				System.Random rand = new System.Random ();
-				float odd = (float)rand.NextDouble ();
-				if (odd > 0.9f) {
-					restorePhysics ();
-					noDrop = false;
+		GameBallProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
+		if (proxy != null) {
+			for (int i = this.picked_balls.Count - 1; i >= 0; i--) {
+				BallBundle ball = this.picked_balls [i];
+				if (this._chechDropBall (ball.Ball) == true) {
+					restorePhysics (ball);
+					this.picked_balls.Remove (ball);
+					yield return new WaitForSeconds (0.2f);
 				}
-				break;
-			case 2:
-				rand = new System.Random ();
-				odd = (float)rand.NextDouble ();
-				if (odd > 0.7f) {
-					restorePhysics ();
-					noDrop = false;
-				}
-				break;
-			case 3:
-				rand = new System.Random ();
-				odd = (float)rand.NextDouble ();
-				if (odd > 0.5f) {
-					restorePhysics ();
-					noDrop = false;
-				}
-				break;
-			default:
-				noDrop = false;
-				break;
 			}
-			if (noDrop)
-				break;
-			yield return new WaitForSeconds (0.2f);
+
+		} else {//无网络情况逻辑
+			while (true) {
+				bool noDrop = true;
+				switch (this.picked_balls.Count) {
+				case 1:
+					System.Random rand = new System.Random ();
+					float odd = (float)rand.NextDouble ();
+					if (odd > 0.9f) {
+						restorePhysics ();
+						noDrop = false;
+					}
+					break;
+				case 2:
+					rand = new System.Random ();
+					odd = (float)rand.NextDouble ();
+					if (odd > 0.7f) {
+						restorePhysics ();
+						noDrop = false;
+					}
+					break;
+				case 3:
+					rand = new System.Random ();
+					odd = (float)rand.NextDouble ();
+					if (odd > 0.5f) {
+						restorePhysics ();
+						noDrop = false;
+					}
+					break;
+				default:
+					noDrop = false;
+					break;
+				}
+				if (noDrop)
+					break;
+				yield return new WaitForSeconds (0.2f);
+			}
 		}
 	}
 
@@ -417,12 +432,15 @@ public class Picker : MonoBehaviour
 	/// </summary>
 	void restorePhysics(){
 		BallBundle ball = this.picked_balls [0];
-		ball.Ball.transform.parent = this.gameObject.transform.parent.FindChild ("balls");
+		restorePhysics (ball);
+		this.picked_balls.RemoveAt (0);
+	}
+
+	void restorePhysics(BallBundle ball){
+		ball.Ball.transform.parent = this.gameObject.transform.parent.FindChild ("balls");//还原根节点
 		Rigidbody rb = ball.Ball.GetComponent<Rigidbody> ();
 		rb.useGravity = true;
 		rb.constraints = RigidbodyConstraints.None;
-
-		this.picked_balls.RemoveAt (0);
 	}
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
@@ -471,6 +489,13 @@ public class Picker : MonoBehaviour
 
 			picked_balls.Add (bundle);
 		//}
+	}
+	/// <summary>
+	/// 设置回调函数
+	/// </summary>
+	/// <param name="_func">Func.</param>
+	public void setCheckDropBall(CheckDropBall _func){
+		this._chechDropBall = _func;
 	}
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// ////////////////////////////////////////////////////////////////////////////

@@ -57,6 +57,12 @@ public abstract class Request {
 	}
 
 	public abstract class Response{
+		Request request;
+		public Request Req{
+			get{ return this.request;}
+			set{ request = value;}
+		}
+
 		public int ret;
 		public string msg;
 	}
@@ -116,12 +122,15 @@ public abstract class Request {
 	public Response parseResponse(string json){
 		try{
 			_response = parseLogicResponse(json);
+			_response.Req =this;
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
 		}catch(JsonSerializationException e){
 			try{
 				_response = JsonHelper.DeserializeJsonToObject<Request.Error> (json);
+				_response.Req =this;
 			}catch(JsonSerializationException e1){
 				_response = JsonHelper.DeserializeJsonToObject<Request.Exception> (json);
+				_response.Req =this;
 			}
 		}
 

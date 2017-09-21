@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
 		}else
 			p = root.AddComponent (typeof(Picker)) as Picker;
 		this.picker=p;
+		this.picker.setCheckDropBall (checkDropBall);
 		this.balls = new Dictionary<Transform, GameBallProxy.BallsItem>();
 		//initBalls();
 
@@ -363,6 +364,24 @@ public class GameManager : MonoBehaviour
 
 		}
 	}
+	/// <summary>
+	/// 判断抓球是否在必掉的id数组中
+	/// </summary>
+	/// <returns><c>true</c>, if drop ball was checked, <c>false</c> otherwise.</returns>
+	/// <param name="ball">Ball.</param>
+	public bool checkDropBall(GameObject ball){
+		GameBallProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
+		int[] drops = null;
+		if (proxy != null && proxy.getBallArr() != null) {
+			drops = proxy.getBallArr();
+			for (int i = 0; i < drops.Length; i++) {
+				GameBallProxy.BallsItem item = this.balls [ball.transform];
+				if (item != null && item.ball_id == drops [i])
+					return true;
+			}
+		}
 
+		return false;
+	}
 }
 

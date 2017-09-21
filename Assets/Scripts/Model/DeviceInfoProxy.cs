@@ -21,7 +21,7 @@ public class DeviceInfoProxy : BaseProxy {
 
 			switch(Application.platform){
 			case RuntimePlatform.Android:
-				using (AndroidJavaClass jc = new AndroidJavaClass (AppConst.ANDROID_INTERFACE_CLASS)) {  
+				using (AndroidJavaClass jc = new AndroidJavaClass (AppConst.ANDROID_INTERFACE_CLASS)) {
 					//Debug.Log("get AndroidJavaClass");  
 					using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject> ("currentActivity")) {    
 						uuid = jo.Call<string> ("uuid");

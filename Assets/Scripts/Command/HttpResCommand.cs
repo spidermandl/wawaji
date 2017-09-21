@@ -59,6 +59,10 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 		}else if (request.command () == Req_GetNewsLists.COMMAND) {
 
 			setProxy<Req_GetNewsLists,NewsProxy,Req_GetNewsLists.Response>(request);
+
+		}else if (request.command () == Req_UserRecharge.COMMAND) {
+
+			setProxy<Req_UserRecharge,AccountProxy,Req_UserRecharge.Response>(request);
 		}
 
 

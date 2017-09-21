@@ -8,7 +8,7 @@ using System.Text;
 /// <summary>
 /// 新闻列表
 /// </summary>
-public class NewsProxy : PureMVC.Patterns.Proxy {
+public class NewsProxy : BaseProxy {
 
 	public const string NAME = "NewsProxy";
 
@@ -31,11 +31,19 @@ public class NewsProxy : PureMVC.Patterns.Proxy {
 		: base(proxyName, null){
 
 	}
+
+	public override void bindingData (Request.Response meta)
+	{
+		if (meta.GetType () == typeof(Req_GetNewsLists.Response)) {
+			bindingData ((Req_GetNewsLists.Response)meta);
+		}
+	}
+
 	/// <summary>
 	/// Sets the news data.
 	/// </summary>
 	/// <param name="meta">Meta.</param>
-	public void setNewsData(Req_GetNewsLists.Response meta){
+	public void bindingData(Req_GetNewsLists.Response meta){
 		List<NewsItem> items = new List<NewsItem> ();
 		foreach(Req_GetNewsLists.Response.Info info in meta.data.info ){
 			NewsItem i = new NewsItem ();

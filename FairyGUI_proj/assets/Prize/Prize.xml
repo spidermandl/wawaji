@@ -8,48 +8,9 @@
     <image id="n3_upgt" name="n3" src="upgtm" xy="-1,136" size="750,71">
       <relation target="n0_upgt" sidePair="top-top,width-width"/>
     </image>
-    <image id="n4_upgt" name="n4" src="upgtm" xy="-1,863" size="750,71">
-      <relation target="n0_upgt" sidePair="top-top,width-width"/>
-    </image>
     <image id="n5_upgt" name="n5" src="upgtj" xy="272,146">
       <relation target="n3_upgt" sidePair="middle-middle,center-center"/>
     </image>
-    <image id="n6_upgt" name="n6" src="upgt15" xy="284,875">
-      <relation target="n4_upgt" sidePair="center-center,middle-middle"/>
-    </image>
-    <component id="n8_upgt" name="n8" src="upgt3" xy="14,219" size="718,189">
-      <relation target="n0_upgt" sidePair="top-top,width-width"/>
-    </component>
-    <component id="n9_upgt" name="n9" src="upgt3" xy="15,421" size="718,189">
-      <relation target="n8_upgt" sidePair="top-top,width-width"/>
-    </component>
-    <component id="n10_upgt" name="n10" src="upgt3" xy="16,625" size="718,189">
-      <relation target="n9_upgt" sidePair="top-top,width-width"/>
-    </component>
-    <list id="n12_upgt" name="n12" xy="2,935" size="747,396" overflow="scroll" defaultItem="ui://eap8hbzxupgt2">
-      <relation target="n4_upgt" sidePair="top-top"/>
-      <relation target="n0_upgt" sidePair="bottomext-bottom,width-width"/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <image id="n13_upgt" name="n13" src="upgt4" xy="75,330"/>
-    <image id="n14_upgt" name="n14" src="upgt7" xy="66,537"/>
-    <image id="n15_upgt" name="n15" src="upgt6" xy="72,738"/>
-    <image id="n16_upgt" name="n16" src="upgte" xy="57,469"/>
-    <image id="n17_upgt" name="n17" src="upgtl" xy="535,504"/>
-    <image id="n18_upgt" name="n18" src="upgty" xy="519,299"/>
-    <image id="n19_upgt" name="n19" src="upgtg" xy="523,712"/>
-    <image id="n20_upgt" name="n20" src="upgth" xy="431,682"/>
-    <image id="n21_upgt" name="n21" src="upgtf" xy="297,740"/>
-    <image id="n22_upgt" name="n22" src="upgtw" xy="295,328"/>
-    <image id="n23_upgt" name="n23" src="upgtx" xy="425,269"/>
-    <image id="n25_upgt" name="n25" src="upgt11" xy="306,695"/>
-    <image id="n28_upgt" name="n28" src="upgt8" xy="284,534"/>
-    <image id="n26_upgt" name="n26" src="upgt12" xy="286,267"/>
-    <image id="n24_upgt" name="n24" src="upgt10" xy="302,489"/>
-    <image id="n29_upgt" name="n29" src="upgt9" xy="420,485"/>
-    <image id="n30_upgt" name="n30" src="upgt13" xy="58,677"/>
-    <image id="n31_upgt" name="n31" src="upgt13" xy="55,269"/>
+    <list id="n33_dc7j" name="n32" xy="0,234" size="750,1099" overflow="scroll" scrollBarFlags="2" lineGap="20" defaultItem="ui://eap8hbzxupgt3"/>
   </displayList>
 </component>

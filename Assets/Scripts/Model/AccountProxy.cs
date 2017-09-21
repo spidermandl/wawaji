@@ -8,7 +8,7 @@ using System.Text;
 /// <summary>
 /// 资源更新model类
 /// </summary>
-public class AccountProxy : PureMVC.Patterns.Proxy {
+public class AccountProxy : BaseProxy {
 
 	public const string NAME = "AccountProxy";
 
@@ -70,11 +70,18 @@ public class AccountProxy : PureMVC.Patterns.Proxy {
 
 
 	}
+
+	public override void bindingData (Request.Response meta)
+	{
+		if (meta.GetType () == typeof(Base_Req_UserInfo.Response)) {
+			bindingData ((Base_Req_UserInfo.Response)meta);
+		}
+	}
 	/// <summary>
 	/// Sets the user data.
 	/// </summary>
 	/// <param name="meta">Meta.</param>
-	public void setUserData(Base_Req_UserInfo.Response meta){
+	public void bindingData(Base_Req_UserInfo.Response meta){
 		this.Id = meta.data.info.id;
 		this.Type = meta.data.info.type;
 		this.Name = meta.data.info.name;

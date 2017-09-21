@@ -25,7 +25,7 @@ public class UIPackageManager
 		//加入新ui package
 		if (!packageMap.ContainsKey (name)) {
 			UIPackage.AddPackage (name);
-			packageMap.Add (name,packageMap.Count);
+			packageMap.Add (name,packageMap.Count+1);
 		}
 		//调整ui被调用顺序
 		int current = packageMap [name];
@@ -41,7 +41,7 @@ public class UIPackageManager
 		bool hasRemove = false;
 		foreach (string key in new List<string>(packageMap.Keys))
 		{
-			if (packageMap[key]>=2) {//保留两个ui的资源在内存
+			if (packageMap[key]>2) {//保留两个ui的资源在内存
 				packageMap.Remove (key);
 				hasRemove = true;
 				UIPackage.RemovePackage (key);
@@ -52,6 +52,16 @@ public class UIPackageManager
 			Resources.UnloadUnusedAssets ();
 			System.GC.Collect ();
 		}
+	}
+
+	public string getPreviousPackage(){
+		foreach (string key in new List<string>(packageMap.Keys))
+		{
+			if (packageMap[key]==2) {//保留两个ui的资源在内存
+				return key;
+			}
+		}
+		return null;
 	}
 }
 

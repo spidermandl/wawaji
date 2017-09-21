@@ -167,8 +167,7 @@ public class UIHomeMain : UIMain
 			return;
 		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
 		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
-		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
-		if (proxy != null) {
+		if (machine_data != null) {
 			int mtid = machine_data [item_index].machine_type_id;
 			if (userid != 0 && token != null) {
 				Req_GetPrizeUserHorn request = new Req_GetPrizeUserHorn ();
@@ -214,7 +213,7 @@ public class UIHomeMain : UIMain
 
 		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
 		machine_data = proxy.getListByCoin (coin);
-		if (machine_data.Length > 0) {
+		if (machine_data!=null&&machine_data.Length > 0) {
 			_list.numItems = machine_data.Length;
 			_list.RefreshVirtualList ();
 		}
@@ -223,12 +222,6 @@ public class UIHomeMain : UIMain
 	/// 进入游戏
 	/// </summary>
 	void enterGame(){
-		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
-		if (proxy != null) {
-			PlayerPrefs.SetInt (LocalKey.SELECT_MACHINE_ID,
-				proxy.getMachineId (machine_data[item_index]));
-		}
-
 		this.changeUIpage(typeof(UIGameMain));
 	}
 
@@ -271,6 +264,17 @@ public class UIHomeMain : UIMain
 		}
 	}
 
+	/**
+	 * 切换界面
+	 * */
+	protected void changeUIpage(Type cls){
+		//缓存选中的machine信息
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		if (proxy != null&& machine_data!=null) {
+			proxy.Selection = machine_data [item_index];	
+		}
+		base.changeUIpage (cls);
+	}
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用

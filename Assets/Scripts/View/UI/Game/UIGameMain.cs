@@ -134,20 +134,26 @@ public class UIGameMain : UIMain
 	/// Gets the balls info from server.
 	/// </summary>
 	void getBallsInfoFromServer(){
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		if (proxy == null)
+			return;
 		Req_GetMachinePrizeBallData request = new Req_GetMachinePrizeBallData ();
 		request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
 		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
-		request.MId = PlayerPrefs.GetInt(LocalKey.SELECT_MACHINE_ID);
+		request.MId = proxy.Selection.machine_id;
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
 	/// <summary>
 	/// Gets the ball picking odd.
 	/// </summary>
 	void getBallPickingOdd(){
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		if (proxy == null)
+			return;
 		Req_MachineStartGrab request = new Req_MachineStartGrab ();
 		request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
 		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
-		request.MId = PlayerPrefs.GetInt(LocalKey.SELECT_MACHINE_ID);
+		request.MId = proxy.Selection.machine_id;
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
     /// <summary>

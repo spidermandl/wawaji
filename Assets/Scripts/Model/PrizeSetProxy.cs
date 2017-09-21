@@ -8,7 +8,7 @@ using System.Text;
 /// <summary>
 /// 
 /// </summary>
-public class PrizeSetProxy : PureMVC.Patterns.Proxy {
+public class PrizeSetProxy : BaseProxy {
 
 	public const string NAME = "PrizeSetProxy";
 
@@ -32,11 +32,19 @@ public class PrizeSetProxy : PureMVC.Patterns.Proxy {
 		: base(proxyName, null){
 
 	}
+
+	public override void bindingData (Request.Response meta)
+	{
+		if (meta.GetType () == typeof(Req_GetAllPrize.Response)) {
+			bindingData ((Req_GetAllPrize.Response)meta);
+		}
+	}
+
 	/// <summary>
 	/// Sets the user data.
 	/// </summary>
 	/// <param name="meta">Meta.</param>
-	public void setPrizeInfoData(Req_GetAllPrize.Response meta){
+	public void bindingData(Req_GetAllPrize.Response meta){
 		List<PrizeItem> items = new List<PrizeItem> ();
 		foreach(Req_GetAllPrize.Response.Info info in meta.data.info ){
 			PrizeItem i = new PrizeItem ();

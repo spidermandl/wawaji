@@ -10,11 +10,12 @@
     <image id="n2_fvaa" name="n2" src="upgt1a" xy="278,12">
       <relation target="n1_fvaa" sidePair="middle-middle,left-left"/>
     </image>
-    <image id="n3_fvaa" name="n3" src="upgta" xy="349,25">
-      <relation target="n1_fvaa" sidePair="middle-middle,right-right"/>
-    </image>
     <component id="n4_upgt" name="n4" src="upgt17" xy="182,1">
       <relation target="n0_fvaa" sidePair="left-left,top-top"/>
     </component>
+    <text id="n5_dc7j" name="n5" xy="344,14" size="173,60" font="Seravek Medium" fontSize="45" color="#ffff00" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="264">
+      <relation target="n2_fvaa" sidePair="left-left,top-top"/>
+      <relation target="n1_fvaa" sidePair="rightext-right"/>
+    </text>
   </displayList>
 </component>

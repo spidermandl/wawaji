@@ -18,7 +18,6 @@ public class PrizeMediator: BaseMediator {
 	{
 		IList<string> list = new List<string>();
 		list.Add (Req_GetMachinePrizeInfo.COMMAND);
-		list.Add (Req_GetPrizeUserLists.COMMAND);
 		return list;
 	}
 
@@ -26,9 +25,6 @@ public class PrizeMediator: BaseMediator {
 		switch( notification.Name ){
 		case  Req_GetMachinePrizeInfo.COMMAND:
 			m_prize_ui.RespondMachinePrize (notification);
-			break;
-		case  Req_GetPrizeUserLists.COMMAND:
-			m_prize_ui.RespondUserPrizeList (notification);
 			break;
 		default:
 			break;

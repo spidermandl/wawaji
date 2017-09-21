@@ -8,7 +8,7 @@ using System.Text;
 /// <summary>
 /// 用户中奖名单
 /// </summary>
-public class UserPrizeListsProxy : PureMVC.Patterns.Proxy {
+public class UserPrizeListsProxy : BaseProxy {
 
 	public const string NAME = "UserPrizeListsProxy";
 
@@ -33,11 +33,19 @@ public class UserPrizeListsProxy : PureMVC.Patterns.Proxy {
 		: base(proxyName, null){
 
 	}
+
+	public override void bindingData (Request.Response meta)
+	{
+		if (meta.GetType () == typeof(Req_GetPrizeUserLists.Response)) {
+			bindingData ((Req_GetPrizeUserLists.Response)meta);
+		}
+	}
+
 	/// <summary>
 	/// Sets the user data.
 	/// </summary>
 	/// <param name="meta">Meta.</param>
-	public void setUserPrizeLists(Req_GetPrizeUserLists.Response meta){
+	public void bindingData(Req_GetPrizeUserLists.Response meta){
 		List<RecordsItem> items = new List<RecordsItem> ();
 		foreach(Req_GetPrizeUserLists.Response.Info info in meta.data.info ){
 			RecordsItem i = new RecordsItem ();
@@ -54,6 +62,5 @@ public class UserPrizeListsProxy : PureMVC.Patterns.Proxy {
 
 		this.Items = items;
 	}
-
 }
 

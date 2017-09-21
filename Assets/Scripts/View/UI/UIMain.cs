@@ -54,6 +54,15 @@ public abstract class UIMain : MonoBehaviour
 		obj.AddComponent(cls);
 	}
 
+	/// <summary>
+	/// Jumps to previous.
+	/// </summary>
+	protected void jumpToPrevious(){
+		string name = UIPackageManager.getInstance ().getPreviousPackage ();
+		if (name != null) {
+			this.changeUIpage(Type.GetType ("UI"+name+"Main"));
+		}
+	}
 	/**
 	 * 销毁界面回调
 	 * */

@@ -356,10 +356,13 @@ public class Picker : MonoBehaviour
 	/// Sends the game end message.
 	/// </summary>
 	void sendGameEndMsg(){
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		if (proxy == null)
+			return;
 		Req_MachineEndGrab request = new Req_MachineEndGrab ();
 		request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
 		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
-		request.MId = PlayerPrefs.GetInt(LocalKey.SELECT_MACHINE_ID);
+		request.MId = proxy.Selection.machine_id;
 		request.LogId = (UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy).GameId;
 		request.BallIdStr = "1,2,3";
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);

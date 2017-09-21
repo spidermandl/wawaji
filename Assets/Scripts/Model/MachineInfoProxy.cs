@@ -8,14 +8,19 @@ using System.Text;
 /// <summary>
 /// 主界面，娃娃机相关信息
 /// </summary>
-public class MachineInfoProxy : PureMVC.Patterns.Proxy {
+public class MachineInfoProxy : BaseProxy {
 
 	public const string NAME = "MachineInfoProxy";
 
 	List<MachineType> items;
+	TypeAndItem selection;
 	public List<MachineType> Items{
 		get{return this.items;}
 		set{ items = value;}
+	}
+	public TypeAndItem Selection{
+		get{return this.selection;}
+		set{ selection = value;}
 	}
 
 	public class MachineItem{
@@ -44,11 +49,19 @@ public class MachineInfoProxy : PureMVC.Patterns.Proxy {
 		: base(proxyName, null){
 
 	}
+
+	public override void bindingData (Request.Response meta)
+	{
+		if (meta.GetType () == typeof(Req_GetMachineInfo.Response)) {
+			bindingData ((Req_GetMachineInfo.Response)meta);
+		}
+	}
+
 	/// <summary>
 	/// Sets the user data.
 	/// </summary>
 	/// <param name="meta">Meta.</param>
-	public void setMachineInfoData(Req_GetMachineInfo.Response meta){
+	public void bindingData(Req_GetMachineInfo.Response meta){
 		List<MachineType> items = new List<MachineType> ();
 		foreach(Req_GetMachineInfo.Response.Info info in meta.data.info ){
 			MachineType i = new MachineType ();
@@ -67,30 +80,6 @@ public class MachineInfoProxy : PureMVC.Patterns.Proxy {
 		}
 		this.Items = items;
 
-//		if(PlayerPrefs.GetInt (LocalKey.SELECT_MACHINE_TYPE,-1)==-1)
-//			PlayerPrefs.SetInt (LocalKey.SELECT_MACHINE_TYPE, items [0].machine_type_id);
-	}
-
-	/// <summary>
-	/// Gets the machine identifier.
-	/// </summary>
-	/// <returns>The machine identifier.</returns>
-	/// <param name="mtid">Mtid.</param>
-	/// <param name="coin">Coin.</param>
-	public int getMachineId(TypeAndItem item){
-		MachineType temp = null;
-		foreach (MachineType t in items) {
-			if (t.machine_type_id == item.machine_type_id) {
-				temp = t;
-				break;
-			}
-		}
-		foreach(MachineItem i in temp.machine){
-			if (i.coin == item.coin)
-				return i.machine_id;
-		}
-
-		return 0;
 	}
 
 	/// <summary>
@@ -99,6 +88,9 @@ public class MachineInfoProxy : PureMVC.Patterns.Proxy {
 	/// <returns>The list by coin.</returns>
 	/// <param name="coin">Coin.</param>
 	public TypeAndItem[] getListByCoin(int coin){
+		if (items == null) {
+			return null;
+		}
 		List<TypeAndItem> list = new List<TypeAndItem> ();
 		foreach (MachineType t in items) {
 			foreach(MachineItem i in t.machine){
@@ -113,6 +105,31 @@ public class MachineInfoProxy : PureMVC.Patterns.Proxy {
 			}
 		}
 		return list.ToArray ();
+	}
+
+	/// <summary>
+	/// Gets the item by identifier.
+	/// </summary>
+	/// <returns>The item by identifier.</returns>
+	/// <param name="machine_id">Machine identifier.</param>
+	public TypeAndItem getItemById(int machine_id){
+		if (items == null) {
+			return null;
+		}
+		foreach (MachineType t in items) {
+			foreach(MachineItem i in t.machine){
+				if (i.machine_id == machine_id) {
+					TypeAndItem temp = new TypeAndItem ();
+					temp.coin = i.coin;
+					temp.machine_id = i.machine_id;
+					temp.machine_type_id = t.machine_type_id;
+					temp.name = t.name;
+					return temp;
+				}
+			}
+		}
+
+		return null;
 	}
 
 }

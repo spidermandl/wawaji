@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserRegisterSendMsg.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_UserResetPsd.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Request.cs" />
+     <Compile Include="Assets\Scripts\Model\BaseProxy.cs" />
      <Compile Include="Assets\Scripts\Model\DeviceInfoProxy.cs" />
      <Compile Include="Assets\Scripts\Model\GameBallProxy.cs" />
      <Compile Include="Assets\Scripts\Model\MachineInfoProxy.cs" />

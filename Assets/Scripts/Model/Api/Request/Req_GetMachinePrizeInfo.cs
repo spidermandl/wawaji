@@ -11,6 +11,11 @@ public class Req_GetMachinePrizeInfo :Request {
 	new public const string COMMAND = "Machine.GetMachinePrizeInfo";
 
 	new protected string _api = Req_GetMachinePrizeInfo.COMMAND;
+	int mtId;
+	public int MtId{
+		get{ return this.mtId; }
+		set{ mtId= value;_form.AddField ("mtId", value);}
+	}
 
 	public Req_GetMachinePrizeInfo()
 	{

@@ -85,6 +85,7 @@ public class UIProfile : BaseWindow
 //			m_list.numItems -= 1;
 			//m_list.RefreshVirtualList();
 			//this.changeUIpage(typeof(UIEnterMain));
+			int a =1;
 		});
 		if (this.items != null && this.items.Count>0) {
 			obj.asCom.GetChild ("n2").asTextField.text = "【中奖信息】"+this.items [index].desc;
@@ -98,7 +99,7 @@ public class UIProfile : BaseWindow
 			return;
 		}
 		this.items = proxy.Items;
-		this.List.numItems = this.items.Count;
+		//this.List.numItems = this.items.Count;
 		this.List.RefreshVirtualList ();
 	}
 

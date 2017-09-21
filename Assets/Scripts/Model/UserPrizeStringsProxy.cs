@@ -8,7 +8,7 @@ using System.Text;
 /// <summary>
 /// 中奖字串
 /// </summary>
-public class UserPrizeStringProxy : PureMVC.Patterns.Proxy {
+public class UserPrizeStringProxy : BaseProxy {
 
 	public const string NAME = "UserPrizeStringProxy";
 
@@ -22,11 +22,19 @@ public class UserPrizeStringProxy : PureMVC.Patterns.Proxy {
 		: base(proxyName, null){
 
 	}
+
+	public override void bindingData (Request.Response meta)
+	{
+		if (meta.GetType () == typeof(Req_GetPrizeUserHorn.Response)) {
+			bindingData ((Req_GetPrizeUserHorn.Response)meta);
+		}
+	}
+
 	/// <summary>
 	/// Sets the user data.
 	/// </summary>
 	/// <param name="meta">Meta.</param>
-	public void setPrizeStringsData(Req_GetPrizeUserHorn.Response meta){
+	public void bindingData(Req_GetPrizeUserHorn.Response meta){
 		List<string> items = new List<string> ();
 		foreach(string info in meta.data.info ){
 			items.Add (info);
@@ -34,6 +42,5 @@ public class UserPrizeStringProxy : PureMVC.Patterns.Proxy {
 
 		this.Items = items;
 	}
-
 }
 

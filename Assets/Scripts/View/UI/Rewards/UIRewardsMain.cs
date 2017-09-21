@@ -20,8 +20,8 @@ public class UIRewardsMain : UIMain
 
 		GComponent toolbar = _mainView.GetChild ("n2").asCom;
 		toolbar.GetChild("n0").onClick.Add(() => { 
-			this.changeUIpage(typeof(UIGameMain));
-
+			///this.changeUIpage(typeof(UIGameMain));
+			this.jumpToPrevious();
 		});
 
 		////////////////////////////////////////////////////////////////////////////////////

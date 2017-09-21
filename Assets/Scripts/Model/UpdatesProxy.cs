@@ -8,7 +8,7 @@ using System.Text;
 /// <summary>
 /// 资源更新model类
 /// </summary>
-public class UpdatesProxy : PureMVC.Patterns.Proxy {
+public class UpdatesProxy : BaseProxy {
 
 	public const string NAME = "UpdatesProxy";
 	const string FILE_NAME = "version.txt";
@@ -141,6 +141,10 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 		return localVersion.version;
 	}
 
+	public override void bindingData (Request.Response meta)
+	{
+	}
+
 	[Serializable]
 	public class ResVersion{
 
@@ -188,5 +192,6 @@ public class UpdatesProxy : PureMVC.Patterns.Proxy {
 			public int is_new;//0 已经存在的，1 需要更新的
 		}
 	}
+
 }
 

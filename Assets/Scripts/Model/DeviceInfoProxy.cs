@@ -8,7 +8,7 @@ using System.Text;
 /// <summary>
 /// 设备信息
 /// </summary>
-public class DeviceInfoProxy : PureMVC.Patterns.Proxy {
+public class DeviceInfoProxy : BaseProxy {
 
 	public const string NAME = "DeviceInfoProxy";
 
@@ -49,6 +49,10 @@ public class DeviceInfoProxy : PureMVC.Patterns.Proxy {
 	public DeviceInfoProxy (string proxyName)
 		: base(proxyName, null){
 		Uuid = null;
+	}
+
+	public override void bindingData (Request.Response meta)
+	{
 	}
 }
 

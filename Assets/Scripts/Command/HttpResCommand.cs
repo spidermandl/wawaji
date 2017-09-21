@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 
 /**
  * Desmond
@@ -20,65 +21,76 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 			proxy.fillServerVersion ((Req_GetUpdatePics)request);
 			return;
 		}else if (request.command () == Req_UserLogin.COMMAND || request.command () == Req_GetBaseInfo.COMMAND) {
-			if (request.getResponseType () == typeof(Req_UserLogin.Response)) {
-				AccountProxy proxy = Facade.RetrieveProxy (AccountProxy.NAME) as AccountProxy;
-				proxy.setUserData ((Base_Req_UserInfo.Response)request.Resp);
-			}
+			
+			setProxy<Req_UserLogin,AccountProxy,Req_UserLogin.Response>(request);
+
 		}else if (request.command () == Req_GetPrizeInfo.COMMAND) {
-			if (request.getResponseType () == typeof(Req_GetPrizeInfo.Response)) {
-				UserPrizeInfoProxy proxy = Facade.RetrieveProxy (UserPrizeInfoProxy.NAME) as UserPrizeInfoProxy;
-				proxy.setPrizeInfoData ((Req_GetPrizeInfo.Response)request.Resp);
-			}
+			
+			setProxy<Req_GetPrizeInfo,UserPrizeInfoProxy,Req_GetPrizeInfo.Response>(request);
+
 		}else if (request.command () == Req_GetAllPrize.COMMAND) {
-			if (request.getResponseType () == typeof(Req_GetAllPrize.Response)) {
-				PrizeSetProxy proxy = Facade.RetrieveProxy (PrizeSetProxy.NAME) as PrizeSetProxy;
-				proxy.setPrizeInfoData ((Req_GetAllPrize.Response)request.Resp);
-			}
+			
+			setProxy<Req_GetAllPrize,PrizeSetProxy,Req_GetAllPrize.Response>(request);
+
 		}else if (request.command () == Req_GetMachinePrizeInfo.COMMAND) {
 			
-			if (request.getResponseType () == typeof(Req_GetMachinePrizeInfo.Response)) {
-				MachinePrizeProxy proxy = Facade.RetrieveProxy (MachinePrizeProxy.NAME) as MachinePrizeProxy;
-				proxy.setMachinePrizeData ((Req_GetMachinePrizeInfo.Response)request.Resp);
-			}
+			setProxy<Req_GetMachinePrizeInfo,MachinePrizeProxy,Req_GetMachinePrizeInfo.Response>(request);
+
 		}else if (request.command () == Req_GetMachineInfo.COMMAND) {
 			
-			if (request.getResponseType () == typeof(Req_GetMachineInfo.Response)) {
-				MachineInfoProxy proxy = Facade.RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
-				proxy.setMachineInfoData ((Req_GetMachineInfo.Response)request.Resp);
-			}
+			setProxy<Req_GetMachineInfo,MachineInfoProxy,Req_GetMachineInfo.Response>(request);
+
 		}else if (request.command () == Req_GetPrizeUserHorn.COMMAND) {
 			
-			if (request.getResponseType () == typeof(Req_GetPrizeUserHorn.Response)) {
-				UserPrizeStringProxy proxy = Facade.RetrieveProxy (UserPrizeStringProxy.NAME) as UserPrizeStringProxy;
-				proxy.setPrizeStringsData ((Req_GetPrizeUserHorn.Response)request.Resp);
-			}
+			setProxy<Req_GetPrizeUserHorn,UserPrizeStringProxy,Req_GetPrizeUserHorn.Response>(request);
+
 		}else if (request.command () == Req_GetPrizeUserLists.COMMAND) {
 			
-			if (request.getResponseType () == typeof(Req_GetPrizeUserLists.Response)) {
-				UserPrizeListsProxy proxy = Facade.RetrieveProxy (UserPrizeListsProxy.NAME) as UserPrizeListsProxy;
-				proxy.setUserPrizeLists ((Req_GetPrizeUserLists.Response)request.Resp);
-			}
+			setProxy<Req_GetPrizeUserLists,UserPrizeListsProxy,Req_GetPrizeUserLists.Response>(request);
+
 		}else if (request.command () == Req_GetMachinePrizeBallData.COMMAND) {
 			
-			if (request.getResponseType () == typeof(Req_GetMachinePrizeBallData.Response)) {
-				GameBallProxy proxy = Facade.RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
-				proxy.setBallLists ((Req_GetMachinePrizeBallData.Response)request.Resp);
-			}
+			setProxy<Req_GetMachinePrizeBallData,GameBallProxy,Req_GetMachinePrizeBallData.Response>(request);
+
 		}else if (request.command () == Req_MachineStartGrab.COMMAND) {
 
-			if (request.getResponseType () == typeof(Req_MachineStartGrab.Response)) {
-				GameBallProxy proxy = Facade.RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
-				proxy.setGameInfo ((Req_MachineStartGrab.Response)request.Resp);
-			}
+			setProxy<Req_MachineStartGrab,GameBallProxy,Req_MachineStartGrab.Response>(request);
+
 		}else if (request.command () == Req_GetNewsLists.COMMAND) {
 
-			if (request.getResponseType () == typeof(Req_GetNewsLists.Response)) {
-				NewsProxy proxy = Facade.RetrieveProxy (NewsProxy.NAME) as NewsProxy;
-				proxy.setNewsData ((Req_GetNewsLists.Response)request.Resp);
-			}
+			setProxy<Req_GetNewsLists,NewsProxy,Req_GetNewsLists.Response>(request);
 		}
 
 
 		SendNotification (request.Api,request);
+	}
+
+	/// <summary>
+	/// Sets the proxy.
+	/// </summary>
+	/// <param name="request">Request.</param>
+	/// <typeparam name="T1">The 1st type parameter.</typeparam>
+	/// <typeparam name="T2">The 2nd type parameter.</typeparam>
+	/// <typeparam name="T3">The 3rd type parameter.</typeparam>
+	private void setProxy<T1,T2,T3>(Request request) where T1:Request where T2:BaseProxy where T3:Request.Response{
+		if (request.getResponseType () == typeof(T3)) {
+			FieldInfo fi = typeof(T2).GetField ("NAME");
+			string name = (string)(fi.GetValue(typeof(T2)));
+			if(Facade.RetrieveProxy (name) ==null){
+				Type t = typeof(T2);
+				Type[] pt = new Type[1];
+				pt[0] = typeof(string);
+				//根据参数类型获取构造函数 
+				ConstructorInfo ci = t.GetConstructor(pt); 
+				//构造Object数组，作为构造函数的输入参数 
+				object[] obj = new object[1]{name};   
+				//调用构造函数生成对象 
+				T2 o = ci.Invoke(obj) as T2;
+				Facade.RegisterProxy (o);
+			}
+
+			T2 proxy = Facade.RetrieveProxy (name) as T2;
+			proxy.bindingData ((T3)request.Resp);
+		}
 	}
 }

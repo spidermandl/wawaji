@@ -8,7 +8,7 @@ using System.Text;
 /// <summary>
 /// 游戏中奖球数据
 /// </summary>
-public class GameBallProxy : PureMVC.Patterns.Proxy {
+public class GameBallProxy : BaseProxy {
 
 	public const string NAME = "GameBallProxy";
 
@@ -58,11 +58,19 @@ public class GameBallProxy : PureMVC.Patterns.Proxy {
 		: base(proxyName, null){
 
 	}
+
+	public override void bindingData (Request.Response meta)
+	{
+		if (meta.GetType () == typeof(Req_GetMachinePrizeBallData.Response)) {
+			bindingData ((Req_GetMachinePrizeBallData.Response)meta);
+		}
+	}
+
 	/// <summary>
 	/// Sets the user data.
 	/// </summary>
 	/// <param name="meta">Meta.</param>
-	public void setBallLists(Req_GetMachinePrizeBallData.Response meta){
+	public void bindingData(Req_GetMachinePrizeBallData.Response meta){
 		Num = meta.data.info.count_ball_num;
 		List<BallsItem> items = new List<BallsItem> ();
 		foreach(Req_GetMachinePrizeBallData.Response.PrizeBall ball in meta.data.info.prize_ball_arr ){
@@ -87,7 +95,7 @@ public class GameBallProxy : PureMVC.Patterns.Proxy {
 	/// Sets the game info.
 	/// </summary>
 	/// <param name="meta">Meta.</param>
-	public void setGameInfo(Req_MachineStartGrab.Response meta){
+	public void bindingData(Req_MachineStartGrab.Response meta){
 		GameId = meta.data.info.game_id;
 		int[] copy = new int[meta.data.info.ball_arr.Length];
 		Array.Copy (meta.data.info.ball_arr, copy, copy.Length);

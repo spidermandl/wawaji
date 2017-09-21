@@ -4,6 +4,9 @@ using FairyGUI;
 using UnityEngine;
 using PureMVC.Interfaces;
 
+/// <summary>
+/// 兑换中心
+/// </summary>
 public class UIExchangeMain : UIMain
 {
 	UITopup _uiTopup;

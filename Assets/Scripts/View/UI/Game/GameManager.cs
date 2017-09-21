@@ -71,8 +71,9 @@ public class GameManager : MonoBehaviour
 		this.pool = PoolManager.Pools["WaWaJi"];
 		this._3dCamera = this.gameObject.transform.Find ("3d_Camera");
 		//初始摄像机角度
-		if (Math.Abs (this._3dCamera.position.x) < 0.01f)
-			this._3dCamera = this._3dCamera;
+		if (Math.Abs (this._3dCamera.position.x) < 0.01f) {
+			
+		}
 		else if (this._3dCamera.position.x < 0)
 			this._3dCamera.transform.RotateAround(Vector3.zero,Vector3.up,90);
 		else if (this._3dCamera.position.x > 0)

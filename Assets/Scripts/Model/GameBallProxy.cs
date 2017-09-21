@@ -63,6 +63,8 @@ public class GameBallProxy : BaseProxy {
 	{
 		if (meta.GetType () == typeof(Req_GetMachinePrizeBallData.Response)) {
 			bindingData ((Req_GetMachinePrizeBallData.Response)meta);
+		}else if(meta.GetType () == typeof(Req_MachineStartGrab.Response)){
+			bindingData ((Req_MachineStartGrab.Response)meta);
 		}
 	}
 
@@ -71,9 +73,8 @@ public class GameBallProxy : BaseProxy {
 	/// </summary>
 	/// <param name="meta">Meta.</param>
 	public void bindingData(Req_GetMachinePrizeBallData.Response meta){
-		Num = meta.data.info.count_ball_num;
 		List<BallsItem> items = new List<BallsItem> ();
-		foreach(Req_GetMachinePrizeBallData.Response.PrizeBall ball in meta.data.info.prize_ball_arr ){
+		foreach(Req_GetMachinePrizeBallData.Response.Info ball in meta.data.info ){
 			BallsItem b = new BallsItem ();
 			b.prize_id = ball.prize_id;
 			b.ball_id = ball.ball_id;

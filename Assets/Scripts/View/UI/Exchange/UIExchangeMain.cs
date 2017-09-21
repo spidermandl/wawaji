@@ -68,8 +68,10 @@ public class UIExchangeMain : UIMain
 	/// Gets all prize.
 	/// </summary>
 	void getAllPrize(){
-		if (UnityFacade.GetInstance ().RetrieveProxy (PrizeSetProxy.NAME) != null)
+		if (UnityFacade.GetInstance ().RetrieveProxy (PrizeSetProxy.NAME) != null) {
+			RespondAllPrize (null);
 			return;
+		}
 		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
 		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
 		if (userid != 0 && token != null) {

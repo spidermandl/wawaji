@@ -11,9 +11,9 @@ public class GameManager : MonoBehaviour
 {
 	SpawnPool pool;
 	///// 球相关属性 ///////////////////////////////////////////
-	ArrayList balls;
+	Dictionary<Transform,GameBallProxy.BallsItem> balls;
 
-	const int BALL_TOTAL = 120;//生成球数量
+	static int BALL_TOTAL = 120;//生成球数量
 	const float BALL_RADIUS = 0.25f;//球半径
 	const int CREATION_X=-2;
 	const int CREATION_Y=-2;
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 	}
 	const float CAMERA_ROTATE_SPEED = 0.15f;
 	const float RETURN_FULL_TIME = 1.5f;
-	private StateMachine<States> cameraStateMachine;//
+	private StateMachine<States> cameraStateMachine;//摄像机状态机
 	enum States
 	{
 		Still,// 静止
@@ -87,9 +87,8 @@ public class GameManager : MonoBehaviour
 		}else
 			p = root.AddComponent (typeof(Picker)) as Picker;
 		this.picker=p;
-		this.balls = new ArrayList();
-		//StartCoroutine (initBalls());
-		initBalls();
+		this.balls = new Dictionary<Transform, GameBallProxy.BallsItem>();
+		//initBalls();
 
 		GameObject pass = this.gameObject.transform.Find ("structure/pass").gameObject;
 		PassChecker pChecker = pass.GetComponent (typeof(PassChecker)) as PassChecker;
@@ -114,11 +113,8 @@ public class GameManager : MonoBehaviour
 	/// <summary>
 	/// 初始化 抓球
 	/// </summary>
-	void initBalls(){
+	public void initBalls(){
 		Transform balls = this.gameObject.transform.Find ("structure/balls");
-		GameObject ball1 = (GameObject)Resources.Load ("Prefabs/ball/ball_1");
-		GameObject ball2 =(GameObject)Resources.Load ("Prefabs/ball/ball_2");
-		GameObject ball3 =(GameObject)Resources.Load ("Prefabs/ball/ball_3");
 		//        2   2
 		//-2              2
 		//   -3   -1
@@ -127,6 +123,50 @@ public class GameManager : MonoBehaviour
 		for (int i = 0; i < 2 * LENGTH_Y * 2 * LENGTH_X * 2 * LENGTH_Z; i++) {
 			indexs.Add (i);
 		}
+
+		GameBallProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
+		List<GameBallProxy.BallsItem> items = null;
+		if (proxy != null &&  proxy.Items!=null) {
+			items = proxy.Items;
+			foreach (GameBallProxy.BallsItem item in items) {
+				GameObject ballObj = (GameObject)Resources.Load ("Prefabs/ball/ball_"+item.ball_id);
+				for (int i = 0; i < item.ball_num; i++) {
+					Transform ball = this.pool.Spawn(ballObj, Vector3.zero, Quaternion.identity,balls);
+					if(ball!=null){
+						this.balls.Add (ball, item);
+					}
+
+					System.Random seed =  new System.Random ();
+					//				float x = (float)Math.Round(seed.NextDouble()*4 - 2,2);
+					//				float z = (float)Math.Round(seed.NextDouble()*3 - 2,2);
+					//				ball.position = new Vector3 (x, -2.5f, z);
+
+					int rand = seed.Next (0, indexs.Count);
+					Int32 index = (Int32)indexs [rand];
+					indexs.Remove (index);
+					int n_y = index / (6 * 8);
+					int n_z = (index - 6 * 8 * n_y) / 8;
+					int n_x = index - 6 * 8 * n_y - 8 * n_z;
+					//Debug.Log (new Vector3 (n_x, n_y, n_z));
+					ball.position = new Vector3 (
+						CREATION_X+2*BALL_RADIUS*n_x+BALL_RADIUS,
+						CREATION_Y+2*BALL_RADIUS*n_y+BALL_RADIUS,
+						CREATION_Z-2*BALL_RADIUS*n_z+BALL_RADIUS);
+
+					ball.gameObject.layer = LayerMask.NameToLayer ("Ball"); 
+					//yield return new WaitForSeconds(0.1f);  
+
+				}
+			}
+
+			return;
+		}
+
+
+		GameObject ball1 = (GameObject)Resources.Load ("Prefabs/ball/ball_1");
+		GameObject ball2 = (GameObject)Resources.Load ("Prefabs/ball/ball_2");
+		GameObject ball3 = (GameObject)Resources.Load ("Prefabs/ball/ball_3");
+
 
 		for (int i = 0; i < BALL_TOTAL; i++) {
 			System.Random seed =  new System.Random ();
@@ -167,7 +207,6 @@ public class GameManager : MonoBehaviour
 					CREATION_Z-2*BALL_RADIUS*n_z+BALL_RADIUS);
 
 				ball.gameObject.layer = LayerMask.NameToLayer ("Ball"); 
-				this.balls.Add (ball);
 				//yield return new WaitForSeconds(0.1f);  
 			}
 			//yield return null;

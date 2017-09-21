@@ -11,5 +11,8 @@
       <relation target="" sidePair="left-left"/>
       <relation target="n1_sfdg" sidePair="rightext-left,middle-middle"/>
     </text>
+    <component id="n3_dc7j" name="n3" src="dc7j2z" xy="539,20">
+      <relation target="n0_sfdg" sidePair="right-right,middle-middle"/>
+    </component>
   </displayList>
 </component>

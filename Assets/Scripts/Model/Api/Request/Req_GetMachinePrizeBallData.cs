@@ -27,19 +27,12 @@ public class Req_GetMachinePrizeBallData :Request {
 		public class Data
 		{
 			public int code;
-			public Info info;
+			public Info[] info;
 			public string msg;
 		}
 
 		[Serializable]
 		public class Info
-		{
-			public int count_ball_num;//娃娃机内海洋球和奖品数据
-			public PrizeBall[] prize_ball_arr;
-		}
-
-		[Serializable]
-		public class PrizeBall
 		{
 			public int prize_id;//奖品ID
 			public int ball_id;//海洋球ID

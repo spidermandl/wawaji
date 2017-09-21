@@ -226,8 +226,12 @@ public class UIGameMain : UIMain
 		});
 	}
 
+	/// <summary>
+	/// Responds the ball info.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
 	public void RespondBallInfo(INotification notification){
-		
+		gameManager.initBalls ();
 	}
 
 	public void RespondGameStart(INotification notification){

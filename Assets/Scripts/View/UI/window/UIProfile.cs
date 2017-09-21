@@ -80,15 +80,21 @@ public class UIProfile : BaseWindow
 
 	void RenderListItem(int index, GObject obj)
 	{
-		obj.asCom.GetChild ("n1").onClick.Add (()=>{
-//			GList m_list = List;
-//			m_list.numItems -= 1;
-			//m_list.RefreshVirtualList();
-			//this.changeUIpage(typeof(UIEnterMain));
-			int a =1;
-		});
 		if (this.items != null && this.items.Count>0) {
 			obj.asCom.GetChild ("n2").asTextField.text = "【中奖信息】"+this.items [index].desc;
+			if (this.items [index].status == 1) {//待领取状态
+				obj.asCom.GetChild ("n3").visible = false;
+				obj.asCom.GetChild ("n1").visible = true;
+				obj.asCom.GetChild ("n1").onClick.Add (()=>{
+					
+				});
+			} else {
+				obj.asCom.GetChild ("n3").visible = true;
+				obj.asCom.GetChild ("n1").visible = false;
+				obj.asCom.GetChild ("n3").onClick.Add (()=>{
+					
+				});
+			}
 		}
 
 	}
@@ -99,7 +105,7 @@ public class UIProfile : BaseWindow
 			return;
 		}
 		this.items = proxy.Items;
-		//this.List.numItems = this.items.Count;
+		this.List.numItems = this.items.Count;
 		this.List.RefreshVirtualList ();
 	}
 

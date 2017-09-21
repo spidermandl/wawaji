@@ -28,6 +28,7 @@ public class Picker : MonoBehaviour
 	///// //////////////////////////////////////////////////////// 
 	GameObject fill;//槽口填充
 	GameObject cover;//槽口挡板
+	GameObject fence;//后栏珊，防止球扔出界
 	///// //////////////////////////////////////////////////////// 
 	private StateMachine<States> pickerStateMachine;//
 	enum States
@@ -81,6 +82,7 @@ public class Picker : MonoBehaviour
 		this.rootFoot = this.gameObject.transform.Find ("foot");
 		this.fill = this.gameObject.transform.parent.Find ("fill").gameObject;
 		this.cover = this.gameObject.transform.parent.Find ("cover").gameObject;
+		this.fence = this.gameObject.transform.parent.Find ("back_fence").gameObject;
 		this.pickRange = this.gameObject.transform.Find ("picking_range").gameObject;
 		this.ball_objs = this.gameObject.transform.Find ("balls");
 
@@ -244,6 +246,7 @@ public class Picker : MonoBehaviour
 		this.invalidFence ();
 		this.fill.SetActive (false);
 		this.cover.SetActive (false);
+		this.fence.SetActive (true);
 		for (int i = 0; i < this.legs; i++) {
 			this.foots [i].gameObject.SetActive (false);
 		}
@@ -277,7 +280,7 @@ public class Picker : MonoBehaviour
 		this.gameObject.transform.localPosition = Picker.initPos;
 		this.fill.SetActive (true);
 		this.cover.SetActive (true);
-
+		this.fence.SetActive (false);
 
 		//初始化底部fence
 		initFence ();

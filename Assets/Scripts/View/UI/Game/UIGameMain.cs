@@ -24,7 +24,6 @@ public class UIGameMain : UIMain
 	}
 
 	void Start(){
-		getBallsInfoFromServer ();
 
 		////获取游戏3d场景对象，以及游戏管理对象///////////////////////////////////////////////
 		root = GameObject.Find("3dGame");
@@ -125,6 +124,8 @@ public class UIGameMain : UIMain
 //		PinchGesture gesture3 = new PinchGesture(holder);
 //		gesture3.onAction.Add(OnPinch);
 
+		//非显示相关
+		getBallsInfoFromServer ();
 	}
 
 	void Update(){

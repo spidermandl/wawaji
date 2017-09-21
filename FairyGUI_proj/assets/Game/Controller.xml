@@ -22,7 +22,7 @@
     <component id="n6_fvaa" name="n6" src="l4t6f" xy="426,36">
       <relation target="n1_fvaa" sidePair="right-right,bottom-bottom"/>
     </component>
-    <list id="n7_fvaa" name="n7" xy="-1,262" size="750,198" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://dulhkyd0l4t6g">
+    <list id="n7_fvaa" name="n7" xy="-1,262" size="750,198" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="2" defaultItem="ui://dulhkyd0l4t6g">
       <relation target="n0_fvaa" sidePair="center-center,bottom-bottom"/>
       <relation target="n0_fvaa" sidePair="width-width"/>
       <item/>
@@ -31,5 +31,4 @@
       <item/>
     </list>
   </displayList>
-  <relation target="" sidePair="width-width,height-height"/>
 </component>

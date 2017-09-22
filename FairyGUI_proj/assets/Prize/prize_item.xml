@@ -7,7 +7,7 @@
     <image id="n1_upgt" name="n1" src="upgto" xy="15,16">
       <relation target="n2_upgt" sidePair="left-left,middle-middle"/>
     </image>
-    <loader id="n6_dc7j" name="n6" xy="82,63" size="50,61" url="ui://eap8hbzxupgtx" fill="scale">
+    <loader id="n6_dc7j" name="n6" xy="82,63" size="50,61" url="ui://eap8hbzxupgtx" align="center" vAlign="middle" fill="scale">
       <relation target="n1_upgt" sidePair="top-top,left-left"/>
     </loader>
     <image id="n4_upgt" name="n4" src="upgtc" xy="134,90">
@@ -22,7 +22,7 @@
     <image id="n9_dc7j" name="n9" src="upgt8" xy="141,112">
       <relation target="n8_dc7j" sidePair="top-top,left-left"/>
     </image>
-    <loader id="n8_dc7j" name="n8" xy="164,74" size="50,50" url="ui://eap8hbzxupgt10" fill="scale">
+    <loader id="n8_dc7j" name="n8" xy="164,74" size="50,50" url="ui://eap8hbzxupgt10" align="center" vAlign="middle" fill="scale">
       <relation target="n4_upgt" sidePair="left-left,top-top"/>
     </loader>
     <image id="n10_dc7j" name="n10" src="upgtc" xy="214,91">

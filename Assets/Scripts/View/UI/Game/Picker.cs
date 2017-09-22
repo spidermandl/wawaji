@@ -53,7 +53,9 @@ public class Picker : MonoBehaviour
 	public delegate bool CheckDropBall(GameObject ball);
 	private CheckDropBall _checkDropBall;//掉球回调函数
 	public delegate void CheckResultBall(List<GameObject> balls);
-	private CheckResultBall _checkResultBall;//结果毁掉函数
+	private CheckResultBall _checkResultBall;//结果回调函数
+	public delegate int[] CheckRemainingBall(List<GameObject> balls);
+	private CheckRemainingBall _checkRemainingBall;//剩余球回调函数
 	Transform ball_objs = null;//被抓住的球的根结点
 	List<BallBundle> picked_balls = new List<BallBundle>();
 	class BallBundle{
@@ -234,8 +236,8 @@ public class Picker : MonoBehaviour
 		Vector3 dir = Picker.dropPos - this.gameObject.transform.localPosition;
 		float dis = (float)Math.Sqrt (dir.x * dir.x + dir.y * dir.y + dir.z * dir.z);
 		this.releaseDirection = new Vector3 (dir.x/dis,dir.y/dis,dir.z/dis);
-		sendGameEndMsg ();
-		StartCoroutine (dropBallByOdds ());
+		StartCoroutine (dropBallByType ());
+		StartCoroutine (confirmDrops ());
 	}
 	public void Ship_FixedUpdate(){
 		this.gameObject.transform.Translate (
@@ -314,7 +316,7 @@ public class Picker : MonoBehaviour
 		invalidFence ();
 	}
 	/// <summary>
-	/// Invalids the fence.
+	/// Invalids the 多边形 fence.
 	/// </summary>
 	void invalidFence(){
 		this.hexagon_cell.gameObject.SetActive (false);
@@ -322,7 +324,7 @@ public class Picker : MonoBehaviour
 		this.slot.gameObject.SetActive (false);
 	}
 	/// <summary>
-	/// Valids the fence.
+	/// Valids the 多边形 fence.
 	/// </summary>
 	void validFence(){
 		//this.hexagon_cell.gameObject.SetActive (true);
@@ -359,26 +361,12 @@ public class Picker : MonoBehaviour
 			restorePhysics ();
 		}
 	}
-	/// <summary>
-	/// Sends the game end message.
-	/// </summary>
-	void sendGameEndMsg(){
-		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
-		if (proxy == null)
-			return;
-		Req_MachineEndGrab request = new Req_MachineEndGrab ();
-		request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
-		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
-		request.MId = proxy.Selection.machine_id;
-		request.LogId = (UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy).GameId;
-		request.BallIdStr = "1,2,3";
-		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
-	}
+
 	/// <summary>
 	/// 移动过程按概率掉落
 	/// </summary>
 	/// <returns>The ball by odds.</returns>
-	IEnumerator dropBallByOdds(){
+	IEnumerator dropBallByType(){
 		GameBallProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
 		if (proxy != null) {
 			for (int i = this.picked_balls.Count - 1; i >= 0; i--) {
@@ -395,44 +383,76 @@ public class Picker : MonoBehaviour
 			}
 			this._checkResultBall (bs);
 		} else {//无网络情况逻辑
-			while (true) {
-				bool noDrop = true;
-				switch (this.picked_balls.Count) {
-				case 1:
-					System.Random rand = new System.Random ();
-					float odd = (float)rand.NextDouble ();
-					if (odd > 0.9f) {
-						restorePhysics ();
-						noDrop = false;
-					}
-					break;
-				case 2:
-					rand = new System.Random ();
-					odd = (float)rand.NextDouble ();
-					if (odd > 0.7f) {
-						restorePhysics ();
-						noDrop = false;
-					}
-					break;
-				case 3:
-					rand = new System.Random ();
-					odd = (float)rand.NextDouble ();
-					if (odd > 0.5f) {
-						restorePhysics ();
-						noDrop = false;
-					}
-					break;
-				default:
-					noDrop = false;
-					break;
-				}
-				if (noDrop)
-					break;
+			yield return dropBallByOdds();
+		}
+	}
+
+	/// <summary>
+	/// 按服务器返回结果掉落
+	/// </summary>
+	/// <returns>The ball by odds.</returns>
+	IEnumerator dropBallByResult(){
+		GameBallProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
+		if (proxy != null) {
+			List<GameObject> bs = new List<GameObject> ();
+			for (int i = 0;i< this.picked_balls.Count; i++) {
+				bs.Add (this.picked_balls [i].Ball);
+			}
+			int[] drops = _checkRemainingBall (bs);
+			BallBundle[] drop_balls = new BallBundle[drops.Length];
+			for (int i = 0; i < drops.Length; i++) {
+				BallBundle b = this.picked_balls [i];
+				drop_balls [i] = b;
+				restorePhysics (b);
 				yield return new WaitForSeconds (0.2f);
+			}
+			for (int i = 0; i < drop_balls.Length; i++) {
+				this.picked_balls.Remove (drop_balls[i]);
 			}
 		}
 	}
 
+	/// <summary>
+	/// 移动过程按概率掉落
+	/// </summary>
+	/// <returns>The ball by odds.</returns>
+	IEnumerator dropBallByOdds(){
+		while (true) {
+			bool noDrop = true;
+			switch (this.picked_balls.Count) {
+			case 1:
+				System.Random rand = new System.Random ();
+				float odd = (float)rand.NextDouble ();
+				if (odd > 0.9f) {
+					restorePhysics ();
+					noDrop = false;
+				}
+				break;
+			case 2:
+				rand = new System.Random ();
+				odd = (float)rand.NextDouble ();
+				if (odd > 0.7f) {
+					restorePhysics ();
+					noDrop = false;
+				}
+				break;
+			case 3:
+				rand = new System.Random ();
+				odd = (float)rand.NextDouble ();
+				if (odd > 0.5f) {
+					restorePhysics ();
+					noDrop = false;
+				}
+				break;
+			default:
+				noDrop = false;
+				break;
+			}
+			if (noDrop)
+				break;
+			yield return new WaitForSeconds (0.2f);
+		}
+	}
 	/// <summary>
 	/// 掉落目前离中心距离最远的球，加上物理
 	/// </summary>
@@ -441,12 +461,22 @@ public class Picker : MonoBehaviour
 		restorePhysics (ball);
 		this.picked_balls.RemoveAt (0);
 	}
-
+	/// <summary>
+	/// Restores the physics.
+	/// </summary>
+	/// <param name="ball">Ball.</param>
 	void restorePhysics(BallBundle ball){
 		ball.Ball.transform.parent = this.gameObject.transform.parent.FindChild ("balls");//还原根节点
 		Rigidbody rb = ball.Ball.GetComponent<Rigidbody> ();
 		rb.useGravity = true;
 		rb.constraints = RigidbodyConstraints.None;
+	}
+
+	IEnumerator confirmDrops(){
+		yield return new WaitForSeconds(1);
+		for (int i = 0; i < this.legs; i++) {
+			foots [i].gameObject.SetActive (false);
+		}
 	}
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
@@ -475,6 +505,16 @@ public class Picker : MonoBehaviour
 			return true;
 		}
 		return false;
+	}
+	/// <summary>
+	/// 服务器最终掉落确认
+	/// </summary>
+	public void serverConfirmDrop(){
+		if (this.pickerStateMachine.State != States.Ship) {
+			return;
+		}
+
+		StartCoroutine (dropBallByResult ());
 	}
 	/// <summary>
 	/// 回调方法 抓取范围内的球
@@ -509,6 +549,13 @@ public class Picker : MonoBehaviour
 	/// <param name="_func">Func.</param>
 	public void setCheckResultBall(CheckResultBall _func){
 		this._checkResultBall = _func;
+	}
+	/// <summary>
+	/// Sets the check remaining ball.
+	/// </summary>
+	/// <param name="_func">Func.</param>
+	public void setCheckRemainingBall(CheckRemainingBall _func){
+		this._checkRemainingBall = _func;
 	}
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// ////////////////////////////////////////////////////////////////////////////

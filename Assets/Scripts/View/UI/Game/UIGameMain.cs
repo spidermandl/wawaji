@@ -230,10 +230,13 @@ public class UIGameMain : UIMain
 	void RenderListItem(int index, GObject obj)
 	{
 		if(this.items!=null){
-			obj.asCom.GetChild ("n3").asLoader.url = this.items [index].b_pic;
-			obj.asCom.GetChild ("n4").asLoader.url = this.items [index].p_pic;
+			//obj.asCom.GetChild ("n3").asLoader.url = this.items [index].b_pic;
+			//obj.asCom.GetChild ("n4").asLoader.url = this.items [index].p_pic;
 			obj.asCom.GetChild ("n5").asTextField.text = this.items [index].name;
 
+			UpdatesProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
+			proxy.loadBallIcon (obj.asCom.GetChild ("n3").asLoader, ""+this.items [index].ball_id);
+			proxy.loadPrizeIcon (obj.asCom.GetChild ("n4").asLoader, ""+this.items [index].prize_id);
 		}
 	}
 
@@ -265,7 +268,18 @@ public class UIGameMain : UIMain
 		gameManager.initBalls ();
 		GameBallProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
 		if (proxy != null) {
-			this.items = proxy.Items;
+			
+			GameBallProxy.BallsItem[] temps = proxy.Items.ToArray ();
+			GameBallProxy.BallsItem[] copy = new GameBallProxy.BallsItem[temps.Length];
+			Array.Copy (temps, copy, copy.Length);
+
+			this.items = new List<GameBallProxy.BallsItem>(copy);
+			int coin_ball = 0;
+			for (int i = 0; i < this.items.Count; i++) {
+				if (this.items [i].is_matter == 0)
+					coin_ball = i;
+			}
+			this.items.RemoveAt (coin_ball);
 			_list.numItems = this.items.Count;
 			_list.RefreshVirtualList ();
 		}
@@ -276,7 +290,7 @@ public class UIGameMain : UIMain
 	}
 
 	public void RespondGameEnd(INotification notification){
-
+		gameManager.machineEndGrab ();
 	}
 
 	/// <summary>

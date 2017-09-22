@@ -8,7 +8,7 @@
     <loader id="n3_l4t6" name="n3" xy="76,64" size="32,28" url="ui://dulhkyd0l4t6k" fill="scale">
       <relation target="n0_l4t6" sidePair="width-width,height-height"/>
     </loader>
-    <loader id="n4_l4t6" name="n4" xy="128,34" size="59,64" url="ui://dulhkyd0l4t6l" fill="scale">
+    <loader id="n4_l4t6" name="n4" xy="128,34" size="59,64" url="ui://dulhkyd0l4t6l" align="center" vAlign="middle" fill="scale">
       <relation target="n0_l4t6" sidePair="width-width,height-height"/>
     </loader>
     <text id="n5_dc7j" name="n5" xy="35,141" size="187,38" fontSize="30" color="#ffccff" align="center" vAlign="middle" autoSize="height" bold="true" strokeColor="#000000" singleLine="true" text="iPhone7">

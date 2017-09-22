@@ -122,6 +122,8 @@ public abstract class Request {
 	public Response parseResponse(string json){
 		try{
 			_response = parseLogicResponse(json);
+			if(_response ==null)
+				_response = new Exception();
 			_response.Req =this;
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
 		}catch(JsonSerializationException e){

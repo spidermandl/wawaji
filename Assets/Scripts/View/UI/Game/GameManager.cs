@@ -6,6 +6,7 @@ using UnityEngine;
 using PathologicalGames;
 using DG.Tweening;
 using MonsterLove.StateMachine;
+using System.Text;
 
 public class GameManager : MonoBehaviour
 {
@@ -89,6 +90,7 @@ public class GameManager : MonoBehaviour
 		this.picker=p;
 		this.picker.setCheckDropBall (checkDropBall);
 		this.picker.setCheckResultBall (checkBallResult);
+		this.picker.setCheckRemainingBall (checkRemaingBall);
 		this.balls = new Dictionary<Transform, GameBallProxy.BallsItem>();
 		//initBalls();
 
@@ -354,6 +356,10 @@ public class GameManager : MonoBehaviour
 		cameraStateMachine.ChangeState (States.Return);
 	}
 
+	public void machineEndGrab(){
+		picker.serverConfirmDrop ();
+	}
+
 	public void inactive(){
 		while (this.pool.Count > 0)
 		{
@@ -385,7 +391,11 @@ public class GameManager : MonoBehaviour
 		return false;
 	}
 
-	public void checkBallResult(List<GameObject> balls){
+	/// <summary>
+	/// Checks the ball result.
+	/// </summary>
+	/// <param name="picked_balls">Picked balls.</param>
+	public void checkBallResult(List<GameObject> picked_balls){
 		MachineInfoProxy m_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
 		GameBallProxy g_proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
 		if (m_proxy == null || g_proxy == null)
@@ -395,8 +405,43 @@ public class GameManager : MonoBehaviour
 		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
 		request.MId = m_proxy.Selection.machine_id;
 		request.LogId = g_proxy.GameId;
-		request.BallIdStr = g_proxy.formBallIDstring ();
+
+		StringBuilder builder = new StringBuilder ();
+		for(int i=0; i < picked_balls.Count;i++){
+			GameBallProxy.BallsItem t = this.balls [picked_balls [i].transform];
+			if (t == null)
+				continue;
+			builder.Append (t.ball_id);
+			if(i<picked_balls.Count-1)
+				builder.Append(",");
+		}
+
+		request.BallIdStr = builder.ToString ();
+
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+	}
+	/// <summary>
+	/// Checks the remaing ball.
+	/// </summary>
+	/// <returns>需要掉落的索引.</returns>
+	/// <param name="picked_balls">Picked balls.</param>
+	public int[] checkRemaingBall(List<GameObject> picked_balls){
+		GameBallProxy g_proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
+		if (g_proxy == null)
+			return new int[0];
+		List<int> drops = new List<int> ();
+		List<int> result = new List<int>(g_proxy.getBallResult());
+		for (int i=picked_balls.Count-1;i>=0;i--) {
+			GameBallProxy.BallsItem t =balls [picked_balls[i].transform];
+			if (t != null) {
+				if (result.Contains (t.ball_id) == true) {
+					result.Remove (t.ball_id);
+					continue;
+				}
+			} 
+			drops.Add (i);
+		}
+		return drops.ToArray ();
 	}
 }
 

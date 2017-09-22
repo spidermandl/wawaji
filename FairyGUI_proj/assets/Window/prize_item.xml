@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="150,180">
   <displayList>
-    <image id="n0_lcrn" name="n0" src="lcrn27" xy="25,134">
-      <relation target="" sidePair="bottom-bottom,center-center"/>
-    </image>
-    <image id="n1_lcrn" name="n1" src="lcrn28" xy="45,1">
-      <relation target="" sidePair="top-top,center-center"/>
-    </image>
+    <loader id="n2_dc7j" name="n2" xy="32,7" size="92,130" url="ui://jorujmv2lcrn28" align="center" vAlign="middle" fill="scale"/>
+    <text id="n3_dc7j" name="n3" xy="17,142" size="125,37" fontSize="24" color="#ffccff" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" singleLine="true" text="iPhone7"/>
   </displayList>
 </component>

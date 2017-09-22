@@ -30,7 +30,7 @@
       <relation target="n14_sfdg" sidePair="bottom-bottom"/>
       <relation target="n1_sfdg" sidePair="center-center,width-width"/>
     </list>
-    <loader id="n18_dc7j" name="n18" xy="63,25" size="130,120">
+    <loader id="n18_dc7j" name="n18" xy="63,25" size="130,120" align="center" vAlign="middle">
       <relation target="n16_qzv1" sidePair="left-left,top-top"/>
     </loader>
     <image id="n16_qzv1" name="n16" src="qzv12i" xy="6,11">

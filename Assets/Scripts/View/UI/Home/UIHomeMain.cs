@@ -95,11 +95,17 @@ public class UIHomeMain : UIMain
 				_topupWin.Show();
 			});
 		});
+
 		//查看奖品
 		_mainView.GetChild ("n12").onClick.Add (() => {
 			//查看奖品
 			if(_prizeWin == null)
 				_prizeWin = new UIPrize ();
+			//缓存选中的machine信息
+			MachineInfoProxy m_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+			if (m_proxy != null&& machine_data!=null) {
+				m_proxy.Selection = machine_data [item_index];	
+			}
 			_prizeWin.Show();
 		});
 		//开始游戏
@@ -133,6 +139,9 @@ public class UIHomeMain : UIMain
 		//非ui逻辑
 		getMachineInfo ();
 		validateProfile ();
+		UpdatesProxy u_proxy = UnityFacade.GetInstance().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
+		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		u_proxy.loadPureIcon (toolbar.GetChild ("n14").asLoader,proxy.Pic);//头像
 	}
 
 	void Update(){
@@ -310,7 +319,7 @@ public class UIHomeMain : UIMain
 	/// </summary>
 	/// <param name="notification">Notification.</param>
 	public void RespondUserPrizeStrings(INotification notification){
-
+		this.changeUIpage(typeof(UIPrizeMain));
 	}
 	/// <summary>
 	/// Responds the user recharge.
@@ -323,5 +332,14 @@ public class UIHomeMain : UIMain
 		}
 	}
 
+	/// <summary>
+	/// Responds all prize.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondAllPrize(INotification notification){
+		if (_prizeWin != null&&_prizeWin.isShowing) {
+			_prizeWin.validate ();
+		}
+	}
 }
 

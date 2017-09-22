@@ -73,7 +73,8 @@ public class UIEnterMain : UIMain
 					_registerWin.Hide(); 
 				});
 				_registerWin.Pic_code.onClick.Add(()=>{
-					UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,new Req_RegisterVcode());
+					//UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,new Req_RegisterVcode());
+					((GRichTextField)_registerWin.Pic_code).text = Util.CreateRandomCode(5);
 				});
 				_registerWin.Send.onClick.Add(()=>{
 					if(_registerWin.ValidRegister){
@@ -81,15 +82,34 @@ public class UIEnterMain : UIMain
 						request.Phone = _registerWin.Username.asTextField.text;
 						request.MsgCode = _registerWin.Phone_code_input.asTextField.text;
 						request.Psd = _registerWin.Password.asTextField.text;
-						request.VerCode = _registerWin.Pic_code.asTextField.text;
+						//request.VerCode = _registerWin.Pic_code.asTextField.text;
 						request.Uuid = getDeviceUuid();
-						if(Util.Filter(request.Phone)!=null &&
-							Util.Filter(request.MsgCode) != null &&
-							Util.Filter(request.Psd) != null &&
-							Util.Filter(request.VerCode) != null){
-							UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
-							_registerWin.ValidRegister = false;
+						if(Util.Filter(request.Phone)==null){
+							_registerWin.Warn.visible= true;
+							_registerWin.Warn.text = "请输入密码";
+							return;
 						}
+						if(Util.Filter(request.MsgCode)==null){
+							_registerWin.Warn.visible= true;
+							_registerWin.Warn.text = "请输入短信验证码";
+							return;
+						}
+						if(Util.Filter(request.Psd)==null){
+							_registerWin.Warn.visible= true;
+							_registerWin.Warn.text = "请输入密码";
+							return;
+						}
+						if(Util.Filter(_registerWin.Pic_code_input.text)==null||
+							!Util.Filter(_registerWin.Pic_code_input.text).Equals(_registerWin.Pic_code.asTextField.text)){
+							_registerWin.Warn.visible= true;
+							_registerWin.Warn.text = "验证码不正确";
+							return;
+						}
+						_registerWin.Warn.visible= false;
+						_registerWin.Warn.text = "";
+						UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+						_registerWin.ValidRegister = false;
+
 					}
 				});
 
@@ -118,7 +138,8 @@ public class UIEnterMain : UIMain
 				});
 
 				_forgetWin.Pic_code.onClick.Add(()=>{
-					UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,new Req_GetUserForgetPsdVcode());
+					//UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,new Req_GetUserForgetPsdVcode());
+					((GRichTextField)_forgetWin.Pic_code).text = Util.CreateRandomCode(5);
 				});
 
 				_forgetWin.Verify.onClick.Add(()=>{
@@ -138,14 +159,33 @@ public class UIEnterMain : UIMain
 						request.Phone = _forgetWin.Username.asTextField.text;
 						request.MsgCode = _forgetWin.Phone_code_input.asTextField.text;
 						request.Psd = _forgetWin.Password.asTextField.text;
-						request.VerCode = _forgetWin.Pic_code.asTextField.text;
-						if(Util.Filter(request.Phone)!=null &&
-							Util.Filter(request.MsgCode) != null &&
-							Util.Filter(request.Psd) != null &&
-							Util.Filter(request.VerCode) != null){
-							UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
-							_forgetWin.ValidRegister = false;
+						//request.VerCode = _forgetWin.Pic_code.asTextField.text;
+						if(Util.Filter(request.Phone)==null){
+							_forgetWin.Warn.visible= true;
+							_forgetWin.Warn.text = "请输入密码";
+							return;
 						}
+						if(Util.Filter(request.MsgCode)==null){
+							_forgetWin.Warn.visible= true;
+							_forgetWin.Warn.text = "请输入短信验证码";
+							return;
+						}
+						if(Util.Filter(request.Psd)==null){
+							_forgetWin.Warn.visible= true;
+							_forgetWin.Warn.text = "请输入密码";
+							return;
+						}
+						if(Util.Filter(_forgetWin.Pic_code_input.text)==null||
+							!Util.Filter(_forgetWin.Pic_code_input.text).Equals(_forgetWin.Pic_code.asTextField.text)){
+							_forgetWin.Warn.visible= true;
+							_forgetWin.Warn.text = "验证码不正确";
+							return;
+						}
+						_forgetWin.Warn.visible= false;
+						_forgetWin.Warn.text = "";
+						UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+						_forgetWin.ValidRegister = false;
+
 					}
 				});
 			});
@@ -200,7 +240,7 @@ public class UIEnterMain : UIMain
 			Debug.Log(context.inputEvent.keyCode);
 	}
 
-	/// <summary>
+	/// <summary>Pic_code
 	/// Auto login.
 	/// </summary>
 	void autoLogin(){
@@ -228,23 +268,35 @@ public class UIEnterMain : UIMain
 	/// Wechat login.
 	/// </summary>
 	void wechatLogin(){
-		using (AndroidJavaClass jc = new AndroidJavaClass(AppConst.ANDROID_INTERFACE_CLASS))
-		{  
-			//Debug.Log("get AndroidJavaClass");  
-			using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity"))  
-			{
-				Debug.Log("get AndroidJavaObject Begin");  
-				jo.Call("requestLogin");
-				Debug.Log("get AndroidJavaObject End");  
-			}  
-		} 
+		switch(Application.platform){
+		case RuntimePlatform.Android:
+			using (AndroidJavaClass jc = new AndroidJavaClass(AppConst.ANDROID_INTERFACE_CLASS))
+			{  
+				//Debug.Log("get AndroidJavaClass");  
+				using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject>("currentActivity"))  
+				{
+					Debug.Log("get AndroidJavaObject Begin");  
+					jo.Call("requestLogin");
+					Debug.Log("get AndroidJavaObject End");  
+				}  
+			} 
+			break;
+		case RuntimePlatform.IPhonePlayer:
+			
+			break;
+		default:
+			RespondWechatLogin ("001kNaCV0vVY1Y11sxCV0xqdCV0kNaCZ");
+			break;
+		}
+
+
 	}
 	/// <summary>
 	/// Gets the device UUID.
 	/// </summary>
 	/// <returns>The device UUID.</returns>
 	string getDeviceUuid(){
-		DeviceInfoProxy proxy = UnityFacade.GetInstance ().RemoveProxy (DeviceInfoProxy.NAME) as DeviceInfoProxy;
+		DeviceInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (DeviceInfoProxy.NAME) as DeviceInfoProxy;
 		return proxy.Uuid;
 	}
 	/// <summary>
@@ -433,11 +485,8 @@ public class UIEnterMain : UIMain
 		request.Uuid = getDeviceUuid();
 		request.Wxid = wxid;
 		request.Type = 2;
-		if(Util.Filter(request.Phone)!=null &&
-			Util.Filter(request.Psd) != null){
-			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
-			_loginWin.ValidLogin = false;
-		}
+		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		_loginWin.ValidLogin = false;
 	}
 
 }

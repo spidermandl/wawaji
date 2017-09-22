@@ -154,7 +154,6 @@ public class UpdatesProxy : BaseProxy {
 	/// <param name="id">Identifier.</param>
 	public void loadBallIcon(GLoader loader,string id){
 		MemoryVersion.Entry entry = memVersion.ball [id];
-		string path = (entry.is_new == 0) ? entry.local_path : entry.pic_path;
 		if (entry != null) {
 			loadIcon (loader, entry);
 		}
@@ -169,6 +168,19 @@ public class UpdatesProxy : BaseProxy {
 		if (entry != null) {
 			loadIcon (loader, entry);
 		}
+	}
+	/// <summary>
+	/// Loads the pure icon.
+	/// </summary>
+	/// <param name="loader">Loader.</param>
+	/// <param name="url">URL.</param>
+	public void loadPureIcon(GLoader loader,string url){
+		Uri uri = new Uri (url);
+		MemoryVersion.Entry entry = new MemoryVersion.Entry();
+		entry.is_new =1;
+		entry.pic_path = url;
+		entry.pic = uri.LocalPath;
+		loadIcon(loader,entry);
 	}
 	/// <summary>
 	/// Loads the icon.

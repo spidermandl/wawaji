@@ -63,6 +63,10 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 		}else if (request.command () == Req_UserRecharge.COMMAND) {
 
 			setProxy<Req_UserRecharge,AccountProxy,Req_UserRecharge.Response>(request);
+
+		}else if (request.command () == Req_MachineEndGrab.COMMAND) {
+
+			setProxy<Req_MachineEndGrab,GameBallProxy,Req_MachineEndGrab.Response>(request);
 		}
 
 

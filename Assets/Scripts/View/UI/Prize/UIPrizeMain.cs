@@ -94,11 +94,15 @@ public class UIPrizeMain : UIMain
 //		});
 
 		if(this.items!=null){
-			obj.asCom.GetChild ("n6").asLoader.url = this.items [index].p_pic;
+			//obj.asCom.GetChild ("n6").asLoader.url = this.items [index].p_pic;
 			obj.asCom.GetChild ("n7").asTextField.text = this.items [index].name;
-			obj.asCom.GetChild ("n8").asLoader.url = this.items [index].b_pic;
+			//obj.asCom.GetChild ("n8").asLoader.url = this.items [index].b_pic;
 			obj.asCom.GetChild ("n14").asTextField.text = ""+this.items [index].coin;
 			obj.asCom.GetChild ("n15").asTextField.text = ""+this.items [index].price;
+
+			UpdatesProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
+			proxy.loadPrizeIcon (obj.asCom.GetChild ("n6").asLoader, ""+this.items [index].prize_id);
+			proxy.loadBallIcon (obj.asCom.GetChild ("n8").asLoader, ""+this.items [index].ball_id);
 
 			if (machine_proxy != null) {
 				MachineInfoProxy.TypeAndItem m = machine_proxy.getItemById (this.items[index].machine_id);

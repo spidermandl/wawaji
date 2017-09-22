@@ -37,6 +37,12 @@ abstract public class UIBaseVerifyWin : BaseWindow
 		get{ return this.contentPane.GetChild ("n32"); }
 	}
 
+	string code;
+	public string Code{
+		get{ return code; }
+		set{ code = value;}
+	}
+
 	protected bool isProcessing;
 	protected bool isVerifying;
 	public bool ValidRegister{
@@ -62,6 +68,7 @@ abstract public class UIBaseVerifyWin : BaseWindow
 			Warn.visible = false;
 		});
 
+		Pic_code.asRichTextField.text = Util.CreateRandomCode(5);
 	}
 
 

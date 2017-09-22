@@ -39,6 +39,11 @@ public class GameBallProxy : BaseProxy {
 		return this.ball_arr;
 	}
 
+	int[] ball_result;
+	public int[] getBallResult(){
+		return this.ball_result;
+	}
+
 	public class BallsItem{
 		public int prize_id;
 		public int ball_id;
@@ -63,6 +68,8 @@ public class GameBallProxy : BaseProxy {
 			bindingData ((Req_GetMachinePrizeBallData.Response)meta);
 		}else if(meta.GetType () == typeof(Req_MachineStartGrab.Response)){
 			bindingData ((Req_MachineStartGrab.Response)meta);
+		}else if(meta.GetType () == typeof(Req_MachineEndGrab.Response)){
+			bindingData ((Req_MachineEndGrab.Response)meta);
 		}
 	}
 
@@ -101,15 +108,15 @@ public class GameBallProxy : BaseProxy {
 		this.ball_arr = copy;
 	}
 
-	public string formBallIDstring(){
-		StringBuilder builder = new StringBuilder ();
-		for(int i=0; i < this.ball_arr.Length;i++){
-			builder.Append (ball_arr [i]);
-			if(i<this.ball_arr.Length-1)
-				builder.Append(",");
-		}
-
-		return builder.ToString ();
+	/// <summary>
+	/// Bindings the data.
+	/// </summary>
+	/// <param name="meta">Meta.</param>
+	public void bindingData(Req_MachineEndGrab.Response meta){
+		int[] copy = new int[meta.data.info.ball_arr.Length];
+		Array.Copy (meta.data.info.ball_arr, copy, copy.Length);
+		this.ball_result = copy;
 	}
+
 }
 

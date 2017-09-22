@@ -10,7 +10,7 @@
     <image id="n4_lrqt" name="n4" src="lrqte" xy="64,241">
       <relation target="n3_lrqt" sidePair="top-bottom,center-center"/>
     </image>
-    <loader id="n3_lrqt" name="n3" xy="79,154" size="77,101" url="ui://pfm7u6g7lrqtd" fill="scaleFree">
+    <loader id="n3_lrqt" name="n3" xy="79,154" size="77,101" url="ui://pfm7u6g7lrqtd" align="center" vAlign="middle" fill="scale">
       <relation target="n1_lrqt" sidePair="middle-middle,center-center"/>
     </loader>
     <image id="n7_lrqt" name="n7" src="lrqti" xy="34,324">

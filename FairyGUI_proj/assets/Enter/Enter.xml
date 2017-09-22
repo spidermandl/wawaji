@@ -28,7 +28,7 @@
     <image id="n15_n1c3" name="n15" src="n1c319" xy="387,0" size="364,434">
       <relation target="n4_ddj4" sidePair="right-right,top-top"/>
     </image>
-    <list id="n20_n1c3" name="n20" xy="64,933" size="603,408" overflow="scroll" scrollBarFlags="2" defaultItem="ui://w744s2qdn1c318">
+    <list id="n20_n1c3" name="n20" xy="64,933" size="603,401" overflow="scroll" scrollBarFlags="2" defaultItem="ui://w744s2qdn1c318">
       <relation target="n4_ddj4" sidePair="width-width,center-center"/>
       <relation target="n4_ddj4" sidePair="top-top,bottomext-bottom"/>
       <item/>

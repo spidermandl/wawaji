@@ -68,14 +68,18 @@ public class UIProfile : BaseWindow
 		if (proxy == null) {
 			return;
 		}
-		this.contentPane.GetChild ("n18").asLoader.url = proxy.Pic;
+		//this.contentPane.GetChild ("n18").asLoader.url = proxy.Pic;
 		this.contentPane.GetChild ("n19").asTextField.text = proxy.Name;
 		this.contentPane.GetChild ("n20").asTextField.text = ""+proxy.Coin;
+		UpdatesProxy u_proxy = UnityFacade.GetInstance().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
+		u_proxy.loadPureIcon (this.contentPane.GetChild ("n18").asLoader,proxy.Pic);
 
 		Req_GetPrizeInfo request = new Req_GetPrizeInfo();
 		request.UserId = PlayerPrefs.GetInt (LocalKey.USERID, 0);
 		request.Token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+
+
 	}
 
 	void RenderListItem(int index, GObject obj)

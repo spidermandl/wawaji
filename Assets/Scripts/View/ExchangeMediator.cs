@@ -19,6 +19,7 @@ public class ExchangeMediator: BaseMediator {
 		IList<string> list = new List<string>();
 		list.Add (Req_GetAllPrize.COMMAND);
 		list.Add (Req_UserRecharge.COMMAND);
+		list.Add (Req_GetPrizeUseCoin.COMMAND);
 		return list;
 	}
 
@@ -29,6 +30,9 @@ public class ExchangeMediator: BaseMediator {
 			break;
 		case Req_UserRecharge.COMMAND:
 			m_exchange_ui.RespondUserRecharge (notification);
+			break;
+		case Req_GetPrizeUseCoin.COMMAND:
+			m_exchange_ui.RespondExchangeCoinForPrize (notification);
 			break;
 		default:
 			break;

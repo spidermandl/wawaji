@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="673,368">
+  <displayList>
+    <image id="n1_ezt2" name="n1" src="ezt21a" xy="0,0"/>
+    <image id="n6_ezt2" name="n6" src="ezt21o" xy="100,170">
+      <relation target="n1_ezt2" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n7_ezt2" name="n7" src="ezt21n" xy="250,45">
+      <relation target="n1_ezt2" sidePair="top-top,center-center"/>
+    </image>
+    <image id="n8_ezt2" name="n8" src="ezt21q" xy="286,139">
+      <relation target="n6_ezt2" sidePair="top-top,left-left"/>
+    </image>
+    <component id="n9_ezt2" name="n9" src="ezt21t" xy="167,271">
+      <relation target="n1_ezt2" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <text id="n10_ezt2" name="n10" xy="432,168" size="193,76" font="Apple SD Gothic Neo Heavy" fontSize="60" color="#ffcc00" letterSpacing="2" autoSize="none" strokeColor="#0000cc" strokeSize="2" shadowColor="#0000cc" shadowOffset="2,2" singleLine="true" text="264">
+      <relation target="n8_ezt2" sidePair="top-top,left-left"/>
+      <relation target="n1_ezt2" sidePair="rightext-right"/>
+    </text>
+  </displayList>
+</component>

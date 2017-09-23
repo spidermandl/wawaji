@@ -9,8 +9,11 @@ using PureMVC.Interfaces;
 public class UIGameMain : UIMain
 {
 
-	UIConfirm _confirmWin;//登录对话框
-	UIExchange _exchangeWin;//
+	UIConfirm _confirmWin;//中奖对话框
+	UICoinPrize _coinWin;//没中奖对话框
+	UIFailure _failWin;//中金币对话框
+
+	//UIExchange _exchangeWin;
 	UITopup _topupWin;//
 
 	GameObject root = null;
@@ -243,21 +246,56 @@ public class UIGameMain : UIMain
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
-	public void gameOver(){
-		if(_confirmWin == null)
-			_confirmWin = new UIConfirm ();
-		_confirmWin.Show ();
+	public void GameOver(INotification notification){
+		GameBallProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (GameBallProxy.NAME) as GameBallProxy;
+		if (proxy == null)
+			return;
+		GameBallProxy.Answer answer = proxy.Result;
+		/////////////////////////没中奖///////////////////////////////////////////
+		if (answer == null || answer.type == -1) {
+			if (_failWin == null)
+				_failWin = new UIFailure ();
+			_failWin.Show ();
+			_failWin.Contiune.onClick.Add (() => {
+				_failWin.Hide();
+				this.changeUIpage(typeof(UIHomeMain));
+			});
+			return;
+		}
 
-		//关闭登录对话框
-		_confirmWin.Confirm.onClick.Add (() => { 
-			_confirmWin.Hide(); 
-		});
+		/////////////////////////中奖///////////////////////////////////////////
+		if (answer.type == 0) {
+			if (_confirmWin == null)
+				_confirmWin = new UIConfirm ();
+			_confirmWin.Show ();
 
-		//进入主界面
-		_confirmWin.Cancel.onClick.Add(() => { 
-			this.changeUIpage(typeof(UIRewardsMain));
-			_confirmWin.Hide(); 
+			//关闭登录对话框
+			_confirmWin.Confirm.onClick.Add (() => { 
+				_confirmWin.Hide (); 
+				this.changeUIpage (typeof(UIRewardsMain));
+			});
+
+			//进入主界面
+			_confirmWin.Cancel.onClick.Add (() => { 
+				_confirmWin.Hide (); 
+				this.changeUIpage(typeof(UIHomeMain));
+			});
+
+			UpdatesProxy u_proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
+			u_proxy.loadPrizeIcon (_confirmWin.Photo.asLoader, ""+answer.prizes[0].prize_id);
+			_confirmWin.Discription.asTextField.text = "恭喜您！获得" + answer.prizes[0].name;
+
+			return;
+		}
+		/////////////////////////中金币奖///////////////////////////////////////////
+		if (_coinWin == null)
+			_coinWin = new UICoinPrize ();
+		_coinWin.Show ();
+		_coinWin.onClick.Add (() => {
+			_coinWin.Hide();
+			this.changeUIpage(typeof(UIHomeMain));
 		});
+		_coinWin.Amount.asTextField.text = ""+answer.coin;
 	}
 
 	/// <summary>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="603,94">
   <displayList>
-    <loader id="n6_rsk7" name="n6" xy="37,4" size="85,86" url="http://120.55.67.196/pApi/resources/image/user/default.png" fill="scaleFree">
+    <loader id="n6_rsk7" name="n6" xy="37,4" size="85,86" url="http://120.55.67.196/pApi/resources/image/user/default.png" align="center" vAlign="middle" fill="scale">
       <relation target="n1_n1c3" sidePair="left-left,top-top"/>
       <relation target="n1_n1c3" sidePair="rightext-right,bottomext-bottom"/>
     </loader>

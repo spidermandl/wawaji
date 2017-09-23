@@ -12,6 +12,7 @@ public class GameBallProxy : BaseProxy {
 
 	public const string NAME = "GameBallProxy";
 
+
 	//球的数量
 	int num;
 	public int Num{
@@ -38,10 +39,16 @@ public class GameBallProxy : BaseProxy {
 	public int[] getBallArr(){
 		return this.ball_arr;
 	}
-
-	int[] ball_result;
-	public int[] getBallResult(){
-		return this.ball_result;
+	//最终的抓球结果
+//	int[] ball_result;
+//	public int[] getBallResult(){
+//		return this.ball_result;
+//	}
+	//最终的抓球结果
+	Answer result;
+	public Answer Result{
+		get{return this.result;}
+		set{ result = value;}
 	}
 
 	public class BallsItem{
@@ -56,12 +63,23 @@ public class GameBallProxy : BaseProxy {
 		public int ball_num;
 	}
 
+	/// <summary>
+	/// 抓球结果
+	/// </summary>
+	public class Answer{
+		public BallsItem[] prizes;
+		public int coin;
+		public int type; // -1: no prize ; 0: big prize; 1: coin prize
+	}
 
 	public GameBallProxy (string proxyName)
 		: base(proxyName, null){
 
 	}
-
+	/// <summary>
+	/// Bindings the data.
+	/// </summary>
+	/// <param name="meta">Meta.</param>
 	public override void bindingData (Request.Response meta)
 	{
 		if (meta.GetType () == typeof(Req_GetMachinePrizeBallData.Response)) {
@@ -113,9 +131,40 @@ public class GameBallProxy : BaseProxy {
 	/// </summary>
 	/// <param name="meta">Meta.</param>
 	public void bindingData(Req_MachineEndGrab.Response meta){
-		int[] copy = new int[meta.data.info.ball_arr.Length];
-		Array.Copy (meta.data.info.ball_arr, copy, copy.Length);
-		this.ball_result = copy;
+//		int[] copy = new int[meta.data.info.ball_arr.Length];
+//		Array.Copy (meta.data.info.ball_arr, copy, copy.Length);
+//		this.ball_result = copy;
+		Answer answer = new Answer();
+		this.Result = answer;
+		int len = meta.data.info.ball_arr.Length;
+		if (len == 0) {
+			answer.prizes = new BallsItem[0];
+			answer.type = -1;
+			return;
+		}
+		BallsItem[] res = new BallsItem[len];
+		bool isPrize = false;
+		for (int i = 0; i < len; i++) {
+			foreach(BallsItem item in items){
+				if (meta.data.info.ball_arr[i] == item.ball_id) {
+					res [i] = item;
+					if (item.is_matter == 1) {
+						isPrize = true;
+					}
+					break;
+				}
+			}
+		}
+		
+		answer.prizes = res;
+		if (isPrize) {
+			answer.type = 0;
+		} else {
+			answer.coin = meta.data.info.coin;
+			answer.type = 1;
+			AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+			proxy.Coin = proxy.Coin + answer.coin;
+		}
 	}
 
 }

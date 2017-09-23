@@ -56,6 +56,8 @@ public class Picker : MonoBehaviour
 	private CheckResultBall _checkResultBall;//结果回调函数
 	public delegate int[] CheckRemainingBall(List<GameObject> balls);
 	private CheckRemainingBall _checkRemainingBall;//剩余球回调函数
+//	public delegate GameBallProxy.BallsItem[] CalResult(List<GameObject> balls);
+//	private CalResult _calResult;//计算最终结果
 	Transform ball_objs = null;//被抓住的球的根结点
 	List<BallBundle> picked_balls = new List<BallBundle>();
 	class BallBundle{
@@ -275,8 +277,8 @@ public class Picker : MonoBehaviour
 	}
 	public IEnumerator Release_Exit(){
 		yield return new WaitForSeconds(1);
-		GameMediator mediator = UnityFacade.GetInstance ().RetrieveMediator (GameMediator.NAME) as GameMediator;
-		mediator.gameOver ();
+
+		UnityFacade.GetInstance().SendNotification(GameCommand.COMMAND,new GameCommand.GameEnd());
 	}
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// ************************************************************************************************
@@ -557,6 +559,15 @@ public class Picker : MonoBehaviour
 	public void setCheckRemainingBall(CheckRemainingBall _func){
 		this._checkRemainingBall = _func;
 	}
+
+	/// <summary>
+	/// Sets the cal result.
+	/// </summary>
+	/// <returns>The cal result.</returns>
+	/// <param name="_func">Func.</param>
+//	public GameBallProxy.BallsItem[] setCalResult(CalResult _func){
+//		this._calResult = _func;
+//	}
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// ////////////////////////////////////////////////////////////////////////////

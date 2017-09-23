@@ -18,6 +18,15 @@ public class UserPrizeInfoProxy : BaseProxy {
 		set{ items = value;}
 	}
 
+	/// <summary>
+	/// 当前选中prize
+	/// </summary>
+	public PrizeItem selectedItem;
+	public PrizeItem SelectedItem{
+		get{return this.selectedItem;}
+		set{ selectedItem = value;}
+	}
+
 	public class PrizeItem{
 		public int id;
 		public int prize_id;

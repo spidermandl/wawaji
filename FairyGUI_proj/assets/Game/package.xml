@@ -29,15 +29,29 @@
     <component id="l4t6t" name="add_coin.xml" path="/button/"/>
     <component id="l4t6u" name="exchange.xml" path="/button/"/>
     <component id="fvaav" name="Confirm_dialog.xml" path="/" exported="true"/>
-    <image id="fvaaw" name="bg_confirm.png" path="/images/" scale="9grid" scale9grid="126,70,252,140"/>
-    <image id="fvaax" name="b_cancel.png" path="/images/" scale="9grid" scale9grid="47,18,94,36"/>
-    <image id="fvaay" name="b_confirm.png" path="/images/" scale="9grid" scale9grid="47,18,94,36"/>
-    <component id="fvaaz" name="confirm.xml" path="/button/"/>
-    <component id="fvaa10" name="cancel.xml" path="/button/"/>
     <component id="fvaa11" name="Controller.xml" path="/"/>
     <component id="fvaa12" name="Game.xml" path="/" exported="true"/>
     <image id="mc6i14" name="b_frame_main.png" path="/images/" scale="9grid" scale9grid="127,20,254,40"/>
     <image id="mc6i18" name="bg_exchange.png" path="/images/" scale="9grid" scale9grid="174,170,348,340"/>
+    <component id="ezt219" name="Failure_dialog.xml" path="/" exported="true"/>
+    <image id="ezt21a" name="bg_result_frame.png" path="/images/"/>
+    <image id="ezt21b" name="b_continue.png" path="/images/" scale="9grid" scale9grid="79,25,158,50"/>
+    <component id="ezt21c" name="continue.xml" path="/button/"/>
+    <image id="ezt21d" name="c_failure_title2.png" path="/images/"/>
+    <image id="ezt21e" name="c_failure_title1.png" path="/images/"/>
+    <image id="ezt21f" name="bg_confirm_up.png" path="/images/"/>
+    <image id="ezt21g" name="bg_confirm_bottom.png" path="/images/"/>
+    <image id="ezt21h" name="c_confirm_title.png" path="/images/"/>
+    <image id="ezt21i" name="b_cliam.png" path="/images/"/>
+    <image id="ezt21j" name="b_keep.png" path="/images/"/>
+    <component id="ezt21l" name="claim.xml" path="/button/"/>
+    <component id="ezt21m" name="keep.xml" path="/button/"/>
+    <image id="ezt21n" name="c_coin_title2.png" path="/images/"/>
+    <image id="ezt21o" name="c_coin_title1.png" path="/images/"/>
+    <image id="ezt21p" name="b_cheerup.png" path="/images/"/>
+    <image id="ezt21q" name="i_coin_hint.png" path="/images/"/>
+    <component id="ezt21s" name="Coin_dialog.xml" path="/" exported="true"/>
+    <component id="ezt21t" name="cheerup.xml" path="/button/"/>
   </resources>
   <publish name="Game" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Command\GameCommand.cs" />
      <Compile Include="Assets\Scripts\Command\HttpReqCommand.cs" />
      <Compile Include="Assets\Scripts\Command\HttpResCommand.cs" />
      <Compile Include="Assets\Scripts\Command\SocketCommand.cs" />
@@ -168,7 +169,9 @@
      <Compile Include="Assets\Scripts\View\UI\Game\Picker.cs" />
      <Compile Include="Assets\Scripts\View\UI\Game\RangeSphere.cs" />
      <Compile Include="Assets\Scripts\View\UI\Game\RingFence.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\UICoinPrize.cs" />
      <Compile Include="Assets\Scripts\View\UI\Game\UIConfirm.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Game\UIFailure.cs" />
      <Compile Include="Assets\Scripts\View\UI\Game\UIGameMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\Home\UIHomeMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\IconManager.cs" />

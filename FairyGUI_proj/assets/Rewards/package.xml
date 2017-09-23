@@ -33,7 +33,7 @@
     <image id="xsrf14" name="i_big_coin.png" path="/images/"/>
     <component id="xsrf15" name="exchange_confirm.xml" path="/button/"/>
     <component id="isq017" name="buyback.xml" path="/"/>
-    <image id="isq018" name="bg_buyback.png" path="/images/"/>
+    <image id="isq018" name="bg_buyback.png" path="/images/" scale="9grid" scale9grid="74,19,148,38"/>
     <component id="isq019" name="buyback_confirm.xml" path="/button/"/>
     <image id="pvoj1a" name="2999.png" path="/images/"/>
     <image id="pvoj1b" name="bg_pay_channel.png" path="/images/"/>

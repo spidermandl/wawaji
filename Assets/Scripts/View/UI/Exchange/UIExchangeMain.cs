@@ -11,7 +11,7 @@ public class UIExchangeMain : UIMain
 {
 	UITopup _uiTopup;
 
-	UIExchangeConfirm confirm;
+	UIExchangeConfirm _uiConfirm;
 
 	GComponent toolbar;
 	GList _list;
@@ -45,11 +45,11 @@ public class UIExchangeMain : UIMain
 		_list = _mainView.GetChild ("n6").asList;		
 		_list.SetVirtual ();
 		_list.itemRenderer = RenderListItem;
-		_list.onClickItem.Add (() => {
-			if(confirm ==null)
-				confirm = new UIExchangeConfirm();
-			confirm.Show();
-		});
+//		_list.onClickItem.Add (() => {
+//			if(_uiConfirm ==null)
+//				_uiConfirm = new UIExchangeConfirm();
+//			_uiConfirm.Show();
+//		});
 
 		//非UI逻辑
 		getAllPrize ();
@@ -101,12 +101,23 @@ public class UIExchangeMain : UIMain
 			//obj.asCom.GetChild ("n3").asLoader.url = this.items [index].pic;
 			UpdatesProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
 			proxy.loadPrizeIcon (obj.asCom.GetChild ("n3").asLoader, ""+this.items [index].id);
+
+			obj.onClick.Add (() => {
+				if(_uiConfirm ==null)
+					_uiConfirm = new UIExchangeConfirm();
+				_uiConfirm.Show();
+				_uiConfirm.bindingData(this.items[index]);
+			});
 		}
 	}
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+	/// <summary>
+	/// Responds all prize.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
 	public void RespondAllPrize(INotification notification){
 		PrizeSetProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (PrizeSetProxy.NAME) as PrizeSetProxy;
 		if (proxy != null) {
@@ -124,6 +135,13 @@ public class UIExchangeMain : UIMain
 			validateProfile ();
 			_uiTopup.Hide ();
 		}
+	}
+	/// <summary>
+	/// Responds the exchange coin for prize.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void RespondExchangeCoinForPrize(INotification notification){
+		
 	}
 }
 

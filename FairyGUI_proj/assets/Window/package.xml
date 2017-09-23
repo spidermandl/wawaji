@@ -69,7 +69,6 @@
     <component id="lcrn22" name="reconnect.xml" path="/button/"/>
     <component id="lcrn24" name="Exchange_dialog.xml" path="/"/>
     <image id="lcrn26" name="c_prize_avaliable.png" path="/images/"/>
-    <image id="lcrn27" name="c_iPhone7.png" path="/images/"/>
     <image id="lcrn28" name="i_iPhone7.png" path="/images/"/>
     <component id="lcrn29" name="prize_item.xml" path="/"/>
     <component id="pplt2a" name="Exchange_confirm_dialog.xml" path="/" exported="true"/>
@@ -77,7 +76,6 @@
     <component id="pplt2c" name="confirm.xml" path="/button/"/>
     <image id="pplt2d" name="i_small_coin.png" path="/images/"/>
     <image id="pplt2e" name="39999.png" path="/images/"/>
-    <image id="pplt2g" name="i_iPhone_7.png" path="/images/"/>
     <image id="pplt2h" name="c_exchange_title_2.png" path="/images/"/>
     <image id="qzv12i" name="bg_profile_basic_info.png" path="/images/"/>
     <image id="jpnz2k" name="bg_profile.png" path="/images/" scale="9grid" scale9grid="188,227,376,454"/>
@@ -96,6 +94,7 @@
     <component id="e8id2x" name="clear.xml" path="/"/>
     <image id="dc7j2y" name="b_done.png" path="/images/"/>
     <component id="dc7j2z" name="done.xml" path="/button/"/>
+    <component id="ezt230" name="Common_dialog.xml" path="/" exported="true"/>
   </resources>
   <publish name="Window" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

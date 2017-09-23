@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
 		this.picker.setCheckDropBall (checkDropBall);
 		this.picker.setCheckResultBall (checkBallResult);
 		this.picker.setCheckRemainingBall (checkRemaingBall);
+		//this.picker.setCalResult (getPickedBallTypes);
 		this.balls = new Dictionary<Transform, GameBallProxy.BallsItem>();
 		//initBalls();
 
@@ -392,7 +393,7 @@ public class GameManager : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Checks the ball result.
+	/// 拼接获得抓住球的类型号，发送抓球结果给服务器
 	/// </summary>
 	/// <param name="picked_balls">Picked balls.</param>
 	public void checkBallResult(List<GameObject> picked_balls){
@@ -421,7 +422,7 @@ public class GameManager : MonoBehaviour
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
 	/// <summary>
-	/// Checks the remaing ball.
+	/// 获取需要掉落的球在传参list中的索引号
 	/// </summary>
 	/// <returns>需要掉落的索引.</returns>
 	/// <param name="picked_balls">Picked balls.</param>
@@ -430,7 +431,10 @@ public class GameManager : MonoBehaviour
 		if (g_proxy == null)
 			return new int[0];
 		List<int> drops = new List<int> ();
-		List<int> result = new List<int>(g_proxy.getBallResult());
+		List<int> result = new List<int> ();
+		for (int i = 0; i < g_proxy.Result.prizes.Length; i++) {
+			result.Add (g_proxy.Result.prizes[i].ball_id);
+		}
 		for (int i=picked_balls.Count-1;i>=0;i--) {
 			GameBallProxy.BallsItem t =balls [picked_balls[i].transform];
 			if (t != null) {
@@ -443,5 +447,20 @@ public class GameManager : MonoBehaviour
 		}
 		return drops.ToArray ();
 	}
+
+	/// <summary>
+	/// Gets the picked ball types.
+	/// </summary>
+	/// <returns>The picked ball types.</returns>
+	/// <param name="picked_balls">Picked balls.</param>
+//	public GameBallProxy.BallsItem[] getPickedBallTypes(List<GameObject> picked_balls){
+//		GameBallProxy.BallsItem[] result = new GameBallProxy.BallsItem[picked_balls.Count];
+//		for (int i=0;i< picked_balls.Count-1;i++) {
+//			GameBallProxy.BallsItem t =balls [picked_balls[i].transform];
+//			result [i] = t;
+//		}
+//
+//		return result;
+//	}
 }
 

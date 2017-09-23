@@ -8,12 +8,17 @@ public class UIConfirm : Window
 {
 
 	public GObject Cancel {
-		get{ return this.contentPane.GetChild ("n1"); }
+		get{ return this.contentPane.GetChild ("n10"); }
 	}
 	public GObject Confirm{
-		get{ return this.contentPane.GetChild ("n2"); }
+		get{ return this.contentPane.GetChild ("n9"); }
 	}
-
+	public GObject Photo{
+		get{ return this.contentPane.GetChild ("n11"); }
+	}
+	public GObject Discription{
+		get{ return this.contentPane.GetChild ("n12"); }
+	}
 	public UIConfirm ()
 	{
 		UIConfig.modalLayerColor = new Color (0f, 0f, 0f, 0.4f);

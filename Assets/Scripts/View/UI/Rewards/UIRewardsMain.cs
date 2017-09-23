@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
-
+/// <summary>
+/// 领取，兑换，回购奖品
+/// </summary>
 public class UIRewardsMain : UIMain
 {
 

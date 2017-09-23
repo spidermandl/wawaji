@@ -75,8 +75,10 @@ public class AccountProxy : BaseProxy {
 	{
 		if (meta.GetType () == typeof(Base_Req_UserInfo.Response)) {
 			bindingData ((Base_Req_UserInfo.Response)meta);
-		}else if(meta.GetType () == typeof(Req_UserRecharge.Response)){
+		} else if (meta.GetType () == typeof(Req_UserRecharge.Response)) {
 			bindingData ((Req_UserRecharge.Response)meta);
+		} else if (meta.GetType () == typeof(Req_GetPrizeUseCoin.Response)) {
+			bindingData ((Req_GetPrizeUseCoin.Response)meta);
 		}
 	}
 	/// <summary>
@@ -103,6 +105,16 @@ public class AccountProxy : BaseProxy {
 	public void bindingData(Req_UserRecharge.Response meta){
 		if(meta.data.code == 0){
 			this.coin += ((Req_UserRecharge)meta.Req).Amount;
+		}
+	}
+
+	/// <summary>
+	/// Bindings the data.
+	/// </summary>
+	/// <param name="meta">Meta.</param>
+	public void bindingData(Req_GetPrizeUseCoin.Response meta){
+		if(meta.data.code == 0){
+			this.coin -= meta.data.info.prize_coin;
 		}
 	}
 

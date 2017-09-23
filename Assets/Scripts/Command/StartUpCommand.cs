@@ -22,6 +22,7 @@ public class StartUpCommand : PureMVC.Patterns.SimpleCommand {
 		//
 		Facade.RegisterCommand (HttpReqCommand.HTTP,typeof(HttpReqCommand));
 		Facade.RegisterCommand (HttpResCommand.HTTP,typeof(HttpResCommand));
+		Facade.RegisterCommand (GameCommand.COMMAND,typeof(GameCommand));
 
 	}
 }

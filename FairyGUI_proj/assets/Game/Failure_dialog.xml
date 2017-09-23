@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="673,336">
+  <displayList>
+    <image id="n1_ezt2" name="n1" src="ezt21a" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n3_ezt2" name="n3" src="ezt21c" xy="181,219">
+      <relation target="n1_ezt2" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <image id="n4_ezt2" name="n4" src="ezt21d" xy="250,26">
+      <relation target="n1_ezt2" sidePair="top-top,center-center"/>
+    </image>
+    <image id="n5_ezt2" name="n5" src="ezt21e" xy="67,118">
+      <relation target="n1_ezt2" sidePair="top-top,center-center"/>
+    </image>
+  </displayList>
+</component>

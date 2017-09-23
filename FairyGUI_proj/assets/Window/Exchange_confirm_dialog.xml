@@ -13,26 +13,26 @@
     <component id="n16_pplt" name="n16" src="pplt2c" xy="241,311">
       <relation target="n1_upgt" sidePair="center-center,bottom-bottom"/>
     </component>
-    <image id="n17_pplt" name="n17" src="pplt2d" xy="217,161" size="65,68">
-      <relation target="n18_pplt" sidePair="top-top,right-left"/>
+    <image id="n17_pplt" name="n17" src="pplt2d" xy="219,161" size="65,68">
+      <relation target="n19_pplt" sidePair="top-top,left-left"/>
     </image>
-    <image id="n18_pplt" name="n18" src="pplt2e" xy="284,173" size="134,41">
-      <relation target="n3_upgt" sidePair="center-center,middle-middle"/>
-    </image>
-    <text id="n19_pplt" name="n19" xy="125,178" size="55,32" fontSize="25" color="#ffffff" singleLine="true" text="花费">
-      <relation target="n17_pplt" sidePair="top-top,right-left"/>
+    <text id="n19_pplt" name="n19" xy="125,179" size="55,32" fontSize="25" color="#ffffff" singleLine="true" text="花费">
+      <relation target="n3_upgt" sidePair="middle-middle,left-left"/>
     </text>
-    <text id="n20_pplt" name="n20" xy="440,176" size="55,32" fontSize="25" color="#ffffff" singleLine="true" text="兑换">
-      <relation target="n18_pplt" sidePair="top-top,left-right"/>
+    <text id="n20_pplt" name="n20" xy="442,178" size="61,32" fontSize="25" color="#ffffff" letterSpacing="3" singleLine="true" text="兑换">
+      <relation target="n25_dc7j" sidePair="left-left,top-top"/>
     </text>
-    <text id="n21_pplt" name="n21" xy="522,217" size="76,28" fontSize="20" color="#ffffff" singleLine="true" text="iphone7">
+    <text id="n21_pplt" name="n21" xy="530,218" size="76,28" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="iphone7">
       <relation target="n22_pplt" sidePair="top-bottom,left-left"/>
     </text>
-    <loader id="n22_pplt" name="n22" xy="537,142" size="37,73" url="ui://jorujmv2pplt2g" autoSize="true">
+    <loader id="n22_pplt" name="n22" xy="542,144" size="47,73" url="ui://jorujmv2pplt2g" align="center" vAlign="middle" fill="scale">
       <relation target="n20_pplt" sidePair="top-top,left-right"/>
     </loader>
     <image id="n24_pplt" name="n24" src="pplt2h" xy="222,46">
       <relation target="n1_upgt" sidePair="top-top,center-center"/>
     </image>
+    <text id="n25_dc7j" name="n25" xy="282,164" size="162,65" font="Seravek Medium" fontSize="50" color="#ffff00" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="39999">
+      <relation target="n17_pplt" sidePair="top-top,left-left"/>
+    </text>
   </displayList>
 </component>

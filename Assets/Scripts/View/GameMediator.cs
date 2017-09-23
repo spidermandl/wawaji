@@ -22,6 +22,7 @@ public class GameMediator: BaseMediator {
 		list.Add (Req_MachineStartGrab.COMMAND);
 		list.Add (Req_MachineEndGrab.COMMAND);
 		list.Add (Req_UserRecharge.COMMAND);
+		list.Add (GameCommand.GameEnd.COMMAND);
 		return list;
 	}
 
@@ -38,6 +39,9 @@ public class GameMediator: BaseMediator {
 			break;
 		case Req_UserRecharge.COMMAND:
 			m_game_ui.RespondUserRecharge (notification);
+			break;
+		case GameCommand.GameEnd.COMMAND:
+			m_game_ui.GameOver (notification);
 			break;
 		default:
 			break;
@@ -62,10 +66,6 @@ public class GameMediator: BaseMediator {
 		default:
 			break;
 		}
-	}
-
-	public void gameOver(){
-		m_game_ui.gameOver ();
 	}
 
 }

@@ -7,17 +7,10 @@
     <image id="n14_xsrf" name="n14" src="xsrf12" xy="240,12">
       <relation target="n4_xsrf" sidePair="top-top,center-center"/>
     </image>
-    <image id="n13_xsrf" name="n13" src="xsrf11" xy="284,21">
-      <relation target="n14_xsrf" sidePair="top-top,center-center"/>
-    </image>
-    <text id="n21_xsrf" name="n21" xy="286,213" size="65,28" fontSize="20" color="#ffffff" text="可回购">
+    <text id="n21_xsrf" name="n21" xy="284,208" size="65,28" fontSize="20" color="#ffffff" text="可回购">
       <relation target="n4_xsrf" sidePair="top-top,center-center"/>
-      <relation target="n25_pvoj" sidePair="bottom-top,center-center"/>
     </text>
     <component id="n23_isq0" name="n23" src="isq019" xy="176,624"/>
-    <image id="n25_pvoj" name="n25" src="pvoj1a" xy="198,241">
-      <relation target="n4_xsrf" sidePair="center-center"/>
-    </image>
     <image id="n26_pvoj" name="n26" src="fvaa2" xy="203,306" size="367,68">
       <relation target="n28_pvoj" sidePair="left-left,top-top"/>
     </image>
@@ -25,10 +18,10 @@
       <relation target="n29_pvoj" sidePair="left-left,top-top"/>
     </image>
     <text id="n28_pvoj" name="n28" xy="54,321" size="61,32" fontSize="25" color="#ffffff" singleLine="true" text="姓名:"/>
-    <text id="n29_pvoj" name="n29" xy="53,404" size="111,32" fontSize="25" color="#ffffff" singleLine="true" text="邮寄地址:">
+    <text id="n29_pvoj" name="n29" xy="53,404" size="86,32" fontSize="25" color="#ffffff" singleLine="true" text="手机号:">
       <relation target="n28_pvoj" sidePair="left-left,top-top"/>
     </text>
-    <text id="n30_pvoj" name="n30" xy="56,557" size="86,32" fontSize="25" color="#ffffff" singleLine="true" text="手机号:">
+    <text id="n30_pvoj" name="n30" xy="56,557" size="111,32" fontSize="25" color="#ffffff" singleLine="true" text="银行卡号:">
       <relation target="n29_pvoj" sidePair="left-left,top-top"/>
     </text>
     <image id="n31_pvoj" name="n31" src="fvaa2" xy="201,543" size="370,68">
@@ -46,7 +39,7 @@
       <relation target="n31_pvoj" sidePair="leftext-left,rightext-right"/>
       <relation target="n31_pvoj" sidePair="middle-middle"/>
     </text>
-    <text id="n35_pvoj" name="n35" xy="271,172" size="96,32" fontSize="25" color="#ffffff" text="iPhone7">
+    <text id="n35_pvoj" name="n35" xy="269,170" size="96,32" fontSize="25" color="#ffffff" text="iPhone7">
       <relation target="n4_xsrf" sidePair="top-top,center-center"/>
     </text>
     <component id="n43_ls0x" name="n43" src="ls0x1n" xy="195,466">
@@ -71,6 +64,16 @@
     <text id="n46_ls0x" name="n46" xy="210,474" size="353,51" input="true" fontSize="30" vAlign="middle" autoSize="none" singleLine="true" text="">
       <relation target="n45_ls0x" sidePair="leftext-left,rightext-right"/>
       <relation target="n45_ls0x" sidePair="middle-middle"/>
+    </text>
+    <loader id="n47_ezt2" name="n47" xy="269,25" size="86,102" url="ui://s6wf2fzsxsrf11" align="center" vAlign="middle" fill="scale">
+      <relation target="n14_xsrf" sidePair="top-top,center-center"/>
+    </loader>
+    <image id="n48_t4qn" name="n48" src="t4qn1t" xy="209,238" size="33,43">
+      <relation target="n4_xsrf" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n51_t4qn" name="n51" xy="259,234" size="300,55" fontSize="45" color="#ffccff" autoSize="none" strokeColor="#000000" text="2999.00">
+      <relation target="n48_t4qn" sidePair="left-left,top-top"/>
+      <relation target="n4_xsrf" sidePair="rightext-right"/>
     </text>
   </displayList>
 </component>

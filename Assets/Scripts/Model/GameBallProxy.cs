@@ -143,12 +143,14 @@ public class GameBallProxy : BaseProxy {
 			return;
 		}
 		BallsItem[] res = new BallsItem[len];
+		int prize_index = -1;
 		bool isPrize = false;
 		for (int i = 0; i < len; i++) {
 			foreach(BallsItem item in items){
 				if (meta.data.info.ball_arr[i] == item.ball_id) {
 					res [i] = item;
 					if (item.is_matter == 1) {
+						prize_index = i;
 						isPrize = true;
 					}
 					break;
@@ -159,6 +161,17 @@ public class GameBallProxy : BaseProxy {
 		answer.prizes = res;
 		if (isPrize) {
 			answer.type = 0;
+			UserPrizeInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UserPrizeInfoProxy.NAME) as UserPrizeInfoProxy;
+			UserPrizeInfoProxy.PrizeItem u_item = new UserPrizeInfoProxy.PrizeItem ();
+			BallsItem item = res [prize_index];
+			u_item.coin = item.coin;
+			u_item.name = item.name;
+			u_item.pic = item.p_pic;
+			u_item.price = ""+item.price;
+			u_item.prize_id = item.prize_id;
+			u_item.status = 1;
+			proxy.SelectedItem = u_item;
+
 		} else {
 			answer.coin = meta.data.info.coin;
 			answer.type = 1;

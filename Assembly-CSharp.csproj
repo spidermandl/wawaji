@@ -177,6 +177,10 @@
      <Compile Include="Assets\Scripts\View\UI\IconManager.cs" />
      <Compile Include="Assets\Scripts\View\UI\Notice\UINoticeMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\Prize\UIPrizeMain.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Rewards\BaseRewardsCom.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Rewards\BuybackComponent.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Rewards\ClaimComponent.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Rewards\ExchangeComponent.cs" />
      <Compile Include="Assets\Scripts\View\UI\Rewards\UIRewardsMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\UIMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\UIPackageManager.cs" />

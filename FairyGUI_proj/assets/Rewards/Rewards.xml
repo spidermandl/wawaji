@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="750,1334">
-  <controller name="tab" pages="0,,1,,2," selected="0"/>
+  <controller name="tab" pages="0,,1,,2," selected="2"/>
   <displayList>
     <loader id="n12_mc6i" name="n12" xy="0,0" size="750,1335" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
@@ -18,17 +18,29 @@
     </component>
     <component id="n23_xsrf" name="n23" src="cq4op" xy="579,200">
       <relation target="n21_xsrf" sidePair="right-right,middle-middle"/>
-      <Button selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="2"/>
+      <Button checked="true" selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="2"/>
     </component>
     <component id="n24_xsrf" name="n24" src="cq4or" xy="72,200">
       <relation target="n21_xsrf" sidePair="left-left,middle-middle"/>
-      <Button checked="true" selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="0"/>
+      <Button selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="0"/>
     </component>
     <component id="n25_xsrf" name="n25" src="xsrfy" xy="72,333">
       <gearDisplay controller="tab" pages="1"/>
     </component>
     <component id="n26_pvoj" name="n26" src="isq017" xy="73,333">
       <gearDisplay controller="tab" pages="2"/>
+    </component>
+    <component id="n27_t4qn" name="n27" src="ezt21r" xy="73,334">
+      <gearDisplay controller="tab" pages="0"/>
+      <relation target="n12_mc6i" sidePair="top-top,center-center"/>
+    </component>
+    <component id="n28_t4qn" name="n28" src="ezt21s" xy="73,334">
+      <gearDisplay controller="tab" pages="1"/>
+      <relation target="n12_mc6i" sidePair="center-center,top-top"/>
+    </component>
+    <component id="n29_t4qn" name="n29" src="ezt21o" xy="73,334">
+      <gearDisplay controller="tab" pages="2"/>
+      <relation target="n12_mc6i" sidePair="top-top,center-center"/>
     </component>
   </displayList>
   <transition name="t0"/>

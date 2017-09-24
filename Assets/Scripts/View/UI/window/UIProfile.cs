@@ -5,6 +5,9 @@ using UnityEngine;
 using DG.Tweening;
 using System.Collections;
 
+/// <summary>
+/// User interface profile.
+/// </summary>
 public class UIProfile : BaseWindow
 {
 
@@ -14,24 +17,27 @@ public class UIProfile : BaseWindow
 	public GObject Exchange{
 		get{ return this.contentPane.GetChild ("n10"); }
 	}
-
 	public GObject Logout {
 		get{ return this.contentPane.GetChild ("n3"); }
 	}
 
+
 	GObject Down {
 		get{ return this.contentPane.GetChild ("n14"); }
 	}
-
 	GList List {
 		get{ return this.contentPane.GetChild ("n15").asList; }
 	}
-
 	GObject Close {
 		get{ return this.contentPane.GetChild ("n17"); }
 	}
 
 	List<UserPrizeInfoProxy.PrizeItem> items = null;
+	UIMain _ui;
+	public UIMain Ui{
+		get{ return this._ui;}
+		set{ this._ui = value;}
+	}
 
 	public UIProfile ():base()
 	{
@@ -90,15 +96,30 @@ public class UIProfile : BaseWindow
 				obj.asCom.GetChild ("n3").visible = false;
 				obj.asCom.GetChild ("n1").visible = true;
 				obj.asCom.GetChild ("n1").onClick.Add (()=>{
-					
+					if(_ui!=null){
+						UserPrizeInfoProxy proxy =UnityFacade.GetInstance().RetrieveProxy (UserPrizeInfoProxy.NAME) as UserPrizeInfoProxy;
+						if (proxy == null) {
+							return;
+						}
+						proxy.SelectedItem = this.items [index];
+						_ui.moveToPage(typeof(UIRewardsMain));
+					}
 				});
 			} else {
 				obj.asCom.GetChild ("n3").visible = true;
 				obj.asCom.GetChild ("n1").visible = false;
 				obj.asCom.GetChild ("n3").onClick.Add (()=>{
-					
+					if(_ui!=null){
+						UserPrizeInfoProxy proxy =UnityFacade.GetInstance().RetrieveProxy (UserPrizeInfoProxy.NAME) as UserPrizeInfoProxy;
+						if (proxy == null) {
+							return;
+						}
+						proxy.SelectedItem = this.items [index];
+						_ui.moveToPage(typeof(UIRewardsMain));
+					}
 				});
 			}
+
 		}
 
 	}

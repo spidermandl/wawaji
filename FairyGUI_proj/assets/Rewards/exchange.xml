@@ -2,19 +2,10 @@
 <component size="617,734">
   <displayList>
     <image id="n4_xsrf" name="n4" src="fvaa6" xy="0,0" size="617,734">
-      <relation target="" sidePair="top-top,center-center"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </image>
     <image id="n14_xsrf" name="n14" src="xsrf12" xy="240,12">
       <relation target="n4_xsrf" sidePair="top-top,center-center"/>
-    </image>
-    <image id="n13_xsrf" name="n13" src="xsrf11" xy="284,21">
-      <relation target="n14_xsrf" sidePair="top-top,center-center"/>
-    </image>
-    <image id="n15_xsrf" name="n15" src="xsrf10" xy="250,178">
-      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
-    </image>
-    <image id="n18_xsrf" name="n18" src="xsrf13" xy="201,368">
-      <relation target="n19_xsrf" sidePair="top-top,left-right"/>
     </image>
     <image id="n19_xsrf" name="n19" src="xsrf14" xy="76,355">
       <relation target="n4_xsrf" sidePair="top-top,left-left"/>
@@ -25,5 +16,15 @@
     <component id="n22_xsrf" name="n22" src="xsrf15" xy="171,547">
       <relation target="n4_xsrf" sidePair="center-center,bottom-bottom"/>
     </component>
+    <loader id="n23_ezt2" name="n23" xy="266,26" size="86,102" url="ui://s6wf2fzsxsrf11" align="center" vAlign="middle" fill="scale">
+      <relation target="n14_xsrf" sidePair="top-top,center-center"/>
+    </loader>
+    <text id="n25_t4qn" name="n25" xy="166,178" size="300,55" fontSize="40" color="#ffccff" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" text="iPhone 7">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </text>
+    <text id="n26_t4qn" name="n26" xy="192,361" size="365,102" font="Apple SD Gothic Neo Heavy" fontSize="80" color="#ffff00" letterSpacing="2" autoSize="none" text="39999">
+      <relation target="n19_xsrf" sidePair="left-left,top-top"/>
+      <relation target="n4_xsrf" sidePair="rightext-right"/>
+    </text>
   </displayList>
 </component>

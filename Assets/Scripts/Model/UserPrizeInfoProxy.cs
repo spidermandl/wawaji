@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 
 /// <summary>
-/// 
+/// 用户中奖的奖品
 /// </summary>
 public class UserPrizeInfoProxy : BaseProxy {
 
@@ -21,7 +21,7 @@ public class UserPrizeInfoProxy : BaseProxy {
 	/// <summary>
 	/// 当前选中prize
 	/// </summary>
-	public PrizeItem selectedItem;
+	PrizeItem selectedItem;
 	public PrizeItem SelectedItem{
 		get{return this.selectedItem;}
 		set{ selectedItem = value;}
@@ -71,6 +71,7 @@ public class UserPrizeInfoProxy : BaseProxy {
 		}
 
 		this.Items = items;
+		this.SelectedItem = null;
 	}
 
 }

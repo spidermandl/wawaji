@@ -10,9 +10,9 @@
     <image id="n2_fvaa" name="n2" src="fvaa5" xy="278,12">
       <relation target="n1_fvaa" sidePair="middle-middle,left-left"/>
     </image>
-    <image id="n3_fvaa" name="n3" src="fvaa1" xy="349,25">
-      <relation target="n1_fvaa" sidePair="middle-middle,right-right"/>
-    </image>
+    <text id="n4_t4qn" name="n4" xy="344,14" size="173,60" font="Seravek Medium" fontSize="45" color="#ffff00" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="264">
+      <relation target="n2_fvaa" sidePair="left-left,top-top"/>
+      <relation target="n1_fvaa" sidePair="rightext-right"/>
+    </text>
   </displayList>
-  <relation target="" sidePair=""/>
 </component>

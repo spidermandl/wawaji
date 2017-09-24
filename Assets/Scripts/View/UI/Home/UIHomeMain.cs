@@ -73,8 +73,10 @@ public class UIHomeMain : UIMain
 		});
 		toolbar.GetChild ("n14").onClick.Add (() => {
 			//个人界面
-			if(_profileWin == null)
+			if(_profileWin == null){
 				_profileWin = new UIProfile ();
+				_profileWin.Ui = this;
+			}
 			_profileWin.Show();
 			_profileWin.Logout.onClick.Add(()=>{
 

@@ -69,7 +69,7 @@ public abstract class UIMain : MonoBehaviour
 	protected virtual void destroyUI (){
 		GRoot.inst.RemoveChildren ();
 		Destroy (this.gameObject);//销毁自身脚本
-		//UIPackage.RemovePackage(this.ui_module);
+//      UIPackage.RemovePackage(this.ui_module);
 //		UIPackage.RemoveAllPackages();
 //		Resources.UnloadUnusedAssets();
 //		System.GC.Collect();
@@ -80,6 +80,14 @@ public abstract class UIMain : MonoBehaviour
 	 * */
 	public void setClickFunc(ClickDelegateFunc func){
 		this._clickFunc = func;
+	}
+
+	/// <summary>
+	/// Moves to page.
+	/// </summary>
+	/// <param name="cls">Cls.</param>
+	public void moveToPage(Type cls){
+		changeUIpage (cls);
 	}
 }
 

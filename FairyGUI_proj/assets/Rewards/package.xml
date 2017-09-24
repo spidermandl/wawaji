@@ -45,6 +45,10 @@
     <component id="ls0x1l" name="bank_item.xml" path="/"/>
     <component id="ls0x1m" name="bank_popup.xml" path="/"/>
     <component id="ls0x1n" name="bank.xml" path="/"/>
+    <component id="ezt21o" name="buyback_done.xml" path="/"/>
+    <component id="ezt21r" name="claim_done.xml" path="/"/>
+    <component id="ezt21s" name="exchange_done.xml" path="/"/>
+    <image id="t4qn1t" name="c_rate.png" path="/images/"/>
   </resources>
   <publish name="Rewards" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="750,1334">
-  <controller name="tab" pages="0,,1,,2," selected="2"/>
+  <controller name="tab" pages="0,,1,,2," selected="0"/>
   <displayList>
     <loader id="n12_mc6i" name="n12" xy="0,0" size="750,1335" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
@@ -18,11 +18,11 @@
     </component>
     <component id="n23_xsrf" name="n23" src="cq4op" xy="579,200">
       <relation target="n21_xsrf" sidePair="right-right,middle-middle"/>
-      <Button checked="true" selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="2"/>
+      <Button selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="2"/>
     </component>
     <component id="n24_xsrf" name="n24" src="cq4or" xy="72,200">
       <relation target="n21_xsrf" sidePair="left-left,middle-middle"/>
-      <Button selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="0"/>
+      <Button checked="true" selectedIcon="ui://s6wf2fzscq4oh" controller="tab" page="0"/>
     </component>
     <component id="n25_xsrf" name="n25" src="xsrfy" xy="72,333">
       <gearDisplay controller="tab" pages="1"/>

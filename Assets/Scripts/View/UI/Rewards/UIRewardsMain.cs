@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
+using PureMVC.Interfaces;
+using System.Collections;
 /// <summary>
 /// 领取，兑换，回购奖品
 /// </summary>
@@ -66,6 +67,14 @@ public class UIRewardsMain : UIMain
 	}
 
 	void validateProfile(){
+
+	}
+
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// 外部调用
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	public void RespondUsePrize(INotification notification){
 
 	}
 }

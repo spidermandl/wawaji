@@ -22,7 +22,7 @@
     <text id="n20_pplt" name="n20" xy="442,178" size="61,32" fontSize="25" color="#ffffff" letterSpacing="3" singleLine="true" text="兑换">
       <relation target="n25_dc7j" sidePair="left-left,top-top"/>
     </text>
-    <text id="n21_pplt" name="n21" xy="530,218" size="76,28" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="iphone7">
+    <text id="n21_pplt" name="n21" xy="500,220" size="141,28" fontSize="20" color="#ffffff" align="center" vAlign="middle" letterSpacing="4" autoSize="none" singleLine="true" text="iphone7">
       <relation target="n22_pplt" sidePair="top-bottom,left-left"/>
     </text>
     <loader id="n22_pplt" name="n22" xy="542,144" size="47,73" url="ui://jorujmv2pplt2g" align="center" vAlign="middle" fill="scale">

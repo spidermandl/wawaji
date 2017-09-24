@@ -1,7 +1,9 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using FairyGUI;
+using UnityEngine;
 using PureMVC.Interfaces;
+using System.Collections;
 
 public class RewardsMediator: BaseMediator {
 	public new const string NAME = "RewardsMediator";
@@ -17,11 +19,18 @@ public class RewardsMediator: BaseMediator {
 	public override IList<string> ListNotificationInterests()
 	{
 		IList<string> list = new List<string>();
+		list.Add (Req_UsePrize.COMMAND);
 		return list;
 	}
 
 	public override void HandleNotification(INotification notification){        
-
+		switch( notification.Name ){
+		case  Req_UsePrize.COMMAND:
+			m_rewards_ui.RespondUsePrize (notification);
+			break;
+		default:
+			break;
+		}
 	}
 
 	public override void OnRegister()

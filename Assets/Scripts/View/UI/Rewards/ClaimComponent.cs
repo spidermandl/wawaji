@@ -11,7 +11,15 @@ public class ClaimComponent : BaseRewardsCom
 {
 	public ClaimComponent (GComponent open,GComponent close,UserPrizeInfoProxy.PrizeItem item):base(open,close,item)
 	{
-
+		open.GetChild ("n5").onClick.Add (() => {
+			Req_UsePrize request = new Req_UsePrize();
+			request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
+			request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
+			request.PrizeId = item.prize_id;
+			request.UserPrizeId = item.id;
+			request.UserPrizeType = 0;
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		});
 	}
 
 	public override void validateUI ()

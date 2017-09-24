@@ -56,7 +56,8 @@ public class UIEnterMain : UIMain
 						UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 						_loginWin.ValidLogin = false;
 					}
-
+					_loginWin.Warn.visible= false;
+					_loginWin.Warn.text = "";
 				}
 			});
 
@@ -199,11 +200,8 @@ public class UIEnterMain : UIMain
 				Req_UserLogin request = new Req_UserLogin();
 				request.Uuid = getDeviceUuid();
 				request.Type = 3;
-				if(Util.Filter(request.Phone)!=null &&
-					Util.Filter(request.Psd) != null){
-					UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
-					_loginWin.ValidLogin = false;
-				}
+				UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+				_loginWin.ValidLogin = false;
 			});
 
 		});
@@ -285,7 +283,7 @@ public class UIEnterMain : UIMain
 			
 			break;
 		default:
-			RespondWechatLogin ("001kNaCV0vVY1Y11sxCV0xqdCV0kNaCZ");
+			RespondWechatLogin ("061X7UW30hPz1F1dDxV30QdYW30X7UWk");
 			break;
 		}
 
@@ -433,9 +431,16 @@ public class UIEnterMain : UIMain
 	public void RespondLogin(INotification notification){
 		if (_loginWin != null) {
 			_loginWin.ValidLogin = true;
+			if (((Request)notification.Body).getResponseCode () == Base_Req_UserInfo.SUCCESS) {//成功注册
 
-			this._clickFunc(ClickType.LoginGame);
-			this.changeUIpage(typeof(UIHomeMain));
+				this._clickFunc(ClickType.LoginGame);
+				this.changeUIpage(typeof(UIHomeMain));
+				return;
+			}
+			_loginWin.Warn.visible = true;
+			_loginWin.Warn.asTextField.text = ((Request)notification.Body).getMsg();
+
+
 		}
 	}
 

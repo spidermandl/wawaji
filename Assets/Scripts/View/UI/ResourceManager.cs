@@ -3,24 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using FairyGUI;
 
-public delegate void LoadCompleteCallback(NTexture texture);
-public delegate void LoadErrorCallback(string error);
+
 
  /// <summary>
  /// Use to load icons from asset bundle, and pool them
  /// </summary>
-public class IconManager : MonoBehaviour
+public class ResourceManager : MonoBehaviour
 {
-	static IconManager _instance;
-	public static IconManager inst
+	public delegate void LoadCompleteCallback(NTexture texture);
+	public delegate void LoadErrorCallback(string error);
+
+	static ResourceManager _instance;
+	public static ResourceManager inst
 	{
 		get
 		{
 			if (_instance == null)
 			{
-				GameObject go = new GameObject("IconManager");
+				GameObject go = new GameObject("ResourceManager");
 				DontDestroyOnLoad(go);
-				_instance = go.AddComponent<IconManager>();
+				_instance = go.AddComponent<ResourceManager>();
 			}
 			return _instance;
 		}
@@ -180,11 +182,13 @@ public class IconManager : MonoBehaviour
 		}
 	}
 
+	public class LoadItem
+	{
+		public UpdatesProxy.MemoryVersion.Entry entry;
+		public LoadCompleteCallback onSuccess;
+		public LoadErrorCallback onFail;
+	}
+
 }
 
-class LoadItem
-{
-	public UpdatesProxy.MemoryVersion.Entry entry;
-	public LoadCompleteCallback onSuccess;
-	public LoadErrorCallback onFail;
-}
+

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
 using PureMVC.Interfaces;
+using System.Collections;
 
 public class UIHomeMain : UIMain
 {
@@ -15,6 +16,8 @@ public class UIHomeMain : UIMain
 	UIHelp _helpWin;
 	UIProfile _profileWin;//
 	UIPrize _prizeWin;//
+
+	GTextField _horn;
 
 	GComponent toolbar;
 	GButton b_coin_1,b_coin_5,b_coin_10;
@@ -98,6 +101,7 @@ public class UIHomeMain : UIMain
 			});
 		});
 
+		_horn = _mainView.GetChild ("n16").asTextField;
 		//查看奖品
 		_mainView.GetChild ("n12").onClick.Add (() => {
 			//查看奖品
@@ -290,6 +294,22 @@ public class UIHomeMain : UIMain
 		base.changeUIpage (cls);
 	}
 
+	/// <summary>
+	/// Plaies the string.
+	/// </summary>
+	/// <returns>The string.</returns>
+	IEnumerator playString(){
+		int index = 0;
+		UserPrizeStringProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UserPrizeStringProxy.NAME) as UserPrizeStringProxy;
+		List<string> items = proxy.Items;
+		while (true) {
+			_horn.text = items [index];
+			yield return new WaitForSeconds (5);
+			index++;
+			index = index % items.Count;
+		}
+	}
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -321,7 +341,8 @@ public class UIHomeMain : UIMain
 	/// </summary>
 	/// <param name="notification">Notification.</param>
 	public void RespondUserPrizeStrings(INotification notification){
-		this.changeUIpage(typeof(UIPrizeMain));
+		StartCoroutine (playString ());
+
 	}
 	/// <summary>
 	/// Responds the user recharge.

@@ -95,6 +95,8 @@
     <image id="dc7j2y" name="b_done.png" path="/images/"/>
     <component id="dc7j2z" name="done.xml" path="/button/"/>
     <component id="ezt230" name="Common_dialog.xml" path="/" exported="true"/>
+    <image id="t4qn31" name="b_yes.png" path="/images/"/>
+    <component id="t4qn32" name="yes.xml" path="/button/"/>
   </resources>
   <publish name="Window" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

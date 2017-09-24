@@ -15,6 +15,7 @@ public class UIGameMain : UIMain
 
 	//UIExchange _exchangeWin;
 	UITopup _topupWin;//
+	UICommon _commonWin;//
 
 	GameObject root = null;
 	GameManager gameManager;
@@ -108,7 +109,16 @@ public class UIGameMain : UIMain
 
 		});
 		//go
-		controller.GetChild("n6").onClick.Add(() => { 
+		controller.GetChild("n6").onClick.Add(() => {
+			AccountProxy u_proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+			MachineInfoProxy m_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+			if (m_proxy != null||u_proxy != null){
+				if(u_proxy.Coin<m_proxy.Selection.coin){
+					this.CantStart(null);
+					return;
+				}
+			}
+			
 			this.gameManager.startPick();
 			getBallPickingOdd();
 		});
@@ -298,6 +308,22 @@ public class UIGameMain : UIMain
 		_coinWin.Amount.asTextField.text = ""+answer.coin;
 	}
 
+	/// <summary>
+	/// Determines whether this instance cant start the specified notification.
+	/// </summary>
+	/// <returns><c>true</c> if this instance cant start the specified notification; otherwise, <c>false</c>.</returns>
+	/// <param name="notification">Notification.</param>
+	public void CantStart(INotification notification){
+		if(_commonWin == null)
+			_commonWin = new UICommon ();
+		_commonWin.Show();
+		_commonWin.Title.asTextField.text = "金币不足";
+		_commonWin.Content.asTextField.text = "开始游戏所需的金币不够，请冲金币";
+		_commonWin.Yes.onClick.Add (() => {
+			_commonWin.Hide();
+			this.changeUIpage(typeof(UIHomeMain));
+		});
+	}
 	/// <summary>
 	/// Responds the ball info.
 	/// </summary>

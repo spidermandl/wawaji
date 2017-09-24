@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using PureMVC.Interfaces;
 
+/// <summary>
+/// Game mediator.
+/// </summary>
 public class GameMediator: BaseMediator {
 	public new const string NAME = "GameMediator";
 
@@ -23,6 +26,7 @@ public class GameMediator: BaseMediator {
 		list.Add (Req_MachineEndGrab.COMMAND);
 		list.Add (Req_UserRecharge.COMMAND);
 		list.Add (GameCommand.GameEnd.COMMAND);
+		list.Add (GameCommand.GameNoMoney.COMMAND);
 		return list;
 	}
 
@@ -42,6 +46,9 @@ public class GameMediator: BaseMediator {
 			break;
 		case GameCommand.GameEnd.COMMAND:
 			m_game_ui.GameOver (notification);
+			break;
+		case GameCommand.GameNoMoney.COMMAND:
+			m_game_ui.CantStart (notification);
 			break;
 		default:
 			break;

@@ -86,4 +86,16 @@ public class Req_UserLogin :Base_Req_UserInfo {
 	{
 		return COMMAND;
 	}
+
+	protected override string getChildMsg(){
+		if (base._response.GetType () != typeof(Response))
+			return base.getChildMsg ();
+		return ((Response)_response).data.msg;
+	}
+
+	public override int getResponseCode(){
+		if (base._response.GetType () != typeof(Response))
+			return base.getResponseCode ();
+		return ((Response)base._response).data.code;
+	}
 }

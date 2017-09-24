@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="617,503">
+  <displayList>
+    <image id="n4_cq4o" name="n4" src="fvaa6" xy="0,0" size="617,503">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n8_cq4o" name="n8" xy="82,156" size="463,32" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="巴拉巴拉">
+      <relation target="n4_cq4o" sidePair="center-center,top-top"/>
+    </text>
+    <text id="n9_cq4o" name="n9" xy="107,233" size="86,32" fontSize="25" color="#ffffff" singleLine="true" text="收件人:">
+      <relation target="n4_cq4o" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n10_cq4o" name="n10" xy="101,308" size="111,32" fontSize="25" color="#ffffff" singleLine="true" text="邮寄地址:">
+      <relation target="n9_cq4o" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n11_cq4o" name="n11" xy="110,382" size="86,32" fontSize="25" color="#ffffff" singleLine="true" text="手机号:">
+      <relation target="n10_cq4o" sidePair="left-left,top-top"/>
+    </text>
+    <loader id="n19_ezt2" name="n19" xy="255,14" size="112,112" align="center" vAlign="middle" fill="scale">
+      <relation target="n4_cq4o" sidePair="center-center,top-top"/>
+    </loader>
+    <text id="n20_ezt2" name="n20" xy="239,232" size="353,32" input="true" fontSize="25" color="#ffffff" vAlign="middle" autoSize="height" singleLine="true" text="aaaaaaaaa">
+      <relation target="n9_cq4o" sidePair="top-top,left-left"/>
+      <relation target="n4_cq4o" sidePair="rightext-right"/>
+    </text>
+    <text id="n21_ezt2" name="n21" xy="240,307" size="353,32" input="true" fontSize="25" color="#ffffff" vAlign="middle" autoSize="height" singleLine="true" text="bbbbbbbb">
+      <relation target="n10_cq4o" sidePair="top-top,left-left"/>
+      <relation target="n4_cq4o" sidePair="rightext-right"/>
+    </text>
+    <text id="n22_ezt2" name="n22" xy="239,383" size="353,32" input="true" fontSize="25" color="#ffffff" vAlign="middle" autoSize="height" singleLine="true" text="ccccccccc">
+      <relation target="n11_cq4o" sidePair="left-left,top-top"/>
+      <relation target="n4_cq4o" sidePair="rightext-right"/>
+    </text>
+  </displayList>
+</component>

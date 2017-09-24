@@ -55,5 +55,8 @@
       <relation target="n24_ysyo" sidePair="top-top"/>
       <relation target="n5_lf03" sidePair="right-right"/>
     </component>
+    <text id="n26_tecg" name="n26" xy="101,600" size="495,30" visible="false" fontSize="20" color="#ff0000" align="center" vAlign="middle" autoSize="height" singleLine="true" text="aaaaa&#xA;">
+      <relation target="n3_lf03" sidePair="center-center,bottom-bottom"/>
+    </text>
   </displayList>
 </component>

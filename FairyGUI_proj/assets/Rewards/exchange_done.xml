@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="617,503">
+  <displayList>
+    <image id="n4_xsrf" name="n4" src="fvaa6" xy="0,0" size="617,503">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n14_xsrf" name="n14" src="xsrf12" xy="240,12">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </image>
+    <image id="n19_xsrf" name="n19" src="xsrf14" xy="75,312">
+      <relation target="n4_xsrf" sidePair="top-top,left-left"/>
+    </image>
+    <text id="n21_xsrf" name="n21" xy="263,252" size="105,28" fontSize="20" color="#ffffff" text="已经兑换成">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </text>
+    <loader id="n23_ezt2" name="n23" xy="266,26" size="86,102" url="ui://s6wf2fzsxsrf11" align="center" vAlign="middle" fill="scale">
+      <relation target="n14_xsrf" sidePair="top-top,center-center"/>
+    </loader>
+    <text id="n24_t4qn" name="n24" xy="165,168" size="300,55" fontSize="40" color="#ffccff" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" text="iPhone 7">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </text>
+    <text id="n25_t4qn" name="n25" xy="194,316" size="365,102" font="Apple SD Gothic Neo Heavy" fontSize="80" color="#ffff00" letterSpacing="2" autoSize="none" text="39999">
+      <relation target="n19_xsrf" sidePair="left-left,top-top"/>
+      <relation target="n4_xsrf" sidePair="rightext-right"/>
+    </text>
+  </displayList>
+</component>

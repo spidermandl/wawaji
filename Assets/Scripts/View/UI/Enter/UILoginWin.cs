@@ -32,6 +32,10 @@ public class UILoginWin : BaseWindow
 	public GObject Guest{
 		get{ return this.contentPane.GetChild ("n13"); }
 	}
+	public GObject Warn{
+		get{ return this.contentPane.GetChild ("n26"); }
+	}
+
 	bool isLogining;
 	public bool ValidLogin {
 		get{ return !isLogining; }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="617,628">
+  <displayList>
+    <image id="n4_xsrf" name="n4" src="fvaa6" xy="0,0" size="617,628">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n14_xsrf" name="n14" src="xsrf12" xy="240,13">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </image>
+    <text id="n28_pvoj" name="n28" xy="75,289" size="113,32" fontSize="25" color="#ffffff" autoSize="height" singleLine="true" text="姓名:"/>
+    <text id="n29_pvoj" name="n29" xy="74,367" size="105,32" fontSize="25" color="#ffffff" singleLine="true" text="手机号：">
+      <relation target="n28_pvoj" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n30_pvoj" name="n30" xy="77,520" size="113,32" fontSize="25" color="#ffffff" autoSize="none" singleLine="true" text="银行卡号:">
+      <relation target="n29_pvoj" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n32_pvoj" name="n32" xy="197,289" size="353,32" input="true" fontSize="25" color="#ffffff" vAlign="middle" autoSize="height" singleLine="true" text="aaaaaaaaa">
+      <relation target="n28_pvoj" sidePair="left-left,top-top"/>
+      <relation target="n4_xsrf" sidePair="rightext-right"/>
+    </text>
+    <text id="n33_pvoj" name="n33" xy="197,366" size="353,32" input="true" fontSize="25" color="#ffffff" vAlign="middle" autoSize="height" singleLine="true" text="bbbbb">
+      <relation target="n29_pvoj" sidePair="top-top,left-left"/>
+      <relation target="n4_xsrf" sidePair="rightext-right"/>
+    </text>
+    <text id="n34_pvoj" name="n34" xy="198,518" size="353,32" input="true" fontSize="25" color="#ffffff" vAlign="middle" autoSize="height" singleLine="true" text="dddddddd">
+      <relation target="n30_pvoj" sidePair="top-top,left-left"/>
+      <relation target="n4_xsrf" sidePair="rightext-right"/>
+    </text>
+    <text id="n35_pvoj" name="n35" xy="231,170" size="171,32" fontSize="25" color="#ffffff" text="已回购iPhone7">
+      <relation target="n4_xsrf" sidePair="top-top,center-center"/>
+    </text>
+    <text id="n47_ezt2" name="n47" xy="74,442" size="111,32" fontSize="25" color="#ffffff" singleLine="true" text="银行卡号:">
+      <relation target="n29_pvoj" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n48_ezt2" name="n48" xy="200,440" size="353,32" input="true" fontSize="25" color="#ffffff" vAlign="middle" autoSize="height" singleLine="true" text="ccccccc">
+      <relation target="n47_ezt2" sidePair="left-left,top-top"/>
+      <relation target="n4_xsrf" sidePair="rightext-right"/>
+    </text>
+    <loader id="n49_ezt2" name="n49" xy="267,25" size="86,102" url="ui://s6wf2fzsxsrf11" align="center" vAlign="middle" fill="scale">
+      <relation target="n14_xsrf" sidePair="top-top,center-center"/>
+    </loader>
+    <image id="n50_t4qn" name="n50" src="t4qn1t" xy="207,215" size="33,43">
+      <relation target="n4_xsrf" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n51_t4qn" name="n51" xy="257,211" size="300,55" fontSize="45" color="#ffccff" autoSize="none" strokeColor="#000000" text="2999.00">
+      <relation target="n50_t4qn" sidePair="left-left,top-top"/>
+      <relation target="n4_xsrf" sidePair="rightext-right"/>
+    </text>
+  </displayList>
+</component>

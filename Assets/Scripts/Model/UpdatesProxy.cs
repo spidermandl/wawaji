@@ -188,7 +188,7 @@ public class UpdatesProxy : BaseProxy {
 	/// <param name="loader">Loader.</param>
 	/// <param name="entry">Entry.</param>
 	public void loadIcon(GLoader loader,MemoryVersion.Entry entry){
-		IconManager.inst.LoadIcon (entry, 
+		ResourceManager.inst.LoadIcon (entry, 
 				(NTexture texture)=>{
 					loader.texture = texture;
 				}, 

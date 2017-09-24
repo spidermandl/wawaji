@@ -31,6 +31,7 @@ public abstract class UIMain : MonoBehaviour
 		//GRoot.inst.SetContentScaleFactor ((int)GRoot.inst.width,(int)GRoot.inst.height);
 		Debug.Log (GRoot.inst.width);
 		Debug.Log (GRoot.inst.height);
+		UIConfig.defaultFont = "FZCuYuan-M03S";
 
 		UIPackageManager.getInstance ().addPackage (module);
 		//UIPackage.AddPackage (module);

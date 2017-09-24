@@ -7,6 +7,12 @@ using System;
 /// </summary>
 abstract public class Base_Req_UserInfo : Request {
 
+	public const int SUCCESS=0;//0表示成功
+	public const int WRONG_USER_FORMAT=1;//,1表示用户类型错误
+	public const int WRONG_PHONE_FORMAT=2;//,2表示手机号码格式不正确
+	public const int NONE_EXIST_USER=3;//3表示账号不存在
+	public const int WRONG_ACCOUNT_OR_PASSWORD=4;//,4表示手机号或密码错误
+
 	[Serializable]
 	new public class Response : Request.Response{
 		//{"ret":200,"data":{"code":0,"msg":"","list":[],"info":"d7mxh"},"msg":""}

@@ -86,6 +86,10 @@ public class AccountProxy : BaseProxy {
 	/// </summary>
 	/// <param name="meta">Meta.</param>
 	public void bindingData(Base_Req_UserInfo.Response meta){
+		if (meta.data.info == null) {
+			UnityFacade.GetInstance ().RemoveProxy (AccountProxy.NAME);
+			return;
+		}
 		this.Id = meta.data.info.id;
 		this.Type = meta.data.info.type;
 		this.Name = meta.data.info.name;

@@ -1,11 +1,11 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{C4B538A0-555E-D08B-2D85-18311855F03A}") = "WaWaJi", "Assembly-CSharp-firstpass.csproj", "{091E2802-CB3C-205C-8423-E1393AACCCE0}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaWaJi", "Assembly-CSharp-firstpass.csproj", "{091E2802-CB3C-205C-8423-E1393AACCCE0}"
 EndProject
-Project("{C4B538A0-555E-D08B-2D85-18311855F03A}") = "WaWaJi", "Assembly-CSharp.csproj", "{0FA39F2E-86D6-F142-25B5-9419E1969CEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaWaJi", "Assembly-CSharp.csproj", "{0FA39F2E-86D6-F142-25B5-9419E1969CEC}"
 EndProject
-Project("{C4B538A0-555E-D08B-2D85-18311855F03A}") = "WaWaJi", "Assembly-CSharp-Editor.csproj", "{7396C37B-1749-3AC8-4E83-518E0266C1C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaWaJi", "Assembly-CSharp-Editor.csproj", "{7396C37B-1749-3AC8-4E83-518E0266C1C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

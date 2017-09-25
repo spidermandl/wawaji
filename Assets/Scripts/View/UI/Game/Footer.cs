@@ -21,16 +21,18 @@ public class Footer:MonoBehaviour
 		quads = new Transform[divide+1];
 
 		float ang_unit = angle / divide;
-		GameObject prefab = (GameObject)Resources.Load ("Prefabs/foot_piece");
+		//GameObject prefab = (GameObject)Resources.Load ("Prefabs/foot_piece");
 		for (int i = 0; i <= divide; i++) {
+			//不能使用2d面片，unity会报异常
 			Transform quad = //this.pool.Spawn(prefab, Vector3.zero, Quaternion.identity,this.gameObject.transform);
-				GameObject.Instantiate (prefab).transform;
+				//GameObject.Instantiate (prefab).transform;
+				GameObject.CreatePrimitive (PrimitiveType.Cube).transform;
 			quad.localRotation = Quaternion.identity;
 			quad.parent = this.gameObject.transform;
 			quad.localPosition = Vector3.zero;
 			//quad.transform.localRotation = Quaternion.Euler (270,0,0);
 			//设置面片大小
-			quad.localScale = new Vector3 (radius*((i-divide/2)<0?i:divide-i)/divide, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 1);
+			quad.localScale = new Vector3 (radius*((i-divide/2)<0?i:divide-i)/divide, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 0.01f);
 			//quad.localScale = new Vector3 (radius*i/divide, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 1);
 			//quad.localScale = new Vector3 (radius, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 1);
 			//先移动
@@ -48,6 +50,38 @@ public class Footer:MonoBehaviour
 
 		this.gameObject.transform.Translate (Footer.initFootPos,Space.World);
 	}
+
+//	void Awake(){
+//		quads = new Transform[divide+1];
+//
+//		float ang_unit = angle / divide;
+//		GameObject prefab = (GameObject)Resources.Load ("Prefabs/foot_piece");
+//		for (int i = 0; i <= divide; i++) {
+//			Transform quad = //this.pool.Spawn(prefab, Vector3.zero, Quaternion.identity,this.gameObject.transform);
+//				GameObject.Instantiate (prefab).transform;
+//			quad.localRotation = Quaternion.identity;
+//			quad.parent = this.gameObject.transform;
+//			quad.localPosition = Vector3.zero;
+//			//quad.transform.localRotation = Quaternion.Euler (270,0,0);
+//			//设置面片大小
+//			quad.localScale = new Vector3 (radius*((i-divide/2)<0?i:divide-i)/divide, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 1);
+//			//quad.localScale = new Vector3 (radius*i/divide, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 1);
+//			//quad.localScale = new Vector3 (radius, 2*radius * Mathf.Tan (2*Mathf.PI/360 * ang_unit / 2), 1);
+//			//先移动
+//			quad.Translate (0,radius * Mathf.Sin (2*Mathf.PI/360 *ang_unit * i),radius * Mathf.Cos (2*Mathf.PI/360 *ang_unit * i),Space.Self);
+//			//后旋转
+//			quad.Rotate (-ang_unit*i, 0, 0);
+//
+//			quads [i] = quad;
+//		}
+//
+//		this.gameObject.transform.Rotate (initRotate);
+//		for (int i = 0; i <= divide; i++) {
+//			quads[i].Translate (0, -radius, 0,Space.World);
+//		}
+//
+//		this.gameObject.transform.Translate (Footer.initFootPos,Space.World);
+//	}
 
 	void Update(){
 		

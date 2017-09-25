@@ -2,12 +2,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PureMVC.Patterns.Command;
 
 /**
  * Desmond
  * 游戏抓球过程中的消息
  * */
-public class GameCommand : PureMVC.Patterns.SimpleCommand {
+public class GameCommand : SimpleCommand {
 
 	public static string COMMAND = "GAME_IN_COMMAND";
 

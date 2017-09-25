@@ -14,16 +14,16 @@ public class HomeMediator: BaseMediator {
 
 	}
 
-	public override IList<string> ListNotificationInterests()
+	public override string[] ListNotificationInterests()
 	{
-		IList<string> list = new List<string>();
+		List<string> list = new List<string>();
 		list.Add (Req_GetPrizeInfo.COMMAND);
 		list.Add (Req_UserLogout.COMMAND);
 		list.Add (Req_GetMachineInfo.COMMAND);
 		list.Add (Req_GetPrizeUserHorn.COMMAND);
 		list.Add (Req_UserRecharge.COMMAND);
 		list.Add (Req_GetMachinePrizeInfo.COMMAND);
-		return list;
+		return list.ToArray();
 	}
 
 	public override void HandleNotification(INotification notification){        

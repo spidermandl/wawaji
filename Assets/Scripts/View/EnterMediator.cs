@@ -15,9 +15,9 @@ public class EnterMediator: BaseMediator {
 		
 	}
 
-	public override IList<string> ListNotificationInterests()
+	public override string[] ListNotificationInterests()
 	{
-		IList<string> list = new List<string>();
+		List<string> list = new List<string>();
 		list.Add (Req_RegisterVcode.COMMAND);
 		list.Add (Req_UserRegister.COMMAND);
 		list.Add (Req_UserRegisterSendMsg.COMMAND);
@@ -28,7 +28,7 @@ public class EnterMediator: BaseMediator {
 		list.Add (Req_GetUserForgetPsdVcode.COMMAND);
 		list.Add (Req_UserForgetPsdSendMsg.COMMAND);
 		list.Add (Req_UserResetPsd.COMMAND);
-		return list;
+		return list.ToArray();
 	}
 
 	public override void HandleNotification(INotification notification){        

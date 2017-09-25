@@ -1,3 +1,6 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "FairyGUI/Text Brighter"
 {
 	Properties
@@ -90,7 +93,7 @@ Shader "FairyGUI/Text Brighter"
 				v2f vert (appdata_t v)
 				{
 					v2f o;
-					o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+					o.vertex = UnityObjectToClipPos(v.vertex);
 					o.color = v.color;
 
 					float2 texcoord = v.texcoord;
@@ -117,11 +120,11 @@ Shader "FairyGUI/Text Brighter"
 					o.texcoord = texcoord;
 
 					#ifdef CLIPPED
-					o.clipPos = mul(_Object2World, v.vertex).xy * _ClipBox.zw + _ClipBox.xy;
+					o.clipPos = mul(unity_ObjectToWorld, v.vertex).xy * _ClipBox.zw + _ClipBox.xy;
 					#endif
 
 					#ifdef SOFT_CLIPPED
-					o.clipPos = mul(_Object2World, v.vertex).xy * _ClipBox.zw + _ClipBox.xy;
+					o.clipPos = mul(unity_ObjectToWorld, v.vertex).xy * _ClipBox.zw + _ClipBox.xy;
 					#endif
 
 					return o;

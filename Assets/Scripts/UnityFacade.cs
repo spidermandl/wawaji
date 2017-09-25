@@ -3,19 +3,25 @@ using System.Collections;
 using UnityEngine.UI;
 using PureMVC.Interfaces;
 using System;
+using PureMVC.Patterns.Facade;
 
-public class UnityFacade : PureMVC.Patterns.Facade {
+public class UnityFacade : Facade {
 
 	private NetworkManager network;
+	static private UnityFacade m_instance;
 
 	public NetworkManager Network{
 		get{ return this.network; }
 		set{ network = value;}
 	}
 
+	protected UnityFacade(string key):base(key){
+
+	}
+
 	static UnityFacade()
 	{
-		m_instance = new UnityFacade();
+		m_instance = new UnityFacade(typeof(UnityFacade).ToString());
     }
 	 
 	// Override Singleton Factory method 
@@ -25,7 +31,7 @@ public class UnityFacade : PureMVC.Patterns.Facade {
 
 	protected override void InitializeController() {
 		base.InitializeController();
-		RegisterCommand( StartUpCommand.STARTUP, typeof(StartUpCommand)  );
+		RegisterCommand( StartUpCommand.STARTUP, ()=>(new StartUpCommand()));
 	}
 		
 	public void StartUp()

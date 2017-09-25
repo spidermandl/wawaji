@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using PureMVC.Patterns.Facade;
+using PureMVC.Patterns.Command;
 
 /// <summary>
 /// Start up command.
 /// </summary>
-public class StartUpCommand : PureMVC.Patterns.SimpleCommand {
+public class StartUpCommand : SimpleCommand {
 
 	public static string STARTUP = "UnityFacade.StartUp";
 
@@ -24,9 +26,9 @@ public class StartUpCommand : PureMVC.Patterns.SimpleCommand {
 		enter.AddComponent (typeof(UIEnterMain));
 
 		//
-		Facade.RegisterCommand (HttpReqCommand.HTTP,typeof(HttpReqCommand));
-		Facade.RegisterCommand (HttpResCommand.HTTP,typeof(HttpResCommand));
-		Facade.RegisterCommand (GameCommand.COMMAND,typeof(GameCommand));
+		Facade.RegisterCommand (HttpReqCommand.HTTP,()=>(new HttpReqCommand()));
+		Facade.RegisterCommand (HttpResCommand.HTTP,()=>(new HttpResCommand()));
+		Facade.RegisterCommand (GameCommand.COMMAND,()=>(new GameCommand()));
 
 		//版本资源更新检查
 		Req_GetUpdatePics resquest = new Req_GetUpdatePics ();

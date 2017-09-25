@@ -86,7 +86,7 @@ public class Picker : MonoBehaviour
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	void Awake(){
 		this.pool = PoolManager.Pools["WaWaJi"];
-		this.claw = this.gameObject.transform.FindChild ("claw");
+		this.claw = this.gameObject.transform.Find ("claw");
 		this.rootFoot = this.gameObject.transform.Find ("foot");
 		this.fill = this.gameObject.transform.parent.Find ("fill").gameObject;
 		this.cover = this.gameObject.transform.parent.Find ("cover").gameObject;
@@ -114,13 +114,13 @@ public class Picker : MonoBehaviour
 			if (this.legs == 3) {
 				switch (i) {
 				case 0:
-					this.foots [0].parent = this.claw.transform.FindChild ("polySurface42");
+					this.foots [0].parent = this.claw.transform.Find ("polySurface42");
 					break;
 				case 1:
-					this.foots [1].parent = this.claw.transform.FindChild ("polySurface58");
+					this.foots [1].parent = this.claw.transform.Find ("polySurface58");
 					break;
 				case 2:
-					this.foots [2].parent = this.claw.transform.FindChild ("polySurface56");
+					this.foots [2].parent = this.claw.transform.Find ("polySurface56");
 					break;
 				default:
 					break;
@@ -139,6 +139,7 @@ public class Picker : MonoBehaviour
 	}
 
 	void FixedUpdate(){
+		
 	}
 	void OnDestroy(){
 		//Destroy (GetComponent (typeof(StateMachineRunner)));
@@ -468,7 +469,7 @@ public class Picker : MonoBehaviour
 	/// </summary>
 	/// <param name="ball">Ball.</param>
 	void restorePhysics(BallBundle ball){
-		ball.Ball.transform.parent = this.gameObject.transform.parent.FindChild ("balls");//还原根节点
+		ball.Ball.transform.parent = this.gameObject.transform.parent.Find ("balls");//还原根节点
 		Rigidbody rb = ball.Ball.GetComponent<Rigidbody> ();
 		rb.useGravity = true;
 		rb.constraints = RigidbodyConstraints.None;

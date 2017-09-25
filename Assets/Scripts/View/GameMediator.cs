@@ -18,16 +18,16 @@ public class GameMediator: BaseMediator {
 
 	}
 
-	public override IList<string> ListNotificationInterests()
+	public override string[] ListNotificationInterests()
 	{
-		IList<string> list = new List<string>();
+		List<string> list = new List<string>();
 		list.Add (Req_GetMachinePrizeBallData.COMMAND);
 		list.Add (Req_MachineStartGrab.COMMAND);
 		list.Add (Req_MachineEndGrab.COMMAND);
 		list.Add (Req_UserRecharge.COMMAND);
 		list.Add (GameCommand.GameEnd.COMMAND);
 		list.Add (GameCommand.GameNoMoney.COMMAND);
-		return list;
+		return list.ToArray();
 	}
 
 	public override void HandleNotification(INotification notification){        

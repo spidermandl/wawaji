@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_3_4;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_TEXTUREID_MAP;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR;STRICTCPP_NEW_DELETE_SIGNATURES;WWW_USE_CURL;HAS_NEON_SKINNIG;UNITY_INPUT_SIMULATE_EVENTS;PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;UNITY_IOS;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;ENABLE_IL2CPP;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_3;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_IOS_NATIVE_CRASH_REPORTING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR;STRICTCPP_NEW_DELETE_SIGNATURES;HAS_NEON_SKINNIG;UNITY_GFX_USE_PLATFORM_VSYNC;UNITY_INPUT_SIMULATE_EVENTS;PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;UNITY_IOS;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;ENABLE_IL2CPP;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;UNITY_HAS_GOOGLEVR</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -36,12 +36,13 @@
     <Reference Include="System" />
     <Reference Include="System.XML" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -99,49 +100,6 @@
      <Compile Include="Assets\Scripts\Model\UserPrizeListsProxy.cs" />
      <Compile Include="Assets\Scripts\Model\UserPrizeStringsProxy.cs" />
      <Compile Include="Assets\Scripts\PhysicsMove.cs" />
-     <Compile Include="Assets\Scripts\Sample\AnimTest.cs" />
-     <Compile Include="Assets\Scripts\Sample\ApplicationFacade.cs" />
-     <Compile Include="Assets\Scripts\Sample\DeleteUserCommand.cs" />
-     <Compile Include="Assets\Scripts\Sample\EventsEnum.cs" />
-     <Compile Include="Assets\Scripts\Sample\MainUI.cs" />
-     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\CreationExample.cs" />
-     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\DeleteAndCreateInSameFrame.cs" />
-     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\InstanceHandlerDelegateExample.cs" />
-     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\OnCreatedDelegateExample.cs" />
-     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\OnSpawnedExample.cs" />
-     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ParticleWaitTest.cs" />
-     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ReallySimpleAudioSpawner.cs" />
-     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\ReallySimpleParticleSpawner.cs" />
-     <Compile Include="Assets\Scripts\Sample\PoolManagerExampleFiles\SimpleSpawner.cs" />
-     <Compile Include="Assets\Scripts\Sample\StartupCommand.cs" />
-     <Compile Include="Assets\Scripts\Sample\UGUI_MyToggle.cs" />
-     <Compile Include="Assets\Scripts\Sample\UGUI_MyToggleGroup.cs" />
-     <Compile Include="Assets\Scripts\Sample\UserForm.cs" />
-     <Compile Include="Assets\Scripts\Sample\UserFormMediator.cs" />
-     <Compile Include="Assets\Scripts\Sample\UserList.cs" />
-     <Compile Include="Assets\Scripts\Sample\UserListMediator.cs" />
-     <Compile Include="Assets\Scripts\Sample\UserList_Item.cs" />
-     <Compile Include="Assets\Scripts\Sample\UserProxy.cs" />
-     <Compile Include="Assets\Scripts\Sample\UserVO.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringLongEnter.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringLongExit.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringMonoUpdate.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeDuringUpdate.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassChangeFromLongExit.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDeactivateDuringChange.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDerivedFromSuperClass.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDetectOnCollisionEnter.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassDisabled.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteLongEnter.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteLongExitToLongEnter.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteLongExitToShortEnter.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteShortExitToLongEnter.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassOverwriteShortExitToShortEnter.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassWithBasicStates.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ClassWithHiddenMethods.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\ColorChanger.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\Helper\TimeoutHelper.cs" />
-     <Compile Include="Assets\Scripts\Sample\stateMachine\Main.cs" />
      <Compile Include="Assets\Scripts\UnityFacade.cs" />
      <Compile Include="Assets\Scripts\Util\JsonHelper.cs" />
      <Compile Include="Assets\Scripts\Util\TXTReader.cs" />
@@ -201,23 +159,34 @@
      <None Include="Assets\Resources\Shaders\FairyGUI-Image.shader" />
      <None Include="Assets\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
      <None Include="Assets\Resources\Shaders\FairyGUI-BMFont.shader" />
-     <None Include="Assets\Fonts\Arimo20.txt" />
      <None Include="Assets\读我.txt" />
      <None Include="Assets\Plugins\PathologicalGames\readme.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
  <HintPath>/Users/Desmond/Desktop/WaWaJi/Assets/Plugins/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="FairyGUI">
  <HintPath>/Users/Desmond/Desktop/WaWaJi/Assets/Plugins/FairyGUI.dll</HintPath>
- </Reference>
- <Reference Include="PureMVC.DotNET.35">
- <HintPath>/Users/Desmond/Desktop/WaWaJi/Assets/Plugins/PureMVC.DotNET.35.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>/Users/Desmond/Desktop/WaWaJi/Assets/Plugins/Json/Newtonsoft.Json.dll</HintPath>

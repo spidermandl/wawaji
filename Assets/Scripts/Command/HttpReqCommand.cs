@@ -2,12 +2,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PureMVC.Patterns.Command;
 
 /**
  * Desmond
  * http command response
  * */
-public class HttpReqCommand : PureMVC.Patterns.SimpleCommand {
+public class HttpReqCommand : SimpleCommand {
 
 	public static string HTTP = "UnityFacade.HTTP.Request";
 

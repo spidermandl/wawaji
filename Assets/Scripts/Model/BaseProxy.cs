@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 using System.Text;
-
+using PureMVC.Patterns.Proxy;
 /// <summary>
 /// 资源更新model类
 /// </summary>
-public abstract class BaseProxy : PureMVC.Patterns.Proxy {
+public abstract class BaseProxy : Proxy {
 
 	public const string NAME = "BaseProxy";
 

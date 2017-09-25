@@ -15,11 +15,11 @@ public class NoticeMediator: BaseMediator {
 
 	}
 
-	public override IList<string> ListNotificationInterests()
+	public override string[] ListNotificationInterests()
 	{
-		IList<string> list = new List<string>();
+		List<string> list = new List<string>();
 		list.Add (Req_GetNewsLists.COMMAND);
-		return list;
+		return list.ToArray();
 	}
 
 	public override void HandleNotification(INotification notification){        

@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using PureMVC.Patterns.Command;
 
-public class SocketCommand : PureMVC.Patterns.SimpleCommand {
+public class SocketCommand : SimpleCommand {
 
 	public override void Execute(PureMVC.Interfaces.INotification notification) {
 		object data = notification.Body;

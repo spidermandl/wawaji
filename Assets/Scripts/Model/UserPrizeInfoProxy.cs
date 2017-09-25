@@ -48,6 +48,8 @@ public class UserPrizeInfoProxy : BaseProxy {
 	{
 		if (meta.GetType () == typeof(Req_GetPrizeInfo.Response)) {
 			bindingData ((Req_GetPrizeInfo.Response)meta);
+		}else if (meta.GetType () == typeof(Req_UsePrize.Response)) {
+			bindingData ((Req_UsePrize.Response)meta);
 		}
 	}
 
@@ -72,6 +74,14 @@ public class UserPrizeInfoProxy : BaseProxy {
 
 		this.Items = items;
 		this.SelectedItem = null;
+	}
+
+	/// <summary>
+	/// Sets the user data.
+	/// </summary>
+	/// <param name="meta">Meta.</param>
+	public void bindingData(Req_UsePrize.Response meta){
+		
 	}
 
 }

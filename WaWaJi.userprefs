@@ -1,19 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/GameMediator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Command/StartUpCommand.cs">
     <Files>
-      <File FileName="Assets/Scripts/Main.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/AccountProxy.cs" Line="105" Column="42" />
-      <File FileName="Assets/Scripts/Model/Api/Request/Req_GetAllPrize.cs" Line="21" Column="16" />
+      <File FileName="Assets/Scripts/Main.cs" Line="9" Column="39" />
+      <File FileName="Assets/Scripts/Model/AccountProxy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_GetAllPrize.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/StateMachine/StateMachine.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/StateMachine/StateMachineRunner.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PhysicsMove.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/stateMachine/ClassDerivedFromSuperClass.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/UnityFacade.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Command/SocketCommand.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Command/StartUpCommand.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/GameMediator.cs" Line="30" Column="24" />
-      <File FileName="Assets/Scripts/View/EnterMediator.cs" Line="78" Column="3" />
+      <File FileName="Assets/Scripts/Command/StartUpCommand.cs" Line="15" Column="3" />
+      <File FileName="Assets/Scripts/View/GameMediator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/EnterMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/HomeMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/ApplicationFacade.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/EventsEnum.cs" Line="1" Column="1" />
@@ -41,7 +41,7 @@
       <File FileName="Assets/Scripts/Sample/stateMachine/ClassWithBasicStates.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Network/NetworkManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Enter/UIEnterMain.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/UIPackageManager.cs" Line="9" Column="12" />
+      <File FileName="Assets/Scripts/View/UI/UIPackageManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Enter/UIForgetWin.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Api/Request/Req_UserRegisterSendMsg.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Api/Request/Req_RegisterVcode.cs" Line="1" Column="1" />
@@ -59,14 +59,14 @@
       <File FileName="Assets/Scripts/View/UI/window/BaseWindow.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UIConnection.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UIExchange.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/window/UIProfile.cs" Line="114" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/window/UIProfile.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Enter/UIRegisterWin.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/NoticeMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Api/Request/Req_GetUpdatePics.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/Game/GameManager.cs" Line="397" Column="49" />
-      <File FileName="Assets/Scripts/View/UI/Game/Picker.cs" Line="56" Column="18" />
-      <File FileName="Assets/Scripts/View/UI/Game/UIGameMain.cs" Line="138" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/UIMain.cs" Line="48" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/Game/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/Game/Picker.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/Game/UIGameMain.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/UIMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/stateMachine/Helper/TimeoutHelper.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Sample/stateMachine/ClassChangeFromLongExit.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Game/UIConfirm.cs" Line="1" Column="1" />
@@ -74,18 +74,17 @@
       <File FileName="Assets/Scripts/Model/Api/Request/Req_GetBaseInfo.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Api/Request/Req_GetExplainAttention.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Api/Request/Req_GetMachineInfo.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/Api/Request/Req_GetMachinePrizeBallData.cs" Line="50" Column="67" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_GetMachinePrizeBallData.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Api/Request/Req_GetNewsLists.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Api/Request/Req_GetPrizeInfo.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Api/Request/Req_GetPrizeUseCoin.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Api/Request/Req_GetPrizeUserHorn.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Api/Request/Req_GetPrizeUserLists.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/Api/Request/Req_MachineStartGrab.cs" Line="50" Column="40" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_MachineStartGrab.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Notice/UINoticeMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Enter/UIDocWin.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Network/HttpClient.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Util/TXTReader.cs" Line="1" Column="1" />
-      <File FileName="Assets/json/version.txt" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Util/Util.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/UpdatesProxy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Command/HttpReqCommand.cs" Line="1" Column="1" />
@@ -94,23 +93,24 @@
       <File FileName="Assets/Scripts/Model/UserPrizeListsProxy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Home/UIHomeMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Enter/UIBaseVerifyWin.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/Prize/UIPrizeMain.cs" Line="74" Column="51" />
+      <File FileName="Assets/Scripts/View/UI/Prize/UIPrizeMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Rewards/UIRewardsMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UIExchangeConfirm.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/PrizeMediator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Command/HttpResCommand.cs" Line="73" Column="21" />
-      <File FileName="Assets/Scripts/Model/DeviceInfoProxy.cs" Line="25" Column="44" />
+      <File FileName="Assets/Scripts/Command/HttpResCommand.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/DeviceInfoProxy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UITopup.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/MachineInfoProxy.cs" Line="99" Column="15" />
-      <File FileName="Assets/Scripts/Model/Api/Request/Req_GetMachinePrizeInfo.cs" Line="57" Column="7" />
+      <File FileName="Assets/Scripts/Model/MachineInfoProxy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_GetMachinePrizeInfo.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/MachinePrizeProxy.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/Exchange/UIExchangeMain.cs" Line="72" Column="27" />
-      <File FileName="Assets/Scripts/Model/Api/Request/Request.cs" Line="128" Column="8" />
+      <File FileName="Assets/Scripts/View/UI/Exchange/UIExchangeMain.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Request.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/ExchangeMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Game/PassChecker.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/GameBallProxy.cs" Line="104" Column="32" />
-      <File FileName="Assets/Scripts/Model/Api/Request/Req_UserRecharge.cs" Line="24" Column="42" />
-      <File FileName="Assets/Scripts/View/UI/Game/RangeSphere.cs" Line="7" Column="2" />
+      <File FileName="Assets/Scripts/Model/GameBallProxy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_UserRecharge.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/Game/RangeSphere.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Command/GameCommand.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -12,7 +12,31 @@ public class BuybackComponent : BaseRewardsCom
 	public BuybackComponent (GComponent open,GComponent close,UserPrizeInfoProxy.PrizeItem item):base(open,close,item)
 	{
 		
-
+		open.GetChild ("n23").onClick.Add (() => {
+			Req_UsePrize request = new Req_UsePrize();
+			request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
+			request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
+			request.PrizeId = item.prize_id;
+			request.UserPrizeId = item.id;
+			request.UserPrizeType = 3;
+			GComboBox pay_channel = open.GetChild ("n39").asComboBox;
+			switch (pay_channel.selectedIndex) {
+			case 0://alipay
+				request.BuyBackType = 1;
+				request.BuyBackAli = open.GetChild ("n46").asTextInput.text;
+				break;
+			case 1://bank
+				request.BuyBackType = 1;
+				request.BuyBackName = open.GetChild ("n32").asTextInput.text;
+				request.BuyBackPhone = open.GetChild ("n33").asTextInput.text;
+				request.BuyBackBank = open.GetChild ("n46").asTextInput.text;
+				request.BuyBackCard = open.GetChild ("n34").asTextInput.text;
+				break;
+			default:
+				break;
+			}
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		});
 
 	}
 

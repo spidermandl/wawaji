@@ -71,6 +71,10 @@ public class HttpResCommand : PureMVC.Patterns.SimpleCommand {
 		}else if (request.command () == Req_GetPrizeUseCoin.COMMAND){
 
 			setProxy<Req_GetPrizeUseCoin,AccountProxy,Req_GetPrizeUseCoin.Response>(request);
+
+		}else if (request.command () == Req_UsePrize.COMMAND){
+
+			setProxy<Req_UsePrize,UserPrizeInfoProxy,Req_UsePrize.Response>(request);
 		}
 
 

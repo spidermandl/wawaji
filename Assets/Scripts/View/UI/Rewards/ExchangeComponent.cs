@@ -13,7 +13,15 @@ public class ExchangeComponent : BaseRewardsCom
 
 	public ExchangeComponent (GComponent open,GComponent close,UserPrizeInfoProxy.PrizeItem item):base(open,close,item)
 	{
-
+		open.GetChild ("n22").onClick.Add (() => {
+			Req_UsePrize request = new Req_UsePrize();
+			request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
+			request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
+			request.PrizeId = item.prize_id;
+			request.UserPrizeId = item.id;
+			request.UserPrizeType = 2;
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		});
 	}
 
 	public override void validateUI ()

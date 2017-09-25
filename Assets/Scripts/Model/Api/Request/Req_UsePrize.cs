@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using Newtonsoft.Json;
 
 /// <summary>
 /// 使用奖品	使用奖品,领取/兑换/回购
@@ -88,16 +89,21 @@ public class Req_UsePrize :Request {
 		[Serializable]
 		public class Data
 		{
-			public int code;//操作码，0表示成功， 1表示无效娃娃机
-			public string info;
+			public int code;//0表示成功,1表示无效使用类型，2表示已被使用
+			//public string info;
 			public string msg;
 		}
 
 	}
 
 	public override Request.Response parseLogicResponse(string json){
-		base._response = JsonUtility.FromJson<Req_UsePrize.Response>(json);
-		return base._response;
+
+		try{
+			return JsonHelper.DeserializeJsonToObject<Req_UsePrize.Response> (json);
+			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
+		}catch(JsonSerializationException e){
+			throw e;
+		}
 	}
 	public override string command ()
 	{

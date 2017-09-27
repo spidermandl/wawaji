@@ -12,10 +12,10 @@ public abstract class UIMain : MonoBehaviour
 	protected GComponent _mainView;
 	protected ClickDelegateFunc _clickFunc;
 	public delegate void ClickDelegateFunc(ClickType type);
+	public delegate void OpenAnimCallBack();
 	public delegate void CloseAnimCallBack();
 
 
-	string module_name;
 	private bool is_stacked =false;//是否保存上一个界面
 	public bool Stacked{
 		get{ return this.is_stacked;}
@@ -34,7 +34,6 @@ public abstract class UIMain : MonoBehaviour
 	 * 初始化主界面
 	 * */
 	protected void init(string module){
-		module_name = module;
 		//GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT,FairyGUI.UIContentScaler.ScreenMatchMode.MatchHeight);
 		GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT,FairyGUI.UIContentScaler.ScreenMatchMode.MatchWidth);
 		//GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT);
@@ -47,26 +46,17 @@ public abstract class UIMain : MonoBehaviour
 		UIPackageManager.getInstance ().addPackage (module);
 		//UIPackage.AddPackage (module);
 		_mainView = UIPackage.CreateObject (module, module).asCom;
-		UIInstanceManager.getInstance ().addUI (this);
 		//_mainView.SetSize (GRoot.inst.width, GRoot.inst.height);
 		GRoot.inst.AddChild (_mainView);
 
 		this.gameObject.SetActive (false);
 		MediatorPlug plug = this.gameObject.AddComponent (typeof(MediatorPlug)) as MediatorPlug;
-		plug.setClassRef (module_name+"Mediator");
-		plug.setMediatorName (module_name + "Mediator");
+		plug.setClassRef (module+"Mediator");
+		plug.setMediatorName (module + "Mediator");
 		this.gameObject.SetActive (true);
 
-		/**
-		 * 进场动画
-		 * **/
-		Transition t = _mainView.GetTransition("open");
-		if (t != null&&UIInstanceManager.getInstance ().hasStack()) {
-			t.Play(() =>
-				{
-					
-				});
-		}
+		UIInstanceManager.getInstance ().addUI (this);
+
 	}
 
 
@@ -82,7 +72,19 @@ public abstract class UIMain : MonoBehaviour
 		UIInstanceManager.getInstance ().changeUI (cls);
 
 	}
-
+	public void playOpenAnim(OpenAnimCallBack func){
+		/**
+	 	* 进场动画
+	 	* **/
+		Transition t = _mainView.GetTransition("open");
+		if (t != null) {
+			t.Play (() => {
+				func ();
+			});
+		} else {
+			func ();
+		}
+	}
 	public void playCloseAnim(CloseAnimCallBack func1,CloseAnimCallBack func2){
 		Transition t = _mainView.GetTransition("close");
 		if (t != null) {

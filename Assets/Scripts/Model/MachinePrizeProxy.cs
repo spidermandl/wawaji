@@ -14,8 +14,8 @@ public class MachinePrizeProxy : BaseProxy {
 
 	List<PrizeItem> items;
 	public List<PrizeItem> Items{
-		get{return this.items;}
-		set{ items = value;}
+		get{ return this.items; }
+		set{ this.items = value;}
 	}
 
 	public class PrizeItem{
@@ -33,7 +33,6 @@ public class MachinePrizeProxy : BaseProxy {
 
 	public MachinePrizeProxy (string proxyName)
 		: base(proxyName, null){
-
 	}
 
 	public override void bindingData (Request.Response meta)
@@ -48,7 +47,7 @@ public class MachinePrizeProxy : BaseProxy {
 	/// </summary>
 	/// <param name="meta">Meta.</param>
 	public void bindingData(Req_GetMachinePrizeInfo.Response meta){
-		List<PrizeItem> items = new List<PrizeItem> ();
+		List<PrizeItem> list = new List<PrizeItem> ();
 		foreach(Req_GetMachinePrizeInfo.Response.Info info in meta.data.info ){
 			PrizeItem i = new PrizeItem ();
 			i.machine_type_id = info.machine_type_id;//娃娃机类型ID
@@ -60,11 +59,25 @@ public class MachinePrizeProxy : BaseProxy {
 			i.coin = info.coin;//奖品金币价格
 			i.p_pic = info.p_pic;//奖品图片
 			i.b_pic = info.b_pic;//海洋球图片
-			items.Add (i);
+			list.Add (i);
 		}
-
-		this.Items = items;
+		this.items = list;
 	}
 
+	/// <summary>
+	/// Sorts the list by type identifier.
+	/// </summary>
+	/// <returns>The list by type identifier.</returns>
+	public Dictionary<int,List<PrizeItem>> sortListByTypeId(){
+		Dictionary<int,List<PrizeItem>> dic = new Dictionary<int,List<PrizeItem>> ();
+		foreach (PrizeItem i in items) {
+			if (!dic.ContainsKey (i.machine_type_id)) {
+				dic.Add (i.machine_type_id, new List<PrizeItem> ());
+			}
+			dic [i.machine_type_id].Add (i);
+		}
+
+		return dic;
+	}
 }
 

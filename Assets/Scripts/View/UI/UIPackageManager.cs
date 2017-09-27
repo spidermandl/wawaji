@@ -63,5 +63,15 @@ public class UIPackageManager
 		}
 		return null;
 	}
+
+	public string getCurrentPackage(){
+		foreach (string key in new List<string>(packageMap.Keys))
+		{
+			if (packageMap[key]==1) {//保留两个ui的资源在内存
+				return key;
+			}
+		}
+		return null;
+	}
 }
 

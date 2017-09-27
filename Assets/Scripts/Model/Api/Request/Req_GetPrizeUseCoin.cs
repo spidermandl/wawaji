@@ -40,7 +40,7 @@ public class Req_GetPrizeUseCoin :Request {
 		[Serializable]
 		public class Info
 		{
-			public int prize_coin;
+			public int prize_coin;//兑换奖品的金币,前端从用户金币中扣除
 		}
 	}
 

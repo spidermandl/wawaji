@@ -65,11 +65,13 @@ public class UIHomeMain : UIMain
 			//				_exchangeWin = new UIExchange ();
 			//			_exchangeWin.Show();
 			this.changeUIpage(typeof(UIExchangeMain),true);
+			//this.changeUIpage(typeof(UIExchangeMain));
 		});
 		//奖励界面
 		toolbar.GetChild ("n11").onClick.Add (() => {
 			//奖励界面
 			this.changeUIpage(typeof(UIPrizeMain),true);
+			//this.changeUIpage(typeof(UIPrizeMain));
 		});
 		//充值界面
 		toolbar.GetChild ("n10").onClick.Add (() => {
@@ -96,6 +98,7 @@ public class UIHomeMain : UIMain
 			_profileWin.Exchange.onClick.Add(()=>{
 				_profileWin.Hide();
 				this.changeUIpage(typeof(UIExchangeMain),true);
+				//this.changeUIpage(typeof(UIExchangeMain));
 			});
 			_profileWin.Topup.onClick.Add(()=>{
 				_profileWin.Hide();
@@ -421,7 +424,7 @@ public class UIHomeMain : UIMain
 	}
 
 	public void UpdateMachineInfo(INotification notification){
-		validateMachineInfo ();
+		//validateMachineInfo ();
 	}
 
 }

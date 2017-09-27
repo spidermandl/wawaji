@@ -49,8 +49,9 @@ public class Req_MachineEndGrab :Request {
 		[Serializable]
 		public class Info
 		{
-			public int coin;
-			public int[] ball_arr;
+			public int coin;//抓中海洋球的金币数(ball_arr为空时生效)
+			public int[] ball_arr;//抓中的海洋球ID数组(只有一个值)
+			public int user_prize_log_id;//实物奖品中奖记录(抓中实物奖品时生效)
 		}
 
 	}

@@ -32,7 +32,7 @@ public class UIExchangeMain : UIMain
 		//toolbar
 		toolbar = _mainView.GetChild ("n1").asCom;
 		toolbar.GetChild("n0").onClick.Add(() => {
-			this.changeUIpage(typeof(UIHomeMain));
+			this.changeUIpage(typeof(UIHomeMain),true);
 		});
 		//提现界面
 		toolbar.GetChild("n4").onClick.Add(() => {

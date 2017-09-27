@@ -12,8 +12,13 @@ public class UIPrize : BaseWindow
 	GObject Close {
 		get{ return this.contentPane.GetChild ("n1"); }
 	}
+	GObject Title {
+		get{ return this.contentPane.GetChild ("n21"); }
+	}
+
 	MachineInfoProxy machine_proxy;
-	List<MachinePrizeProxy.PrizeItem> items;
+	Dictionary<int, List<MachinePrizeProxy.PrizeItem>> dic;
+	MachineInfoProxy.TypeAndItem item;
 
 	public UIPrize ():base()
 	{
@@ -29,9 +34,6 @@ public class UIPrize : BaseWindow
 		GRoot.inst.modalLayer.onClick.Add (()=>{
 			this.Hide();
 		});
-		//		this.contentPane.onClick.Add ((EventContext context) => {
-		//			context.StopPropagation ();
-		//		});
 
 		Close.onClick.Add (()=>{
 			this.Hide();
@@ -41,8 +43,13 @@ public class UIPrize : BaseWindow
 		_list.SetVirtual ();
 		_list.itemRenderer = RenderListItem;
 
+		//非UI逻辑
 		machine_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
-		if (UnityFacade.GetInstance ().RetrieveProxy (MachinePrizeProxy.NAME) != null) {
+		MachinePrizeProxy prize_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachinePrizeProxy.NAME) as MachinePrizeProxy;
+		if (machine_proxy != null) {
+			item = machine_proxy.Selection;	
+		}
+		if (prize_proxy != null) {
 			validate ();
 		} else {
 			getMachinePrize ();
@@ -51,21 +58,21 @@ public class UIPrize : BaseWindow
 
 	public new void Show(){
 		base.Show ();
-		_list.RefreshVirtualList ();
+		MachinePrizeProxy prize_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachinePrizeProxy.NAME) as MachinePrizeProxy;
+		if (machine_proxy != null) {
+			item = machine_proxy.Selection;	
+		}
+		validate ();
 	}
 
 	void getMachinePrize(){
 		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
 		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
-		int mtId = 0;
-		if (machine_proxy != null) {
-			mtId = machine_proxy.Selection.machine_type_id;	
-		}
 		if (userid != 0 && token != null) {
 			Req_GetMachinePrizeInfo request = new Req_GetMachinePrizeInfo ();
 			request.UserId = userid;
 			request.Token = token;
-			request.MtId = mtId;
+			request.MtId = item.machine_type_id;
 			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 		}
 	}
@@ -77,12 +84,12 @@ public class UIPrize : BaseWindow
 	/// <param name="obj">Object.</param>
 	void RenderListItem(int index, GObject obj)
 	{
-		if(this.items!=null){
+		if(this.dic!=null){
 			//obj.asCom.GetChild ("n2").asLoader.url = this.items [index].p_pic;
-			obj.asCom.GetChild ("n3").asTextField.text = this.items [index].name;
+			obj.asCom.GetChild ("n3").asTextField.text = this.dic[item.machine_type_id][index].name;
 
 			UpdatesProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
-			proxy.loadPrizeIcon (obj.asCom.GetChild ("n2").asLoader, ""+this.items [index].prize_id);
+			proxy.loadPrizeIcon (obj.asCom.GetChild ("n2").asLoader, ""+this.dic[item.machine_type_id][index].prize_id);
 
 		}
 	}
@@ -91,9 +98,10 @@ public class UIPrize : BaseWindow
 		MachinePrizeProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachinePrizeProxy.NAME) as MachinePrizeProxy;
 		if (proxy == null)
 			return;
-		this.items = proxy.Items;
-		_list.numItems = this.items.Count;
+		this.dic = proxy.sortListByTypeId();
+		_list.numItems = this.dic[item.machine_type_id].Count;
 		_list.RefreshVirtualList ();
+		Title.asTextField.text = item.name+"可得奖品";
 	}
 
 }

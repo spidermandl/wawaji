@@ -62,4 +62,7 @@
       <item/>
     </list>
   </displayList>
+  <transition name="open">
+    <item time="0" type="XY" target="n1_ddj4" tween="true" startValue="750,0" endValue="0,0" duration="12"/>
+  </transition>
 </component>

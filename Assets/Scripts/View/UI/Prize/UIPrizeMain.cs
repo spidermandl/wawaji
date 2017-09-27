@@ -31,7 +31,7 @@ public class UIPrizeMain : UIMain
 		//toolbar
 		toolbar = _mainView.GetChild ("n1").asCom;
 		toolbar.GetChild("n0").onClick.Add(() => {
-			this.changeUIpage(typeof(UIHomeMain));
+			this.changeUIpage(typeof(UIHomeMain),true);
 		});
 		//提现界面
 		toolbar.GetChild("n4").onClick.Add(() => {
@@ -44,7 +44,8 @@ public class UIPrizeMain : UIMain
 		_list = _mainView.GetChild ("n32").asList;		
 		_list.SetVirtual ();
 		_list.itemRenderer = RenderListItem;
-
+//		_list.onClickItem.Add((EventContext context)=>{
+//		});
 		//非UI逻辑
 		validateProfile();
 
@@ -103,10 +104,9 @@ public class UIPrizeMain : UIMain
 				MachineInfoProxy.TypeAndItem m = machine_proxy.getItemById (this.items[index].machine_id);
 				obj.asCom.GetChild ("n19").asTextField.text = "" + m.name;
 				obj.asCom.GetChild ("n17").onClick.Add (()=>{
-					//PlayerPrefs.SetInt (LocalKey.SELECT_MACHINE_ID,m.machine_id);
 					machine_proxy.Selection = machine_proxy.getItemById (this.items[index].machine_id);
-					UnityFacade.GetInstance().SendNotification(UserCommand.COMMAND,new UserCommand.MachineUpdate());
-					this.changeUIpage(typeof(UIHomeMain));
+					//UnityFacade.GetInstance().SendNotification(UserCommand.COMMAND,new UserCommand.MachineUpdate());
+					this.changeUIpage(typeof(UIHomeMain),true);
 				});
 			}
 		}

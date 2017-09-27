@@ -43,6 +43,7 @@ public class Req_GetMachinePrizeBallData :Request {
 			public string b_pic;//海洋球图片
 			public int is_matter;//0金币 1实物奖品
 			public int ball_num;//占奖池内海洋球数量
+			public int refresh_time;//抓取多少次后刷新奖池
 		}
 
 	}

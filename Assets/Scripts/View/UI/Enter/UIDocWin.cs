@@ -32,6 +32,8 @@ public class UIDocWin : BaseWindow
 
 		Req_GetExplainAttention attention = new Req_GetExplainAttention ();
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,attention);
+
+		base.OnInit ();
 	}
 
 

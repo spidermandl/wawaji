@@ -38,6 +38,7 @@ public class UIHelp : BaseWindow
 //			context.StopPropagation ();
 //		});
 
+		base.OnInit ();
 	}
 
 }

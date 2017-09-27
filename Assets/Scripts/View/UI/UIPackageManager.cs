@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using FairyGUI;
 using UnityEngine;
 
+/// <summary>
+/// fairy gui package管理
+/// </summary>
 public class UIPackageManager
 {
 	Dictionary<string,int> packageMap;

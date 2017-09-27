@@ -31,14 +31,12 @@ public class UIEnterMain : UIMain
 		GLoader bg = _mainView.GetChild ("n4")as GLoader;
 		bg.url = "bg/bg_enter";
 		_mainView.GetChild("n0").onClick.Add(() => {
-			this._clickFunc(ClickType.StartGame);
 			if(_loginWin == null)
 				_loginWin = new UILoginWin();		
 			_loginWin.Show(); 
 
 			//关闭登录对话框
-			_loginWin.Close.onClick.Add (() => { 
-				this._clickFunc(ClickType.CloseLoginPanel);
+			_loginWin.Close.onClick.Add (() => {
 				_loginWin.Hide(); 
 			});
 
@@ -376,7 +374,7 @@ public class UIEnterMain : UIMain
 	public void RespondResetPsd(INotification notification){
 		_forgetWin.ValidRegister = true;
 		if (_forgetWin != null) {
-			if (((Request)notification.Body).getResponseCode () == Req_UserResetPsd.SUCCESS) {//成功注册
+			if (((Request)notification.Body).getResponseCode () == Req_UserResetPsd.SUCCESS) {//成功重设密码
 				_forgetWin.Hide();
 				_loginWin.Show ();
 				return;
@@ -431,9 +429,8 @@ public class UIEnterMain : UIMain
 	public void RespondLogin(INotification notification){
 		if (_loginWin != null) {
 			_loginWin.ValidLogin = true;
-			if (((Request)notification.Body).getResponseCode () == Base_Req_UserInfo.SUCCESS) {//成功注册
-
-				this._clickFunc(ClickType.LoginGame);
+			if (((Request)notification.Body).getResponseCode () == Base_Req_UserInfo.SUCCESS) {//成功登录
+				_loginWin.Hide();
 				this.changeUIpage(typeof(UIHomeMain));
 				return;
 			}
@@ -453,7 +450,6 @@ public class UIEnterMain : UIMain
 		Request resp = (Request)notification.Body;
 		if (resp.getResponseType () == typeof(Base_Req_UserInfo.Response)) {
 			if (((Base_Req_UserInfo.Response)resp.Resp).data.code == Req_GetBaseInfo.SUCCESS) {
-				this._clickFunc (ClickType.LoginGame);
 				this.changeUIpage (typeof(UIHomeMain));
 			}
 		}

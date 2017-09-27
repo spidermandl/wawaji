@@ -10,7 +10,6 @@ public abstract class UIMain : MonoBehaviour
 
 	protected static GameObject _3dGameObj = null;
 	protected GComponent _mainView;
-	protected ClickDelegateFunc _clickFunc;
 	public delegate void ClickDelegateFunc(ClickType type);
 	public delegate void OpenAnimCallBack();
 	public delegate void CloseAnimCallBack();
@@ -119,19 +118,21 @@ public abstract class UIMain : MonoBehaviour
 		//		System.GC.Collect();
 	}
 
-	/**
-	 * 加入单机监听回调函数
-	 * */
-	public void setClickFunc(ClickDelegateFunc func){
-		this._clickFunc = func;
-	}
-
 	/// <summary>
 	/// Moves to page.
 	/// </summary>
 	/// <param name="cls">Cls.</param>
 	public void moveToPage(Type cls){
 		changeUIpage (cls);
+	}
+
+	/// <summary>
+	/// Moves to page.
+	/// </summary>
+	/// <param name="cls">Cls.</param>
+	/// <param name="keep">If set to <c>true</c> keep.</param>
+	public void moveToPage(Type cls,bool keep){
+		changeUIpage (cls,keep);
 	}
 }
 

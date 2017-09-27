@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using FairyGUI;
 
-
-
  /// <summary>
  /// Use to load icons from asset bundle, and pool them
  /// </summary>

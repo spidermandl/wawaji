@@ -24,6 +24,8 @@ public class UIGameMain : UIMain
 	GList _list;
 	List<GameBallProxy.BallsItem> items;
 
+	SwipeGesture _gesture;
+
 	void Awake()
 	{
 		base.init ("Game");
@@ -133,9 +135,9 @@ public class UIGameMain : UIMain
 		/////////////////////////////////////////////////////////////////////////////////
 		GObject holder = _mainView.GetChild("holder");
 
-		SwipeGesture gesture = new SwipeGesture(holder);
-		gesture.onMove.Add(OnSwipeMove);
-		gesture.onEnd.Add(OnSwipeEnd);
+		_gesture = new SwipeGesture(holder);
+		_gesture.onMove.Add(OnSwipeMove);
+		_gesture.onEnd.Add(OnSwipeEnd);
 
 //		RotationGesture gesture4 = new RotationGesture(holder);
 //		gesture4.onAction.Add(OnRotate);
@@ -196,6 +198,20 @@ public class UIGameMain : UIMain
 			toolbar.GetChild("n5").asTextField.text = "" + proxy.Coin;
 		}
 	}
+
+	void setGestureValidate(bool validate){
+		if (_gesture == null)
+			return;
+		if (validate) {
+			_gesture.onMove.Add(OnSwipeMove);
+			_gesture.onEnd.Add(OnSwipeEnd);
+		}
+		else{
+			_gesture.onMove.Remove(OnSwipeMove);
+			_gesture.onEnd.Remove(OnSwipeEnd);
+		}
+	}
+
 	void OnSwipeMove(EventContext context)
 	{
 		//Debug.Log ("OnSwipeMove");
@@ -269,7 +285,10 @@ public class UIGameMain : UIMain
 			_failWin.Show ();
 			_failWin.Contiune.onClick.Add (() => {
 				_failWin.Hide();
-				this.changeUIpage(typeof(UIHomeMain));
+				if(proxy.CountDown==0)
+					this.changeUIpage(typeof(UIHomeMain));
+				else
+					proxy.CountDown = proxy.CountDown-1;
 			});
 			return;
 		}
@@ -289,7 +308,10 @@ public class UIGameMain : UIMain
 			//进入主界面
 			_confirmWin.Cancel.onClick.Add (() => { 
 				_confirmWin.Hide (); 
-				this.changeUIpage(typeof(UIHomeMain));
+				if(proxy.CountDown==0)
+					this.changeUIpage(typeof(UIHomeMain));
+				else
+					proxy.CountDown = proxy.CountDown-1;
 			});
 
 			UpdatesProxy u_proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
@@ -304,7 +326,10 @@ public class UIGameMain : UIMain
 		_coinWin.Show ();
 		_coinWin.onClick.Add (() => {
 			_coinWin.Hide();
-			this.changeUIpage(typeof(UIHomeMain));
+			if(proxy.CountDown==0)
+				this.changeUIpage(typeof(UIHomeMain));
+			else
+				proxy.CountDown = proxy.CountDown-1;
 		});
 		_coinWin.Amount.asTextField.text = ""+answer.coin;
 	}
@@ -374,6 +399,14 @@ public class UIGameMain : UIMain
 	/// <param name="notification">Notification.</param>
 	public void UpdateUserInfo(INotification notification){
 		validateProfile ();
+	}
+
+	public void EnterGameStill(INotification notification){
+		setGestureValidate (true);
+	}
+
+	public void ExitGameStill(INotification notification){
+		setGestureValidate (false);
 	}
 }
 

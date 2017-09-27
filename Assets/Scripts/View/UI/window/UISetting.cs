@@ -30,6 +30,7 @@ public class UISetting : BaseWindow
 			this.Hide();
 		});
 
+		base.OnInit ();
 	}
 //
 //	void OnClickModal(){

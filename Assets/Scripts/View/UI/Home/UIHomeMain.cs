@@ -122,10 +122,8 @@ public class UIHomeMain : UIMain
 			_prizeWin.Show();
 		});
 		//开始游戏
-		_mainView.GetChild("n11").onClick.Add(() => { 
-			this._clickFunc(ClickType.PlayGame);
+		_mainView.GetChild("n11").onClick.Add(() => {
 			enterGame();
-
 		});
 
 		_right_arrow.onClick.Add(() => { 

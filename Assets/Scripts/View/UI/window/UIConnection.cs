@@ -30,6 +30,7 @@ public class UIConnection : BaseWindow
 		//			context.StopPropagation ();
 		//		});
 
+		base.OnInit ();
 	}
 
 }

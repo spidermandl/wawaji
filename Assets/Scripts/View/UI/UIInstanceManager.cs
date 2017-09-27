@@ -5,13 +5,16 @@ using FairyGUI;
 using UnityEngine;
 
 /// <summary>
-/// User interface instance manager.
+/// 界面实例管理
 /// </summary>
 public class UIInstanceManager
 {
-	Stack<UIMain> uiStack;
-	Stack<string> logStack;
 	private static UIInstanceManager instance = null;
+
+	Stack<UIMain> uiStack;
+	Stack<string> logStack;//界面名记录
+	Dictionary<UIMain,List<BaseWindow>> uiWins;
+
 	public static UIInstanceManager getInstance(){
 		if (instance == null)
 			instance = new UIInstanceManager ();
@@ -21,6 +24,7 @@ public class UIInstanceManager
 	private UIInstanceManager (){
 		uiStack = new Stack<UIMain> ();
 		logStack = new Stack<string> ();
+		uiWins = new Dictionary<UIMain,List<BaseWindow>> ();
 	}
 	/// <summary>
 	/// Adds UI package.
@@ -59,6 +63,18 @@ public class UIInstanceManager
 		logStack.Push (cls.ToString ());
 		createObj(cls);
 
+	}
+
+	/// <summary>
+	/// Adds the window.
+	/// </summary>
+	/// <param name="win">Window.</param>
+	public void addWin(BaseWindow win){
+		UIMain current = uiStack.Peek ();
+		if (!uiWins.ContainsKey (current)) {
+			uiWins.Add (current, new List<BaseWindow> ());
+		}
+		uiWins [current].Add (win);
 	}
 
 //	public void changeUI(Type cls){
@@ -104,13 +120,6 @@ public class UIInstanceManager
 //	}
 
 
-	public bool hasStack(){
-		if (uiStack.Count > 1)
-			return true;
-		else
-			return false;
-	}
-
 	/// <summary>
 	/// 创建新UI物体
 	/// </summary>
@@ -126,6 +135,13 @@ public class UIInstanceManager
 		while (uiStack.Count > 0) {
 			UIMain ui = uiStack.Peek ();
 			uiStack.Pop ();
+			if (uiWins.ContainsKey (ui)) {
+				List<BaseWindow> wins = uiWins [ui];
+				foreach(BaseWindow w in wins){
+					w.destroyUI ();
+				}
+				uiWins.Remove (ui);
+			}
 			ui.destroyUI ();
 		}
 	}

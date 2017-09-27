@@ -82,7 +82,7 @@ public class Picker : MonoBehaviour
 		}
 	}
 	/// ////////////////////////////////////////////////////////////////////////////////////////////////
-	/// 状态机相关回调方法
+	/// monobehaviour相关回调方法
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	void Awake(){
 		this.pool = PoolManager.Pools["WaWaJi"];
@@ -148,9 +148,15 @@ public class Picker : MonoBehaviour
 	/// 状态机相关回调方法
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	public void Still_Enter(){
+		UnityFacade.GetInstance().SendNotification(GameCommand.COMMAND,new GameCommand.GameStillEnter());
 		Animator anim = this.claw.GetComponent<Animator>();
 		anim.Play ("idle");
 	}
+
+	public void Still_Exit(){
+		UnityFacade.GetInstance().SendNotification(GameCommand.COMMAND,new GameCommand.GameStillExit());
+	}
+
 	public void Seek_Enter(){
 		
 	}

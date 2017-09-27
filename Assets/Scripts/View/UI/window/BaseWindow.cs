@@ -12,6 +12,12 @@ public abstract class BaseWindow : Window
 		UIConfig.modalLayerColor = new Color (0f, 0f, 0f, 0.5f);
 	}
 
+	protected override void OnInit()
+	{
+		UIInstanceManager.getInstance ().addWin (this);
+		base.OnInit ();
+	}
+
 	override protected void DoShowAnimation()
 	{
 		this.SetScale(0.1f, 0.1f);
@@ -23,6 +29,14 @@ public abstract class BaseWindow : Window
 	{
 		this.TweenScale(new Vector2(0.1f, 0.1f), 0.3f).SetEase(Ease.OutQuad).OnComplete(this.HideImmediately);
 	}
+
+	/**
+	 * 销毁界面
+	 * */
+	public virtual void destroyUI (){
+		GRoot.inst.RemoveChild (this.contentPane);
+	}
+
 
 }
 

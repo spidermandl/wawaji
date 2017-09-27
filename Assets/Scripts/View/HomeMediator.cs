@@ -61,7 +61,7 @@ public class HomeMediator: BaseMediator {
 
 	public override void OnRegister()
 	{
-		m_home_ui.setClickFunc (clickFunc);
+		
 	}
 
 	public override void OnRemove()

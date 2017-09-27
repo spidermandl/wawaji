@@ -35,7 +35,7 @@ public class RewardsMediator: BaseMediator {
 
 	public override void OnRegister()
 	{
-		m_rewards_ui.setClickFunc (clickFunc);
+		
 	}
 
 	public override void OnRemove()

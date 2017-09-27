@@ -58,7 +58,7 @@ public class UIExchange : BaseWindow
 			this.Hide();
 		});
 
-
+		base.OnInit ();
 	}
 
 

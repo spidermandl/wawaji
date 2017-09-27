@@ -54,6 +54,8 @@ public class UIPrize : BaseWindow
 		} else {
 			getMachinePrize ();
 		}
+
+		base.OnInit ();
 	}
 
 	public new void Show(){

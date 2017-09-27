@@ -45,7 +45,7 @@ public class ExchangeMediator: BaseMediator {
 
 	public override void OnRegister()
 	{
-		m_exchange_ui.setClickFunc (clickFunc);
+		
 	}
 
 	public override void OnRemove()

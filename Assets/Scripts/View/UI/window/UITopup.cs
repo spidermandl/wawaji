@@ -71,6 +71,7 @@ public class UITopup : BaseWindow
 			m_1000.selected = false;
 		});
 
+		base.OnInit ();
 	}
 
 	public int getPayAmount(){

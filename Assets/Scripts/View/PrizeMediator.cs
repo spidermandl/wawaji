@@ -41,7 +41,7 @@ public class PrizeMediator: BaseMediator {
 
 	public override void OnRegister()
 	{
-		m_prize_ui.setClickFunc (clickFunc);
+		
 	}
 
 	public override void OnRemove()

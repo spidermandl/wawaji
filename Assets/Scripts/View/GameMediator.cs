@@ -28,6 +28,8 @@ public class GameMediator: BaseMediator {
 		list.Add (GameCommand.GameEnd.COMMAND);
 		list.Add (GameCommand.GameNoMoney.COMMAND);
 		list.Add (UserCommand.CoinUpdate.COMMAND);
+		list.Add (GameCommand.GameStillEnter.COMMAND);
+		list.Add (GameCommand.GameStillExit.COMMAND);
 		return list.ToArray();
 	}
 
@@ -54,6 +56,12 @@ public class GameMediator: BaseMediator {
 		case UserCommand.CoinUpdate.COMMAND:
 			m_game_ui.UpdateUserInfo (notification);
 			break;
+		case GameCommand.GameStillEnter.COMMAND:
+			m_game_ui.EnterGameStill (notification);
+			break;
+		case GameCommand.GameStillExit.COMMAND:
+			m_game_ui.ExitGameStill (notification);
+			break;
 		default:
 			break;
 		}
@@ -61,7 +69,7 @@ public class GameMediator: BaseMediator {
 
 	public override void OnRegister()
 	{
-		m_game_ui.setClickFunc (clickFunc);
+		
 	}
 
 	public override void OnRemove()

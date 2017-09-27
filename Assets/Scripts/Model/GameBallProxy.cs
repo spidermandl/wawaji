@@ -19,6 +19,12 @@ public class GameBallProxy : BaseProxy {
 		get{return this.num;}
 		set{ num = value;}
 	}
+	//连续抓球次数
+	int countDown;
+	public int CountDown{
+		get{return this.countDown;}
+		set{ countDown = value;}
+	}
 
 	//球的属性和分布情况
 	List<BallsItem> items;
@@ -61,6 +67,7 @@ public class GameBallProxy : BaseProxy {
 		public string b_pic;
 		public int is_matter;
 		public int ball_num;
+		public int refresh_time;
 	}
 
 	/// <summary>
@@ -108,7 +115,9 @@ public class GameBallProxy : BaseProxy {
 			b.b_pic = ball.b_pic;
 			b.is_matter = ball.is_matter;
 			b.ball_num = ball.ball_num;
+			b.refresh_time = ball.refresh_time;
 
+			this.countDown = b.refresh_time;
 			items.Add (b);
 		}
 
@@ -181,7 +190,7 @@ public class GameBallProxy : BaseProxy {
 			answer.coin = meta.data.info.coin;
 			answer.type = 1;
 			AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
-			proxy.Coin = proxy.Coin + answer.coin;
+			proxy.changeCoin (answer.coin);
 		}
 	}
 

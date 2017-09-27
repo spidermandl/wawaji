@@ -53,6 +53,7 @@ public class DeviceInfoProxy : BaseProxy {
 
 	public override void bindingData (Request.Response meta)
 	{
+		
 	}
 }
 

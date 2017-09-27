@@ -53,6 +53,7 @@ public class UILoginWin : BaseWindow
 		this.Center();
 		this.modal = true;
 
+		base.OnInit ();
 	}
 		
 

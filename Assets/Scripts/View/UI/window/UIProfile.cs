@@ -85,7 +85,7 @@ public class UIProfile : BaseWindow
 		request.Token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 
-
+		base.OnInit ();
 	}
 
 	void RenderListItem(int index, GObject obj)
@@ -101,6 +101,7 @@ public class UIProfile : BaseWindow
 						if (proxy == null) {
 							return;
 						}
+						this.Hide();
 						proxy.SelectedItem = this.items [index];
 						_ui.moveToPage(typeof(UIRewardsMain));
 					}
@@ -114,6 +115,7 @@ public class UIProfile : BaseWindow
 						if (proxy == null) {
 							return;
 						}
+						this.Hide();
 						proxy.SelectedItem = this.items [index];
 						_ui.moveToPage(typeof(UIRewardsMain));
 					}

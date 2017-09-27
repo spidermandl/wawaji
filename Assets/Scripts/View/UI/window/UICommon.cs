@@ -39,6 +39,8 @@ public class UICommon : BaseWindow
 		Yes.onClick.Add (() => {
 			this.Hide();
 		});
+
+		base.OnInit ();
 	}
 
 }

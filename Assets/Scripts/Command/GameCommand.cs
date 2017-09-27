@@ -19,6 +19,10 @@ public class GameCommand : SimpleCommand {
 			SendNotification (GameEnd.COMMAND);
 		else if (body.GetType () == typeof(GameNoMoney))
 			SendNotification (GameNoMoney.COMMAND);
+		else if (body.GetType () == typeof(GameStillEnter))
+			SendNotification (GameStillEnter.COMMAND);
+		else if (body.GetType () == typeof(GameStillExit))
+			SendNotification (GameStillExit.COMMAND);
 	}
 
 	public class GameEnd{
@@ -27,5 +31,12 @@ public class GameCommand : SimpleCommand {
 
 	public class GameNoMoney{
 		public const string COMMAND = "GAME_NO_MONEY";
+	}
+
+	public class GameStillEnter{
+		public const string COMMAND = "GAME_STILL_ENTER";
+	}
+	public class GameStillExit{
+		public const string COMMAND = "GAME_STILL_EXIT";
 	}
 }

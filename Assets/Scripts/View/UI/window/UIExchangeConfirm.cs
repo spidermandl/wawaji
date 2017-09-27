@@ -41,7 +41,7 @@ public class UIExchangeConfirm : BaseWindow
 			this.Hide();
 		});
 
-
+		base.OnInit ();
 	}
 
 	public void bindingData(PrizeSetProxy.PrizeItem item){

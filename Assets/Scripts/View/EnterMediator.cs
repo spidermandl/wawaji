@@ -71,7 +71,7 @@ public class EnterMediator: BaseMediator {
 
 	public override void OnRegister()
 	{
-		m_login_ui.setClickFunc (clickFunc);
+		
 	}
 
 	public override void OnRemove()

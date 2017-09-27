@@ -10,7 +10,7 @@ using PureMVC.Interfaces;
 public class UIExchangeMain : UIMain
 {
 	UITopup _uiTopup;
-
+	UICommon _uiTip;
 	UIExchangeConfirm _uiConfirm;
 
 	GComponent toolbar;
@@ -141,7 +141,27 @@ public class UIExchangeMain : UIMain
 	/// </summary>
 	/// <param name="notification">Notification.</param>
 	public void RespondExchangeCoinForPrize(INotification notification){
-		
+		if (_uiConfirm != null)
+			_uiConfirm.Hide ();
+		if (_uiTip == null) {
+			_uiTip = new UICommon ();
+		}
+		_uiTip.Show ();
+		_uiTip.Title.asTextField.text = "兑换结果";
+		switch (((Req_GetPrizeUseCoin)notification.Body).getResponseCode ()) {
+		case Req_GetPrizeUseCoin.SUCCESS:
+			_uiTip.Content.asTextField.text = "兑换成功";
+			break;
+		case Req_GetPrizeUseCoin.LACK_COIN:
+			_uiTip.Content.asTextField.text = "金币不足";
+			break;
+		case Req_GetPrizeUseCoin.SHORT_PRODUCT:
+			_uiTip.Content.asTextField.text = "奖品库存不足";
+			break;
+		default:
+			_uiTip.Content.asTextField.text = "兑换未能生效";
+			break;
+		}
 	}
 
 	/// <summary>

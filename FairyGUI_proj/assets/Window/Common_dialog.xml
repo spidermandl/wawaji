@@ -2,7 +2,7 @@
 <component size="504,278">
   <displayList>
     <image id="n0_upgt" name="n0" src="upgt17" xy="0,0"/>
-    <text id="n6_upgt" name="n6" xy="21,83" size="459,85" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="网络连接失败">
+    <text id="n6_upgt" name="n6" xy="21,83" size="459,85" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="内容提示">
       <relation target="n0_upgt" sidePair="width-width,top-top"/>
     </text>
     <text id="n10_lcrn" name="n10" xy="23,34" size="459,46" font="Arial Black" fontSize="30" color="#ffffff" align="center" ubb="true" autoSize="none" bold="true" singleLine="true" text="标题">

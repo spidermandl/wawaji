@@ -12,6 +12,11 @@ public class Req_GetPrizeUseCoin :Request {
 
 	new protected string _api = Req_GetPrizeUseCoin.COMMAND;
 
+	public const int SUCCESS=0;//0表示成功
+	public const int LACK_COIN=1;//,1表示金币不足
+	public const int SHORT_PRODUCT=2;//,2表示奖品库存不足,
+
+
 	int prizeId;
 	public int PrizeId{
 		get{ return this.prizeId; }
@@ -54,5 +59,17 @@ public class Req_GetPrizeUseCoin :Request {
 	public override string command ()
 	{
 		return COMMAND;
+	}
+
+	protected override string getChildMsg(){
+		if (base._response.GetType () != typeof(Response))
+			return base.getChildMsg ();
+		return ((Response)_response).data.msg;
+	}
+
+	public override int getResponseCode(){
+		if (base._response.GetType () != typeof(Response))
+			return base.getResponseCode ();
+		return ((Response)base._response).data.code;
 	}
 }

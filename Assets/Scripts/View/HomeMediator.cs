@@ -23,6 +23,8 @@ public class HomeMediator: BaseMediator {
 		list.Add (Req_GetPrizeUserHorn.COMMAND);
 		list.Add (Req_UserRecharge.COMMAND);
 		list.Add (Req_GetMachinePrizeInfo.COMMAND);
+		list.Add (UserCommand.CoinUpdate.COMMAND);
+		list.Add (UserCommand.MachineUpdate.COMMAND);
 		return list.ToArray();
 	}
 
@@ -45,6 +47,12 @@ public class HomeMediator: BaseMediator {
 			break;
 		case Req_GetMachinePrizeInfo.COMMAND:
 			m_home_ui.RespondAllPrize (notification);
+			break;
+		case UserCommand.CoinUpdate.COMMAND:
+			m_home_ui.UpdateUserInfo (notification);
+			break;
+		case UserCommand.MachineUpdate.COMMAND:
+			m_home_ui.UpdateMachineInfo (notification);
 			break;
 		default:
 			break;

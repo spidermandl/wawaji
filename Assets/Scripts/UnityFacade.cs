@@ -50,6 +50,6 @@ public class UnityFacade : Facade {
 
 	public void DisconnectMediator( string mediatorName )
 	{
-		RemoveMediator( mediatorName );
+			RemoveMediator( mediatorName );
 	}
 }

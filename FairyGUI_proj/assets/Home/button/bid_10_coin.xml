@@ -6,9 +6,12 @@
       <gearDisplay controller="button" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n2" name="n2" src="ddj4f" xy="-4,-4">
+    <image id="n2" name="n2" src="ddj4f" xy="-4,-4" visible="false">
       <gearDisplay controller="button" pages="1,2,3"/>
       <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n7_i0co" name="n7" src="i0co1c" xy="-4,-4">
+      <gearDisplay controller="button" pages="1,2,3"/>
     </image>
     <image id="n5_e8id" name="n5" src="ddj4l" xy="14,71" size="100,40">
       <relation target="n1" sidePair="bottom-bottom,center-center"/>

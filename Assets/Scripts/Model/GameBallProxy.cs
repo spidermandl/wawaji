@@ -124,6 +124,11 @@ public class GameBallProxy : BaseProxy {
 		int[] copy = new int[meta.data.info.ball_arr.Length];
 		Array.Copy (meta.data.info.ball_arr, copy, copy.Length);
 		this.ball_arr = copy;
+
+		//更新金币
+		MachineInfoProxy m_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		AccountProxy u_proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		u_proxy.changeCoin (-m_proxy.Selection.coin);
 	}
 
 	/// <summary>

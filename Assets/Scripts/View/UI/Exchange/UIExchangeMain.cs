@@ -143,5 +143,13 @@ public class UIExchangeMain : UIMain
 	public void RespondExchangeCoinForPrize(INotification notification){
 		
 	}
+
+	/// <summary>
+	/// Updates the user info.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void UpdateUserInfo(INotification notification){
+		validateProfile ();
+	}
 }
 

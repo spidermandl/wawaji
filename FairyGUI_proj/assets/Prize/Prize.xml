@@ -6,11 +6,21 @@
       <relation target="n0_upgt" sidePair="left-left,top-top"/>
     </component>
     <image id="n3_upgt" name="n3" src="upgtm" xy="-1,136" size="750,71">
-      <relation target="n0_upgt" sidePair="top-top,width-width"/>
+      <relation target="n0_upgt" sidePair="top-top,left-left"/>
+      <relation target="n0_upgt" sidePair="width-width"/>
     </image>
     <image id="n5_upgt" name="n5" src="upgtj" xy="272,146">
       <relation target="n3_upgt" sidePair="middle-middle,center-center"/>
     </image>
-    <list id="n33_dc7j" name="n32" xy="0,234" size="750,1099" overflow="scroll" scrollBarFlags="2" lineGap="20" defaultItem="ui://eap8hbzxupgt3"/>
+    <list id="n33_dc7j" name="n32" xy="0,234" size="750,1099" overflow="scroll" scrollBarFlags="2" lineGap="20" defaultItem="ui://eap8hbzxupgt3">
+      <relation target="n0_upgt" sidePair="left-left,top-top"/>
+      <relation target="n0_upgt" sidePair="bottomext-bottom,width-width"/>
+    </list>
   </displayList>
+  <transition name="open">
+    <item time="0" type="XY" target="n0_upgt" tween="true" startValue="750,0" endValue="0,0" duration="12"/>
+  </transition>
+  <transition name="close">
+    <item time="0" type="XY" target="n0_upgt" tween="true" startValue="0,0" endValue="-750,0" duration="12"/>
+  </transition>
 </component>

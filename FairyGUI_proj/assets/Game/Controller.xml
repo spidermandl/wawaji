@@ -7,16 +7,16 @@
     <image id="n1_fvaa" name="n1" src="l4t62" xy="18,0" size="713,251">
       <relation target="" sidePair="center-center,top-top"/>
     </image>
-    <component id="n2_fvaa" name="n2" src="l4t6e" xy="176,16">
+    <component id="n2_fvaa" name="n2" src="l4t6e" xy="171,-37">
       <relation target="n1_fvaa" sidePair="left-left,top-top"/>
     </component>
-    <component id="n3_fvaa" name="n3" src="l4t6a" xy="95,61">
+    <component id="n3_fvaa" name="n3" src="l4t6a" xy="64,56">
       <relation target="n1_fvaa" sidePair="left-left,top-top"/>
     </component>
-    <component id="n4_fvaa" name="n4" src="l4t6c" xy="225,61">
+    <component id="n4_fvaa" name="n4" src="l4t6c" xy="257,55">
       <relation target="n1_fvaa" sidePair="left-left,top-top"/>
     </component>
-    <component id="n5_fvaa" name="n5" src="l4t6d" xy="175,104">
+    <component id="n5_fvaa" name="n5" src="l4t6d" xy="169,127">
       <relation target="n1_fvaa" sidePair="left-left,top-top"/>
     </component>
     <component id="n6_fvaa" name="n6" src="l4t6f" xy="426,36">

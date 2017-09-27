@@ -27,6 +27,7 @@ public class NetworkManager : MonoBehaviour {
 
     void Awake() {
         Init();
+		DontDestroyOnLoad(this);
     }
 
     void Init() {

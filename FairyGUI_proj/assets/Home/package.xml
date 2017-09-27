@@ -41,6 +41,7 @@
     <component id="e8id19" name="bid_5_coin.xml" path="/button/"/>
     <component id="e8id1a" name="bid_10_coin.xml" path="/button/"/>
     <image id="ha3o1b" name="i_machine.png" path="/images/"/>
+    <image id="i0co1c" name="i_bid_frame_selected_yellow.png" path="/images/"/>
   </resources>
   <publish name="Home" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

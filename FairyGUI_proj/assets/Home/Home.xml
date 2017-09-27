@@ -27,7 +27,7 @@
     <component id="n9_ddj4" name="n9" src="ddj4z" xy="31,498" size="102,185">
       <relation target="n1_ddj4" sidePair="left-left,width-width"/>
     </component>
-    <component id="n10_ddj4" name="n10" src="ddj413" xy="508,1113">
+    <component id="n10_ddj4" name="n10" src="ddj413" xy="508,1140">
       <relation target="n14_ddj4" sidePair="top-top"/>
       <relation target="n1_ddj4" sidePair="right-right"/>
     </component>
@@ -39,19 +39,19 @@
       <relation target="n1_ddj4" sidePair="width-width,top-top"/>
       <relation target="n1_ddj4" sidePair="right-right"/>
     </component>
-    <component id="n13_ddj4" name="n13" src="ddj411" xy="625,1111">
+    <component id="n13_ddj4" name="n13" src="ddj411" xy="625,1138">
       <relation target="n14_ddj4" sidePair="top-top"/>
       <relation target="n1_ddj4" sidePair="right-right"/>
     </component>
-    <image id="n14_ddj4" name="n14" src="ddj415" xy="0,1117" size="433,69">
-      <relation target="n1_ddj4" sidePair="left-left,top-top"/>
+    <image id="n14_ddj4" name="n14" src="ddj415" xy="0,1144" size="433,69">
+      <relation target="n1_ddj4" sidePair="left-left,bottom-bottom"/>
       <relation target="n1_ddj4" sidePair="rightext-right"/>
     </image>
-    <image id="n15_ddj4" name="n15" src="ddj4r" xy="42,1138" size="35,24">
+    <image id="n15_ddj4" name="n15" src="ddj4r" xy="42,1165" size="35,24">
       <relation target="n14_ddj4" sidePair="leftext-left"/>
       <relation target="n14_ddj4" sidePair="middle-middle"/>
     </image>
-    <text id="n16_ddj4" name="n16" xy="97,1137" size="328,28" fontSize="18" color="#938cf5" leading="7" autoSize="none" singleLine="true" text="恭喜玩家叽哩哇啦135********获得1币场iPhone aaaaaaaaaaa">
+    <text id="n16_ddj4" name="n16" xy="97,1164" size="328,28" fontSize="18" color="#938cf5" leading="7" autoSize="none" singleLine="true" text="恭喜玩家叽哩哇啦135********获得1币场iPhone aaaaaaaaaaa">
       <relation target="n14_ddj4" sidePair="leftext-left,rightext-right"/>
       <relation target="n14_ddj4" sidePair="middle-middle"/>
     </text>

@@ -29,6 +29,7 @@ public class StartUpCommand : SimpleCommand {
 		Facade.RegisterCommand (HttpReqCommand.HTTP,()=>(new HttpReqCommand()));
 		Facade.RegisterCommand (HttpResCommand.HTTP,()=>(new HttpResCommand()));
 		Facade.RegisterCommand (GameCommand.COMMAND,()=>(new GameCommand()));
+		Facade.RegisterCommand (UserCommand.COMMAND, () => (new UserCommand ()));
 
 		//版本资源更新检查
 		Req_GetUpdatePics resquest = new Req_GetUpdatePics ();

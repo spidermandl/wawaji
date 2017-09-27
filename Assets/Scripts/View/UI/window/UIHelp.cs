@@ -13,7 +13,9 @@ public class UIHelp : BaseWindow
 	GObject Online{
 		get{ return this.contentPane.GetChild ("n4"); }
 	}
-
+	GObject Close{
+		get{ return this.contentPane.GetChild ("n9"); }
+	}
 
 	public UIHelp ():base()
 	{
@@ -28,6 +30,9 @@ public class UIHelp : BaseWindow
 		//this.SetPosition (this.position.x, 0, this.position.z);
 		GRoot.inst.modalLayer.onClick.Add (()=>{
 			this.Hide();
+		});
+		Close.onClick.Add (() => {
+			this.Hide ();
 		});
 //		this.contentPane.onClick.Add ((EventContext context) => {
 //			context.StopPropagation ();

@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="603,94">
+<component size="603,96">
   <displayList>
-    <loader id="n6_rsk7" name="n6" xy="37,4" size="85,86" url="http://120.55.67.196/pApi/resources/image/user/default.png" align="center" vAlign="middle" fill="scale">
+    <graph id="n7_i0co" name="n7" xy="20,92" size="564,3" type="rect" lineColor="#00ff0000"/>
+    <loader id="n6_rsk7" name="n6" xy="37,1" size="85,85" url="http://120.55.67.196/pApi/resources/image/user/default.png" align="center" vAlign="middle" fill="scale">
       <relation target="n1_n1c3" sidePair="left-left,top-top"/>
       <relation target="n1_n1c3" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
-    <image id="n2_n1c3" name="n2" src="n1c313" xy="38,94">
-      <relation target="" sidePair="bottom-bottom,width-width"/>
-    </image>
-    <text id="n3_n1c3" name="n3" xy="159,30" size="204,38" fontSize="30" color="#c6bff2" autoSize="none" singleLine="true" text="获得Iphone 7">
-      <relation target="" sidePair="left-left,middle-middle"/>
+    <text id="n3_n1c3" name="n3" xy="158,26" size="204,38" fontSize="30" color="#c6bff2" autoSize="none" singleLine="true" text="获得Iphone 7">
+      <relation target="n1_n1c3" sidePair="left-left,top-top"/>
     </text>
-    <text id="n5_n1c3" name="n5" xy="372,29" size="229,38" fontSize="30" color="#c6bff2" autoSize="none" singleLine="true" text="135****8888">
-      <relation target="" sidePair="rightext-right,middle-middle"/>
-      <relation target="n3_n1c3" sidePair="leftext-right"/>
+    <text id="n5_n1c3" name="n5" xy="371,25" size="230,38" fontSize="30" color="#c6bff2" autoSize="none" singleLine="true" text="135****8888">
+      <relation target="n3_n1c3" sidePair="rightext-right,middle-middle"/>
+      <relation target="n3_n1c3" sidePair="top-top,left-left"/>
+      <relation target="" sidePair="rightext-right"/>
     </text>
-    <image id="n1_n1c3" name="n1" src="n1c317" xy="34,1" size="94,94" color="#fafafa">
-      <relation target="" sidePair="height-height,left-left"/>
+    <image id="n1_n1c3" name="n1" src="n1c317" xy="34,-2" size="94,96" color="#fafafa">
+      <relation target="" sidePair="top-top,left-left"/>
     </image>
   </displayList>
 </component>

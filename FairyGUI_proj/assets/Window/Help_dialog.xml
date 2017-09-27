@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="504,278">
+<component size="504,600">
   <displayList>
-    <image id="n0_upgt" name="n0" src="upgt17" xy="0,0"/>
+    <image id="n0_upgt" name="n0" src="upgt17" xy="0,0">
+      <relation target="" sidePair="top-top,left-left"/>
+    </image>
     <image id="n2_upgt" name="n2" src="upgt16" xy="45,81">
       <relation target="n0_upgt" sidePair="left-left,top-top"/>
     </image>
@@ -27,5 +29,8 @@
       <relation target="n3_upgt" sidePair="leftext-right,top-top"/>
       <relation target="n4_upgt" sidePair="rightext-left"/>
     </text>
+    <loader id="n9_q8e7" name="n9" xy="0,279" size="504,322">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </loader>
   </displayList>
 </component>

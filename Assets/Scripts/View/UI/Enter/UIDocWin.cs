@@ -9,10 +9,10 @@ public class UIDocWin : BaseWindow
 	public GObject Close {
 		get{ return this.contentPane.GetChild ("n25"); }
 	}
-	public GObject Instruction {
+	public GObject Awareness {
 		get{ return this.contentPane.GetChild ("n24"); }
 	}
-	public GObject Awareness {
+	public GObject Instruction {
 		get{ return this.contentPane.GetChild ("n27"); }
 	}
 	public UIDocWin ():base()

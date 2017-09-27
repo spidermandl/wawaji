@@ -19,6 +19,7 @@ public class PrizeMediator: BaseMediator {
 		List<string> list = new List<string>();
 		list.Add (Req_GetMachinePrizeInfo.COMMAND);
 		list.Add (Req_UserRecharge.COMMAND);
+		list.Add (UserCommand.CoinUpdate.COMMAND);
 		return list.ToArray();
 	}
 
@@ -29,6 +30,9 @@ public class PrizeMediator: BaseMediator {
 			break;
 		case Req_UserRecharge.COMMAND:
 			m_prize_ui.RespondUserRecharge (notification);
+			break;
+		case UserCommand.CoinUpdate.COMMAND:
+			m_prize_ui.UpdateUserInfo (notification);
 			break;
 		default:
 			break;

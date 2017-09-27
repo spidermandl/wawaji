@@ -8,9 +8,19 @@ public abstract class UIMain : MonoBehaviour
 	protected const int UI_WIDTH = 750;
 	protected const int UI_HEIGHT = 1206;
 
+	protected static GameObject _3dGameObj = null;
 	protected GComponent _mainView;
 	protected ClickDelegateFunc _clickFunc;
 	public delegate void ClickDelegateFunc(ClickType type);
+	public delegate void CloseAnimCallBack();
+
+
+	string module_name;
+	private bool is_stacked =false;//是否保存上一个界面
+	public bool Stacked{
+		get{ return this.is_stacked;}
+		set{ this.is_stacked = value;}
+	}
 
 	public enum ClickType
 	{
@@ -24,6 +34,7 @@ public abstract class UIMain : MonoBehaviour
 	 * 初始化主界面
 	 * */
 	protected void init(string module){
+		module_name = module;
 		//GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT,FairyGUI.UIContentScaler.ScreenMatchMode.MatchHeight);
 		GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT,FairyGUI.UIContentScaler.ScreenMatchMode.MatchWidth);
 		//GRoot.inst.SetContentScaleFactor (UI_WIDTH,UI_HEIGHT);
@@ -36,25 +47,54 @@ public abstract class UIMain : MonoBehaviour
 		UIPackageManager.getInstance ().addPackage (module);
 		//UIPackage.AddPackage (module);
 		_mainView = UIPackage.CreateObject (module, module).asCom;
+		UIInstanceManager.getInstance ().addUI (this);
 		//_mainView.SetSize (GRoot.inst.width, GRoot.inst.height);
 		GRoot.inst.AddChild (_mainView);
 
 		this.gameObject.SetActive (false);
 		MediatorPlug plug = this.gameObject.AddComponent (typeof(MediatorPlug)) as MediatorPlug;
-		plug.setClassRef (module+"Mediator");
-		plug.setMediatorName (module + "Mediator");
+		plug.setClassRef (module_name+"Mediator");
+		plug.setMediatorName (module_name + "Mediator");
 		this.gameObject.SetActive (true);
+
+		/**
+		 * 进场动画
+		 * **/
+		Transition t = _mainView.GetTransition("open");
+		if (t != null&&UIInstanceManager.getInstance ().hasStack()) {
+			t.Play(() =>
+				{
+					
+				});
+		}
+	}
+
+
+	protected void changeUIpage(Type cls){
+		changeUIpage (cls, false);
 	}
 
 	/**
 	 * 切换界面
 	 * */
-	protected void changeUIpage(Type cls){
-		destroyUI ();
-		GameObject obj = new GameObject(cls.ToString());
-		obj.AddComponent(cls);
+	protected void changeUIpage(Type cls,bool keep){
+		this.is_stacked = keep;
+		UIInstanceManager.getInstance ().changeUI (cls);
+
 	}
 
+	public void playCloseAnim(CloseAnimCallBack func1,CloseAnimCallBack func2){
+		Transition t = _mainView.GetTransition("close");
+		if (t != null) {
+			t.Play(() =>
+				{	
+					//删除本界面
+					func1();
+				});
+			return;
+		} 
+		func2 ();
+	}
 	/// <summary>
 	/// Jumps to previous.
 	/// </summary>
@@ -67,13 +107,14 @@ public abstract class UIMain : MonoBehaviour
 	/**
 	 * 销毁界面回调
 	 * */
-	protected virtual void destroyUI (){
-		GRoot.inst.RemoveChildren ();
+	public virtual void destroyUI (){
+		GRoot.inst.RemoveChild (_mainView);
+		//GRoot.inst.RemoveChildren ();
 		Destroy (this.gameObject);//销毁自身脚本
-//      UIPackage.RemovePackage(this.ui_module);
-//		UIPackage.RemoveAllPackages();
-//		Resources.UnloadUnusedAssets();
-//		System.GC.Collect();
+		//      UIPackage.RemovePackage(this.ui_module);
+		//		UIPackage.RemoveAllPackages();
+		//		Resources.UnloadUnusedAssets();
+		//		System.GC.Collect();
 	}
 
 	/**

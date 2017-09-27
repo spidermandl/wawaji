@@ -8,14 +8,14 @@
       <relation target="n1_lrqt" sidePair="top-top,left-left"/>
     </component>
     <image id="n3_lrqt" name="n3" src="lrqt9" xy="1,141" size="750,71">
-      <relation target="n1_lrqt" sidePair="top-top,width-width"/>
+      <relation target="n1_lrqt" sidePair="top-top,left-left"/>
     </image>
     <image id="n4_lrqt" name="n4" src="lrqta" xy="283,152">
       <relation target="n3_lrqt" sidePair="middle-middle,center-center"/>
     </image>
     <list id="n6_lrqt" name="n6" xy="14,258" size="718,1076" layout="pagination" overflow="scroll" lineGap="20" colGap="15" lineItemCount="3" lineItemCount2="3" defaultItem="ui://pfm7u6g7lrqtg">
-      <relation target="n1_lrqt" sidePair="bottomext-bottom,width-width"/>
-      <relation target="n4_lrqt" sidePair="top-top"/>
+      <relation target="n1_lrqt" sidePair="bottomext-bottom,left-left"/>
+      <relation target="n1_lrqt" sidePair="top-top,width-width"/>
       <item/>
       <item/>
       <item/>
@@ -27,4 +27,10 @@
       <item/>
     </list>
   </displayList>
+  <transition name="open">
+    <item time="0" type="XY" target="n1_lrqt" tween="true" startValue="751,0" endValue="0,0" duration="12"/>
+  </transition>
+  <transition name="close">
+    <item time="0" type="XY" target="n1_lrqt" tween="true" startValue="0,0" endValue="-750,0" duration="12"/>
+  </transition>
 </component>

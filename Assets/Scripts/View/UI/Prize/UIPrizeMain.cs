@@ -62,15 +62,10 @@ public class UIPrizeMain : UIMain
 	void getMachinePrize(){
 		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
 		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
-		int mtId = 0;
-		if (machine_proxy != null) {
-			mtId = machine_proxy.Selection.machine_type_id;	
-		}
 		if (userid != 0 && token != null) {
 			Req_GetMachinePrizeInfo request = new Req_GetMachinePrizeInfo ();
 			request.UserId = userid;
 			request.Token = token;
-			request.MtId = mtId;
 			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 		}
 	}
@@ -106,11 +101,12 @@ public class UIPrizeMain : UIMain
 
 			if (machine_proxy != null) {
 				MachineInfoProxy.TypeAndItem m = machine_proxy.getItemById (this.items[index].machine_id);
-				machine_proxy.Selection = m;
 				obj.asCom.GetChild ("n19").asTextField.text = "" + m.name;
 				obj.asCom.GetChild ("n17").onClick.Add (()=>{
 					//PlayerPrefs.SetInt (LocalKey.SELECT_MACHINE_ID,m.machine_id);
-					this.changeUIpage(typeof(UIGameMain));
+					machine_proxy.Selection = machine_proxy.getItemById (this.items[index].machine_id);
+					UnityFacade.GetInstance().SendNotification(UserCommand.COMMAND,new UserCommand.MachineUpdate());
+					this.changeUIpage(typeof(UIHomeMain));
 				});
 			}
 		}
@@ -134,9 +130,16 @@ public class UIPrizeMain : UIMain
 	/// <param name="notification">Notification.</param>
 	public void RespondUserRecharge(INotification notification){
 		if (_uiTopup != null) {
-			validateProfile ();
 			_uiTopup.Hide ();
 		}
+	}
+
+	/// <summary>
+	/// Updates the user info.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void UpdateUserInfo(INotification notification){
+		validateProfile ();
 	}
 }
 

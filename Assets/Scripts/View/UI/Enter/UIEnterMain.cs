@@ -319,8 +319,8 @@ public class UIEnterMain : UIMain
 	void RenderListItem(int index, GObject obj)
 	{
 		if (this.records != null) {
-			obj.asCom.GetChild ("n3").asTextField.text = this.records [index].name;
-			obj.asCom.GetChild ("n5").asTextField.text = this.records [index].phone;
+			obj.asCom.GetChild ("n3").asTextField.text = "获得"+this.records [index].name;
+			obj.asCom.GetChild ("n5").asTextField.text = this.records [index].user_name;
 			//obj.asCom.GetChild ("n6").asLoader.url = this.records [index].pic;
 
 			UpdatesProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;

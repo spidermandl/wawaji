@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="127,122" extention="Button">
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="3"/>
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="1"/>
   <displayList>
     <image id="n1" name="n1" src="ddj4g" xy="0,0" color="#fafafa">
       <gearDisplay controller="button" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n2" name="n2" src="ddj4f" xy="-4,-4">
+    <image id="n2" name="n2" src="ddj4f" xy="-4,-4" visible="false">
       <gearDisplay controller="button" pages="1,2,3"/>
       <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_i0co" name="n3" src="i0co1c" xy="-4,-4">
+      <gearDisplay controller="button" pages="1,2,3"/>
     </image>
   </displayList>
   <Button mode="Check"/>

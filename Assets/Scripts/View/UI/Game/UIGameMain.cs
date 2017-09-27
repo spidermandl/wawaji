@@ -34,10 +34,11 @@ public class UIGameMain : UIMain
 	void Start(){
 
 		////获取游戏3d场景对象，以及游戏管理对象///////////////////////////////////////////////
-		root = GameObject.Find("3dGame");
+		root = UIMain._3dGameObj;//GameObject.Find("3dGame");
 		if (root == null) {
 			root = GameObject.Instantiate ((GameObject)Resources.Load ("Prefabs/3dGame")as GameObject);
 			root.name = "3dGame";
+			UIMain._3dGameObj = root;
 		}
 		root.SetActive (true);
 		if (root.GetComponent (typeof(GameManager)) != null) {
@@ -183,7 +184,7 @@ public class UIGameMain : UIMain
     /// <summary>
 	/// 销毁界面回调
     /// </summary>
-	protected override void destroyUI (){
+	public override void destroyUI (){
 		base.destroyUI ();
 		gameManager.inactive ();
 		root.SetActive (false);
@@ -363,9 +364,16 @@ public class UIGameMain : UIMain
 	/// <param name="notification">Notification.</param>
 	public void RespondUserRecharge(INotification notification){
 		if (_topupWin != null) {
-			validateProfile ();
 			_topupWin.Hide ();
 		}
+	}
+
+	/// <summary>
+	/// Updates the user info.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void UpdateUserInfo(INotification notification){
+		validateProfile ();
 	}
 }
 

@@ -25,7 +25,8 @@ public class UICommon : BaseWindow
 	protected override void OnInit()
 	{
 		this.contentPane = UIPackage.CreateObject("Window", "Common_dialog").asCom;
-		this.Center();
+//		this.Center();
+//		this.SetPosition (this.position.x, this.position.y + 10, this.position.z);
 		this.modal = true;
 		//this.SetPosition (this.position.x, 0, this.position.z);
 		GRoot.inst.modalLayer.onClick.Add (()=>{

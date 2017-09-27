@@ -27,6 +27,7 @@ public class GameMediator: BaseMediator {
 		list.Add (Req_UserRecharge.COMMAND);
 		list.Add (GameCommand.GameEnd.COMMAND);
 		list.Add (GameCommand.GameNoMoney.COMMAND);
+		list.Add (UserCommand.CoinUpdate.COMMAND);
 		return list.ToArray();
 	}
 
@@ -49,6 +50,9 @@ public class GameMediator: BaseMediator {
 			break;
 		case GameCommand.GameNoMoney.COMMAND:
 			m_game_ui.CantStart (notification);
+			break;
+		case UserCommand.CoinUpdate.COMMAND:
+			m_game_ui.UpdateUserInfo (notification);
 			break;
 		default:
 			break;

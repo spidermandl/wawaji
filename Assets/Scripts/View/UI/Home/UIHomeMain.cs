@@ -17,10 +17,13 @@ public class UIHomeMain : UIMain
 	UIProfile _profileWin;//
 	UIPrize _prizeWin;//
 
-	GTextField _horn;
 
-	GComponent toolbar;
+
+	GComponent toolbar;	
+	GTextField _horn;
+	GTextField _coin;
 	GButton b_coin_1,b_coin_5,b_coin_10;
+	GComponent _left_arrow,_right_arrow;
 	MachineInfoProxy.TypeAndItem[] machine_data;
 
 	void Awake()
@@ -47,25 +50,26 @@ public class UIHomeMain : UIMain
 		b_coin_1 = _mainView.GetChild ("n4") as GButton;
 		b_coin_5 = _mainView.GetChild ("n5") as GButton;
 		b_coin_10 = _mainView.GetChild ("n6") as GButton;
-		initCoin ();
-		b_coin_1.onChanged.Add(bindData);
-		b_coin_5.onChanged.Add(bindData);
-		b_coin_10.onChanged.Add(bindData);
-		bindData ();
+		_left_arrow = _mainView.GetChild("n9").asCom;
+		_right_arrow = _mainView.GetChild ("n8").asCom;
+		b_coin_1.onChanged.Add(bindMachineData);
+		b_coin_5.onChanged.Add(bindMachineData);
+		b_coin_10.onChanged.Add(bindMachineData);
 
 		toolbar = _mainView.GetChild ("n3").asCom;
+		_coin = toolbar.GetChild ("n13").asTextField;
 		//提现界面
 		toolbar.GetChild("n12").onClick.Add(() => {
 			//提现界面
 			//			if(_exchangeWin == null)
 			//				_exchangeWin = new UIExchange ();
 			//			_exchangeWin.Show();
-			this.changeUIpage(typeof(UIExchangeMain));
+			this.changeUIpage(typeof(UIExchangeMain),true);
 		});
 		//奖励界面
 		toolbar.GetChild ("n11").onClick.Add (() => {
 			//奖励界面
-			this.changeUIpage(typeof(UIPrizeMain));
+			this.changeUIpage(typeof(UIPrizeMain),true);
 		});
 		//充值界面
 		toolbar.GetChild ("n10").onClick.Add (() => {
@@ -91,7 +95,7 @@ public class UIHomeMain : UIMain
 			});
 			_profileWin.Exchange.onClick.Add(()=>{
 				_profileWin.Hide();
-				this.changeUIpage(typeof(UIExchangeMain));
+				this.changeUIpage(typeof(UIExchangeMain),true);
 			});
 			_profileWin.Topup.onClick.Add(()=>{
 				_profileWin.Hide();
@@ -121,15 +125,15 @@ public class UIHomeMain : UIMain
 
 		});
 
-		_mainView.GetChild("n8").onClick.Add(() => { 
+		_right_arrow.onClick.Add(() => { 
 			this.ScrollToNext(1);
 
 		});
-		_mainView.GetChild("n9").onClick.Add(() => { 
+		_left_arrow.onClick.Add(() => { 
 			this.ScrollToNext(-1);
 
 		});
-		_mainView.GetChild("n13").onClick.Add(() => { 
+		_mainView.GetChild ("n13").onClick.Add(() => {
 			if(_settingWin==null)
 				_settingWin = new UISetting();
 			_settingWin.Show();
@@ -143,8 +147,15 @@ public class UIHomeMain : UIMain
 		});
 
 		//非ui逻辑
+		//machine related
+		updateCoinSelection ();
+		bindMachineData ();
+		selectMachine ();
+		//http
 		getMachineInfo ();
+		getHornList ();
 		validateProfile ();
+
 		UpdatesProxy u_proxy = UnityFacade.GetInstance().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
 		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
 		u_proxy.loadPureIcon (toolbar.GetChild ("n14").asLoader,proxy.Pic);//头像
@@ -153,27 +164,10 @@ public class UIHomeMain : UIMain
 	void Update(){
 	}
 
-	/// <summary>
-	///http 请求 machine info
-	/// </summary>
-	void getMachineInfo(){
-		if (UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) != null) {//数据已经存在
-			return;
-		}
-		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
-		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
-		if (userid != 0 && token != null) {
-			Req_GetMachineInfo request = new Req_GetMachineInfo ();
-			request.UserId = userid;
-			request.Token = token;
-			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
-		}
-	}
-
 	void validateProfile(){
 		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
 		if (proxy != null) {
-			toolbar.GetChild ("n13").asTextField.text = "" + proxy.Coin;
+			_coin.text = "" + proxy.Coin;
 			toolbar.GetChild ("n14").asLoader.url = proxy.Pic;
 		}
 	}
@@ -181,8 +175,10 @@ public class UIHomeMain : UIMain
 	/// http请求hron list
 	/// </summary>
 	void getHornList(){
-		if (UnityFacade.GetInstance ().RetrieveProxy (UserPrizeStringProxy.NAME) != null)
+		if (UnityFacade.GetInstance ().RetrieveProxy (UserPrizeStringProxy.NAME) != null) {
+			StartCoroutine (playString());
 			return;
+		}
 		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
 		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
 		if (machine_data != null) {
@@ -197,11 +193,44 @@ public class UIHomeMain : UIMain
 		}
 
 	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// Machine相关调用
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// <summary>
+	///http 请求 machine info
+	/// </summary>
+	void getMachineInfo(){
+		if (UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) != null) {//数据已经存在
+			validateMachineInfo();
+			return;
+		}
+		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
+		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
+		if (userid != 0 && token != null) {
+			Req_GetMachineInfo request = new Req_GetMachineInfo ();
+			request.UserId = userid;
+			request.Token = token;
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
+		}
+	}
+
+	void validateMachineInfo(){
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		if (proxy.Selection == null) {
+			bindMachineData ();
+			return;
+		}
+		MachineInfoProxy.TypeAndItem item = proxy.Selection;
+		PlayerPrefs.SetInt (LocalKey.SELECT_COIN_GAME,item.coin);
+		updateCoinSelection ();
+		bindMachineData ();
+		selectMachine ();
+	}
 
 	/// <summary>
 	/// Inits the coin.
 	/// </summary>
-	void initCoin(){
+	void updateCoinSelection(){
 		int coin = PlayerPrefs.GetInt (LocalKey.SELECT_COIN_GAME);
 		if (coin == 1)
 			b_coin_1.selected = true;
@@ -216,7 +245,7 @@ public class UIHomeMain : UIMain
 	/// <summary>
 	/// 绑定数据
 	/// </summary>
-	void bindData(){
+	void bindMachineData(){
 		int coin = 1;
 		if (b_coin_1.selected)
 			coin = 1;
@@ -235,33 +264,27 @@ public class UIHomeMain : UIMain
 			_list.numItems = machine_data.Length;
 			_list.RefreshVirtualList ();
 		}
+
 	}
-	/// <summary>
-	/// 进入游戏
-	/// </summary>
-	void enterGame(){
-		this.changeUIpage(typeof(UIGameMain));
+	void selectMachine(){
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		//更新列表
+		if (proxy!=null && proxy.Selection != null) {
+			int index = 0;
+			foreach (MachineInfoProxy.TypeAndItem i in machine_data) {
+				if (i.machine_id == proxy.Selection.machine_id) {
+					ScrollToNext (index - item_index);
+					break;
+				}
+				index++;
+			}
+		} else {
+			ScrollToNext (0);
+		}
 	}
 
 	void DoSpecialEffect()
 	{
-		//change the scale according to the distance to middle
-		//		float midX = _list.scrollPane.posX + _list.viewWidth / 2;
-		//		int cnt = _list.numChildren;
-		//		for (int i = 0; i < cnt; i++)
-		//		{
-		//			GObject obj = _list.GetChildAt(i);
-		//			float dist = Mathf.Abs(midX - obj.x - obj.width / 2);
-		//			if (dist > obj.width) //no intersection
-		//				obj.SetScale(1, 1);
-		//			else
-		//			{
-		//				float ss = 1 + (1 - dist / obj.width) * 0.24f;
-		//				obj.SetScale(ss, ss);
-		//			}
-		//		}
-
-		//_mainView.GetChild("n3").text = "" + ((_list.GetFirstChildInView() + 1) % _list.numItems);
 	}
 
 	void RenderListItem(int index, GObject obj)
@@ -280,6 +303,29 @@ public class UIHomeMain : UIMain
 			_list.ScrollToView (index, true);
 			item_index = index;
 		}
+
+		//箭头显示控制
+		if (item_index == 0) {
+			_left_arrow.visible = false;
+			_right_arrow.visible = true;
+		} else if (item_index == (_list.numItems - 1)) {
+			_left_arrow.visible = true;
+			_right_arrow.visible = false;
+		} else {
+			_left_arrow.visible = true;
+			_right_arrow.visible = true;
+		}
+	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// /// /// /// /// ///
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	/// <summary>
+	/// 进入游戏
+	/// </summary>
+	void enterGame(){
+		this.changeUIpage(typeof(UIGameMain));
 	}
 
 	/**
@@ -332,7 +378,8 @@ public class UIHomeMain : UIMain
 	/// </summary>
 	/// <param name="notification">Notification.</param>
 	public void RespondMachineInfo(INotification notification){
-		bindData ();
+		bindMachineData ();
+		selectMachine ();
 		getHornList ();
 	}
 
@@ -350,7 +397,6 @@ public class UIHomeMain : UIMain
 	/// <param name="notification">Notification.</param>
 	public void RespondUserRecharge(INotification notification){
 		if (_topupWin != null) {
-			validateProfile ();
 			_topupWin.Hide ();
 		}
 	}
@@ -364,5 +410,19 @@ public class UIHomeMain : UIMain
 			_prizeWin.validate ();
 		}
 	}
+
+	/// <summary>
+	/// Updates the user info.
+	/// </summary>
+	/// <param name="notification">Notification.</param>
+	public void UpdateUserInfo(INotification notification){
+		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		_coin.text = "" + proxy.Coin;
+	}
+
+	public void UpdateMachineInfo(INotification notification){
+		validateMachineInfo ();
+	}
+
 }
 

@@ -100,6 +100,8 @@ public class AccountProxy : BaseProxy {
 		this.Coin = meta.data.info.coin;
 		this.Uuid = meta.data.info.uuid;
 		this.Token = meta.data.info.token;
+
+		UnityFacade.GetInstance().SendNotification(UserCommand.COMMAND,new UserCommand.CoinUpdate());
 	}
 
 	/// <summary>
@@ -108,7 +110,7 @@ public class AccountProxy : BaseProxy {
 	/// <param name="meta">Meta.</param>
 	public void bindingData(Req_UserRecharge.Response meta){
 		if(meta.data.code == 0){
-			this.coin += ((Req_UserRecharge)meta.Req).Amount;
+			changeCoin (((Req_UserRecharge)meta.Req).Amount);
 		}
 	}
 
@@ -118,8 +120,13 @@ public class AccountProxy : BaseProxy {
 	/// <param name="meta">Meta.</param>
 	public void bindingData(Req_GetPrizeUseCoin.Response meta){
 		if(meta.data.code == 0){
-			this.coin -= meta.data.info.prize_coin;
+			changeCoin (-meta.data.info.prize_coin);
 		}
+	}
+
+	public void changeCoin(int amount){
+		this.coin += amount;
+		UnityFacade.GetInstance().SendNotification(UserCommand.COMMAND,new UserCommand.CoinUpdate());
 	}
 
 }

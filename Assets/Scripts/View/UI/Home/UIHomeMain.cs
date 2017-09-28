@@ -382,6 +382,8 @@ public class UIHomeMain : UIMain
 		bindMachineData ();
 		selectMachine ();
 		getHornList ();
+
+		this.moveToPage (typeof(UIPrizeMain), true);
 	}
 
 	/// <summary>

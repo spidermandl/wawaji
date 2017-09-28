@@ -215,15 +215,16 @@ public class UpdatesProxy : BaseProxy {
 	public void loadPureIcon(GLoader loader,string url){
 		Uri uri = new Uri (url);
 
-		if (!memVersion.raw.ContainsKey (url))
-			memVersion.raw.Add (url, new MemoryVersion.Entry ());
-		MemoryVersion.Entry entry = memVersion.raw[url];
-		entry.is_new =1;
-		entry.pic_path = url;
-		entry.pic = uri.LocalPath;
-		entry.type = Convert.ToInt32(MemoryVersion.RES_TYPE.RAW);
+		if (!memVersion.raw.ContainsKey (url)) {
+			MemoryVersion.Entry entry = new MemoryVersion.Entry ();
+			entry.is_new =1;
+			entry.pic_path = url;
+			entry.pic = uri.LocalPath;
+			entry.type = Convert.ToInt32(MemoryVersion.RES_TYPE.RAW);
+			memVersion.raw.Add (url, entry);
+		}
 
-		loadIcon(loader,entry);
+		loadIcon(loader,memVersion.raw[url]);
 	}
 	/// <summary>
 	/// Loads the icon.

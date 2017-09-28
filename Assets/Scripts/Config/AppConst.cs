@@ -16,4 +16,6 @@ public class AppConst
 	public const string AssetBundleName = "AssetBundles";
 	public const string AppName = "WaWaJi";           //应用程序名称
 
+
+	public const bool Swing = true; //加入爪子joint物理
 }

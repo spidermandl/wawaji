@@ -10,10 +10,14 @@ using DG.Tweening;
 public class Picker : MonoBehaviour
 {
 	SpawnPool pool;
-	static Vector3 initPos = new Vector3 (1.26f, 3, 0);//
+	static Vector3 initPos;//
+	static Vector3 clawPos = new Vector3 (1.26f, 3, 0);//
+	static Vector3 jointPos = new Vector3 (1.26f, 4.37f, 0);//
 	static float ground_Y = 1.55f;
-	static Vector3 dropPos = new Vector3 (0,3,-1.72f);//
+	static Vector3 dropPos = new Vector3 (0,initPos.y,-1.72f);//释放点
 
+	Transform handler = null;
+	Transform joint;
 	Transform claw =null;//
 	Transform rootFoot;//
 	GameObject pickRange;//
@@ -35,9 +39,11 @@ public class Picker : MonoBehaviour
 	{
 		Still,// 静止
 		Seek,// 寻找落点
+		RemoveJoint,//还原垂直，去物理,swing爪子才有
 		Down,// 下落
 		Pick,// 抓取球的过程
 		Up,// 上升过程
+		RecoverJoint,//还原物理，swing爪子才有
 		Ship,//移动至释放点
 		Release,// 释放
 	}
@@ -94,6 +100,7 @@ public class Picker : MonoBehaviour
 		this.pickRange = this.gameObject.transform.Find ("picking_range").gameObject;
 		this.ball_objs = this.gameObject.transform.Find ("balls");
 
+		this.joint = this.transform.parent.Find ("joint");
 		////////////////////////////////////////////////////////
 		//生成每个抓脚的根节点,初始化所有抓脚
 		GameObject prefab = (GameObject)Resources.Load ("Prefabs/foot");
@@ -164,31 +171,60 @@ public class Picker : MonoBehaviour
 	{
 		//Debug.Log (this.moveDiretion);
 		if (this.moveDiretion.x == 1) {//右
-			Ray ray = new Ray(transform.position, Vector3.right);  
+			Ray ray = new Ray(handler.position, Vector3.right);  
 			RaycastHit hit;  
 			if(Physics.Raycast(ray, out hit, EDGE_RADIUS, 1<<LayerMask.NameToLayer("Wall")))  
 				return;
 		} else if (this.moveDiretion.x == -1) {//左
-			Ray ray = new Ray(transform.position, Vector3.left);  
+			Ray ray = new Ray(handler.position, Vector3.left);  
 			RaycastHit hit;  
 			if(Physics.Raycast(ray, out hit, EDGE_RADIUS, 1<<LayerMask.NameToLayer("Wall")))  
 				return;
 		} else if (this.moveDiretion.z == 1) {//后
-			Ray ray = new Ray(transform.position, Vector3.forward);  
+			Ray ray = new Ray(handler.position, Vector3.forward);  
 			RaycastHit hit;  
 			if (Physics.Raycast (ray, out hit, EDGE_RADIUS, 1<<LayerMask.NameToLayer("Wall")))  
 				return;
 		} else if (this.moveDiretion.z == -1) {//前
-			Ray ray = new Ray(transform.position, Vector3.back);  
+			Ray ray = new Ray(handler.position, Vector3.back);  
 			RaycastHit hit;  
 			if(Physics.Raycast(ray, out hit, EDGE_RADIUS, 1<<LayerMask.NameToLayer("Wall")))  
 				return;
 		}
 		//移动速度1
-		this.gameObject.transform.Translate (new Vector3(
-				this.moveDiretion.x * Time.fixedDeltaTime,
-				this.moveDiretion.y * Time.fixedDeltaTime,
-				this.moveDiretion.z * Time.fixedDeltaTime));
+		Vector3 deltaDir = new Vector3 (
+			                   this.moveDiretion.x * Time.fixedDeltaTime,
+			                   this.moveDiretion.y * Time.fixedDeltaTime,
+			                   this.moveDiretion.z * Time.fixedDeltaTime);
+		//Debug.Log (deltaDir);
+		//handler.Translate (deltaDir);
+		handler.position = handler.position + deltaDir;
+	}
+
+	public void RemoveJoint_Enter(){
+		//去物理
+		handler = transform;
+		HingeJoint hinge = transform.GetComponent<HingeJoint> ();
+		Rigidbody rigid = transform.GetComponent<Rigidbody> ();
+		Destroy (hinge);
+		Destroy (rigid);
+
+	}
+
+	public void RemoveJoint_FixedUpdate(){
+		//矫正垂直方向
+		Vector3 fromVector = transform.position - joint.position;
+		Vector3 toVector = Vector3.down;
+		float angle = Vector3.Angle (fromVector, toVector); //求出两向量之间的夹角 
+		Vector3 normal = Vector3.Cross (fromVector,toVector);//叉乘求出法线向量
+		float delta_angle = 10*Time.fixedDeltaTime;
+		if (Math.Abs (angle) < delta_angle) {
+			transform.RotateAround (joint.transform.position, normal, angle);
+			this.pickerStateMachine.ChangeState (States.Down);
+			return;
+		}
+			
+		transform.RotateAround (joint.transform.position, normal, delta_angle);
 	}
 
 	public void Down_Enter(){
@@ -199,8 +235,9 @@ public class Picker : MonoBehaviour
 
 	public void Down_FixedUpdate(){
 		//移动速度1
-		this.gameObject.transform.Translate (new Vector3 (0,-Time.fixedDeltaTime,0));
-		if (this.gameObject.transform.localPosition.y <= Picker.ground_Y) {
+		Vector3 delta = new Vector3 (0,-Time.fixedDeltaTime,0);
+		handler.position = handler.position + delta;
+		if (handler.localPosition.y <= ground_Y) {
 			this.pickerStateMachine.ChangeState (States.Pick);
 		}
 	}
@@ -236,24 +273,40 @@ public class Picker : MonoBehaviour
 	}
 	public void Up_FixedUpdate(){
 		//移动速度1
-		this.gameObject.transform.Translate (new Vector3 (0,Time.fixedDeltaTime,0));
-		if (this.gameObject.transform.localPosition.y >= Picker.initPos.y) {
-			this.pickerStateMachine.ChangeState (States.Ship);
+		float delta = Time.fixedDeltaTime;
+		if ((Picker.clawPos.y - handler.localPosition.y) < delta) {
+			handler.position = handler.position + new Vector3 (0, Picker.clawPos.y - handler.localPosition.y, 0);
+			if(AppConst.Swing)
+				this.pickerStateMachine.ChangeState (States.RecoverJoint);
+			else
+				this.pickerStateMachine.ChangeState (States.Ship);
 		}
+		handler.position = handler.position + new Vector3 (0, delta, 0);
 	}
+		
+
+	public IEnumerator RecoverJoint_Enter(){
+		handler = joint;
+		addSwingComponent();
+		yield return new WaitForSeconds(0.5f);
+		this.pickerStateMachine.ChangeState (States.Ship);
+	}
+
 	public void Ship_Enter(){
-		Vector3 dir = Picker.dropPos - this.gameObject.transform.localPosition;
+		Vector3 dir = Picker.dropPos - handler.localPosition;
 		float dis = (float)Math.Sqrt (dir.x * dir.x + dir.y * dir.y + dir.z * dir.z);
 		this.releaseDirection = new Vector3 (dir.x/dis,dir.y/dis,dir.z/dis);
 		StartCoroutine (dropBallByType ());
 		StartCoroutine (confirmDrops ());
 	}
 	public void Ship_FixedUpdate(){
-		this.gameObject.transform.Translate (
+		Vector3 delta = new Vector3(
 			0.4f*Time.fixedDeltaTime*this.releaseDirection.x,
 			0.4f*Time.fixedDeltaTime*this.releaseDirection.y,
 			0.4f*Time.fixedDeltaTime*this.releaseDirection.z);
-		if (Vector3.Distance (this.gameObject.transform.localPosition, Picker.dropPos) <= 0.01) {
+		//translate 移动会受到力的影响
+		handler.position = handler.position + delta;
+		if (Vector3.Distance (handler.localPosition, Picker.dropPos) <= 0.01) {
 			this.pickerStateMachine.ChangeState (States.Release);
 		}
 	}
@@ -292,7 +345,19 @@ public class Picker : MonoBehaviour
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//初始化所有object
 	public void initConfig(){
-		this.gameObject.transform.localPosition = Picker.initPos;
+		if (AppConst.Swing) {
+			this.handler = joint;
+			this.gameObject.transform.localPosition = Picker.clawPos;
+			this.handler.localPosition = Picker.jointPos;
+			addSwingComponent ();
+			Picker.initPos = Picker.jointPos;
+			Picker.dropPos.y = Picker.initPos.y;
+		} else {
+			this.handler = transform;
+			this.gameObject.transform.localPosition = Picker.initPos;
+			Picker.initPos = Picker.clawPos;
+			Picker.dropPos.y = Picker.initPos.y;
+		}
 		this.fill.SetActive (true);
 		this.cover.SetActive (true);
 		this.fence.SetActive (false);
@@ -311,6 +376,22 @@ public class Picker : MonoBehaviour
 
 	}
 
+	void addSwingComponent(){
+		Rigidbody rigid = this.gameObject.GetComponent<Rigidbody> ();
+		if(rigid == null){
+			rigid = this.gameObject.AddComponent<Rigidbody> ();
+		}
+		rigid.mass = 1;
+		rigid.drag = 1;
+		rigid.constraints = RigidbodyConstraints.FreezeRotationY|RigidbodyConstraints.FreezePositionY;
+		HingeJoint hinge = this.gameObject.GetComponent<HingeJoint> ();
+		if(hinge ==null)
+			hinge = this.gameObject.AddComponent<HingeJoint> ();
+		hinge.connectedBody = this.handler.GetComponent<Rigidbody> ();
+		hinge.anchor = //Picker.jointPos - Picker.initPos;
+			new Vector3(0,Picker.jointPos.y - Picker.clawPos.y,0);
+		//hinge.axis = Vector3.zero;
+	}
 	/// <summary>
 	/// Inits the fence.
 	/// </summary>
@@ -505,7 +586,10 @@ public class Picker : MonoBehaviour
 
 	public void startTargeting(){
 		if (this.pickerStateMachine.State == States.Still) {//只有静止的时候才会下落
-			this.pickerStateMachine.ChangeState (States.Down);
+			if(AppConst.Swing)
+				this.pickerStateMachine.ChangeState (States.RemoveJoint);
+			else
+				this.pickerStateMachine.ChangeState (States.Down);
 		}
 	}
 	//pick 是否为静止状态

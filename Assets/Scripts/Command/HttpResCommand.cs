@@ -18,8 +18,8 @@ public class HttpResCommand : SimpleCommand {
 		Request request = (Request)body;
 
 		if (request.command () == Req_GetUpdatePics.COMMAND) {
-			UpdatesProxy proxy = Facade.RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
-			proxy.fillServerVersion ((Req_GetUpdatePics)request);
+			
+			setProxy<Req_GetUpdatePics,UpdatesProxy,Req_GetUpdatePics.Response>(request);
 			return;
 		}else if (request.command () == Req_UserLogin.COMMAND || request.command () == Req_GetBaseInfo.COMMAND) {
 			

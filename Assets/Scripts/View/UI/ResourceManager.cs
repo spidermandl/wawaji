@@ -10,6 +10,7 @@ public class ResourceManager : MonoBehaviour
 {
 	public delegate void LoadCompleteCallback(NTexture texture);
 	public delegate void LoadErrorCallback(string error);
+	public delegate void SaveToDiskCallback(byte[] stream);
 
 	static ResourceManager _instance;
 	public static ResourceManager inst
@@ -47,12 +48,14 @@ public class ResourceManager : MonoBehaviour
 
 	public void LoadIcon(UpdatesProxy.MemoryVersion.Entry entry,
 					LoadCompleteCallback onSuccess,
-					LoadErrorCallback onFail)
+					LoadErrorCallback onFail,
+					SaveToDiskCallback onSave)
 	{
 		LoadItem item = new LoadItem();
 		item.entry = entry;
 		item.onSuccess = onSuccess;
 		item.onFail = onFail;
+		item.onSave = onSave;
 		_items.Add(item);
 		if(!_started)
 			StartCoroutine(Run());
@@ -82,12 +85,15 @@ public class ResourceManager : MonoBehaviour
 
 				if (item.onSuccess != null)
 					item.onSuccess(texture);
-
+				
+				if (item.onSave != null)
+					item.onSave (null);
+				
 				continue;
 			}
 
 
-			string url = (item.entry.is_new == 0) ? item.entry.local_path : item.entry.pic_path;
+			string url = (item.entry.is_new == 0) ? _basePath+item.entry.local_path : item.entry.pic_path;
 			WWW www = new WWW(url);
 			yield return www;
 
@@ -101,6 +107,9 @@ public class ResourceManager : MonoBehaviour
 
 				if (item.onSuccess != null)
 					item.onSuccess(texture);
+
+				if (item.onSave != null)
+					item.onSave (www.bytes);
 			}
 			else
 			{
@@ -146,6 +155,12 @@ public class ResourceManager : MonoBehaviour
 		_started = false;
 	}
 
+	public bool isQueued(){
+		if (_items.Count == 0)
+			return false;
+		return true;
+	}
+
 	IEnumerator FreeIdleIcons()
 	{
 		yield return new WaitForSeconds(POOL_CHECK_TIME); //check the pool every 30 seconds
@@ -185,6 +200,7 @@ public class ResourceManager : MonoBehaviour
 		public UpdatesProxy.MemoryVersion.Entry entry;
 		public LoadCompleteCallback onSuccess;
 		public LoadErrorCallback onFail;
+		public SaveToDiskCallback onSave;
 	}
 
 }

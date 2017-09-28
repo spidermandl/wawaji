@@ -368,6 +368,28 @@ public class Util
 //		fs.Close();
 	}
 
+	public static void WriteToFile(string path, byte[] info)  
+	{  
+		//文件流信息  
+		//StreamWriter sw;  
+		Stream sw;  
+		FileInfo t = new FileInfo(path);  
+		if (t.Exists) {
+			t.Delete ();
+		}
+
+		//如果此文件不存在则创建  
+		sw = t.Create();  
+
+		//以行的形式写入信息  
+		//sw.WriteLine(info);  
+		sw.Write(info, 0, info.Length);  
+		//关闭流  
+		sw.Close();  
+		//销毁流  
+		sw.Dispose();  
+	}   
+
 	/// <summary>
 	/// 网络可用
 	/// </summary>

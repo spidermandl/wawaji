@@ -23,6 +23,17 @@ public class UpdatesProxy : BaseProxy {
 
 
 	}
+
+	public override void bindingData (Request.Response meta)
+	{
+		if (meta.GetType () == typeof(Req_GetUpdatePics.Response)) {
+			bindingData ((Req_GetUpdatePics.Response)meta);
+		}
+	}
+
+	void bindingData(Req_GetUpdatePics.Response data){
+		fillServerVersion ((Req_GetUpdatePics)data.Req);
+	}
 	/// <summary>
 	/// Reads the local version.
 	/// </summary>
@@ -51,6 +62,8 @@ public class UpdatesProxy : BaseProxy {
 				v.is_new = d.is_new;
 				v.pic = d.pic;
 				v.pic_path = d.pic_path;
+				v.local_path = d.local_path;
+				v.type = Convert.ToInt32(MemoryVersion.RES_TYPE.BALL);
 				memVersion.ball.Add (d.id, v);
 			}
 		}
@@ -60,13 +73,27 @@ public class UpdatesProxy : BaseProxy {
 				v.is_new = d.is_new;
 				v.pic = d.pic;
 				v.pic_path = d.pic_path;
+				v.local_path = d.local_path;
+				v.type = Convert.ToInt32(MemoryVersion.RES_TYPE.PRIZE);
 				memVersion.prize.Add (d.id, v);
+			}
+		}
+
+		if (localVersion.data.raw != null) {
+			foreach (ResVersion.Entry d in localVersion.data.raw) {
+				MemoryVersion.Entry v = new MemoryVersion.Entry ();
+				v.is_new = d.is_new;
+				v.pic = d.pic;
+				v.pic_path = d.pic_path;
+				v.local_path = d.local_path;
+				v.type = Convert.ToInt32(MemoryVersion.RES_TYPE.RAW);
+				memVersion.raw.Add (d.id, v);
 			}
 		}
 	}
 
 	/// <summary>
-	/// 填充服务器 version 更新内存版本.
+	/// 填充服务器 version,更新内存版本.
 	/// </summary>
 	/// <param name="online">Online.</param>
 	public void fillServerVersion(Req_GetUpdatePics online){
@@ -78,24 +105,22 @@ public class UpdatesProxy : BaseProxy {
 			foreach (Req_GetUpdatePics.Response.Entry e in online.getBall()) {
 				if (!memVersion.ball.ContainsKey (e.id)) {
 					memVersion.ball.Add (e.id, new MemoryVersion.Entry ());
-					memVersion.ball [e.id].is_new = 0;
 				}
-				if (memVersion.ball [e.id].pic == null || !memVersion.ball [e.id].pic.Equals (e.pic)) {
-					memVersion.ball [e.id].is_new = 1;
-					memVersion.ball [e.id].pic = e.pic;
-					memVersion.ball [e.id].pic_path = e.pic_path;
-				}
+				memVersion.ball [e.id].is_new = 1;
+				memVersion.ball [e.id].pic = e.pic;
+				memVersion.ball [e.id].pic_path = e.pic_path;
+				memVersion.ball [e.id].type = Convert.ToInt32(MemoryVersion.RES_TYPE.BALL);
+
 			}
 			foreach (Req_GetUpdatePics.Response.Entry e in online.getPrize()) {
 				if (!memVersion.prize.ContainsKey (e.id)) {
 					memVersion.prize.Add (e.id, new MemoryVersion.Entry ());
-					memVersion.prize [e.id].is_new = 0;
 				}
-				if (memVersion.prize [e.id].pic == null || !memVersion.prize [e.id].pic.Equals (e.pic)) {
-					memVersion.prize [e.id].is_new = 1;
-					memVersion.prize [e.id].pic = e.pic;
-					memVersion.prize [e.id].pic_path = e.pic_path;
-				}
+				memVersion.prize [e.id].is_new = 1;
+				memVersion.prize [e.id].pic = e.pic;
+				memVersion.prize [e.id].pic_path = e.pic_path;
+				memVersion.ball [e.id].type = Convert.ToInt32(MemoryVersion.RES_TYPE.PRIZE);
+
 			}
 		}
 
@@ -106,9 +131,10 @@ public class UpdatesProxy : BaseProxy {
 	/// 内存 version 写回local.
 	/// </summary>
 	/// <param name="online">Online.</param>
-	public void saveToLocalVersion(){
-		localVersion.version = serverVersion.getOnlineVersion();
-		localVersion.data.ball = new ResVersion.Entry[serverVersion.getBall ().Length];
+	void saveToLocalVersion(){
+		if(serverVersion!=null)
+			localVersion.version = serverVersion.getOnlineVersion();
+		localVersion.data.ball = new ResVersion.Entry[memVersion.ball.Count];
 		int index = 0;
 		foreach(string key in memVersion.ball.Keys){
 			ResVersion.Entry e = new ResVersion.Entry ();
@@ -116,11 +142,12 @@ public class UpdatesProxy : BaseProxy {
 			e.is_new = memVersion.ball [key].is_new;
 			e.pic = memVersion.ball [key].pic;
 			e.pic_path = memVersion.ball [key].pic_path;
+			e.local_path = memVersion.ball [key].local_path;
 			localVersion.data.ball [index] = e;
 			index++;
 		}
 		index = 0;
-		localVersion.data.prize = new ResVersion.Entry[serverVersion.getPrize ().Length];
+		localVersion.data.prize = new ResVersion.Entry[memVersion.prize.Count];
 		foreach(string key in memVersion.prize.Keys){
 			ResVersion.Entry e = new ResVersion.Entry ();
 			e.id = key;
@@ -131,20 +158,31 @@ public class UpdatesProxy : BaseProxy {
 			localVersion.data.prize [index] = e;
 			index++;
 		}
+		index = 0;
+		localVersion.data.raw = new ResVersion.Entry[memVersion.raw.Count];
+		foreach(string key in memVersion.raw.Keys){
+			ResVersion.Entry e = new ResVersion.Entry ();
+			e.id = key;
+			e.is_new = memVersion.raw [key].is_new;
+			e.pic = memVersion.raw [key].pic;
+			e.pic_path = memVersion.raw [key].pic_path;
+			e.local_path = memVersion.raw [key].local_path;
+			localVersion.data.raw [index] = e;
+			index++;
+		}
 		Util.WriteJsonText (Util.DataPath+FILE_NAME, JsonHelper.SerializeObject (localVersion));
 		//Util.WriteJsonText (Util.DataPath+FILE_NAME, JsonUtility.ToJson (localVersion));
 	}
 
+	void mirror(){
+
+	}
 	/// <summary>
 	/// Gets the local version.
 	/// </summary>
 	/// <returns>The local version.</returns>
 	public string getLocalVersion(){
 		return localVersion.version;
-	}
-
-	public override void bindingData (Request.Response meta)
-	{
 	}
 
 	/// <summary>
@@ -176,10 +214,15 @@ public class UpdatesProxy : BaseProxy {
 	/// <param name="url">URL.</param>
 	public void loadPureIcon(GLoader loader,string url){
 		Uri uri = new Uri (url);
-		MemoryVersion.Entry entry = new MemoryVersion.Entry();
+
+		if (!memVersion.raw.ContainsKey (url))
+			memVersion.raw.Add (url, new MemoryVersion.Entry ());
+		MemoryVersion.Entry entry = memVersion.raw[url];
 		entry.is_new =1;
 		entry.pic_path = url;
 		entry.pic = uri.LocalPath;
+		entry.type = Convert.ToInt32(MemoryVersion.RES_TYPE.RAW);
+
 		loadIcon(loader,entry);
 	}
 	/// <summary>
@@ -193,8 +236,21 @@ public class UpdatesProxy : BaseProxy {
 					loader.texture = texture;
 				}, 
 				(string error) => {
+				},
+				(byte[] stream)=> {
+					if(entry.is_new==1){
+						string path = Util.md5(entry.pic_path);
+						Util.WriteToFile(Util.DataPath+path,stream);
+						entry.is_new = 0;
+						entry.local_path = path;
+					}
+
+					if(ResourceManager.inst.isQueued()==false){
+						saveToLocalVersion();
+					}
 				});
 	}
+
 	[Serializable]
 	public class ResVersion{
 
@@ -211,16 +267,17 @@ public class UpdatesProxy : BaseProxy {
 		{
 			public Entry[] prize;
 			public Entry[] ball;
+			public Entry[] raw;
 		}
 
 		[Serializable]
 		public class Entry
 		{
 			public string id;
-			public string pic;
-			public string pic_path;
-			public string local_path;
-			public int is_new;
+			public string pic;//资源名
+			public string pic_path;//资源网络路径
+			public string local_path;//资源本地路径
+			public int is_new;//0 已经存在的，1 需要更新的
 		}
 
 
@@ -228,20 +285,30 @@ public class UpdatesProxy : BaseProxy {
 
 	[Serializable]
 	public class MemoryVersion{
+
+		public enum RES_TYPE{
+			PRIZE=0,
+			BALL=1,
+			RAW=-1
+		}
+
 		public Dictionary<string,Entry> prize;
 		public Dictionary<string,Entry> ball;
+		public Dictionary<string,Entry> raw;
 
 		public MemoryVersion(){
 			prize = new Dictionary<string,Entry>();
 			ball = new Dictionary<string,Entry>();
+			raw = new Dictionary<string,Entry>(); 
 		}
 
 		[Serializable]
 		public class Entry{
-			public string pic;
-			public string pic_path;
-			public string local_path;
+			public string pic;//资源名
+			public string pic_path;//资源网络路径
+			public string local_path;//资源本地路径
 			public int is_new;//0 已经存在的，1 需要更新的
+			public int type;//-1:pure resource; 0:prize;1:ball
 		}
 	}
 

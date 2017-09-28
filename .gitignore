@@ -5,3 +5,4 @@ obj/*
 ios_proj/*
 android_proj/WaWaJi/*
 android/wwj/*/build/*
+*/external/*

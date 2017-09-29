@@ -4,11 +4,6 @@
     <image id="n0_ddj4" name="n0" src="ddj42" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <loader id="n14_sfdg" name="n14" xy="322,10" size="102,96" align="center" vAlign="middle" fill="scale"/>
-    <image id="n2_ddj4" name="n2" src="ddj4e" xy="313,0" size="120,120">
-      <relation target="n0_ddj4" sidePair="center-center,height-height"/>
-      <relation target="n0_ddj4" sidePair="width-width"/>
-    </image>
     <image id="n4_ddj4" name="n4" src="ddj4a" xy="61,24" size="223,60">
       <relation target="n0_ddj4" sidePair="left-left,width-width"/>
       <relation target="n0_ddj4" sidePair="height-height"/>
@@ -29,5 +24,8 @@
       <relation target="n4_ddj4" sidePair="leftext-left,rightext-right"/>
       <relation target="n4_ddj4" sidePair="topext-top,bottomext-bottom"/>
     </text>
+    <component id="n15_9in7" name="n15" src="9in71e" xy="302,2">
+      <relation target="n0_ddj4" sidePair="top-top,center-center"/>
+    </component>
   </displayList>
 </component>

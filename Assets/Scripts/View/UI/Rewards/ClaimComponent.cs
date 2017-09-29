@@ -17,7 +17,7 @@ public class ClaimComponent : BaseRewardsCom
 			request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
 			request.PrizeId = item.prize_id;
 			request.UserPrizeId = item.id;
-			request.UserPrizeType = 1;
+			request.UsePrizeType = 1;
 			request.UserName = open.GetChild ("n14").asTextInput.text;
 			request.UserAddr = open.GetChild ("n15").asTextInput.text;
 			request.UserPhone = open.GetChild ("n16").asTextInput.text;
@@ -30,15 +30,16 @@ public class ClaimComponent : BaseRewardsCom
 		if (item.status == 1) {
 			AccountProxy u_proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
 			UpdatesProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
-			proxy.loadPureIcon (open.GetChild ("n19").asLoader, ""+u_proxy.Pic);
+			proxy.loadPureIcon (open.GetChild ("n23").asCom.GetChild("n24").asLoader, ""+u_proxy.Pic);
 			open.GetChild ("n8").asTextField.text = u_proxy.Name;
 
 		} else {
 			AccountProxy u_proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
 			UpdatesProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
-			proxy.loadPureIcon (close.GetChild ("n19").asLoader, ""+u_proxy.Pic);
+			proxy.loadPureIcon (close.GetChild ("n21").asCom.GetChild("n24").asLoader, ""+u_proxy.Pic);
 			close.GetChild ("n8").asTextField.text = u_proxy.Name;
 		}
+
 	}
 }
 

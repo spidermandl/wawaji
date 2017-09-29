@@ -43,6 +43,6 @@
       <relation target="n12_cq4o" sidePair="leftext-left,rightext-right"/>
       <relation target="n12_cq4o" sidePair="middle-middle"/>
     </text>
-    <loader id="n19_ezt2" name="n19" xy="255,14" size="112,112" align="center" vAlign="middle" fill="scale"/>
+    <component id="n21_9in7" name="n21" src="9in71u" xy="242,13"/>
   </displayList>
 </component>

@@ -18,7 +18,7 @@ public class BuybackComponent : BaseRewardsCom
 			request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
 			request.PrizeId = item.prize_id;
 			request.UserPrizeId = item.id;
-			request.UserPrizeType = 3;
+			request.UsePrizeType = 3;
 			GComboBox pay_channel = open.GetChild ("n39").asComboBox;
 			switch (pay_channel.selectedIndex) {
 			case 0://alipay

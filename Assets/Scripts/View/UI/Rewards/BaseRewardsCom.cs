@@ -7,8 +7,8 @@ using UnityEngine;
 public abstract class BaseRewardsCom
 {
 	protected UserPrizeInfoProxy.PrizeItem item;
-	protected GComponent open;
-	protected GComponent close;
+	protected GComponent open;//认领奖品
+	protected GComponent close;//已经获得奖品
 
 	public BaseRewardsCom (GComponent open,GComponent close,UserPrizeInfoProxy.PrizeItem item)
 	{
@@ -25,6 +25,7 @@ public abstract class BaseRewardsCom
 		}
 
 		validateUI ();
+
 	}
 
 	public abstract void validateUI ();

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="135,135" overflow="hidden" scroll="both" mask="n22_9in7">
+  <displayList>
+    <loader id="n26_9in7" name="n26" xy="0,0" size="135,135" align="center" vAlign="middle" fill="scale">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n25_9in7" name="n25" src="ddj4e" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <graph id="n22_9in7" name="n22" xy="4,4" size="127,127" type="eclipse">
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+  </displayList>
+</component>

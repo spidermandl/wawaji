@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="433,69">
+  <displayList>
+    <image id="n14_ddj4" name="n14" src="ddj415" xy="0,0" size="433,69"/>
+    <image id="n15_9in7" name="n15" src="ddj4r" xy="34,21">
+      <relation target="n14_ddj4" sidePair="middle-middle,left-left"/>
+    </image>
+    <component id="n16_9in7" name="n16" src="9in71g" xy="92,21"/>
+  </displayList>
+</component>

@@ -19,7 +19,7 @@ public class ExchangeComponent : BaseRewardsCom
 			request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
 			request.PrizeId = item.prize_id;
 			request.UserPrizeId = item.id;
-			request.UserPrizeType = 2;
+			request.UsePrizeType = 2;
 			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 		});
 	}

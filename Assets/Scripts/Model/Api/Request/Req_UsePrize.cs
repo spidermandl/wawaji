@@ -22,10 +22,10 @@ public class Req_UsePrize :Request {
 		get{ return this.userPrizeId; }
 		set{ userPrizeId = value;_form.AddField ("userPrizeId", value);}
 	}
-	int userPrizeType;//必须
-	public int UserPrizeType{
-		get{ return this.userPrizeType; }
-		set{ userPrizeType = value;_form.AddField ("userPrizeType", value);}
+	int usePrizeType;//必须
+	public int UsePrizeType{
+		get{ return this.usePrizeType; }
+		set{ usePrizeType = value;_form.AddField ("usePrizeType", value);}
 	}
 	string userName;
 	public string UserName{

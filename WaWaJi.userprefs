@@ -35,15 +35,15 @@
       <File FileName="Assets/Scripts/View/RewardsMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UIPrize.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UIHelp.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/window/BaseWindow.cs" Line="17" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/window/BaseWindow.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UIConnection.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UIExchange.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UIProfile.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Enter/UIRegisterWin.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/NoticeMediator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/Game/GameManager.cs" Line="251" Column="2" />
-      <File FileName="Assets/Scripts/View/UI/Game/Picker.cs" Line="311" Column="36" />
-      <File FileName="Assets/Scripts/View/UI/Game/UIGameMain.cs" Line="85" Column="21" />
+      <File FileName="Assets/Scripts/View/UI/Game/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/Game/Picker.cs" Line="386" Column="59" />
+      <File FileName="Assets/Scripts/View/UI/Game/UIGameMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/UIMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Game/UIConfirm.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Config/LocalKey.cs" Line="1" Column="1" />
@@ -61,13 +61,13 @@
       <File FileName="Assets/Scripts/View/UI/Enter/UIDocWin.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Network/HttpClient.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Util/TXTReader.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Util/Util.cs" Line="386" Column="1" />
-      <File FileName="Assets/Scripts/Model/UpdatesProxy.cs" Line="226" Column="3" />
+      <File FileName="Assets/Scripts/Util/Util.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/UpdatesProxy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Command/HttpReqCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/NewsProxy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/PrizeSetProxy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/UserPrizeListsProxy.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/Home/UIHomeMain.cs" Line="391" Column="16" />
+      <File FileName="Assets/Scripts/View/UI/Home/UIHomeMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Enter/UIBaseVerifyWin.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Prize/UIPrizeMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Rewards/UIRewardsMain.cs" Line="1" Column="1" />
@@ -92,11 +92,11 @@
       <File FileName="Assets/Plugins/PureMVC/Patterns/Facade/Facade.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Game/RingFence.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Game/Footer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/UIInstanceManager.cs" Line="138" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/ResourceManager.cs" Line="61" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/UIInstanceManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/ResourceManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UICommon.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UISetting.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Config/AppConst.cs" Line="20" Column="25" />
+      <File FileName="Assets/Scripts/Config/AppConst.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

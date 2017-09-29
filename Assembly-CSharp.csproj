@@ -132,6 +132,7 @@
      <Compile Include="Assets\Scripts\View\UI\Game\UIConfirm.cs" />
      <Compile Include="Assets\Scripts\View\UI\Game\UIFailure.cs" />
      <Compile Include="Assets\Scripts\View\UI\Game\UIGameMain.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Home\HornMarquee.cs" />
      <Compile Include="Assets\Scripts\View\UI\Home\UIHomeMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\Notice\UINoticeMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\Prize\UIPrizeMain.cs" />

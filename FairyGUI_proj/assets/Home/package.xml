@@ -42,6 +42,10 @@
     <component id="e8id1a" name="bid_10_coin.xml" path="/button/"/>
     <image id="ha3o1b" name="i_machine.png" path="/images/"/>
     <image id="i0co1c" name="i_bid_frame_selected_yellow.png" path="/images/"/>
+    <component id="9in71d" name="marquee.xml" path="/"/>
+    <component id="9in71e" name="cover.xml" path="/"/>
+    <component id="9in71f" name="horn.xml" path="/"/>
+    <component id="9in71g" name="horn_list.xml" path="/"/>
   </resources>
   <publish name="Home" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

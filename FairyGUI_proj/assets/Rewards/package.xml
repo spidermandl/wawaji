@@ -46,6 +46,7 @@
     <component id="ezt21r" name="claim_done.xml" path="/"/>
     <component id="ezt21s" name="exchange_done.xml" path="/"/>
     <image id="t4qn1t" name="c_rate.png" path="/images/"/>
+    <component id="9in71u" name="head.xml" path="/"/>
   </resources>
   <publish name="Rewards" path="/Users/Desmond/Desktop/WaWaJi/Assets/Resources"/>
 </packageDescription>

@@ -9,6 +9,7 @@ public class UIHomeMain : UIMain
 {
 	GList _list;
 	int item_index;//列表item索引值
+	HornMarquee hornMarquee;
 
 	//UIExchange _exchangeWin;
 	UITopup _topupWin;//
@@ -18,9 +19,8 @@ public class UIHomeMain : UIMain
 	UIPrize _prizeWin;//
 
 
-
+	GLoader _head;
 	GComponent toolbar;	
-	GTextField _horn;
 	GTextField _coin;
 	GButton b_coin_1,b_coin_5,b_coin_10;
 	GComponent _left_arrow,_right_arrow;
@@ -80,7 +80,9 @@ public class UIHomeMain : UIMain
 				_topupWin = new UITopup ();
 			_topupWin.Show();
 		});
-		toolbar.GetChild ("n14").onClick.Add (() => {
+		GComponent g = toolbar.GetChild ("n15").asCom;
+		_head = toolbar.GetChild ("n15").asCom.GetChild ("n26").asLoader;
+		toolbar.GetChild ("n15").onClick.Add (() => {
 			//个人界面
 			if(_profileWin == null){
 				_profileWin = new UIProfile ();
@@ -107,8 +109,7 @@ public class UIHomeMain : UIMain
 				_topupWin.Show();
 			});
 		});
-
-		_horn = _mainView.GetChild ("n16").asTextField;
+		hornMarquee = new HornMarquee (_mainView.GetChild ("n14").asCom);
 		//查看奖品
 		_mainView.GetChild ("n12").onClick.Add (() => {
 			//查看奖品
@@ -157,29 +158,40 @@ public class UIHomeMain : UIMain
 		getHornList ();
 		validateProfile ();
 
-		UpdatesProxy u_proxy = UnityFacade.GetInstance().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
-		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
-		u_proxy.loadPureIcon (toolbar.GetChild ("n14").asLoader,proxy.Pic);//头像
 	}
 
 	void Update(){
 	}
 
+	/**
+	 * 销毁界面回调
+	 * */
+	public override void destroyUI (){
+		hornMarquee.stop ();
+		base.destroyUI ();
+	}
+
+	/// <summary>
+	/// Moves to page.
+	/// </summary>
+	/// <param name="cls">Cls.</param>
+	public void moveToPage(Type cls){
+		changeUIpage (cls);
+	}
+
 	void validateProfile(){
 		AccountProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+		UpdatesProxy u_proxy = UnityFacade.GetInstance().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
 		if (proxy != null) {
 			_coin.text = "" + proxy.Coin;
-			toolbar.GetChild ("n14").asLoader.url = proxy.Pic;
+			u_proxy.loadPureIcon (_head,proxy.Pic);//头像
 		}
 	}
 	/// <summary>
 	/// http请求hron list
 	/// </summary>
 	void getHornList(){
-		if (UnityFacade.GetInstance ().RetrieveProxy (UserPrizeStringProxy.NAME) != null) {
-			StartCoroutine (playString());
-			return;
-		}
+		hornMarquee.refresh ();
 		int userid = PlayerPrefs.GetInt (LocalKey.USERID, 0);
 		string token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
 		if (machine_data != null) {
@@ -341,22 +353,6 @@ public class UIHomeMain : UIMain
 		base.changeUIpage (cls);
 	}
 
-	/// <summary>
-	/// Plaies the string.
-	/// </summary>
-	/// <returns>The string.</returns>
-	IEnumerator playString(){
-		int index = 0;
-		UserPrizeStringProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UserPrizeStringProxy.NAME) as UserPrizeStringProxy;
-		List<string> items = proxy.Items;
-		while (true) {
-			_horn.text = items [index];
-			yield return new WaitForSeconds (5);
-			index++;
-			index = index % items.Count;
-		}
-	}
-
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// 外部调用
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -391,7 +387,7 @@ public class UIHomeMain : UIMain
 	/// </summary>
 	/// <param name="notification">Notification.</param>
 	public void RespondUserPrizeStrings(INotification notification){
-		StartCoroutine (playString ());
+		hornMarquee.refresh ();
 
 	}
 	/// <summary>

@@ -383,7 +383,7 @@ public class Picker : MonoBehaviour
 		}
 		rigid.mass = 1;
 		rigid.drag = 1;
-		rigid.constraints = RigidbodyConstraints.FreezeRotationY|RigidbodyConstraints.FreezePositionY;
+		rigid.constraints = RigidbodyConstraints.FreezeRotationY;//RigidbodyConstraints.FreezeRotationY|RigidbodyConstraints.FreezePositionY;
 		HingeJoint hinge = this.gameObject.GetComponent<HingeJoint> ();
 		if(hinge ==null)
 			hinge = this.gameObject.AddComponent<HingeJoint> ();

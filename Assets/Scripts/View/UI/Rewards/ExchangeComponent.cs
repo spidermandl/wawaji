@@ -36,7 +36,7 @@ public class ExchangeComponent : BaseRewardsCom
 
 			UpdatesProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
 			proxy.loadPrizeIcon (close.GetChild ("n23").asLoader, ""+item.prize_id);
-			close.GetChild ("n24").asTextField.text = "已经回购"+item.name;
+			close.GetChild ("n24").asTextField.text = "已经兑换成"+item.name;
 			close.GetChild ("n25").asTextField.text = ""+item.price;
 		}
 	}

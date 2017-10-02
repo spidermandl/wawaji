@@ -6,6 +6,11 @@ using DG.Tweening;
 
 public class UICommon : BaseWindow
 {
+	EventCallback0 _confirm;
+	public EventCallback0 Confirm{
+		get{ return _confirm;}
+		set{ _confirm = value;}
+	}
 
 	public GObject Yes {
 		get{ return this.contentPane.GetChild ("n12"); }
@@ -38,10 +43,14 @@ public class UICommon : BaseWindow
 
 		Yes.onClick.Add (() => {
 			this.Hide();
+			if(_confirm!=null){
+				_confirm();
+			}
 		});
 
 		base.OnInit ();
 	}
+
 
 }
 

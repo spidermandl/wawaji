@@ -23,8 +23,10 @@ public class GameCommand : SimpleCommand {
 			SendNotification (GameStillEnter.COMMAND);
 		else if (body.GetType () == typeof(GameStillExit))
 			SendNotification (GameStillExit.COMMAND);
-		else if(body.GetType()==typeof(GameRestart))
+		else if (body.GetType () == typeof(GameRestart))
 			SendNotification (GameRestart.COMMAND);
+		else if (body.GetType () == typeof(GameBlockPicking))
+			SendNotification (GameBlockPicking.COMMAND);
 	}
 	public class GameRestart{
 		public const string COMMAND = "GAME_RESTART";
@@ -42,5 +44,8 @@ public class GameCommand : SimpleCommand {
 	}
 	public class GameStillExit{
 		public const string COMMAND = "GAME_STILL_EXIT";
+	}
+	public class GameBlockPicking{
+		public const string COMMAND = "GANE_BLOCK_PICKING";
 	}
 }

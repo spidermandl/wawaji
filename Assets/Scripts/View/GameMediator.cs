@@ -30,6 +30,7 @@ public class GameMediator: BaseMediator {
 		list.Add (UserCommand.CoinUpdate.COMMAND);
 		list.Add (GameCommand.GameStillEnter.COMMAND);
 		list.Add (GameCommand.GameStillExit.COMMAND);
+		list.Add (GameCommand.GameBlockPicking.COMMAND);
 		return list.ToArray();
 	}
 
@@ -61,6 +62,9 @@ public class GameMediator: BaseMediator {
 			break;
 		case GameCommand.GameStillExit.COMMAND:
 			m_game_ui.ExitGameStill (notification);
+			break;
+		case GameCommand.GameBlockPicking.COMMAND:
+			m_game_ui.GameBlockPicking (notification);
 			break;
 
 		default:

@@ -11,9 +11,9 @@ public class Picker : MonoBehaviour
 {
 	SpawnPool pool;
 	static Vector3 initPos;//
-	static Vector3 clawPos = new Vector3 (1.26f, 3, 0);//
-	static Vector3 jointPos = new Vector3 (1.26f, 4.37f, 0);//
-	static float ground_Y = 1.55f;
+	static Vector3 clawPos = new Vector3 (1.26f, 3, 0);//爪子初始点
+	static Vector3 jointPos = new Vector3 (1.26f, 4.37f, 0);//铰链顶部初始点
+	static float ground_Y = 1.55f;//爪子下降抓球高度距离
 	static Vector3 dropPos = new Vector3 (0,initPos.y,-1.72f);//释放点
 
 	Transform handler = null;
@@ -265,7 +265,6 @@ public class Picker : MonoBehaviour
 		//Debug.Log (anim.GetInteger(AutoPlay.PICK_ANIM));
 		// 判断动画是否播放完成
 		if (anim.GetInteger(AutoPlay.PICK_ANIM)==0&&info.IsName("pick_3")&&info.normalizedTime > 1.0f){
-			this.validFence ();
 			this.pickerStateMachine.ChangeState (States.Up);
 		}
 	}
@@ -334,7 +333,6 @@ public class Picker : MonoBehaviour
 		}
 	}
 	public void Release_Enter(){
-		this.invalidFence ();
 //		this.fill.SetActive (false);
 //		this.cover.SetActive (false);
 		this.fence.SetActive (true);
@@ -399,9 +397,6 @@ public class Picker : MonoBehaviour
 //		this.cover.SetActive (true);
 		this.fence.SetActive (false);
 
-		//初始化底部fence
-		initFence ();
-
 		//this.rotateAround (Picker.FOOT_INIT_ANGLE);
 		for (int i = 0; i < this.legs; i++) {
 			foots [i].gameObject.SetActive (false);
@@ -433,35 +428,6 @@ public class Picker : MonoBehaviour
 //		hinge.connectedBody = this.handler.GetComponent<Rigidbody> ();
 //		hinge.anchor = new Vector3(0,1,0);
 		//hinge.anchor = new Vector3(0,Picker.jointPos.y - Picker.clawPos.y,0);
-	}
-	/// <summary>
-	/// Inits the fence.
-	/// </summary>
-	void initFence(){
-
-//		this.hexagon_cell = this.gameObject.transform.Find ("hexagon_cell");
-//		this.triangle_cell = this.gameObject.transform.Find ("triangle_cell");
-//		this.slot = this.gameObject.transform.Find ("slot");
-//		//remove mesh renderer
-//		removeMeshRender(this.triangle_cell.gameObject);
-//		removeMeshRender (this.hexagon_cell.gameObject);
-//		invalidFence ();
-	}
-	/// <summary>
-	/// Invalids the 多边形 fence.
-	/// </summary>
-	void invalidFence(){
-//		this.hexagon_cell.gameObject.SetActive (false);
-//		this.triangle_cell.gameObject.SetActive (false);
-//		this.slot.gameObject.SetActive (false);
-	}
-	/// <summary>
-	/// Valids the 多边形 fence.
-	/// </summary>
-	void validFence(){
-		//this.hexagon_cell.gameObject.SetActive (true);
-		//this.slot.gameObject.SetActive(true);
-		//this.rootFoot.gameObject.SetActive (false);
 	}
 
 	void removeMeshRender(GameObject root){
@@ -628,6 +594,13 @@ public class Picker : MonoBehaviour
 
 	public void startTargeting(){
 		if (this.pickerStateMachine.State == States.Still) {//只有静止的时候才会下落
+			bool collide = Physics.Raycast (handler.position, Vector3.down, 
+				               Mathf.Infinity, 1<< LayerMask.NameToLayer ("Empty"));
+			if (collide) {
+				UnityFacade.GetInstance ().SendNotification (GameCommand.COMMAND,new GameCommand.GameBlockPicking());
+				return;
+
+			}
 			if(AppConst.Swing)
 				this.pickerStateMachine.ChangeState (States.RemoveJoint);
 			else
@@ -692,15 +665,6 @@ public class Picker : MonoBehaviour
 	public void setCheckRemainingBall(CheckRemainingBall _func){
 		this._checkRemainingBall = _func;
 	}
-
-	/// <summary>
-	/// Sets the cal result.
-	/// </summary>
-	/// <returns>The cal result.</returns>
-	/// <param name="_func">Func.</param>
-//	public GameBallProxy.BallsItem[] setCalResult(CalResult _func){
-//		this._calResult = _func;
-//	}
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// ////////////////////////////////////////////////////////////////////////////
 	/// ////////////////////////////////////////////////////////////////////////////

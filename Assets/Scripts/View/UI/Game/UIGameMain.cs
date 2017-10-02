@@ -358,8 +358,7 @@ public class UIGameMain : UIMain
 		_commonWin.Show();
 		_commonWin.Title.asTextField.text = "金币不足";
 		_commonWin.Content.asTextField.text = "开始游戏所需的金币不够，请冲金币";
-		_commonWin.Yes.onClick.Add (() => {
-			_commonWin.Hide();
+		_commonWin.Confirm = (() => {		
 			this.changeUIpage(typeof(UIHomeMain));
 		});
 	}
@@ -420,6 +419,16 @@ public class UIGameMain : UIMain
 
 	public void ExitGameStill(INotification notification){
 		setGestureValidate (false);
+	}
+
+	public void GameBlockPicking (INotification notification){
+		if(_commonWin == null)
+			_commonWin = new UICommon ();
+		_commonWin.Show();
+		_commonWin.Title.asTextField.text = "无法下钩";
+		_commonWin.Content.asTextField.text = "钩子所在区域为吊球口，无法抓球";
+		_commonWin.Confirm=(()=>{
+		});
 	}
 
 }

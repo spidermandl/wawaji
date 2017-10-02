@@ -13,6 +13,8 @@ public class UIRewardsMain : UIMain
 	BuybackComponent _buyback;
 	ExchangeComponent _exchange;
 
+	UICommon _uiCommon;
+
 	GButton b_claim,b_exchange,b_buyback;
 
 	void Awake()
@@ -75,7 +77,13 @@ public class UIRewardsMain : UIMain
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void RespondUsePrize(INotification notification){
+		Req_UsePrize res = (Req_UsePrize)notification.Body;
 
+		if (_uiCommon == null)
+			_uiCommon = new UICommon ();
+		_uiCommon.Show ();
+		_uiCommon.Title.text = "消息";
+		_uiCommon.Content.text = res.getMsg ();
 	}
 }
 

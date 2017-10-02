@@ -9,18 +9,23 @@ using UnityEngine;
 /// </summary>
 public class BuybackComponent : BaseRewardsCom
 {
+	GComboBox PayChannel{
+		get{ return open.GetChild ("n39").asComboBox;}
+	}
+
 	public BuybackComponent (GComponent open,GComponent close,UserPrizeInfoProxy.PrizeItem item):base(open,close,item)
 	{
-		
+
 		open.GetChild ("n23").onClick.Add (() => {
+			if(!checkInput())
+				return;
 			Req_UsePrize request = new Req_UsePrize();
 			request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
 			request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
 			request.PrizeId = item.prize_id;
 			request.UserPrizeId = item.id;
 			request.UsePrizeType = 3;
-			GComboBox pay_channel = open.GetChild ("n39").asComboBox;
-			switch (pay_channel.selectedIndex) {
+			switch (PayChannel.selectedIndex) {
 			case 0://alipay
 				request.BuyBackType = 1;
 				request.BuyBackAli = open.GetChild ("n46").asTextInput.text;
@@ -43,11 +48,10 @@ public class BuybackComponent : BaseRewardsCom
 	public override void validateUI ()
 	{
 		if (item.status == 1) {
-			GComboBox pay_channel = open.GetChild ("n39").asComboBox;
 			paySetting (open, false);
-			pay_channel.onChanged.Add (
+			PayChannel.onChanged.Add (
 				(EventContext context) => {
-					switch (pay_channel.selectedIndex) {
+					switch (PayChannel.selectedIndex) {
 					case 0://alipay
 						paySetting (open, false);
 						break;
@@ -99,6 +103,47 @@ public class BuybackComponent : BaseRewardsCom
 		foreach (var p in negitives) {
 			(p as GObject).visible = !show;
 		}
+	}
+
+	bool checkInput(){
+
+		switch (PayChannel.selectedIndex) {
+		case 0://alipay
+			string 	txt = open.GetChild ("n46").asTextField.text;
+			if (txt == null || txt.Length == 0) {
+				warning ("支付宝账号不能为空");
+				return false;
+			}
+			break;
+		case 1:
+			txt = open.GetChild ("n32").asTextField.text;
+			if (txt == null || txt.Length == 0) {
+				warning ("姓名不能为空");
+				return false;
+			}
+			txt = open.GetChild ("n33").asTextField.text;
+			if (txt == null || txt.Length == 0) {
+				warning ("手机号不能为空");
+				return false;
+			}
+			txt = open.GetChild ("n43").asCom.GetChild ("title").asTextField.text;
+			if (txt == null || txt.Length == 0) {
+				warning ("请选择银行");
+				return false;
+			}
+			break;
+			txt = open.GetChild ("n34").asTextField.text;
+			if (txt == null || txt.Length == 0) {
+				warning ("银行账号不能为空");
+				return false;
+			}
+			break;
+		default:
+			return true;
+		}
+
+
+		return true;
 	}
 
 }

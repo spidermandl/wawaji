@@ -90,8 +90,6 @@ public class Req_UsePrize :Request {
 		public class Data
 		{
 			public int code;//0表示成功,1表示无效使用类型，2表示已被使用
-			//public string info;
-			public string msg;
 		}
 
 	}
@@ -108,5 +106,31 @@ public class Req_UsePrize :Request {
 	public override string command ()
 	{
 		return COMMAND;
+	}
+
+	protected override string getChildMsg(){
+		if (base._response.GetType () == typeof(Req_UsePrize.Response)) {
+			switch(((Req_UsePrize.Response)base._response).data.code){
+			case 0:
+				return "操作成功";
+				break;
+			case 1:
+				return "无效使用类型";
+				break;
+			case 2:
+				return "该奖品已被使用";
+				break;
+			default:
+				return base.getChildMsg ();
+			}
+
+		}
+		return null;
+	}
+
+	public override int getResponseCode(){
+		if (base._response.GetType () != typeof(Response))
+			return base.getResponseCode ();
+		return ((Response)base._response).data.code;
 	}
 }

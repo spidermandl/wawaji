@@ -10,7 +10,7 @@
     <image id="n19_xsrf" name="n19" src="xsrf14" xy="76,355">
       <relation target="n4_xsrf" sidePair="top-top,left-left"/>
     </image>
-    <text id="n21_xsrf" name="n21" xy="282,312" size="65,28" fontSize="20" color="#ffffff" text="可兑换">
+    <text id="n21_xsrf" name="n21" xy="259,301" size="110,44" fontSize="35" color="#ffffff" text="可兑换">
       <relation target="n4_xsrf" sidePair="top-top,center-center"/>
     </text>
     <component id="n22_xsrf" name="n22" src="xsrf15" xy="171,547">

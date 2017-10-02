@@ -133,6 +133,7 @@
      <Compile Include="Assets\Scripts\View\UI\Game\UIFailure.cs" />
      <Compile Include="Assets\Scripts\View\UI\Game\UIGameMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\Home\HornMarquee.cs" />
+     <Compile Include="Assets\Scripts\View\UI\Home\MachineSelection.cs" />
      <Compile Include="Assets\Scripts\View\UI\Home\UIHomeMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\Notice\UINoticeMain.cs" />
      <Compile Include="Assets\Scripts\View\UI\Prize\UIPrizeMain.cs" />
@@ -162,6 +163,7 @@
      <None Include="Assets\Resources\Shaders\FairyGUI-Image.shader" />
      <None Include="Assets\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
      <None Include="Assets\Resources\Shaders\FairyGUI-BMFont.shader" />
+     <None Include="Assets\StreamingAssets\version.txt" />
      <None Include="Assets\读我.txt" />
      <None Include="Assets\Plugins\PathologicalGames\readme.txt" />
  <Reference Include="UnityEngine.UI">

@@ -7,6 +7,9 @@ using DG.Tweening;
 public class UIConfirm : Window
 {
 
+	EventCallback0 _onConfirm;
+	EventCallback0 _onCancel;
+
 	public GObject Cancel {
 		get{ return this.contentPane.GetChild ("n10"); }
 	}
@@ -30,6 +33,17 @@ public class UIConfirm : Window
 		this.Center();
 		this.modal = true;
 
+		Confirm.onClick.Add (() => {
+			this.Hide();
+			if(_onConfirm !=null)
+				_onConfirm();
+		});
+
+		Cancel.onClick.Add (() => {
+			this.Hide();
+			if(_onCancel !=null)
+				_onCancel();
+		});
 	}
 
 
@@ -45,6 +59,13 @@ public class UIConfirm : Window
 		this.TweenScale(new Vector2(0.1f, 0.1f), 0.3f).SetEase(Ease.OutQuad).OnComplete(this.HideImmediately);
 	}
 
+	public void setConfirmClick(EventCallback0 func){
+		this._onConfirm = func;
+	}
+
+	public void setCancelClick(EventCallback0 func){
+		this._onCancel = func;
+	}
 
 }
 

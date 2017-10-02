@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="171,60" extention="ComboBox">
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="2"/>
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n5_ls0x" name="n5" src="pvoj1b" xy="0,0">
-      <relation target="" sidePair="width-width,height-height"/>
+    <image id="n5_ls0x" name="n5" src="pvoj1b" xy="0,-4" size="171,68">
+      <relation target="" sidePair="width-width,middle-middle"/>
     </image>
-    <text id="n6_ls0x" name="title" xy="15,19" size="110,28" fontSize="20" color="#ffffff" autoSize="none" singleLine="true" text="">
+    <text id="n6_ls0x" name="title" xy="15,15" size="110,28" fontSize="20" color="#ffffff" autoSize="none" singleLine="true" text="">
       <relation target="n7_ls0x" sidePair="top-top,rightext-left"/>
       <relation target="n5_ls0x" sidePair="left-left"/>
     </text>
-    <image id="n7_ls0x" name="n7" src="pvoj1d" xy="138,25">
+    <image id="n7_ls0x" name="n7" src="pvoj1d" xy="138,21">
       <relation target="n5_ls0x" sidePair="top-top,right-right"/>
     </image>
   </displayList>

@@ -184,6 +184,7 @@ public class GameBallProxy : BaseProxy {
 			u_item.price = ""+item.price;
 			u_item.prize_id = item.prize_id;
 			u_item.status = 1;
+
 			proxy.SelectedItem = u_item;
 
 		} else {

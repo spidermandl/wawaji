@@ -6,7 +6,7 @@ using UnityEngine;
 using DG.Tweening;
 
 /// <summary>
-/// Claim component.
+/// 走马灯horn字体.
 /// </summary>
 public class HornMarquee
 {
@@ -46,6 +46,8 @@ public class HornMarquee
 	/// 自动滑动到下一个
 	/// </summary>
 	void ScrollToNext(){
+		if (this.data.Count == 0)
+			return;
 		current_index++;
 		current_index %= this.data.Count;
 		Debug.Log (current_index);

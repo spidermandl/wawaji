@@ -12,15 +12,15 @@ public class MachineInfoProxy : BaseProxy {
 
 	public const string NAME = "MachineInfoProxy";
 
-	List<MachineType> items;
-	TypeAndItem selection;
+	List<MachineType> items;//可选机器列表
+	TypeAndItem selection;//选中的机器
 	public List<MachineType> Items{
 		get{return this.items;}
 		set{ items = value;}
 	}
 	public TypeAndItem Selection{
 		get{return this.selection;}
-		set{ selection = value;}
+		set{selection = value;}
 	}
 
 	public class MachineItem{
@@ -79,7 +79,10 @@ public class MachineInfoProxy : BaseProxy {
 			items.Add (i);
 		}
 		this.Items = items;
-
+		if (items.Count > 0)
+			this.Selection = getListByCoin (items [0].machine [0].coin)[0];
+		else
+			this.Selection = new TypeAndItem ();
 	}
 
 	/// <summary>

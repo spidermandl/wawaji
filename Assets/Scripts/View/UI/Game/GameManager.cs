@@ -120,9 +120,9 @@ public class GameManager : MonoBehaviour
 	/// </summary>
 	public void initBalls(){
 		Transform balls = this.gameObject.transform.Find ("structure/balls");
-		//        2   2
-		//-2              2
-		//   -3   -1
+		//          z:2   y:2
+		//x:-2                   x:2
+		//   y:-3   z:-1
 		//3*4*5
 		ArrayList indexs = new ArrayList();	
 		for (int i = 0; i < 2 * LENGTH_Y * 2 * LENGTH_X * 2 * LENGTH_Z; i++) {
@@ -324,6 +324,13 @@ public class GameManager : MonoBehaviour
 
 	public bool isIdle(){
 		return this.picker.isIdle ()&&cameraStateMachine.State == States.Still;
+	}
+	/// <summary>
+	/// 初始化娃娃机
+	/// </summary>
+	/// <param name="isBall">If set to <c>true</c> is ball.</param>
+	public void resetPicker(){
+		this.picker.initPicker ();
 	}
 	/// <summary>
 	/// Rotates the camera.

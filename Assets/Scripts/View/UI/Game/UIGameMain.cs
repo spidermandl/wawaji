@@ -188,8 +188,10 @@ public class UIGameMain : UIMain
     /// </summary>
 	public override void destroyUI (){
 		base.destroyUI ();
-		gameManager.inactive ();
-		root.SetActive (false);
+		if(gameManager!=null)
+			gameManager.inactive ();
+		if(root!=null)
+			root.SetActive (false);
 	}
 
 	void validateProfile(){
@@ -280,39 +282,45 @@ public class UIGameMain : UIMain
 		GameBallProxy.Answer answer = proxy.Result;
 		/////////////////////////没中奖///////////////////////////////////////////
 		if (answer == null || answer.type == -1) {
-			if (_failWin == null)
+			if (_failWin == null) {
 				_failWin = new UIFailure ();
+				_failWin.setConfirmClick (() => {
+					if(proxy.CountDown==0){
+						this.changeUIpage(typeof(UIHomeMain));
+						UnityFacade.GetInstance().SendNotification(GameCommand.COMMAND,new GameCommand.GameRestart());
+					}
+					else{
+						proxy.CountDown = proxy.CountDown-1;
+						this.gameManager.resetPicker();
+					}
+				});
+			}
 			_failWin.Show ();
-			_failWin.Contiune.onClick.Add (() => {
-				_failWin.Hide();
-				if(proxy.CountDown==0)
-					this.changeUIpage(typeof(UIHomeMain));
-				else
-					proxy.CountDown = proxy.CountDown-1;
-			});
 			return;
 		}
 
 		/////////////////////////中奖///////////////////////////////////////////
 		if (answer.type == 0) {
-			if (_confirmWin == null)
+			if (_confirmWin == null) {
 				_confirmWin = new UIConfirm ();
+				//关闭登录对话框
+				_confirmWin.setConfirmClick(()=>{
+					this.changeUIpage (typeof(UIRewardsMain));
+
+				});
+				//进入主界面
+				_confirmWin.setCancelClick (() => {
+					if (proxy.CountDown == 0) {
+						this.changeUIpage (typeof(UIHomeMain));
+						UnityFacade.GetInstance ().SendNotification (GameCommand.COMMAND, new GameCommand.GameRestart ());
+					} else {
+						proxy.CountDown = proxy.CountDown - 1;
+						this.gameManager.resetPicker ();
+
+					}
+				});
+			}
 			_confirmWin.Show ();
-
-			//关闭登录对话框
-			_confirmWin.Confirm.onClick.Add (() => { 
-				_confirmWin.Hide (); 
-				this.changeUIpage (typeof(UIRewardsMain));
-			});
-
-			//进入主界面
-			_confirmWin.Cancel.onClick.Add (() => { 
-				_confirmWin.Hide (); 
-				if(proxy.CountDown==0)
-					this.changeUIpage(typeof(UIHomeMain));
-				else
-					proxy.CountDown = proxy.CountDown-1;
-			});
 
 			UpdatesProxy u_proxy = UnityFacade.GetInstance ().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
 			u_proxy.loadPrizeIcon (_confirmWin.Photo.asLoader, ""+answer.prizes[0].prize_id);
@@ -321,16 +329,21 @@ public class UIGameMain : UIMain
 			return;
 		}
 		/////////////////////////中金币奖///////////////////////////////////////////
-		if (_coinWin == null)
+		if (_coinWin == null) {
 			_coinWin = new UICoinPrize ();
+			_coinWin.setConfirmClick (() => {
+				if(proxy.CountDown==0){
+					this.changeUIpage(typeof(UIHomeMain));
+					UnityFacade.GetInstance().SendNotification(GameCommand.COMMAND,new GameCommand.GameRestart());
+				}
+				else{
+					proxy.CountDown = proxy.CountDown-1;
+					this.gameManager.resetPicker();
+
+				}
+			});
+		}
 		_coinWin.Show ();
-		_coinWin.onClick.Add (() => {
-			_coinWin.Hide();
-			if(proxy.CountDown==0)
-				this.changeUIpage(typeof(UIHomeMain));
-			else
-				proxy.CountDown = proxy.CountDown-1;
-		});
 		_coinWin.Amount.asTextField.text = ""+answer.coin;
 	}
 
@@ -408,5 +421,6 @@ public class UIGameMain : UIMain
 	public void ExitGameStill(INotification notification){
 		setGestureValidate (false);
 	}
+
 }
 

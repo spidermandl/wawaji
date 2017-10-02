@@ -41,6 +41,9 @@ public class UpdatesProxy : BaseProxy {
 		if (!Directory.Exists(Util.DataPath))
 		{
 			Directory.CreateDirectory(Util.DataPath);
+
+		}
+		if (!File.Exists (Util.DataPath + FILE_NAME)) {
 			File.Create (Util.DataPath+FILE_NAME).Close();
 		}
 		string txt = Util.GetFileText (Util.DataPath+FILE_NAME);

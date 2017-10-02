@@ -23,8 +23,12 @@ public class GameCommand : SimpleCommand {
 			SendNotification (GameStillEnter.COMMAND);
 		else if (body.GetType () == typeof(GameStillExit))
 			SendNotification (GameStillExit.COMMAND);
+		else if(body.GetType()==typeof(GameRestart))
+			SendNotification (GameRestart.COMMAND);
 	}
-
+	public class GameRestart{
+		public const string COMMAND = "GAME_RESTART";
+	}
 	public class GameEnd{
 		public const string COMMAND = "GAME_END";
 	}

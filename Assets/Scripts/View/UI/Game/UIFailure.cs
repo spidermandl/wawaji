@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public class UIFailure : Window
 {
+	EventCallback0 _onConfirm;
 
 	public GObject Contiune {
 		get{ return this.contentPane.GetChild ("n3"); }
@@ -22,6 +23,12 @@ public class UIFailure : Window
 		this.Center();
 		this.modal = true;
 
+		Contiune.onClick.Add (() => {
+			this.Hide();
+			if(_onConfirm !=null)
+				_onConfirm();
+		});
+
 	}
 
 
@@ -37,6 +44,8 @@ public class UIFailure : Window
 		this.TweenScale(new Vector2(0.1f, 0.1f), 0.3f).SetEase(Ease.OutQuad).OnComplete(this.HideImmediately);
 	}
 
-
+	public void setConfirmClick(EventCallback0 func){
+		this._onConfirm = func;
+	}
 }
 

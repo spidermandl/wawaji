@@ -7,7 +7,7 @@
     <image id="n14_xsrf" name="n14" src="xsrf12" xy="240,12">
       <relation target="n4_xsrf" sidePair="top-top,center-center"/>
     </image>
-    <text id="n21_xsrf" name="n21" xy="284,208" size="65,28" fontSize="20" color="#ffffff" text="可回购">
+    <text id="n21_xsrf" name="n21" xy="257,193" size="110,44" fontSize="35" color="#ffffff" text="可回购">
       <relation target="n4_xsrf" sidePair="top-top,center-center"/>
     </text>
     <component id="n23_isq0" name="n23" src="isq019" xy="176,624"/>
@@ -39,10 +39,10 @@
       <relation target="n31_pvoj" sidePair="leftext-left,rightext-right"/>
       <relation target="n31_pvoj" sidePair="middle-middle"/>
     </text>
-    <text id="n35_pvoj" name="n35" xy="269,170" size="96,32" fontSize="25" color="#ffffff" text="iPhone7">
+    <text id="n35_pvoj" name="n35" xy="264,159" size="96,32" fontSize="25" color="#ffffff" text="iPhone7">
       <relation target="n4_xsrf" sidePair="top-top,center-center"/>
     </text>
-    <component id="n43_ls0x" name="n43" src="ls0x1n" xy="195,466">
+    <component id="n43_ls0x" name="n43" src="ls0x1n" xy="193,467">
       <relation target="n39_ls0x" sidePair="top-top,left-left"/>
       <ComboBox visibleItemCount="10">
         <item title="中国银行"/>
@@ -51,17 +51,17 @@
         <item title="工商银行"/>
       </ComboBox>
     </component>
-    <component id="n39_ls0x" name="n39" src="ls0x1k" xy="41,465">
+    <component id="n39_ls0x" name="n39" src="ls0x1k" xy="39,470">
       <relation target="n29_pvoj" sidePair="top-top,left-left"/>
       <ComboBox visibleItemCount="5">
         <item title="支付宝"/>
         <item title="银行卡"/>
       </ComboBox>
     </component>
-    <image id="n45_ls0x" name="n45" src="fvaa2" xy="204,465" size="367,68">
+    <image id="n45_ls0x" name="n45" src="fvaa2" xy="202,467" size="367,68">
       <relation target="n39_ls0x" sidePair="left-left,top-top"/>
     </image>
-    <text id="n46_ls0x" name="n46" xy="210,474" size="353,51" input="true" fontSize="30" vAlign="middle" autoSize="none" singleLine="true" text="">
+    <text id="n46_ls0x" name="n46" xy="210,476" size="353,51" input="true" fontSize="30" vAlign="middle" autoSize="none" singleLine="true" text="">
       <relation target="n45_ls0x" sidePair="leftext-left,rightext-right"/>
       <relation target="n45_ls0x" sidePair="middle-middle"/>
     </text>
@@ -71,7 +71,7 @@
     <image id="n48_t4qn" name="n48" src="t4qn1t" xy="209,238" size="33,43">
       <relation target="n4_xsrf" sidePair="left-left,top-top"/>
     </image>
-    <text id="n51_t4qn" name="n51" xy="259,234" size="300,55" fontSize="45" color="#ffccff" autoSize="none" strokeColor="#000000" text="2999.00">
+    <text id="n51_t4qn" name="n51" xy="258,234" size="300,55" fontSize="45" color="#ffccff" autoSize="none" strokeColor="#000000" text="2999.00">
       <relation target="n48_t4qn" sidePair="left-left,top-top"/>
       <relation target="n4_xsrf" sidePair="rightext-right"/>
     </text>

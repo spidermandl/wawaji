@@ -25,6 +25,7 @@ public class HomeMediator: BaseMediator {
 		list.Add (Req_GetMachinePrizeInfo.COMMAND);
 		list.Add (UserCommand.CoinUpdate.COMMAND);
 		list.Add (UserCommand.MachineUpdate.COMMAND);
+		list.Add (GameCommand.GameRestart.COMMAND);
 		return list.ToArray();
 	}
 
@@ -53,6 +54,9 @@ public class HomeMediator: BaseMediator {
 			break;
 		case UserCommand.MachineUpdate.COMMAND:
 			m_home_ui.UpdateMachineInfo (notification);
+			break;
+		case GameCommand.GameRestart.COMMAND:
+			m_home_ui.RestartGame (notification);
 			break;
 		default:
 			break;

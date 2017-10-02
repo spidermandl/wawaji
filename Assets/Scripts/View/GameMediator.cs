@@ -62,6 +62,7 @@ public class GameMediator: BaseMediator {
 		case GameCommand.GameStillExit.COMMAND:
 			m_game_ui.ExitGameStill (notification);
 			break;
+
 		default:
 			break;
 		}

@@ -18,6 +18,7 @@ public class Picker : MonoBehaviour
 
 	Transform handler = null;
 	Transform joint;
+	Transform physics;
 	Transform claw =null;//
 	Transform rootFoot;//
 	GameObject pickRange;//
@@ -26,13 +27,14 @@ public class Picker : MonoBehaviour
 	public int legs = 3;//抓脚个数
 	///// ////////////////////////////////////////////////////////
 	///// //////////////////////////////////////////////////////// 
-	Transform triangle_cell;
-	Transform hexagon_cell;
-	Transform slot;
+//	Transform triangle_cell;
+//	Transform hexagon_cell;
+//	Transform slot;
 	///// //////////////////////////////////////////////////////// 
-	GameObject fill;//槽口填充
-	GameObject cover;//槽口挡板
+//	GameObject fill;//槽口填充
+//	GameObject cover;//槽口挡板
 	GameObject fence;//后栏珊，防止球扔出界
+	Transform ball_container;//所有生成球容器
 	///// //////////////////////////////////////////////////////// 
 	private StateMachine<States> pickerStateMachine;//
 	enum States
@@ -46,6 +48,7 @@ public class Picker : MonoBehaviour
 		RecoverJoint,//还原物理，swing爪子才有
 		Ship,//移动至释放点
 		Release,// 释放
+		Init,//还原
 	}
 	/////seek state //////////////////////////////////////////////////////// 
 	Vector3 moveDiretion = Vector3.zero;
@@ -94,13 +97,16 @@ public class Picker : MonoBehaviour
 		this.pool = PoolManager.Pools["WaWaJi"];
 		this.claw = this.gameObject.transform.Find ("claw");
 		this.rootFoot = this.gameObject.transform.Find ("foot");
-		this.fill = this.gameObject.transform.parent.Find ("fill").gameObject;
-		this.cover = this.gameObject.transform.parent.Find ("cover").gameObject;
-		this.fence = this.gameObject.transform.parent.Find ("back_fence").gameObject;
+		Transform topNode = GameObject.Find ("structure").transform;
+//		this.fill = topNode.Find ("fill").gameObject;
+//		this.cover = topNode.Find ("cover").gameObject;
+		this.fence = topNode.Find ("back_fence").gameObject;
+		this.ball_container = topNode.Find ("balls");
 		this.pickRange = this.gameObject.transform.Find ("picking_range").gameObject;
 		this.ball_objs = this.gameObject.transform.Find ("balls");
 
-		this.joint = this.transform.parent.Find ("joint");
+		this.physics = this.transform.parent.Find ("physics");
+		this.joint = this.physics.parent.Find ("joint");
 		////////////////////////////////////////////////////////
 		//生成每个抓脚的根节点,初始化所有抓脚
 		GameObject prefab = (GameObject)Resources.Load ("Prefabs/foot");
@@ -204,11 +210,15 @@ public class Picker : MonoBehaviour
 	public void RemoveJoint_Enter(){
 		//去物理
 		handler = transform;
-		HingeJoint hinge = transform.GetComponent<HingeJoint> ();
-		Rigidbody rigid = transform.GetComponent<Rigidbody> ();
-		Destroy (hinge);
-		Destroy (rigid);
+		transform.parent = physics.parent;
 
+//		//矫正physics垂直方向
+//		Vector3 fromVector = transform.position - joint.position;
+//		Vector3 toVector = Vector3.down;
+//		float angle = Vector3.Angle (fromVector, toVector); //求出两向量之间的夹角 
+//		Vector3 normal = Vector3.Cross (fromVector,toVector);//叉乘求出法线向量
+//		physics.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+//		physics.RotateAround(joint.transform.position, normal, angle);//
 	}
 
 	public void RemoveJoint_FixedUpdate(){
@@ -286,9 +296,22 @@ public class Picker : MonoBehaviour
 		
 
 	public IEnumerator RecoverJoint_Enter(){
-		handler = joint;
-		addSwingComponent();
+//		handler = joint;
+//		//addSwingComponent();
+//		transform.parent = physics;
+//		transform.localPosition = Vector3.zero;
+//		physics.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
+//		this.handler = joint;
+//		this.handler.localPosition = Picker.jointPos;
+//		this.physics.localPosition = Picker.initPos;
+//		transform.parent = physics;
+//		transform.localPosition = Vector3.zero;
+//		physics.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
+
 		yield return new WaitForSeconds(0.5f);
+		Picker.dropPos.y = Picker.clawPos.y;
 		this.pickerStateMachine.ChangeState (States.Ship);
 	}
 
@@ -312,8 +335,8 @@ public class Picker : MonoBehaviour
 	}
 	public void Release_Enter(){
 		this.invalidFence ();
-		this.fill.SetActive (false);
-		this.cover.SetActive (false);
+//		this.fill.SetActive (false);
+//		this.cover.SetActive (false);
 		this.fence.SetActive (true);
 		for (int i = 0; i < this.legs; i++) {
 			this.foots [i].gameObject.SetActive (false);
@@ -340,26 +363,40 @@ public class Picker : MonoBehaviour
 
 		UnityFacade.GetInstance().SendNotification(GameCommand.COMMAND,new GameCommand.GameEnd());
 	}
+
+	public void Init_Enter(){
+		initConfig ();
+	}
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// ************************************************************************************************
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	public void initPicker(){
+		this.pickerStateMachine.ChangeState (States.Init);
+	}
+
 	//初始化所有object
 	public void initConfig(){
 		if (AppConst.Swing) {
 			this.handler = joint;
-			this.gameObject.transform.localPosition = Picker.clawPos;
+			//this.gameObject.transform.localPosition = Picker.clawPos;
 			this.handler.localPosition = Picker.jointPos;
-			addSwingComponent ();
+			this.physics.localPosition = Picker.initPos;
+			transform.parent = physics;
+			transform.localPosition = Vector3.zero;
+			physics.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+			//addSwingComponent ();
 			Picker.initPos = Picker.jointPos;
 			Picker.dropPos.y = Picker.initPos.y;
 		} else {
 			this.handler = transform;
-			this.gameObject.transform.localPosition = Picker.initPos;
+			this.transform.parent = physics.parent;
 			Picker.initPos = Picker.clawPos;
 			Picker.dropPos.y = Picker.initPos.y;
+			this.gameObject.transform.localPosition = Picker.initPos;
 		}
-		this.fill.SetActive (true);
-		this.cover.SetActive (true);
+//		this.fill.SetActive (true);
+//		this.cover.SetActive (true);
 		this.fence.SetActive (false);
 
 		//初始化底部fence
@@ -383,35 +420,40 @@ public class Picker : MonoBehaviour
 		}
 		rigid.mass = 1;
 		rigid.drag = 1;
-		rigid.constraints = RigidbodyConstraints.FreezeRotationY;//RigidbodyConstraints.FreezeRotationY|RigidbodyConstraints.FreezePositionY;
-		HingeJoint hinge = this.gameObject.GetComponent<HingeJoint> ();
-		if(hinge ==null)
-			hinge = this.gameObject.AddComponent<HingeJoint> ();
-		hinge.connectedBody = this.handler.GetComponent<Rigidbody> ();
-		hinge.anchor = //Picker.jointPos - Picker.initPos;
-			new Vector3(0,Picker.jointPos.y - Picker.clawPos.y,0);
-		//hinge.axis = Vector3.zero;
+		rigid.angularDrag = 1;
+		//rigid.constraints = RigidbodyConstraints.FreezeRotationY;//RigidbodyConstraints.FreezeRotationY|RigidbodyConstraints.FreezePositionY;
+		FixedJoint fJoint = this.gameObject.GetComponent<FixedJoint>();
+		if (fJoint == null)
+			fJoint = this.gameObject.AddComponent<FixedJoint> ();
+		fJoint.connectedBody = this.handler.GetComponent<Rigidbody> ();
+
+//		HingeJoint hinge = this.gameObject.GetComponent<HingeJoint> ();
+//		if(hinge ==null)
+//			hinge = this.gameObject.AddComponent<HingeJoint> ();
+//		hinge.connectedBody = this.handler.GetComponent<Rigidbody> ();
+//		hinge.anchor = new Vector3(0,1,0);
+		//hinge.anchor = new Vector3(0,Picker.jointPos.y - Picker.clawPos.y,0);
 	}
 	/// <summary>
 	/// Inits the fence.
 	/// </summary>
 	void initFence(){
 
-		this.hexagon_cell = this.gameObject.transform.Find ("hexagon_cell");
-		this.triangle_cell = this.gameObject.transform.Find ("triangle_cell");
-		this.slot = this.gameObject.transform.Find ("slot");
-		//remove mesh renderer
-		removeMeshRender(this.triangle_cell.gameObject);
-		removeMeshRender (this.hexagon_cell.gameObject);
-		invalidFence ();
+//		this.hexagon_cell = this.gameObject.transform.Find ("hexagon_cell");
+//		this.triangle_cell = this.gameObject.transform.Find ("triangle_cell");
+//		this.slot = this.gameObject.transform.Find ("slot");
+//		//remove mesh renderer
+//		removeMeshRender(this.triangle_cell.gameObject);
+//		removeMeshRender (this.hexagon_cell.gameObject);
+//		invalidFence ();
 	}
 	/// <summary>
 	/// Invalids the 多边形 fence.
 	/// </summary>
 	void invalidFence(){
-		this.hexagon_cell.gameObject.SetActive (false);
-		this.triangle_cell.gameObject.SetActive (false);
-		this.slot.gameObject.SetActive (false);
+//		this.hexagon_cell.gameObject.SetActive (false);
+//		this.triangle_cell.gameObject.SetActive (false);
+//		this.slot.gameObject.SetActive (false);
 	}
 	/// <summary>
 	/// Valids the 多边形 fence.
@@ -556,7 +598,7 @@ public class Picker : MonoBehaviour
 	/// </summary>
 	/// <param name="ball">Ball.</param>
 	void restorePhysics(BallBundle ball){
-		ball.Ball.transform.parent = this.gameObject.transform.parent.Find ("balls");//还原根节点
+		ball.Ball.transform.parent = this.ball_container;//还原根节点
 		Rigidbody rb = ball.Ball.GetComponent<Rigidbody> ();
 		rb.useGravity = true;
 		rb.constraints = RigidbodyConstraints.None;

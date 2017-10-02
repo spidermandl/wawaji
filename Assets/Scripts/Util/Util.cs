@@ -302,14 +302,7 @@ public class Util
 			if (Application.platform == RuntimePlatform.WindowsPlayer) {
 				return Application.streamingAssetsPath + "/";
 			}
-			if (AppConst.DebugMode) {
-				if (Application.isEditor) {
-					return Application.dataPath + "/StreamingAssets/";
-				}
-			}
-			return //Application.dataPath + "/StreamingAssets/lua/";
-				Application.dataPath + "/external/"; //pc runtime env
-			//"/Users/osondesmond/Documents/macRunner/";//mac export package
+			return Application.streamingAssetsPath + "/";
 		}
 	}
 
@@ -370,6 +363,7 @@ public class Util
 
 	public static void WriteToFile(string path, byte[] info)  
 	{  
+		//Debug.Log ("local path" + path);
 		//文件流信息  
 		//StreamWriter sw;  
 		Stream sw;  
@@ -411,20 +405,23 @@ public class Util
 	/// <summary>
 	/// 应用程序内容路径
 	/// </summary>
-	public static string AppContentPath() {
-		string path = string.Empty;
-		switch (Application.platform) {
-		case RuntimePlatform.Android:
-			path = "jar:file://" + Application.dataPath + "!/assets/";
-			break;
-		case RuntimePlatform.IPhonePlayer:
-			path = Application.dataPath + "/Raw/";
-			break;
-		default:
-			path = Application.dataPath + "/StreamingAssets/";
-			break;
+	public static string AppContentPath {
+		get{
+			string path = string.Empty;
+			switch (Application.platform) {
+			case RuntimePlatform.Android:
+				path = "jar:file://" + Application.dataPath + "!/assets/";
+				break;
+			case RuntimePlatform.IPhonePlayer:
+				path = Application.dataPath + "/Raw/";
+				break;
+			default:
+				path = Application.dataPath + "/StreamingAssets/";
+				break;
+			}
+			return path;
 		}
-		return path;
+
 	}
 
 	public static void Log(string str) {

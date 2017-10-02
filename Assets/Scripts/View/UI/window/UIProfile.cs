@@ -80,11 +80,7 @@ public class UIProfile : BaseWindow
 		UpdatesProxy u_proxy = UnityFacade.GetInstance().RetrieveProxy (UpdatesProxy.NAME) as UpdatesProxy;
 		u_proxy.loadPureIcon (this.contentPane.GetChild ("n18").asLoader,proxy.Pic);
 
-		Req_GetPrizeInfo request = new Req_GetPrizeInfo();
-		request.UserId = PlayerPrefs.GetInt (LocalKey.USERID, 0);
-		request.Token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
-		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
-
+		refreshList ();
 		base.OnInit ();
 	}
 
@@ -129,6 +125,10 @@ public class UIProfile : BaseWindow
 	public void refreshList(){
 		UserPrizeInfoProxy proxy =UnityFacade.GetInstance().RetrieveProxy (UserPrizeInfoProxy.NAME) as UserPrizeInfoProxy;
 		if (proxy == null) {
+			Req_GetPrizeInfo request = new Req_GetPrizeInfo();
+			request.UserId = PlayerPrefs.GetInt (LocalKey.USERID, 0);
+			request.Token = PlayerPrefs.GetString (LocalKey.TOKEN, null);
+			UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 			return;
 		}
 		this.items = proxy.Items;

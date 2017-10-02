@@ -10,6 +10,8 @@ public abstract class BaseRewardsCom
 	protected GComponent open;//认领奖品
 	protected GComponent close;//已经获得奖品
 
+	protected UICommon warn;
+
 	public BaseRewardsCom (GComponent open,GComponent close,UserPrizeInfoProxy.PrizeItem item)
 	{
 		this.open = open;
@@ -30,6 +32,15 @@ public abstract class BaseRewardsCom
 
 	public abstract void validateUI ();
 
+
+	protected void warning(string content){
+		if (warn == null) {
+			warn = new UICommon ();
+		}
+		warn.Show ();
+		warn.Title.text = "输入信息不完整";
+		warn.Content.text = content;
+	}
 }
 
 

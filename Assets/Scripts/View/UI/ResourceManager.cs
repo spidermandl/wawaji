@@ -40,9 +40,8 @@ public class ResourceManager : MonoBehaviour
 		_items = new List<LoadItem>();
 		_pool = new Hashtable();
 		_basePath = Util.DataPath;//Application.streamingAssetsPath.Replace("\\", "/") + "/fairygui-examples/";
-		if (Application.platform != RuntimePlatform.Android)
-			_basePath = "file:///" + _basePath;
-
+		_basePath = "file://" + _basePath;
+		
 		StartCoroutine(FreeIdleIcons());
 	}
 
@@ -94,6 +93,7 @@ public class ResourceManager : MonoBehaviour
 
 
 			string url = (item.entry.is_new == 0) ? _basePath+item.entry.local_path : item.entry.pic_path;
+			//Debug.Log (url);
 			WWW www = new WWW(url);
 			yield return www;
 

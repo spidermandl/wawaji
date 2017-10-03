@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
 			this._3dCamera.transform.RotateAround(Vector3.zero,Vector3.up,-90);
 
 
-		GameObject root = this.gameObject.transform.Find ("structure/Player").gameObject;
+		GameObject root = this.gameObject.transform.Find ("structure/physics/Player").gameObject;
 		Picker p = root.GetComponent (typeof(Picker)) as Picker;
 		if ( p!= null) {
 			p.initConfig ();
@@ -325,13 +325,7 @@ public class GameManager : MonoBehaviour
 	public bool isIdle(){
 		return this.picker.isIdle ()&&cameraStateMachine.State == States.Still;
 	}
-	/// <summary>
-	/// 初始化娃娃机
-	/// </summary>
-	/// <param name="isBall">If set to <c>true</c> is ball.</param>
-	public void resetPicker(){
-		this.picker.initPicker ();
-	}
+
 	/// <summary>
 	/// Rotates the camera.
 	/// </summary>
@@ -454,20 +448,5 @@ public class GameManager : MonoBehaviour
 		}
 		return drops.ToArray ();
 	}
-
-	/// <summary>
-	/// Gets the picked ball types.
-	/// </summary>
-	/// <returns>The picked ball types.</returns>
-	/// <param name="picked_balls">Picked balls.</param>
-//	public GameBallProxy.BallsItem[] getPickedBallTypes(List<GameObject> picked_balls){
-//		GameBallProxy.BallsItem[] result = new GameBallProxy.BallsItem[picked_balls.Count];
-//		for (int i=0;i< picked_balls.Count-1;i++) {
-//			GameBallProxy.BallsItem t =balls [picked_balls[i].transform];
-//			result [i] = t;
-//		}
-//
-//		return result;
-//	}
 }
 

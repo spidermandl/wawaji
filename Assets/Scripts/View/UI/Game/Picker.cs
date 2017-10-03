@@ -105,7 +105,7 @@ public class Picker : MonoBehaviour
 		this.pickRange = this.gameObject.transform.Find ("picking_range").gameObject;
 		this.ball_objs = this.gameObject.transform.Find ("balls");
 
-		this.physics = this.transform.parent.Find ("physics");
+		this.physics = this.transform.parent;
 		this.joint = this.physics.parent.Find ("joint");
 		////////////////////////////////////////////////////////
 		//生成每个抓脚的根节点,初始化所有抓脚
@@ -277,8 +277,12 @@ public class Picker : MonoBehaviour
 	}
 
 	public void Up_Enter(){
-		sortBallsByDistance ();
+		sortBallsByDistance ();//距离由远及近
+
+		informPickedBalls ();
 		StartCoroutine (dropExcessBall ());
+		StartCoroutine (dropBallByType ());
+		StartCoroutine (confirmDrops ());
 	}
 	public void Up_FixedUpdate(){
 		//移动速度1
@@ -318,8 +322,8 @@ public class Picker : MonoBehaviour
 		Vector3 dir = Picker.dropPos - handler.localPosition;
 		float dis = (float)Math.Sqrt (dir.x * dir.x + dir.y * dir.y + dir.z * dir.z);
 		this.releaseDirection = new Vector3 (dir.x/dis,dir.y/dis,dir.z/dis);
-		StartCoroutine (dropBallByType ());
-		StartCoroutine (confirmDrops ());
+//		StartCoroutine (dropBallByType ());
+//		StartCoroutine (confirmDrops ());
 	}
 	public void Ship_FixedUpdate(){
 		Vector3 delta = new Vector3(
@@ -353,7 +357,7 @@ public class Picker : MonoBehaviour
 		AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
 		// 判断动画是否播放完成
 		if (info.IsName("release_3")&&info.normalizedTime >= 1.0f){
-			this.pickerStateMachine.ChangeState (States.Still);
+			this.pickerStateMachine.ChangeState (States.Init);
 		}
 	}
 	public IEnumerator Release_Exit(){
@@ -475,11 +479,11 @@ public class Picker : MonoBehaviour
 					yield return new WaitForSeconds (0.2f);
 				}
 			}
-			List<GameObject> bs = new List<GameObject> ();
-			for (int i = this.picked_balls.Count - 1; i >= 0; i--) {
-				bs.Add (this.picked_balls [i].Ball);
-			}
-			this._checkResultBall (bs);
+//			List<GameObject> bs = new List<GameObject> ();
+//			for (int i = this.picked_balls.Count - 1; i >= 0; i--) {
+//				bs.Add (this.picked_balls [i].Ball);
+//			}
+//			this._checkResultBall (bs);
 		} else {//无网络情况逻辑
 			yield return dropBallByOdds();
 		}
@@ -499,7 +503,7 @@ public class Picker : MonoBehaviour
 			int[] drops = _checkRemainingBall (bs);
 			BallBundle[] drop_balls = new BallBundle[drops.Length];
 			for (int i = 0; i < drops.Length; i++) {
-				BallBundle b = this.picked_balls [i];
+				BallBundle b = this.picked_balls [drops[i]];
 				drop_balls [i] = b;
 				restorePhysics (b);
 				yield return new WaitForSeconds (0.2f);
@@ -507,9 +511,30 @@ public class Picker : MonoBehaviour
 			for (int i = 0; i < drop_balls.Length; i++) {
 				this.picked_balls.Remove (drop_balls[i]);
 			}
+			//切换球的碰撞层
+			for(int i = 0; i < picked_balls.Count; i++){
+				GameObject ball = this.picked_balls [i].Ball;
+				ball.layer = LayerMask.NameToLayer("Hang");
+				Rigidbody rb = ball.GetComponent<Rigidbody> ();
+				rb.useGravity = true;
+				rb.constraints = RigidbodyConstraints.None;
+			}
 		}
 	}
-
+	/// <summary>
+	/// 提交服务器抓住的球
+	/// </summary>
+	void informPickedBalls(){
+		///////////网络请求掉球结果//////////////////
+		List<GameObject> bs = new List<GameObject> ();
+		for (int i = 0; i <3; i++) {
+			int size = this.picked_balls.Count-1;
+			if(size-i>0)
+				bs.Add (this.picked_balls [size-i].Ball);
+		}
+		this._checkResultBall (bs);
+		//////////////////////////////////////////
+	}
 	/// <summary>
 	/// 移动过程按概率掉落
 	/// </summary>
@@ -565,11 +590,15 @@ public class Picker : MonoBehaviour
 	/// <param name="ball">Ball.</param>
 	void restorePhysics(BallBundle ball){
 		ball.Ball.transform.parent = this.ball_container;//还原根节点
+		ball.Ball.layer = LayerMask.NameToLayer("Ball");
 		Rigidbody rb = ball.Ball.GetComponent<Rigidbody> ();
 		rb.useGravity = true;
 		rb.constraints = RigidbodyConstraints.None;
 	}
-
+	/// <summary>
+	/// 去抓脚物理，确保掉球
+	/// </summary>
+	/// <returns>The drops.</returns>
 	IEnumerator confirmDrops(){
 		yield return new WaitForSeconds(1);
 		for (int i = 0; i < this.legs; i++) {
@@ -618,7 +647,7 @@ public class Picker : MonoBehaviour
 	/// 服务器最终掉落确认
 	/// </summary>
 	public void serverConfirmDrop(){
-		if (this.pickerStateMachine.State != States.Ship) {
+		if (this.pickerStateMachine.State != States.Ship && this.pickerStateMachine.State != States.Up) {
 			return;
 		}
 

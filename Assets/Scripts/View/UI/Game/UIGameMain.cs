@@ -291,7 +291,6 @@ public class UIGameMain : UIMain
 					}
 					else{
 						proxy.CountDown = proxy.CountDown-1;
-						this.gameManager.resetPicker();
 					}
 				});
 			}
@@ -303,7 +302,7 @@ public class UIGameMain : UIMain
 		if (answer.type == 0) {
 			if (_confirmWin == null) {
 				_confirmWin = new UIConfirm ();
-				//关闭登录对话框
+				//进入领奖界面
 				_confirmWin.setConfirmClick(()=>{
 					this.changeUIpage (typeof(UIRewardsMain));
 
@@ -315,7 +314,6 @@ public class UIGameMain : UIMain
 						UnityFacade.GetInstance ().SendNotification (GameCommand.COMMAND, new GameCommand.GameRestart ());
 					} else {
 						proxy.CountDown = proxy.CountDown - 1;
-						this.gameManager.resetPicker ();
 
 					}
 				});
@@ -338,7 +336,6 @@ public class UIGameMain : UIMain
 				}
 				else{
 					proxy.CountDown = proxy.CountDown-1;
-					this.gameManager.resetPicker();
 
 				}
 			});

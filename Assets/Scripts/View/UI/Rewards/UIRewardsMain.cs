@@ -47,21 +47,46 @@ public class UIRewardsMain : UIMain
 		b_claim = _mainView.GetChild ("n24").asButton;
 		b_exchange = _mainView.GetChild("n22").asButton;
 		b_buyback = _mainView.GetChild("n23").asButton;
-		b_claim.onChanged.Add (()=>{
-			if(b_claim.selected){
-				_claim.validateUI();
-			}
-		});
-		b_exchange.onChanged.Add (()=>{
-			if(b_exchange.selected){
-				_exchange.validateUI();
-			}
-		});
-		b_buyback.onChanged.Add (()=>{
-			if(b_buyback.selected){
-				_buyback.validateUI();
-			}
-		});
+
+		switch (prizeItem.status) {
+		//1:待领取,2:已领取,3:已兑换,4:已回购
+		case 1:
+			b_claim.onChanged.Add (()=>{
+				if(b_claim.selected){
+					_claim.validateUI();
+				}
+			});
+			b_exchange.onChanged.Add (()=>{
+				if(b_exchange.selected){
+					_exchange.validateUI();
+				}
+			});
+			b_buyback.onChanged.Add (()=>{
+				if(b_buyback.selected){
+					_buyback.validateUI();
+				}
+			});
+			break;
+		case 2:
+			b_claim.selected = true;
+			b_claim.touchable = false;
+			b_exchange.touchable = false;
+			b_buyback.touchable = false;
+			break;
+		case 3:
+			b_exchange.selected = true;
+			b_claim.touchable = false;
+			b_exchange.touchable = false;
+			b_buyback.touchable = false;
+			break;
+		case 4:
+			b_buyback.selected = true;
+			b_claim.touchable = false;
+			b_exchange.touchable = false;
+			b_buyback.touchable = false;
+			break;
+		}
+
 
 	}
 

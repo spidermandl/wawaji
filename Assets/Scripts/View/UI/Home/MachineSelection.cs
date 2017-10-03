@@ -115,13 +115,16 @@ public class MachineSelection
 		ScrollToNext(item_index);
 	}
 
-	void onClickCoin(){
-		action = Action.COIN;
-	}
-
 	void onCoinClick(){
 		action = Action.COIN;
-		machine_list = m_proxy.getListByCoin (m_proxy.Selection.coin);
+		int coin = 1;
+		if (b_coin_1.selected)
+			coin = 1;
+		else if (b_coin_5.selected)
+			coin = 5;
+		else if (b_coin_10.selected)
+			coin = 10;
+		machine_list = m_proxy.getListByCoin (coin);
 		m_proxy.Selection = machine_list [0];
 		updateCoinSelection ();
 	}

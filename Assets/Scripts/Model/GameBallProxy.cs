@@ -46,11 +46,6 @@ public class GameBallProxy : BaseProxy {
 		return this.ball_arr;
 	}
 	//最终的抓球结果
-//	int[] ball_result;
-//	public int[] getBallResult(){
-//		return this.ball_result;
-//	}
-	//最终的抓球结果
 	Answer result;
 	public Answer Result{
 		get{return this.result;}
@@ -186,6 +181,7 @@ public class GameBallProxy : BaseProxy {
 			u_item.status = 1;
 
 			proxy.SelectedItem = u_item;
+			proxy.Items.Add (u_item);//加入奖品列表
 
 		} else {
 			answer.coin = meta.data.info.coin;

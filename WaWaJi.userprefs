@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/UI/Game/Picker.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Util/JsonHelper.cs">
     <Files>
       <File FileName="Assets/Scripts/Main.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/BaseProxy.cs" Line="1" Column="1" />
@@ -42,7 +42,6 @@
       <File FileName="Assets/Scripts/View/UI/Enter/UIRegisterWin.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/NoticeMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Game/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/Game/Picker.cs" Line="386" Column="59" />
       <File FileName="Assets/Scripts/View/UI/Game/UIGameMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/UIMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Game/UIConfirm.cs" Line="1" Column="1" />
@@ -62,7 +61,7 @@
       <File FileName="Assets/Scripts/Model/Network/HttpClient.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Util/TXTReader.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Util/Util.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/UpdatesProxy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/UpdatesProxy.cs" Line="51" Column="39" />
       <File FileName="Assets/Scripts/Command/HttpReqCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/NewsProxy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/PrizeSetProxy.cs" Line="1" Column="1" />
@@ -70,7 +69,7 @@
       <File FileName="Assets/Scripts/View/UI/Home/UIHomeMain.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Enter/UIBaseVerifyWin.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/Prize/UIPrizeMain.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UI/Rewards/UIRewardsMain.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/Rewards/UIRewardsMain.cs" Line="103" Column="2" />
       <File FileName="Assets/Scripts/View/UI/window/UIExchangeConfirm.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/PrizeMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Command/HttpResCommand.cs" Line="1" Column="1" />
@@ -97,6 +96,12 @@
       <File FileName="Assets/Scripts/View/UI/window/UICommon.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/UI/window/UISetting.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Config/AppConst.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/Api/Request/Req_MachineEndGrab.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/Home/MachineSelection.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/Game/Picker.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/UI/Rewards/ExchangeComponent.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/UserPrizeInfoProxy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Util/JsonHelper.cs" Line="27" Column="61" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -104,6 +109,7 @@
       <Breakpoint file="/Users/Desmond/Desktop/WaWaJi/Assets/Scripts/Model/Api/Request/Req_UserRegisterSendMsg.cs" line="48" column="1" />
       <Breakpoint file="/Users/Desmond/Desktop/WaWaJi/Assets/Scripts/Model/UpdatesProxy.cs" line="417" column="1" />
       <Breakpoint file="/Users/Desmond/Desktop/WaWaJi/Assets/Scripts/Model/UpdatesProxy.cs" line="406" column="1" />
+      <Breakpoint file="/Users/Desmond/Desktop/WaWaJi/Assets/Scripts/View/UI/Game/GameManager.cs" line="122" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

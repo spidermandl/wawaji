@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 用金币兑换奖品	用金币兑换奖品
@@ -45,14 +45,14 @@ public class Req_GetPrizeUseCoin :Request {
 		[Serializable]
 		public class Info
 		{
-			public int prize_coin;//兑换奖品的金币,前端从用户金币中扣除
+			public string prize_coin;//兑换奖品的金币,前端从用户金币中扣除
 		}
 	}
 
 	public override Request.Response parseLogicResponse(string json){
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_GetPrizeUseCoin.Response> (json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

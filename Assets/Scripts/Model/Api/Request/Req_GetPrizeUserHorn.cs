@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 获取小喇叭中奖列表	用于获取小喇叭中奖列表
@@ -43,7 +43,7 @@ public class Req_GetPrizeUserHorn :Request {
 	public override Request.Response parseLogicResponse(string json){
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_GetPrizeUserHorn.Response> (json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 使用奖品	使用奖品,领取/兑换/回购
@@ -99,7 +99,7 @@ public class Req_UsePrize :Request {
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_UsePrize.Response> (json);
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

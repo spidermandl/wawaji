@@ -50,13 +50,13 @@ public class MachinePrizeProxy : BaseProxy {
 		List<PrizeItem> list = new List<PrizeItem> ();
 		foreach(Req_GetMachinePrizeInfo.Response.Info info in meta.data.info ){
 			PrizeItem i = new PrizeItem ();
-			i.machine_type_id = info.machine_type_id;//娃娃机类型ID
-			i.machine_id = info.machine_id;//娃娃机ID
-			i.prize_id = info.prize_id;//奖品ID
-			i.ball_id = info.ball_id;//海洋球ID
+			i.machine_type_id = int.Parse(info.machine_type_id);//娃娃机类型ID
+			i.machine_id = int.Parse(info.machine_id);//娃娃机ID
+			i.prize_id = int.Parse(info.prize_id);//奖品ID
+			i.ball_id = int.Parse(info.ball_id);//海洋球ID
 			i.name = info.name;//奖品名称
-			i.price = info.price;//奖品价格
-			i.coin = info.coin;//奖品金币价格
+			i.price = int.Parse(info.price);//奖品价格
+			i.coin = int.Parse(info.coin);//奖品金币价格
 			i.p_pic = info.p_pic;//奖品图片
 			i.b_pic = info.b_pic;//海洋球图片
 			list.Add (i);

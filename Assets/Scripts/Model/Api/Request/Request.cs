@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /** $token = 'Your Token Here …';
@@ -126,11 +126,11 @@ public abstract class Request {
 				_response = new Exception();
 			_response.Req =this;
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			try{
 				_response = JsonHelper.DeserializeJsonToObject<Request.Error> (json);
 				_response.Req =this;
-			}catch(JsonSerializationException e1){
+			}catch(JsonException e1){
 				_response = JsonHelper.DeserializeJsonToObject<Request.Exception> (json);
 				_response.Req =this;
 			}

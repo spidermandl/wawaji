@@ -14,4 +14,6 @@ public class Main : MonoBehaviour {
 	public void GotoNextScene () {
 		SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex + 1);
 	}
+
+
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 用于发送用户注册短信
@@ -57,7 +57,7 @@ public class Req_UserForgetPsdSendMsg :Request {
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_UserForgetPsdSendMsg.Response> (json);
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

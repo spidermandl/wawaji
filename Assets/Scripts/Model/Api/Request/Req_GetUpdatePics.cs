@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 开始游戏	用于判断用户金币是否满足游戏,开始游戏
@@ -64,7 +64,7 @@ public class Req_GetUpdatePics :Request {
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_GetUpdatePics.Response> (json);
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

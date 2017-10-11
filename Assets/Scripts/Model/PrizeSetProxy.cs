@@ -48,10 +48,10 @@ public class PrizeSetProxy : BaseProxy {
 		List<PrizeItem> items = new List<PrizeItem> ();
 		foreach(Req_GetAllPrize.Response.Info info in meta.data.info ){
 			PrizeItem i = new PrizeItem ();
-			i.id = info.id;
+			i.id = int.Parse(info.id);
 			i.name = info.name;
-			i.price = info.price;
-			i.coin = info.coin;
+			i.price = int.Parse(info.price);
+			i.coin = int.Parse(info.coin);
 			i.pic = info.pic;
 			i.desc = info.desc;
 			items.Add (i);

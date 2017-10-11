@@ -61,14 +61,14 @@ public class UserPrizeInfoProxy : BaseProxy {
 		List<PrizeItem> items = new List<PrizeItem> ();
 		foreach(Req_GetPrizeInfo.Response.Info info in meta.data.info ){
 			PrizeItem i = new PrizeItem ();
-			i.id = info.id;
-			i.prize_id = info.prize_id;
+			i.id = int.Parse(info.id);
+			i.prize_id = int.Parse(info.prize_id);
 			i.name = info.name;
 			i.price = info.price;
-			i.coin = info.coin;
+			i.coin = int.Parse(info.coin);
 			i.pic = info.pic;
 			i.desc = info.desc;
-			i.status = info.status;//奖品状态(1:待领取,2:已领取,3:已兑换,4:已回购)
+			i.status = int.Parse(info.status);//奖品状态(1:待领取,2:已领取,3:已兑换,4:已回购)
 			items.Add (i);
 		}
 

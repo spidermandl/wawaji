@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-
+using LitJson;
 /// <summary>
 /// 获取游戏说明,注意事项;用于获取游戏说明,注意事项
 /// </summary>

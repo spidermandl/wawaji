@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 用户退出	用于用户退出登录
@@ -41,7 +41,7 @@ public class Req_UserRecharge :Request {
 	public override Request.Response parseLogicResponse(string json){
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_UserRecharge.Response> (json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 开始游戏	用于判断用户金币是否满足游戏,开始游戏
@@ -38,8 +39,8 @@ public class Req_MachineStartGrab :Request {
 		[Serializable]
 		public class Info
 		{
-			public int game_id;
-			public int[] ball_arr;//不可抓中的海洋球ID数组
+			public string game_id;
+			public List<string> ball_arr;//不可抓中的海洋球ID数组
 		}
 
 	}
@@ -47,7 +48,7 @@ public class Req_MachineStartGrab :Request {
 	public override Request.Response parseLogicResponse(string json){
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_MachineStartGrab.Response> (json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

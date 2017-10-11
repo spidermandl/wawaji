@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 获取游戏说明,注意事项;用于获取游戏说明,注意事项
@@ -33,7 +33,7 @@ public class Req_GetNewsLists :Request {
 		[Serializable]
 		public class Info
 		{
-			public int id;
+			public string id;
 			public string type_title;//新闻类型
 			public string title;//新闻标题
 			public string cont;//新闻内容
@@ -46,7 +46,7 @@ public class Req_GetNewsLists :Request {
 	public override Request.Response parseLogicResponse(string json){
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_GetNewsLists.Response> (json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

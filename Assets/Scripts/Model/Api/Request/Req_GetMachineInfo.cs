@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 ///获取娃娃机列表信息	用于获取娃娃机列表信息
@@ -35,22 +35,22 @@ public class Req_GetMachineInfo :Request {
 		public class Info
 		{
 			public string name;
-			public int machine_type_id;
+			public string machine_type_id;
 			public Machine[] machine;
 		}
 
 		[Serializable]
 		public class Machine
 		{
-			public int coin;
-			public int machine_id;
+			public string coin;
+			public string machine_id;
 		} 
 	}
 
 	public override Request.Response parseLogicResponse(string json){
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_GetMachineInfo.Response> (json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

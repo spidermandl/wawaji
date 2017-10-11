@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 获取登录页/奖品中心中奖列表	用于获取中奖列表,可选参数:娃娃机类型ID(手机场,黄金城)
@@ -40,12 +40,12 @@ public class Req_GetPrizeUserLists : Request {
 		[Serializable]
 		public class Info
 		{
-			public int user_id;
+			public string user_id;
 			public string pic;
 			public string phone;
-			public int type;
+			public string type;
 			public string user_name;
-			public int prize_id;
+			public string prize_id;
 			public string name;
 		}
 	}
@@ -53,7 +53,7 @@ public class Req_GetPrizeUserLists : Request {
 	public override Request.Response parseLogicResponse(string json){
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_GetPrizeUserLists.Response> (json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

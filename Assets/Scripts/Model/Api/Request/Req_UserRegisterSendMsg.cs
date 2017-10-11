@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 用户注册发送短信
@@ -52,7 +52,7 @@ public class Req_UserRegisterSendMsg :Request {
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_UserRegisterSendMsg.Response> (json);
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

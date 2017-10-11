@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 /// <summary>
 /// 获取用户实物中奖信息	用于获取单个用户实物中奖信息
 /// </summary>
@@ -36,7 +36,7 @@ public class Req_UserLogout :Request {
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_UserLogout.Response> (json);
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

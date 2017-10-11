@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 开始游戏	用于判断用户金币是否满足游戏,开始游戏
@@ -50,7 +50,7 @@ public class Req_MachineEndGrab :Request {
 		public class Info
 		{
 			public int coin;//抓中海洋球的金币数(ball_arr为空时生效)
-			public int[] ball_arr;//抓中的海洋球ID数组(只有一个值)
+			public string[] ball_arr;//抓中的海洋球ID数组(只有一个值)
 			public int user_prize_log_id;//实物奖品中奖记录(抓中实物奖品时生效)
 		}
 
@@ -59,7 +59,7 @@ public class Req_MachineEndGrab :Request {
 	public override Request.Response parseLogicResponse(string json){
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_MachineEndGrab.Response> (json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

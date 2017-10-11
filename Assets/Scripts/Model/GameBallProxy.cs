@@ -101,16 +101,16 @@ public class GameBallProxy : BaseProxy {
 		List<BallsItem> items = new List<BallsItem> ();
 		foreach(Req_GetMachinePrizeBallData.Response.Info ball in meta.data.info ){
 			BallsItem b = new BallsItem ();
-			b.prize_id = ball.prize_id;
-			b.ball_id = ball.ball_id;
+			b.prize_id = int.Parse(ball.prize_id);
+			b.ball_id = int.Parse(ball.ball_id);
 			b.name = ball.name;
-			b.price = ball.price;
-			b.coin = ball.coin;
+			b.price = int.Parse(ball.price);
+			b.coin = int.Parse(ball.coin);
 			b.p_pic = ball.p_pic;
 			b.b_pic = ball.b_pic;
-			b.is_matter = ball.is_matter;
+			b.is_matter = int.Parse(ball.is_matter);
 			b.ball_num = ball.ball_num;
-			b.refresh_time = ball.refresh_time;
+			b.refresh_time = int.Parse(ball.refresh_time);
 
 			this.countDown = b.refresh_time;
 			items.Add (b);
@@ -124,9 +124,12 @@ public class GameBallProxy : BaseProxy {
 	/// </summary>
 	/// <param name="meta">Meta.</param>
 	public void bindingData(Req_MachineStartGrab.Response meta){
-		GameId = meta.data.info.game_id;
-		int[] copy = new int[meta.data.info.ball_arr.Length];
-		Array.Copy (meta.data.info.ball_arr, copy, copy.Length);
+		GameId = int.Parse(meta.data.info.game_id);
+		int[] copy = new int[meta.data.info.ball_arr.Count];
+		for (int i = 0; i < copy.Length; i++) {
+			copy [i] = int.Parse(meta.data.info.ball_arr [i]);
+		}
+		//Array.Copy (meta.data.info.ball_arr, copy, copy.Length);
 		this.ball_arr = copy;
 
 		//更新金币
@@ -156,7 +159,7 @@ public class GameBallProxy : BaseProxy {
 		bool isPrize = false;
 		for (int i = 0; i < len; i++) {
 			foreach(BallsItem item in items){
-				if (meta.data.info.ball_arr[i] == item.ball_id) {
+				if (int.Parse(meta.data.info.ball_arr[i]) == item.ball_id) {
 					res [i] = item;
 					if (item.is_matter == 1) {
 						prize_index = i;

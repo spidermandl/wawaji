@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using Newtonsoft.Json;
+using LitJson;
 
 /// <summary>
 /// 获取用户实物中奖信息	用于获取单个用户实物中奖信息
@@ -34,10 +34,10 @@ public class Req_GetAllPrize :Request {
 		[Serializable]
 		public class Info
 		{
-			public int id;//奖品ID
+			public string id;//奖品ID
 			public string name;//奖品名称
-			public int price;//奖品价格
-			public int coin;//奖品金币价格
+			public string price;//奖品价格
+			public string coin;//奖品金币价格
 			public string pic;//奖品图片
 			public string desc;//奖品描述
 		}
@@ -47,7 +47,7 @@ public class Req_GetAllPrize :Request {
 		try{
 			return JsonHelper.DeserializeJsonToObject<Req_GetAllPrize.Response> (json);
 			//base._response = JsonUtility.FromJson<Req_GetUpdatePics.Response>(json);
-		}catch(JsonSerializationException e){
+		}catch(JsonException e){
 			throw e;
 		}
 	}

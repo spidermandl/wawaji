@@ -47,7 +47,7 @@ public class NewsProxy : BaseProxy {
 		List<NewsItem> items = new List<NewsItem> ();
 		foreach(Req_GetNewsLists.Response.Info info in meta.data.info ){
 			NewsItem i = new NewsItem ();
-			i.id = info.id;
+			i.id = int.Parse(info.id);
 			i.type_title = info.type_title;
 			i.title = info.title;
 			i.cont = info.cont;

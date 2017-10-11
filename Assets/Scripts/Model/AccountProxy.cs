@@ -90,14 +90,14 @@ public class AccountProxy : BaseProxy {
 			UnityFacade.GetInstance ().RemoveProxy (AccountProxy.NAME);
 			return;
 		}
-		this.Id = meta.data.info.id;
-		this.Type = meta.data.info.type;
+		this.Id = int.Parse(meta.data.info.id);
+		this.Type = int.Parse(meta.data.info.type);
 		this.Name = meta.data.info.name;
 		this.Phone = meta.data.info.phone;
 		this.Nickname = meta.data.info.nickname;
 		this.Pic = meta.data.info.pic;
 		this.Wxid = meta.data.info.wxid;
-		this.Coin = meta.data.info.coin;
+		this.Coin = int.Parse(meta.data.info.coin);
 		this.Uuid = meta.data.info.uuid;
 		this.Token = meta.data.info.token;
 
@@ -120,7 +120,7 @@ public class AccountProxy : BaseProxy {
 	/// <param name="meta">Meta.</param>
 	public void bindingData(Req_GetPrizeUseCoin.Response meta){
 		if(meta.data.code == 0){
-			changeCoin (-meta.data.info.prize_coin);
+			changeCoin (-int.Parse(meta.data.info.prize_coin));
 		}
 	}
 

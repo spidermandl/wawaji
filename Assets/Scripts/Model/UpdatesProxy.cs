@@ -106,23 +106,23 @@ public class UpdatesProxy : BaseProxy {
 		serverVersion = online;
 		if (!online.Version.Equals(online.getOnlineVersion())) {
 			foreach (Req_GetUpdatePics.Response.Entry e in online.getBall()) {
-				if (!memVersion.ball.ContainsKey (e.id)) {
-					memVersion.ball.Add (e.id, new MemoryVersion.Entry ());
+				if (!memVersion.ball.ContainsKey (e.id.ToString())) {
+					memVersion.ball.Add (e.id.ToString(), new MemoryVersion.Entry ());
 				}
-				memVersion.ball [e.id].is_new = 1;
-				memVersion.ball [e.id].pic = e.pic;
-				memVersion.ball [e.id].pic_path = e.pic_path;
-				memVersion.ball [e.id].type = Convert.ToInt32(MemoryVersion.RES_TYPE.BALL);
+				memVersion.ball [e.id.ToString()].is_new = 1;
+				memVersion.ball [e.id.ToString()].pic = e.pic;
+				memVersion.ball [e.id.ToString()].pic_path = e.pic_path;
+				memVersion.ball [e.id.ToString()].type = Convert.ToInt32(MemoryVersion.RES_TYPE.BALL);
 
 			}
 			foreach (Req_GetUpdatePics.Response.Entry e in online.getPrize()) {
-				if (!memVersion.prize.ContainsKey (e.id)) {
-					memVersion.prize.Add (e.id, new MemoryVersion.Entry ());
+				if (!memVersion.prize.ContainsKey (e.id.ToString())) {
+					memVersion.prize.Add (e.id.ToString(), new MemoryVersion.Entry ());
 				}
-				memVersion.prize [e.id].is_new = 1;
-				memVersion.prize [e.id].pic = e.pic;
-				memVersion.prize [e.id].pic_path = e.pic_path;
-				memVersion.ball [e.id].type = Convert.ToInt32(MemoryVersion.RES_TYPE.PRIZE);
+				memVersion.prize [e.id.ToString()].is_new = 1;
+				memVersion.prize [e.id.ToString()].pic = e.pic;
+				memVersion.prize [e.id.ToString()].pic_path = e.pic_path;
+				memVersion.ball [e.id.ToString()].type = Convert.ToInt32(MemoryVersion.RES_TYPE.PRIZE);
 
 			}
 		}
@@ -184,7 +184,7 @@ public class UpdatesProxy : BaseProxy {
 	/// Gets the local version.
 	/// </summary>
 	/// <returns>The local version.</returns>
-	public string getLocalVersion(){
+	public int getLocalVersion(){
 		return localVersion.version;
 	}
 
@@ -194,6 +194,8 @@ public class UpdatesProxy : BaseProxy {
 	/// <param name="loader">Loader.</param>
 	/// <param name="id">Identifier.</param>
 	public void loadBallIcon(GLoader loader,string id){
+		if (!memVersion.ball.ContainsKey (id))
+			return;
 		MemoryVersion.Entry entry = memVersion.ball [id];
 		if (entry != null) {
 			loadIcon (loader, entry);
@@ -205,6 +207,8 @@ public class UpdatesProxy : BaseProxy {
 	/// <param name="loader">Loader.</param>
 	/// <param name="id">Identifier.</param>
 	public void loadPrizeIcon(GLoader loader,string id){
+		if (!memVersion.prize.ContainsKey (id))
+			return;
 		MemoryVersion.Entry entry = memVersion.prize [id];
 		if (entry != null) {
 			loadIcon (loader, entry);
@@ -258,11 +262,11 @@ public class UpdatesProxy : BaseProxy {
 	[Serializable]
 	public class ResVersion{
 
-		public string version;
+		public int version;
 		public Data data;
 
 		public ResVersion(){
-			version = "1";
+			version = 1;
 			data = new Data();
 		}
 

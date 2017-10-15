@@ -4,6 +4,7 @@ using FairyGUI;
 using UnityEngine;
 using System.Collections;
 using PureMVC.Interfaces;
+using System.Runtime.InteropServices;
 
 public class UIEnterMain : UIMain
 {
@@ -278,7 +279,7 @@ public class UIEnterMain : UIMain
 			} 
 			break;
 		case RuntimePlatform.IPhonePlayer:
-			
+			startIOSLogin ();
 			break;
 		default:
 			RespondWechatLogin ("061X7UW30hPz1F1dDxV30QdYW30X7UWk");
@@ -295,6 +296,9 @@ public class UIEnterMain : UIMain
 		DeviceInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (DeviceInfoProxy.NAME) as DeviceInfoProxy;
 		return proxy.Uuid;
 	}
+
+	[DllImport( "__Internal" )]
+	private static extern void startIOSLogin ();
 	/// <summary>
 	/// 发送短信倒计时
 	/// </summary>
@@ -493,5 +497,12 @@ public class UIEnterMain : UIMain
 		_loginWin.ValidLogin = false;
 	}
 
+	/// <summary>
+	/// Responds the IOSUUI.
+	/// </summary>
+	public void RespondIOSUUID(string uuid){
+		DeviceInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (DeviceInfoProxy.NAME) as DeviceInfoProxy;
+		proxy.Uuid = uuid;
+	}
 }
 

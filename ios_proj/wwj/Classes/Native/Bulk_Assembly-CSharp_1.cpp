@@ -1,0 +1,9522 @@
+﻿#include "il2cpp-config.h"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+#include <cstring>
+#include <string.h>
+#include <stdio.h>
+#include <cmath>
+#include <limits>
+#include <assert.h>
+
+#include "class-internals.h"
+#include "codegen/il2cpp-codegen.h"
+#include "mscorlib_System_Array3829468939.h"
+#include "AssemblyU2DCSharp_Req_GetExplainAttention_Response1828702727.h"
+#include "mscorlib_System_Void1841601450.h"
+#include "mscorlib_System_Object2689449295.h"
+#include "AssemblyU2DCSharp_Req_GetExplainAttention_Response1532822933.h"
+#include "AssemblyU2DCSharp_Req_GetMachineInfo3218704580.h"
+#include "mscorlib_System_String2029220233.h"
+#include "UnityEngine_UnityEngine_WWWForm3950226929.h"
+#include "AssemblyU2DCSharp_Request2032498015.h"
+#include "AssemblyU2DCSharp_Request_Response998287943.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_LitJson_JsonException613047007.h"
+#include "AssemblyU2DCSharp_Req_GetMachineInfo_Response3827549514.h"
+#include "AssemblyU2DCSharp_Req_GetMachineInfo_Response_Data266915901.h"
+#include "AssemblyU2DCSharp_Req_GetMachineInfo_Response_Info2975596095.h"
+#include "AssemblyU2DCSharp_Req_GetMachineInfo_Response_Mach1990010804.h"
+#include "AssemblyU2DCSharp_Req_GetMachinePrizeBallData2586177075.h"
+#include "AssemblyU2DCSharp_Req_GetMachinePrizeBallData_Respo231228995.h"
+#include "AssemblyU2DCSharp_Req_GetMachinePrizeBallData_Respo392954118.h"
+#include "AssemblyU2DCSharp_Req_GetMachinePrizeBallData_Resp1938835626.h"
+#include "AssemblyU2DCSharp_Req_GetMachinePrizeInfo784911668.h"
+#include "mscorlib_System_Int322071877448.h"
+#include "AssemblyU2DCSharp_Req_GetMachinePrizeInfo_Response3930883938.h"
+#include "AssemblyU2DCSharp_Req_GetMachinePrizeInfo_Response_D83466333.h"
+#include "AssemblyU2DCSharp_Req_GetMachinePrizeInfo_Response_446344683.h"
+#include "AssemblyU2DCSharp_Req_GetNewsLists2838141971.h"
+#include "AssemblyU2DCSharp_Req_GetNewsLists_Response3647484083.h"
+#include "AssemblyU2DCSharp_Req_GetNewsLists_Response_Data428545786.h"
+#include "AssemblyU2DCSharp_Req_GetNewsLists_Response_Info246977206.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeInfo503968863.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeInfo_Response1066063823.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeInfo_Response_Data1557559750.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeInfo_Response_Info2861521818.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUseCoin235174161.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUseCoin_Response4284099457.h"
+#include "mscorlib_System_RuntimeTypeHandle2330101084.h"
+#include "mscorlib_System_Type1303803226.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUseCoin_Response_Dat3152262302.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUseCoin_Response_Inf3515140334.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUserHorn664868319.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUserHorn_Response3772993143.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUserHorn_Response_Da2185002244.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUserLists3850485005.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUserLists_Response2934266941.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUserLists_Response_D1524650276.h"
+#include "AssemblyU2DCSharp_Req_GetPrizeUserLists_Response_I2653692112.h"
+#include "AssemblyU2DCSharp_Req_GetUpdatePics1118469089.h"
+#include "AssemblyU2DCSharp_Req_GetUpdatePics_Response2759531585.h"
+#include "AssemblyU2DCSharp_Req_GetUpdatePics_Response_Data760679892.h"
+#include "AssemblyU2DCSharp_Req_GetUpdatePics_Response_Info4275929356.h"
+#include "AssemblyU2DCSharp_Req_GetUpdatePics_Response_Entry2933429096.h"
+#include "AssemblyU2DCSharp_Request_Error2783916960.h"
+#include "AssemblyU2DCSharp_Request_Error_Data862910835.h"
+#include "AssemblyU2DCSharp_Req_GetUserForgetPsdVcode4197905561.h"
+#include "AssemblyU2DCSharp_Req_GetUserForgetPsdVcode_Respon1445710305.h"
+#include "AssemblyU2DCSharp_Req_GetUserForgetPsdVcode_Respons523521196.h"
+#include "AssemblyU2DCSharp_Req_MachineEndGrab2382967747.h"
+#include "AssemblyU2DCSharp_Req_MachineEndGrab_Response212491691.h"
+#include "AssemblyU2DCSharp_Req_MachineEndGrab_Response_Data1063157950.h"
+#include "AssemblyU2DCSharp_Req_MachineEndGrab_Response_Info3771838238.h"
+#include "AssemblyU2DCSharp_Req_MachineStartGrab3485909748.h"
+#include "AssemblyU2DCSharp_Req_MachineStartGrab_Response3053143294.h"
+#include "AssemblyU2DCSharp_Req_MachineStartGrab_Response_Da4074147771.h"
+#include "AssemblyU2DCSharp_Req_MachineStartGrab_Response_In4174904501.h"
+#include "AssemblyU2DCSharp_Req_RegisterVcode1322481501.h"
+#include "AssemblyU2DCSharp_Req_RegisterVcode_Response2628246429.h"
+#include "AssemblyU2DCSharp_Req_RegisterVcode_Response_Data3452493908.h"
+#include "AssemblyU2DCSharp_Req_UsePrize3632642040.h"
+#include "AssemblyU2DCSharp_Req_UsePrize_Response2813544250.h"
+#include "AssemblyU2DCSharp_Req_UsePrize_Response_Data762886835.h"
+#include "AssemblyU2DCSharp_Req_UserForgetPsdSendMsg1014197417.h"
+#include "AssemblyU2DCSharp_Req_UserForgetPsdSendMsg_Respons1073513569.h"
+#include "AssemblyU2DCSharp_Req_UserForgetPsdSendMsg_Response503888270.h"
+#include "AssemblyU2DCSharp_Req_UserForgetPsdSendMsg_Respons1942364742.h"
+#include "AssemblyU2DCSharp_Req_UserLogin496922837.h"
+#include "AssemblyU2DCSharp_Base_Req_UserInfo3817878412.h"
+#include "AssemblyU2DCSharp_Base_Req_UserInfo_Response1683355314.h"
+#include "AssemblyU2DCSharp_Base_Req_UserInfo_Response_Data705691545.h"
+#include "AssemblyU2DCSharp_Req_UserLogout3015962468.h"
+#include "AssemblyU2DCSharp_Req_UserLogout_Response165664278.h"
+#include "AssemblyU2DCSharp_Req_UserLogout_Response_Data2083464491.h"
+#include "AssemblyU2DCSharp_Req_UserRecharge3565060991.h"
+#include "AssemblyU2DCSharp_Req_UserRecharge_Response4250180471.h"
+#include "AssemblyU2DCSharp_Req_UserRecharge_Response_Data80454200.h"
+#include "AssemblyU2DCSharp_Req_UserRegister3135438179.h"
+#include "AssemblyU2DCSharp_Req_UserRegister_Response2045565979.h"
+#include "AssemblyU2DCSharp_Req_UserRegister_Response_Data463239420.h"
+#include "AssemblyU2DCSharp_Req_UserRegisterSendMsg485842282.h"
+#include "AssemblyU2DCSharp_Req_UserRegisterSendMsg_Response1370037692.h"
+#include "AssemblyU2DCSharp_Req_UserRegisterSendMsg_Response2639504221.h"
+#include "AssemblyU2DCSharp_Req_UserResetPsd1439768748.h"
+#include "AssemblyU2DCSharp_Req_UserResetPsd_Response4197083710.h"
+#include "AssemblyU2DCSharp_Req_UserResetPsd_Response_Data2228534131.h"
+#include "AssemblyU2DCSharp_Req_UserResetPsd_Response_Info2329290581.h"
+#include "AssemblyU2DCSharp_Request_Exception2103181915.h"
+#include "AssemblyU2DCSharp_ResourceManager4136494783.h"
+#include "UnityEngine_UnityEngine_MonoBehaviour1158329972.h"
+#include "UnityEngine_UnityEngine_Object1021602117.h"
+#include "UnityEngine_UnityEngine_GameObject1756533147.h"
+#include "mscorlib_System_Boolean3825574718.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen3290435963.h"
+#include "mscorlib_System_Collections_Hashtable909839986.h"
+#include "UnityEngine_UnityEngine_Coroutine2299508840.h"
+#include "AssemblyU2DCSharp_UpdatesProxy_MemoryVersion_Entry1644304703.h"
+#include "AssemblyU2DCSharp_ResourceManager_LoadCompleteCall3887379968.h"
+#include "AssemblyU2DCSharp_ResourceManager_LoadErrorCallbac1969330919.h"
+#include "AssemblyU2DCSharp_ResourceManager_SaveToDiskCallba1360640706.h"
+#include "AssemblyU2DCSharp_ResourceManager_LoadItem3921314831.h"
+#include "AssemblyU2DCSharp_ResourceManager_U3CRunU3Ec__Iter1127244418.h"
+#include "AssemblyU2DCSharp_ResourceManager_U3CFreeIdleIcons2798996140.h"
+#include "mscorlib_System_Collections_DictionaryEntry3048875398.h"
+#include "mscorlib_System_UInt322149682021.h"
+#include "mscorlib_System_Collections_ArrayList4252133567.h"
+#include "FairyGUI_FairyGUI_NTexture84202663.h"
+#include "UnityEngine_UnityEngine_WaitForSeconds3839502067.h"
+#include "mscorlib_System_Single2076509932.h"
+#include "mscorlib_System_NotSupportedException1793819818.h"
+#include "UnityEngine_UnityEngine_Texture2243626319.h"
+#include "mscorlib_System_Byte3683104436.h"
+#include "UnityEngine_UnityEngine_WWW2919945039.h"
+#include "UnityEngine_UnityEngine_Texture2D3542995729.h"
+#include "mscorlib_System_IntPtr2504060609.h"
+#include "mscorlib_System_AsyncCallback163412349.h"
+#include "AssemblyU2DCSharp_RewardsMediator1871400415.h"
+#include "AssemblyU2DCSharp_BaseMediator1205744884.h"
+#include "AssemblyU2DCSharp_UIRewardsMain1107937165.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_PureMVC_Patterns_Med2789785455.h"
+#include "mscorlib_System_Collections_Generic_List_1_gen1398341365.h"
+#include "AssemblyU2DCSharp_UIMain_ClickType51348848.h"
+#include "AssemblyU2DCSharp_RingFence3382043263.h"
+#include "UnityEngine_UnityEngine_Transform3275118058.h"
+#include "UnityEngine_UnityEngine_Vector32243707580.h"
+#include "UnityEngine_UnityEngine_Space4278750806.h"
+#include "UnityEngine_UnityEngine_Component3819376471.h"
+#include "mscorlib_System_Double4078015681.h"
+#include "AssemblyU2DCSharp_SocketClient718412134.h"
+#include "mscorlib_System_IO_Stream3255436806.h"
+#include "mscorlib_System_IO_MemoryStream743994179.h"
+#include "mscorlib_System_IO_BinaryReader2491843768.h"
+#include "mscorlib_System_Exception1927440687.h"
+#include "System_System_Net_Sockets_TcpClient408947970.h"
+#include "AssemblyU2DCSharp_ByteBuffer1012950836.h"
+#include "System_System_Net_Sockets_NetworkStream581172200.h"
+#include "mscorlib_System_IO_BinaryWriter3179371318.h"
+#include "mscorlib_System_UInt16986882611.h"
+#include "mscorlib_System_Int64909078037.h"
+#include "AssemblyU2DCSharp_DisType1929133216.h"
+#include "mscorlib_System_IO_SeekOrigin2475945306.h"
+#include "AssemblyU2DCSharp_AppConst3406236046.h"
+#include "AssemblyU2DCSharp_SocketCommand2127949346.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_PureMVC_Patterns_Com4249318299.h"
+#include "mscorlib_System_Collections_Generic_KeyValuePair_22073088989.h"
+#include "mscorlib_System_Collections_Generic_KeyValuePair_23749587448.h"
+#include "AssemblyU2DCSharp_StartUpCommand688340602.h"
+#include "AssemblyU2DCSharp_NetworkManager226491143.h"
+#include "AssemblyU2DCSharp_UnityFacade1495732005.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_PureMVC_Patterns_Obs1254524638.h"
+#include "AssemblyU2DCSharp_DeviceInfoProxy1172231466.h"
+#include "AssemblyU2DCSharp_HttpReqCommand3283257643.h"
+#include "System_Core_System_Func_1_gen2923916928.h"
+#include "AssemblyU2DCSharp_HttpResCommand3283050857.h"
+#include "AssemblyU2DCSharp_GameCommand2834858639.h"
+#include "AssemblyU2DCSharp_UserCommand2016101392.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_PureMVC_Patterns_Fac2945705138.h"
+#include "AssemblyU2DCSharp_TXTReader4273255191.h"
+#include "mscorlib_System_IO_StreamReader2360341767.h"
+#include "mscorlib_System_IO_TextReader1561828458.h"
+#include "mscorlib_System_Char3454481338.h"
+#include "mscorlib_System_IO_FileMode236403845.h"
+#include "mscorlib_System_Text_Encoding663144255.h"
+#include "mscorlib_System_IO_FileStream1695958676.h"
+#include "mscorlib_System_IO_StreamWriter3858580635.h"
+#include "mscorlib_System_IO_TextWriter4027217640.h"
+#include "AssemblyU2DCSharp_UIBaseVerifyWin1601586792.h"
+#include "AssemblyU2DCSharp_BaseWindow1983497523.h"
+#include "FairyGUI_FairyGUI_GObject2662234644.h"
+#include "FairyGUI_FairyGUI_GComponent4106136290.h"
+#include "FairyGUI_FairyGUI_Window252217058.h"
+#include "FairyGUI_FairyGUI_EventCallback0422277839.h"
+#include "FairyGUI_FairyGUI_EventListener2764096410.h"
+#include "FairyGUI_FairyGUI_GRichTextField3736523726.h"
+#include "AssemblyU2DCSharp_UICoinPrize4037221321.h"
+#include "UnityEngine_UnityEngine_Color2020392075.h"
+#include "FairyGUI_FairyGUI_UIConfig3001615142.h"
+#include "UnityEngine_UnityEngine_Vector22243707579.h"
+#include "DOTween_DG_Tweening_Tweener760404022.h"
+#include "DOTween_DG_Tweening_Ease2502520296.h"
+#include "DOTween_DG_Tweening_TweenCallback3697142134.h"
+#include "AssemblyU2DCSharp_UICommon1511081147.h"
+#include "FairyGUI_FairyGUI_GRoot2728525843.h"
+#include "FairyGUI_FairyGUI_GGraph1610186177.h"
+#include "AssemblyU2DCSharp_UIConfirm2687705270.h"
+#include "AssemblyU2DCSharp_UIConnection1947373274.h"
+
+// Req_GetExplainAttention/Response/Data
+struct Data_t1828702727;
+// System.Object
+struct Il2CppObject;
+// Req_GetExplainAttention/Response/Info
+struct Info_t1532822933;
+// Req_GetMachineInfo
+struct Req_GetMachineInfo_t3218704580;
+// Request
+struct Request_t2032498015;
+// System.String
+struct String_t;
+// UnityEngine.WWWForm
+struct WWWForm_t3950226929;
+// Request/Response
+struct Response_t998287943;
+// Req_GetMachineInfo/Response
+struct Response_t3827549514;
+// Req_GetMachineInfo/Response/Data
+struct Data_t266915901;
+// Req_GetMachineInfo/Response/Info
+struct Info_t2975596095;
+// Req_GetMachineInfo/Response/Machine
+struct Machine_t1990010804;
+// Req_GetMachinePrizeBallData
+struct Req_GetMachinePrizeBallData_t2586177075;
+// Req_GetMachinePrizeBallData/Response
+struct Response_t231228995;
+// Req_GetMachinePrizeBallData/Response/Data
+struct Data_t392954118;
+// Req_GetMachinePrizeBallData/Response/Info
+struct Info_t1938835626;
+// Req_GetMachinePrizeInfo
+struct Req_GetMachinePrizeInfo_t784911668;
+// Req_GetMachinePrizeInfo/Response
+struct Response_t3930883938;
+// Req_GetMachinePrizeInfo/Response/Data
+struct Data_t83466333;
+// Req_GetMachinePrizeInfo/Response/Info
+struct Info_t446344683;
+// Req_GetNewsLists
+struct Req_GetNewsLists_t2838141971;
+// Req_GetNewsLists/Response
+struct Response_t3647484083;
+// Req_GetNewsLists/Response/Data
+struct Data_t428545786;
+// Req_GetNewsLists/Response/Info
+struct Info_t246977206;
+// Req_GetPrizeInfo
+struct Req_GetPrizeInfo_t503968863;
+// Req_GetPrizeInfo/Response
+struct Response_t1066063823;
+// Req_GetPrizeInfo/Response/Data
+struct Data_t1557559750;
+// Req_GetPrizeInfo/Response/Info
+struct Info_t2861521818;
+// Req_GetPrizeUseCoin
+struct Req_GetPrizeUseCoin_t235174161;
+// Req_GetPrizeUseCoin/Response
+struct Response_t4284099457;
+// System.Type
+struct Type_t;
+// Req_GetPrizeUseCoin/Response/Data
+struct Data_t3152262302;
+// Req_GetPrizeUseCoin/Response/Info
+struct Info_t3515140334;
+// Req_GetPrizeUserHorn
+struct Req_GetPrizeUserHorn_t664868319;
+// Req_GetPrizeUserHorn/Response
+struct Response_t3772993143;
+// Req_GetPrizeUserHorn/Response/Data
+struct Data_t2185002244;
+// Req_GetPrizeUserLists
+struct Req_GetPrizeUserLists_t3850485005;
+// Req_GetPrizeUserLists/Response
+struct Response_t2934266941;
+// Req_GetPrizeUserLists/Response/Data
+struct Data_t1524650276;
+// Req_GetPrizeUserLists/Response/Info
+struct Info_t2653692112;
+// Req_GetUpdatePics
+struct Req_GetUpdatePics_t1118469089;
+// Req_GetUpdatePics/Response
+struct Response_t2759531585;
+// Req_GetUpdatePics/Response/Entry[]
+struct EntryU5BU5D_t4095601145;
+// Req_GetUpdatePics/Response/Entry
+struct Entry_t2933429096;
+// Req_GetUpdatePics/Response/Data
+struct Data_t760679892;
+// Req_GetUpdatePics/Response/Info
+struct Info_t4275929356;
+// Req_GetUserForgetPsdVcode
+struct Req_GetUserForgetPsdVcode_t4197905561;
+// Req_GetUserForgetPsdVcode/Response
+struct Response_t1445710305;
+// Req_GetUserForgetPsdVcode/Response/Data
+struct Data_t523521196;
+// Req_MachineEndGrab
+struct Req_MachineEndGrab_t2382967747;
+// Req_MachineEndGrab/Response
+struct Response_t212491691;
+// Req_MachineEndGrab/Response/Data
+struct Data_t1063157950;
+// Req_MachineEndGrab/Response/Info
+struct Info_t3771838238;
+// Req_MachineStartGrab
+struct Req_MachineStartGrab_t3485909748;
+// Req_MachineStartGrab/Response
+struct Response_t3053143294;
+// Req_MachineStartGrab/Response/Data
+struct Data_t4074147771;
+// Req_MachineStartGrab/Response/Info
+struct Info_t4174904501;
+// Req_RegisterVcode
+struct Req_RegisterVcode_t1322481501;
+// Req_RegisterVcode/Response
+struct Response_t2628246429;
+// Req_RegisterVcode/Response/Data
+struct Data_t3452493908;
+// Req_UsePrize
+struct Req_UsePrize_t3632642040;
+// Req_UsePrize/Response
+struct Response_t2813544250;
+// Req_UsePrize/Response/Data
+struct Data_t762886835;
+// Req_UserForgetPsdSendMsg
+struct Req_UserForgetPsdSendMsg_t1014197417;
+// Req_UserForgetPsdSendMsg/Response
+struct Response_t1073513569;
+// Req_UserForgetPsdSendMsg/Response/Data
+struct Data_t503888270;
+// Req_UserForgetPsdSendMsg/Response/List
+struct List_t1942364742;
+// Req_UserLogin
+struct Req_UserLogin_t496922837;
+// Base_Req_UserInfo
+struct Base_Req_UserInfo_t3817878412;
+// Base_Req_UserInfo/Response
+struct Response_t1683355314;
+// Req_UserLogout
+struct Req_UserLogout_t3015962468;
+// Req_UserLogout/Response
+struct Response_t165664278;
+// Req_UserLogout/Response/Data
+struct Data_t2083464491;
+// Req_UserRecharge
+struct Req_UserRecharge_t3565060991;
+// Req_UserRecharge/Response
+struct Response_t4250180471;
+// Req_UserRecharge/Response/Data
+struct Data_t80454200;
+// Req_UserRegister
+struct Req_UserRegister_t3135438179;
+// Req_UserRegister/Response
+struct Response_t2045565979;
+// Req_UserRegister/Response/Data
+struct Data_t463239420;
+// Req_UserRegisterSendMsg
+struct Req_UserRegisterSendMsg_t485842282;
+// Req_UserRegisterSendMsg/Response
+struct Response_t1370037692;
+// Req_UserRegisterSendMsg/Response/Data
+struct Data_t2639504221;
+// Req_UserResetPsd
+struct Req_UserResetPsd_t1439768748;
+// Req_UserResetPsd/Response
+struct Response_t4197083710;
+// Req_UserResetPsd/Response/Data
+struct Data_t2228534131;
+// Req_UserResetPsd/Response/Info
+struct Info_t2329290581;
+// Request/Exception
+struct Exception_t2103181915;
+// Request/Error
+struct Error_t2783916960;
+// Request/Error/Data
+struct Data_t862910835;
+// ResourceManager
+struct ResourceManager_t4136494783;
+// UnityEngine.MonoBehaviour
+struct MonoBehaviour_t1158329972;
+// UnityEngine.Object
+struct Object_t1021602117;
+// UnityEngine.GameObject
+struct GameObject_t1756533147;
+// System.Collections.Generic.List`1<ResourceManager/LoadItem>
+struct List_1_t3290435963;
+// System.Collections.Generic.List`1<System.Object>
+struct List_1_t2058570427;
+// System.Collections.Hashtable
+struct Hashtable_t909839986;
+// System.Collections.IEnumerator
+struct IEnumerator_t1466026749;
+// UnityEngine.Coroutine
+struct Coroutine_t2299508840;
+// UpdatesProxy/MemoryVersion/Entry
+struct Entry_t1644304703;
+// ResourceManager/LoadCompleteCallback
+struct LoadCompleteCallback_t3887379968;
+// ResourceManager/LoadErrorCallback
+struct LoadErrorCallback_t1969330919;
+// ResourceManager/SaveToDiskCallback
+struct SaveToDiskCallback_t1360640706;
+// ResourceManager/LoadItem
+struct LoadItem_t3921314831;
+// ResourceManager/<Run>c__Iterator0
+struct U3CRunU3Ec__Iterator0_t1127244418;
+// ResourceManager/<FreeIdleIcons>c__Iterator1
+struct U3CFreeIdleIconsU3Ec__Iterator1_t2798996140;
+// UnityEngine.WaitForSeconds
+struct WaitForSeconds_t3839502067;
+// System.Collections.ArrayList
+struct ArrayList_t4252133567;
+// FairyGUI.NTexture
+struct NTexture_t84202663;
+// System.NotSupportedException
+struct NotSupportedException_t1793819818;
+// System.Byte[]
+struct ByteU5BU5D_t3397334013;
+// UnityEngine.WWW
+struct WWW_t2919945039;
+// UnityEngine.Texture2D
+struct Texture2D_t3542995729;
+// UnityEngine.Texture
+struct Texture_t2243626319;
+// System.IAsyncResult
+struct IAsyncResult_t1999651008;
+// System.AsyncCallback
+struct AsyncCallback_t163412349;
+// RewardsMediator
+struct RewardsMediator_t1871400415;
+// BaseMediator
+struct BaseMediator_t1205744884;
+// UIRewardsMain
+struct UIRewardsMain_t1107937165;
+// PureMVC.Patterns.Mediator.Mediator
+struct Mediator_t2789785455;
+// System.String[]
+struct StringU5BU5D_t1642385972;
+// System.Collections.Generic.List`1<System.String>
+struct List_1_t1398341365;
+// System.Object[]
+struct ObjectU5BU5D_t3614634134;
+// PureMVC.Interfaces.INotification
+struct INotification_t616890910;
+// RingFence
+struct RingFence_t3382043263;
+// UnityEngine.Transform
+struct Transform_t3275118058;
+// UnityEngine.Component
+struct Component_t3819376471;
+// SocketClient
+struct SocketClient_t718412134;
+// System.IO.MemoryStream
+struct MemoryStream_t743994179;
+// System.IO.BinaryReader
+struct BinaryReader_t2491843768;
+// System.IO.Stream
+struct Stream_t3255436806;
+// System.Net.Sockets.TcpClient
+struct TcpClient_t408947970;
+// System.Net.Sockets.NetworkStream
+struct NetworkStream_t581172200;
+// ByteBuffer
+struct ByteBuffer_t1012950836;
+// System.IO.BinaryWriter
+struct BinaryWriter_t3179371318;
+// System.Array
+struct Il2CppArray;
+// SocketCommand
+struct SocketCommand_t2127949346;
+// PureMVC.Patterns.Command.SimpleCommand
+struct SimpleCommand_t4249318299;
+// StartUpCommand
+struct StartUpCommand_t688340602;
+// NetworkManager
+struct NetworkManager_t226491143;
+// UnityFacade
+struct UnityFacade_t1495732005;
+// PureMVC.Patterns.Observer.Notifier
+struct Notifier_t1254524638;
+// PureMVC.Interfaces.IFacade
+struct IFacade_t2963254751;
+// DeviceInfoProxy
+struct DeviceInfoProxy_t1172231466;
+// System.Func`1<PureMVC.Interfaces.ICommand>
+struct Func_1_t2923916928;
+// System.Func`1<System.Object>
+struct Func_1_t348874681;
+// PureMVC.Interfaces.ICommand
+struct ICommand_t969524246;
+// HttpReqCommand
+struct HttpReqCommand_t3283257643;
+// HttpResCommand
+struct HttpResCommand_t3283050857;
+// GameCommand
+struct GameCommand_t2834858639;
+// UserCommand
+struct UserCommand_t2016101392;
+// TXTReader
+struct TXTReader_t4273255191;
+// System.String[][]
+struct StringU5BU5DU5BU5D_t2190260861;
+// System.IO.StreamReader
+struct StreamReader_t2360341767;
+// System.Char[]
+struct CharU5BU5D_t1328083999;
+// System.IO.FileStream
+struct FileStream_t1695958676;
+// System.Text.Encoding
+struct Encoding_t663144255;
+// System.IO.StreamWriter
+struct StreamWriter_t3858580635;
+// UIBaseVerifyWin
+struct UIBaseVerifyWin_t1601586792;
+// BaseWindow
+struct BaseWindow_t1983497523;
+// FairyGUI.GObject
+struct GObject_t2662234644;
+// FairyGUI.Window
+struct Window_t252217058;
+// FairyGUI.GComponent
+struct GComponent_t4106136290;
+// FairyGUI.EventListener
+struct EventListener_t2764096410;
+// FairyGUI.EventCallback0
+struct EventCallback0_t422277839;
+// FairyGUI.GRichTextField
+struct GRichTextField_t3736523726;
+// UICoinPrize
+struct UICoinPrize_t4037221321;
+// DG.Tweening.Tweener
+struct Tweener_t760404022;
+// DG.Tweening.TweenCallback
+struct TweenCallback_t3697142134;
+// UICommon
+struct UICommon_t1511081147;
+// FairyGUI.GRoot
+struct GRoot_t2728525843;
+// FairyGUI.GGraph
+struct GGraph_t1610186177;
+// UIConfirm
+struct UIConfirm_t2687705270;
+// UIConnection
+struct UIConnection_t1947373274;
+extern Il2CppClass* WWWForm_t3950226929_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3573137902;
+extern const uint32_t Req_GetMachineInfo__ctor_m4148064487_MetadataUsageId;
+extern Il2CppClass* JsonException_t613047007_il2cpp_TypeInfo_var;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t3827549514_m749788003_MethodInfo_var;
+extern const uint32_t Req_GetMachineInfo_parseLogicResponse_m584118899_MetadataUsageId;
+extern const uint32_t Req_GetMachineInfo_command_m2446995845_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral100393555;
+extern const uint32_t Req_GetMachinePrizeBallData__ctor_m1838558808_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t231228995_m2062438722_MethodInfo_var;
+extern const uint32_t Req_GetMachinePrizeBallData_parseLogicResponse_m2873101712_MetadataUsageId;
+extern const uint32_t Req_GetMachinePrizeBallData_command_m2172115432_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2359597034;
+extern const uint32_t Req_GetMachinePrizeInfo__ctor_m893919327_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral795892554;
+extern const uint32_t Req_GetMachinePrizeInfo_set_MtId_m3613707239_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t3930883938_m246039259_MethodInfo_var;
+extern const uint32_t Req_GetMachinePrizeInfo_parseLogicResponse_m1409682963_MetadataUsageId;
+extern const uint32_t Req_GetMachinePrizeInfo_command_m2667801657_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral396408025;
+extern const uint32_t Req_GetNewsLists__ctor_m1113998164_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t3647484083_m3296547478_MethodInfo_var;
+extern const uint32_t Req_GetNewsLists_parseLogicResponse_m2500638428_MetadataUsageId;
+extern const uint32_t Req_GetNewsLists_command_m3165554390_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral4070489427;
+extern const uint32_t Req_GetPrizeInfo__ctor_m353911304_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t1066063823_m1613211522_MethodInfo_var;
+extern const uint32_t Req_GetPrizeInfo_parseLogicResponse_m4264391512_MetadataUsageId;
+extern const uint32_t Req_GetPrizeInfo_command_m422541834_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1223152418;
+extern const uint32_t Req_GetPrizeUseCoin__ctor_m2233700544_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral827391921;
+extern const uint32_t Req_GetPrizeUseCoin_set_PrizeId_m2235122173_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t4284099457_m3419605178_MethodInfo_var;
+extern const uint32_t Req_GetPrizeUseCoin_parseLogicResponse_m1157743844_MetadataUsageId;
+extern const uint32_t Req_GetPrizeUseCoin_command_m3432992572_MetadataUsageId;
+extern const Il2CppType* Response_t4284099457_0_0_0_var;
+extern Il2CppClass* Type_t_il2cpp_TypeInfo_var;
+extern Il2CppClass* Response_t4284099457_il2cpp_TypeInfo_var;
+extern const uint32_t Req_GetPrizeUseCoin_getChildMsg_m3981630742_MetadataUsageId;
+extern const uint32_t Req_GetPrizeUseCoin_getResponseCode_m1803594380_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3784704650;
+extern const uint32_t Req_GetPrizeUserHorn__ctor_m4031015390_MetadataUsageId;
+extern const uint32_t Req_GetPrizeUserHorn_set_MtId_m3242655000_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t3772993143_m1323198956_MethodInfo_var;
+extern const uint32_t Req_GetPrizeUserHorn_parseLogicResponse_m2862331142_MetadataUsageId;
+extern const uint32_t Req_GetPrizeUserHorn_command_m3210667296_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2973036028;
+extern const uint32_t Req_GetPrizeUserLists__ctor_m2991155742_MetadataUsageId;
+extern const uint32_t Req_GetPrizeUserLists_set_MtId_m2495696404_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t2934266941_m391481116_MethodInfo_var;
+extern const uint32_t Req_GetPrizeUserLists_parseLogicResponse_m450665042_MetadataUsageId;
+extern const uint32_t Req_GetPrizeUserLists_command_m2693309230_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2491345437;
+extern const uint32_t Req_GetUpdatePics__ctor_m3225614838_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3617362;
+extern const uint32_t Req_GetUpdatePics_set_Version_m1430732056_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t2759531585_m2774702468_MethodInfo_var;
+extern const uint32_t Req_GetUpdatePics_parseLogicResponse_m2034801610_MetadataUsageId;
+extern const uint32_t Req_GetUpdatePics_command_m1162984666_MetadataUsageId;
+extern const Il2CppType* Response_t2759531585_0_0_0_var;
+extern Il2CppClass* Response_t2759531585_il2cpp_TypeInfo_var;
+extern const uint32_t Req_GetUpdatePics_getOnlineVersion_m3847492877_MetadataUsageId;
+extern Il2CppClass* EntryU5BU5D_t4095601145_il2cpp_TypeInfo_var;
+extern const uint32_t Req_GetUpdatePics_getBall_m1359132476_MetadataUsageId;
+extern const uint32_t Req_GetUpdatePics_getPrize_m3672812707_MetadataUsageId;
+extern Il2CppClass* Error_t2783916960_il2cpp_TypeInfo_var;
+extern const uint32_t Req_GetUpdatePics_getResponseCode_m2797814346_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3091297829;
+extern const uint32_t Req_GetUserForgetPsdVcode__ctor_m525826214_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t1445710305_m1138515636_MethodInfo_var;
+extern const uint32_t Req_GetUserForgetPsdVcode_parseLogicResponse_m1715109562_MetadataUsageId;
+extern const uint32_t Req_GetUserForgetPsdVcode_command_m2651411562_MetadataUsageId;
+extern Il2CppClass* Response_t1445710305_il2cpp_TypeInfo_var;
+extern const uint32_t Req_GetUserForgetPsdVcode_getVcode_m3107388912_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3653346511;
+extern const uint32_t Req_MachineEndGrab__ctor_m400413448_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1413580441;
+extern const uint32_t Req_MachineEndGrab_set_LogId_m744591915_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1561440251;
+extern const uint32_t Req_MachineEndGrab_set_BallIdStr_m334752238_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t212491691_m1337346_MethodInfo_var;
+extern const uint32_t Req_MachineEndGrab_parseLogicResponse_m3533382744_MetadataUsageId;
+extern const uint32_t Req_MachineEndGrab_command_m3993015750_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral923539766;
+extern const uint32_t Req_MachineStartGrab__ctor_m3486404105_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t3053143294_m1592976273_MethodInfo_var;
+extern const uint32_t Req_MachineStartGrab_parseLogicResponse_m3460579085_MetadataUsageId;
+extern const uint32_t Req_MachineStartGrab_command_m825886727_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1444173816;
+extern const uint32_t Req_RegisterVcode__ctor_m3684994542_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t2628246429_m2269781228_MethodInfo_var;
+extern const uint32_t Req_RegisterVcode_parseLogicResponse_m2382846850_MetadataUsageId;
+extern const uint32_t Req_RegisterVcode_command_m4091932574_MetadataUsageId;
+extern Il2CppClass* Response_t2628246429_il2cpp_TypeInfo_var;
+extern const uint32_t Req_RegisterVcode_getVcode_m2797523568_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1157439965;
+extern const uint32_t Req_UsePrize__ctor_m3467939273_MetadataUsageId;
+extern const uint32_t Req_UsePrize_set_PrizeId_m3095357040_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral4108885254;
+extern const uint32_t Req_UsePrize_set_UserPrizeId_m1223312165_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3654580039;
+extern const uint32_t Req_UsePrize_set_UsePrizeType_m167625918_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3726276054;
+extern const uint32_t Req_UsePrize_set_UserName_m1703353796_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1830812906;
+extern const uint32_t Req_UsePrize_set_UserAddr_m3536625004_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral720188825;
+extern const uint32_t Req_UsePrize_set_UserPhone_m2009857303_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2457344785;
+extern const uint32_t Req_UsePrize_set_BuyBackType_m2494212442_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral770559914;
+extern const uint32_t Req_UsePrize_set_BuyBackName_m3554217390_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral4060022633;
+extern const uint32_t Req_UsePrize_set_BuyBackPhone_m2714491115_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1727832981;
+extern const uint32_t Req_UsePrize_set_BuyBackAli_m1285185563_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral736802191;
+extern const uint32_t Req_UsePrize_set_BuyBackBank_m2242822285_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1140086705;
+extern const uint32_t Req_UsePrize_set_BuyBackCard_m3135090899_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t2813544250_m584347601_MethodInfo_var;
+extern const uint32_t Req_UsePrize_parseLogicResponse_m3897896933_MetadataUsageId;
+extern const uint32_t Req_UsePrize_command_m2405062347_MetadataUsageId;
+extern const Il2CppType* Response_t2813544250_0_0_0_var;
+extern Il2CppClass* Response_t2813544250_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral4256873302;
+extern Il2CppCodeGenString* _stringLiteral3179881703;
+extern Il2CppCodeGenString* _stringLiteral1846078552;
+extern const uint32_t Req_UsePrize_getChildMsg_m4220166977_MetadataUsageId;
+extern const uint32_t Req_UsePrize_getResponseCode_m370313883_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral888208753;
+extern const uint32_t Req_UserForgetPsdSendMsg__ctor_m1626155892_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral4263436398;
+extern const uint32_t Req_UserForgetPsdSendMsg_set_Phone_m2662035291_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2536860910;
+extern const uint32_t Req_UserForgetPsdSendMsg_set_VerCode_m1821001091_MetadataUsageId;
+extern const uint32_t Req_UserForgetPsdSendMsg_command_m4199340114_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t1073513569_m921688182_MethodInfo_var;
+extern const uint32_t Req_UserForgetPsdSendMsg_parseLogicResponse_m2434653868_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral798601681;
+extern const uint32_t Req_UserLogin__ctor_m2203589602_MetadataUsageId;
+extern const uint32_t Req_UserLogin_set_Phone_m3550364007_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3115736959;
+extern const uint32_t Req_UserLogin_set_Psd_m3575573320_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2099854781;
+extern const uint32_t Req_UserLogin_set_Uuid_m1489259020_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2846073432;
+extern const uint32_t Req_UserLogin_set_Wxid_m2953952665_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1421151742;
+extern const uint32_t Req_UserLogin_set_Type_m4231493588_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t1683355314_m1704220303_MethodInfo_var;
+extern const uint32_t Req_UserLogin_parseLogicResponse_m3495942798_MetadataUsageId;
+extern const uint32_t Req_UserLogin_command_m1099334950_MetadataUsageId;
+extern const Il2CppType* Response_t1683355314_0_0_0_var;
+extern Il2CppClass* Response_t1683355314_il2cpp_TypeInfo_var;
+extern const uint32_t Req_UserLogin_getChildMsg_m1903437804_MetadataUsageId;
+extern const uint32_t Req_UserLogin_getResponseCode_m832803878_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral4177028384;
+extern const uint32_t Req_UserLogout__ctor_m3304334001_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t165664278_m2629805977_MethodInfo_var;
+extern const uint32_t Req_UserLogout_parseLogicResponse_m102554405_MetadataUsageId;
+extern const uint32_t Req_UserLogout_command_m1111537679_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1230188175;
+extern const uint32_t Req_UserRecharge__ctor_m2704193034_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral236332306;
+extern const uint32_t Req_UserRecharge_set_Amount_m203697524_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t4250180471_m1739691168_MethodInfo_var;
+extern const uint32_t Req_UserRecharge_parseLogicResponse_m441159626_MetadataUsageId;
+extern const uint32_t Req_UserRecharge_command_m1160632232_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral233853571;
+extern const uint32_t Req_UserRegister__ctor_m2233067494_MetadataUsageId;
+extern const uint32_t Req_UserRegister_set_Phone_m4084370569_MetadataUsageId;
+extern const uint32_t Req_UserRegister_set_VerCode_m4048275209_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2621700410;
+extern const uint32_t Req_UserRegister_set_MsgCode_m2795007845_MetadataUsageId;
+extern const uint32_t Req_UserRegister_set_Psd_m2966020724_MetadataUsageId;
+extern const uint32_t Req_UserRegister_set_Uuid_m1636519096_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t2045565979_m532993668_MethodInfo_var;
+extern const uint32_t Req_UserRegister_parseLogicResponse_m3755012478_MetadataUsageId;
+extern const uint32_t Req_UserRegister_command_m3365766852_MetadataUsageId;
+extern const Il2CppType* Response_t2045565979_0_0_0_var;
+extern Il2CppClass* Response_t2045565979_il2cpp_TypeInfo_var;
+extern const uint32_t Req_UserRegister_getChildMsg_m1084816854_MetadataUsageId;
+extern const uint32_t Req_UserRegister_getResponseCode_m374324542_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2577111938;
+extern const uint32_t Req_UserRegisterSendMsg__ctor_m2532408863_MetadataUsageId;
+extern const uint32_t Req_UserRegisterSendMsg_set_Phone_m2667359740_MetadataUsageId;
+extern const uint32_t Req_UserRegisterSendMsg_set_VerCode_m810060436_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t1370037692_m2102720379_MethodInfo_var;
+extern const uint32_t Req_UserRegisterSendMsg_parseLogicResponse_m574402467_MetadataUsageId;
+extern const uint32_t Req_UserRegisterSendMsg_command_m3160924689_MetadataUsageId;
+extern Il2CppClass* Response_t1370037692_il2cpp_TypeInfo_var;
+extern const uint32_t Req_UserRegisterSendMsg_getChildMsg_m2488727635_MetadataUsageId;
+extern const uint32_t Req_UserRegisterSendMsg_getResponseCode_m2715623837_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1042044488;
+extern const uint32_t Req_UserResetPsd__ctor_m4270177481_MetadataUsageId;
+extern const uint32_t Req_UserResetPsd_set_Phone_m538737622_MetadataUsageId;
+extern const uint32_t Req_UserResetPsd_set_VerCode_m3151416854_MetadataUsageId;
+extern const uint32_t Req_UserResetPsd_set_MsgCode_m474361926_MetadataUsageId;
+extern const uint32_t Req_UserResetPsd_set_Psd_m2747827553_MetadataUsageId;
+extern const uint32_t Req_UserResetPsd_set_Uuid_m1976417879_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisResponse_t4197083710_m403142833_MethodInfo_var;
+extern const uint32_t Req_UserResetPsd_parseLogicResponse_m2644970797_MetadataUsageId;
+extern const uint32_t Req_UserResetPsd_command_m66801959_MetadataUsageId;
+extern const Il2CppType* Response_t4197083710_0_0_0_var;
+extern Il2CppClass* Response_t4197083710_il2cpp_TypeInfo_var;
+extern const uint32_t Req_UserResetPsd_getChildMsg_m3537231033_MetadataUsageId;
+extern const uint32_t Req_UserResetPsd_getResponseCode_m2842696879_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2844854044;
+extern const uint32_t Request_set_UserId_m1503567320_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1601805951;
+extern const uint32_t Request_set_Token_m2989385896_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3209844936;
+extern const uint32_t Request_set_MId_m2897650292_MetadataUsageId;
+extern Il2CppClass* Exception_t2103181915_il2cpp_TypeInfo_var;
+extern const uint32_t Request_parseError_m2886300867_MetadataUsageId;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisError_t2783916960_m486751945_MethodInfo_var;
+extern const MethodInfo* JsonHelper_DeserializeJsonToObject_TisException_t2103181915_m3581041200_MethodInfo_var;
+extern const uint32_t Request_parseResponse_m2530713986_MetadataUsageId;
+extern Il2CppClass* ResourceManager_t4136494783_il2cpp_TypeInfo_var;
+extern Il2CppClass* Object_t1021602117_il2cpp_TypeInfo_var;
+extern Il2CppClass* GameObject_t1756533147_il2cpp_TypeInfo_var;
+extern const MethodInfo* GameObject_AddComponent_TisResourceManager_t4136494783_m1310922065_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral569606005;
+extern const uint32_t ResourceManager_get_inst_m785854357_MetadataUsageId;
+extern Il2CppClass* List_1_t3290435963_il2cpp_TypeInfo_var;
+extern Il2CppClass* Hashtable_t909839986_il2cpp_TypeInfo_var;
+extern Il2CppClass* String_t_il2cpp_TypeInfo_var;
+extern const MethodInfo* List_1__ctor_m2501500508_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2494949592;
+extern const uint32_t ResourceManager_Awake_m4204150351_MetadataUsageId;
+extern Il2CppClass* LoadItem_t3921314831_il2cpp_TypeInfo_var;
+extern const MethodInfo* List_1_Add_m1299367128_MethodInfo_var;
+extern const uint32_t ResourceManager_LoadIcon_m3776217159_MetadataUsageId;
+extern Il2CppClass* U3CRunU3Ec__Iterator0_t1127244418_il2cpp_TypeInfo_var;
+extern const uint32_t ResourceManager_Run_m1332267789_MetadataUsageId;
+extern const MethodInfo* List_1_get_Count_m4203099306_MethodInfo_var;
+extern const uint32_t ResourceManager_isQueued_m2890111509_MetadataUsageId;
+extern Il2CppClass* U3CFreeIdleIconsU3Ec__Iterator1_t2798996140_il2cpp_TypeInfo_var;
+extern const uint32_t ResourceManager_FreeIdleIcons_m2551489640_MetadataUsageId;
+extern Il2CppClass* WaitForSeconds_t3839502067_il2cpp_TypeInfo_var;
+extern Il2CppClass* IEnumerator_t1466026749_il2cpp_TypeInfo_var;
+extern Il2CppClass* DictionaryEntry_t3048875398_il2cpp_TypeInfo_var;
+extern Il2CppClass* NTexture_t84202663_il2cpp_TypeInfo_var;
+extern Il2CppClass* ArrayList_t4252133567_il2cpp_TypeInfo_var;
+extern Il2CppClass* IDisposable_t2427283555_il2cpp_TypeInfo_var;
+extern const uint32_t U3CFreeIdleIconsU3Ec__Iterator1_MoveNext_m1739430381_MetadataUsageId;
+extern Il2CppClass* NotSupportedException_t1793819818_il2cpp_TypeInfo_var;
+extern const uint32_t U3CFreeIdleIconsU3Ec__Iterator1_Reset_m2693732184_MetadataUsageId;
+extern Il2CppClass* WWW_t2919945039_il2cpp_TypeInfo_var;
+extern const MethodInfo* List_1_get_Item_m274276655_MethodInfo_var;
+extern const MethodInfo* List_1_RemoveAt_m997641594_MethodInfo_var;
+extern const uint32_t U3CRunU3Ec__Iterator0_MoveNext_m1861107629_MetadataUsageId;
+extern const uint32_t U3CRunU3Ec__Iterator0_Reset_m236216578_MetadataUsageId;
+extern const MethodInfo* GameObject_GetComponent_TisUIRewardsMain_t1107937165_m4171481314_MethodInfo_var;
+extern const uint32_t RewardsMediator_get_m_rewards_ui_m24736136_MetadataUsageId;
+extern Il2CppClass* List_1_t1398341365_il2cpp_TypeInfo_var;
+extern const MethodInfo* List_1__ctor_m3854603248_MethodInfo_var;
+extern const MethodInfo* List_1_Add_m4061286785_MethodInfo_var;
+extern const MethodInfo* List_1_ToArray_m948919263_MethodInfo_var;
+extern const uint32_t RewardsMediator_ListNotificationInterests_m2217341159_MetadataUsageId;
+extern Il2CppClass* INotification_t616890910_il2cpp_TypeInfo_var;
+extern const uint32_t RewardsMediator_HandleNotification_m3707316249_MetadataUsageId;
+extern Il2CppClass* Debug_t1368543263_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3284842120;
+extern const uint32_t RewardsMediator_OnRemove_m993017165_MetadataUsageId;
+extern const MethodInfo* Object_Instantiate_TisGameObject_t1756533147_m3664764861_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3769301;
+extern const uint32_t RingFence_Awake_m2081380271_MetadataUsageId;
+extern Il2CppClass* ByteU5BU5D_t3397334013_il2cpp_TypeInfo_var;
+extern const uint32_t SocketClient__ctor_m908475067_MetadataUsageId;
+extern Il2CppClass* MemoryStream_t743994179_il2cpp_TypeInfo_var;
+extern Il2CppClass* BinaryReader_t2491843768_il2cpp_TypeInfo_var;
+extern const uint32_t SocketClient_OnRegister_m3433101067_MetadataUsageId;
+extern Il2CppClass* TcpClient_t408947970_il2cpp_TypeInfo_var;
+extern Il2CppClass* AsyncCallback_t163412349_il2cpp_TypeInfo_var;
+extern Il2CppClass* Exception_t1927440687_il2cpp_TypeInfo_var;
+extern const MethodInfo* SocketClient_OnConnect_m3123595341_MethodInfo_var;
+extern const uint32_t SocketClient_ConnectServer_m2557951783_MetadataUsageId;
+extern Il2CppClass* ByteBuffer_t1012950836_il2cpp_TypeInfo_var;
+extern Il2CppClass* NetworkManager_t226491143_il2cpp_TypeInfo_var;
+extern const MethodInfo* SocketClient_OnRead_m1734567161_MethodInfo_var;
+extern const uint32_t SocketClient_OnConnect_m3123595341_MetadataUsageId;
+extern Il2CppClass* BinaryWriter_t3179371318_il2cpp_TypeInfo_var;
+extern const MethodInfo* SocketClient_OnWrite_m4234603230_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral4180419998;
+extern const uint32_t SocketClient_WriteMessage_m1370612150_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1182691614;
+extern const uint32_t SocketClient_OnRead_m1734567161_MetadataUsageId;
+extern Il2CppClass* ObjectU5BU5D_t3614634134_il2cpp_TypeInfo_var;
+extern Il2CppClass* DisType_t1929133216_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3160485792;
+extern Il2CppCodeGenString* _stringLiteral2945210082;
+extern const uint32_t SocketClient_OnDisconnected_m3044964815_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3231012752;
+extern const uint32_t SocketClient_PrintBytes_m3767236167_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2835701435;
+extern const uint32_t SocketClient_OnWrite_m4234603230_MetadataUsageId;
+extern const uint32_t SocketClient_OnReceive_m4202993151_MetadataUsageId;
+extern const uint32_t SocketClient_OnReceivedMessage_m1747194874_MetadataUsageId;
+extern Il2CppClass* SocketClient_t718412134_il2cpp_TypeInfo_var;
+extern const uint32_t SocketClient_Close_m3369538009_MetadataUsageId;
+extern Il2CppClass* AppConst_t3406236046_il2cpp_TypeInfo_var;
+extern const uint32_t SocketClient_SendConnect_m2888925789_MetadataUsageId;
+extern Il2CppClass* KeyValuePair_2_t2073088989_il2cpp_TypeInfo_var;
+extern const MethodInfo* KeyValuePair_2_get_Key_m4024906165_MethodInfo_var;
+extern const uint32_t SocketCommand_Execute_m2011600236_MetadataUsageId;
+extern const Il2CppType* NetworkManager_t226491143_0_0_0_var;
+extern const Il2CppType* UIEnterMain_t4133042741_0_0_0_var;
+extern Il2CppClass* UnityFacade_t1495732005_il2cpp_TypeInfo_var;
+extern Il2CppClass* DeviceInfoProxy_t1172231466_il2cpp_TypeInfo_var;
+extern Il2CppClass* IFacade_t2963254751_il2cpp_TypeInfo_var;
+extern Il2CppClass* HttpReqCommand_t3283257643_il2cpp_TypeInfo_var;
+extern Il2CppClass* StartUpCommand_t688340602_il2cpp_TypeInfo_var;
+extern Il2CppClass* Func_1_t2923916928_il2cpp_TypeInfo_var;
+extern Il2CppClass* HttpResCommand_t3283050857_il2cpp_TypeInfo_var;
+extern Il2CppClass* GameCommand_t2834858639_il2cpp_TypeInfo_var;
+extern Il2CppClass* UserCommand_t2016101392_il2cpp_TypeInfo_var;
+extern Il2CppClass* Req_GetUpdatePics_t1118469089_il2cpp_TypeInfo_var;
+extern const MethodInfo* GameObject_AddComponent_TisNetworkManager_t226491143_m3819311753_MethodInfo_var;
+extern const MethodInfo* StartUpCommand_U3CExecuteU3Em__0_m1473983932_MethodInfo_var;
+extern const MethodInfo* Func_1__ctor_m1820563875_MethodInfo_var;
+extern const MethodInfo* StartUpCommand_U3CExecuteU3Em__1_m1473983837_MethodInfo_var;
+extern const MethodInfo* StartUpCommand_U3CExecuteU3Em__2_m1473983998_MethodInfo_var;
+extern const MethodInfo* StartUpCommand_U3CExecuteU3Em__3_m1473983903_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3300955337;
+extern Il2CppCodeGenString* _stringLiteral1900309984;
+extern const uint32_t StartUpCommand_Execute_m151634932_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral28003810;
+extern const uint32_t StartUpCommand__cctor_m3293486508_MetadataUsageId;
+extern const uint32_t StartUpCommand_U3CExecuteU3Em__0_m1473983932_MetadataUsageId;
+extern const uint32_t StartUpCommand_U3CExecuteU3Em__1_m1473983837_MetadataUsageId;
+extern const uint32_t StartUpCommand_U3CExecuteU3Em__2_m1473983998_MetadataUsageId;
+extern const uint32_t StartUpCommand_U3CExecuteU3Em__3_m1473983903_MetadataUsageId;
+extern Il2CppClass* StreamReader_t2360341767_il2cpp_TypeInfo_var;
+extern Il2CppClass* StringU5BU5D_t1642385972_il2cpp_TypeInfo_var;
+extern const uint32_t TXTReader_Readbytes_m1825692303_MetadataUsageId;
+extern Il2CppClass* StringU5BU5DU5BU5D_t2190260861_il2cpp_TypeInfo_var;
+extern Il2CppClass* CharU5BU5D_t1328083999_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral372029349;
+extern Il2CppCodeGenString* _stringLiteral372029310;
+extern const uint32_t TXTReader_ReadArray_m2186684248_MetadataUsageId;
+extern Il2CppClass* FileStream_t1695958676_il2cpp_TypeInfo_var;
+extern Il2CppClass* Encoding_t663144255_il2cpp_TypeInfo_var;
+extern Il2CppClass* StreamWriter_t3858580635_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral233039045;
+extern const uint32_t TXTReader_WriteTxt_m697512971_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3990527589;
+extern const uint32_t UIBaseVerifyWin_get_Close_m2991533507_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral858359707;
+extern const uint32_t UIBaseVerifyWin_get_Send_m3054441105_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2833411703;
+extern const uint32_t UIBaseVerifyWin_get_Verify_m3026646854_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3236696238;
+extern const uint32_t UIBaseVerifyWin_get_Username_m786301575_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3236696229;
+extern const uint32_t UIBaseVerifyWin_get_Pic_code_input_m1621647876_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral3236696237;
+extern const uint32_t UIBaseVerifyWin_get_Phone_code_input_m3670127060_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1670612297;
+extern const uint32_t UIBaseVerifyWin_get_Password_m4042576990_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1670612294;
+extern const uint32_t UIBaseVerifyWin_get_Code_countdown_m2491358242_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1670612301;
+extern const uint32_t UIBaseVerifyWin_get_Warn_m606077883_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1670612295;
+extern const uint32_t UIBaseVerifyWin_get_Pic_code_m1000918441_MetadataUsageId;
+extern Il2CppClass* EventCallback0_t422277839_il2cpp_TypeInfo_var;
+extern const MethodInfo* UIBaseVerifyWin_U3COnInitU3Em__0_m1865707029_MethodInfo_var;
+extern const uint32_t UIBaseVerifyWin_OnInit_m3688473060_MetadataUsageId;
+extern Il2CppClass* UIConfig_t3001615142_il2cpp_TypeInfo_var;
+extern const uint32_t UICoinPrize__ctor_m815725332_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2471497815;
+extern const uint32_t UICoinPrize_get_Contiune_m2601904005_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2833411711;
+extern const uint32_t UICoinPrize_get_Amount_m1601380266_MetadataUsageId;
+extern Il2CppClass* UIPackage_t709416664_il2cpp_TypeInfo_var;
+extern const MethodInfo* UICoinPrize_U3COnInitU3Em__0_m895409158_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2328219732;
+extern Il2CppCodeGenString* _stringLiteral2890057080;
+extern const uint32_t UICoinPrize_OnInit_m746598651_MetadataUsageId;
+extern Il2CppClass* TweenCallback_t3697142134_il2cpp_TypeInfo_var;
+extern const MethodInfo* TweenSettingsExtensions_SetEase_TisTweener_t760404022_m1400957772_MethodInfo_var;
+extern const MethodInfo* TweenSettingsExtensions_OnComplete_TisTweener_t760404022_m67810386_MethodInfo_var;
+extern const uint32_t UICoinPrize_DoShowAnimation_m1384379414_MetadataUsageId;
+extern const MethodInfo* Window_HideImmediately_m3834863341_MethodInfo_var;
+extern const uint32_t UICoinPrize_DoHideAnimation_m3666505401_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2833411709;
+extern const uint32_t UICommon_get_Yes_m530730489_MetadataUsageId;
+extern const uint32_t UICommon_get_Title_m2124656630_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1261644234;
+extern const uint32_t UICommon_get_Content_m2474311107_MetadataUsageId;
+extern const MethodInfo* UICommon_U3COnInitU3Em__0_m3005879252_MethodInfo_var;
+extern const MethodInfo* UICommon_U3COnInitU3Em__1_m2864716751_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2523127342;
+extern Il2CppCodeGenString* _stringLiteral726030472;
+extern const uint32_t UICommon_OnInit_m632032333_MetadataUsageId;
+extern const uint32_t UIConfirm__ctor_m1986438453_MetadataUsageId;
+extern const uint32_t UIConfirm_get_Cancel_m3081922007_MetadataUsageId;
+extern const uint32_t UIConfirm_get_Confirm_m246464595_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral2833411710;
+extern const uint32_t UIConfirm_get_Photo_m1610938361_MetadataUsageId;
+extern const uint32_t UIConfirm_get_Discription_m624592775_MetadataUsageId;
+extern const MethodInfo* UIConfirm_U3COnInitU3Em__0_m3407966669_MethodInfo_var;
+extern const MethodInfo* UIConfirm_U3COnInitU3Em__1_m3407966702_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral4081992213;
+extern const uint32_t UIConfirm_OnInit_m1815292246_MetadataUsageId;
+extern const uint32_t UIConfirm_DoShowAnimation_m465594539_MetadataUsageId;
+extern const uint32_t UIConfirm_DoHideAnimation_m3164173384_MetadataUsageId;
+extern const uint32_t UIConnection_get_Dial_m1995790685_MetadataUsageId;
+extern const MethodInfo* UIConnection_U3COnInitU3Em__0_m2350995769_MethodInfo_var;
+extern Il2CppCodeGenString* _stringLiteral3849780053;
+extern const uint32_t UIConnection_OnInit_m2586617730_MetadataUsageId;
+
+// Req_GetUpdatePics/Response/Entry[]
+struct EntryU5BU5D_t4095601145  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) Entry_t2933429096 * m_Items[1];
+
+public:
+	inline Entry_t2933429096 * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Entry_t2933429096 ** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Entry_t2933429096 * value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline Entry_t2933429096 * GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Entry_t2933429096 ** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Entry_t2933429096 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// System.Byte[]
+struct ByteU5BU5D_t3397334013  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) uint8_t m_Items[1];
+
+public:
+	inline uint8_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, uint8_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline uint8_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, uint8_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+// System.String[]
+struct StringU5BU5D_t1642385972  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) String_t* m_Items[1];
+
+public:
+	inline String_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, String_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline String_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// System.Object[]
+struct ObjectU5BU5D_t3614634134  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) Il2CppObject * m_Items[1];
+
+public:
+	inline Il2CppObject * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Il2CppObject ** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Il2CppObject * value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline Il2CppObject * GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Il2CppObject ** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Il2CppObject * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// System.String[][]
+struct StringU5BU5DU5BU5D_t2190260861  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) StringU5BU5D_t1642385972* m_Items[1];
+
+public:
+	inline StringU5BU5D_t1642385972* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline StringU5BU5D_t1642385972** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, StringU5BU5D_t1642385972* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline StringU5BU5D_t1642385972* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline StringU5BU5D_t1642385972** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, StringU5BU5D_t1642385972* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// System.Char[]
+struct CharU5BU5D_t1328083999  : public Il2CppArray
+{
+public:
+	ALIGN_FIELD (8) Il2CppChar m_Items[1];
+
+public:
+	inline Il2CppChar GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Il2CppChar* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Il2CppChar value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline Il2CppChar GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Il2CppChar* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Il2CppChar value)
+	{
+		m_Items[index] = value;
+	}
+};
+
+
+// T JsonHelper::DeserializeJsonToObject<System.Object>(System.String)
+extern "C"  Il2CppObject * JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared (Il2CppObject * __this /* static, unused */, String_t* ___json0, const MethodInfo* method);
+// !!0 UnityEngine.GameObject::AddComponent<System.Object>()
+extern "C"  Il2CppObject * GameObject_AddComponent_TisIl2CppObject_m2049635786_gshared (GameObject_t1756533147 * __this, const MethodInfo* method);
+// System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
+extern "C"  void List_1__ctor_m310736118_gshared (List_1_t2058570427 * __this, const MethodInfo* method);
+// System.Void System.Collections.Generic.List`1<System.Object>::Add(!0)
+extern "C"  void List_1_Add_m4157722533_gshared (List_1_t2058570427 * __this, Il2CppObject * p0, const MethodInfo* method);
+// System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
+extern "C"  int32_t List_1_get_Count_m2375293942_gshared (List_1_t2058570427 * __this, const MethodInfo* method);
+// !0 System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
+extern "C"  Il2CppObject * List_1_get_Item_m2062981835_gshared (List_1_t2058570427 * __this, int32_t p0, const MethodInfo* method);
+// System.Void System.Collections.Generic.List`1<System.Object>::RemoveAt(System.Int32)
+extern "C"  void List_1_RemoveAt_m3615096820_gshared (List_1_t2058570427 * __this, int32_t p0, const MethodInfo* method);
+// !!0 UnityEngine.GameObject::GetComponent<System.Object>()
+extern "C"  Il2CppObject * GameObject_GetComponent_TisIl2CppObject_m2650145732_gshared (GameObject_t1756533147 * __this, const MethodInfo* method);
+// !0[] System.Collections.Generic.List`1<System.Object>::ToArray()
+extern "C"  ObjectU5BU5D_t3614634134* List_1_ToArray_m546658539_gshared (List_1_t2058570427 * __this, const MethodInfo* method);
+// !!0 UnityEngine.Object::Instantiate<System.Object>(!!0)
+extern "C"  Il2CppObject * Object_Instantiate_TisIl2CppObject_m447919519_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method);
+// !0 System.Collections.Generic.KeyValuePair`2<System.Int32,System.Object>::get_Key()
+extern "C"  int32_t KeyValuePair_2_get_Key_m1537018582_gshared (KeyValuePair_2_t3749587448 * __this, const MethodInfo* method);
+// System.Void System.Func`1<System.Object>::.ctor(System.Object,System.IntPtr)
+extern "C"  void Func_1__ctor_m3570736155_gshared (Func_1_t348874681 * __this, Il2CppObject * p0, IntPtr_t p1, const MethodInfo* method);
+// !!0 DG.Tweening.TweenSettingsExtensions::SetEase<System.Object>(!!0,DG.Tweening.Ease)
+extern "C"  Il2CppObject * TweenSettingsExtensions_SetEase_TisIl2CppObject_m3927137864_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, int32_t p1, const MethodInfo* method);
+// !!0 DG.Tweening.TweenSettingsExtensions::OnComplete<System.Object>(!!0,DG.Tweening.TweenCallback)
+extern "C"  Il2CppObject * TweenSettingsExtensions_OnComplete_TisIl2CppObject_m1873585274_gshared (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, TweenCallback_t3697142134 * p1, const MethodInfo* method);
+
+// System.Void System.Object::.ctor()
+extern "C"  void Object__ctor_m2551263788 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Request::.ctor()
+extern "C"  void Request__ctor_m1436474964 (Request_t2032498015 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Request::set_Api(System.String)
+extern "C"  void Request_set_Api_m3341172353 (Request_t2032498015 * __this, String_t* ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.WWWForm::.ctor()
+extern "C"  void WWWForm__ctor_m2129424870 (WWWForm_t3950226929 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Request::set_Form(UnityEngine.WWWForm)
+extern "C"  void Request_set_Form_m653902259 (Request_t2032498015 * __this, WWWForm_t3950226929 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// T JsonHelper::DeserializeJsonToObject<Req_GetMachineInfo/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t3827549514_m749788003(__this /* static, unused */, ___json0, method) ((  Response_t3827549514 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// System.Void Request/Response::.ctor()
+extern "C"  void Response__ctor_m932292640 (Response_t998287943 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// T JsonHelper::DeserializeJsonToObject<Req_GetMachinePrizeBallData/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t231228995_m2062438722(__this /* static, unused */, ___json0, method) ((  Response_t231228995 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// System.Void UnityEngine.WWWForm::AddField(System.String,System.Int32)
+extern "C"  void WWWForm_AddField_m2260664476 (WWWForm_t3950226929 * __this, String_t* p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// T JsonHelper::DeserializeJsonToObject<Req_GetMachinePrizeInfo/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t3930883938_m246039259(__this /* static, unused */, ___json0, method) ((  Response_t3930883938 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_GetNewsLists/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t3647484083_m3296547478(__this /* static, unused */, ___json0, method) ((  Response_t3647484083 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_GetPrizeInfo/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t1066063823_m1613211522(__this /* static, unused */, ___json0, method) ((  Response_t1066063823 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_GetPrizeUseCoin/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t4284099457_m3419605178(__this /* static, unused */, ___json0, method) ((  Response_t4284099457 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// System.Type System.Object::GetType()
+extern "C"  Type_t * Object_GetType_m191970594 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
+extern "C"  Type_t * Type_GetTypeFromHandle_m432505302 (Il2CppObject * __this /* static, unused */, RuntimeTypeHandle_t2330101084  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String Request::getChildMsg()
+extern "C"  String_t* Request_getChildMsg_m3192998110 (Request_t2032498015 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 Request::getResponseCode()
+extern "C"  int32_t Request_getResponseCode_m4064349852 (Request_t2032498015 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// T JsonHelper::DeserializeJsonToObject<Req_GetPrizeUserHorn/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t3772993143_m1323198956(__this /* static, unused */, ___json0, method) ((  Response_t3772993143 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_GetPrizeUserLists/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t2934266941_m391481116(__this /* static, unused */, ___json0, method) ((  Response_t2934266941 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_GetUpdatePics/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t2759531585_m2774702468(__this /* static, unused */, ___json0, method) ((  Response_t2759531585 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_GetUserForgetPsdVcode/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t1445710305_m1138515636(__this /* static, unused */, ___json0, method) ((  Response_t1445710305 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// System.Void UnityEngine.WWWForm::AddField(System.String,System.String)
+extern "C"  void WWWForm_AddField_m1334606983 (WWWForm_t3950226929 * __this, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// T JsonHelper::DeserializeJsonToObject<Req_MachineEndGrab/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t212491691_m1337346(__this /* static, unused */, ___json0, method) ((  Response_t212491691 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_MachineStartGrab/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t3053143294_m1592976273(__this /* static, unused */, ___json0, method) ((  Response_t3053143294 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_RegisterVcode/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t2628246429_m2269781228(__this /* static, unused */, ___json0, method) ((  Response_t2628246429 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_UsePrize/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t2813544250_m584347601(__this /* static, unused */, ___json0, method) ((  Response_t2813544250 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_UserForgetPsdSendMsg/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t1073513569_m921688182(__this /* static, unused */, ___json0, method) ((  Response_t1073513569 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// System.Void Base_Req_UserInfo::.ctor()
+extern "C"  void Base_Req_UserInfo__ctor_m2140790411 (Base_Req_UserInfo_t3817878412 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// T JsonHelper::DeserializeJsonToObject<Base_Req_UserInfo/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t1683355314_m1704220303(__this /* static, unused */, ___json0, method) ((  Response_t1683355314 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_UserLogout/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t165664278_m2629805977(__this /* static, unused */, ___json0, method) ((  Response_t165664278 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_UserRecharge/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t4250180471_m1739691168(__this /* static, unused */, ___json0, method) ((  Response_t4250180471 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_UserRegister/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t2045565979_m532993668(__this /* static, unused */, ___json0, method) ((  Response_t2045565979 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_UserRegisterSendMsg/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t1370037692_m2102720379(__this /* static, unused */, ___json0, method) ((  Response_t1370037692 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Req_UserResetPsd/Response>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisResponse_t4197083710_m403142833(__this /* static, unused */, ___json0, method) ((  Response_t4197083710 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// System.Void Request/Exception::.ctor()
+extern "C"  void Exception__ctor_m767749334 (Exception_t2103181915 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Request/Response::set_Req(Request)
+extern "C"  void Response_set_Req_m4105363984 (Response_t998287943 * __this, Request_t2032498015 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// T JsonHelper::DeserializeJsonToObject<Request/Error>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisError_t2783916960_m486751945(__this /* static, unused */, ___json0, method) ((  Error_t2783916960 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// T JsonHelper::DeserializeJsonToObject<Request/Exception>(System.String)
+#define JsonHelper_DeserializeJsonToObject_TisException_t2103181915_m3581041200(__this /* static, unused */, ___json0, method) ((  Exception_t2103181915 * (*) (Il2CppObject * /* static, unused */, String_t*, const MethodInfo*))JsonHelper_DeserializeJsonToObject_TisIl2CppObject_m2637717689_gshared)(__this /* static, unused */, ___json0, method)
+// System.Void UnityEngine.MonoBehaviour::.ctor()
+extern "C"  void MonoBehaviour__ctor_m2464341955 (MonoBehaviour_t1158329972 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+extern "C"  bool Object_op_Equality_m3764089466 (Il2CppObject * __this /* static, unused */, Object_t1021602117 * p0, Object_t1021602117 * p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.GameObject::.ctor(System.String)
+extern "C"  void GameObject__ctor_m962601984 (GameObject_t1756533147 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Object::DontDestroyOnLoad(UnityEngine.Object)
+extern "C"  void Object_DontDestroyOnLoad_m2330762974 (Il2CppObject * __this /* static, unused */, Object_t1021602117 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.GameObject::AddComponent<ResourceManager>()
+#define GameObject_AddComponent_TisResourceManager_t4136494783_m1310922065(__this, method) ((  ResourceManager_t4136494783 * (*) (GameObject_t1756533147 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m2049635786_gshared)(__this, method)
+// System.Void System.Collections.Generic.List`1<ResourceManager/LoadItem>::.ctor()
+#define List_1__ctor_m2501500508(__this, method) ((  void (*) (List_1_t3290435963 *, const MethodInfo*))List_1__ctor_m310736118_gshared)(__this, method)
+// System.Void System.Collections.Hashtable::.ctor()
+extern "C"  void Hashtable__ctor_m1884964176 (Hashtable_t909839986 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String Util::get_DataPath()
+extern "C"  String_t* Util_get_DataPath_m1063176272 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.String::Concat(System.String,System.String)
+extern "C"  String_t* String_Concat_m2596409543 (Il2CppObject * __this /* static, unused */, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Collections.IEnumerator ResourceManager::FreeIdleIcons()
+extern "C"  Il2CppObject * ResourceManager_FreeIdleIcons_m2551489640 (ResourceManager_t4136494783 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
+extern "C"  Coroutine_t2299508840 * MonoBehaviour_StartCoroutine_m2470621050 (MonoBehaviour_t1158329972 * __this, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ResourceManager/LoadItem::.ctor()
+extern "C"  void LoadItem__ctor_m1691606994 (LoadItem_t3921314831 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Collections.Generic.List`1<ResourceManager/LoadItem>::Add(!0)
+#define List_1_Add_m1299367128(__this, p0, method) ((  void (*) (List_1_t3290435963 *, LoadItem_t3921314831 *, const MethodInfo*))List_1_Add_m4157722533_gshared)(__this, p0, method)
+// System.Collections.IEnumerator ResourceManager::Run()
+extern "C"  Il2CppObject * ResourceManager_Run_m1332267789 (ResourceManager_t4136494783 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ResourceManager/<Run>c__Iterator0::.ctor()
+extern "C"  void U3CRunU3Ec__Iterator0__ctor_m4085996495 (U3CRunU3Ec__Iterator0_t1127244418 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int32 System.Collections.Generic.List`1<ResourceManager/LoadItem>::get_Count()
+#define List_1_get_Count_m4203099306(__this, method) ((  int32_t (*) (List_1_t3290435963 *, const MethodInfo*))List_1_get_Count_m2375293942_gshared)(__this, method)
+// System.Void ResourceManager/<FreeIdleIcons>c__Iterator1::.ctor()
+extern "C"  void U3CFreeIdleIconsU3Ec__Iterator1__ctor_m429380523 (U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.WaitForSeconds::.ctor(System.Single)
+extern "C"  void WaitForSeconds__ctor_m1990515539 (WaitForSeconds_t3839502067 * __this, float p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Object System.Collections.DictionaryEntry::get_Key()
+extern "C"  Il2CppObject * DictionaryEntry_get_Key_m3623293571 (DictionaryEntry_t3048875398 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Object System.Collections.DictionaryEntry::get_Value()
+extern "C"  Il2CppObject * DictionaryEntry_get_Value_m2812883243 (DictionaryEntry_t3048875398 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Collections.ArrayList::.ctor()
+extern "C"  void ArrayList__ctor_m4012174379 (ArrayList_t4252133567 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.NTexture::Dispose()
+extern "C"  void NTexture_Dispose_m3580443639 (NTexture_t84202663 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.NotSupportedException::.ctor()
+extern "C"  void NotSupportedException__ctor_m3232764727 (NotSupportedException_t1793819818 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !0 System.Collections.Generic.List`1<ResourceManager/LoadItem>::get_Item(System.Int32)
+#define List_1_get_Item_m274276655(__this, p0, method) ((  LoadItem_t3921314831 * (*) (List_1_t3290435963 *, int32_t, const MethodInfo*))List_1_get_Item_m2062981835_gshared)(__this, p0, method)
+// System.Void System.Collections.Generic.List`1<ResourceManager/LoadItem>::RemoveAt(System.Int32)
+#define List_1_RemoveAt_m997641594(__this, p0, method) ((  void (*) (List_1_t3290435963 *, int32_t, const MethodInfo*))List_1_RemoveAt_m3615096820_gshared)(__this, p0, method)
+// System.Void ResourceManager/LoadCompleteCallback::Invoke(FairyGUI.NTexture)
+extern "C"  void LoadCompleteCallback_Invoke_m89323250 (LoadCompleteCallback_t3887379968 * __this, NTexture_t84202663 * ___texture0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ResourceManager/SaveToDiskCallback::Invoke(System.Byte[])
+extern "C"  void SaveToDiskCallback_Invoke_m2823085776 (SaveToDiskCallback_t1360640706 * __this, ByteU5BU5D_t3397334013* ___stream0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.WWW::.ctor(System.String)
+extern "C"  void WWW__ctor_m2024029190 (WWW_t2919945039 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.WWW::get_error()
+extern "C"  String_t* WWW_get_error_m3092701216 (WWW_t2919945039 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.String::IsNullOrEmpty(System.String)
+extern "C"  bool String_IsNullOrEmpty_m2802126737 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Texture2D UnityEngine.WWW::get_texture()
+extern "C"  Texture2D_t3542995729 * WWW_get_texture_m1121178301 (WWW_t2919945039 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.NTexture::.ctor(UnityEngine.Texture)
+extern "C"  void NTexture__ctor_m3110936478 (NTexture_t84202663 * __this, Texture_t2243626319 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Byte[] UnityEngine.WWW::get_bytes()
+extern "C"  ByteU5BU5D_t3397334013* WWW_get_bytes_m420718112 (WWW_t2919945039 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ResourceManager/LoadErrorCallback::Invoke(System.String)
+extern "C"  void LoadErrorCallback_Invoke_m1405382364 (LoadErrorCallback_t1969330919 * __this, String_t* ___error0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void BaseMediator::.ctor(System.String,System.Object)
+extern "C"  void BaseMediator__ctor_m1601555591 (BaseMediator_t1205744884 * __this, String_t* ___mediatorName0, Il2CppObject * ___viewComponent1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Object PureMVC.Patterns.Mediator.Mediator::get_ViewComponent()
+extern "C"  Il2CppObject * Mediator_get_ViewComponent_m586586336 (Mediator_t2789785455 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.GameObject::GetComponent<UIRewardsMain>()
+#define GameObject_GetComponent_TisUIRewardsMain_t1107937165_m4171481314(__this, method) ((  UIRewardsMain_t1107937165 * (*) (GameObject_t1756533147 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m2650145732_gshared)(__this, method)
+// System.Void System.Collections.Generic.List`1<System.String>::.ctor()
+#define List_1__ctor_m3854603248(__this, method) ((  void (*) (List_1_t1398341365 *, const MethodInfo*))List_1__ctor_m310736118_gshared)(__this, method)
+// System.Void System.Collections.Generic.List`1<System.String>::Add(!0)
+#define List_1_Add_m4061286785(__this, p0, method) ((  void (*) (List_1_t1398341365 *, String_t*, const MethodInfo*))List_1_Add_m4157722533_gshared)(__this, p0, method)
+// !0[] System.Collections.Generic.List`1<System.String>::ToArray()
+#define List_1_ToArray_m948919263(__this, method) ((  StringU5BU5D_t1642385972* (*) (List_1_t1398341365 *, const MethodInfo*))List_1_ToArray_m546658539_gshared)(__this, method)
+// System.Boolean System.String::op_Equality(System.String,System.String)
+extern "C"  bool String_op_Equality_m1790663636 (Il2CppObject * __this /* static, unused */, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UIRewardsMain RewardsMediator::get_m_rewards_ui()
+extern "C"  UIRewardsMain_t1107937165 * RewardsMediator_get_m_rewards_ui_m24736136 (RewardsMediator_t1871400415 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UIRewardsMain::RespondUsePrize(PureMVC.Interfaces.INotification)
+extern "C"  void UIRewardsMain_RespondUsePrize_m1512108068 (UIRewardsMain_t1107937165 * __this, Il2CppObject * ___notification0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String PureMVC.Patterns.Mediator.Mediator::get_MediatorName()
+extern "C"  String_t* Mediator_get_MediatorName_m3321693954 (Mediator_t2789785455 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Debug::Log(System.Object)
+extern "C"  void Debug_Log_m920475918 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Object UnityEngine.Resources::Load(System.String)
+extern "C"  Object_t1021602117 * Resources_Load_m2041782325 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.Object::Instantiate<UnityEngine.GameObject>(!!0)
+#define Object_Instantiate_TisGameObject_t1756533147_m3664764861(__this /* static, unused */, p0, method) ((  GameObject_t1756533147 * (*) (Il2CppObject * /* static, unused */, GameObject_t1756533147 *, const MethodInfo*))Object_Instantiate_TisIl2CppObject_m447919519_gshared)(__this /* static, unused */, p0, method)
+// UnityEngine.Transform UnityEngine.GameObject::get_transform()
+extern "C"  Transform_t3275118058 * GameObject_get_transform_m909382139 (GameObject_t1756533147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+extern "C"  GameObject_t1756533147 * Component_get_gameObject_m3105766835 (Component_t3819376471 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Transform::set_parent(UnityEngine.Transform)
+extern "C"  void Transform_set_parent_m3281327839 (Transform_t3275118058 * __this, Transform_t3275118058 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Vector3::get_zero()
+extern "C"  Vector3_t2243707580  Vector3_get_zero_m1527993324 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3)
+extern "C"  void Transform_set_localPosition_m1026930133 (Transform_t3275118058 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
+extern "C"  void Vector3__ctor_m2638739322 (Vector3_t2243707580 * __this, float p0, float p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Transform::set_localScale(UnityEngine.Vector3)
+extern "C"  void Transform_set_localScale_m2325460848 (Transform_t3275118058 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Transform::Translate(System.Single,System.Single,System.Single,UnityEngine.Space)
+extern "C"  void Transform_Translate_m1198703821 (Transform_t3275118058 * __this, float p0, float p1, float p2, int32_t p3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Transform::Rotate(System.Single,System.Single,System.Single,UnityEngine.Space)
+extern "C"  void Transform_Rotate_m2449860094 (Transform_t3275118058 * __this, float p0, float p1, float p2, int32_t p3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IO.MemoryStream::.ctor()
+extern "C"  void MemoryStream__ctor_m1043059966 (MemoryStream_t743994179 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IO.BinaryReader::.ctor(System.IO.Stream)
+extern "C"  void BinaryReader__ctor_m4190061006 (BinaryReader_t2491843768 * __this, Stream_t3255436806 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SocketClient::Close()
+extern "C"  void SocketClient_Close_m3369538009 (SocketClient_t718412134 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Net.Sockets.TcpClient::.ctor()
+extern "C"  void TcpClient__ctor_m1345314116 (TcpClient_t408947970 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Net.Sockets.TcpClient::set_SendTimeout(System.Int32)
+extern "C"  void TcpClient_set_SendTimeout_m99119269 (TcpClient_t408947970 * __this, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Net.Sockets.TcpClient::set_ReceiveTimeout(System.Int32)
+extern "C"  void TcpClient_set_ReceiveTimeout_m4062746526 (TcpClient_t408947970 * __this, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Net.Sockets.TcpClient::set_NoDelay(System.Boolean)
+extern "C"  void TcpClient_set_NoDelay_m2324075952 (TcpClient_t408947970 * __this, bool p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.AsyncCallback::.ctor(System.Object,System.IntPtr)
+extern "C"  void AsyncCallback__ctor_m3071689932 (AsyncCallback_t163412349 * __this, Il2CppObject * p0, IntPtr_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.IAsyncResult System.Net.Sockets.TcpClient::BeginConnect(System.String,System.Int32,System.AsyncCallback,System.Object)
+extern "C"  Il2CppObject * TcpClient_BeginConnect_m2214827936 (TcpClient_t408947970 * __this, String_t* p0, int32_t p1, AsyncCallback_t163412349 * p2, Il2CppObject * p3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Debug::LogError(System.Object)
+extern "C"  void Debug_LogError_m3715728798 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Net.Sockets.NetworkStream System.Net.Sockets.TcpClient::GetStream()
+extern "C"  NetworkStream_t581172200 * TcpClient_GetStream_m872175179 (TcpClient_t408947970 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ByteBuffer::.ctor()
+extern "C"  void ByteBuffer__ctor_m3262420685 (ByteBuffer_t1012950836 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void NetworkManager::AddEvent(System.Int32,ByteBuffer)
+extern "C"  void NetworkManager_AddEvent_m2458951100 (Il2CppObject * __this /* static, unused */, int32_t ____event0, ByteBuffer_t1012950836 * ___data1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IO.BinaryWriter::.ctor(System.IO.Stream)
+extern "C"  void BinaryWriter__ctor_m828435354 (BinaryWriter_t3179371318 * __this, Stream_t3255436806 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean System.Net.Sockets.TcpClient::get_Connected()
+extern "C"  bool TcpClient_get_Connected_m3815662272 (TcpClient_t408947970 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Threading.Monitor::Enter(System.Object)
+extern "C"  void Monitor_Enter_m2136705809 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Threading.Monitor::Exit(System.Object)
+extern "C"  void Monitor_Exit_m2677760297 (Il2CppObject * __this /* static, unused */, Il2CppObject * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SocketClient::OnDisconnected(DisType,System.String)
+extern "C"  void SocketClient_OnDisconnected_m3044964815 (SocketClient_t718412134 * __this, int32_t ___dis0, String_t* ___msg1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SocketClient::OnReceive(System.Byte[],System.Int32)
+extern "C"  void SocketClient_OnReceive_m4202993151 (SocketClient_t718412134 * __this, ByteU5BU5D_t3397334013* ___bytes0, int32_t ___length1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Array::Clear(System.Array,System.Int32,System.Int32)
+extern "C"  void Array_Clear_m782967417 (Il2CppObject * __this /* static, unused */, Il2CppArray * p0, int32_t p1, int32_t p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ByteBuffer::WriteShort(System.UInt16)
+extern "C"  void ByteBuffer_WriteShort_m575677464 (ByteBuffer_t1012950836 * __this, uint16_t ___v0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.String::Concat(System.Object[])
+extern "C"  String_t* String_Concat_m3881798623 (Il2CppObject * __this /* static, unused */, ObjectU5BU5D_t3614634134* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.Byte::ToString(System.String)
+extern "C"  String_t* Byte_ToString_m1309661918 (uint8_t* __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Int64 SocketClient::RemainingBytes()
+extern "C"  int64_t SocketClient_RemainingBytes_m1829624551 (SocketClient_t718412134 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SocketClient::OnReceivedMessage(System.IO.MemoryStream)
+extern "C"  void SocketClient_OnReceivedMessage_m1747194874 (SocketClient_t718412134 * __this, MemoryStream_t743994179 * ___ms0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ByteBuffer::.ctor(System.Byte[])
+extern "C"  void ByteBuffer__ctor_m873097442 (ByteBuffer_t1012950836 * __this, ByteU5BU5D_t3397334013* ___data0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.UInt16 ByteBuffer::ReadShort()
+extern "C"  uint16_t ByteBuffer_ReadShort_m3075192200 (ByteBuffer_t1012950836 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SocketClient::WriteMessage(System.Byte[])
+extern "C"  void SocketClient_WriteMessage_m1370612150 (SocketClient_t718412134 * __this, ByteU5BU5D_t3397334013* ___message0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Net.Sockets.TcpClient::Close()
+extern "C"  void TcpClient_Close_m4260227760 (TcpClient_t408947970 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SocketClient::ConnectServer(System.String,System.Int32)
+extern "C"  void SocketClient_ConnectServer_m2557951783 (SocketClient_t718412134 * __this, String_t* ___host0, int32_t ___port1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Byte[] ByteBuffer::ToBytes()
+extern "C"  ByteU5BU5D_t3397334013* ByteBuffer_ToBytes_m4207338399 (ByteBuffer_t1012950836 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void SocketClient::SessionSend(System.Byte[])
+extern "C"  void SocketClient_SessionSend_m3545253234 (SocketClient_t718412134 * __this, ByteU5BU5D_t3397334013* ___bytes0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void ByteBuffer::Close()
+extern "C"  void ByteBuffer_Close_m1204384779 (ByteBuffer_t1012950836 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void PureMVC.Patterns.Command.SimpleCommand::.ctor()
+extern "C"  void SimpleCommand__ctor_m589343610 (SimpleCommand_t4249318299 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !0 System.Collections.Generic.KeyValuePair`2<System.Int32,ByteBuffer>::get_Key()
+#define KeyValuePair_2_get_Key_m4024906165(__this, method) ((  int32_t (*) (KeyValuePair_2_t2073088989 *, const MethodInfo*))KeyValuePair_2_get_Key_m1537018582_gshared)(__this, method)
+// !!0 UnityEngine.GameObject::AddComponent<NetworkManager>()
+#define GameObject_AddComponent_TisNetworkManager_t226491143_m3819311753(__this, method) ((  NetworkManager_t226491143 * (*) (GameObject_t1756533147 *, const MethodInfo*))GameObject_AddComponent_TisIl2CppObject_m2049635786_gshared)(__this, method)
+// UnityFacade UnityFacade::GetInstance()
+extern "C"  UnityFacade_t1495732005 * UnityFacade_GetInstance_m1617991407 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityFacade::set_Network(NetworkManager)
+extern "C"  void UnityFacade_set_Network_m2334716556 (UnityFacade_t1495732005 * __this, NetworkManager_t226491143 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// PureMVC.Interfaces.IFacade PureMVC.Patterns.Observer.Notifier::get_Facade()
+extern "C"  Il2CppObject * Notifier_get_Facade_m1803564433 (Notifier_t1254524638 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void DeviceInfoProxy::.ctor(System.String)
+extern "C"  void DeviceInfoProxy__ctor_m2979241131 (DeviceInfoProxy_t1172231466 * __this, String_t* ___proxyName0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Component UnityEngine.GameObject::AddComponent(System.Type)
+extern "C"  Component_t3819376471 * GameObject_AddComponent_m3757565614 (GameObject_t1756533147 * __this, Type_t * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Func`1<PureMVC.Interfaces.ICommand>::.ctor(System.Object,System.IntPtr)
+#define Func_1__ctor_m1820563875(__this, p0, p1, method) ((  void (*) (Func_1_t2923916928 *, Il2CppObject *, IntPtr_t, const MethodInfo*))Func_1__ctor_m3570736155_gshared)(__this, p0, p1, method)
+// System.Void Req_GetUpdatePics::.ctor()
+extern "C"  void Req_GetUpdatePics__ctor_m3225614838 (Req_GetUpdatePics_t1118469089 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void HttpReqCommand::.ctor()
+extern "C"  void HttpReqCommand__ctor_m3845698172 (HttpReqCommand_t3283257643 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void HttpResCommand::.ctor()
+extern "C"  void HttpResCommand__ctor_m2917302782 (HttpResCommand_t3283050857 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void GameCommand::.ctor()
+extern "C"  void GameCommand__ctor_m2738712206 (GameCommand_t2834858639 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UserCommand::.ctor()
+extern "C"  void UserCommand__ctor_m32504013 (UserCommand_t2016101392 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String[] System.IO.File::ReadAllLines(System.String)
+extern "C"  StringU5BU5D_t1642385972* File_ReadAllLines_m1871420716 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String[][] TXTReader::ReadArray(System.String[])
+extern "C"  StringU5BU5DU5BU5D_t2190260861* TXTReader_ReadArray_m2186684248 (Il2CppObject * __this /* static, unused */, StringU5BU5D_t1642385972* ___teStrTxt0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IO.MemoryStream::.ctor(System.Byte[])
+extern "C"  void MemoryStream__ctor_m4073175573 (MemoryStream_t743994179 * __this, ByteU5BU5D_t3397334013* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IO.StreamReader::.ctor(System.IO.Stream)
+extern "C"  void StreamReader__ctor_m1780435609 (StreamReader_t2360341767 * __this, Stream_t3255436806 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.String::Trim()
+extern "C"  String_t* String_Trim_m2668767713 (String_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.String::Replace(System.String,System.String)
+extern "C"  String_t* String_Replace_m1941156251 (String_t* __this, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String[] System.String::Split(System.Char[])
+extern "C"  StringU5BU5D_t1642385972* String_Split_m3326265864 (String_t* __this, CharU5BU5D_t1328083999* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String System.String::Concat(System.String,System.String,System.String)
+extern "C"  String_t* String_Concat_m612901809 (Il2CppObject * __this /* static, unused */, String_t* p0, String_t* p1, String_t* p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IO.FileStream::.ctor(System.String,System.IO.FileMode)
+extern "C"  void FileStream__ctor_m785772645 (FileStream_t1695958676 * __this, String_t* p0, int32_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Text.Encoding System.Text.Encoding::get_UTF8()
+extern "C"  Encoding_t663144255 * Encoding_get_UTF8_m1752852937 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.IO.StreamWriter::.ctor(System.IO.Stream,System.Text.Encoding)
+extern "C"  void StreamWriter__ctor_m3823607994 (StreamWriter_t3858580635 * __this, Stream_t3255436806 * p0, Encoding_t663144255 * p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void BaseWindow::.ctor()
+extern "C"  void BaseWindow__ctor_m3881124172 (BaseWindow_t1983497523 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GComponent FairyGUI.Window::get_contentPane()
+extern "C"  GComponent_t4106136290 * Window_get_contentPane_m1879605898 (Window_t252217058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GObject FairyGUI.GComponent::GetChild(System.String)
+extern "C"  GObject_t2662234644 * GComponent_GetChild_m2636109344 (GComponent_t4106136290 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.GObject::Center()
+extern "C"  void GObject_Center_m396431490 (GObject_t2662234644 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.Window::set_modal(System.Boolean)
+extern "C"  void Window_set_modal_m3848631098 (Window_t252217058 * __this, bool p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GObject UIBaseVerifyWin::get_Code_countdown()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Code_countdown_m2491358242 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.GObject::set_visible(System.Boolean)
+extern "C"  void GObject_set_visible_m2422687171 (GObject_t2662234644 * __this, bool p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GObject UIBaseVerifyWin::get_Warn()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Warn_m606077883 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.EventListener FairyGUI.GObject::get_onClick()
+extern "C"  EventListener_t2764096410 * GObject_get_onClick_m3885020248 (GObject_t2662234644 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.EventCallback0::.ctor(System.Object,System.IntPtr)
+extern "C"  void EventCallback0__ctor_m2937283442 (EventCallback0_t422277839 * __this, Il2CppObject * p0, IntPtr_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.EventListener::Add(FairyGUI.EventCallback0)
+extern "C"  void EventListener_Add_m126540483 (EventListener_t2764096410 * __this, EventCallback0_t422277839 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GObject UIBaseVerifyWin::get_Pic_code()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Pic_code_m1000918441 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GRichTextField FairyGUI.GObject::get_asRichTextField()
+extern "C"  GRichTextField_t3736523726 * GObject_get_asRichTextField_m3817114342 (GObject_t2662234644 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.String Util::CreateRandomCode(System.Int32)
+extern "C"  String_t* Util_CreateRandomCode_m1729400985 (Il2CppObject * __this /* static, unused */, int32_t ___codeCount0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.Window::.ctor()
+extern "C"  void Window__ctor_m1591790705 (Window_t252217058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Color::.ctor(System.Single,System.Single,System.Single,System.Single)
+extern "C"  void Color__ctor_m1909920690 (Color_t2020392075 * __this, float p0, float p1, float p2, float p3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GObject FairyGUI.UIPackage::CreateObject(System.String,System.String)
+extern "C"  GObject_t2662234644 * UIPackage_CreateObject_m2440449471 (Il2CppObject * __this /* static, unused */, String_t* p0, String_t* p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GComponent FairyGUI.GObject::get_asCom()
+extern "C"  GComponent_t4106136290 * GObject_get_asCom_m2561662992 (GObject_t2662234644 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.Window::set_contentPane(FairyGUI.GComponent)
+extern "C"  void Window_set_contentPane_m1197528159 (Window_t252217058 * __this, GComponent_t4106136290 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GObject UICoinPrize::get_Contiune()
+extern "C"  GObject_t2662234644 * UICoinPrize_get_Contiune_m2601904005 (UICoinPrize_t4037221321 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.GObject::SetScale(System.Single,System.Single)
+extern "C"  void GObject_SetScale_m1458018553 (GObject_t2662234644 * __this, float p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.GObject::SetPivot(System.Single,System.Single)
+extern "C"  void GObject_SetPivot_m184255169 (GObject_t2662234644 * __this, float p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+extern "C"  void Vector2__ctor_m3067419446 (Vector2_t2243707579 * __this, float p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// DG.Tweening.Tweener FairyGUI.GObject::TweenScale(UnityEngine.Vector2,System.Single)
+extern "C"  Tweener_t760404022 * GObject_TweenScale_m1621803854 (GObject_t2662234644 * __this, Vector2_t2243707579  p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 DG.Tweening.TweenSettingsExtensions::SetEase<DG.Tweening.Tweener>(!!0,DG.Tweening.Ease)
+#define TweenSettingsExtensions_SetEase_TisTweener_t760404022_m1400957772(__this /* static, unused */, p0, p1, method) ((  Tweener_t760404022 * (*) (Il2CppObject * /* static, unused */, Tweener_t760404022 *, int32_t, const MethodInfo*))TweenSettingsExtensions_SetEase_TisIl2CppObject_m3927137864_gshared)(__this /* static, unused */, p0, p1, method)
+// System.Void DG.Tweening.TweenCallback::.ctor(System.Object,System.IntPtr)
+extern "C"  void TweenCallback__ctor_m3479200459 (TweenCallback_t3697142134 * __this, Il2CppObject * p0, IntPtr_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 DG.Tweening.TweenSettingsExtensions::OnComplete<DG.Tweening.Tweener>(!!0,DG.Tweening.TweenCallback)
+#define TweenSettingsExtensions_OnComplete_TisTweener_t760404022_m67810386(__this /* static, unused */, p0, p1, method) ((  Tweener_t760404022 * (*) (Il2CppObject * /* static, unused */, Tweener_t760404022 *, TweenCallback_t3697142134 *, const MethodInfo*))TweenSettingsExtensions_OnComplete_TisIl2CppObject_m1873585274_gshared)(__this /* static, unused */, p0, p1, method)
+// System.Void FairyGUI.Window::Hide()
+extern "C"  void Window_Hide_m1851901417 (Window_t252217058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void FairyGUI.EventCallback0::Invoke()
+extern "C"  void EventCallback0_Invoke_m694389864 (EventCallback0_t422277839 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GRoot FairyGUI.GRoot::get_inst()
+extern "C"  GRoot_t2728525843 * GRoot_get_inst_m763148459 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GGraph FairyGUI.GRoot::get_modalLayer()
+extern "C"  GGraph_t1610186177 * GRoot_get_modalLayer_m139304241 (GRoot_t2728525843 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GObject UICommon::get_Yes()
+extern "C"  GObject_t2662234644 * UICommon_get_Yes_m530730489 (UICommon_t1511081147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void BaseWindow::OnInit()
+extern "C"  void BaseWindow_OnInit_m3545709597 (BaseWindow_t1983497523 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GObject UIConfirm::get_Confirm()
+extern "C"  GObject_t2662234644 * UIConfirm_get_Confirm_m246464595 (UIConfirm_t2687705270 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// FairyGUI.GObject UIConfirm::get_Cancel()
+extern "C"  GObject_t2662234644 * UIConfirm_get_Cancel_m3081922007 (UIConfirm_t2687705270 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Req_GetExplainAttention/Response/Data::.ctor()
+extern "C"  void Data__ctor_m524097578 (Data_t1828702727 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetExplainAttention/Response/Info::.ctor()
+extern "C"  void Info__ctor_m1977563658 (Info_t1532822933 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetMachineInfo::.ctor()
+extern "C"  void Req_GetMachineInfo__ctor_m4148064487 (Req_GetMachineInfo_t3218704580 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetMachineInfo__ctor_m4148064487_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral3573137902);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_GetMachineInfo::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_GetMachineInfo_parseLogicResponse_m584118899 (Req_GetMachineInfo_t3218704580 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetMachineInfo_parseLogicResponse_m584118899_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t3827549514 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t3827549514_m749788003(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t3827549514_m749788003_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_GetMachineInfo::command()
+extern "C"  String_t* Req_GetMachineInfo_command_m2446995845 (Req_GetMachineInfo_t3218704580 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetMachineInfo_command_m2446995845_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral3573137902;
+	}
+}
+// System.Void Req_GetMachineInfo/Response::.ctor()
+extern "C"  void Response__ctor_m4075684147 (Response_t3827549514 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetMachineInfo/Response/Data::.ctor()
+extern "C"  void Data__ctor_m1651241538 (Data_t266915901 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetMachineInfo/Response/Info::.ctor()
+extern "C"  void Info__ctor_m3796987638 (Info_t2975596095 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetMachineInfo/Response/Machine::.ctor()
+extern "C"  void Machine__ctor_m3619006345 (Machine_t1990010804 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetMachinePrizeBallData::.ctor()
+extern "C"  void Req_GetMachinePrizeBallData__ctor_m1838558808 (Req_GetMachinePrizeBallData_t2586177075 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetMachinePrizeBallData__ctor_m1838558808_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral100393555);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_GetMachinePrizeBallData::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_GetMachinePrizeBallData_parseLogicResponse_m2873101712 (Req_GetMachinePrizeBallData_t2586177075 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetMachinePrizeBallData_parseLogicResponse_m2873101712_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t231228995 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t231228995_m2062438722(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t231228995_m2062438722_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_GetMachinePrizeBallData::command()
+extern "C"  String_t* Req_GetMachinePrizeBallData_command_m2172115432 (Req_GetMachinePrizeBallData_t2586177075 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetMachinePrizeBallData_command_m2172115432_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral100393555;
+	}
+}
+// System.Void Req_GetMachinePrizeBallData/Response::.ctor()
+extern "C"  void Response__ctor_m3897008580 (Response_t231228995 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetMachinePrizeBallData/Response/Data::.ctor()
+extern "C"  void Data__ctor_m2760299461 (Data_t392954118 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetMachinePrizeBallData/Response/Info::.ctor()
+extern "C"  void Info__ctor_m3962853003 (Info_t1938835626 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetMachinePrizeInfo::.ctor()
+extern "C"  void Req_GetMachinePrizeInfo__ctor_m893919327 (Req_GetMachinePrizeInfo_t784911668 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetMachinePrizeInfo__ctor_m893919327_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral2359597034);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_GetMachinePrizeInfo::get_MtId()
+extern "C"  int32_t Req_GetMachinePrizeInfo_get_MtId_m901754280 (Req_GetMachinePrizeInfo_t784911668 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_mtId_9();
+		return L_0;
+	}
+}
+// System.Void Req_GetMachinePrizeInfo::set_MtId(System.Int32)
+extern "C"  void Req_GetMachinePrizeInfo_set_MtId_m3613707239 (Req_GetMachinePrizeInfo_t784911668 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetMachinePrizeInfo_set_MtId_m3613707239_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_mtId_9(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral795892554, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_GetMachinePrizeInfo::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_GetMachinePrizeInfo_parseLogicResponse_m1409682963 (Req_GetMachinePrizeInfo_t784911668 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetMachinePrizeInfo_parseLogicResponse_m1409682963_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t3930883938 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t3930883938_m246039259(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t3930883938_m246039259_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_GetMachinePrizeInfo::command()
+extern "C"  String_t* Req_GetMachinePrizeInfo_command_m2667801657 (Req_GetMachinePrizeInfo_t784911668 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetMachinePrizeInfo_command_m2667801657_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral2359597034;
+	}
+}
+// System.Void Req_GetMachinePrizeInfo/Response::.ctor()
+extern "C"  void Response__ctor_m396375739 (Response_t3930883938 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetMachinePrizeInfo/Response/Data::.ctor()
+extern "C"  void Data__ctor_m2414381750 (Data_t83466333 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetMachinePrizeInfo/Response/Info::.ctor()
+extern "C"  void Info__ctor_m2925386770 (Info_t446344683 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetNewsLists::.ctor()
+extern "C"  void Req_GetNewsLists__ctor_m1113998164 (Req_GetNewsLists_t2838141971 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetNewsLists__ctor_m1113998164_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		__this->set__api_8(_stringLiteral396408025);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_GetNewsLists::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_GetNewsLists_parseLogicResponse_m2500638428 (Req_GetNewsLists_t2838141971 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetNewsLists_parseLogicResponse_m2500638428_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t3647484083 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t3647484083_m3296547478(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t3647484083_m3296547478_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_GetNewsLists::command()
+extern "C"  String_t* Req_GetNewsLists_command_m3165554390 (Req_GetNewsLists_t2838141971 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetNewsLists_command_m3165554390_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral396408025;
+	}
+}
+// System.Void Req_GetNewsLists/Response::.ctor()
+extern "C"  void Response__ctor_m1072395776 (Response_t3647484083 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetNewsLists/Response/Data::.ctor()
+extern "C"  void Data__ctor_m732933785 (Data_t428545786 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetNewsLists/Response/Info::.ctor()
+extern "C"  void Info__ctor_m2335997779 (Info_t246977206 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeInfo::.ctor()
+extern "C"  void Req_GetPrizeInfo__ctor_m353911304 (Req_GetPrizeInfo_t503968863 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeInfo__ctor_m353911304_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral4070489427);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_GetPrizeInfo::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_GetPrizeInfo_parseLogicResponse_m4264391512 (Req_GetPrizeInfo_t503968863 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeInfo_parseLogicResponse_m4264391512_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t1066063823 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t1066063823_m1613211522(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t1066063823_m1613211522_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_GetPrizeInfo::command()
+extern "C"  String_t* Req_GetPrizeInfo_command_m422541834 (Req_GetPrizeInfo_t503968863 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeInfo_command_m422541834_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral4070489427;
+	}
+}
+// System.Void Req_GetPrizeInfo/Response::.ctor()
+extern "C"  void Response__ctor_m2411766108 (Response_t1066063823 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeInfo/Response/Data::.ctor()
+extern "C"  void Data__ctor_m1741662925 (Data_t1557559750 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeInfo/Response/Info::.ctor()
+extern "C"  void Info__ctor_m2384469359 (Info_t2861521818 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeUseCoin::.ctor()
+extern "C"  void Req_GetPrizeUseCoin__ctor_m2233700544 (Req_GetPrizeUseCoin_t235174161 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUseCoin__ctor_m2233700544_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral1223152418);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_GetPrizeUseCoin::get_PrizeId()
+extern "C"  int32_t Req_GetPrizeUseCoin_get_PrizeId_m627987028 (Req_GetPrizeUseCoin_t235174161 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_prizeId_12();
+		return L_0;
+	}
+}
+// System.Void Req_GetPrizeUseCoin::set_PrizeId(System.Int32)
+extern "C"  void Req_GetPrizeUseCoin_set_PrizeId_m2235122173 (Req_GetPrizeUseCoin_t235174161 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUseCoin_set_PrizeId_m2235122173_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_prizeId_12(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral827391921, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_GetPrizeUseCoin::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_GetPrizeUseCoin_parseLogicResponse_m1157743844 (Req_GetPrizeUseCoin_t235174161 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUseCoin_parseLogicResponse_m1157743844_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t4284099457 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t4284099457_m3419605178(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t4284099457_m3419605178_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_GetPrizeUseCoin::command()
+extern "C"  String_t* Req_GetPrizeUseCoin_command_m3432992572 (Req_GetPrizeUseCoin_t235174161 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUseCoin_command_m3432992572_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral1223152418;
+	}
+}
+// System.String Req_GetPrizeUseCoin::getChildMsg()
+extern "C"  String_t* Req_GetPrizeUseCoin_getChildMsg_m3981630742 (Req_GetPrizeUseCoin_t235174161 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUseCoin_getChildMsg_m3981630742_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t4284099457_0_0_0_var), /*hidden argument*/NULL);
+		if ((((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2)))
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		String_t* L_3 = Request_getChildMsg_m3192998110(__this, /*hidden argument*/NULL);
+		return L_3;
+	}
+
+IL_0021:
+	{
+		Response_t998287943 * L_4 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t4284099457 *)CastclassClass(L_4, Response_t4284099457_il2cpp_TypeInfo_var)));
+		Data_t3152262302 * L_5 = ((Response_t4284099457 *)CastclassClass(L_4, Response_t4284099457_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_5);
+		String_t* L_6 = L_5->get_msg_2();
+		return L_6;
+	}
+}
+// System.Int32 Req_GetPrizeUseCoin::getResponseCode()
+extern "C"  int32_t Req_GetPrizeUseCoin_getResponseCode_m1803594380 (Req_GetPrizeUseCoin_t235174161 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUseCoin_getResponseCode_m1803594380_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t4284099457_0_0_0_var), /*hidden argument*/NULL);
+		if ((((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2)))
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		int32_t L_3 = Request_getResponseCode_m4064349852(__this, /*hidden argument*/NULL);
+		return L_3;
+	}
+
+IL_0021:
+	{
+		Response_t998287943 * L_4 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t4284099457 *)CastclassClass(L_4, Response_t4284099457_il2cpp_TypeInfo_var)));
+		Data_t3152262302 * L_5 = ((Response_t4284099457 *)CastclassClass(L_4, Response_t4284099457_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_5);
+		int32_t L_6 = L_5->get_code_0();
+		return L_6;
+	}
+}
+// System.Void Req_GetPrizeUseCoin/Response::.ctor()
+extern "C"  void Response__ctor_m801313916 (Response_t4284099457 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeUseCoin/Response/Data::.ctor()
+extern "C"  void Data__ctor_m261032947 (Data_t3152262302 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeUseCoin/Response/Info::.ctor()
+extern "C"  void Info__ctor_m620333329 (Info_t3515140334 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeUserHorn::.ctor()
+extern "C"  void Req_GetPrizeUserHorn__ctor_m4031015390 (Req_GetPrizeUserHorn_t664868319 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUserHorn__ctor_m4031015390_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral3784704650);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_GetPrizeUserHorn::get_MtId()
+extern "C"  int32_t Req_GetPrizeUserHorn_get_MtId_m3006968577 (Req_GetPrizeUserHorn_t664868319 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_mtId_9();
+		return L_0;
+	}
+}
+// System.Void Req_GetPrizeUserHorn::set_MtId(System.Int32)
+extern "C"  void Req_GetPrizeUserHorn_set_MtId_m3242655000 (Req_GetPrizeUserHorn_t664868319 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUserHorn_set_MtId_m3242655000_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_mtId_9(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral795892554, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_GetPrizeUserHorn::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_GetPrizeUserHorn_parseLogicResponse_m2862331142 (Req_GetPrizeUserHorn_t664868319 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUserHorn_parseLogicResponse_m2862331142_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t3772993143 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t3772993143_m1323198956(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t3772993143_m1323198956_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_GetPrizeUserHorn::command()
+extern "C"  String_t* Req_GetPrizeUserHorn_command_m3210667296 (Req_GetPrizeUserHorn_t664868319 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUserHorn_command_m3210667296_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral3784704650;
+	}
+}
+// System.Void Req_GetPrizeUserHorn/Response::.ctor()
+extern "C"  void Response__ctor_m1122746458 (Response_t3772993143 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeUserHorn/Response/Data::.ctor()
+extern "C"  void Data__ctor_m3172112101 (Data_t2185002244 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeUserLists::.ctor()
+extern "C"  void Req_GetPrizeUserLists__ctor_m2991155742 (Req_GetPrizeUserLists_t3850485005 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUserLists__ctor_m2991155742_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral2973036028);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_GetPrizeUserLists::get_MtId()
+extern "C"  int32_t Req_GetPrizeUserLists_get_MtId_m2072026963 (Req_GetPrizeUserLists_t3850485005 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_mtId_9();
+		return L_0;
+	}
+}
+// System.Void Req_GetPrizeUserLists::set_MtId(System.Int32)
+extern "C"  void Req_GetPrizeUserLists_set_MtId_m2495696404 (Req_GetPrizeUserLists_t3850485005 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUserLists_set_MtId_m2495696404_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_mtId_9(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral795892554, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_GetPrizeUserLists::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_GetPrizeUserLists_parseLogicResponse_m450665042 (Req_GetPrizeUserLists_t3850485005 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUserLists_parseLogicResponse_m450665042_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t2934266941 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t2934266941_m391481116(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t2934266941_m391481116_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_GetPrizeUserLists::command()
+extern "C"  String_t* Req_GetPrizeUserLists_command_m2693309230 (Req_GetPrizeUserLists_t3850485005 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetPrizeUserLists_command_m2693309230_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral2973036028;
+	}
+}
+// System.Void Req_GetPrizeUserLists/Response::.ctor()
+extern "C"  void Response__ctor_m271252098 (Response_t2934266941 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeUserLists/Response/Data::.ctor()
+extern "C"  void Data__ctor_m3956048327 (Data_t1524650276 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetPrizeUserLists/Response/Info::.ctor()
+extern "C"  void Info__ctor_m2148670405 (Info_t2653692112 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetUpdatePics::.ctor()
+extern "C"  void Req_GetUpdatePics__ctor_m3225614838 (Req_GetUpdatePics_t1118469089 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUpdatePics__ctor_m3225614838_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_10(_stringLiteral2491345437);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_10();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_GetUpdatePics::get_Version()
+extern "C"  int32_t Req_GetUpdatePics_get_Version_m48551337 (Req_GetUpdatePics_t1118469089 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_version_11();
+		return L_0;
+	}
+}
+// System.Void Req_GetUpdatePics::set_Version(System.Int32)
+extern "C"  void Req_GetUpdatePics_set_Version_m1430732056 (Req_GetUpdatePics_t1118469089 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUpdatePics_set_Version_m1430732056_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_version_11(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = __this->get_version_11();
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral3617362, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_GetUpdatePics::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_GetUpdatePics_parseLogicResponse_m2034801610 (Req_GetUpdatePics_t1118469089 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUpdatePics_parseLogicResponse_m2034801610_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t2759531585 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t2759531585_m2774702468(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t2759531585_m2774702468_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_GetUpdatePics::command()
+extern "C"  String_t* Req_GetUpdatePics_command_m1162984666 (Req_GetUpdatePics_t1118469089 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUpdatePics_command_m1162984666_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral2491345437;
+	}
+}
+// System.Int32 Req_GetUpdatePics::getOnlineVersion()
+extern "C"  int32_t Req_GetUpdatePics_getOnlineVersion_m3847492877 (Req_GetUpdatePics_t1118469089 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUpdatePics_getOnlineVersion_m3847492877_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t2759531585_0_0_0_var), /*hidden argument*/NULL);
+		if ((!(((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2))))
+		{
+			goto IL_0035;
+		}
+	}
+	{
+		Response_t998287943 * L_3 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t2759531585 *)CastclassClass(L_3, Response_t2759531585_il2cpp_TypeInfo_var)));
+		Data_t760679892 * L_4 = ((Response_t2759531585 *)CastclassClass(L_3, Response_t2759531585_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_4);
+		Info_t4275929356 * L_5 = L_4->get_info_1();
+		NullCheck(L_5);
+		int32_t L_6 = L_5->get_version_2();
+		return L_6;
+	}
+
+IL_0035:
+	{
+		int32_t L_7 = __this->get_version_11();
+		return L_7;
+	}
+}
+// Req_GetUpdatePics/Response/Entry[] Req_GetUpdatePics::getBall()
+extern "C"  EntryU5BU5D_t4095601145* Req_GetUpdatePics_getBall_m1359132476 (Req_GetUpdatePics_t1118469089 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUpdatePics_getBall_m1359132476_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t2759531585_0_0_0_var), /*hidden argument*/NULL);
+		if ((!(((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2))))
+		{
+			goto IL_0035;
+		}
+	}
+	{
+		Response_t998287943 * L_3 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t2759531585 *)CastclassClass(L_3, Response_t2759531585_il2cpp_TypeInfo_var)));
+		Data_t760679892 * L_4 = ((Response_t2759531585 *)CastclassClass(L_3, Response_t2759531585_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_4);
+		Info_t4275929356 * L_5 = L_4->get_info_1();
+		NullCheck(L_5);
+		EntryU5BU5D_t4095601145* L_6 = L_5->get_ball_1();
+		return L_6;
+	}
+
+IL_0035:
+	{
+		return ((EntryU5BU5D_t4095601145*)SZArrayNew(EntryU5BU5D_t4095601145_il2cpp_TypeInfo_var, (uint32_t)0));
+	}
+}
+// Req_GetUpdatePics/Response/Entry[] Req_GetUpdatePics::getPrize()
+extern "C"  EntryU5BU5D_t4095601145* Req_GetUpdatePics_getPrize_m3672812707 (Req_GetUpdatePics_t1118469089 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUpdatePics_getPrize_m3672812707_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t2759531585_0_0_0_var), /*hidden argument*/NULL);
+		if ((!(((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2))))
+		{
+			goto IL_0035;
+		}
+	}
+	{
+		Response_t998287943 * L_3 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t2759531585 *)CastclassClass(L_3, Response_t2759531585_il2cpp_TypeInfo_var)));
+		Data_t760679892 * L_4 = ((Response_t2759531585 *)CastclassClass(L_3, Response_t2759531585_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_4);
+		Info_t4275929356 * L_5 = L_4->get_info_1();
+		NullCheck(L_5);
+		EntryU5BU5D_t4095601145* L_6 = L_5->get_prize_0();
+		return L_6;
+	}
+
+IL_0035:
+	{
+		return ((EntryU5BU5D_t4095601145*)SZArrayNew(EntryU5BU5D_t4095601145_il2cpp_TypeInfo_var, (uint32_t)0));
+	}
+}
+// System.Int32 Req_GetUpdatePics::getResponseCode()
+extern "C"  int32_t Req_GetUpdatePics_getResponseCode_m2797814346 (Req_GetUpdatePics_t1118469089 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUpdatePics_getResponseCode_m2797814346_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t2759531585_0_0_0_var), /*hidden argument*/NULL);
+		if ((!(((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2))))
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		Response_t998287943 * L_3 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t2759531585 *)CastclassClass(L_3, Response_t2759531585_il2cpp_TypeInfo_var)));
+		Data_t760679892 * L_4 = ((Response_t2759531585 *)CastclassClass(L_3, Response_t2759531585_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_4);
+		int32_t L_5 = L_4->get_code_0();
+		return L_5;
+	}
+
+IL_0030:
+	{
+		Response_t998287943 * L_6 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Error_t2783916960 *)CastclassClass(L_6, Error_t2783916960_il2cpp_TypeInfo_var)));
+		Data_t862910835 * L_7 = ((Error_t2783916960 *)CastclassClass(L_6, Error_t2783916960_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_7);
+		int32_t L_8 = L_7->get_code_0();
+		return L_8;
+	}
+}
+// System.Void Req_GetUpdatePics/Response::.ctor()
+extern "C"  void Response__ctor_m4258857426 (Response_t2759531585 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetUpdatePics/Response/Data::.ctor()
+extern "C"  void Data__ctor_m2402050563 (Data_t760679892 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetUpdatePics/Response/Entry::.ctor()
+extern "C"  void Entry__ctor_m758148203 (Entry_t2933429096 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetUpdatePics/Response/Info::.ctor()
+extern "C"  void Info__ctor_m4076642909 (Info_t4275929356 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetUserForgetPsdVcode::.ctor()
+extern "C"  void Req_GetUserForgetPsdVcode__ctor_m525826214 (Req_GetUserForgetPsdVcode_t4197905561 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUserForgetPsdVcode__ctor_m525826214_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		__this->set__api_8(_stringLiteral3091297829);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		Request_set_Form_m653902259(__this, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_GetUserForgetPsdVcode::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_GetUserForgetPsdVcode_parseLogicResponse_m1715109562 (Req_GetUserForgetPsdVcode_t4197905561 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUserForgetPsdVcode_parseLogicResponse_m1715109562_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t1445710305 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t1445710305_m1138515636(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t1445710305_m1138515636_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_GetUserForgetPsdVcode::command()
+extern "C"  String_t* Req_GetUserForgetPsdVcode_command_m2651411562 (Req_GetUserForgetPsdVcode_t4197905561 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUserForgetPsdVcode_command_m2651411562_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral3091297829;
+	}
+}
+// System.String Req_GetUserForgetPsdVcode::getVcode()
+extern "C"  String_t* Req_GetUserForgetPsdVcode_getVcode_m3107388912 (Req_GetUserForgetPsdVcode_t4197905561 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_GetUserForgetPsdVcode_getVcode_m3107388912_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t1445710305 *)CastclassClass(L_0, Response_t1445710305_il2cpp_TypeInfo_var)));
+		Data_t523521196 * L_1 = ((Response_t1445710305 *)CastclassClass(L_0, Response_t1445710305_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_1);
+		String_t* L_2 = L_1->get_info_2();
+		return L_2;
+	}
+}
+// System.Void Req_GetUserForgetPsdVcode/Response::.ctor()
+extern "C"  void Response__ctor_m3326480362 (Response_t1445710305 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_GetUserForgetPsdVcode/Response/Data::.ctor()
+extern "C"  void Data__ctor_m2698790227 (Data_t523521196 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_MachineEndGrab::.ctor()
+extern "C"  void Req_MachineEndGrab__ctor_m400413448 (Req_MachineEndGrab_t2382967747 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_MachineEndGrab__ctor_m400413448_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral3653346511);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_MachineEndGrab::get_LogId()
+extern "C"  int32_t Req_MachineEndGrab_get_LogId_m3636525054 (Req_MachineEndGrab_t2382967747 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_logId_11();
+		return L_0;
+	}
+}
+// System.Void Req_MachineEndGrab::set_LogId(System.Int32)
+extern "C"  void Req_MachineEndGrab_set_LogId_m744591915 (Req_MachineEndGrab_t2382967747 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_MachineEndGrab_set_LogId_m744591915_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_logId_11(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral1413580441, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_MachineEndGrab::get_BallIdStr()
+extern "C"  String_t* Req_MachineEndGrab_get_BallIdStr_m3072561457 (Req_MachineEndGrab_t2382967747 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_ballIdStr_12();
+		return L_0;
+	}
+}
+// System.Void Req_MachineEndGrab::set_BallIdStr(System.String)
+extern "C"  void Req_MachineEndGrab_set_BallIdStr_m334752238 (Req_MachineEndGrab_t2382967747 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_MachineEndGrab_set_BallIdStr_m334752238_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_ballIdStr_12(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral1561440251, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_MachineEndGrab::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_MachineEndGrab_parseLogicResponse_m3533382744 (Req_MachineEndGrab_t2382967747 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_MachineEndGrab_parseLogicResponse_m3533382744_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t212491691 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t212491691_m1337346(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t212491691_m1337346_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_MachineEndGrab::command()
+extern "C"  String_t* Req_MachineEndGrab_command_m3993015750 (Req_MachineEndGrab_t2382967747 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_MachineEndGrab_command_m3993015750_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral3653346511;
+	}
+}
+// System.Void Req_MachineEndGrab/Response::.ctor()
+extern "C"  void Response__ctor_m915728148 (Response_t212491691 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_MachineEndGrab/Response/Data::.ctor()
+extern "C"  void Data__ctor_m2110099937 (Data_t1063157950 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_MachineEndGrab/Response/Info::.ctor()
+extern "C"  void Info__ctor_m2766552631 (Info_t3771838238 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_MachineStartGrab::.ctor()
+extern "C"  void Req_MachineStartGrab__ctor_m3486404105 (Req_MachineStartGrab_t3485909748 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_MachineStartGrab__ctor_m3486404105_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral923539766);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_MachineStartGrab::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_MachineStartGrab_parseLogicResponse_m3460579085 (Req_MachineStartGrab_t3485909748 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_MachineStartGrab_parseLogicResponse_m3460579085_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t3053143294 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t3053143294_m1592976273(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t3053143294_m1592976273_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_MachineStartGrab::command()
+extern "C"  String_t* Req_MachineStartGrab_command_m825886727 (Req_MachineStartGrab_t3485909748 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_MachineStartGrab_command_m825886727_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral923539766;
+	}
+}
+// System.Void Req_MachineStartGrab/Response::.ctor()
+extern "C"  void Response__ctor_m1580376949 (Response_t3053143294 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_MachineStartGrab/Response/Data::.ctor()
+extern "C"  void Data__ctor_m3629175086 (Data_t4074147771 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_MachineStartGrab/Response/Info::.ctor()
+extern "C"  void Info__ctor_m2680758398 (Info_t4174904501 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_RegisterVcode::.ctor()
+extern "C"  void Req_RegisterVcode__ctor_m3684994542 (Req_RegisterVcode_t1322481501 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_RegisterVcode__ctor_m3684994542_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		__this->set__api_8(_stringLiteral1444173816);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		Request_set_Form_m653902259(__this, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_RegisterVcode::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_RegisterVcode_parseLogicResponse_m2382846850 (Req_RegisterVcode_t1322481501 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_RegisterVcode_parseLogicResponse_m2382846850_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t2628246429 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t2628246429_m2269781228(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t2628246429_m2269781228_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_RegisterVcode::command()
+extern "C"  String_t* Req_RegisterVcode_command_m4091932574 (Req_RegisterVcode_t1322481501 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_RegisterVcode_command_m4091932574_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral1444173816;
+	}
+}
+// System.String Req_RegisterVcode::getVcode()
+extern "C"  String_t* Req_RegisterVcode_getVcode_m2797523568 (Req_RegisterVcode_t1322481501 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_RegisterVcode_getVcode_m2797523568_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t2628246429 *)CastclassClass(L_0, Response_t2628246429_il2cpp_TypeInfo_var)));
+		Data_t3452493908 * L_1 = ((Response_t2628246429 *)CastclassClass(L_0, Response_t2628246429_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_1);
+		String_t* L_2 = L_1->get_info_2();
+		return L_2;
+	}
+}
+// System.Void Req_RegisterVcode/Response::.ctor()
+extern "C"  void Response__ctor_m3921547842 (Response_t2628246429 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_RegisterVcode/Response/Data::.ctor()
+extern "C"  void Data__ctor_m3405345783 (Data_t3452493908 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UsePrize::.ctor()
+extern "C"  void Req_UsePrize__ctor_m3467939273 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize__ctor_m3467939273_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral1157439965);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_UsePrize::get_PrizeId()
+extern "C"  int32_t Req_UsePrize_get_PrizeId_m1128681019 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_prizeId_9();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_PrizeId(System.Int32)
+extern "C"  void Req_UsePrize_set_PrizeId_m3095357040 (Req_UsePrize_t3632642040 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_PrizeId_m3095357040_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_prizeId_9(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral827391921, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_UsePrize::get_UserPrizeId()
+extern "C"  int32_t Req_UsePrize_get_UserPrizeId_m3825813866 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_userPrizeId_10();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_UserPrizeId(System.Int32)
+extern "C"  void Req_UsePrize_set_UserPrizeId_m1223312165 (Req_UsePrize_t3632642040 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_UserPrizeId_m1223312165_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_userPrizeId_10(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral4108885254, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_UsePrize::get_UsePrizeType()
+extern "C"  int32_t Req_UsePrize_get_UsePrizeType_m1214541249 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_usePrizeType_11();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_UsePrizeType(System.Int32)
+extern "C"  void Req_UsePrize_set_UsePrizeType_m167625918 (Req_UsePrize_t3632642040 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_UsePrizeType_m167625918_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_usePrizeType_11(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral3654580039, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UsePrize::get_UserName()
+extern "C"  String_t* Req_UsePrize_get_UserName_m2432651499 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_userName_12();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_UserName(System.String)
+extern "C"  void Req_UsePrize_set_UserName_m1703353796 (Req_UsePrize_t3632642040 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_UserName_m1703353796_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_userName_12(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral3726276054, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UsePrize::get_UserAddr()
+extern "C"  String_t* Req_UsePrize_get_UserAddr_m1630398551 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_userAddr_13();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_UserAddr(System.String)
+extern "C"  void Req_UsePrize_set_UserAddr_m3536625004 (Req_UsePrize_t3632642040 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_UserAddr_m3536625004_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_userAddr_13(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral1830812906, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UsePrize::get_UserPhone()
+extern "C"  String_t* Req_UsePrize_get_UserPhone_m1314412302 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_userPhone_14();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_UserPhone(System.String)
+extern "C"  void Req_UsePrize_set_UserPhone_m2009857303 (Req_UsePrize_t3632642040 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_UserPhone_m2009857303_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_userPhone_14(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral720188825, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_UsePrize::get_BuyBackType()
+extern "C"  int32_t Req_UsePrize_get_BuyBackType_m1009259635 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_buyBackType_15();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_BuyBackType(System.Int32)
+extern "C"  void Req_UsePrize_set_BuyBackType_m2494212442 (Req_UsePrize_t3632642040 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_BuyBackType_m2494212442_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_buyBackType_15(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral2457344785, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UsePrize::get_BuyBackName()
+extern "C"  String_t* Req_UsePrize_get_BuyBackName_m561888219 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_buyBackName_16();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_BuyBackName(System.String)
+extern "C"  void Req_UsePrize_set_BuyBackName_m3554217390 (Req_UsePrize_t3632642040 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_BuyBackName_m3554217390_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_buyBackName_16(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral770559914, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UsePrize::get_BuyBackPhone()
+extern "C"  String_t* Req_UsePrize_get_BuyBackPhone_m2560274178 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_buyBackPhone_17();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_BuyBackPhone(System.String)
+extern "C"  void Req_UsePrize_set_BuyBackPhone_m2714491115 (Req_UsePrize_t3632642040 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_BuyBackPhone_m2714491115_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_buyBackPhone_17(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral4060022633, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UsePrize::get_BuyBackAli()
+extern "C"  String_t* Req_UsePrize_get_BuyBackAli_m3889272342 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_buyBackAli_18();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_BuyBackAli(System.String)
+extern "C"  void Req_UsePrize_set_BuyBackAli_m1285185563 (Req_UsePrize_t3632642040 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_BuyBackAli_m1285185563_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_buyBackAli_18(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral1727832981, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UsePrize::get_BuyBackBank()
+extern "C"  String_t* Req_UsePrize_get_BuyBackBank_m1887793086 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_buyBackBank_19();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_BuyBackBank(System.String)
+extern "C"  void Req_UsePrize_set_BuyBackBank_m2242822285 (Req_UsePrize_t3632642040 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_BuyBackBank_m2242822285_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_buyBackBank_19(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral736802191, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UsePrize::get_BuyBackCard()
+extern "C"  String_t* Req_UsePrize_get_BuyBackCard_m3436774006 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_buyBackCard_20();
+		return L_0;
+	}
+}
+// System.Void Req_UsePrize::set_BuyBackCard(System.String)
+extern "C"  void Req_UsePrize_set_BuyBackCard_m3135090899 (Req_UsePrize_t3632642040 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_set_BuyBackCard_m3135090899_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_buyBackCard_20(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral1140086705, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_UsePrize::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_UsePrize_parseLogicResponse_m3897896933 (Req_UsePrize_t3632642040 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_parseLogicResponse_m3897896933_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t2813544250 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t2813544250_m584347601(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t2813544250_m584347601_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_UsePrize::command()
+extern "C"  String_t* Req_UsePrize_command_m2405062347 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_command_m2405062347_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral1157439965;
+	}
+}
+// System.String Req_UsePrize::getChildMsg()
+extern "C"  String_t* Req_UsePrize_getChildMsg_m4220166977 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_getChildMsg_m4220166977_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t2813544250_0_0_0_var), /*hidden argument*/NULL);
+		if ((!(((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2))))
+		{
+			goto IL_0060;
+		}
+	}
+	{
+		Response_t998287943 * L_3 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t2813544250 *)CastclassClass(L_3, Response_t2813544250_il2cpp_TypeInfo_var)));
+		Data_t762886835 * L_4 = ((Response_t2813544250 *)CastclassClass(L_3, Response_t2813544250_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_4);
+		int32_t L_5 = L_4->get_code_0();
+		V_0 = L_5;
+		int32_t L_6 = V_0;
+		switch (L_6)
+		{
+			case 0:
+			{
+				goto IL_0047;
+			}
+			case 1:
+			{
+				goto IL_004d;
+			}
+			case 2:
+			{
+				goto IL_0053;
+			}
+		}
+	}
+	{
+		goto IL_0059;
+	}
+
+IL_0047:
+	{
+		return _stringLiteral4256873302;
+	}
+
+IL_004d:
+	{
+		return _stringLiteral3179881703;
+	}
+
+IL_0053:
+	{
+		return _stringLiteral1846078552;
+	}
+
+IL_0059:
+	{
+		String_t* L_7 = Request_getChildMsg_m3192998110(__this, /*hidden argument*/NULL);
+		return L_7;
+	}
+
+IL_0060:
+	{
+		return (String_t*)NULL;
+	}
+}
+// System.Int32 Req_UsePrize::getResponseCode()
+extern "C"  int32_t Req_UsePrize_getResponseCode_m370313883 (Req_UsePrize_t3632642040 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UsePrize_getResponseCode_m370313883_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t2813544250_0_0_0_var), /*hidden argument*/NULL);
+		if ((((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2)))
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		int32_t L_3 = Request_getResponseCode_m4064349852(__this, /*hidden argument*/NULL);
+		return L_3;
+	}
+
+IL_0021:
+	{
+		Response_t998287943 * L_4 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t2813544250 *)CastclassClass(L_4, Response_t2813544250_il2cpp_TypeInfo_var)));
+		Data_t762886835 * L_5 = ((Response_t2813544250 *)CastclassClass(L_4, Response_t2813544250_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_5);
+		int32_t L_6 = L_5->get_code_0();
+		return L_6;
+	}
+}
+// System.Void Req_UsePrize/Response::.ctor()
+extern "C"  void Response__ctor_m2361101157 (Response_t2813544250 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UsePrize/Response/Data::.ctor()
+extern "C"  void Data__ctor_m3681992418 (Data_t762886835 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserForgetPsdSendMsg::.ctor()
+extern "C"  void Req_UserForgetPsdSendMsg__ctor_m1626155892 (Req_UserForgetPsdSendMsg_t1014197417 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserForgetPsdSendMsg__ctor_m1626155892_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral888208753);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserForgetPsdSendMsg::get_Phone()
+extern "C"  String_t* Req_UserForgetPsdSendMsg_get_Phone_m416035556 (Req_UserForgetPsdSendMsg_t1014197417 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_phone_9();
+		return L_0;
+	}
+}
+// System.Void Req_UserForgetPsdSendMsg::set_Phone(System.String)
+extern "C"  void Req_UserForgetPsdSendMsg_set_Phone_m2662035291 (Req_UserForgetPsdSendMsg_t1014197417 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserForgetPsdSendMsg_set_Phone_m2662035291_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_phone_9(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral4263436398, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserForgetPsdSendMsg::get_VerCode()
+extern "C"  String_t* Req_UserForgetPsdSendMsg_get_VerCode_m2438636764 (Req_UserForgetPsdSendMsg_t1014197417 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_verCode_10();
+		return L_0;
+	}
+}
+// System.Void Req_UserForgetPsdSendMsg::set_VerCode(System.String)
+extern "C"  void Req_UserForgetPsdSendMsg_set_VerCode_m1821001091 (Req_UserForgetPsdSendMsg_t1014197417 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserForgetPsdSendMsg_set_VerCode_m1821001091_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_verCode_10(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral2536860910, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserForgetPsdSendMsg::command()
+extern "C"  String_t* Req_UserForgetPsdSendMsg_command_m4199340114 (Req_UserForgetPsdSendMsg_t1014197417 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserForgetPsdSendMsg_command_m4199340114_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral888208753;
+	}
+}
+// Request/Response Req_UserForgetPsdSendMsg::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_UserForgetPsdSendMsg_parseLogicResponse_m2434653868 (Req_UserForgetPsdSendMsg_t1014197417 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserForgetPsdSendMsg_parseLogicResponse_m2434653868_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t1073513569 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t1073513569_m921688182(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t1073513569_m921688182_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Void Req_UserForgetPsdSendMsg/Response::.ctor()
+extern "C"  void Response__ctor_m2019328392 (Response_t1073513569 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserForgetPsdSendMsg/Response/Data::.ctor()
+extern "C"  void Data__ctor_m418087483 (Data_t503888270 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserForgetPsdSendMsg/Response/List::.ctor()
+extern "C"  void List__ctor_m6526309 (List_t1942364742 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserLogin::.ctor()
+extern "C"  void Req_UserLogin__ctor_m2203589602 (Req_UserLogin_t496922837 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogin__ctor_m2203589602_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_13(_stringLiteral798601681);
+		Base_Req_UserInfo__ctor_m2140790411(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_13();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserLogin::get_Phone()
+extern "C"  String_t* Req_UserLogin_get_Phone_m3571951180 (Req_UserLogin_t496922837 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_phone_14();
+		return L_0;
+	}
+}
+// System.Void Req_UserLogin::set_Phone(System.String)
+extern "C"  void Req_UserLogin_set_Phone_m3550364007 (Req_UserLogin_t496922837 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogin_set_Phone_m3550364007_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_phone_14(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral4263436398, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserLogin::get_Psd()
+extern "C"  String_t* Req_UserLogin_get_Psd_m4149306175 (Req_UserLogin_t496922837 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_psd_15();
+		return L_0;
+	}
+}
+// System.Void Req_UserLogin::set_Psd(System.String)
+extern "C"  void Req_UserLogin_set_Psd_m3575573320 (Req_UserLogin_t496922837 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogin_set_Psd_m3575573320_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_psd_15(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral3115736959, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserLogin::get_Uuid()
+extern "C"  String_t* Req_UserLogin_get_Uuid_m939466781 (Req_UserLogin_t496922837 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_uuid_16();
+		return L_0;
+	}
+}
+// System.Void Req_UserLogin::set_Uuid(System.String)
+extern "C"  void Req_UserLogin_set_Uuid_m1489259020 (Req_UserLogin_t496922837 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogin_set_Uuid_m1489259020_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_uuid_16(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral2099854781, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserLogin::get_Wxid()
+extern "C"  String_t* Req_UserLogin_get_Wxid_m1101621064 (Req_UserLogin_t496922837 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_wxid_17();
+		return L_0;
+	}
+}
+// System.Void Req_UserLogin::set_Wxid(System.String)
+extern "C"  void Req_UserLogin_set_Wxid_m2953952665 (Req_UserLogin_t496922837 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogin_set_Wxid_m2953952665_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_wxid_17(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral2846073432, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_UserLogin::get_Type()
+extern "C"  int32_t Req_UserLogin_get_Type_m3231107871 (Req_UserLogin_t496922837 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_type_18();
+		return L_0;
+	}
+}
+// System.Void Req_UserLogin::set_Type(System.Int32)
+extern "C"  void Req_UserLogin_set_Type_m4231493588 (Req_UserLogin_t496922837 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogin_set_Type_m4231493588_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_type_18(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral1421151742, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_UserLogin::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_UserLogin_parseLogicResponse_m3495942798 (Req_UserLogin_t496922837 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogin_parseLogicResponse_m3495942798_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t1683355314 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t1683355314_m1704220303(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t1683355314_m1704220303_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_UserLogin::command()
+extern "C"  String_t* Req_UserLogin_command_m1099334950 (Req_UserLogin_t496922837 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogin_command_m1099334950_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral798601681;
+	}
+}
+// System.String Req_UserLogin::getChildMsg()
+extern "C"  String_t* Req_UserLogin_getChildMsg_m1903437804 (Req_UserLogin_t496922837 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogin_getChildMsg_m1903437804_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t1683355314_0_0_0_var), /*hidden argument*/NULL);
+		if ((((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2)))
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		String_t* L_3 = Request_getChildMsg_m3192998110(__this, /*hidden argument*/NULL);
+		return L_3;
+	}
+
+IL_0021:
+	{
+		Response_t998287943 * L_4 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t1683355314 *)CastclassClass(L_4, Response_t1683355314_il2cpp_TypeInfo_var)));
+		Data_t705691545 * L_5 = ((Response_t1683355314 *)CastclassClass(L_4, Response_t1683355314_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_5);
+		String_t* L_6 = L_5->get_msg_1();
+		return L_6;
+	}
+}
+// System.Int32 Req_UserLogin::getResponseCode()
+extern "C"  int32_t Req_UserLogin_getResponseCode_m832803878 (Req_UserLogin_t496922837 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogin_getResponseCode_m832803878_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t1683355314_0_0_0_var), /*hidden argument*/NULL);
+		if ((((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2)))
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		int32_t L_3 = Request_getResponseCode_m4064349852(__this, /*hidden argument*/NULL);
+		return L_3;
+	}
+
+IL_0021:
+	{
+		Response_t998287943 * L_4 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t1683355314 *)CastclassClass(L_4, Response_t1683355314_il2cpp_TypeInfo_var)));
+		Data_t705691545 * L_5 = ((Response_t1683355314 *)CastclassClass(L_4, Response_t1683355314_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_5);
+		int32_t L_6 = L_5->get_code_0();
+		return L_6;
+	}
+}
+// System.Void Req_UserLogout::.ctor()
+extern "C"  void Req_UserLogout__ctor_m3304334001 (Req_UserLogout_t3015962468 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogout__ctor_m3304334001_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral4177028384);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_UserLogout::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_UserLogout_parseLogicResponse_m102554405 (Req_UserLogout_t3015962468 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogout_parseLogicResponse_m102554405_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t165664278 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t165664278_m2629805977(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t165664278_m2629805977_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_UserLogout::command()
+extern "C"  String_t* Req_UserLogout_command_m1111537679 (Req_UserLogout_t3015962468 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserLogout_command_m1111537679_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral4177028384;
+	}
+}
+// System.Void Req_UserLogout/Response::.ctor()
+extern "C"  void Response__ctor_m3094150805 (Response_t165664278 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserLogout/Response/Data::.ctor()
+extern "C"  void Data__ctor_m3898676694 (Data_t2083464491 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserRecharge::.ctor()
+extern "C"  void Req_UserRecharge__ctor_m2704193034 (Req_UserRecharge_t3565060991 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRecharge__ctor_m2704193034_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral1230188175);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Req_UserRecharge::get_Amount()
+extern "C"  int32_t Req_UserRecharge_get_Amount_m2196601377 (Req_UserRecharge_t3565060991 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_amount_9();
+		return L_0;
+	}
+}
+// System.Void Req_UserRecharge::set_Amount(System.Int32)
+extern "C"  void Req_UserRecharge_set_Amount_m203697524 (Req_UserRecharge_t3565060991 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRecharge_set_Amount_m203697524_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_amount_9(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral236332306, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_UserRecharge::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_UserRecharge_parseLogicResponse_m441159626 (Req_UserRecharge_t3565060991 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRecharge_parseLogicResponse_m441159626_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t4250180471 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t4250180471_m1739691168(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t4250180471_m1739691168_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_UserRecharge::command()
+extern "C"  String_t* Req_UserRecharge_command_m1160632232 (Req_UserRecharge_t3565060991 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRecharge_command_m1160632232_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral1230188175;
+	}
+}
+// System.Void Req_UserRecharge/Response::.ctor()
+extern "C"  void Response__ctor_m3555607902 (Response_t4250180471 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserRecharge/Response/Data::.ctor()
+extern "C"  void Data__ctor_m3434984997 (Data_t80454200 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserRegister::.ctor()
+extern "C"  void Req_UserRegister__ctor_m2233067494 (Req_UserRegister_t3135438179 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegister__ctor_m2233067494_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral233853571);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserRegister::get_Phone()
+extern "C"  String_t* Req_UserRegister_get_Phone_m3960298038 (Req_UserRegister_t3135438179 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_phone_16();
+		return L_0;
+	}
+}
+// System.Void Req_UserRegister::set_Phone(System.String)
+extern "C"  void Req_UserRegister_set_Phone_m4084370569 (Req_UserRegister_t3135438179 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegister_set_Phone_m4084370569_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_phone_16(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral4263436398, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserRegister::get_VerCode()
+extern "C"  String_t* Req_UserRegister_get_VerCode_m620142934 (Req_UserRegister_t3135438179 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_verCode_17();
+		return L_0;
+	}
+}
+// System.Void Req_UserRegister::set_VerCode(System.String)
+extern "C"  void Req_UserRegister_set_VerCode_m4048275209 (Req_UserRegister_t3135438179 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegister_set_VerCode_m4048275209_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_verCode_17(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral2536860910, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserRegister::get_MsgCode()
+extern "C"  String_t* Req_UserRegister_get_MsgCode_m644077302 (Req_UserRegister_t3135438179 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_msgCode_18();
+		return L_0;
+	}
+}
+// System.Void Req_UserRegister::set_MsgCode(System.String)
+extern "C"  void Req_UserRegister_set_MsgCode_m2795007845 (Req_UserRegister_t3135438179 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegister_set_MsgCode_m2795007845_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_msgCode_18(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral2621700410, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserRegister::get_Psd()
+extern "C"  String_t* Req_UserRegister_get_Psd_m3342485009 (Req_UserRegister_t3135438179 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_psd_19();
+		return L_0;
+	}
+}
+// System.Void Req_UserRegister::set_Psd(System.String)
+extern "C"  void Req_UserRegister_set_Psd_m2966020724 (Req_UserRegister_t3135438179 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegister_set_Psd_m2966020724_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_psd_19(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral3115736959, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserRegister::get_Uuid()
+extern "C"  String_t* Req_UserRegister_get_Uuid_m2355940831 (Req_UserRegister_t3135438179 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_uuid_20();
+		return L_0;
+	}
+}
+// System.Void Req_UserRegister::set_Uuid(System.String)
+extern "C"  void Req_UserRegister_set_Uuid_m1636519096 (Req_UserRegister_t3135438179 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegister_set_Uuid_m1636519096_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_uuid_20(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral2099854781, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_UserRegister::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_UserRegister_parseLogicResponse_m3755012478 (Req_UserRegister_t3135438179 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegister_parseLogicResponse_m3755012478_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t2045565979 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t2045565979_m532993668(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t2045565979_m532993668_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_UserRegister::command()
+extern "C"  String_t* Req_UserRegister_command_m3365766852 (Req_UserRegister_t3135438179 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegister_command_m3365766852_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral233853571;
+	}
+}
+// System.String Req_UserRegister::getChildMsg()
+extern "C"  String_t* Req_UserRegister_getChildMsg_m1084816854 (Req_UserRegister_t3135438179 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegister_getChildMsg_m1084816854_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t2045565979_0_0_0_var), /*hidden argument*/NULL);
+		if ((((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2)))
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		String_t* L_3 = Request_getChildMsg_m3192998110(__this, /*hidden argument*/NULL);
+		return L_3;
+	}
+
+IL_0021:
+	{
+		Response_t998287943 * L_4 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t2045565979 *)CastclassClass(L_4, Response_t2045565979_il2cpp_TypeInfo_var)));
+		Data_t463239420 * L_5 = ((Response_t2045565979 *)CastclassClass(L_4, Response_t2045565979_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_5);
+		String_t* L_6 = L_5->get_msg_1();
+		return L_6;
+	}
+}
+// System.Int32 Req_UserRegister::getResponseCode()
+extern "C"  int32_t Req_UserRegister_getResponseCode_m374324542 (Req_UserRegister_t3135438179 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegister_getResponseCode_m374324542_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t2045565979_0_0_0_var), /*hidden argument*/NULL);
+		if ((((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2)))
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		int32_t L_3 = Request_getResponseCode_m4064349852(__this, /*hidden argument*/NULL);
+		return L_3;
+	}
+
+IL_0021:
+	{
+		Response_t998287943 * L_4 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t2045565979 *)CastclassClass(L_4, Response_t2045565979_il2cpp_TypeInfo_var)));
+		Data_t463239420 * L_5 = ((Response_t2045565979 *)CastclassClass(L_4, Response_t2045565979_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_5);
+		int32_t L_6 = L_5->get_code_0();
+		return L_6;
+	}
+}
+// System.Void Req_UserRegister/Response::.ctor()
+extern "C"  void Response__ctor_m2273806466 (Response_t2045565979 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserRegister/Response/Data::.ctor()
+extern "C"  void Data__ctor_m3545542113 (Data_t463239420 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserRegisterSendMsg::.ctor()
+extern "C"  void Req_UserRegisterSendMsg__ctor_m2532408863 (Req_UserRegisterSendMsg_t485842282 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegisterSendMsg__ctor_m2532408863_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral2577111938);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserRegisterSendMsg::get_Phone()
+extern "C"  String_t* Req_UserRegisterSendMsg_get_Phone_m3509497035 (Req_UserRegisterSendMsg_t485842282 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_phone_12();
+		return L_0;
+	}
+}
+// System.Void Req_UserRegisterSendMsg::set_Phone(System.String)
+extern "C"  void Req_UserRegisterSendMsg_set_Phone_m2667359740 (Req_UserRegisterSendMsg_t485842282 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegisterSendMsg_set_Phone_m2667359740_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_phone_12(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral4263436398, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserRegisterSendMsg::get_VerCode()
+extern "C"  String_t* Req_UserRegisterSendMsg_get_VerCode_m662391187 (Req_UserRegisterSendMsg_t485842282 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_verCode_13();
+		return L_0;
+	}
+}
+// System.Void Req_UserRegisterSendMsg::set_VerCode(System.String)
+extern "C"  void Req_UserRegisterSendMsg_set_VerCode_m810060436 (Req_UserRegisterSendMsg_t485842282 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegisterSendMsg_set_VerCode_m810060436_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_verCode_13(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral2536860910, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_UserRegisterSendMsg::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_UserRegisterSendMsg_parseLogicResponse_m574402467 (Req_UserRegisterSendMsg_t485842282 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegisterSendMsg_parseLogicResponse_m574402467_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t1370037692 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t1370037692_m2102720379(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t1370037692_m2102720379_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_UserRegisterSendMsg::command()
+extern "C"  String_t* Req_UserRegisterSendMsg_command_m3160924689 (Req_UserRegisterSendMsg_t485842282 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegisterSendMsg_command_m3160924689_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral2577111938;
+	}
+}
+// System.String Req_UserRegisterSendMsg::getChildMsg()
+extern "C"  String_t* Req_UserRegisterSendMsg_getChildMsg_m2488727635 (Req_UserRegisterSendMsg_t485842282 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegisterSendMsg_getChildMsg_m2488727635_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t1370037692 *)CastclassClass(L_0, Response_t1370037692_il2cpp_TypeInfo_var)));
+		Data_t2639504221 * L_1 = ((Response_t1370037692 *)CastclassClass(L_0, Response_t1370037692_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_1);
+		String_t* L_2 = L_1->get_msg_1();
+		return L_2;
+	}
+}
+// System.Int32 Req_UserRegisterSendMsg::getResponseCode()
+extern "C"  int32_t Req_UserRegisterSendMsg_getResponseCode_m2715623837 (Req_UserRegisterSendMsg_t485842282 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserRegisterSendMsg_getResponseCode_m2715623837_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t1370037692 *)CastclassClass(L_0, Response_t1370037692_il2cpp_TypeInfo_var)));
+		Data_t2639504221 * L_1 = ((Response_t1370037692 *)CastclassClass(L_0, Response_t1370037692_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_1);
+		int32_t L_2 = L_1->get_code_0();
+		return L_2;
+	}
+}
+// System.Void Req_UserRegisterSendMsg/Response::.ctor()
+extern "C"  void Response__ctor_m1464727083 (Response_t1370037692 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserRegisterSendMsg/Response/Data::.ctor()
+extern "C"  void Data__ctor_m886325548 (Data_t2639504221 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserResetPsd::.ctor()
+extern "C"  void Req_UserResetPsd__ctor_m4270177481 (Req_UserResetPsd_t1439768748 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserResetPsd__ctor_m4270177481_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WWWForm_t3950226929 * V_0 = NULL;
+	{
+		__this->set__api_8(_stringLiteral1042044488);
+		Request__ctor_m1436474964(__this, /*hidden argument*/NULL);
+		String_t* L_0 = __this->get__api_8();
+		Request_set_Api_m3341172353(__this, L_0, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_1 = (WWWForm_t3950226929 *)il2cpp_codegen_object_new(WWWForm_t3950226929_il2cpp_TypeInfo_var);
+		WWWForm__ctor_m2129424870(L_1, /*hidden argument*/NULL);
+		WWWForm_t3950226929 * L_2 = L_1;
+		V_0 = L_2;
+		((Request_t2032498015 *)__this)->set__form_2(L_2);
+		WWWForm_t3950226929 * L_3 = V_0;
+		Request_set_Form_m653902259(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserResetPsd::get_Phone()
+extern "C"  String_t* Req_UserResetPsd_get_Phone_m1946327385 (Req_UserResetPsd_t1439768748 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_phone_16();
+		return L_0;
+	}
+}
+// System.Void Req_UserResetPsd::set_Phone(System.String)
+extern "C"  void Req_UserResetPsd_set_Phone_m538737622 (Req_UserResetPsd_t1439768748 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserResetPsd_set_Phone_m538737622_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_phone_16(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral4263436398, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserResetPsd::get_VerCode()
+extern "C"  String_t* Req_UserResetPsd_get_VerCode_m146807417 (Req_UserResetPsd_t1439768748 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_verCode_17();
+		return L_0;
+	}
+}
+// System.Void Req_UserResetPsd::set_VerCode(System.String)
+extern "C"  void Req_UserResetPsd_set_VerCode_m3151416854 (Req_UserResetPsd_t1439768748 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserResetPsd_set_VerCode_m3151416854_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_verCode_17(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral2536860910, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserResetPsd::get_MsgCode()
+extern "C"  String_t* Req_UserResetPsd_get_MsgCode_m127067845 (Req_UserResetPsd_t1439768748 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_msgCode_18();
+		return L_0;
+	}
+}
+// System.Void Req_UserResetPsd::set_MsgCode(System.String)
+extern "C"  void Req_UserResetPsd_set_MsgCode_m474361926 (Req_UserResetPsd_t1439768748 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserResetPsd_set_MsgCode_m474361926_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_msgCode_18(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral2621700410, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserResetPsd::get_Psd()
+extern "C"  String_t* Req_UserResetPsd_get_Psd_m3208966356 (Req_UserResetPsd_t1439768748 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_psd_19();
+		return L_0;
+	}
+}
+// System.Void Req_UserResetPsd::set_Psd(System.String)
+extern "C"  void Req_UserResetPsd_set_Psd_m2747827553 (Req_UserResetPsd_t1439768748 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserResetPsd_set_Psd_m2747827553_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_psd_19(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral3115736959, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Req_UserResetPsd::get_Uuid()
+extern "C"  String_t* Req_UserResetPsd_get_Uuid_m2107899980 (Req_UserResetPsd_t1439768748 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_uuid_20();
+		return L_0;
+	}
+}
+// System.Void Req_UserResetPsd::set_Uuid(System.String)
+extern "C"  void Req_UserResetPsd_set_Uuid_m1976417879 (Req_UserResetPsd_t1439768748 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserResetPsd_set_Uuid_m1976417879_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_uuid_20(L_0);
+		WWWForm_t3950226929 * L_1 = ((Request_t2032498015 *)__this)->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral2099854781, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request/Response Req_UserResetPsd::parseLogicResponse(System.String)
+extern "C"  Response_t998287943 * Req_UserResetPsd_parseLogicResponse_m2644970797 (Req_UserResetPsd_t1439768748 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserResetPsd_parseLogicResponse_m2644970797_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Response_t998287943 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		String_t* L_0 = ___json0;
+		Response_t4197083710 * L_1 = JsonHelper_DeserializeJsonToObject_TisResponse_t4197083710_m403142833(NULL /*static, unused*/, L_0, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisResponse_t4197083710_m403142833_MethodInfo_var);
+		V_0 = L_1;
+		goto IL_000f;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_000c;
+		throw e;
+	}
+
+CATCH_000c:
+	{ // begin catch(LitJson.JsonException)
+		V_1 = ((JsonException_t613047007 *)__exception_local);
+		JsonException_t613047007 * L_2 = V_1;
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	} // end catch (depth: 1)
+
+IL_000f:
+	{
+		Response_t998287943 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.String Req_UserResetPsd::command()
+extern "C"  String_t* Req_UserResetPsd_command_m66801959 (Req_UserResetPsd_t1439768748 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserResetPsd_command_m66801959_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		return _stringLiteral1042044488;
+	}
+}
+// System.String Req_UserResetPsd::getChildMsg()
+extern "C"  String_t* Req_UserResetPsd_getChildMsg_m3537231033 (Req_UserResetPsd_t1439768748 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserResetPsd_getChildMsg_m3537231033_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t4197083710_0_0_0_var), /*hidden argument*/NULL);
+		if ((((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2)))
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		String_t* L_3 = Request_getChildMsg_m3192998110(__this, /*hidden argument*/NULL);
+		return L_3;
+	}
+
+IL_0021:
+	{
+		Response_t998287943 * L_4 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t4197083710 *)CastclassClass(L_4, Response_t4197083710_il2cpp_TypeInfo_var)));
+		Data_t2228534131 * L_5 = ((Response_t4197083710 *)CastclassClass(L_4, Response_t4197083710_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_5);
+		String_t* L_6 = L_5->get_msg_1();
+		return L_6;
+	}
+}
+// System.Int32 Req_UserResetPsd::getResponseCode()
+extern "C"  int32_t Req_UserResetPsd_getResponseCode_m2842696879 (Req_UserResetPsd_t1439768748 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Req_UserResetPsd_getResponseCode_m2842696879_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Response_t998287943 * L_0 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_2 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(Response_t4197083710_0_0_0_var), /*hidden argument*/NULL);
+		if ((((Il2CppObject*)(Type_t *)L_1) == ((Il2CppObject*)(Type_t *)L_2)))
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		int32_t L_3 = Request_getResponseCode_m4064349852(__this, /*hidden argument*/NULL);
+		return L_3;
+	}
+
+IL_0021:
+	{
+		Response_t998287943 * L_4 = ((Request_t2032498015 *)__this)->get__response_3();
+		NullCheck(((Response_t4197083710 *)CastclassClass(L_4, Response_t4197083710_il2cpp_TypeInfo_var)));
+		Data_t2228534131 * L_5 = ((Response_t4197083710 *)CastclassClass(L_4, Response_t4197083710_il2cpp_TypeInfo_var))->get_data_3();
+		NullCheck(L_5);
+		int32_t L_6 = L_5->get_code_0();
+		return L_6;
+	}
+}
+// System.Void Req_UserResetPsd/Response::.ctor()
+extern "C"  void Response__ctor_m1108247693 (Response_t4197083710 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserResetPsd/Response/Data::.ctor()
+extern "C"  void Data__ctor_m2891256046 (Data_t2228534131 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Req_UserResetPsd/Response/Info::.ctor()
+extern "C"  void Info__ctor_m1444464150 (Info_t2329290581 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Request::.ctor()
+extern "C"  void Request__ctor_m1436474964 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Request::get_Api()
+extern "C"  String_t* Request_get_Api_m3385412466 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get__api_1();
+		return L_0;
+	}
+}
+// System.Void Request::set_Api(System.String)
+extern "C"  void Request_set_Api_m3341172353 (Request_t2032498015 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___value0;
+		__this->set__api_1(L_0);
+		return;
+	}
+}
+// UnityEngine.WWWForm Request::get_Form()
+extern "C"  WWWForm_t3950226929 * Request_get_Form_m3226646194 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		WWWForm_t3950226929 * L_0 = __this->get__form_2();
+		return L_0;
+	}
+}
+// System.Void Request::set_Form(UnityEngine.WWWForm)
+extern "C"  void Request_set_Form_m653902259 (Request_t2032498015 * __this, WWWForm_t3950226929 * ___value0, const MethodInfo* method)
+{
+	{
+		WWWForm_t3950226929 * L_0 = ___value0;
+		__this->set__form_2(L_0);
+		return;
+	}
+}
+// Request/Response Request::get_Resp()
+extern "C"  Response_t998287943 * Request_get_Resp_m1613264237 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		Response_t998287943 * L_0 = __this->get__response_3();
+		return L_0;
+	}
+}
+// System.Void Request::set_Resp(Request/Response)
+extern "C"  void Request_set_Resp_m2825927582 (Request_t2032498015 * __this, Response_t998287943 * ___value0, const MethodInfo* method)
+{
+	{
+		Response_t998287943 * L_0 = ___value0;
+		__this->set__response_3(L_0);
+		return;
+	}
+}
+// System.Int32 Request::get_UserId()
+extern "C"  int32_t Request_get_UserId_m4244742861 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_userId_4();
+		return L_0;
+	}
+}
+// System.Void Request::set_UserId(System.Int32)
+extern "C"  void Request_set_UserId_m1503567320 (Request_t2032498015 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Request_set_UserId_m1503567320_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_userId_4(L_0);
+		WWWForm_t3950226929 * L_1 = __this->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral2844854044, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Request::get_Token()
+extern "C"  String_t* Request_get_Token_m338947109 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_token_5();
+		return L_0;
+	}
+}
+// System.Void Request::set_Token(System.String)
+extern "C"  void Request_set_Token_m2989385896 (Request_t2032498015 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Request_set_Token_m2989385896_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___value0;
+		__this->set_token_5(L_0);
+		WWWForm_t3950226929 * L_1 = __this->get__form_2();
+		String_t* L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m1334606983(L_1, _stringLiteral1601805951, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 Request::get_MId()
+extern "C"  int32_t Request_get_MId_m2157104733 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->get_mId_6();
+		return L_0;
+	}
+}
+// System.Void Request::set_MId(System.Int32)
+extern "C"  void Request_set_MId_m2897650292 (Request_t2032498015 * __this, int32_t ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Request_set_MId_m2897650292_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___value0;
+		__this->set_mId_6(L_0);
+		WWWForm_t3950226929 * L_1 = __this->get__form_2();
+		int32_t L_2 = ___value0;
+		NullCheck(L_1);
+		WWWForm_AddField_m2260664476(L_1, _stringLiteral3209844936, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String Request::getChildMsg()
+extern "C"  String_t* Request_getChildMsg_m3192998110 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		return (String_t*)NULL;
+	}
+}
+// System.Int32 Request::getResponseCode()
+extern "C"  int32_t Request_getResponseCode_m4064349852 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		return (-1);
+	}
+}
+// System.String Request::getMsg()
+extern "C"  String_t* Request_getMsg_m4138200616 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = VirtFuncInvoker0< String_t* >::Invoke(6 /* System.String Request::getChildMsg() */, __this);
+		if (L_0)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		Response_t998287943 * L_1 = __this->get__response_3();
+		NullCheck(L_1);
+		String_t* L_2 = L_1->get_msg_2();
+		return L_2;
+	}
+
+IL_0017:
+	{
+		String_t* L_3 = VirtFuncInvoker0< String_t* >::Invoke(6 /* System.String Request::getChildMsg() */, __this);
+		return L_3;
+	}
+}
+// Request/Response Request::parseError(System.String)
+extern "C"  Response_t998287943 * Request_parseError_m2886300867 (Request_t2032498015 * __this, String_t* ___msg0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Request_parseError_m2886300867_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t2103181915 * V_0 = NULL;
+	{
+		Exception_t2103181915 * L_0 = (Exception_t2103181915 *)il2cpp_codegen_object_new(Exception_t2103181915_il2cpp_TypeInfo_var);
+		Exception__ctor_m767749334(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		Exception_t2103181915 * L_1 = V_0;
+		String_t* L_2 = ___msg0;
+		NullCheck(L_1);
+		((Response_t998287943 *)L_1)->set_msg_2(L_2);
+		Exception_t2103181915 * L_3 = V_0;
+		return L_3;
+	}
+}
+// Request/Response Request::parseResponse(System.String)
+extern "C"  Response_t998287943 * Request_parseResponse_m2530713986 (Request_t2032498015 * __this, String_t* ___json0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Request_parseResponse_m2530713986_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	JsonException_t613047007 * V_0 = NULL;
+	JsonException_t613047007 * V_1 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		{
+			String_t* L_0 = ___json0;
+			Response_t998287943 * L_1 = VirtFuncInvoker1< Response_t998287943 *, String_t* >::Invoke(4 /* Request/Response Request::parseLogicResponse(System.String) */, __this, L_0);
+			__this->set__response_3(L_1);
+			Response_t998287943 * L_2 = __this->get__response_3();
+			if (L_2)
+			{
+				goto IL_0023;
+			}
+		}
+
+IL_0018:
+		{
+			Exception_t2103181915 * L_3 = (Exception_t2103181915 *)il2cpp_codegen_object_new(Exception_t2103181915_il2cpp_TypeInfo_var);
+			Exception__ctor_m767749334(L_3, /*hidden argument*/NULL);
+			__this->set__response_3(L_3);
+		}
+
+IL_0023:
+		{
+			Response_t998287943 * L_4 = __this->get__response_3();
+			NullCheck(L_4);
+			Response_set_Req_m4105363984(L_4, __this, /*hidden argument*/NULL);
+			goto IL_0075;
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_0034;
+		throw e;
+	}
+
+CATCH_0034:
+	{ // begin catch(LitJson.JsonException)
+		{
+			V_0 = ((JsonException_t613047007 *)__exception_local);
+		}
+
+IL_0035:
+		try
+		{ // begin try (depth: 2)
+			String_t* L_5 = ___json0;
+			Error_t2783916960 * L_6 = JsonHelper_DeserializeJsonToObject_TisError_t2783916960_m486751945(NULL /*static, unused*/, L_5, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisError_t2783916960_m486751945_MethodInfo_var);
+			__this->set__response_3(L_6);
+			Response_t998287943 * L_7 = __this->get__response_3();
+			NullCheck(L_7);
+			Response_set_Req_m4105363984(L_7, __this, /*hidden argument*/NULL);
+			goto IL_0070;
+		} // end try (depth: 2)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__exception_local = (Exception_t1927440687 *)e.ex;
+			if(il2cpp_codegen_class_is_assignable_from (JsonException_t613047007_il2cpp_TypeInfo_var, e.ex->klass))
+				goto CATCH_0052;
+			throw e;
+		}
+
+CATCH_0052:
+		{ // begin catch(LitJson.JsonException)
+			V_1 = ((JsonException_t613047007 *)__exception_local);
+			String_t* L_8 = ___json0;
+			Exception_t2103181915 * L_9 = JsonHelper_DeserializeJsonToObject_TisException_t2103181915_m3581041200(NULL /*static, unused*/, L_8, /*hidden argument*/JsonHelper_DeserializeJsonToObject_TisException_t2103181915_m3581041200_MethodInfo_var);
+			__this->set__response_3(L_9);
+			Response_t998287943 * L_10 = __this->get__response_3();
+			NullCheck(L_10);
+			Response_set_Req_m4105363984(L_10, __this, /*hidden argument*/NULL);
+			goto IL_0070;
+		} // end catch (depth: 2)
+
+IL_0070:
+		{
+			goto IL_0075;
+		}
+	} // end catch (depth: 1)
+
+IL_0075:
+	{
+		Response_t998287943 * L_11 = __this->get__response_3();
+		return L_11;
+	}
+}
+// System.Type Request::getResponseType()
+extern "C"  Type_t * Request_getResponseType_m1700925959 (Request_t2032498015 * __this, const MethodInfo* method)
+{
+	{
+		Response_t998287943 * L_0 = __this->get__response_3();
+		NullCheck(L_0);
+		Type_t * L_1 = Object_GetType_m191970594(L_0, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// System.Void Request/Error::.ctor()
+extern "C"  void Error__ctor_m2816813077 (Error_t2783916960 * __this, const MethodInfo* method)
+{
+	{
+		Exception__ctor_m767749334(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Request/Error/Data::.ctor()
+extern "C"  void Data__ctor_m2436204620 (Data_t862910835 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Request/Exception::.ctor()
+extern "C"  void Exception__ctor_m767749334 (Exception_t2103181915 * __this, const MethodInfo* method)
+{
+	{
+		Response__ctor_m932292640(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Request/Response::.ctor()
+extern "C"  void Response__ctor_m932292640 (Response_t998287943 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// Request Request/Response::get_Req()
+extern "C"  Request_t2032498015 * Response_get_Req_m4084751903 (Response_t998287943 * __this, const MethodInfo* method)
+{
+	{
+		Request_t2032498015 * L_0 = __this->get_request_0();
+		return L_0;
+	}
+}
+// System.Void Request/Response::set_Req(Request)
+extern "C"  void Response_set_Req_m4105363984 (Response_t998287943 * __this, Request_t2032498015 * ___value0, const MethodInfo* method)
+{
+	{
+		Request_t2032498015 * L_0 = ___value0;
+		__this->set_request_0(L_0);
+		return;
+	}
+}
+// System.Void ResourceManager::.ctor()
+extern "C"  void ResourceManager__ctor_m1852942078 (ResourceManager_t4136494783 * __this, const MethodInfo* method)
+{
+	{
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// ResourceManager ResourceManager::get_inst()
+extern "C"  ResourceManager_t4136494783 * ResourceManager_get_inst_m785854357 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (ResourceManager_get_inst_m785854357_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	GameObject_t1756533147 * V_0 = NULL;
+	{
+		ResourceManager_t4136494783 * L_0 = ((ResourceManager_t4136494783_StaticFields*)ResourceManager_t4136494783_il2cpp_TypeInfo_var->static_fields)->get__instance_2();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Equality_m3764089466(NULL /*static, unused*/, L_0, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		GameObject_t1756533147 * L_2 = (GameObject_t1756533147 *)il2cpp_codegen_object_new(GameObject_t1756533147_il2cpp_TypeInfo_var);
+		GameObject__ctor_m962601984(L_2, _stringLiteral569606005, /*hidden argument*/NULL);
+		V_0 = L_2;
+		GameObject_t1756533147 * L_3 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		Object_DontDestroyOnLoad_m2330762974(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_4 = V_0;
+		NullCheck(L_4);
+		ResourceManager_t4136494783 * L_5 = GameObject_AddComponent_TisResourceManager_t4136494783_m1310922065(L_4, /*hidden argument*/GameObject_AddComponent_TisResourceManager_t4136494783_m1310922065_MethodInfo_var);
+		((ResourceManager_t4136494783_StaticFields*)ResourceManager_t4136494783_il2cpp_TypeInfo_var->static_fields)->set__instance_2(L_5);
+	}
+
+IL_002c:
+	{
+		ResourceManager_t4136494783 * L_6 = ((ResourceManager_t4136494783_StaticFields*)ResourceManager_t4136494783_il2cpp_TypeInfo_var->static_fields)->get__instance_2();
+		return L_6;
+	}
+}
+// System.Void ResourceManager::Awake()
+extern "C"  void ResourceManager_Awake_m4204150351 (ResourceManager_t4136494783 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (ResourceManager_Awake_m4204150351_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		List_1_t3290435963 * L_0 = (List_1_t3290435963 *)il2cpp_codegen_object_new(List_1_t3290435963_il2cpp_TypeInfo_var);
+		List_1__ctor_m2501500508(L_0, /*hidden argument*/List_1__ctor_m2501500508_MethodInfo_var);
+		__this->set__items_5(L_0);
+		Hashtable_t909839986 * L_1 = (Hashtable_t909839986 *)il2cpp_codegen_object_new(Hashtable_t909839986_il2cpp_TypeInfo_var);
+		Hashtable__ctor_m1884964176(L_1, /*hidden argument*/NULL);
+		__this->set__pool_7(L_1);
+		String_t* L_2 = Util_get_DataPath_m1063176272(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set__basePath_8(L_2);
+		String_t* L_3 = __this->get__basePath_8();
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_4 = String_Concat_m2596409543(NULL /*static, unused*/, _stringLiteral2494949592, L_3, /*hidden argument*/NULL);
+		__this->set__basePath_8(L_4);
+		Il2CppObject * L_5 = ResourceManager_FreeIdleIcons_m2551489640(__this, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m2470621050(__this, L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void ResourceManager::LoadIcon(UpdatesProxy/MemoryVersion/Entry,ResourceManager/LoadCompleteCallback,ResourceManager/LoadErrorCallback,ResourceManager/SaveToDiskCallback)
+extern "C"  void ResourceManager_LoadIcon_m3776217159 (ResourceManager_t4136494783 * __this, Entry_t1644304703 * ___entry0, LoadCompleteCallback_t3887379968 * ___onSuccess1, LoadErrorCallback_t1969330919 * ___onFail2, SaveToDiskCallback_t1360640706 * ___onSave3, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (ResourceManager_LoadIcon_m3776217159_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	LoadItem_t3921314831 * V_0 = NULL;
+	{
+		LoadItem_t3921314831 * L_0 = (LoadItem_t3921314831 *)il2cpp_codegen_object_new(LoadItem_t3921314831_il2cpp_TypeInfo_var);
+		LoadItem__ctor_m1691606994(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		LoadItem_t3921314831 * L_1 = V_0;
+		Entry_t1644304703 * L_2 = ___entry0;
+		NullCheck(L_1);
+		L_1->set_entry_0(L_2);
+		LoadItem_t3921314831 * L_3 = V_0;
+		LoadCompleteCallback_t3887379968 * L_4 = ___onSuccess1;
+		NullCheck(L_3);
+		L_3->set_onSuccess_1(L_4);
+		LoadItem_t3921314831 * L_5 = V_0;
+		LoadErrorCallback_t1969330919 * L_6 = ___onFail2;
+		NullCheck(L_5);
+		L_5->set_onFail_2(L_6);
+		LoadItem_t3921314831 * L_7 = V_0;
+		SaveToDiskCallback_t1360640706 * L_8 = ___onSave3;
+		NullCheck(L_7);
+		L_7->set_onSave_3(L_8);
+		List_1_t3290435963 * L_9 = __this->get__items_5();
+		LoadItem_t3921314831 * L_10 = V_0;
+		NullCheck(L_9);
+		List_1_Add_m1299367128(L_9, L_10, /*hidden argument*/List_1_Add_m1299367128_MethodInfo_var);
+		bool L_11 = __this->get__started_6();
+		if (L_11)
+		{
+			goto IL_0047;
+		}
+	}
+	{
+		Il2CppObject * L_12 = ResourceManager_Run_m1332267789(__this, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m2470621050(__this, L_12, /*hidden argument*/NULL);
+	}
+
+IL_0047:
+	{
+		return;
+	}
+}
+// System.Collections.IEnumerator ResourceManager::Run()
+extern "C"  Il2CppObject * ResourceManager_Run_m1332267789 (ResourceManager_t4136494783 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (ResourceManager_Run_m1332267789_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CRunU3Ec__Iterator0_t1127244418 * V_0 = NULL;
+	{
+		U3CRunU3Ec__Iterator0_t1127244418 * L_0 = (U3CRunU3Ec__Iterator0_t1127244418 *)il2cpp_codegen_object_new(U3CRunU3Ec__Iterator0_t1127244418_il2cpp_TypeInfo_var);
+		U3CRunU3Ec__Iterator0__ctor_m4085996495(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		U3CRunU3Ec__Iterator0_t1127244418 * L_1 = V_0;
+		NullCheck(L_1);
+		L_1->set_U24this_3(__this);
+		U3CRunU3Ec__Iterator0_t1127244418 * L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Boolean ResourceManager::isQueued()
+extern "C"  bool ResourceManager_isQueued_m2890111509 (ResourceManager_t4136494783 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (ResourceManager_isQueued_m2890111509_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		List_1_t3290435963 * L_0 = __this->get__items_5();
+		NullCheck(L_0);
+		int32_t L_1 = List_1_get_Count_m4203099306(L_0, /*hidden argument*/List_1_get_Count_m4203099306_MethodInfo_var);
+		if (L_1)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_0012:
+	{
+		return (bool)1;
+	}
+}
+// System.Collections.IEnumerator ResourceManager::FreeIdleIcons()
+extern "C"  Il2CppObject * ResourceManager_FreeIdleIcons_m2551489640 (ResourceManager_t4136494783 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (ResourceManager_FreeIdleIcons_m2551489640_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * V_0 = NULL;
+	{
+		U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * L_0 = (U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 *)il2cpp_codegen_object_new(U3CFreeIdleIconsU3Ec__Iterator1_t2798996140_il2cpp_TypeInfo_var);
+		U3CFreeIdleIconsU3Ec__Iterator1__ctor_m429380523(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * L_1 = V_0;
+		NullCheck(L_1);
+		L_1->set_U24this_1(__this);
+		U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Void ResourceManager/<FreeIdleIcons>c__Iterator1::.ctor()
+extern "C"  void U3CFreeIdleIconsU3Ec__Iterator1__ctor_m429380523 (U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean ResourceManager/<FreeIdleIcons>c__Iterator1::MoveNext()
+extern "C"  bool U3CFreeIdleIconsU3Ec__Iterator1_MoveNext_m1739430381 (U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CFreeIdleIconsU3Ec__Iterator1_MoveNext_m1739430381_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint32_t V_0 = 0;
+	ArrayList_t4252133567 * V_1 = NULL;
+	DictionaryEntry_t3048875398  V_2;
+	memset(&V_2, 0, sizeof(V_2));
+	Il2CppObject * V_3 = NULL;
+	String_t* V_4 = NULL;
+	NTexture_t84202663 * V_5 = NULL;
+	Il2CppObject * V_6 = NULL;
+	String_t* V_7 = NULL;
+	Il2CppObject * V_8 = NULL;
+	Il2CppObject * V_9 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		int32_t L_0 = __this->get_U24PC_4();
+		V_0 = L_0;
+		__this->set_U24PC_4((-1));
+		uint32_t L_1 = V_0;
+		switch (L_1)
+		{
+			case 0:
+			{
+				goto IL_0021;
+			}
+			case 1:
+			{
+				goto IL_0045;
+			}
+		}
+	}
+	{
+		goto IL_0177;
+	}
+
+IL_0021:
+	{
+		WaitForSeconds_t3839502067 * L_2 = (WaitForSeconds_t3839502067 *)il2cpp_codegen_object_new(WaitForSeconds_t3839502067_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m1990515539(L_2, (30.0f), /*hidden argument*/NULL);
+		__this->set_U24current_2(L_2);
+		bool L_3 = __this->get_U24disposing_3();
+		if (L_3)
+		{
+			goto IL_0040;
+		}
+	}
+	{
+		__this->set_U24PC_4(1);
+	}
+
+IL_0040:
+	{
+		goto IL_0179;
+	}
+
+IL_0045:
+	{
+		ResourceManager_t4136494783 * L_4 = __this->get_U24this_1();
+		NullCheck(L_4);
+		Hashtable_t909839986 * L_5 = L_4->get__pool_7();
+		NullCheck(L_5);
+		int32_t L_6 = VirtFuncInvoker0< int32_t >::Invoke(23 /* System.Int32 System.Collections.Hashtable::get_Count() */, L_5);
+		__this->set_U3CcntU3E__0_0(L_6);
+		int32_t L_7 = __this->get_U3CcntU3E__0_0();
+		if ((((int32_t)L_7) <= ((int32_t)((int32_t)10))))
+		{
+			goto IL_0170;
+		}
+	}
+	{
+		V_1 = (ArrayList_t4252133567 *)NULL;
+		ResourceManager_t4136494783 * L_8 = __this->get_U24this_1();
+		NullCheck(L_8);
+		Hashtable_t909839986 * L_9 = L_8->get__pool_7();
+		NullCheck(L_9);
+		Il2CppObject * L_10 = VirtFuncInvoker0< Il2CppObject * >::Invoke(36 /* System.Collections.IDictionaryEnumerator System.Collections.Hashtable::GetEnumerator() */, L_9);
+		V_3 = L_10;
+	}
+
+IL_007b:
+	try
+	{ // begin try (depth: 1)
+		{
+			goto IL_00ef;
+		}
+
+IL_0080:
+		{
+			Il2CppObject * L_11 = V_3;
+			NullCheck(L_11);
+			Il2CppObject * L_12 = InterfaceFuncInvoker0< Il2CppObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1466026749_il2cpp_TypeInfo_var, L_11);
+			V_2 = ((*(DictionaryEntry_t3048875398 *)((DictionaryEntry_t3048875398 *)UnBox(L_12, DictionaryEntry_t3048875398_il2cpp_TypeInfo_var))));
+			Il2CppObject * L_13 = DictionaryEntry_get_Key_m3623293571((&V_2), /*hidden argument*/NULL);
+			V_4 = ((String_t*)CastclassSealed(L_13, String_t_il2cpp_TypeInfo_var));
+			Il2CppObject * L_14 = DictionaryEntry_get_Value_m2812883243((&V_2), /*hidden argument*/NULL);
+			V_5 = ((NTexture_t84202663 *)CastclassClass(L_14, NTexture_t84202663_il2cpp_TypeInfo_var));
+			NTexture_t84202663 * L_15 = V_5;
+			NullCheck(L_15);
+			int32_t L_16 = L_15->get_refCount_6();
+			if (L_16)
+			{
+				goto IL_00ef;
+			}
+		}
+
+IL_00b4:
+		{
+			ArrayList_t4252133567 * L_17 = V_1;
+			if (L_17)
+			{
+				goto IL_00c0;
+			}
+		}
+
+IL_00ba:
+		{
+			ArrayList_t4252133567 * L_18 = (ArrayList_t4252133567 *)il2cpp_codegen_object_new(ArrayList_t4252133567_il2cpp_TypeInfo_var);
+			ArrayList__ctor_m4012174379(L_18, /*hidden argument*/NULL);
+			V_1 = L_18;
+		}
+
+IL_00c0:
+		{
+			ArrayList_t4252133567 * L_19 = V_1;
+			String_t* L_20 = V_4;
+			NullCheck(L_19);
+			VirtFuncInvoker1< int32_t, Il2CppObject * >::Invoke(30 /* System.Int32 System.Collections.ArrayList::Add(System.Object) */, L_19, L_20);
+			NTexture_t84202663 * L_21 = V_5;
+			NullCheck(L_21);
+			NTexture_Dispose_m3580443639(L_21, /*hidden argument*/NULL);
+			int32_t L_22 = __this->get_U3CcntU3E__0_0();
+			__this->set_U3CcntU3E__0_0(((int32_t)((int32_t)L_22-(int32_t)1)));
+			int32_t L_23 = __this->get_U3CcntU3E__0_0();
+			if ((((int32_t)L_23) > ((int32_t)8)))
+			{
+				goto IL_00ef;
+			}
+		}
+
+IL_00ea:
+		{
+			goto IL_00fa;
+		}
+
+IL_00ef:
+		{
+			Il2CppObject * L_24 = V_3;
+			NullCheck(L_24);
+			bool L_25 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1466026749_il2cpp_TypeInfo_var, L_24);
+			if (L_25)
+			{
+				goto IL_0080;
+			}
+		}
+
+IL_00fa:
+		{
+			IL2CPP_LEAVE(0x115, FINALLY_00ff);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
+		goto FINALLY_00ff;
+	}
+
+FINALLY_00ff:
+	{ // begin finally (depth: 1)
+		{
+			Il2CppObject * L_26 = V_3;
+			Il2CppObject * L_27 = ((Il2CppObject *)IsInst(L_26, IDisposable_t2427283555_il2cpp_TypeInfo_var));
+			V_6 = L_27;
+			if (!L_27)
+			{
+				goto IL_0114;
+			}
+		}
+
+IL_010d:
+		{
+			Il2CppObject * L_28 = V_6;
+			NullCheck(L_28);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t2427283555_il2cpp_TypeInfo_var, L_28);
+		}
+
+IL_0114:
+		{
+			IL2CPP_END_FINALLY(255)
+		}
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(255)
+	{
+		IL2CPP_JUMP_TBL(0x115, IL_0115)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
+	}
+
+IL_0115:
+	{
+		ArrayList_t4252133567 * L_29 = V_1;
+		if (!L_29)
+		{
+			goto IL_0170;
+		}
+	}
+	{
+		ArrayList_t4252133567 * L_30 = V_1;
+		NullCheck(L_30);
+		Il2CppObject * L_31 = VirtFuncInvoker0< Il2CppObject * >::Invoke(43 /* System.Collections.IEnumerator System.Collections.ArrayList::GetEnumerator() */, L_30);
+		V_8 = L_31;
+	}
+
+IL_0123:
+	try
+	{ // begin try (depth: 1)
+		{
+			goto IL_0148;
+		}
+
+IL_0128:
+		{
+			Il2CppObject * L_32 = V_8;
+			NullCheck(L_32);
+			Il2CppObject * L_33 = InterfaceFuncInvoker0< Il2CppObject * >::Invoke(0 /* System.Object System.Collections.IEnumerator::get_Current() */, IEnumerator_t1466026749_il2cpp_TypeInfo_var, L_32);
+			V_7 = ((String_t*)CastclassSealed(L_33, String_t_il2cpp_TypeInfo_var));
+			ResourceManager_t4136494783 * L_34 = __this->get_U24this_1();
+			NullCheck(L_34);
+			Hashtable_t909839986 * L_35 = L_34->get__pool_7();
+			String_t* L_36 = V_7;
+			NullCheck(L_35);
+			VirtActionInvoker1< Il2CppObject * >::Invoke(37 /* System.Void System.Collections.Hashtable::Remove(System.Object) */, L_35, L_36);
+		}
+
+IL_0148:
+		{
+			Il2CppObject * L_37 = V_8;
+			NullCheck(L_37);
+			bool L_38 = InterfaceFuncInvoker0< bool >::Invoke(1 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t1466026749_il2cpp_TypeInfo_var, L_37);
+			if (L_38)
+			{
+				goto IL_0128;
+			}
+		}
+
+IL_0154:
+		{
+			IL2CPP_LEAVE(0x170, FINALLY_0159);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
+		goto FINALLY_0159;
+	}
+
+FINALLY_0159:
+	{ // begin finally (depth: 1)
+		{
+			Il2CppObject * L_39 = V_8;
+			Il2CppObject * L_40 = ((Il2CppObject *)IsInst(L_39, IDisposable_t2427283555_il2cpp_TypeInfo_var));
+			V_9 = L_40;
+			if (!L_40)
+			{
+				goto IL_016f;
+			}
+		}
+
+IL_0168:
+		{
+			Il2CppObject * L_41 = V_9;
+			NullCheck(L_41);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t2427283555_il2cpp_TypeInfo_var, L_41);
+		}
+
+IL_016f:
+		{
+			IL2CPP_END_FINALLY(345)
+		}
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(345)
+	{
+		IL2CPP_JUMP_TBL(0x170, IL_0170)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
+	}
+
+IL_0170:
+	{
+		__this->set_U24PC_4((-1));
+	}
+
+IL_0177:
+	{
+		return (bool)0;
+	}
+
+IL_0179:
+	{
+		return (bool)1;
+	}
+}
+// System.Object ResourceManager/<FreeIdleIcons>c__Iterator1::System.Collections.Generic.IEnumerator<object>.get_Current()
+extern "C"  Il2CppObject * U3CFreeIdleIconsU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2198908221 (U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * __this, const MethodInfo* method)
+{
+	{
+		Il2CppObject * L_0 = __this->get_U24current_2();
+		return L_0;
+	}
+}
+// System.Object ResourceManager/<FreeIdleIcons>c__Iterator1::System.Collections.IEnumerator.get_Current()
+extern "C"  Il2CppObject * U3CFreeIdleIconsU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m3375854997 (U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * __this, const MethodInfo* method)
+{
+	{
+		Il2CppObject * L_0 = __this->get_U24current_2();
+		return L_0;
+	}
+}
+// System.Void ResourceManager/<FreeIdleIcons>c__Iterator1::Dispose()
+extern "C"  void U3CFreeIdleIconsU3Ec__Iterator1_Dispose_m2074934038 (U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * __this, const MethodInfo* method)
+{
+	{
+		__this->set_U24disposing_3((bool)1);
+		__this->set_U24PC_4((-1));
+		return;
+	}
+}
+// System.Void ResourceManager/<FreeIdleIcons>c__Iterator1::Reset()
+extern "C"  void U3CFreeIdleIconsU3Ec__Iterator1_Reset_m2693732184 (U3CFreeIdleIconsU3Ec__Iterator1_t2798996140 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CFreeIdleIconsU3Ec__Iterator1_Reset_m2693732184_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NotSupportedException_t1793819818 * L_0 = (NotSupportedException_t1793819818 *)il2cpp_codegen_object_new(NotSupportedException_t1793819818_il2cpp_TypeInfo_var);
+		NotSupportedException__ctor_m3232764727(L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
+	}
+}
+// System.Void ResourceManager/<Run>c__Iterator0::.ctor()
+extern "C"  void U3CRunU3Ec__Iterator0__ctor_m4085996495 (U3CRunU3Ec__Iterator0_t1127244418 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean ResourceManager/<Run>c__Iterator0::MoveNext()
+extern "C"  bool U3CRunU3Ec__Iterator0_MoveNext_m1861107629 (U3CRunU3Ec__Iterator0_t1127244418 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CRunU3Ec__Iterator0_MoveNext_m1861107629_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint32_t V_0 = 0;
+	NTexture_t84202663 * V_1 = NULL;
+	NTexture_t84202663 * V_2 = NULL;
+	U3CRunU3Ec__Iterator0_t1127244418 * G_B14_0 = NULL;
+	U3CRunU3Ec__Iterator0_t1127244418 * G_B13_0 = NULL;
+	String_t* G_B15_0 = NULL;
+	U3CRunU3Ec__Iterator0_t1127244418 * G_B15_1 = NULL;
+	{
+		int32_t L_0 = __this->get_U24PC_6();
+		V_0 = L_0;
+		__this->set_U24PC_6((-1));
+		uint32_t L_1 = V_0;
+		switch (L_1)
+		{
+			case 0:
+			{
+				goto IL_0021;
+			}
+			case 1:
+			{
+				goto IL_019d;
+			}
+		}
+	}
+	{
+		goto IL_0286;
+	}
+
+IL_0021:
+	{
+		ResourceManager_t4136494783 * L_2 = __this->get_U24this_3();
+		NullCheck(L_2);
+		L_2->set__started_6((bool)1);
+		__this->set_U3CitemU3E__0_0((LoadItem_t3921314831 *)NULL);
+	}
+
+IL_0034:
+	{
+		ResourceManager_t4136494783 * L_3 = __this->get_U24this_3();
+		NullCheck(L_3);
+		List_1_t3290435963 * L_4 = L_3->get__items_5();
+		NullCheck(L_4);
+		int32_t L_5 = List_1_get_Count_m4203099306(L_4, /*hidden argument*/List_1_get_Count_m4203099306_MethodInfo_var);
+		if ((((int32_t)L_5) <= ((int32_t)0)))
+		{
+			goto IL_0077;
+		}
+	}
+	{
+		ResourceManager_t4136494783 * L_6 = __this->get_U24this_3();
+		NullCheck(L_6);
+		List_1_t3290435963 * L_7 = L_6->get__items_5();
+		NullCheck(L_7);
+		LoadItem_t3921314831 * L_8 = List_1_get_Item_m274276655(L_7, 0, /*hidden argument*/List_1_get_Item_m274276655_MethodInfo_var);
+		__this->set_U3CitemU3E__0_0(L_8);
+		ResourceManager_t4136494783 * L_9 = __this->get_U24this_3();
+		NullCheck(L_9);
+		List_1_t3290435963 * L_10 = L_9->get__items_5();
+		NullCheck(L_10);
+		List_1_RemoveAt_m997641594(L_10, 0, /*hidden argument*/List_1_RemoveAt_m997641594_MethodInfo_var);
+		goto IL_007c;
+	}
+
+IL_0077:
+	{
+		goto IL_0273;
+	}
+
+IL_007c:
+	{
+		ResourceManager_t4136494783 * L_11 = __this->get_U24this_3();
+		NullCheck(L_11);
+		Hashtable_t909839986 * L_12 = L_11->get__pool_7();
+		LoadItem_t3921314831 * L_13 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_13);
+		Entry_t1644304703 * L_14 = L_13->get_entry_0();
+		NullCheck(L_14);
+		String_t* L_15 = L_14->get_pic_0();
+		NullCheck(L_12);
+		bool L_16 = VirtFuncInvoker1< bool, Il2CppObject * >::Invoke(38 /* System.Boolean System.Collections.Hashtable::ContainsKey(System.Object) */, L_12, L_15);
+		if (!L_16)
+		{
+			goto IL_011c;
+		}
+	}
+	{
+		ResourceManager_t4136494783 * L_17 = __this->get_U24this_3();
+		NullCheck(L_17);
+		Hashtable_t909839986 * L_18 = L_17->get__pool_7();
+		LoadItem_t3921314831 * L_19 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_19);
+		Entry_t1644304703 * L_20 = L_19->get_entry_0();
+		NullCheck(L_20);
+		String_t* L_21 = L_20->get_pic_0();
+		NullCheck(L_18);
+		Il2CppObject * L_22 = VirtFuncInvoker1< Il2CppObject *, Il2CppObject * >::Invoke(30 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_18, L_21);
+		V_1 = ((NTexture_t84202663 *)CastclassClass(L_22, NTexture_t84202663_il2cpp_TypeInfo_var));
+		NTexture_t84202663 * L_23 = V_1;
+		NTexture_t84202663 * L_24 = L_23;
+		NullCheck(L_24);
+		int32_t L_25 = L_24->get_refCount_6();
+		NullCheck(L_24);
+		L_24->set_refCount_6(((int32_t)((int32_t)L_25+(int32_t)1)));
+		LoadItem_t3921314831 * L_26 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_26);
+		LoadCompleteCallback_t3887379968 * L_27 = L_26->get_onSuccess_1();
+		if (!L_27)
+		{
+			goto IL_00f6;
+		}
+	}
+	{
+		LoadItem_t3921314831 * L_28 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_28);
+		LoadCompleteCallback_t3887379968 * L_29 = L_28->get_onSuccess_1();
+		NTexture_t84202663 * L_30 = V_1;
+		NullCheck(L_29);
+		LoadCompleteCallback_Invoke_m89323250(L_29, L_30, /*hidden argument*/NULL);
+	}
+
+IL_00f6:
+	{
+		LoadItem_t3921314831 * L_31 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_31);
+		SaveToDiskCallback_t1360640706 * L_32 = L_31->get_onSave_3();
+		if (!L_32)
+		{
+			goto IL_0117;
+		}
+	}
+	{
+		LoadItem_t3921314831 * L_33 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_33);
+		SaveToDiskCallback_t1360640706 * L_34 = L_33->get_onSave_3();
+		NullCheck(L_34);
+		SaveToDiskCallback_Invoke_m2823085776(L_34, (ByteU5BU5D_t3397334013*)(ByteU5BU5D_t3397334013*)NULL, /*hidden argument*/NULL);
+	}
+
+IL_0117:
+	{
+		goto IL_0034;
+	}
+
+IL_011c:
+	{
+		LoadItem_t3921314831 * L_35 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_35);
+		Entry_t1644304703 * L_36 = L_35->get_entry_0();
+		NullCheck(L_36);
+		int32_t L_37 = L_36->get_is_new_3();
+		G_B13_0 = __this;
+		if (L_37)
+		{
+			G_B14_0 = __this;
+			goto IL_0157;
+		}
+	}
+	{
+		ResourceManager_t4136494783 * L_38 = __this->get_U24this_3();
+		NullCheck(L_38);
+		String_t* L_39 = L_38->get__basePath_8();
+		LoadItem_t3921314831 * L_40 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_40);
+		Entry_t1644304703 * L_41 = L_40->get_entry_0();
+		NullCheck(L_41);
+		String_t* L_42 = L_41->get_local_path_2();
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_43 = String_Concat_m2596409543(NULL /*static, unused*/, L_39, L_42, /*hidden argument*/NULL);
+		G_B15_0 = L_43;
+		G_B15_1 = G_B13_0;
+		goto IL_0167;
+	}
+
+IL_0157:
+	{
+		LoadItem_t3921314831 * L_44 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_44);
+		Entry_t1644304703 * L_45 = L_44->get_entry_0();
+		NullCheck(L_45);
+		String_t* L_46 = L_45->get_pic_path_1();
+		G_B15_0 = L_46;
+		G_B15_1 = G_B14_0;
+	}
+
+IL_0167:
+	{
+		NullCheck(G_B15_1);
+		G_B15_1->set_U3CurlU3E__1_1(G_B15_0);
+		String_t* L_47 = __this->get_U3CurlU3E__1_1();
+		WWW_t2919945039 * L_48 = (WWW_t2919945039 *)il2cpp_codegen_object_new(WWW_t2919945039_il2cpp_TypeInfo_var);
+		WWW__ctor_m2024029190(L_48, L_47, /*hidden argument*/NULL);
+		__this->set_U3CwwwU3E__1_2(L_48);
+		WWW_t2919945039 * L_49 = __this->get_U3CwwwU3E__1_2();
+		__this->set_U24current_4(L_49);
+		bool L_50 = __this->get_U24disposing_5();
+		if (L_50)
+		{
+			goto IL_0198;
+		}
+	}
+	{
+		__this->set_U24PC_6(1);
+	}
+
+IL_0198:
+	{
+		goto IL_0288;
+	}
+
+IL_019d:
+	{
+		WWW_t2919945039 * L_51 = __this->get_U3CwwwU3E__1_2();
+		NullCheck(L_51);
+		String_t* L_52 = WWW_get_error_m3092701216(L_51, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_53 = String_IsNullOrEmpty_m2802126737(NULL /*static, unused*/, L_52, /*hidden argument*/NULL);
+		if (!L_53)
+		{
+			goto IL_0243;
+		}
+	}
+	{
+		WWW_t2919945039 * L_54 = __this->get_U3CwwwU3E__1_2();
+		NullCheck(L_54);
+		Texture2D_t3542995729 * L_55 = WWW_get_texture_m1121178301(L_54, /*hidden argument*/NULL);
+		NTexture_t84202663 * L_56 = (NTexture_t84202663 *)il2cpp_codegen_object_new(NTexture_t84202663_il2cpp_TypeInfo_var);
+		NTexture__ctor_m3110936478(L_56, L_55, /*hidden argument*/NULL);
+		V_2 = L_56;
+		NTexture_t84202663 * L_57 = V_2;
+		NTexture_t84202663 * L_58 = L_57;
+		NullCheck(L_58);
+		int32_t L_59 = L_58->get_refCount_6();
+		NullCheck(L_58);
+		L_58->set_refCount_6(((int32_t)((int32_t)L_59+(int32_t)1)));
+		ResourceManager_t4136494783 * L_60 = __this->get_U24this_3();
+		NullCheck(L_60);
+		Hashtable_t909839986 * L_61 = L_60->get__pool_7();
+		LoadItem_t3921314831 * L_62 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_62);
+		Entry_t1644304703 * L_63 = L_62->get_entry_0();
+		NullCheck(L_63);
+		String_t* L_64 = L_63->get_pic_0();
+		NTexture_t84202663 * L_65 = V_2;
+		NullCheck(L_61);
+		VirtActionInvoker2< Il2CppObject *, Il2CppObject * >::Invoke(31 /* System.Void System.Collections.Hashtable::set_Item(System.Object,System.Object) */, L_61, L_64, L_65);
+		LoadItem_t3921314831 * L_66 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_66);
+		LoadCompleteCallback_t3887379968 * L_67 = L_66->get_onSuccess_1();
+		if (!L_67)
+		{
+			goto IL_0213;
+		}
+	}
+	{
+		LoadItem_t3921314831 * L_68 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_68);
+		LoadCompleteCallback_t3887379968 * L_69 = L_68->get_onSuccess_1();
+		NTexture_t84202663 * L_70 = V_2;
+		NullCheck(L_69);
+		LoadCompleteCallback_Invoke_m89323250(L_69, L_70, /*hidden argument*/NULL);
+	}
+
+IL_0213:
+	{
+		LoadItem_t3921314831 * L_71 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_71);
+		SaveToDiskCallback_t1360640706 * L_72 = L_71->get_onSave_3();
+		if (!L_72)
+		{
+			goto IL_023e;
+		}
+	}
+	{
+		LoadItem_t3921314831 * L_73 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_73);
+		SaveToDiskCallback_t1360640706 * L_74 = L_73->get_onSave_3();
+		WWW_t2919945039 * L_75 = __this->get_U3CwwwU3E__1_2();
+		NullCheck(L_75);
+		ByteU5BU5D_t3397334013* L_76 = WWW_get_bytes_m420718112(L_75, /*hidden argument*/NULL);
+		NullCheck(L_74);
+		SaveToDiskCallback_Invoke_m2823085776(L_74, L_76, /*hidden argument*/NULL);
+	}
+
+IL_023e:
+	{
+		goto IL_026e;
+	}
+
+IL_0243:
+	{
+		LoadItem_t3921314831 * L_77 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_77);
+		LoadErrorCallback_t1969330919 * L_78 = L_77->get_onFail_2();
+		if (!L_78)
+		{
+			goto IL_026e;
+		}
+	}
+	{
+		LoadItem_t3921314831 * L_79 = __this->get_U3CitemU3E__0_0();
+		NullCheck(L_79);
+		LoadErrorCallback_t1969330919 * L_80 = L_79->get_onFail_2();
+		WWW_t2919945039 * L_81 = __this->get_U3CwwwU3E__1_2();
+		NullCheck(L_81);
+		String_t* L_82 = WWW_get_error_m3092701216(L_81, /*hidden argument*/NULL);
+		NullCheck(L_80);
+		LoadErrorCallback_Invoke_m1405382364(L_80, L_82, /*hidden argument*/NULL);
+	}
+
+IL_026e:
+	{
+		goto IL_0034;
+	}
+
+IL_0273:
+	{
+		ResourceManager_t4136494783 * L_83 = __this->get_U24this_3();
+		NullCheck(L_83);
+		L_83->set__started_6((bool)0);
+		__this->set_U24PC_6((-1));
+	}
+
+IL_0286:
+	{
+		return (bool)0;
+	}
+
+IL_0288:
+	{
+		return (bool)1;
+	}
+}
+// System.Object ResourceManager/<Run>c__Iterator0::System.Collections.Generic.IEnumerator<object>.get_Current()
+extern "C"  Il2CppObject * U3CRunU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m973501 (U3CRunU3Ec__Iterator0_t1127244418 * __this, const MethodInfo* method)
+{
+	{
+		Il2CppObject * L_0 = __this->get_U24current_4();
+		return L_0;
+	}
+}
+// System.Object ResourceManager/<Run>c__Iterator0::System.Collections.IEnumerator.get_Current()
+extern "C"  Il2CppObject * U3CRunU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2430714981 (U3CRunU3Ec__Iterator0_t1127244418 * __this, const MethodInfo* method)
+{
+	{
+		Il2CppObject * L_0 = __this->get_U24current_4();
+		return L_0;
+	}
+}
+// System.Void ResourceManager/<Run>c__Iterator0::Dispose()
+extern "C"  void U3CRunU3Ec__Iterator0_Dispose_m2160114564 (U3CRunU3Ec__Iterator0_t1127244418 * __this, const MethodInfo* method)
+{
+	{
+		__this->set_U24disposing_5((bool)1);
+		__this->set_U24PC_6((-1));
+		return;
+	}
+}
+// System.Void ResourceManager/<Run>c__Iterator0::Reset()
+extern "C"  void U3CRunU3Ec__Iterator0_Reset_m236216578 (U3CRunU3Ec__Iterator0_t1127244418 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CRunU3Ec__Iterator0_Reset_m236216578_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NotSupportedException_t1793819818 * L_0 = (NotSupportedException_t1793819818 *)il2cpp_codegen_object_new(NotSupportedException_t1793819818_il2cpp_TypeInfo_var);
+		NotSupportedException__ctor_m3232764727(L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0);
+	}
+}
+// System.Void ResourceManager/LoadCompleteCallback::.ctor(System.Object,System.IntPtr)
+extern "C"  void LoadCompleteCallback__ctor_m2630067511 (LoadCompleteCallback_t3887379968 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method)
+{
+	__this->set_method_ptr_0((Il2CppMethodPointer)((MethodInfo*)___method1.get_m_value_0())->methodPointer);
+	__this->set_method_3(___method1);
+	__this->set_m_target_2(___object0);
+}
+// System.Void ResourceManager/LoadCompleteCallback::Invoke(FairyGUI.NTexture)
+extern "C"  void LoadCompleteCallback_Invoke_m89323250 (LoadCompleteCallback_t3887379968 * __this, NTexture_t84202663 * ___texture0, const MethodInfo* method)
+{
+	if(__this->get_prev_9() != NULL)
+	{
+		LoadCompleteCallback_Invoke_m89323250((LoadCompleteCallback_t3887379968 *)__this->get_prev_9(),___texture0, method);
+	}
+	il2cpp_codegen_raise_execution_engine_exception_if_method_is_not_found((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	if (__this->get_m_target_2() != NULL && ___methodIsStatic)
+	{
+		typedef void (*FunctionPointerType) (Il2CppObject *, void* __this, NTexture_t84202663 * ___texture0, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(NULL,__this->get_m_target_2(),___texture0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+	else if (__this->get_m_target_2() != NULL || ___methodIsStatic)
+	{
+		typedef void (*FunctionPointerType) (void* __this, NTexture_t84202663 * ___texture0, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(__this->get_m_target_2(),___texture0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+	else
+	{
+		typedef void (*FunctionPointerType) (void* __this, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(___texture0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+}
+// System.IAsyncResult ResourceManager/LoadCompleteCallback::BeginInvoke(FairyGUI.NTexture,System.AsyncCallback,System.Object)
+extern "C"  Il2CppObject * LoadCompleteCallback_BeginInvoke_m3723153597 (LoadCompleteCallback_t3887379968 * __this, NTexture_t84202663 * ___texture0, AsyncCallback_t163412349 * ___callback1, Il2CppObject * ___object2, const MethodInfo* method)
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = ___texture0;
+	return (Il2CppObject *)il2cpp_codegen_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)___callback1, (Il2CppObject*)___object2);
+}
+// System.Void ResourceManager/LoadCompleteCallback::EndInvoke(System.IAsyncResult)
+extern "C"  void LoadCompleteCallback_EndInvoke_m601093977 (LoadCompleteCallback_t3887379968 * __this, Il2CppObject * ___result0, const MethodInfo* method)
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+extern "C"  void DelegatePInvokeWrapper_LoadErrorCallback_t1969330919 (LoadErrorCallback_t1969330919 * __this, String_t* ___error0, const MethodInfo* method)
+{
+	typedef void (STDCALL *PInvokeFunc)(char*);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((Il2CppDelegate*)__this)->method->methodPointer);
+
+	// Marshaling of parameter '___error0' to native representation
+	char* ____error0_marshaled = NULL;
+	____error0_marshaled = il2cpp_codegen_marshal_string(___error0);
+
+	// Native function invocation
+	il2cppPInvokeFunc(____error0_marshaled);
+
+	// Marshaling cleanup of parameter '___error0' native representation
+	il2cpp_codegen_marshal_free(____error0_marshaled);
+	____error0_marshaled = NULL;
+
+}
+// System.Void ResourceManager/LoadErrorCallback::.ctor(System.Object,System.IntPtr)
+extern "C"  void LoadErrorCallback__ctor_m3830842720 (LoadErrorCallback_t1969330919 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method)
+{
+	__this->set_method_ptr_0((Il2CppMethodPointer)((MethodInfo*)___method1.get_m_value_0())->methodPointer);
+	__this->set_method_3(___method1);
+	__this->set_m_target_2(___object0);
+}
+// System.Void ResourceManager/LoadErrorCallback::Invoke(System.String)
+extern "C"  void LoadErrorCallback_Invoke_m1405382364 (LoadErrorCallback_t1969330919 * __this, String_t* ___error0, const MethodInfo* method)
+{
+	if(__this->get_prev_9() != NULL)
+	{
+		LoadErrorCallback_Invoke_m1405382364((LoadErrorCallback_t1969330919 *)__this->get_prev_9(),___error0, method);
+	}
+	il2cpp_codegen_raise_execution_engine_exception_if_method_is_not_found((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	if (__this->get_m_target_2() != NULL && ___methodIsStatic)
+	{
+		typedef void (*FunctionPointerType) (Il2CppObject *, void* __this, String_t* ___error0, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(NULL,__this->get_m_target_2(),___error0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+	else if (__this->get_m_target_2() != NULL || ___methodIsStatic)
+	{
+		typedef void (*FunctionPointerType) (void* __this, String_t* ___error0, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(__this->get_m_target_2(),___error0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+	else
+	{
+		typedef void (*FunctionPointerType) (void* __this, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(___error0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+}
+// System.IAsyncResult ResourceManager/LoadErrorCallback::BeginInvoke(System.String,System.AsyncCallback,System.Object)
+extern "C"  Il2CppObject * LoadErrorCallback_BeginInvoke_m588555519 (LoadErrorCallback_t1969330919 * __this, String_t* ___error0, AsyncCallback_t163412349 * ___callback1, Il2CppObject * ___object2, const MethodInfo* method)
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = ___error0;
+	return (Il2CppObject *)il2cpp_codegen_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)___callback1, (Il2CppObject*)___object2);
+}
+// System.Void ResourceManager/LoadErrorCallback::EndInvoke(System.IAsyncResult)
+extern "C"  void LoadErrorCallback_EndInvoke_m2297695514 (LoadErrorCallback_t1969330919 * __this, Il2CppObject * ___result0, const MethodInfo* method)
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+// System.Void ResourceManager/LoadItem::.ctor()
+extern "C"  void LoadItem__ctor_m1691606994 (LoadItem_t3921314831 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+extern "C"  void DelegatePInvokeWrapper_SaveToDiskCallback_t1360640706 (SaveToDiskCallback_t1360640706 * __this, ByteU5BU5D_t3397334013* ___stream0, const MethodInfo* method)
+{
+	typedef void (STDCALL *PInvokeFunc)(uint8_t*);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((Il2CppDelegate*)__this)->method->methodPointer);
+
+	// Marshaling of parameter '___stream0' to native representation
+	uint8_t* ____stream0_marshaled = NULL;
+	if (___stream0 != NULL)
+	{
+		____stream0_marshaled = reinterpret_cast<uint8_t*>((___stream0)->GetAddressAtUnchecked(0));
+	}
+
+	// Native function invocation
+	il2cppPInvokeFunc(____stream0_marshaled);
+
+}
+// System.Void ResourceManager/SaveToDiskCallback::.ctor(System.Object,System.IntPtr)
+extern "C"  void SaveToDiskCallback__ctor_m3748495499 (SaveToDiskCallback_t1360640706 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method)
+{
+	__this->set_method_ptr_0((Il2CppMethodPointer)((MethodInfo*)___method1.get_m_value_0())->methodPointer);
+	__this->set_method_3(___method1);
+	__this->set_m_target_2(___object0);
+}
+// System.Void ResourceManager/SaveToDiskCallback::Invoke(System.Byte[])
+extern "C"  void SaveToDiskCallback_Invoke_m2823085776 (SaveToDiskCallback_t1360640706 * __this, ByteU5BU5D_t3397334013* ___stream0, const MethodInfo* method)
+{
+	if(__this->get_prev_9() != NULL)
+	{
+		SaveToDiskCallback_Invoke_m2823085776((SaveToDiskCallback_t1360640706 *)__this->get_prev_9(),___stream0, method);
+	}
+	il2cpp_codegen_raise_execution_engine_exception_if_method_is_not_found((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	if (__this->get_m_target_2() != NULL && ___methodIsStatic)
+	{
+		typedef void (*FunctionPointerType) (Il2CppObject *, void* __this, ByteU5BU5D_t3397334013* ___stream0, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(NULL,__this->get_m_target_2(),___stream0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+	else if (__this->get_m_target_2() != NULL || ___methodIsStatic)
+	{
+		typedef void (*FunctionPointerType) (void* __this, ByteU5BU5D_t3397334013* ___stream0, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(__this->get_m_target_2(),___stream0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+	else
+	{
+		typedef void (*FunctionPointerType) (void* __this, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(___stream0,(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+}
+// System.IAsyncResult ResourceManager/SaveToDiskCallback::BeginInvoke(System.Byte[],System.AsyncCallback,System.Object)
+extern "C"  Il2CppObject * SaveToDiskCallback_BeginInvoke_m1508439767 (SaveToDiskCallback_t1360640706 * __this, ByteU5BU5D_t3397334013* ___stream0, AsyncCallback_t163412349 * ___callback1, Il2CppObject * ___object2, const MethodInfo* method)
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = ___stream0;
+	return (Il2CppObject *)il2cpp_codegen_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)___callback1, (Il2CppObject*)___object2);
+}
+// System.Void ResourceManager/SaveToDiskCallback::EndInvoke(System.IAsyncResult)
+extern "C"  void SaveToDiskCallback_EndInvoke_m1903476205 (SaveToDiskCallback_t1360640706 * __this, Il2CppObject * ___result0, const MethodInfo* method)
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+// System.Void RewardsMediator::.ctor(System.String,System.Object)
+extern "C"  void RewardsMediator__ctor_m2725213880 (RewardsMediator_t1871400415 * __this, String_t* ___mediatorName0, Il2CppObject * ___viewComponent1, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___mediatorName0;
+		Il2CppObject * L_1 = ___viewComponent1;
+		BaseMediator__ctor_m1601555591(__this, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UIRewardsMain RewardsMediator::get_m_rewards_ui()
+extern "C"  UIRewardsMain_t1107937165 * RewardsMediator_get_m_rewards_ui_m24736136 (RewardsMediator_t1871400415 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (RewardsMediator_get_m_rewards_ui_m24736136_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Il2CppObject * L_0 = Mediator_get_ViewComponent_m586586336(__this, /*hidden argument*/NULL);
+		NullCheck(((GameObject_t1756533147 *)CastclassSealed(L_0, GameObject_t1756533147_il2cpp_TypeInfo_var)));
+		UIRewardsMain_t1107937165 * L_1 = GameObject_GetComponent_TisUIRewardsMain_t1107937165_m4171481314(((GameObject_t1756533147 *)CastclassSealed(L_0, GameObject_t1756533147_il2cpp_TypeInfo_var)), /*hidden argument*/GameObject_GetComponent_TisUIRewardsMain_t1107937165_m4171481314_MethodInfo_var);
+		return L_1;
+	}
+}
+// System.String[] RewardsMediator::ListNotificationInterests()
+extern "C"  StringU5BU5D_t1642385972* RewardsMediator_ListNotificationInterests_m2217341159 (RewardsMediator_t1871400415 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (RewardsMediator_ListNotificationInterests_m2217341159_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	List_1_t1398341365 * V_0 = NULL;
+	{
+		List_1_t1398341365 * L_0 = (List_1_t1398341365 *)il2cpp_codegen_object_new(List_1_t1398341365_il2cpp_TypeInfo_var);
+		List_1__ctor_m3854603248(L_0, /*hidden argument*/List_1__ctor_m3854603248_MethodInfo_var);
+		V_0 = L_0;
+		List_1_t1398341365 * L_1 = V_0;
+		NullCheck(L_1);
+		List_1_Add_m4061286785(L_1, _stringLiteral1157439965, /*hidden argument*/List_1_Add_m4061286785_MethodInfo_var);
+		List_1_t1398341365 * L_2 = V_0;
+		NullCheck(L_2);
+		StringU5BU5D_t1642385972* L_3 = List_1_ToArray_m948919263(L_2, /*hidden argument*/List_1_ToArray_m948919263_MethodInfo_var);
+		return L_3;
+	}
+}
+// System.Void RewardsMediator::HandleNotification(PureMVC.Interfaces.INotification)
+extern "C"  void RewardsMediator_HandleNotification_m3707316249 (RewardsMediator_t1871400415 * __this, Il2CppObject * ___notification0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (RewardsMediator_HandleNotification_m3707316249_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	{
+		Il2CppObject * L_0 = ___notification0;
+		NullCheck(L_0);
+		String_t* L_1 = InterfaceFuncInvoker0< String_t* >::Invoke(0 /* System.String PureMVC.Interfaces.INotification::get_Name() */, INotification_t616890910_il2cpp_TypeInfo_var, L_0);
+		V_0 = L_1;
+		String_t* L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0033;
+		}
+	}
+	{
+		String_t* L_3 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_4 = String_op_Equality_m1790663636(NULL /*static, unused*/, L_3, _stringLiteral1157439965, /*hidden argument*/NULL);
+		if (L_4)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		goto IL_0033;
+	}
+
+IL_0022:
+	{
+		UIRewardsMain_t1107937165 * L_5 = RewardsMediator_get_m_rewards_ui_m24736136(__this, /*hidden argument*/NULL);
+		Il2CppObject * L_6 = ___notification0;
+		NullCheck(L_5);
+		UIRewardsMain_RespondUsePrize_m1512108068(L_5, L_6, /*hidden argument*/NULL);
+		goto IL_0038;
+	}
+
+IL_0033:
+	{
+		goto IL_0038;
+	}
+
+IL_0038:
+	{
+		return;
+	}
+}
+// System.Void RewardsMediator::OnRegister()
+extern "C"  void RewardsMediator_OnRegister_m835597402 (RewardsMediator_t1871400415 * __this, const MethodInfo* method)
+{
+	{
+		return;
+	}
+}
+// System.Void RewardsMediator::OnRemove()
+extern "C"  void RewardsMediator_OnRemove_m993017165 (RewardsMediator_t1871400415 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (RewardsMediator_OnRemove_m993017165_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = Mediator_get_MediatorName_m3321693954(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_1 = String_Concat_m2596409543(NULL /*static, unused*/, _stringLiteral3284842120, L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void RewardsMediator::clickFunc(UIMain/ClickType)
+extern "C"  void RewardsMediator_clickFunc_m1090108778 (RewardsMediator_t1871400415 * __this, int32_t ___type0, const MethodInfo* method)
+{
+	{
+		goto IL_0005;
+	}
+
+IL_0005:
+	{
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		return;
+	}
+}
+// System.Void RingFence::.ctor()
+extern "C"  void RingFence__ctor_m1123724734 (RingFence_t3382043263 * __this, const MethodInfo* method)
+{
+	{
+		__this->set_radius_2((0.2f));
+		__this->set_divide_3(((int32_t)20));
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void RingFence::Awake()
+extern "C"  void RingFence_Awake_m2081380271 (RingFence_t3382043263 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (RingFence_Awake_m2081380271_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	int32_t V_2 = 0;
+	GameObject_t1756533147 * V_3 = NULL;
+	float V_4 = 0.0f;
+	{
+		int32_t L_0 = __this->get_divide_3();
+		V_0 = (((float)((float)((int32_t)((int32_t)((int32_t)360)/(int32_t)L_0)))));
+		V_1 = (0.0174532924f);
+		V_2 = 0;
+		goto IL_00f6;
+	}
+
+IL_001b:
+	{
+		Object_t1021602117 * L_1 = Resources_Load_m2041782325(NULL /*static, unused*/, _stringLiteral3769301, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		GameObject_t1756533147 * L_2 = Object_Instantiate_TisGameObject_t1756533147_m3664764861(NULL /*static, unused*/, ((GameObject_t1756533147 *)CastclassSealed(L_1, GameObject_t1756533147_il2cpp_TypeInfo_var)), /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3664764861_MethodInfo_var);
+		V_3 = L_2;
+		GameObject_t1756533147 * L_3 = V_3;
+		NullCheck(L_3);
+		Transform_t3275118058 * L_4 = GameObject_get_transform_m909382139(L_3, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_5 = Component_get_gameObject_m3105766835(__this, /*hidden argument*/NULL);
+		NullCheck(L_5);
+		Transform_t3275118058 * L_6 = GameObject_get_transform_m909382139(L_5, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		Transform_set_parent_m3281327839(L_4, L_6, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_7 = V_3;
+		NullCheck(L_7);
+		Transform_t3275118058 * L_8 = GameObject_get_transform_m909382139(L_7, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_9 = Vector3_get_zero_m1527993324(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_8);
+		Transform_set_localPosition_m1026930133(L_8, L_9, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_10 = V_3;
+		NullCheck(L_10);
+		Transform_t3275118058 * L_11 = GameObject_get_transform_m909382139(L_10, /*hidden argument*/NULL);
+		float L_12 = __this->get_radius_2();
+		float L_13 = V_0;
+		float L_14 = V_1;
+		double L_15 = sin((((double)((double)((float)((float)((float)((float)L_13/(float)(2.0f)))*(float)L_14))))));
+		Vector3_t2243707580  L_16;
+		memset(&L_16, 0, sizeof(L_16));
+		Vector3__ctor_m2638739322(&L_16, (((float)((float)((double)((double)(((double)((double)((float)((float)L_12*(float)(2.0f))))))*(double)L_15))))), (0.01f), (1.0f), /*hidden argument*/NULL);
+		NullCheck(L_11);
+		Transform_set_localScale_m2325460848(L_11, L_16, /*hidden argument*/NULL);
+		float L_17 = __this->get_radius_2();
+		float L_18 = V_0;
+		float L_19 = V_1;
+		double L_20 = cos((((double)((double)((float)((float)((float)((float)L_18/(float)(2.0f)))*(float)L_19))))));
+		V_4 = ((float)((float)L_17*(float)(((float)((float)L_20)))));
+		GameObject_t1756533147 * L_21 = V_3;
+		NullCheck(L_21);
+		Transform_t3275118058 * L_22 = GameObject_get_transform_m909382139(L_21, /*hidden argument*/NULL);
+		float L_23 = V_4;
+		float L_24 = V_0;
+		int32_t L_25 = V_2;
+		float L_26 = V_1;
+		double L_27 = sin((((double)((double)((float)((float)((float)((float)L_24*(float)(((float)((float)L_25)))))*(float)L_26))))));
+		float L_28 = V_4;
+		float L_29 = V_0;
+		int32_t L_30 = V_2;
+		float L_31 = V_1;
+		double L_32 = cos((((double)((double)((float)((float)((float)((float)L_29*(float)(((float)((float)L_30)))))*(float)L_31))))));
+		NullCheck(L_22);
+		Transform_Translate_m1198703821(L_22, ((float)((float)L_23*(float)(((float)((float)L_27))))), (0.0f), ((float)((float)L_28*(float)(((float)((float)L_32))))), 1, /*hidden argument*/NULL);
+		GameObject_t1756533147 * L_33 = V_3;
+		NullCheck(L_33);
+		Transform_t3275118058 * L_34 = GameObject_get_transform_m909382139(L_33, /*hidden argument*/NULL);
+		int32_t L_35 = V_2;
+		float L_36 = V_0;
+		NullCheck(L_34);
+		Transform_Rotate_m2449860094(L_34, (0.0f), ((float)((float)(((float)((float)L_35)))*(float)L_36)), (0.0f), 1, /*hidden argument*/NULL);
+		int32_t L_37 = V_2;
+		V_2 = ((int32_t)((int32_t)L_37+(int32_t)1));
+	}
+
+IL_00f6:
+	{
+		int32_t L_38 = V_2;
+		int32_t L_39 = __this->get_divide_3();
+		if ((((int32_t)L_38) < ((int32_t)L_39)))
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		return;
+	}
+}
+// System.Void SocketClient::.ctor()
+extern "C"  void SocketClient__ctor_m908475067 (SocketClient_t718412134 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient__ctor_m908475067_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		__this->set_byteBuffer_5(((ByteU5BU5D_t3397334013*)SZArrayNew(ByteU5BU5D_t3397334013_il2cpp_TypeInfo_var, (uint32_t)((int32_t)8192))));
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SocketClient::OnRegister()
+extern "C"  void SocketClient_OnRegister_m3433101067 (SocketClient_t718412134 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_OnRegister_m3433101067_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		MemoryStream_t743994179 * L_0 = (MemoryStream_t743994179 *)il2cpp_codegen_object_new(MemoryStream_t743994179_il2cpp_TypeInfo_var);
+		MemoryStream__ctor_m1043059966(L_0, /*hidden argument*/NULL);
+		__this->set_memStream_2(L_0);
+		MemoryStream_t743994179 * L_1 = __this->get_memStream_2();
+		BinaryReader_t2491843768 * L_2 = (BinaryReader_t2491843768 *)il2cpp_codegen_object_new(BinaryReader_t2491843768_il2cpp_TypeInfo_var);
+		BinaryReader__ctor_m4190061006(L_2, L_1, /*hidden argument*/NULL);
+		__this->set_reader_3(L_2);
+		return;
+	}
+}
+// System.Void SocketClient::OnRemove()
+extern "C"  void SocketClient_OnRemove_m3448042736 (SocketClient_t718412134 * __this, const MethodInfo* method)
+{
+	{
+		SocketClient_Close_m3369538009(__this, /*hidden argument*/NULL);
+		BinaryReader_t2491843768 * L_0 = __this->get_reader_3();
+		NullCheck(L_0);
+		VirtActionInvoker0::Invoke(6 /* System.Void System.IO.BinaryReader::Close() */, L_0);
+		MemoryStream_t743994179 * L_1 = __this->get_memStream_2();
+		NullCheck(L_1);
+		VirtActionInvoker0::Invoke(12 /* System.Void System.IO.Stream::Close() */, L_1);
+		return;
+	}
+}
+// System.Void SocketClient::ConnectServer(System.String,System.Int32)
+extern "C"  void SocketClient_ConnectServer_m2557951783 (SocketClient_t718412134 * __this, String_t* ___host0, int32_t ___port1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_ConnectServer_m2557951783_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t1927440687 * V_0 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		__this->set_client_0((TcpClient_t408947970 *)NULL);
+		TcpClient_t408947970 * L_0 = (TcpClient_t408947970 *)il2cpp_codegen_object_new(TcpClient_t408947970_il2cpp_TypeInfo_var);
+		TcpClient__ctor_m1345314116(L_0, /*hidden argument*/NULL);
+		__this->set_client_0(L_0);
+		TcpClient_t408947970 * L_1 = __this->get_client_0();
+		NullCheck(L_1);
+		TcpClient_set_SendTimeout_m99119269(L_1, ((int32_t)1000), /*hidden argument*/NULL);
+		TcpClient_t408947970 * L_2 = __this->get_client_0();
+		NullCheck(L_2);
+		TcpClient_set_ReceiveTimeout_m4062746526(L_2, ((int32_t)1000), /*hidden argument*/NULL);
+		TcpClient_t408947970 * L_3 = __this->get_client_0();
+		NullCheck(L_3);
+		TcpClient_set_NoDelay_m2324075952(L_3, (bool)1, /*hidden argument*/NULL);
+	}
+
+IL_003e:
+	try
+	{ // begin try (depth: 1)
+		TcpClient_t408947970 * L_4 = __this->get_client_0();
+		String_t* L_5 = ___host0;
+		int32_t L_6 = ___port1;
+		IntPtr_t L_7;
+		L_7.set_m_value_0((void*)(void*)SocketClient_OnConnect_m3123595341_MethodInfo_var);
+		AsyncCallback_t163412349 * L_8 = (AsyncCallback_t163412349 *)il2cpp_codegen_object_new(AsyncCallback_t163412349_il2cpp_TypeInfo_var);
+		AsyncCallback__ctor_m3071689932(L_8, __this, L_7, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		TcpClient_BeginConnect_m2214827936(L_4, L_5, L_6, L_8, NULL, /*hidden argument*/NULL);
+		goto IL_0075;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (Exception_t1927440687_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_005e;
+		throw e;
+	}
+
+CATCH_005e:
+	{ // begin catch(System.Exception)
+		V_0 = ((Exception_t1927440687 *)__exception_local);
+		SocketClient_Close_m3369538009(__this, /*hidden argument*/NULL);
+		Exception_t1927440687 * L_9 = V_0;
+		NullCheck(L_9);
+		String_t* L_10 = VirtFuncInvoker0< String_t* >::Invoke(6 /* System.String System.Exception::get_Message() */, L_9);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_LogError_m3715728798(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
+		goto IL_0075;
+	} // end catch (depth: 1)
+
+IL_0075:
+	{
+		return;
+	}
+}
+// System.Void SocketClient::OnConnect(System.IAsyncResult)
+extern "C"  void SocketClient_OnConnect_m3123595341 (SocketClient_t718412134 * __this, Il2CppObject * ___asr0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_OnConnect_m3123595341_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		TcpClient_t408947970 * L_0 = __this->get_client_0();
+		NullCheck(L_0);
+		NetworkStream_t581172200 * L_1 = TcpClient_GetStream_m872175179(L_0, /*hidden argument*/NULL);
+		__this->set_outStream_1(L_1);
+		TcpClient_t408947970 * L_2 = __this->get_client_0();
+		NullCheck(L_2);
+		NetworkStream_t581172200 * L_3 = TcpClient_GetStream_m872175179(L_2, /*hidden argument*/NULL);
+		ByteU5BU5D_t3397334013* L_4 = __this->get_byteBuffer_5();
+		IntPtr_t L_5;
+		L_5.set_m_value_0((void*)(void*)SocketClient_OnRead_m1734567161_MethodInfo_var);
+		AsyncCallback_t163412349 * L_6 = (AsyncCallback_t163412349 *)il2cpp_codegen_object_new(AsyncCallback_t163412349_il2cpp_TypeInfo_var);
+		AsyncCallback__ctor_m3071689932(L_6, __this, L_5, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		VirtFuncInvoker5< Il2CppObject *, ByteU5BU5D_t3397334013*, int32_t, int32_t, AsyncCallback_t163412349 *, Il2CppObject * >::Invoke(20 /* System.IAsyncResult System.IO.Stream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_3, L_4, 0, ((int32_t)8192), L_6, NULL);
+		ByteBuffer_t1012950836 * L_7 = (ByteBuffer_t1012950836 *)il2cpp_codegen_object_new(ByteBuffer_t1012950836_il2cpp_TypeInfo_var);
+		ByteBuffer__ctor_m3262420685(L_7, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(NetworkManager_t226491143_il2cpp_TypeInfo_var);
+		NetworkManager_AddEvent_m2458951100(NULL /*static, unused*/, ((int32_t)101), L_7, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SocketClient::WriteMessage(System.Byte[])
+extern "C"  void SocketClient_WriteMessage_m1370612150 (SocketClient_t718412134 * __this, ByteU5BU5D_t3397334013* ___message0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_WriteMessage_m1370612150_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	MemoryStream_t743994179 * V_0 = NULL;
+	MemoryStream_t743994179 * V_1 = NULL;
+	BinaryWriter_t3179371318 * V_2 = NULL;
+	uint16_t V_3 = 0;
+	ByteU5BU5D_t3397334013* V_4 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		V_0 = (MemoryStream_t743994179 *)NULL;
+		MemoryStream_t743994179 * L_0 = (MemoryStream_t743994179 *)il2cpp_codegen_object_new(MemoryStream_t743994179_il2cpp_TypeInfo_var);
+		MemoryStream__ctor_m1043059966(L_0, /*hidden argument*/NULL);
+		MemoryStream_t743994179 * L_1 = L_0;
+		V_0 = L_1;
+		V_1 = L_1;
+	}
+
+IL_000a:
+	try
+	{ // begin try (depth: 1)
+		{
+			MemoryStream_t743994179 * L_2 = V_0;
+			NullCheck(L_2);
+			VirtActionInvoker1< int64_t >::Invoke(10 /* System.Void System.IO.Stream::set_Position(System.Int64) */, L_2, (((int64_t)((int64_t)0))));
+			MemoryStream_t743994179 * L_3 = V_0;
+			BinaryWriter_t3179371318 * L_4 = (BinaryWriter_t3179371318 *)il2cpp_codegen_object_new(BinaryWriter_t3179371318_il2cpp_TypeInfo_var);
+			BinaryWriter__ctor_m828435354(L_4, L_3, /*hidden argument*/NULL);
+			V_2 = L_4;
+			ByteU5BU5D_t3397334013* L_5 = ___message0;
+			NullCheck(L_5);
+			V_3 = (uint16_t)(((int32_t)((uint16_t)(((int32_t)((int32_t)(((Il2CppArray *)L_5)->max_length)))))));
+			BinaryWriter_t3179371318 * L_6 = V_2;
+			uint16_t L_7 = V_3;
+			NullCheck(L_6);
+			VirtActionInvoker1< uint16_t >::Invoke(14 /* System.Void System.IO.BinaryWriter::Write(System.UInt16) */, L_6, L_7);
+			BinaryWriter_t3179371318 * L_8 = V_2;
+			ByteU5BU5D_t3397334013* L_9 = ___message0;
+			NullCheck(L_8);
+			VirtActionInvoker1< ByteU5BU5D_t3397334013* >::Invoke(9 /* System.Void System.IO.BinaryWriter::Write(System.Byte[]) */, L_8, L_9);
+			BinaryWriter_t3179371318 * L_10 = V_2;
+			NullCheck(L_10);
+			VirtActionInvoker0::Invoke(7 /* System.Void System.IO.BinaryWriter::Flush() */, L_10);
+			TcpClient_t408947970 * L_11 = __this->get_client_0();
+			if (!L_11)
+			{
+				goto IL_007a;
+			}
+		}
+
+IL_003d:
+		{
+			TcpClient_t408947970 * L_12 = __this->get_client_0();
+			NullCheck(L_12);
+			bool L_13 = TcpClient_get_Connected_m3815662272(L_12, /*hidden argument*/NULL);
+			if (!L_13)
+			{
+				goto IL_007a;
+			}
+		}
+
+IL_004d:
+		{
+			MemoryStream_t743994179 * L_14 = V_0;
+			NullCheck(L_14);
+			ByteU5BU5D_t3397334013* L_15 = VirtFuncInvoker0< ByteU5BU5D_t3397334013* >::Invoke(25 /* System.Byte[] System.IO.MemoryStream::ToArray() */, L_14);
+			V_4 = L_15;
+			NetworkStream_t581172200 * L_16 = __this->get_outStream_1();
+			ByteU5BU5D_t3397334013* L_17 = V_4;
+			ByteU5BU5D_t3397334013* L_18 = V_4;
+			NullCheck(L_18);
+			IntPtr_t L_19;
+			L_19.set_m_value_0((void*)(void*)SocketClient_OnWrite_m4234603230_MethodInfo_var);
+			AsyncCallback_t163412349 * L_20 = (AsyncCallback_t163412349 *)il2cpp_codegen_object_new(AsyncCallback_t163412349_il2cpp_TypeInfo_var);
+			AsyncCallback__ctor_m3071689932(L_20, __this, L_19, /*hidden argument*/NULL);
+			NullCheck(L_16);
+			VirtFuncInvoker5< Il2CppObject *, ByteU5BU5D_t3397334013*, int32_t, int32_t, AsyncCallback_t163412349 *, Il2CppObject * >::Invoke(21 /* System.IAsyncResult System.IO.Stream::BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_16, L_17, 0, (((int32_t)((int32_t)(((Il2CppArray *)L_18)->max_length)))), L_20, NULL);
+			goto IL_0084;
+		}
+
+IL_007a:
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+			Debug_LogError_m3715728798(NULL /*static, unused*/, _stringLiteral4180419998, /*hidden argument*/NULL);
+		}
+
+IL_0084:
+		{
+			IL2CPP_LEAVE(0x96, FINALLY_0089);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
+		goto FINALLY_0089;
+	}
+
+FINALLY_0089:
+	{ // begin finally (depth: 1)
+		{
+			MemoryStream_t743994179 * L_21 = V_1;
+			if (!L_21)
+			{
+				goto IL_0095;
+			}
+		}
+
+IL_008f:
+		{
+			MemoryStream_t743994179 * L_22 = V_1;
+			NullCheck(L_22);
+			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t2427283555_il2cpp_TypeInfo_var, L_22);
+		}
+
+IL_0095:
+		{
+			IL2CPP_END_FINALLY(137)
+		}
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(137)
+	{
+		IL2CPP_JUMP_TBL(0x96, IL_0096)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
+	}
+
+IL_0096:
+	{
+		return;
+	}
+}
+// System.Void SocketClient::OnRead(System.IAsyncResult)
+extern "C"  void SocketClient_OnRead_m1734567161 (SocketClient_t718412134 * __this, Il2CppObject * ___asr0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_OnRead_m1734567161_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	Il2CppObject * V_1 = NULL;
+	Il2CppObject * V_2 = NULL;
+	Exception_t1927440687 * V_3 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		V_0 = 0;
+	}
+
+IL_0002:
+	try
+	{ // begin try (depth: 1)
+		{
+			TcpClient_t408947970 * L_0 = __this->get_client_0();
+			NullCheck(L_0);
+			NetworkStream_t581172200 * L_1 = TcpClient_GetStream_m872175179(L_0, /*hidden argument*/NULL);
+			V_1 = L_1;
+			Il2CppObject * L_2 = V_1;
+			Monitor_Enter_m2136705809(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		}
+
+IL_0014:
+		try
+		{ // begin try (depth: 2)
+			TcpClient_t408947970 * L_3 = __this->get_client_0();
+			NullCheck(L_3);
+			NetworkStream_t581172200 * L_4 = TcpClient_GetStream_m872175179(L_3, /*hidden argument*/NULL);
+			Il2CppObject * L_5 = ___asr0;
+			NullCheck(L_4);
+			int32_t L_6 = VirtFuncInvoker1< int32_t, Il2CppObject * >::Invoke(22 /* System.Int32 System.IO.Stream::EndRead(System.IAsyncResult) */, L_4, L_5);
+			V_0 = L_6;
+			IL2CPP_LEAVE(0x32, FINALLY_002b);
+		} // end try (depth: 2)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
+			goto FINALLY_002b;
+		}
+
+FINALLY_002b:
+		{ // begin finally (depth: 2)
+			Il2CppObject * L_7 = V_1;
+			Monitor_Exit_m2677760297(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
+			IL2CPP_END_FINALLY(43)
+		} // end finally (depth: 2)
+		IL2CPP_CLEANUP(43)
+		{
+			IL2CPP_JUMP_TBL(0x32, IL_0032)
+			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
+		}
+
+IL_0032:
+		{
+			int32_t L_8 = V_0;
+			if ((((int32_t)L_8) >= ((int32_t)1)))
+			{
+				goto IL_004a;
+			}
+		}
+
+IL_0039:
+		{
+			SocketClient_OnDisconnected_m3044964815(__this, 1, _stringLiteral1182691614, /*hidden argument*/NULL);
+			goto IL_00cb;
+		}
+
+IL_004a:
+		{
+			ByteU5BU5D_t3397334013* L_9 = __this->get_byteBuffer_5();
+			int32_t L_10 = V_0;
+			SocketClient_OnReceive_m4202993151(__this, L_9, L_10, /*hidden argument*/NULL);
+			TcpClient_t408947970 * L_11 = __this->get_client_0();
+			NullCheck(L_11);
+			NetworkStream_t581172200 * L_12 = TcpClient_GetStream_m872175179(L_11, /*hidden argument*/NULL);
+			V_2 = L_12;
+			Il2CppObject * L_13 = V_2;
+			Monitor_Enter_m2136705809(NULL /*static, unused*/, L_13, /*hidden argument*/NULL);
+		}
+
+IL_0069:
+		try
+		{ // begin try (depth: 2)
+			ByteU5BU5D_t3397334013* L_14 = __this->get_byteBuffer_5();
+			ByteU5BU5D_t3397334013* L_15 = __this->get_byteBuffer_5();
+			NullCheck(L_15);
+			Array_Clear_m782967417(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_14, 0, (((int32_t)((int32_t)(((Il2CppArray *)L_15)->max_length)))), /*hidden argument*/NULL);
+			TcpClient_t408947970 * L_16 = __this->get_client_0();
+			NullCheck(L_16);
+			NetworkStream_t581172200 * L_17 = TcpClient_GetStream_m872175179(L_16, /*hidden argument*/NULL);
+			ByteU5BU5D_t3397334013* L_18 = __this->get_byteBuffer_5();
+			IntPtr_t L_19;
+			L_19.set_m_value_0((void*)(void*)SocketClient_OnRead_m1734567161_MethodInfo_var);
+			AsyncCallback_t163412349 * L_20 = (AsyncCallback_t163412349 *)il2cpp_codegen_object_new(AsyncCallback_t163412349_il2cpp_TypeInfo_var);
+			AsyncCallback__ctor_m3071689932(L_20, __this, L_19, /*hidden argument*/NULL);
+			NullCheck(L_17);
+			VirtFuncInvoker5< Il2CppObject *, ByteU5BU5D_t3397334013*, int32_t, int32_t, AsyncCallback_t163412349 *, Il2CppObject * >::Invoke(20 /* System.IAsyncResult System.IO.Stream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object) */, L_17, L_18, 0, ((int32_t)8192), L_20, NULL);
+			IL2CPP_LEAVE(0xB3, FINALLY_00ac);
+		} // end try (depth: 2)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
+			goto FINALLY_00ac;
+		}
+
+FINALLY_00ac:
+		{ // begin finally (depth: 2)
+			Il2CppObject * L_21 = V_2;
+			Monitor_Exit_m2677760297(NULL /*static, unused*/, L_21, /*hidden argument*/NULL);
+			IL2CPP_END_FINALLY(172)
+		} // end finally (depth: 2)
+		IL2CPP_CLEANUP(172)
+		{
+			IL2CPP_JUMP_TBL(0xB3, IL_00b3)
+			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
+		}
+
+IL_00b3:
+		{
+			goto IL_00cb;
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (Exception_t1927440687_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_00b8;
+		throw e;
+	}
+
+CATCH_00b8:
+	{ // begin catch(System.Exception)
+		V_3 = ((Exception_t1927440687 *)__exception_local);
+		Exception_t1927440687 * L_22 = V_3;
+		NullCheck(L_22);
+		String_t* L_23 = VirtFuncInvoker0< String_t* >::Invoke(6 /* System.String System.Exception::get_Message() */, L_22);
+		SocketClient_OnDisconnected_m3044964815(__this, 0, L_23, /*hidden argument*/NULL);
+		goto IL_00cb;
+	} // end catch (depth: 1)
+
+IL_00cb:
+	{
+		return;
+	}
+}
+// System.Void SocketClient::OnDisconnected(DisType,System.String)
+extern "C"  void SocketClient_OnDisconnected_m3044964815 (SocketClient_t718412134 * __this, int32_t ___dis0, String_t* ___msg1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_OnDisconnected_m3044964815_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	ByteBuffer_t1012950836 * V_1 = NULL;
+	int32_t G_B3_0 = 0;
+	{
+		SocketClient_Close_m3369538009(__this, /*hidden argument*/NULL);
+		int32_t L_0 = ___dis0;
+		if (L_0)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		G_B3_0 = ((int32_t)102);
+		goto IL_0015;
+	}
+
+IL_0013:
+	{
+		G_B3_0 = ((int32_t)103);
+	}
+
+IL_0015:
+	{
+		V_0 = G_B3_0;
+		ByteBuffer_t1012950836 * L_1 = (ByteBuffer_t1012950836 *)il2cpp_codegen_object_new(ByteBuffer_t1012950836_il2cpp_TypeInfo_var);
+		ByteBuffer__ctor_m3262420685(L_1, /*hidden argument*/NULL);
+		V_1 = L_1;
+		ByteBuffer_t1012950836 * L_2 = V_1;
+		int32_t L_3 = V_0;
+		NullCheck(L_2);
+		ByteBuffer_WriteShort_m575677464(L_2, (uint16_t)(((int32_t)((uint16_t)L_3))), /*hidden argument*/NULL);
+		int32_t L_4 = V_0;
+		ByteBuffer_t1012950836 * L_5 = V_1;
+		IL2CPP_RUNTIME_CLASS_INIT(NetworkManager_t226491143_il2cpp_TypeInfo_var);
+		NetworkManager_AddEvent_m2458951100(NULL /*static, unused*/, L_4, L_5, /*hidden argument*/NULL);
+		ObjectU5BU5D_t3614634134* L_6 = ((ObjectU5BU5D_t3614634134*)SZArrayNew(ObjectU5BU5D_t3614634134_il2cpp_TypeInfo_var, (uint32_t)4));
+		NullCheck(L_6);
+		ArrayElementTypeCheck (L_6, _stringLiteral3160485792);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppObject *)_stringLiteral3160485792);
+		ObjectU5BU5D_t3614634134* L_7 = L_6;
+		String_t* L_8 = ___msg1;
+		NullCheck(L_7);
+		ArrayElementTypeCheck (L_7, L_8);
+		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(1), (Il2CppObject *)L_8);
+		ObjectU5BU5D_t3614634134* L_9 = L_7;
+		NullCheck(L_9);
+		ArrayElementTypeCheck (L_9, _stringLiteral2945210082);
+		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(2), (Il2CppObject *)_stringLiteral2945210082);
+		ObjectU5BU5D_t3614634134* L_10 = L_9;
+		int32_t L_11 = ___dis0;
+		int32_t L_12 = L_11;
+		Il2CppObject * L_13 = Box(DisType_t1929133216_il2cpp_TypeInfo_var, &L_12);
+		NullCheck(L_10);
+		ArrayElementTypeCheck (L_10, L_13);
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(3), (Il2CppObject *)L_13);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_14 = String_Concat_m3881798623(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_LogError_m3715728798(NULL /*static, unused*/, L_14, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SocketClient::PrintBytes()
+extern "C"  void SocketClient_PrintBytes_m3767236167 (SocketClient_t718412134 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_PrintBytes_m3767236167_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_0 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		V_0 = L_0;
+		V_1 = 0;
+		goto IL_002e;
+	}
+
+IL_000d:
+	{
+		String_t* L_1 = V_0;
+		ByteU5BU5D_t3397334013* L_2 = __this->get_byteBuffer_5();
+		int32_t L_3 = V_1;
+		NullCheck(L_2);
+		String_t* L_4 = Byte_ToString_m1309661918(((L_2)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_3))), _stringLiteral3231012752, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_5 = String_Concat_m2596409543(NULL /*static, unused*/, L_1, L_4, /*hidden argument*/NULL);
+		V_0 = L_5;
+		int32_t L_6 = V_1;
+		V_1 = ((int32_t)((int32_t)L_6+(int32_t)1));
+	}
+
+IL_002e:
+	{
+		int32_t L_7 = V_1;
+		ByteU5BU5D_t3397334013* L_8 = __this->get_byteBuffer_5();
+		NullCheck(L_8);
+		if ((((int32_t)L_7) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_8)->max_length)))))))
+		{
+			goto IL_000d;
+		}
+	}
+	{
+		String_t* L_9 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_LogError_m3715728798(NULL /*static, unused*/, L_9, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SocketClient::OnWrite(System.IAsyncResult)
+extern "C"  void SocketClient_OnWrite_m4234603230 (SocketClient_t718412134 * __this, Il2CppObject * ___r0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_OnWrite_m4234603230_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t1927440687 * V_0 = NULL;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		NetworkStream_t581172200 * L_0 = __this->get_outStream_1();
+		Il2CppObject * L_1 = ___r0;
+		NullCheck(L_0);
+		VirtActionInvoker1< Il2CppObject * >::Invoke(23 /* System.Void System.IO.Stream::EndWrite(System.IAsyncResult) */, L_0, L_1);
+		goto IL_002c;
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__exception_local = (Exception_t1927440687 *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (Exception_t1927440687_il2cpp_TypeInfo_var, e.ex->klass))
+			goto CATCH_0011;
+		throw e;
+	}
+
+CATCH_0011:
+	{ // begin catch(System.Exception)
+		V_0 = ((Exception_t1927440687 *)__exception_local);
+		Exception_t1927440687 * L_2 = V_0;
+		NullCheck(L_2);
+		String_t* L_3 = VirtFuncInvoker0< String_t* >::Invoke(6 /* System.String System.Exception::get_Message() */, L_2);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_4 = String_Concat_m2596409543(NULL /*static, unused*/, _stringLiteral2835701435, L_3, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_LogError_m3715728798(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
+		goto IL_002c;
+	} // end catch (depth: 1)
+
+IL_002c:
+	{
+		return;
+	}
+}
+// System.Void SocketClient::OnReceive(System.Byte[],System.Int32)
+extern "C"  void SocketClient_OnReceive_m4202993151 (SocketClient_t718412134 * __this, ByteU5BU5D_t3397334013* ___bytes0, int32_t ___length1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_OnReceive_m4202993151_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint16_t V_0 = 0;
+	MemoryStream_t743994179 * V_1 = NULL;
+	BinaryWriter_t3179371318 * V_2 = NULL;
+	ByteU5BU5D_t3397334013* V_3 = NULL;
+	{
+		MemoryStream_t743994179 * L_0 = __this->get_memStream_2();
+		NullCheck(L_0);
+		VirtFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(16 /* System.Int64 System.IO.Stream::Seek(System.Int64,System.IO.SeekOrigin) */, L_0, (((int64_t)((int64_t)0))), 2);
+		MemoryStream_t743994179 * L_1 = __this->get_memStream_2();
+		ByteU5BU5D_t3397334013* L_2 = ___bytes0;
+		int32_t L_3 = ___length1;
+		NullCheck(L_1);
+		VirtActionInvoker3< ByteU5BU5D_t3397334013*, int32_t, int32_t >::Invoke(18 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_1, L_2, 0, L_3);
+		MemoryStream_t743994179 * L_4 = __this->get_memStream_2();
+		NullCheck(L_4);
+		VirtFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(16 /* System.Int64 System.IO.Stream::Seek(System.Int64,System.IO.SeekOrigin) */, L_4, (((int64_t)((int64_t)0))), 0);
+		goto IL_009d;
+	}
+
+IL_0031:
+	{
+		BinaryReader_t2491843768 * L_5 = __this->get_reader_3();
+		NullCheck(L_5);
+		uint16_t L_6 = VirtFuncInvoker0< uint16_t >::Invoke(24 /* System.UInt16 System.IO.BinaryReader::ReadUInt16() */, L_5);
+		V_0 = L_6;
+		int64_t L_7 = SocketClient_RemainingBytes_m1829624551(__this, /*hidden argument*/NULL);
+		uint16_t L_8 = V_0;
+		if ((((int64_t)L_7) < ((int64_t)(((int64_t)((int64_t)L_8))))))
+		{
+			goto IL_007f;
+		}
+	}
+	{
+		MemoryStream_t743994179 * L_9 = (MemoryStream_t743994179 *)il2cpp_codegen_object_new(MemoryStream_t743994179_il2cpp_TypeInfo_var);
+		MemoryStream__ctor_m1043059966(L_9, /*hidden argument*/NULL);
+		V_1 = L_9;
+		MemoryStream_t743994179 * L_10 = V_1;
+		BinaryWriter_t3179371318 * L_11 = (BinaryWriter_t3179371318 *)il2cpp_codegen_object_new(BinaryWriter_t3179371318_il2cpp_TypeInfo_var);
+		BinaryWriter__ctor_m828435354(L_11, L_10, /*hidden argument*/NULL);
+		V_2 = L_11;
+		BinaryWriter_t3179371318 * L_12 = V_2;
+		BinaryReader_t2491843768 * L_13 = __this->get_reader_3();
+		uint16_t L_14 = V_0;
+		NullCheck(L_13);
+		ByteU5BU5D_t3397334013* L_15 = VirtFuncInvoker1< ByteU5BU5D_t3397334013*, int32_t >::Invoke(14 /* System.Byte[] System.IO.BinaryReader::ReadBytes(System.Int32) */, L_13, L_14);
+		NullCheck(L_12);
+		VirtActionInvoker1< ByteU5BU5D_t3397334013* >::Invoke(9 /* System.Void System.IO.BinaryWriter::Write(System.Byte[]) */, L_12, L_15);
+		MemoryStream_t743994179 * L_16 = V_1;
+		NullCheck(L_16);
+		VirtFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(16 /* System.Int64 System.IO.Stream::Seek(System.Int64,System.IO.SeekOrigin) */, L_16, (((int64_t)((int64_t)0))), 0);
+		MemoryStream_t743994179 * L_17 = V_1;
+		SocketClient_OnReceivedMessage_m1747194874(__this, L_17, /*hidden argument*/NULL);
+		goto IL_009d;
+	}
+
+IL_007f:
+	{
+		MemoryStream_t743994179 * L_18 = __this->get_memStream_2();
+		MemoryStream_t743994179 * L_19 = __this->get_memStream_2();
+		NullCheck(L_19);
+		int64_t L_20 = VirtFuncInvoker0< int64_t >::Invoke(9 /* System.Int64 System.IO.Stream::get_Position() */, L_19);
+		NullCheck(L_18);
+		VirtActionInvoker1< int64_t >::Invoke(10 /* System.Void System.IO.Stream::set_Position(System.Int64) */, L_18, ((int64_t)((int64_t)L_20-(int64_t)(((int64_t)((int64_t)2))))));
+		goto IL_00aa;
+	}
+
+IL_009d:
+	{
+		int64_t L_21 = SocketClient_RemainingBytes_m1829624551(__this, /*hidden argument*/NULL);
+		if ((((int64_t)L_21) > ((int64_t)(((int64_t)((int64_t)2))))))
+		{
+			goto IL_0031;
+		}
+	}
+
+IL_00aa:
+	{
+		BinaryReader_t2491843768 * L_22 = __this->get_reader_3();
+		int64_t L_23 = SocketClient_RemainingBytes_m1829624551(__this, /*hidden argument*/NULL);
+		NullCheck(L_22);
+		ByteU5BU5D_t3397334013* L_24 = VirtFuncInvoker1< ByteU5BU5D_t3397334013*, int32_t >::Invoke(14 /* System.Byte[] System.IO.BinaryReader::ReadBytes(System.Int32) */, L_22, (((int32_t)((int32_t)L_23))));
+		V_3 = L_24;
+		MemoryStream_t743994179 * L_25 = __this->get_memStream_2();
+		NullCheck(L_25);
+		VirtActionInvoker1< int64_t >::Invoke(17 /* System.Void System.IO.Stream::SetLength(System.Int64) */, L_25, (((int64_t)((int64_t)0))));
+		MemoryStream_t743994179 * L_26 = __this->get_memStream_2();
+		ByteU5BU5D_t3397334013* L_27 = V_3;
+		ByteU5BU5D_t3397334013* L_28 = V_3;
+		NullCheck(L_28);
+		NullCheck(L_26);
+		VirtActionInvoker3< ByteU5BU5D_t3397334013*, int32_t, int32_t >::Invoke(18 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_26, L_27, 0, (((int32_t)((int32_t)(((Il2CppArray *)L_28)->max_length)))));
+		return;
+	}
+}
+// System.Int64 SocketClient::RemainingBytes()
+extern "C"  int64_t SocketClient_RemainingBytes_m1829624551 (SocketClient_t718412134 * __this, const MethodInfo* method)
+{
+	{
+		MemoryStream_t743994179 * L_0 = __this->get_memStream_2();
+		NullCheck(L_0);
+		int64_t L_1 = VirtFuncInvoker0< int64_t >::Invoke(8 /* System.Int64 System.IO.Stream::get_Length() */, L_0);
+		MemoryStream_t743994179 * L_2 = __this->get_memStream_2();
+		NullCheck(L_2);
+		int64_t L_3 = VirtFuncInvoker0< int64_t >::Invoke(9 /* System.Int64 System.IO.Stream::get_Position() */, L_2);
+		return ((int64_t)((int64_t)L_1-(int64_t)L_3));
+	}
+}
+// System.Void SocketClient::OnReceivedMessage(System.IO.MemoryStream)
+extern "C"  void SocketClient_OnReceivedMessage_m1747194874 (SocketClient_t718412134 * __this, MemoryStream_t743994179 * ___ms0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_OnReceivedMessage_m1747194874_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	BinaryReader_t2491843768 * V_0 = NULL;
+	ByteU5BU5D_t3397334013* V_1 = NULL;
+	ByteBuffer_t1012950836 * V_2 = NULL;
+	int32_t V_3 = 0;
+	{
+		MemoryStream_t743994179 * L_0 = ___ms0;
+		BinaryReader_t2491843768 * L_1 = (BinaryReader_t2491843768 *)il2cpp_codegen_object_new(BinaryReader_t2491843768_il2cpp_TypeInfo_var);
+		BinaryReader__ctor_m4190061006(L_1, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		BinaryReader_t2491843768 * L_2 = V_0;
+		MemoryStream_t743994179 * L_3 = ___ms0;
+		NullCheck(L_3);
+		int64_t L_4 = VirtFuncInvoker0< int64_t >::Invoke(8 /* System.Int64 System.IO.Stream::get_Length() */, L_3);
+		MemoryStream_t743994179 * L_5 = ___ms0;
+		NullCheck(L_5);
+		int64_t L_6 = VirtFuncInvoker0< int64_t >::Invoke(9 /* System.Int64 System.IO.Stream::get_Position() */, L_5);
+		NullCheck(L_2);
+		ByteU5BU5D_t3397334013* L_7 = VirtFuncInvoker1< ByteU5BU5D_t3397334013*, int32_t >::Invoke(14 /* System.Byte[] System.IO.BinaryReader::ReadBytes(System.Int32) */, L_2, (((int32_t)((int32_t)((int64_t)((int64_t)L_4-(int64_t)L_6))))));
+		V_1 = L_7;
+		ByteU5BU5D_t3397334013* L_8 = V_1;
+		ByteBuffer_t1012950836 * L_9 = (ByteBuffer_t1012950836 *)il2cpp_codegen_object_new(ByteBuffer_t1012950836_il2cpp_TypeInfo_var);
+		ByteBuffer__ctor_m873097442(L_9, L_8, /*hidden argument*/NULL);
+		V_2 = L_9;
+		ByteBuffer_t1012950836 * L_10 = V_2;
+		NullCheck(L_10);
+		uint16_t L_11 = ByteBuffer_ReadShort_m3075192200(L_10, /*hidden argument*/NULL);
+		V_3 = L_11;
+		int32_t L_12 = V_3;
+		ByteBuffer_t1012950836 * L_13 = V_2;
+		IL2CPP_RUNTIME_CLASS_INIT(NetworkManager_t226491143_il2cpp_TypeInfo_var);
+		NetworkManager_AddEvent_m2458951100(NULL /*static, unused*/, L_12, L_13, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SocketClient::SessionSend(System.Byte[])
+extern "C"  void SocketClient_SessionSend_m3545253234 (SocketClient_t718412134 * __this, ByteU5BU5D_t3397334013* ___bytes0, const MethodInfo* method)
+{
+	{
+		ByteU5BU5D_t3397334013* L_0 = ___bytes0;
+		SocketClient_WriteMessage_m1370612150(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SocketClient::Close()
+extern "C"  void SocketClient_Close_m3369538009 (SocketClient_t718412134 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_Close_m3369538009_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		TcpClient_t408947970 * L_0 = __this->get_client_0();
+		if (!L_0)
+		{
+			goto IL_002d;
+		}
+	}
+	{
+		TcpClient_t408947970 * L_1 = __this->get_client_0();
+		NullCheck(L_1);
+		bool L_2 = TcpClient_get_Connected_m3815662272(L_1, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		TcpClient_t408947970 * L_3 = __this->get_client_0();
+		NullCheck(L_3);
+		TcpClient_Close_m4260227760(L_3, /*hidden argument*/NULL);
+	}
+
+IL_0026:
+	{
+		__this->set_client_0((TcpClient_t408947970 *)NULL);
+	}
+
+IL_002d:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(SocketClient_t718412134_il2cpp_TypeInfo_var);
+		((SocketClient_t718412134_StaticFields*)SocketClient_t718412134_il2cpp_TypeInfo_var->static_fields)->set_loggedIn_6((bool)0);
+		return;
+	}
+}
+// System.Void SocketClient::SendConnect()
+extern "C"  void SocketClient_SendConnect_m2888925789 (SocketClient_t718412134 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketClient_SendConnect_m2888925789_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(AppConst_t3406236046_il2cpp_TypeInfo_var);
+		String_t* L_0 = ((AppConst_t3406236046_StaticFields*)AppConst_t3406236046_il2cpp_TypeInfo_var->static_fields)->get_SocketAddress_0();
+		int32_t L_1 = ((AppConst_t3406236046_StaticFields*)AppConst_t3406236046_il2cpp_TypeInfo_var->static_fields)->get_SocketPort_1();
+		SocketClient_ConnectServer_m2557951783(__this, L_0, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SocketClient::SendMessage(ByteBuffer)
+extern "C"  void SocketClient_SendMessage_m2013945960 (SocketClient_t718412134 * __this, ByteBuffer_t1012950836 * ___buffer0, const MethodInfo* method)
+{
+	{
+		ByteBuffer_t1012950836 * L_0 = ___buffer0;
+		NullCheck(L_0);
+		ByteU5BU5D_t3397334013* L_1 = ByteBuffer_ToBytes_m4207338399(L_0, /*hidden argument*/NULL);
+		SocketClient_SessionSend_m3545253234(__this, L_1, /*hidden argument*/NULL);
+		ByteBuffer_t1012950836 * L_2 = ___buffer0;
+		NullCheck(L_2);
+		ByteBuffer_Close_m1204384779(L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SocketClient::.cctor()
+extern "C"  void SocketClient__cctor_m190529752 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	{
+		return;
+	}
+}
+// System.Void SocketCommand::.ctor()
+extern "C"  void SocketCommand__ctor_m3773386549 (SocketCommand_t2127949346 * __this, const MethodInfo* method)
+{
+	{
+		SimpleCommand__ctor_m589343610(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SocketCommand::Execute(PureMVC.Interfaces.INotification)
+extern "C"  void SocketCommand_Execute_m2011600236 (SocketCommand_t2127949346 * __this, Il2CppObject * ___notification0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SocketCommand_Execute_m2011600236_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Il2CppObject * V_0 = NULL;
+	KeyValuePair_2_t2073088989  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	{
+		Il2CppObject * L_0 = ___notification0;
+		NullCheck(L_0);
+		Il2CppObject * L_1 = InterfaceFuncInvoker0< Il2CppObject * >::Invoke(1 /* System.Object PureMVC.Interfaces.INotification::get_Body() */, INotification_t616890910_il2cpp_TypeInfo_var, L_0);
+		V_0 = L_1;
+		Il2CppObject * L_2 = V_0;
+		if (L_2)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		return;
+	}
+
+IL_000e:
+	{
+		Il2CppObject * L_3 = V_0;
+		V_1 = ((*(KeyValuePair_2_t2073088989 *)((KeyValuePair_2_t2073088989 *)UnBox(L_3, KeyValuePair_2_t2073088989_il2cpp_TypeInfo_var))));
+		KeyValuePair_2_get_Key_m4024906165((&V_1), /*hidden argument*/KeyValuePair_2_get_Key_m4024906165_MethodInfo_var);
+		goto IL_0022;
+	}
+
+IL_0022:
+	{
+		return;
+	}
+}
+// System.Void StartUpCommand::.ctor()
+extern "C"  void StartUpCommand__ctor_m1100964185 (StartUpCommand_t688340602 * __this, const MethodInfo* method)
+{
+	{
+		SimpleCommand__ctor_m589343610(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void StartUpCommand::Execute(PureMVC.Interfaces.INotification)
+extern "C"  void StartUpCommand_Execute_m151634932 (StartUpCommand_t688340602 * __this, Il2CppObject * ___notification0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (StartUpCommand_Execute_m151634932_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	NetworkManager_t226491143 * V_0 = NULL;
+	GameObject_t1756533147 * V_1 = NULL;
+	Req_GetUpdatePics_t1118469089 * V_2 = NULL;
+	String_t* G_B2_0 = NULL;
+	Il2CppObject * G_B2_1 = NULL;
+	String_t* G_B1_0 = NULL;
+	Il2CppObject * G_B1_1 = NULL;
+	String_t* G_B4_0 = NULL;
+	Il2CppObject * G_B4_1 = NULL;
+	String_t* G_B3_0 = NULL;
+	Il2CppObject * G_B3_1 = NULL;
+	String_t* G_B6_0 = NULL;
+	Il2CppObject * G_B6_1 = NULL;
+	String_t* G_B5_0 = NULL;
+	Il2CppObject * G_B5_1 = NULL;
+	String_t* G_B8_0 = NULL;
+	Il2CppObject * G_B8_1 = NULL;
+	String_t* G_B7_0 = NULL;
+	Il2CppObject * G_B7_1 = NULL;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral3300955337, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_0 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(NetworkManager_t226491143_0_0_0_var), /*hidden argument*/NULL);
+		NullCheck(L_0);
+		String_t* L_1 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_0);
+		GameObject_t1756533147 * L_2 = (GameObject_t1756533147 *)il2cpp_codegen_object_new(GameObject_t1756533147_il2cpp_TypeInfo_var);
+		GameObject__ctor_m962601984(L_2, L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		NetworkManager_t226491143 * L_3 = GameObject_AddComponent_TisNetworkManager_t226491143_m3819311753(L_2, /*hidden argument*/GameObject_AddComponent_TisNetworkManager_t226491143_m3819311753_MethodInfo_var);
+		V_0 = L_3;
+		IL2CPP_RUNTIME_CLASS_INIT(UnityFacade_t1495732005_il2cpp_TypeInfo_var);
+		UnityFacade_t1495732005 * L_4 = UnityFacade_GetInstance_m1617991407(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NetworkManager_t226491143 * L_5 = V_0;
+		NullCheck(L_4);
+		UnityFacade_set_Network_m2334716556(L_4, L_5, /*hidden argument*/NULL);
+		Il2CppObject * L_6 = Notifier_get_Facade_m1803564433(__this, /*hidden argument*/NULL);
+		DeviceInfoProxy_t1172231466 * L_7 = (DeviceInfoProxy_t1172231466 *)il2cpp_codegen_object_new(DeviceInfoProxy_t1172231466_il2cpp_TypeInfo_var);
+		DeviceInfoProxy__ctor_m2979241131(L_7, _stringLiteral1900309984, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		InterfaceActionInvoker1< Il2CppObject * >::Invoke(0 /* System.Void PureMVC.Interfaces.IFacade::RegisterProxy(PureMVC.Interfaces.IProxy) */, IFacade_t2963254751_il2cpp_TypeInfo_var, L_6, L_7);
+		Type_t * L_8 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(UIEnterMain_t4133042741_0_0_0_var), /*hidden argument*/NULL);
+		NullCheck(L_8);
+		String_t* L_9 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_8);
+		GameObject_t1756533147 * L_10 = (GameObject_t1756533147 *)il2cpp_codegen_object_new(GameObject_t1756533147_il2cpp_TypeInfo_var);
+		GameObject__ctor_m962601984(L_10, L_9, /*hidden argument*/NULL);
+		V_1 = L_10;
+		GameObject_t1756533147 * L_11 = V_1;
+		Type_t * L_12 = Type_GetTypeFromHandle_m432505302(NULL /*static, unused*/, LoadTypeToken(UIEnterMain_t4133042741_0_0_0_var), /*hidden argument*/NULL);
+		NullCheck(L_11);
+		GameObject_AddComponent_m3757565614(L_11, L_12, /*hidden argument*/NULL);
+		Il2CppObject * L_13 = Notifier_get_Facade_m1803564433(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(HttpReqCommand_t3283257643_il2cpp_TypeInfo_var);
+		String_t* L_14 = ((HttpReqCommand_t3283257643_StaticFields*)HttpReqCommand_t3283257643_il2cpp_TypeInfo_var->static_fields)->get_HTTP_2();
+		IL2CPP_RUNTIME_CLASS_INIT(StartUpCommand_t688340602_il2cpp_TypeInfo_var);
+		Func_1_t2923916928 * L_15 = ((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__amU24cache0_3();
+		G_B1_0 = L_14;
+		G_B1_1 = L_13;
+		if (L_15)
+		{
+			G_B2_0 = L_14;
+			G_B2_1 = L_13;
+			goto IL_008d;
+		}
+	}
+	{
+		IntPtr_t L_16;
+		L_16.set_m_value_0((void*)(void*)StartUpCommand_U3CExecuteU3Em__0_m1473983932_MethodInfo_var);
+		Func_1_t2923916928 * L_17 = (Func_1_t2923916928 *)il2cpp_codegen_object_new(Func_1_t2923916928_il2cpp_TypeInfo_var);
+		Func_1__ctor_m1820563875(L_17, NULL, L_16, /*hidden argument*/Func_1__ctor_m1820563875_MethodInfo_var);
+		IL2CPP_RUNTIME_CLASS_INIT(StartUpCommand_t688340602_il2cpp_TypeInfo_var);
+		((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__amU24cache0_3(L_17);
+		G_B2_0 = G_B1_0;
+		G_B2_1 = G_B1_1;
+	}
+
+IL_008d:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(StartUpCommand_t688340602_il2cpp_TypeInfo_var);
+		Func_1_t2923916928 * L_18 = ((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__amU24cache0_3();
+		NullCheck(G_B2_1);
+		InterfaceActionInvoker2< String_t*, Func_1_t2923916928 * >::Invoke(4 /* System.Void PureMVC.Interfaces.IFacade::RegisterCommand(System.String,System.Func`1<PureMVC.Interfaces.ICommand>) */, IFacade_t2963254751_il2cpp_TypeInfo_var, G_B2_1, G_B2_0, L_18);
+		Il2CppObject * L_19 = Notifier_get_Facade_m1803564433(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(HttpResCommand_t3283050857_il2cpp_TypeInfo_var);
+		String_t* L_20 = ((HttpResCommand_t3283050857_StaticFields*)HttpResCommand_t3283050857_il2cpp_TypeInfo_var->static_fields)->get_HTTP_2();
+		Func_1_t2923916928 * L_21 = ((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__amU24cache1_4();
+		G_B3_0 = L_20;
+		G_B3_1 = L_19;
+		if (L_21)
+		{
+			G_B4_0 = L_20;
+			G_B4_1 = L_19;
+			goto IL_00ba;
+		}
+	}
+	{
+		IntPtr_t L_22;
+		L_22.set_m_value_0((void*)(void*)StartUpCommand_U3CExecuteU3Em__1_m1473983837_MethodInfo_var);
+		Func_1_t2923916928 * L_23 = (Func_1_t2923916928 *)il2cpp_codegen_object_new(Func_1_t2923916928_il2cpp_TypeInfo_var);
+		Func_1__ctor_m1820563875(L_23, NULL, L_22, /*hidden argument*/Func_1__ctor_m1820563875_MethodInfo_var);
+		IL2CPP_RUNTIME_CLASS_INIT(StartUpCommand_t688340602_il2cpp_TypeInfo_var);
+		((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__amU24cache1_4(L_23);
+		G_B4_0 = G_B3_0;
+		G_B4_1 = G_B3_1;
+	}
+
+IL_00ba:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(StartUpCommand_t688340602_il2cpp_TypeInfo_var);
+		Func_1_t2923916928 * L_24 = ((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__amU24cache1_4();
+		NullCheck(G_B4_1);
+		InterfaceActionInvoker2< String_t*, Func_1_t2923916928 * >::Invoke(4 /* System.Void PureMVC.Interfaces.IFacade::RegisterCommand(System.String,System.Func`1<PureMVC.Interfaces.ICommand>) */, IFacade_t2963254751_il2cpp_TypeInfo_var, G_B4_1, G_B4_0, L_24);
+		Il2CppObject * L_25 = Notifier_get_Facade_m1803564433(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(GameCommand_t2834858639_il2cpp_TypeInfo_var);
+		String_t* L_26 = ((GameCommand_t2834858639_StaticFields*)GameCommand_t2834858639_il2cpp_TypeInfo_var->static_fields)->get_COMMAND_2();
+		Func_1_t2923916928 * L_27 = ((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__amU24cache2_5();
+		G_B5_0 = L_26;
+		G_B5_1 = L_25;
+		if (L_27)
+		{
+			G_B6_0 = L_26;
+			G_B6_1 = L_25;
+			goto IL_00e7;
+		}
+	}
+	{
+		IntPtr_t L_28;
+		L_28.set_m_value_0((void*)(void*)StartUpCommand_U3CExecuteU3Em__2_m1473983998_MethodInfo_var);
+		Func_1_t2923916928 * L_29 = (Func_1_t2923916928 *)il2cpp_codegen_object_new(Func_1_t2923916928_il2cpp_TypeInfo_var);
+		Func_1__ctor_m1820563875(L_29, NULL, L_28, /*hidden argument*/Func_1__ctor_m1820563875_MethodInfo_var);
+		IL2CPP_RUNTIME_CLASS_INIT(StartUpCommand_t688340602_il2cpp_TypeInfo_var);
+		((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__amU24cache2_5(L_29);
+		G_B6_0 = G_B5_0;
+		G_B6_1 = G_B5_1;
+	}
+
+IL_00e7:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(StartUpCommand_t688340602_il2cpp_TypeInfo_var);
+		Func_1_t2923916928 * L_30 = ((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__amU24cache2_5();
+		NullCheck(G_B6_1);
+		InterfaceActionInvoker2< String_t*, Func_1_t2923916928 * >::Invoke(4 /* System.Void PureMVC.Interfaces.IFacade::RegisterCommand(System.String,System.Func`1<PureMVC.Interfaces.ICommand>) */, IFacade_t2963254751_il2cpp_TypeInfo_var, G_B6_1, G_B6_0, L_30);
+		Il2CppObject * L_31 = Notifier_get_Facade_m1803564433(__this, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(UserCommand_t2016101392_il2cpp_TypeInfo_var);
+		String_t* L_32 = ((UserCommand_t2016101392_StaticFields*)UserCommand_t2016101392_il2cpp_TypeInfo_var->static_fields)->get_COMMAND_2();
+		Func_1_t2923916928 * L_33 = ((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__amU24cache3_6();
+		G_B7_0 = L_32;
+		G_B7_1 = L_31;
+		if (L_33)
+		{
+			G_B8_0 = L_32;
+			G_B8_1 = L_31;
+			goto IL_0114;
+		}
+	}
+	{
+		IntPtr_t L_34;
+		L_34.set_m_value_0((void*)(void*)StartUpCommand_U3CExecuteU3Em__3_m1473983903_MethodInfo_var);
+		Func_1_t2923916928 * L_35 = (Func_1_t2923916928 *)il2cpp_codegen_object_new(Func_1_t2923916928_il2cpp_TypeInfo_var);
+		Func_1__ctor_m1820563875(L_35, NULL, L_34, /*hidden argument*/Func_1__ctor_m1820563875_MethodInfo_var);
+		IL2CPP_RUNTIME_CLASS_INIT(StartUpCommand_t688340602_il2cpp_TypeInfo_var);
+		((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->set_U3CU3Ef__amU24cache3_6(L_35);
+		G_B8_0 = G_B7_0;
+		G_B8_1 = G_B7_1;
+	}
+
+IL_0114:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(StartUpCommand_t688340602_il2cpp_TypeInfo_var);
+		Func_1_t2923916928 * L_36 = ((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->get_U3CU3Ef__amU24cache3_6();
+		NullCheck(G_B8_1);
+		InterfaceActionInvoker2< String_t*, Func_1_t2923916928 * >::Invoke(4 /* System.Void PureMVC.Interfaces.IFacade::RegisterCommand(System.String,System.Func`1<PureMVC.Interfaces.ICommand>) */, IFacade_t2963254751_il2cpp_TypeInfo_var, G_B8_1, G_B8_0, L_36);
+		Req_GetUpdatePics_t1118469089 * L_37 = (Req_GetUpdatePics_t1118469089 *)il2cpp_codegen_object_new(Req_GetUpdatePics_t1118469089_il2cpp_TypeInfo_var);
+		Req_GetUpdatePics__ctor_m3225614838(L_37, /*hidden argument*/NULL);
+		V_2 = L_37;
+		IL2CPP_RUNTIME_CLASS_INIT(UnityFacade_t1495732005_il2cpp_TypeInfo_var);
+		UnityFacade_t1495732005 * L_38 = UnityFacade_GetInstance_m1617991407(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(HttpReqCommand_t3283257643_il2cpp_TypeInfo_var);
+		String_t* L_39 = ((HttpReqCommand_t3283257643_StaticFields*)HttpReqCommand_t3283257643_il2cpp_TypeInfo_var->static_fields)->get_HTTP_2();
+		Req_GetUpdatePics_t1118469089 * L_40 = V_2;
+		NullCheck(L_38);
+		VirtActionInvoker3< String_t*, Il2CppObject *, String_t* >::Invoke(33 /* System.Void PureMVC.Patterns.Facade.Facade::SendNotification(System.String,System.Object,System.String) */, L_38, L_39, L_40, (String_t*)NULL);
+		return;
+	}
+}
+// System.Void StartUpCommand::.cctor()
+extern "C"  void StartUpCommand__cctor_m3293486508 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (StartUpCommand__cctor_m3293486508_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		((StartUpCommand_t688340602_StaticFields*)StartUpCommand_t688340602_il2cpp_TypeInfo_var->static_fields)->set_STARTUP_2(_stringLiteral28003810);
+		return;
+	}
+}
+// PureMVC.Interfaces.ICommand StartUpCommand::<Execute>m__0()
+extern "C"  Il2CppObject * StartUpCommand_U3CExecuteU3Em__0_m1473983932 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (StartUpCommand_U3CExecuteU3Em__0_m1473983932_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		HttpReqCommand_t3283257643 * L_0 = (HttpReqCommand_t3283257643 *)il2cpp_codegen_object_new(HttpReqCommand_t3283257643_il2cpp_TypeInfo_var);
+		HttpReqCommand__ctor_m3845698172(L_0, /*hidden argument*/NULL);
+		return L_0;
+	}
+}
+// PureMVC.Interfaces.ICommand StartUpCommand::<Execute>m__1()
+extern "C"  Il2CppObject * StartUpCommand_U3CExecuteU3Em__1_m1473983837 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (StartUpCommand_U3CExecuteU3Em__1_m1473983837_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		HttpResCommand_t3283050857 * L_0 = (HttpResCommand_t3283050857 *)il2cpp_codegen_object_new(HttpResCommand_t3283050857_il2cpp_TypeInfo_var);
+		HttpResCommand__ctor_m2917302782(L_0, /*hidden argument*/NULL);
+		return L_0;
+	}
+}
+// PureMVC.Interfaces.ICommand StartUpCommand::<Execute>m__2()
+extern "C"  Il2CppObject * StartUpCommand_U3CExecuteU3Em__2_m1473983998 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (StartUpCommand_U3CExecuteU3Em__2_m1473983998_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameCommand_t2834858639 * L_0 = (GameCommand_t2834858639 *)il2cpp_codegen_object_new(GameCommand_t2834858639_il2cpp_TypeInfo_var);
+		GameCommand__ctor_m2738712206(L_0, /*hidden argument*/NULL);
+		return L_0;
+	}
+}
+// PureMVC.Interfaces.ICommand StartUpCommand::<Execute>m__3()
+extern "C"  Il2CppObject * StartUpCommand_U3CExecuteU3Em__3_m1473983903 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (StartUpCommand_U3CExecuteU3Em__3_m1473983903_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		UserCommand_t2016101392 * L_0 = (UserCommand_t2016101392 *)il2cpp_codegen_object_new(UserCommand_t2016101392_il2cpp_TypeInfo_var);
+		UserCommand__ctor_m32504013(L_0, /*hidden argument*/NULL);
+		return L_0;
+	}
+}
+// System.Void TXTReader::.ctor()
+extern "C"  void TXTReader__ctor_m2085193594 (TXTReader_t4273255191 * __this, const MethodInfo* method)
+{
+	{
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.String[][] TXTReader::ReadTxt(System.String)
+extern "C"  StringU5BU5DU5BU5D_t2190260861* TXTReader_ReadTxt_m1159527463 (Il2CppObject * __this /* static, unused */, String_t* ___txtName0, const MethodInfo* method)
+{
+	StringU5BU5D_t1642385972* V_0 = NULL;
+	{
+		String_t* L_0 = ___txtName0;
+		StringU5BU5D_t1642385972* L_1 = File_ReadAllLines_m1871420716(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		StringU5BU5D_t1642385972* L_2 = V_0;
+		StringU5BU5DU5BU5D_t2190260861* L_3 = TXTReader_ReadArray_m2186684248(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		return L_3;
+	}
+}
+// System.String[][] TXTReader::Readbytes(System.Byte[])
+extern "C"  StringU5BU5DU5BU5D_t2190260861* TXTReader_Readbytes_m1825692303 (Il2CppObject * __this /* static, unused */, ByteU5BU5D_t3397334013* ___text0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TXTReader_Readbytes_m1825692303_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	MemoryStream_t743994179 * V_0 = NULL;
+	StreamReader_t2360341767 * V_1 = NULL;
+	ArrayList_t4252133567 * V_2 = NULL;
+	StringU5BU5D_t1642385972* V_3 = NULL;
+	int32_t V_4 = 0;
+	{
+		ByteU5BU5D_t3397334013* L_0 = ___text0;
+		MemoryStream_t743994179 * L_1 = (MemoryStream_t743994179 *)il2cpp_codegen_object_new(MemoryStream_t743994179_il2cpp_TypeInfo_var);
+		MemoryStream__ctor_m4073175573(L_1, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		MemoryStream_t743994179 * L_2 = V_0;
+		StreamReader_t2360341767 * L_3 = (StreamReader_t2360341767 *)il2cpp_codegen_object_new(StreamReader_t2360341767_il2cpp_TypeInfo_var);
+		StreamReader__ctor_m1780435609(L_3, L_2, /*hidden argument*/NULL);
+		V_1 = L_3;
+		ArrayList_t4252133567 * L_4 = (ArrayList_t4252133567 *)il2cpp_codegen_object_new(ArrayList_t4252133567_il2cpp_TypeInfo_var);
+		ArrayList__ctor_m4012174379(L_4, /*hidden argument*/NULL);
+		V_2 = L_4;
+		goto IL_0026;
+	}
+
+IL_0019:
+	{
+		ArrayList_t4252133567 * L_5 = V_2;
+		StreamReader_t2360341767 * L_6 = V_1;
+		NullCheck(L_6);
+		String_t* L_7 = VirtFuncInvoker0< String_t* >::Invoke(10 /* System.String System.IO.TextReader::ReadLine() */, L_6);
+		NullCheck(L_5);
+		VirtFuncInvoker1< int32_t, Il2CppObject * >::Invoke(30 /* System.Int32 System.Collections.ArrayList::Add(System.Object) */, L_5, L_7);
+	}
+
+IL_0026:
+	{
+		StreamReader_t2360341767 * L_8 = V_1;
+		NullCheck(L_8);
+		int32_t L_9 = VirtFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 System.IO.TextReader::Peek() */, L_8);
+		if ((((int32_t)L_9) > ((int32_t)0)))
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		ArrayList_t4252133567 * L_10 = V_2;
+		NullCheck(L_10);
+		int32_t L_11 = VirtFuncInvoker0< int32_t >::Invoke(23 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_10);
+		V_3 = ((StringU5BU5D_t1642385972*)SZArrayNew(StringU5BU5D_t1642385972_il2cpp_TypeInfo_var, (uint32_t)L_11));
+		V_4 = 0;
+		goto IL_005d;
+	}
+
+IL_0046:
+	{
+		StringU5BU5D_t1642385972* L_12 = V_3;
+		int32_t L_13 = V_4;
+		ArrayList_t4252133567 * L_14 = V_2;
+		int32_t L_15 = V_4;
+		NullCheck(L_14);
+		Il2CppObject * L_16 = VirtFuncInvoker1< Il2CppObject *, int32_t >::Invoke(21 /* System.Object System.Collections.ArrayList::get_Item(System.Int32) */, L_14, L_15);
+		NullCheck(L_12);
+		ArrayElementTypeCheck (L_12, ((String_t*)CastclassSealed(L_16, String_t_il2cpp_TypeInfo_var)));
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(L_13), (String_t*)((String_t*)CastclassSealed(L_16, String_t_il2cpp_TypeInfo_var)));
+		int32_t L_17 = V_4;
+		V_4 = ((int32_t)((int32_t)L_17+(int32_t)1));
+	}
+
+IL_005d:
+	{
+		int32_t L_18 = V_4;
+		StringU5BU5D_t1642385972* L_19 = V_3;
+		NullCheck(L_19);
+		if ((((int32_t)L_18) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_19)->max_length)))))))
+		{
+			goto IL_0046;
+		}
+	}
+	{
+		StringU5BU5D_t1642385972* L_20 = V_3;
+		StringU5BU5DU5BU5D_t2190260861* L_21 = TXTReader_ReadArray_m2186684248(NULL /*static, unused*/, L_20, /*hidden argument*/NULL);
+		return L_21;
+	}
+}
+// System.String[][] TXTReader::ReadArray(System.String[])
+extern "C"  StringU5BU5DU5BU5D_t2190260861* TXTReader_ReadArray_m2186684248 (Il2CppObject * __this /* static, unused */, StringU5BU5D_t1642385972* ___teStrTxt0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TXTReader_ReadArray_m2186684248_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	StringU5BU5DU5BU5D_t2190260861* V_2 = NULL;
+	String_t* V_3 = NULL;
+	String_t* V_4 = NULL;
+	StringU5BU5D_t1642385972* V_5 = NULL;
+	{
+		V_0 = 0;
+		StringU5BU5D_t1642385972* L_0 = ___teStrTxt0;
+		NullCheck(L_0);
+		V_1 = (((int32_t)((int32_t)(((Il2CppArray *)L_0)->max_length))));
+		int32_t L_1 = V_1;
+		V_2 = ((StringU5BU5DU5BU5D_t2190260861*)SZArrayNew(StringU5BU5DU5BU5D_t2190260861_il2cpp_TypeInfo_var, (uint32_t)L_1));
+		goto IL_0073;
+	}
+
+IL_0012:
+	{
+		StringU5BU5D_t1642385972* L_2 = ___teStrTxt0;
+		int32_t L_3 = V_0;
+		NullCheck(L_2);
+		int32_t L_4 = L_3;
+		String_t* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
+		V_3 = L_5;
+		StringU5BU5D_t1642385972* L_6 = ___teStrTxt0;
+		int32_t L_7 = V_0;
+		NullCheck(L_6);
+		int32_t L_8 = L_7;
+		String_t* L_9 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
+		V_4 = L_9;
+		String_t* L_10 = V_3;
+		NullCheck(L_10);
+		String_t* L_11 = String_Trim_m2668767713(L_10, /*hidden argument*/NULL);
+		V_3 = L_11;
+		String_t* L_12 = V_3;
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_13 = String_IsNullOrEmpty_m2802126737(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
+		if (!L_13)
+		{
+			goto IL_0043;
+		}
+	}
+	{
+		StringU5BU5DU5BU5D_t2190260861* L_14 = V_2;
+		int32_t L_15 = V_0;
+		StringU5BU5D_t1642385972* L_16 = ((StringU5BU5D_t1642385972*)SZArrayNew(StringU5BU5D_t1642385972_il2cpp_TypeInfo_var, (uint32_t)1));
+		NullCheck(L_16);
+		ArrayElementTypeCheck (L_16, _stringLiteral372029349);
+		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral372029349);
+		NullCheck(L_14);
+		ArrayElementTypeCheck (L_14, L_16);
+		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(L_15), (StringU5BU5D_t1642385972*)L_16);
+		goto IL_007a;
+	}
+
+IL_0043:
+	{
+		String_t* L_17 = V_4;
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_18 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		NullCheck(L_17);
+		String_t* L_19 = String_Replace_m1941156251(L_17, _stringLiteral372029310, L_18, /*hidden argument*/NULL);
+		V_4 = L_19;
+		String_t* L_20 = V_4;
+		CharU5BU5D_t1328083999* L_21 = ((CharU5BU5D_t1328083999*)SZArrayNew(CharU5BU5D_t1328083999_il2cpp_TypeInfo_var, (uint32_t)1));
+		NullCheck(L_21);
+		(L_21)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppChar)((int32_t)9));
+		NullCheck(L_20);
+		StringU5BU5D_t1642385972* L_22 = String_Split_m3326265864(L_20, L_21, /*hidden argument*/NULL);
+		V_5 = L_22;
+		StringU5BU5DU5BU5D_t2190260861* L_23 = V_2;
+		int32_t L_24 = V_0;
+		StringU5BU5D_t1642385972* L_25 = V_5;
+		NullCheck(L_23);
+		ArrayElementTypeCheck (L_23, L_25);
+		(L_23)->SetAt(static_cast<il2cpp_array_size_t>(L_24), (StringU5BU5D_t1642385972*)L_25);
+		int32_t L_26 = V_0;
+		V_0 = ((int32_t)((int32_t)L_26+(int32_t)1));
+	}
+
+IL_0073:
+	{
+		int32_t L_27 = V_0;
+		int32_t L_28 = V_1;
+		if ((((int32_t)L_27) < ((int32_t)L_28)))
+		{
+			goto IL_0012;
+		}
+	}
+
+IL_007a:
+	{
+		StringU5BU5DU5BU5D_t2190260861* L_29 = V_2;
+		return L_29;
+	}
+}
+// System.Void TXTReader::WriteTxt(System.String,System.String)
+extern "C"  void TXTReader_WriteTxt_m697512971 (Il2CppObject * __this /* static, unused */, String_t* ___txtName0, String_t* ___value1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TXTReader_WriteTxt_m697512971_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	FileStream_t1695958676 * V_0 = NULL;
+	StreamWriter_t3858580635 * V_1 = NULL;
+	{
+		String_t* L_0 = ___txtName0;
+		String_t* L_1 = ___value1;
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_2 = String_Concat_m612901809(NULL /*static, unused*/, L_0, _stringLiteral233039045, L_1, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		String_t* L_3 = ___txtName0;
+		FileStream_t1695958676 * L_4 = (FileStream_t1695958676 *)il2cpp_codegen_object_new(FileStream_t1695958676_il2cpp_TypeInfo_var);
+		FileStream__ctor_m785772645(L_4, L_3, 2, /*hidden argument*/NULL);
+		V_0 = L_4;
+		FileStream_t1695958676 * L_5 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Encoding_t663144255_il2cpp_TypeInfo_var);
+		Encoding_t663144255 * L_6 = Encoding_get_UTF8_m1752852937(NULL /*static, unused*/, /*hidden argument*/NULL);
+		StreamWriter_t3858580635 * L_7 = (StreamWriter_t3858580635 *)il2cpp_codegen_object_new(StreamWriter_t3858580635_il2cpp_TypeInfo_var);
+		StreamWriter__ctor_m3823607994(L_7, L_5, L_6, /*hidden argument*/NULL);
+		V_1 = L_7;
+		StreamWriter_t3858580635 * L_8 = V_1;
+		String_t* L_9 = ___value1;
+		NullCheck(L_8);
+		VirtActionInvoker1< String_t* >::Invoke(10 /* System.Void System.IO.TextWriter::Write(System.String) */, L_8, L_9);
+		StreamWriter_t3858580635 * L_10 = V_1;
+		NullCheck(L_10);
+		VirtActionInvoker0::Invoke(5 /* System.Void System.IO.TextWriter::Close() */, L_10);
+		FileStream_t1695958676 * L_11 = V_0;
+		NullCheck(L_11);
+		VirtActionInvoker0::Invoke(12 /* System.Void System.IO.Stream::Close() */, L_11);
+		return;
+	}
+}
+// System.Void UIBaseVerifyWin::.ctor()
+extern "C"  void UIBaseVerifyWin__ctor_m3844774797 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	{
+		BaseWindow__ctor_m3881124172(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// FairyGUI.GObject UIBaseVerifyWin::get_Close()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Close_m2991533507 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_get_Close_m2991533507_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral3990527589, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIBaseVerifyWin::get_Send()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Send_m3054441105 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_get_Send_m3054441105_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral858359707, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIBaseVerifyWin::get_Verify()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Verify_m3026646854 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_get_Verify_m3026646854_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral2833411703, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIBaseVerifyWin::get_Username()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Username_m786301575 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_get_Username_m786301575_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral3236696238, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIBaseVerifyWin::get_Pic_code_input()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Pic_code_input_m1621647876 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_get_Pic_code_input_m1621647876_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral3236696229, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIBaseVerifyWin::get_Phone_code_input()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Phone_code_input_m3670127060 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_get_Phone_code_input_m3670127060_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral3236696237, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIBaseVerifyWin::get_Password()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Password_m4042576990 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_get_Password_m4042576990_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral1670612297, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIBaseVerifyWin::get_Code_countdown()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Code_countdown_m2491358242 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_get_Code_countdown_m2491358242_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral1670612294, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIBaseVerifyWin::get_Warn()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Warn_m606077883 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_get_Warn_m606077883_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral1670612301, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIBaseVerifyWin::get_Pic_code()
+extern "C"  GObject_t2662234644 * UIBaseVerifyWin_get_Pic_code_m1000918441 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_get_Pic_code_m1000918441_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral1670612295, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// System.String UIBaseVerifyWin::get_Code()
+extern "C"  String_t* UIBaseVerifyWin_get_Code_m2098135584 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = __this->get_code_104();
+		return L_0;
+	}
+}
+// System.Void UIBaseVerifyWin::set_Code(System.String)
+extern "C"  void UIBaseVerifyWin_set_Code_m1900173923 (UIBaseVerifyWin_t1601586792 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___value0;
+		__this->set_code_104(L_0);
+		return;
+	}
+}
+// System.Boolean UIBaseVerifyWin::get_ValidRegister()
+extern "C"  bool UIBaseVerifyWin_get_ValidRegister_m2642182059 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	{
+		bool L_0 = __this->get_isProcessing_105();
+		return (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+	}
+}
+// System.Void UIBaseVerifyWin::set_ValidRegister(System.Boolean)
+extern "C"  void UIBaseVerifyWin_set_ValidRegister_m1882912802 (UIBaseVerifyWin_t1601586792 * __this, bool ___value0, const MethodInfo* method)
+{
+	{
+		bool L_0 = ___value0;
+		__this->set_isProcessing_105((bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0));
+		return;
+	}
+}
+// System.Boolean UIBaseVerifyWin::get_ValidVerifying()
+extern "C"  bool UIBaseVerifyWin_get_ValidVerifying_m2056594757 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	{
+		bool L_0 = __this->get_isVerifying_106();
+		return (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+	}
+}
+// System.Void UIBaseVerifyWin::set_ValidVerifying(System.Boolean)
+extern "C"  void UIBaseVerifyWin_set_ValidVerifying_m201009070 (UIBaseVerifyWin_t1601586792 * __this, bool ___value0, const MethodInfo* method)
+{
+	{
+		bool L_0 = ___value0;
+		__this->set_isVerifying_106((bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0));
+		return;
+	}
+}
+// System.Void UIBaseVerifyWin::OnInit()
+extern "C"  void UIBaseVerifyWin_OnInit_m3688473060 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIBaseVerifyWin_OnInit_m3688473060_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GObject_Center_m396431490(__this, /*hidden argument*/NULL);
+		Window_set_modal_m3848631098(__this, (bool)1, /*hidden argument*/NULL);
+		__this->set_isProcessing_105((bool)0);
+		__this->set_isVerifying_106((bool)0);
+		GObject_t2662234644 * L_0 = UIBaseVerifyWin_get_Code_countdown_m2491358242(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_set_visible_m2422687171(L_0, (bool)0, /*hidden argument*/NULL);
+		GObject_t2662234644 * L_1 = UIBaseVerifyWin_get_Warn_m606077883(__this, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		GObject_set_visible_m2422687171(L_1, (bool)0, /*hidden argument*/NULL);
+		GObject_t2662234644 * L_2 = UIBaseVerifyWin_get_Warn_m606077883(__this, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		EventListener_t2764096410 * L_3 = GObject_get_onClick_m3885020248(L_2, /*hidden argument*/NULL);
+		IntPtr_t L_4;
+		L_4.set_m_value_0((void*)(void*)UIBaseVerifyWin_U3COnInitU3Em__0_m1865707029_MethodInfo_var);
+		EventCallback0_t422277839 * L_5 = (EventCallback0_t422277839 *)il2cpp_codegen_object_new(EventCallback0_t422277839_il2cpp_TypeInfo_var);
+		EventCallback0__ctor_m2937283442(L_5, __this, L_4, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		EventListener_Add_m126540483(L_3, L_5, /*hidden argument*/NULL);
+		GObject_t2662234644 * L_6 = UIBaseVerifyWin_get_Pic_code_m1000918441(__this, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		GRichTextField_t3736523726 * L_7 = GObject_get_asRichTextField_m3817114342(L_6, /*hidden argument*/NULL);
+		String_t* L_8 = Util_CreateRandomCode_m1729400985(NULL /*static, unused*/, 5, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		VirtActionInvoker1< String_t* >::Invoke(16 /* System.Void FairyGUI.GObject::set_text(System.String) */, L_7, L_8);
+		return;
+	}
+}
+// System.Void UIBaseVerifyWin::<OnInit>m__0()
+extern "C"  void UIBaseVerifyWin_U3COnInitU3Em__0_m1865707029 (UIBaseVerifyWin_t1601586792 * __this, const MethodInfo* method)
+{
+	{
+		GObject_t2662234644 * L_0 = UIBaseVerifyWin_get_Warn_m606077883(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_set_visible_m2422687171(L_0, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UICoinPrize::.ctor()
+extern "C"  void UICoinPrize__ctor_m815725332 (UICoinPrize_t4037221321 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UICoinPrize__ctor_m815725332_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Window__ctor_m1591790705(__this, /*hidden argument*/NULL);
+		Color_t2020392075  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Color__ctor_m1909920690(&L_0, (0.0f), (0.0f), (0.0f), (0.4f), /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(UIConfig_t3001615142_il2cpp_TypeInfo_var);
+		((UIConfig_t3001615142_StaticFields*)UIConfig_t3001615142_il2cpp_TypeInfo_var->static_fields)->set_modalLayerColor_6(L_0);
+		return;
+	}
+}
+// FairyGUI.GObject UICoinPrize::get_Contiune()
+extern "C"  GObject_t2662234644 * UICoinPrize_get_Contiune_m2601904005 (UICoinPrize_t4037221321 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UICoinPrize_get_Contiune_m2601904005_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral2471497815, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UICoinPrize::get_Amount()
+extern "C"  GObject_t2662234644 * UICoinPrize_get_Amount_m1601380266 (UICoinPrize_t4037221321 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UICoinPrize_get_Amount_m1601380266_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral2833411711, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// System.Void UICoinPrize::OnInit()
+extern "C"  void UICoinPrize_OnInit_m746598651 (UICoinPrize_t4037221321 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UICoinPrize_OnInit_m746598651_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(UIPackage_t709416664_il2cpp_TypeInfo_var);
+		GObject_t2662234644 * L_0 = UIPackage_CreateObject_m2440449471(NULL /*static, unused*/, _stringLiteral2328219732, _stringLiteral2890057080, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GComponent_t4106136290 * L_1 = GObject_get_asCom_m2561662992(L_0, /*hidden argument*/NULL);
+		Window_set_contentPane_m1197528159(__this, L_1, /*hidden argument*/NULL);
+		GObject_Center_m396431490(__this, /*hidden argument*/NULL);
+		Window_set_modal_m3848631098(__this, (bool)1, /*hidden argument*/NULL);
+		GObject_t2662234644 * L_2 = UICoinPrize_get_Contiune_m2601904005(__this, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		EventListener_t2764096410 * L_3 = GObject_get_onClick_m3885020248(L_2, /*hidden argument*/NULL);
+		IntPtr_t L_4;
+		L_4.set_m_value_0((void*)(void*)UICoinPrize_U3COnInitU3Em__0_m895409158_MethodInfo_var);
+		EventCallback0_t422277839 * L_5 = (EventCallback0_t422277839 *)il2cpp_codegen_object_new(EventCallback0_t422277839_il2cpp_TypeInfo_var);
+		EventCallback0__ctor_m2937283442(L_5, __this, L_4, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		EventListener_Add_m126540483(L_3, L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UICoinPrize::DoShowAnimation()
+extern "C"  void UICoinPrize_DoShowAnimation_m1384379414 (UICoinPrize_t4037221321 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UICoinPrize_DoShowAnimation_m1384379414_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GObject_SetScale_m1458018553(__this, (0.1f), (0.1f), /*hidden argument*/NULL);
+		GObject_SetPivot_m184255169(__this, (0.5f), (0.5f), /*hidden argument*/NULL);
+		Vector2_t2243707579  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Vector2__ctor_m3067419446(&L_0, (1.0f), (1.0f), /*hidden argument*/NULL);
+		Tweener_t760404022 * L_1 = GObject_TweenScale_m1621803854(__this, L_0, (0.3f), /*hidden argument*/NULL);
+		Tweener_t760404022 * L_2 = TweenSettingsExtensions_SetEase_TisTweener_t760404022_m1400957772(NULL /*static, unused*/, L_1, 6, /*hidden argument*/TweenSettingsExtensions_SetEase_TisTweener_t760404022_m1400957772_MethodInfo_var);
+		IntPtr_t L_3;
+		L_3.set_m_value_0((void*)(void*)GetVirtualMethodInfo(__this, 37));
+		TweenCallback_t3697142134 * L_4 = (TweenCallback_t3697142134 *)il2cpp_codegen_object_new(TweenCallback_t3697142134_il2cpp_TypeInfo_var);
+		TweenCallback__ctor_m3479200459(L_4, __this, L_3, /*hidden argument*/NULL);
+		TweenSettingsExtensions_OnComplete_TisTweener_t760404022_m67810386(NULL /*static, unused*/, L_2, L_4, /*hidden argument*/TweenSettingsExtensions_OnComplete_TisTweener_t760404022_m67810386_MethodInfo_var);
+		return;
+	}
+}
+// System.Void UICoinPrize::DoHideAnimation()
+extern "C"  void UICoinPrize_DoHideAnimation_m3666505401 (UICoinPrize_t4037221321 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UICoinPrize_DoHideAnimation_m3666505401_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector2_t2243707579  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Vector2__ctor_m3067419446(&L_0, (0.1f), (0.1f), /*hidden argument*/NULL);
+		Tweener_t760404022 * L_1 = GObject_TweenScale_m1621803854(__this, L_0, (0.3f), /*hidden argument*/NULL);
+		Tweener_t760404022 * L_2 = TweenSettingsExtensions_SetEase_TisTweener_t760404022_m1400957772(NULL /*static, unused*/, L_1, 6, /*hidden argument*/TweenSettingsExtensions_SetEase_TisTweener_t760404022_m1400957772_MethodInfo_var);
+		IntPtr_t L_3;
+		L_3.set_m_value_0((void*)(void*)Window_HideImmediately_m3834863341_MethodInfo_var);
+		TweenCallback_t3697142134 * L_4 = (TweenCallback_t3697142134 *)il2cpp_codegen_object_new(TweenCallback_t3697142134_il2cpp_TypeInfo_var);
+		TweenCallback__ctor_m3479200459(L_4, __this, L_3, /*hidden argument*/NULL);
+		TweenSettingsExtensions_OnComplete_TisTweener_t760404022_m67810386(NULL /*static, unused*/, L_2, L_4, /*hidden argument*/TweenSettingsExtensions_OnComplete_TisTweener_t760404022_m67810386_MethodInfo_var);
+		return;
+	}
+}
+// System.Void UICoinPrize::setConfirmClick(FairyGUI.EventCallback0)
+extern "C"  void UICoinPrize_setConfirmClick_m807459103 (UICoinPrize_t4037221321 * __this, EventCallback0_t422277839 * ___func0, const MethodInfo* method)
+{
+	{
+		EventCallback0_t422277839 * L_0 = ___func0;
+		__this->set__onConfirm_104(L_0);
+		return;
+	}
+}
+// System.Void UICoinPrize::<OnInit>m__0()
+extern "C"  void UICoinPrize_U3COnInitU3Em__0_m895409158 (UICoinPrize_t4037221321 * __this, const MethodInfo* method)
+{
+	{
+		Window_Hide_m1851901417(__this, /*hidden argument*/NULL);
+		EventCallback0_t422277839 * L_0 = __this->get__onConfirm_104();
+		if (!L_0)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		EventCallback0_t422277839 * L_1 = __this->get__onConfirm_104();
+		NullCheck(L_1);
+		EventCallback0_Invoke_m694389864(L_1, /*hidden argument*/NULL);
+	}
+
+IL_001c:
+	{
+		return;
+	}
+}
+// System.Void UICommon::.ctor()
+extern "C"  void UICommon__ctor_m2125746438 (UICommon_t1511081147 * __this, const MethodInfo* method)
+{
+	{
+		BaseWindow__ctor_m3881124172(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// FairyGUI.EventCallback0 UICommon::get_Confirm()
+extern "C"  EventCallback0_t422277839 * UICommon_get_Confirm_m3860034475 (UICommon_t1511081147 * __this, const MethodInfo* method)
+{
+	{
+		EventCallback0_t422277839 * L_0 = __this->get__confirm_104();
+		return L_0;
+	}
+}
+// System.Void UICommon::set_Confirm(FairyGUI.EventCallback0)
+extern "C"  void UICommon_set_Confirm_m1919762692 (UICommon_t1511081147 * __this, EventCallback0_t422277839 * ___value0, const MethodInfo* method)
+{
+	{
+		EventCallback0_t422277839 * L_0 = ___value0;
+		__this->set__confirm_104(L_0);
+		return;
+	}
+}
+// FairyGUI.GObject UICommon::get_Yes()
+extern "C"  GObject_t2662234644 * UICommon_get_Yes_m530730489 (UICommon_t1511081147 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UICommon_get_Yes_m530730489_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral2833411709, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UICommon::get_Title()
+extern "C"  GObject_t2662234644 * UICommon_get_Title_m2124656630 (UICommon_t1511081147 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UICommon_get_Title_m2124656630_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral2833411711, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UICommon::get_Content()
+extern "C"  GObject_t2662234644 * UICommon_get_Content_m2474311107 (UICommon_t1511081147 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UICommon_get_Content_m2474311107_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral1261644234, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// System.Void UICommon::OnInit()
+extern "C"  void UICommon_OnInit_m632032333 (UICommon_t1511081147 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UICommon_OnInit_m632032333_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(UIPackage_t709416664_il2cpp_TypeInfo_var);
+		GObject_t2662234644 * L_0 = UIPackage_CreateObject_m2440449471(NULL /*static, unused*/, _stringLiteral2523127342, _stringLiteral726030472, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GComponent_t4106136290 * L_1 = GObject_get_asCom_m2561662992(L_0, /*hidden argument*/NULL);
+		Window_set_contentPane_m1197528159(__this, L_1, /*hidden argument*/NULL);
+		GObject_Center_m396431490(__this, /*hidden argument*/NULL);
+		Window_set_modal_m3848631098(__this, (bool)1, /*hidden argument*/NULL);
+		GRoot_t2728525843 * L_2 = GRoot_get_inst_m763148459(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		GGraph_t1610186177 * L_3 = GRoot_get_modalLayer_m139304241(L_2, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		EventListener_t2764096410 * L_4 = GObject_get_onClick_m3885020248(L_3, /*hidden argument*/NULL);
+		IntPtr_t L_5;
+		L_5.set_m_value_0((void*)(void*)UICommon_U3COnInitU3Em__0_m3005879252_MethodInfo_var);
+		EventCallback0_t422277839 * L_6 = (EventCallback0_t422277839 *)il2cpp_codegen_object_new(EventCallback0_t422277839_il2cpp_TypeInfo_var);
+		EventCallback0__ctor_m2937283442(L_6, __this, L_5, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		EventListener_Add_m126540483(L_4, L_6, /*hidden argument*/NULL);
+		GObject_t2662234644 * L_7 = UICommon_get_Yes_m530730489(__this, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		EventListener_t2764096410 * L_8 = GObject_get_onClick_m3885020248(L_7, /*hidden argument*/NULL);
+		IntPtr_t L_9;
+		L_9.set_m_value_0((void*)(void*)UICommon_U3COnInitU3Em__1_m2864716751_MethodInfo_var);
+		EventCallback0_t422277839 * L_10 = (EventCallback0_t422277839 *)il2cpp_codegen_object_new(EventCallback0_t422277839_il2cpp_TypeInfo_var);
+		EventCallback0__ctor_m2937283442(L_10, __this, L_9, /*hidden argument*/NULL);
+		NullCheck(L_8);
+		EventListener_Add_m126540483(L_8, L_10, /*hidden argument*/NULL);
+		BaseWindow_OnInit_m3545709597(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UICommon::<OnInit>m__0()
+extern "C"  void UICommon_U3COnInitU3Em__0_m3005879252 (UICommon_t1511081147 * __this, const MethodInfo* method)
+{
+	{
+		Window_Hide_m1851901417(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UICommon::<OnInit>m__1()
+extern "C"  void UICommon_U3COnInitU3Em__1_m2864716751 (UICommon_t1511081147 * __this, const MethodInfo* method)
+{
+	{
+		Window_Hide_m1851901417(__this, /*hidden argument*/NULL);
+		EventCallback0_t422277839 * L_0 = __this->get__confirm_104();
+		if (!L_0)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		EventCallback0_t422277839 * L_1 = __this->get__confirm_104();
+		NullCheck(L_1);
+		EventCallback0_Invoke_m694389864(L_1, /*hidden argument*/NULL);
+	}
+
+IL_001c:
+	{
+		return;
+	}
+}
+// System.Void UIConfirm::.ctor()
+extern "C"  void UIConfirm__ctor_m1986438453 (UIConfirm_t2687705270 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIConfirm__ctor_m1986438453_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Window__ctor_m1591790705(__this, /*hidden argument*/NULL);
+		Color_t2020392075  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Color__ctor_m1909920690(&L_0, (0.0f), (0.0f), (0.0f), (0.4f), /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(UIConfig_t3001615142_il2cpp_TypeInfo_var);
+		((UIConfig_t3001615142_StaticFields*)UIConfig_t3001615142_il2cpp_TypeInfo_var->static_fields)->set_modalLayerColor_6(L_0);
+		return;
+	}
+}
+// FairyGUI.GObject UIConfirm::get_Cancel()
+extern "C"  GObject_t2662234644 * UIConfirm_get_Cancel_m3081922007 (UIConfirm_t2687705270 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIConfirm_get_Cancel_m3081922007_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral2833411711, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIConfirm::get_Confirm()
+extern "C"  GObject_t2662234644 * UIConfirm_get_Confirm_m246464595 (UIConfirm_t2687705270 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIConfirm_get_Confirm_m246464595_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral2471497815, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIConfirm::get_Photo()
+extern "C"  GObject_t2662234644 * UIConfirm_get_Photo_m1610938361 (UIConfirm_t2687705270 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIConfirm_get_Photo_m1610938361_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral2833411710, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// FairyGUI.GObject UIConfirm::get_Discription()
+extern "C"  GObject_t2662234644 * UIConfirm_get_Discription_m624592775 (UIConfirm_t2687705270 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIConfirm_get_Discription_m624592775_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral2833411709, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// System.Void UIConfirm::OnInit()
+extern "C"  void UIConfirm_OnInit_m1815292246 (UIConfirm_t2687705270 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIConfirm_OnInit_m1815292246_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(UIPackage_t709416664_il2cpp_TypeInfo_var);
+		GObject_t2662234644 * L_0 = UIPackage_CreateObject_m2440449471(NULL /*static, unused*/, _stringLiteral2328219732, _stringLiteral4081992213, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GComponent_t4106136290 * L_1 = GObject_get_asCom_m2561662992(L_0, /*hidden argument*/NULL);
+		Window_set_contentPane_m1197528159(__this, L_1, /*hidden argument*/NULL);
+		GObject_Center_m396431490(__this, /*hidden argument*/NULL);
+		Window_set_modal_m3848631098(__this, (bool)1, /*hidden argument*/NULL);
+		GObject_t2662234644 * L_2 = UIConfirm_get_Confirm_m246464595(__this, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		EventListener_t2764096410 * L_3 = GObject_get_onClick_m3885020248(L_2, /*hidden argument*/NULL);
+		IntPtr_t L_4;
+		L_4.set_m_value_0((void*)(void*)UIConfirm_U3COnInitU3Em__0_m3407966669_MethodInfo_var);
+		EventCallback0_t422277839 * L_5 = (EventCallback0_t422277839 *)il2cpp_codegen_object_new(EventCallback0_t422277839_il2cpp_TypeInfo_var);
+		EventCallback0__ctor_m2937283442(L_5, __this, L_4, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		EventListener_Add_m126540483(L_3, L_5, /*hidden argument*/NULL);
+		GObject_t2662234644 * L_6 = UIConfirm_get_Cancel_m3081922007(__this, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		EventListener_t2764096410 * L_7 = GObject_get_onClick_m3885020248(L_6, /*hidden argument*/NULL);
+		IntPtr_t L_8;
+		L_8.set_m_value_0((void*)(void*)UIConfirm_U3COnInitU3Em__1_m3407966702_MethodInfo_var);
+		EventCallback0_t422277839 * L_9 = (EventCallback0_t422277839 *)il2cpp_codegen_object_new(EventCallback0_t422277839_il2cpp_TypeInfo_var);
+		EventCallback0__ctor_m2937283442(L_9, __this, L_8, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		EventListener_Add_m126540483(L_7, L_9, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UIConfirm::DoShowAnimation()
+extern "C"  void UIConfirm_DoShowAnimation_m465594539 (UIConfirm_t2687705270 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIConfirm_DoShowAnimation_m465594539_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GObject_SetScale_m1458018553(__this, (0.1f), (0.1f), /*hidden argument*/NULL);
+		GObject_SetPivot_m184255169(__this, (0.5f), (0.5f), /*hidden argument*/NULL);
+		Vector2_t2243707579  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Vector2__ctor_m3067419446(&L_0, (1.0f), (1.0f), /*hidden argument*/NULL);
+		Tweener_t760404022 * L_1 = GObject_TweenScale_m1621803854(__this, L_0, (0.3f), /*hidden argument*/NULL);
+		Tweener_t760404022 * L_2 = TweenSettingsExtensions_SetEase_TisTweener_t760404022_m1400957772(NULL /*static, unused*/, L_1, 6, /*hidden argument*/TweenSettingsExtensions_SetEase_TisTweener_t760404022_m1400957772_MethodInfo_var);
+		IntPtr_t L_3;
+		L_3.set_m_value_0((void*)(void*)GetVirtualMethodInfo(__this, 37));
+		TweenCallback_t3697142134 * L_4 = (TweenCallback_t3697142134 *)il2cpp_codegen_object_new(TweenCallback_t3697142134_il2cpp_TypeInfo_var);
+		TweenCallback__ctor_m3479200459(L_4, __this, L_3, /*hidden argument*/NULL);
+		TweenSettingsExtensions_OnComplete_TisTweener_t760404022_m67810386(NULL /*static, unused*/, L_2, L_4, /*hidden argument*/TweenSettingsExtensions_OnComplete_TisTweener_t760404022_m67810386_MethodInfo_var);
+		return;
+	}
+}
+// System.Void UIConfirm::DoHideAnimation()
+extern "C"  void UIConfirm_DoHideAnimation_m3164173384 (UIConfirm_t2687705270 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIConfirm_DoHideAnimation_m3164173384_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector2_t2243707579  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Vector2__ctor_m3067419446(&L_0, (0.1f), (0.1f), /*hidden argument*/NULL);
+		Tweener_t760404022 * L_1 = GObject_TweenScale_m1621803854(__this, L_0, (0.3f), /*hidden argument*/NULL);
+		Tweener_t760404022 * L_2 = TweenSettingsExtensions_SetEase_TisTweener_t760404022_m1400957772(NULL /*static, unused*/, L_1, 6, /*hidden argument*/TweenSettingsExtensions_SetEase_TisTweener_t760404022_m1400957772_MethodInfo_var);
+		IntPtr_t L_3;
+		L_3.set_m_value_0((void*)(void*)Window_HideImmediately_m3834863341_MethodInfo_var);
+		TweenCallback_t3697142134 * L_4 = (TweenCallback_t3697142134 *)il2cpp_codegen_object_new(TweenCallback_t3697142134_il2cpp_TypeInfo_var);
+		TweenCallback__ctor_m3479200459(L_4, __this, L_3, /*hidden argument*/NULL);
+		TweenSettingsExtensions_OnComplete_TisTweener_t760404022_m67810386(NULL /*static, unused*/, L_2, L_4, /*hidden argument*/TweenSettingsExtensions_OnComplete_TisTweener_t760404022_m67810386_MethodInfo_var);
+		return;
+	}
+}
+// System.Void UIConfirm::setConfirmClick(FairyGUI.EventCallback0)
+extern "C"  void UIConfirm_setConfirmClick_m865587004 (UIConfirm_t2687705270 * __this, EventCallback0_t422277839 * ___func0, const MethodInfo* method)
+{
+	{
+		EventCallback0_t422277839 * L_0 = ___func0;
+		__this->set__onConfirm_104(L_0);
+		return;
+	}
+}
+// System.Void UIConfirm::setCancelClick(FairyGUI.EventCallback0)
+extern "C"  void UIConfirm_setCancelClick_m1197993834 (UIConfirm_t2687705270 * __this, EventCallback0_t422277839 * ___func0, const MethodInfo* method)
+{
+	{
+		EventCallback0_t422277839 * L_0 = ___func0;
+		__this->set__onCancel_105(L_0);
+		return;
+	}
+}
+// System.Void UIConfirm::<OnInit>m__0()
+extern "C"  void UIConfirm_U3COnInitU3Em__0_m3407966669 (UIConfirm_t2687705270 * __this, const MethodInfo* method)
+{
+	{
+		Window_Hide_m1851901417(__this, /*hidden argument*/NULL);
+		EventCallback0_t422277839 * L_0 = __this->get__onConfirm_104();
+		if (!L_0)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		EventCallback0_t422277839 * L_1 = __this->get__onConfirm_104();
+		NullCheck(L_1);
+		EventCallback0_Invoke_m694389864(L_1, /*hidden argument*/NULL);
+	}
+
+IL_001c:
+	{
+		return;
+	}
+}
+// System.Void UIConfirm::<OnInit>m__1()
+extern "C"  void UIConfirm_U3COnInitU3Em__1_m3407966702 (UIConfirm_t2687705270 * __this, const MethodInfo* method)
+{
+	{
+		Window_Hide_m1851901417(__this, /*hidden argument*/NULL);
+		EventCallback0_t422277839 * L_0 = __this->get__onCancel_105();
+		if (!L_0)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		EventCallback0_t422277839 * L_1 = __this->get__onCancel_105();
+		NullCheck(L_1);
+		EventCallback0_Invoke_m694389864(L_1, /*hidden argument*/NULL);
+	}
+
+IL_001c:
+	{
+		return;
+	}
+}
+// System.Void UIConnection::.ctor()
+extern "C"  void UIConnection__ctor_m243497105 (UIConnection_t1947373274 * __this, const MethodInfo* method)
+{
+	{
+		BaseWindow__ctor_m3881124172(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// FairyGUI.GObject UIConnection::get_Dial()
+extern "C"  GObject_t2662234644 * UIConnection_get_Dial_m1995790685 (UIConnection_t1947373274 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIConnection_get_Dial_m1995790685_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GComponent_t4106136290 * L_0 = Window_get_contentPane_m1879605898(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GObject_t2662234644 * L_1 = GComponent_GetChild_m2636109344(L_0, _stringLiteral2833411709, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// System.Void UIConnection::OnInit()
+extern "C"  void UIConnection_OnInit_m2586617730 (UIConnection_t1947373274 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UIConnection_OnInit_m2586617730_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(UIPackage_t709416664_il2cpp_TypeInfo_var);
+		GObject_t2662234644 * L_0 = UIPackage_CreateObject_m2440449471(NULL /*static, unused*/, _stringLiteral2523127342, _stringLiteral3849780053, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		GComponent_t4106136290 * L_1 = GObject_get_asCom_m2561662992(L_0, /*hidden argument*/NULL);
+		Window_set_contentPane_m1197528159(__this, L_1, /*hidden argument*/NULL);
+		GObject_Center_m396431490(__this, /*hidden argument*/NULL);
+		Window_set_modal_m3848631098(__this, (bool)1, /*hidden argument*/NULL);
+		GRoot_t2728525843 * L_2 = GRoot_get_inst_m763148459(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		GGraph_t1610186177 * L_3 = GRoot_get_modalLayer_m139304241(L_2, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		EventListener_t2764096410 * L_4 = GObject_get_onClick_m3885020248(L_3, /*hidden argument*/NULL);
+		IntPtr_t L_5;
+		L_5.set_m_value_0((void*)(void*)UIConnection_U3COnInitU3Em__0_m2350995769_MethodInfo_var);
+		EventCallback0_t422277839 * L_6 = (EventCallback0_t422277839 *)il2cpp_codegen_object_new(EventCallback0_t422277839_il2cpp_TypeInfo_var);
+		EventCallback0__ctor_m2937283442(L_6, __this, L_5, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		EventListener_Add_m126540483(L_4, L_6, /*hidden argument*/NULL);
+		BaseWindow_OnInit_m3545709597(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UIConnection::<OnInit>m__0()
+extern "C"  void UIConnection_U3COnInitU3Em__0_m2350995769 (UIConnection_t1947373274 * __this, const MethodInfo* method)
+{
+	{
+		Window_Hide_m1851901417(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif

@@ -50,7 +50,6 @@
      <Compile Include="Assets\Editor\PathologicalGames\Common\PGEditorUtils.cs" />
      <Compile Include="Assets\Editor\PathologicalGames\PoolManager\PreRuntimePoolItemInspector.cs" />
      <Compile Include="Assets\Editor\PathologicalGames\PoolManager\SpawnPoolInspector.cs" />
-     <None Include="Assets\external\version.txt" />
      <None Include="Assets\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
      <None Include="Assets\Resources\Shaders\FairyGUI-Text.shader" />
      <None Include="Assets\Resources\Shaders\FairyGUI-Image.shader" />

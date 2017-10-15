@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Runtime.InteropServices;
 using System.Collections;
 using System.Collections.Generic;
 using System;
@@ -19,23 +20,7 @@ public class DeviceInfoProxy : BaseProxy {
 			if (uuid != null)
 				return uuid;
 
-			switch(Application.platform){
-			case RuntimePlatform.Android:
-				using (AndroidJavaClass jc = new AndroidJavaClass (AppConst.ANDROID_INTERFACE_CLASS)) {
-					//Debug.Log("get AndroidJavaClass");  
-					using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject> ("currentActivity")) {    
-						uuid = jo.Call<string> ("uuid");
-					}  
-				} 
-				break;
-			case RuntimePlatform.IPhonePlayer:
-				uuid = "ios";
-				break;
-			default:
-				uuid = AppConst.UUID;
-				break;
-			}
-
+			getIOSUUID ();
 			return uuid;
 
 		}
@@ -49,11 +34,33 @@ public class DeviceInfoProxy : BaseProxy {
 	public DeviceInfoProxy (string proxyName)
 		: base(proxyName, null){
 		Uuid = null;
+		getDeviceID ();
 	}
 
+	void getDeviceID(){
+		switch(Application.platform){
+		case RuntimePlatform.Android:
+			using (AndroidJavaClass jc = new AndroidJavaClass (AppConst.ANDROID_INTERFACE_CLASS)) {
+				//Debug.Log("get AndroidJavaClass");  
+				using (AndroidJavaObject jo = jc.GetStatic<AndroidJavaObject> ("currentActivity")) {    
+					uuid = jo.Call<string> ("uuid");
+				}  
+			} 
+			break;
+		case RuntimePlatform.IPhonePlayer:
+			getIOSUUID();
+			break;
+		default:
+			uuid = AppConst.UUID;
+			break;
+		}
+	}
 	public override void bindingData (Request.Response meta)
 	{
 		
 	}
+
+	[DllImport( "__Internal" )]
+	private static extern void getIOSUUID ();
 }
 

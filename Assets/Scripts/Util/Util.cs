@@ -362,7 +362,7 @@ public class Util
 	}
 
 	public static void WriteToFile(string path, byte[] info)  
-	{  
+	{
 		//Debug.Log ("local path" + path);
 		//文件流信息  
 		//StreamWriter sw;  

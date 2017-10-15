@@ -14,8 +14,8 @@ public class Req_GetUpdatePics :Request {
 
 	new protected string _api = Req_GetUpdatePics.COMMAND;
 
-	string version;
-	public string Version{
+	int version;
+	public int Version{
 		get{ 
 			return this.version; 
 		}
@@ -48,7 +48,7 @@ public class Req_GetUpdatePics :Request {
 		{
 			public Entry[] prize;
 			public Entry[] ball;
-			public string version;
+			public int version;
 		}
 
 		[Serializable]
@@ -78,7 +78,7 @@ public class Req_GetUpdatePics :Request {
 	/// 获取当前版本
 	/// </summary>
 	/// <returns>The online version.</returns>
-	public string getOnlineVersion(){
+	public int getOnlineVersion(){
 		if (base._response.GetType() == typeof(Req_GetUpdatePics.Response)) {
 			return ((Req_GetUpdatePics.Response)base._response).data.info.version;
 		} 

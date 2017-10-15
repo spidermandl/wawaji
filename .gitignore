@@ -2,7 +2,9 @@ Temp/*
 Library/*
 obj/*
 *.apk
-ios_proj/*
+ios_proj/export/*
+ios_proj/SDKSample1.8.0/*
+ios_proj/wwj/*/libiPhone-lib.a
 android_proj/WaWaJi/*
 android/wwj/*/build/*
 */external/*

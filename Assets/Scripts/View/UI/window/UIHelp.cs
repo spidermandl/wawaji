@@ -34,6 +34,10 @@ public class UIHelp : BaseWindow
 		Close.onClick.Add (() => {
 			this.Hide ();
 		});
+		Online.onClick.Add (() => {
+			Req_GetOnlineQQUrl request = new Req_GetOnlineQQUrl ();
+			UnityFacade.GetInstance ().SendNotification (HttpReqCommand.HTTP, request);
+		});
 //		this.contentPane.onClick.Add ((EventContext context) => {
 //			context.StopPropagation ();
 //		});

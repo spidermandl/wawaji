@@ -19,7 +19,7 @@ public class ClaimComponent : BaseRewardsCom
 			request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
 			request.PrizeId = item.prize_id;
 			request.UserPrizeId = item.id;
-			request.UsePrizeType = 1;
+			request.UsePrizeType = 2;
 			request.UserName = open.GetChild ("n14").asTextInput.text;
 			request.UserAddr = open.GetChild ("n15").asTextInput.text;
 			request.UserPhone = open.GetChild ("n16").asTextInput.text;

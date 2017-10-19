@@ -24,7 +24,7 @@ public class BuybackComponent : BaseRewardsCom
 			request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
 			request.PrizeId = item.prize_id;
 			request.UserPrizeId = item.id;
-			request.UsePrizeType = 3;
+			request.UsePrizeType = 4;
 			switch (PayChannel.selectedIndex) {
 			case 0://alipay
 				request.BuyBackType = 1;

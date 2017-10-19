@@ -26,6 +26,7 @@ public class HomeMediator: BaseMediator {
 		list.Add (UserCommand.CoinUpdate.COMMAND);
 		list.Add (UserCommand.MachineUpdate.COMMAND);
 		list.Add (GameCommand.GameRestart.COMMAND);
+		list.Add (Req_GetOnlineQQUrl.COMMAND);
 		return list.ToArray();
 	}
 
@@ -57,6 +58,9 @@ public class HomeMediator: BaseMediator {
 			break;
 		case GameCommand.GameRestart.COMMAND:
 			m_home_ui.RestartGame (notification);
+			break;
+		case Req_GetOnlineQQUrl.COMMAND:
+			m_home_ui.RespondOpenURL (notification);
 			break;
 		default:
 			break;

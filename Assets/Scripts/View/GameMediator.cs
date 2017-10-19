@@ -52,7 +52,7 @@ public class GameMediator: BaseMediator {
 			m_game_ui.GameOver (notification);
 			break;
 		case GameCommand.GameNoMoney.COMMAND:
-			m_game_ui.CantStart (notification);
+			m_game_ui.CantStart (null);
 			break;
 		case UserCommand.CoinUpdate.COMMAND:
 			m_game_ui.UpdateUserInfo (notification);

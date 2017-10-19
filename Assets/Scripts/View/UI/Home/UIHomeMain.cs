@@ -74,6 +74,8 @@ public class UIHomeMain : UIMain
 				request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
 				UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 
+				UnityFacade.GetInstance().RemoveProxy(UserPrizeInfoProxy.NAME);
+
 			});
 			_profileWin.Exchange.onClick.Add(()=>{
 				_profileWin.Hide();
@@ -285,6 +287,10 @@ public class UIHomeMain : UIMain
 
 	public void RestartGame (INotification notification){
 		changeUIpage (typeof(UIGameMain));
+	}
+
+	public void RespondOpenURL(INotification notification){
+
 	}
 }
 

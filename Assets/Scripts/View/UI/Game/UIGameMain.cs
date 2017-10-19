@@ -113,16 +113,15 @@ public class UIGameMain : UIMain
 		});
 		//go
 		controller.GetChild("n6").onClick.Add(() => {
-			AccountProxy u_proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
-			MachineInfoProxy m_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
-			if (m_proxy != null||u_proxy != null){
-				if(u_proxy.Coin<m_proxy.Selection.coin){
-					this.CantStart(null);
-					return;
-				}
-			}
-			
-			this.gameManager.startPick();
+//			AccountProxy u_proxy = UnityFacade.GetInstance ().RetrieveProxy (AccountProxy.NAME) as AccountProxy;
+//			MachineInfoProxy m_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+//			if (m_proxy != null||u_proxy != null){
+//				if(u_proxy.Coin<m_proxy.Selection.coin){
+//					this.CantStart(null);
+//					return;
+//				}
+//			}
+//			this.gameManager.startPick();
 			getBallPickingOdd();
 		});
 
@@ -170,19 +169,7 @@ public class UIGameMain : UIMain
 		request.MId = proxy.Selection.machine_id;
 		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
-	/// <summary>
-	/// Gets the ball picking odd.
-	/// </summary>
-	void getBallPickingOdd(){
-		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
-		if (proxy == null)
-			return;
-		Req_MachineStartGrab request = new Req_MachineStartGrab ();
-		request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
-		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
-		request.MId = proxy.Selection.machine_id;
-		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
-	}
+
     /// <summary>
 	/// 销毁界面回调
     /// </summary>
@@ -199,6 +186,20 @@ public class UIGameMain : UIMain
 		if (proxy != null) {
 			toolbar.GetChild("n5").asTextField.text = "" + proxy.Coin;
 		}
+	}
+
+	/// <summary>
+	/// Gets the ball picking odd.
+	/// </summary>
+	void getBallPickingOdd(){
+		MachineInfoProxy proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
+		if (proxy == null)
+			return;
+		Req_MachineStartGrab request = new Req_MachineStartGrab ();
+		request.UserId = PlayerPrefs.GetInt(LocalKey.USERID);
+		request.Token = PlayerPrefs.GetString(LocalKey.TOKEN);
+		request.MId = proxy.Selection.machine_id;
+		UnityFacade.GetInstance().SendNotification(HttpReqCommand.HTTP,request);
 	}
 
 	void setGestureValidate(bool validate){
@@ -349,12 +350,12 @@ public class UIGameMain : UIMain
 	/// </summary>
 	/// <returns><c>true</c> if this instance cant start the specified notification; otherwise, <c>false</c>.</returns>
 	/// <param name="notification">Notification.</param>
-	public void CantStart(INotification notification){
+	public void CantStart(string msg){
 		if(_commonWin == null)
 			_commonWin = new UICommon ();
 		_commonWin.Show();
-		_commonWin.Title.asTextField.text = "金币不足";
-		_commonWin.Content.asTextField.text = "开始游戏所需的金币不够，请冲金币";
+		_commonWin.Title.asTextField.text = "提示";
+		_commonWin.Content.asTextField.text = msg;//"开始游戏所需的金币不够，请冲金币";
 		_commonWin.Confirm = (() => {		
 			this.changeUIpage(typeof(UIHomeMain));
 		});
@@ -385,7 +386,11 @@ public class UIGameMain : UIMain
 	}
 
 	public void RespondGameStart(INotification notification){
-
+		if(((Req_MachineStartGrab)notification.Body).getResponseType () == typeof(Request.Error)){
+			this.CantStart (((Req_MachineStartGrab)notification.Body).getMsg());
+			return;
+		}
+		this.gameManager.startPick();
 	}
 
 	public void RespondGameEnd(INotification notification){

@@ -296,6 +296,7 @@ public class GameManager : MonoBehaviour
 	public void startPick(){		
 		if (cameraStateMachine.State != States.Still)
 			return;
+
 		float degree = 0;
 		//初始摄像机角度
 		if (Math.Abs (this._3dCamera.position.x) < 0.01f)
@@ -321,6 +322,7 @@ public class GameManager : MonoBehaviour
 			this.picker.startTargeting ();
 		});
 	}
+
 
 	public bool isIdle(){
 		return this.picker.isIdle ()&&cameraStateMachine.State == States.Still;

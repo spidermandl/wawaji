@@ -634,8 +634,10 @@ public class Picker : MonoBehaviour
 				this.pickerStateMachine.ChangeState (States.RemoveJoint);
 			else
 				this.pickerStateMachine.ChangeState (States.Down);
+			
 		}
 	}
+
 	//pick 是否为静止状态
 	public bool isIdle(){
 		if (this.pickerStateMachine.State == States.Still) {

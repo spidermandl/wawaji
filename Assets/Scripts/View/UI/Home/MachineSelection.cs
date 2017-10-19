@@ -211,6 +211,7 @@ public class MachineSelection
 		action = Action.VALIDATE;
 		m_proxy = UnityFacade.GetInstance ().RetrieveProxy (MachineInfoProxy.NAME) as MachineInfoProxy;
 		machine_list = m_proxy.getListByCoin (m_proxy.Selection.coin);
+		m_proxy.Selection = machine_list [0];//初始选择为手机场
 		initCoinSelection ();
 	}
 

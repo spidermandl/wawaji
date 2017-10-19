@@ -53,6 +53,12 @@ public class Req_MachineStartGrab :Request {
 		}
 	}
 
+	protected override string getChildMsg(){
+		if (base._response.GetType () != typeof(Response))
+			return base.getChildMsg ();
+		return ((Response)_response).data.msg;
+	}
+
 	public override string command ()
 	{
 		return COMMAND;

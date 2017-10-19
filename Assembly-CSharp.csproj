@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetMachinePrizeBallData.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetMachinePrizeInfo.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetNewsLists.cs" />
+     <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetOnlineQQUrl.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeInfo.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeUseCoin.cs" />
      <Compile Include="Assets\Scripts\Model\Api\Request\Req_GetPrizeUserHorn.cs" />

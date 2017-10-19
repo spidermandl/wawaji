@@ -86,6 +86,9 @@ public abstract class Request {
 	abstract public string command ();
 
 	protected virtual string getChildMsg(){
+		if (_response.GetType () == typeof(Error)) {
+			return ((Error)_response).data.msg;
+		}
 		return null;
 	}
 
